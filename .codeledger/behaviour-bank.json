@@ -111,6 +111,24 @@
       "Sorting"
     ]
   },
+  "leetcode::add-two-numbers": {
+    "difficulty": "Medium",
+    "lang": "Python",
+    "platform": "leetcode",
+    "slug": "add-two-numbers",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python",
+        "ts": 1795441800442
+      }
+    ],
+    "tags": [
+      "Linked List",
+      "Math",
+      "Recursion"
+    ]
+  },
   "leetcode::container-with-most-water": {
     "difficulty": "Medium",
     "lang": "Java",

@@ -7,8 +7,8 @@
 | Problem ID | `lc-add-two-numbers` |
 | Topics | Linked List, Math, Recursion |
 | Solved | 2025-10-21 |
-| Runtime | 4 ms (beats 82.09779999999999%) |
-| Memory | 12.7 MB (beats 23.02019999999999%) |
+| Runtime | 4 ms (beats 91.04869999999998%) |
+| Memory | 12.7 MB (beats 10.802600000000005%) |
 
 ## Problem Statement
 

@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-11-23T13:46:58.416Z",
+  "updatedAt": "2026-11-23T13:50:00.701Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 282,
+    "total": 283,
     "easy": 121,
-    "medium": 146,
+    "medium": 147,
     "hard": 5,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 57,
-      "leetcode": 225
+      "leetcode": 226
     },
     "byLang": {
       "Unknown": 51,
       "Java": 166,
-      "Python": 30,
+      "Python": 31,
       "MySQL": 35
     },
     "byTopic": {
@@ -30,7 +30,7 @@
       "Two Pointers": 7,
       "Stack": 6,
       "Hash Table": 10,
-      "Linked List": 14,
+      "Linked List": 15,
       "Database": 35,
       "Dynamic Programming": 7,
       "Graph": 1
@@ -2523,6 +2523,121 @@
         "problems/lc-4sum/lc-4sum.java",
         "problems/lc-4sum/README.md"
       ]
+    },
+    {
+      "id": "lc-add-two-numbers",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Add Two Numbers",
+      "titleSlug": "add-two-numbers",
+      "difficulty": "Medium",
+      "topic": "Linked List",
+      "tags": [
+        "Linked List",
+        "Math",
+        "Recursion"
+      ],
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 2,
+            "platform": "leetcode",
+            "slug": "add-two-numbers"
+          }
+        ],
+        "canonicalId": "add-two-numbers",
+        "canonicalTitle": "Add Two Numbers",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "simulation",
+        "tags": [
+          "linked-list"
+        ],
+        "topic": "linked-list",
+        "voteCount": 98
+      },
+      "readmeContent": "# [2] Add Two Numbers\n**Difficulty:** Medium  |  **Acceptance:** 49.7%  |  **Likes:** 37945 / **Dislikes:** 7394\n**Tags:** `Linked List`, `Math`, `Recursion`\n## Problem\nYou are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum&nbsp;as a linked list.\n\nYou may assume the two numbers do not contain any leading zero, except the number 0 itself.\n\n&nbsp;\nExample 1:\n\nInput: l1 = [2,4,3], l2 = [5,6,4]\nOutput: [7,0,8]\nExplanation: 342 + 465 = 807.\n\nExample 2:\n\nInput: l1 = [0], l2 = [0]\nOutput: [0]\n\nExample 3:\n\nInput: l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]\nOutput: [8,9,9,9,0,0,0,1]\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in each linked list is in the range [1, 100].\n\t0 <= Node.val <= 9\n\tIt is guaranteed that the list represents a number that does not have leading zeros.\n## My Submission\n\n- Runtime: 4 ms (beats 91.0%)\n- Memory: 12.7 MB (beats 10.8%)\n\n## Similar Problems\n\n- [Multiply Strings](https://leetcode.com/problems/multiply-strings/) — Medium\n- [Add Binary](https://leetcode.com/problems/add-binary/) — Easy\n- [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) — Medium\n- [Add Strings](https://leetcode.com/problems/add-strings/) — Easy\n- [Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/) — Medium\n",
+      "code": "class Solution(object):\n    def addTwoNumbers(self, l1, l2):\n        dummy = ListNode()\n        curr = dummy\n        carry = 0\n\n        while l1 or l2 or carry:\n            c = carry\n\n            if l1:\n                c += l1.val\n                l1 = l1.next\n\n            if l2:\n                c += l2.val\n                l2 = l2.next\n\n            curr.next = ListNode(c % 10)\n            curr = curr.next\n            carry = c // 10   \n\n        return dummy.next   ",
+      "files": [
+        {
+          "path": "problems/add-two-numbers/leetcode/lc-add-two-numbers.py",
+          "content": "class Solution(object):\n    def addTwoNumbers(self, l1, l2):\n        dummy = ListNode()\n        curr = dummy\n        carry = 0\n\n        while l1 or l2 or carry:\n            c = carry\n\n            if l1:\n                c += l1.val\n                l1 = l1.next\n\n            if l2:\n                c += l2.val\n                l2 = l2.next\n\n            curr.next = ListNode(c % 10)\n            curr = curr.next\n            carry = c // 10   \n\n        return dummy.next   "
+        },
+        {
+          "path": "problems/add-two-numbers/README.md",
+          "content": "# [2] Add Two Numbers\n**Difficulty:** Medium  |  **Acceptance:** 49.7%  |  **Likes:** 37945 / **Dislikes:** 7394\n**Tags:** `Linked List`, `Math`, `Recursion`\n## Problem\nYou are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum&nbsp;as a linked list.\n\nYou may assume the two numbers do not contain any leading zero, except the number 0 itself.\n\n&nbsp;\nExample 1:\n\nInput: l1 = [2,4,3], l2 = [5,6,4]\nOutput: [7,0,8]\nExplanation: 342 + 465 = 807.\n\nExample 2:\n\nInput: l1 = [0], l2 = [0]\nOutput: [0]\n\nExample 3:\n\nInput: l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]\nOutput: [8,9,9,9,0,0,0,1]\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in each linked list is in the range [1, 100].\n\t0 <= Node.val <= 9\n\tIt is guaranteed that the list represents a number that does not have leading zeros.\n## My Submission\n\n- Runtime: 4 ms (beats 91.0%)\n- Memory: 12.7 MB (beats 10.8%)\n\n## Similar Problems\n\n- [Multiply Strings](https://leetcode.com/problems/multiply-strings/) — Medium\n- [Add Binary](https://leetcode.com/problems/add-binary/) — Easy\n- [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) — Medium\n- [Add Strings](https://leetcode.com/problems/add-strings/) — Easy\n- [Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Python",
+        "ext": "py",
+        "slug": "python"
+      },
+      "runtime": "4 ms",
+      "memory": "12.7 MB",
+      "runtimePct": 91.04869999999998,
+      "memoryPct": 10.802600000000005,
+      "timestamp": 1761058823000,
+      "acRate": 49.70368783589054,
+      "likes": 37945,
+      "dislikes": 7394,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "multiply-strings",
+          "title": "Multiply Strings",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "add-binary",
+          "title": "Add Binary",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "sum-of-two-integers",
+          "title": "Sum of Two Integers",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "add-strings",
+          "title": "Add Strings",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "add-two-numbers-ii",
+          "title": "Add Two Numbers II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "add-to-array-form-of-integer",
+          "title": "Add to Array-Form of Integer",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "double-a-number-represented-as-a-linked-list",
+          "title": "Double a Number Represented as a Linked List",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>You are given two <strong>non-empty</strong> linked lists representing two non-negative integers. The digits are stored in <strong>reverse order</strong>, and each of their nodes contains a single digit. Add the two numbers and return the sum&nbsp;as a linked list.</p>\n\n<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/10/02/addtwonumber1.jpg\" style=\"width: 483px; height: 342px;\" />\n<pre>\n<strong>Input:</strong> l1 = [2,4,3], l2 = [5,6,4]\n<strong>Output:</strong> [7,0,8]\n<strong>Explanation:</strong> 342 + 465 = 807.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> l1 = [0], l2 = [0]\n<strong>Output:</strong> [0]\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]\n<strong>Output:</strong> [8,9,9,9,0,0,0,1]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in each linked list is in the range <code>[1, 100]</code>.</li>\n\t<li><code>0 &lt;= Node.val &lt;= 9</code></li>\n\t<li>It is guaranteed that the list represents a number that does not have leading zeros.</li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/add-two-numbers/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": true,
+      "duplicateOf": "lc-add-two-numbers::1807676806",
+      "_requestAIReview": true,
+      "platform": "leetcode",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-add-two-numbers::1807662365",
