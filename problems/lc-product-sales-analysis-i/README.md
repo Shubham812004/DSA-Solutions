@@ -7,7 +7,7 @@
 | Problem ID | `lc-product-sales-analysis-i` |
 | Topics | Database |
 | Solved | 2025-10-21 |
-| Runtime | 1888 ms (beats 6.341300000000006%) |
+| Runtime | 1104 ms (beats 99.56260000000003%) |
 | Memory | 0B (beats 100%) |
 
 ## Problem Statement
@@ -87,7 +87,7 @@ From sale_id = 7, we can conclude that Apple was sold for 9000 in the year 2011.
 
 ```MySQL
 # Write your MySQL query statement below
-select p.product_name as product_name, s.year as year, s.price as price
+select p.product_name, s.year, s.price
 from Sales s
 join Product p
 on s.product_id = p.product_id ;
