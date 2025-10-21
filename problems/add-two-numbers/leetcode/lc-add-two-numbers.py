@@ -5,14 +5,18 @@ class Solution(object):
         carry = 0
 
         while l1 or l2 or carry:
-            s = carry
+            c = carry
+
             if l1:
-                s += l1.val
+                c += l1.val
                 l1 = l1.next
+
             if l2:
-                s += l2.val
+                c += l2.val
                 l2 = l2.next
-            carry = s //10
-            curr.next = ListNode(s % 10)
+
+            curr.next = ListNode(c % 10)
             curr = curr.next
-        return dummy.next
+            carry = c // 10   
+
+        return dummy.next   
