@@ -7,7 +7,7 @@
 | Problem ID | `lc-customer-who-visited-but-did-not-make-any-transactions` |
 | Topics | Database |
 | Solved | 2025-10-21 |
-| Runtime | 2149 ms (beats 5.989599999999929%) |
+| Runtime | 1293 ms (beats 90.79299999999996%) |
 | Memory | 0B (beats 100%) |
 
 ## Problem Statement
@@ -92,11 +92,12 @@ As we can see, users with IDs 30 and 96 visited the mall one time without making
 
 ```MySQL
 # Write your MySQL query statement below
-select v.customer_id customer_id,
-count(v.visit_id) as count_no_trans
-from Visits v
-left join Transactions t
-on v.visit_id = t.visit_id
-where t.transaction_id IS NULL
-GROUP BY v.customer_id;
+select customer_id,
+count(visit_id) as count_no_trans
+from Visits
+where visit_id not in (
+    select visit_id 
+    from Transactions
+)
+group by customer_id ;
 ```
