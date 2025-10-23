@@ -7,7 +7,7 @@
 | Problem ID | `lc-employee-bonus` |
 | Topics | Database |
 | Solved | 2025-10-23 |
-| Runtime | 1027 ms (beats 65.6928%) |
+| Runtime | 950 ms (beats 87.7558%) |
 | Memory | 0B (beats 100%) |
 
 ## Problem Statement
@@ -105,6 +105,6 @@ select e.name, b.bonus
 from Employee e 
 left join Bonus b
 on e.empId = b.empId
-where b.bonus < 1000 or b.bonus is null ;
+where bonus < 1000 or bonus is null ;
 
 ```
