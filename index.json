@@ -1,27 +1,31 @@
 {
-  "updatedAt": "2026-10-11T05:41:00.890Z",
+  "updatedAt": "2026-10-11T05:42:00.494Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 77,
-    "easy": 41,
-    "medium": 24,
+    "total": 102,
+    "easy": 57,
+    "medium": 33,
     "hard": 2,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 51,
-      "leetcode": 26
+      "leetcode": 51
     },
     "byLang": {
       "Unknown": 51,
-      "MySQL": 15,
-      "Python": 11
+      "MySQL": 26,
+      "Python": 25
     },
     "byTopic": {
       "Untagged": 51,
-      "Database": 15,
-      "Array": 5,
-      "Linked List": 2,
-      "String": 4
+      "Database": 26,
+      "Array": 11,
+      "Linked List": 3,
+      "String": 6,
+      "Two Pointers": 1,
+      "Math": 1,
+      "Hash Table": 1,
+      "Stack": 2
     }
   },
   "meta": {
@@ -3242,6 +3246,1488 @@
         "topic": "arrays",
         "voteCount": 94
       }
+    },
+    {
+      "id": "lc-reverse-string-ii::1810448888",
+      "submissionId": 1810448888,
+      "platform": "leetcode",
+      "title": "Reverse String II",
+      "titleSlug": "reverse-string-ii",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python",
+        "ext": "py",
+        "slug": "python"
+      },
+      "tags": [
+        "Two Pointers",
+        "String"
+      ],
+      "topic": "Two Pointers",
+      "code": "class Solution(object):\n    def reverseStr(self, s, k):\n        s = list(s)\n        \n        for i in range(0, len(s), 2 * k):\n            s[i:i+k] = reversed(s[i:i+k])\n            \n        return \"\".join(s)\n",
+      "readmeContent": "# Reverse String II\n\n**Difficulty:** Easy  |  **Acceptance:** 54.7%\n\n**Tags:** `Two Pointers`, `String`\n\n## Problem\n\nGiven a string s and an integer k, reverse the first k characters for every 2k characters counting from the start of the string.\n\nIf there are fewer than k characters left, reverse all of them. If there are less than 2k but greater than or equal to k characters, then reverse the first k characters and leave the other as original.\n\n&nbsp;\nExample 1:\nInput: s = \"abcdefg\", k = 2\nOutput: \"bacdfeg\"\nExample 2:\nInput: s = \"abcd\", k = 2\nOutput: \"bacd\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 104\n\ts consists of only lowercase English letters.\n\t1 <= k <= 104\n\n## My Submission\n\n- Runtime: 2 ms\n- Memory: 12.7 MB\n\n## Similar Problems\n\n- [Reverse String](https://leetcode.com/problems/reverse-string/) — Easy\n- [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/) — Easy\n- [Faulty Keyboard](https://leetcode.com/problems/faulty-keyboard/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-reverse-string-ii/lc-reverse-string-ii.py",
+          "content": "class Solution(object):\n    def reverseStr(self, s, k):\n        s = list(s)\n        \n        for i in range(0, len(s), 2 * k):\n            s[i:i+k] = reversed(s[i:i+k])\n            \n        return \"\".join(s)\n"
+        },
+        {
+          "path": "problems/lc-reverse-string-ii/README.md",
+          "content": "# Reverse String II\n\n**Difficulty:** Easy  |  **Acceptance:** 54.7%\n\n**Tags:** `Two Pointers`, `String`\n\n## Problem\n\nGiven a string s and an integer k, reverse the first k characters for every 2k characters counting from the start of the string.\n\nIf there are fewer than k characters left, reverse all of them. If there are less than 2k but greater than or equal to k characters, then reverse the first k characters and leave the other as original.\n\n&nbsp;\nExample 1:\nInput: s = \"abcdefg\", k = 2\nOutput: \"bacdfeg\"\nExample 2:\nInput: s = \"abcd\", k = 2\nOutput: \"bacd\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 104\n\ts consists of only lowercase English letters.\n\t1 <= k <= 104\n\n## My Submission\n\n- Runtime: 2 ms\n- Memory: 12.7 MB\n\n## Similar Problems\n\n- [Reverse String](https://leetcode.com/problems/reverse-string/) — Easy\n- [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/) — Easy\n- [Faulty Keyboard](https://leetcode.com/problems/faulty-keyboard/) — Easy\n"
+        }
+      ],
+      "timestamp": 1761319074000,
+      "runtime": "2 ms",
+      "memory": "12.7 MB",
+      "runtimePct": 65.0765,
+      "memoryPct": 42.9342,
+      "problemStatement": "<p>Given a string <code>s</code> and an integer <code>k</code>, reverse the first <code>k</code> characters for every <code>2k</code> characters counting from the start of the string.</p>\n\n<p>If there are fewer than <code>k</code> characters left, reverse all of them. If there are less than <code>2k</code> but greater than or equal to <code>k</code> characters, then reverse the first <code>k</code> characters and leave the other as original.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> s = \"abcdefg\", k = 2\n<strong>Output:</strong> \"bacdfeg\"\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> s = \"abcd\", k = 2\n<strong>Output:</strong> \"bacd\"\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>s</code> consists of only lowercase English letters.</li>\n\t<li><code>1 &lt;= k &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
+      "hints": null,
+      "acRate": 54.73802675686898,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "reverse-string",
+          "title": "Reverse String",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "reverse-words-in-a-string-iii",
+          "title": "Reverse Words in a String III",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "faulty-keyboard",
+          "title": "Faulty Keyboard",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-valid-palindrome::1812897923",
+      "submissionId": 1812897923,
+      "platform": "leetcode",
+      "title": "Valid Palindrome",
+      "titleSlug": "valid-palindrome",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python",
+        "ext": "py",
+        "slug": "python"
+      },
+      "tags": [
+        "String",
+        "Two Pointers"
+      ],
+      "topic": "Two Pointers",
+      "code": "class Solution(object):\n    def isPalindrome(self, s):\n        cleaned = ''.join(ch.lower() for ch in s if ch.isalnum())\n        return cleaned == cleaned[::-1]\n       \n        ",
+      "readmeContent": "# Valid Palindrome\n\n**Difficulty:** Easy  |  **Acceptance:** 54.5%\n\n**Tags:** `Two Pointers`, `String`\n\n## Problem\n\nA phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.\n\nGiven a string s, return true if it is a palindrome, or false otherwise.\n\n&nbsp;\nExample 1:\n\nInput: s = \"A man, a plan, a canal: Panama\"\nOutput: true\nExplanation: \"amanaplanacanalpanama\" is a palindrome.\n\nExample 2:\n\nInput: s = \"race a car\"\nOutput: false\nExplanation: \"raceacar\" is not a palindrome.\n\nExample 3:\n\nInput: s = \" \"\nOutput: true\nExplanation: s is an empty string \"\" after removing non-alphanumeric characters.\nSince an empty string reads the same forward and backward, it is a palindrome.\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 2 * 105\n\ts consists only of printable ASCII characters.\n\n## My Submission\n\n- Runtime: 13 ms\n- Memory: 14.2 MB\n\n## Similar Problems\n\n- [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) — Easy\n- [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/) — Easy\n- [Maximum Product of the Length of Two Palindromic Subsequences](https://leetcode.com/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/) — Medium\n- [Find First Palindromic String in the Array](https://leetcode.com/problems/find-first-palindromic-string-in-the-array/) — Easy\n- [Maximum Palindromes After Operations](https://leetcode.com/problems/maximum-palindromes-after-operations/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-valid-palindrome/lc-valid-palindrome.py",
+          "content": "class Solution(object):\n    def isPalindrome(self, s):\n        cleaned = ''.join(ch.lower() for ch in s if ch.isalnum())\n        return cleaned == cleaned[::-1]\n       \n        "
+        },
+        {
+          "path": "problems/lc-valid-palindrome/README.md",
+          "content": "# Valid Palindrome\n\n**Difficulty:** Easy  |  **Acceptance:** 54.5%\n\n**Tags:** `Two Pointers`, `String`\n\n## Problem\n\nA phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.\n\nGiven a string s, return true if it is a palindrome, or false otherwise.\n\n&nbsp;\nExample 1:\n\nInput: s = \"A man, a plan, a canal: Panama\"\nOutput: true\nExplanation: \"amanaplanacanalpanama\" is a palindrome.\n\nExample 2:\n\nInput: s = \"race a car\"\nOutput: false\nExplanation: \"raceacar\" is not a palindrome.\n\nExample 3:\n\nInput: s = \" \"\nOutput: true\nExplanation: s is an empty string \"\" after removing non-alphanumeric characters.\nSince an empty string reads the same forward and backward, it is a palindrome.\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 2 * 105\n\ts consists only of printable ASCII characters.\n\n## My Submission\n\n- Runtime: 13 ms\n- Memory: 14.2 MB\n\n## Similar Problems\n\n- [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) — Easy\n- [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/) — Easy\n- [Maximum Product of the Length of Two Palindromic Subsequences](https://leetcode.com/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/) — Medium\n- [Find First Palindromic String in the Array](https://leetcode.com/problems/find-first-palindromic-string-in-the-array/) — Easy\n- [Maximum Palindromes After Operations](https://leetcode.com/problems/maximum-palindromes-after-operations/) — Medium\n"
+        }
+      ],
+      "timestamp": 1761547453000,
+      "runtime": "13 ms",
+      "memory": "14.2 MB",
+      "runtimePct": 78.67419999999998,
+      "memoryPct": 12.651400000000006,
+      "problemStatement": "<p>A phrase is a <strong>palindrome</strong> if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.</p>\n\n<p>Given a string <code>s</code>, return <code>true</code><em> if it is a <strong>palindrome</strong>, or </em><code>false</code><em> otherwise</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;A man, a plan, a canal: Panama&quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> &quot;amanaplanacanalpanama&quot; is a palindrome.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;race a car&quot;\n<strong>Output:</strong> false\n<strong>Explanation:</strong> &quot;raceacar&quot; is not a palindrome.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot; &quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> s is an empty string &quot;&quot; after removing non-alphanumeric characters.\nSince an empty string reads the same forward and backward, it is a palindrome.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 2 * 10<sup>5</sup></code></li>\n\t<li><code>s</code> consists only of printable ASCII characters.</li>\n</ul>\n",
+      "hints": null,
+      "acRate": 54.476135099296826,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "palindrome-linked-list",
+          "title": "Palindrome Linked List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "valid-palindrome-ii",
+          "title": "Valid Palindrome II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-product-of-the-length-of-two-palindromic-subsequences",
+          "title": "Maximum Product of the Length of Two Palindromic Subsequences",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "find-first-palindromic-string-in-the-array",
+          "title": "Find First Palindromic String in the Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-palindromes-after-operations",
+          "title": "Maximum Palindromes After Operations",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 125,
+            "platform": "leetcode",
+            "slug": "valid-palindrome"
+          }
+        ],
+        "canonicalId": "valid-palindrome",
+        "canonicalTitle": "Valid Palindrome",
+        "confirmedBy": "system-init",
+        "difficulty": "easy",
+        "pattern": "two-pointer",
+        "tags": [
+          "string"
+        ],
+        "topic": "two-pointers",
+        "voteCount": 91
+      }
+    },
+    {
+      "id": "lc-move-zeroes::1812907226",
+      "submissionId": 1812907226,
+      "platform": "leetcode",
+      "title": "Move Zeroes",
+      "titleSlug": "move-zeroes",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python",
+        "ext": "py",
+        "slug": "python"
+      },
+      "tags": [
+        "Array",
+        "Two Pointers"
+      ],
+      "topic": "Two Pointers",
+      "code": "class Solution(object):\n    def moveZeroes(self, nums):\n        non_zero = 0\n\n        for i in range(len(nums)):\n            if nums[i] != 0:\n                nums[non_zero], nums[i] = nums[i], nums[non_zero]\n                non_zero += 1\n        ",
+      "readmeContent": "# Move Zeroes\n\n**Difficulty:** Easy  |  **Acceptance:** 64.5%\n\n**Tags:** `Array`, `Two Pointers`\n\n## Problem\n\nGiven an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.\n\nNote that you must do this in-place without making a copy of the array.\n\n&nbsp;\nExample 1:\nInput: nums = [0,1,0,3,12]\nOutput: [1,3,12,0,0]\nExample 2:\nInput: nums = [0]\nOutput: [0]\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 104\n\t-231 <= nums[i] <= 231 - 1\n\n&nbsp;\nFollow up: Could you minimize the total number of operations done?\n\n## My Submission\n\n- Runtime: 7 ms\n- Memory: 13.6 MB\n\n## Similar Problems\n\n- [Remove Element](https://leetcode.com/problems/remove-element/) — Easy\n- [Apply Operations to an Array](https://leetcode.com/problems/apply-operations-to-an-array/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-move-zeroes/lc-move-zeroes.py",
+          "content": "class Solution(object):\n    def moveZeroes(self, nums):\n        non_zero = 0\n\n        for i in range(len(nums)):\n            if nums[i] != 0:\n                nums[non_zero], nums[i] = nums[i], nums[non_zero]\n                non_zero += 1\n        "
+        },
+        {
+          "path": "problems/lc-move-zeroes/README.md",
+          "content": "# Move Zeroes\n\n**Difficulty:** Easy  |  **Acceptance:** 64.5%\n\n**Tags:** `Array`, `Two Pointers`\n\n## Problem\n\nGiven an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.\n\nNote that you must do this in-place without making a copy of the array.\n\n&nbsp;\nExample 1:\nInput: nums = [0,1,0,3,12]\nOutput: [1,3,12,0,0]\nExample 2:\nInput: nums = [0]\nOutput: [0]\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 104\n\t-231 <= nums[i] <= 231 - 1\n\n&nbsp;\nFollow up: Could you minimize the total number of operations done?\n\n## My Submission\n\n- Runtime: 7 ms\n- Memory: 13.6 MB\n\n## Similar Problems\n\n- [Remove Element](https://leetcode.com/problems/remove-element/) — Easy\n- [Apply Operations to an Array](https://leetcode.com/problems/apply-operations-to-an-array/) — Easy\n"
+        }
+      ],
+      "timestamp": 1761548170000,
+      "runtime": "7 ms",
+      "memory": "13.6 MB",
+      "runtimePct": 55.718700000000005,
+      "memoryPct": 49.29669999999999,
+      "problemStatement": "<p>Given an integer array <code>nums</code>, move all <code>0</code>&#39;s to the end of it while maintaining the relative order of the non-zero elements.</p>\n\n<p><strong>Note</strong> that you must do this in-place without making a copy of the array.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [0,1,0,3,12]\n<strong>Output:</strong> [1,3,12,0,0]\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [0]\n<strong>Output:</strong> [0]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Could you minimize the total number of operations done?",
+      "hints": [
+        "<b>In-place</b> means we should not be allocating any space for extra array. But we are allowed to modify the existing array. However, as a first step, try coming up with a solution that makes use of additional space. For this problem as well, first apply the idea discussed using an additional array and the in-place solution will pop up eventually.",
+        "A <b>two-pointer</b> approach could be helpful here. The idea would be to have one pointer for iterating the array and another pointer that just works on the non-zero elements of the array."
+      ],
+      "acRate": 64.47398988866387,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "remove-element",
+          "title": "Remove Element",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "apply-operations-to-an-array",
+          "title": "Apply Operations to an Array",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-3sum::1812933130",
+      "submissionId": 1812933130,
+      "platform": "leetcode",
+      "title": "3Sum",
+      "titleSlug": "3sum",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python",
+        "ext": "py",
+        "slug": "python"
+      },
+      "tags": [
+        "Array",
+        "Two Pointers",
+        "Sorting"
+      ],
+      "topic": "Two Pointers",
+      "code": "class Solution(object):\n    def threeSum(self, nums):\n        res = []\n        nums.sort()\n\n        for i in range(len(nums)):\n            if i > 0 and nums[i] == nums[i - 1]:\n                continue\n\n            left, right = i + 1, len(nums) - 1\n\n            while left < right:\n                total = nums[i] + nums[left] + nums[right]\n\n                if total < 0:\n                    left += 1\n                elif total > 0:\n                    right -= 1\n                else:\n                    res.append([nums[i], nums[left], nums[right]])\n                    left += 1\n                    right -= 1\n\n                    while left < right and nums[left] == nums[left-1]:\n                        left += 1\n                    while left < right and nums[right] == nums[right+1]:\n                        right -=1\n        \n        return res\n",
+      "readmeContent": "# 3Sum\n\n**Difficulty:** Medium  |  **Acceptance:** 40.0%\n\n**Tags:** `Array`, `Two Pointers`, `Sorting`\n\n## Problem\n\nGiven an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.\n\nNotice that the solution set must not contain duplicate triplets.\n\n&nbsp;\nExample 1:\n\nInput: nums = [-1,0,1,2,-1,-4]\nOutput: [[-1,-1,2],[-1,0,1]]\nExplanation: \nnums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.\nnums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.\nnums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.\nThe distinct triplets are [-1,0,1] and [-1,-1,2].\nNotice that the order of the output and the order of the triplets does not matter.\n\nExample 2:\n\nInput: nums = [0,1,1]\nOutput: []\nExplanation: The only possible triplet does not sum up to 0.\n\nExample 3:\n\nInput: nums = [0,0,0]\nOutput: [[0,0,0]]\nExplanation: The only possible triplet sums up to 0.\n\n&nbsp;\nConstraints:\n\n\t3 <= nums.length <= 3000\n\t-105 <= nums[i] <= 105\n\n## My Submission\n\n- Runtime: 730 ms\n- Memory: 18.3 MB\n\n## Similar Problems\n\n- [Two Sum](https://leetcode.com/problems/two-sum/) — Easy\n- [3Sum Closest](https://leetcode.com/problems/3sum-closest/) — Medium\n- [4Sum](https://leetcode.com/problems/4sum/) — Medium\n- [Number of Arithmetic Triplets](https://leetcode.com/problems/number-of-arithmetic-triplets/) — Easy\n- [Minimum Sum of Mountain Triplets I](https://leetcode.com/problems/minimum-sum-of-mountain-triplets-i/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-3sum/lc-3sum.py",
+          "content": "class Solution(object):\n    def threeSum(self, nums):\n        res = []\n        nums.sort()\n\n        for i in range(len(nums)):\n            if i > 0 and nums[i] == nums[i - 1]:\n                continue\n\n            left, right = i + 1, len(nums) - 1\n\n            while left < right:\n                total = nums[i] + nums[left] + nums[right]\n\n                if total < 0:\n                    left += 1\n                elif total > 0:\n                    right -= 1\n                else:\n                    res.append([nums[i], nums[left], nums[right]])\n                    left += 1\n                    right -= 1\n\n                    while left < right and nums[left] == nums[left-1]:\n                        left += 1\n                    while left < right and nums[right] == nums[right+1]:\n                        right -=1\n        \n        return res\n"
+        },
+        {
+          "path": "problems/lc-3sum/README.md",
+          "content": "# 3Sum\n\n**Difficulty:** Medium  |  **Acceptance:** 40.0%\n\n**Tags:** `Array`, `Two Pointers`, `Sorting`\n\n## Problem\n\nGiven an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.\n\nNotice that the solution set must not contain duplicate triplets.\n\n&nbsp;\nExample 1:\n\nInput: nums = [-1,0,1,2,-1,-4]\nOutput: [[-1,-1,2],[-1,0,1]]\nExplanation: \nnums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.\nnums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.\nnums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.\nThe distinct triplets are [-1,0,1] and [-1,-1,2].\nNotice that the order of the output and the order of the triplets does not matter.\n\nExample 2:\n\nInput: nums = [0,1,1]\nOutput: []\nExplanation: The only possible triplet does not sum up to 0.\n\nExample 3:\n\nInput: nums = [0,0,0]\nOutput: [[0,0,0]]\nExplanation: The only possible triplet sums up to 0.\n\n&nbsp;\nConstraints:\n\n\t3 <= nums.length <= 3000\n\t-105 <= nums[i] <= 105\n\n## My Submission\n\n- Runtime: 730 ms\n- Memory: 18.3 MB\n\n## Similar Problems\n\n- [Two Sum](https://leetcode.com/problems/two-sum/) — Easy\n- [3Sum Closest](https://leetcode.com/problems/3sum-closest/) — Medium\n- [4Sum](https://leetcode.com/problems/4sum/) — Medium\n- [Number of Arithmetic Triplets](https://leetcode.com/problems/number-of-arithmetic-triplets/) — Easy\n- [Minimum Sum of Mountain Triplets I](https://leetcode.com/problems/minimum-sum-of-mountain-triplets-i/) — Easy\n"
+        }
+      ],
+      "timestamp": 1761550457000,
+      "runtime": "730 ms",
+      "memory": "18.3 MB",
+      "runtimePct": 70.40849999999968,
+      "memoryPct": 82.18669999999999,
+      "problemStatement": "<p>Given an integer array nums, return all the triplets <code>[nums[i], nums[j], nums[k]]</code> such that <code>i != j</code>, <code>i != k</code>, and <code>j != k</code>, and <code>nums[i] + nums[j] + nums[k] == 0</code>.</p>\n\n<p>Notice that the solution set must not contain duplicate triplets.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-1,0,1,2,-1,-4]\n<strong>Output:</strong> [[-1,-1,2],[-1,0,1]]\n<strong>Explanation:</strong> \nnums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.\nnums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.\nnums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.\nThe distinct triplets are [-1,0,1] and [-1,-1,2].\nNotice that the order of the output and the order of the triplets does not matter.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [0,1,1]\n<strong>Output:</strong> []\n<strong>Explanation:</strong> The only possible triplet does not sum up to 0.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [0,0,0]\n<strong>Output:</strong> [[0,0,0]]\n<strong>Explanation:</strong> The only possible triplet sums up to 0.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>3 &lt;= nums.length &lt;= 3000</code></li>\n\t<li><code>-10<sup>5</sup> &lt;= nums[i] &lt;= 10<sup>5</sup></code></li>\n</ul>\n",
+      "hints": [
+        "So, we essentially need to find three numbers x, y, and z such that they add up to the given value. If we fix one of the numbers say x, we are left with the two-sum problem at hand!",
+        "For the two-sum problem, if we fix one of the numbers, say x, we have to scan the entire array to find the next number y, which is value - x where value is the input parameter. Can we change our array somehow so that this search becomes faster?",
+        "The second train of thought for two-sum is, without changing the array, can we use additional space somehow? Like maybe a hash map to speed up the search?"
+      ],
+      "acRate": 40.03078428914378,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "two-sum",
+          "title": "Two Sum",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "3sum-closest",
+          "title": "3Sum Closest",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "4sum",
+          "title": "4Sum",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "number-of-arithmetic-triplets",
+          "title": "Number of Arithmetic Triplets",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "minimum-sum-of-mountain-triplets-i",
+          "title": "Minimum Sum of Mountain Triplets I",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "minimum-sum-of-mountain-triplets-ii",
+          "title": "Minimum Sum of Mountain Triplets II",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 15,
+            "platform": "leetcode",
+            "slug": "3sum"
+          }
+        ],
+        "canonicalId": "3sum",
+        "canonicalTitle": "3Sum",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "two-pointer",
+        "tags": [
+          "array"
+        ],
+        "topic": "two-pointers",
+        "voteCount": 98
+      }
+    },
+    {
+      "id": "lc-merge-sorted-array::1812944478",
+      "submissionId": 1812944478,
+      "platform": "leetcode",
+      "title": "Merge Sorted Array",
+      "titleSlug": "merge-sorted-array",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python",
+        "ext": "py",
+        "slug": "python"
+      },
+      "tags": [
+        "Array",
+        "Two Pointers",
+        "Sorting"
+      ],
+      "topic": "Two Pointers",
+      "code": "class Solution(object):\n    def merge(self, nums1, m, nums2, n):\n        for i in range(n):\n            nums1[m+i] = nums2[i]\n        nums1.sort()\n",
+      "readmeContent": "# Merge Sorted Array\n\n**Difficulty:** Easy  |  **Acceptance:** 55.9%\n\n**Tags:** `Array`, `Two Pointers`, `Sorting`\n\n## Problem\n\nYou are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.\n\nMerge nums1 and nums2 into a single array sorted in non-decreasing order.\n\nThe final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.\n\n&nbsp;\nExample 1:\n\nInput: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3\nOutput: [1,2,2,3,5,6]\nExplanation: The arrays we are merging are [1,2,3] and [2,5,6].\nThe result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.\n\nExample 2:\n\nInput: nums1 = [1], m = 1, nums2 = [], n = 0\nOutput: [1]\nExplanation: The arrays we are merging are [1] and [].\nThe result of the merge is [1].\n\nExample 3:\n\nInput: nums1 = [0], m = 0, nums2 = [1], n = 1\nOutput: [1]\nExplanation: The arrays we are merging are [] and [1].\nThe result of the merge is [1].\nNote that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1.\n\n&nbsp;\nConstraints:\n\n\tnums1.length == m + n\n\tnums2.length == n\n\t0 <= m, n <= 200\n\t1 <= m + n <= 200\n\t-109 <= nums1[i], nums2[j] <= 109\n\n&nbsp;\nFollow up: Can you come up with an algorithm that runs in O(m + n) time?\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 12.6 MB\n\n## Similar Problems\n\n- [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) — Easy\n- [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/) — Easy\n- [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/) — Medium\n- [Take K of Each Character From Left and Right](https://leetcode.com/problems/take-k-of-each-character-from-left-and-right/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-merge-sorted-array/lc-merge-sorted-array.py",
+          "content": "class Solution(object):\n    def merge(self, nums1, m, nums2, n):\n        for i in range(n):\n            nums1[m+i] = nums2[i]\n        nums1.sort()\n"
+        },
+        {
+          "path": "problems/lc-merge-sorted-array/README.md",
+          "content": "# Merge Sorted Array\n\n**Difficulty:** Easy  |  **Acceptance:** 55.9%\n\n**Tags:** `Array`, `Two Pointers`, `Sorting`\n\n## Problem\n\nYou are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.\n\nMerge nums1 and nums2 into a single array sorted in non-decreasing order.\n\nThe final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.\n\n&nbsp;\nExample 1:\n\nInput: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3\nOutput: [1,2,2,3,5,6]\nExplanation: The arrays we are merging are [1,2,3] and [2,5,6].\nThe result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.\n\nExample 2:\n\nInput: nums1 = [1], m = 1, nums2 = [], n = 0\nOutput: [1]\nExplanation: The arrays we are merging are [1] and [].\nThe result of the merge is [1].\n\nExample 3:\n\nInput: nums1 = [0], m = 0, nums2 = [1], n = 1\nOutput: [1]\nExplanation: The arrays we are merging are [] and [1].\nThe result of the merge is [1].\nNote that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1.\n\n&nbsp;\nConstraints:\n\n\tnums1.length == m + n\n\tnums2.length == n\n\t0 <= m, n <= 200\n\t1 <= m + n <= 200\n\t-109 <= nums1[i], nums2[j] <= 109\n\n&nbsp;\nFollow up: Can you come up with an algorithm that runs in O(m + n) time?\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 12.6 MB\n\n## Similar Problems\n\n- [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) — Easy\n- [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/) — Easy\n- [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/) — Medium\n- [Take K of Each Character From Left and Right](https://leetcode.com/problems/take-k-of-each-character-from-left-and-right/) — Medium\n"
+        }
+      ],
+      "timestamp": 1761551618000,
+      "runtime": "0 ms",
+      "memory": "12.6 MB",
+      "runtimePct": 100,
+      "memoryPct": 22.681199999999997,
+      "problemStatement": "<p>You are given two integer arrays <code>nums1</code> and <code>nums2</code>, sorted in <strong>non-decreasing order</strong>, and two integers <code>m</code> and <code>n</code>, representing the number of elements in <code>nums1</code> and <code>nums2</code> respectively.</p>\n\n<p><strong>Merge</strong> <code>nums1</code> and <code>nums2</code> into a single array sorted in <strong>non-decreasing order</strong>.</p>\n\n<p>The final sorted array should not be returned by the function, but instead be <em>stored inside the array </em><code>nums1</code>. To accommodate this, <code>nums1</code> has a length of <code>m + n</code>, where the first <code>m</code> elements denote the elements that should be merged, and the last <code>n</code> elements are set to <code>0</code> and should be ignored. <code>nums2</code> has a length of <code>n</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3\n<strong>Output:</strong> [1,2,2,3,5,6]\n<strong>Explanation:</strong> The arrays we are merging are [1,2,3] and [2,5,6].\nThe result of the merge is [<u>1</u>,<u>2</u>,2,<u>3</u>,5,6] with the underlined elements coming from nums1.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums1 = [1], m = 1, nums2 = [], n = 0\n<strong>Output:</strong> [1]\n<strong>Explanation:</strong> The arrays we are merging are [1] and [].\nThe result of the merge is [1].\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums1 = [0], m = 0, nums2 = [1], n = 1\n<strong>Output:</strong> [1]\n<strong>Explanation:</strong> The arrays we are merging are [] and [1].\nThe result of the merge is [1].\nNote that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>nums1.length == m + n</code></li>\n\t<li><code>nums2.length == n</code></li>\n\t<li><code>0 &lt;= m, n &lt;= 200</code></li>\n\t<li><code>1 &lt;= m + n &lt;= 200</code></li>\n\t<li><code>-10<sup>9</sup> &lt;= nums1[i], nums2[j] &lt;= 10<sup>9</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up: </strong>Can you come up with an algorithm that runs in <code>O(m + n)</code> time?</p>\n",
+      "hints": [
+        "You can easily solve this problem if you simply think about two elements at a time rather than two arrays. We know that each of the individual arrays is sorted. What we don't know is how they will intertwine. Can we take a local decision and arrive at an optimal solution?",
+        "If you simply consider one element each at a time from the two arrays and make a decision and proceed accordingly, you will arrive at the optimal solution."
+      ],
+      "acRate": 55.86432041268841,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "merge-two-sorted-lists",
+          "title": "Merge Two Sorted Lists",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "squares-of-a-sorted-array",
+          "title": "Squares of a Sorted Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "interval-list-intersections",
+          "title": "Interval List Intersections",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "take-k-of-each-character-from-left-and-right",
+          "title": "Take K of Each Character From Left and Right",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-managers-with-at-least-5-direct-reports::1812951325",
+      "submissionId": 1812951325,
+      "platform": "leetcode",
+      "title": "Managers with at Least 5 Direct Reports",
+      "titleSlug": "managers-with-at-least-5-direct-reports",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
+      "code": "select e.name \nfrom Employee e \njoin Employee b \non e.id = b.managerID\ngroup by b.managerID\nhaving count(*) >=5;\n",
+      "readmeContent": "# Managers with at Least 5 Direct Reports\n\n**Difficulty:** Medium  |  **Acceptance:** 49.7%\n\n**Tags:** `Database`\n\n## Problem\n\nTable: Employee\n\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| name        | varchar |\n| department  | varchar |\n| managerId   | int     |\n+-------------+---------+\nid is the primary key (column with unique values) for this table.\nEach row of this table indicates the name of an employee, their department, and the id of their manager.\nIf managerId is null, then the employee does not have a manager.\nNo employee will be the manager of themself.\n\n&nbsp;\n\nWrite a solution to find managers with at least five direct reports.\n\nReturn the result table in any order.\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nEmployee table:\n+-----+-------+------------+-----------+\n| id  | name  | department | managerId |\n+-----+-------+------------+-----------+\n| 101 | John  | A          | null      |\n| 102 | Dan   | A          | 101       |\n| 103 | James | A          | 101       |\n| 104 | Amy   | A          | 101       |\n| 105 | Anne  | A          | 101       |\n| 106 | Ron   | B          | 101       |\n+-----+-------+------------+-----------+\nOutput: \n+------+\n| name |\n+------+\n| John |\n+------+\n\n## My Submission\n\n- Runtime: 586 ms\n- Memory: 0B\n",
+      "files": [
+        {
+          "path": "problems/lc-managers-with-at-least-5-direct-reports/lc-managers-with-at-least-5-direct-reports.sql",
+          "content": "select e.name \nfrom Employee e \njoin Employee b \non e.id = b.managerID\ngroup by b.managerID\nhaving count(*) >=5;\n"
+        },
+        {
+          "path": "problems/lc-managers-with-at-least-5-direct-reports/README.md",
+          "content": "# Managers with at Least 5 Direct Reports\n\n**Difficulty:** Medium  |  **Acceptance:** 49.7%\n\n**Tags:** `Database`\n\n## Problem\n\nTable: Employee\n\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| name        | varchar |\n| department  | varchar |\n| managerId   | int     |\n+-------------+---------+\nid is the primary key (column with unique values) for this table.\nEach row of this table indicates the name of an employee, their department, and the id of their manager.\nIf managerId is null, then the employee does not have a manager.\nNo employee will be the manager of themself.\n\n&nbsp;\n\nWrite a solution to find managers with at least five direct reports.\n\nReturn the result table in any order.\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nEmployee table:\n+-----+-------+------------+-----------+\n| id  | name  | department | managerId |\n+-----+-------+------------+-----------+\n| 101 | John  | A          | null      |\n| 102 | Dan   | A          | 101       |\n| 103 | James | A          | 101       |\n| 104 | Amy   | A          | 101       |\n| 105 | Anne  | A          | 101       |\n| 106 | Ron   | B          | 101       |\n+-----+-------+------------+-----------+\nOutput: \n+------+\n| name |\n+------+\n| John |\n+------+\n\n## My Submission\n\n- Runtime: 586 ms\n- Memory: 0B\n"
+        }
+      ],
+      "timestamp": 1761552331000,
+      "runtime": "586 ms",
+      "memory": "0B",
+      "runtimePct": 6.811200000000058,
+      "memoryPct": 100,
+      "problemStatement": "<p>Table: <code>Employee</code></p>\n\n<pre>\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| name        | varchar |\n| department  | varchar |\n| managerId   | int     |\n+-------------+---------+\nid is the primary key (column with unique values) for this table.\nEach row of this table indicates the name of an employee, their department, and the id of their manager.\nIf managerId is null, then the employee does not have a manager.\nNo employee will be the manager of themself.\n</pre>\n\n<p>&nbsp;</p>\n\n<p>Write a solution to find managers with at least <strong>five direct reports</strong>.</p>\n\n<p>Return the result table in <strong>any order</strong>.</p>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> \nEmployee table:\n+-----+-------+------------+-----------+\n| id  | name  | department | managerId |\n+-----+-------+------------+-----------+\n| 101 | John  | A          | null      |\n| 102 | Dan   | A          | 101       |\n| 103 | James | A          | 101       |\n| 104 | Amy   | A          | 101       |\n| 105 | Anne  | A          | 101       |\n| 106 | Ron   | B          | 101       |\n+-----+-------+------------+-----------+\n<strong>Output:</strong> \n+------+\n| name |\n+------+\n| John |\n+------+\n</pre>\n",
+      "hints": [
+        "Try to get all the mangerIDs that have count bigger than 5",
+        "Use the last hint's result as a table and do join with origin table at id equals to managerId",
+        "This is a very good example to show the performance of SQL code. Try to work out other solutions and you may be surprised by running time difference.",
+        "If your solution uses 'IN' function and runs more than 5 seconds, try to optimize it by using 'JOIN' instead."
+      ],
+      "acRate": 49.71919115967368,
+      "similar": null,
+      "hasSimilar": null
+    },
+    {
+      "id": "lc-confirmation-rate::1812955501",
+      "submissionId": 1812955501,
+      "platform": "leetcode",
+      "title": "Confirmation Rate",
+      "titleSlug": "confirmation-rate",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
+      "code": "select s.user_id, round(avg(if(c.action = 'confirmed', 1, 0)),2) as confirmation_rate\nfrom Signups s \nleft join Confirmations c\non s.user_id = c.user_id\ngroup by s.user_id;",
+      "readmeContent": "# Confirmation Rate\n\n**Difficulty:** Medium  |  **Acceptance:** 62.9%\n\n**Tags:** `Database`\n\n## Problem\n\nTable: Signups\n\n+----------------+----------+\n| Column Name    | Type     |\n+----------------+----------+\n| user_id        | int      |\n| time_stamp     | datetime |\n+----------------+----------+\nuser_id is the column of unique values for this table.\nEach row contains information about the signup time for the user with ID user_id.\n\n&nbsp;\n\nTable: Confirmations\n\n+----------------+----------+\n| Column Name    | Type     |\n+----------------+----------+\n| user_id        | int      |\n| time_stamp     | datetime |\n| action         | ENUM     |\n+----------------+----------+\n(user_id, time_stamp) is the primary key (combination of columns with unique values) for this table.\nuser_id is a foreign key (reference column) to the Signups table.\naction is an ENUM (category) of the type ('confirmed', 'timeout')\nEach row of this table indicates that the user with ID user_id requested a confirmation message at time_stamp and that confirmation message was either confirmed ('confirmed') or expired without confirming ('timeout').\n\n&nbsp;\n\nThe confirmation rate of a user is the number of 'confirmed' messages divided by the total number of requested confirmation messages. The confirmation rate of a user that did not request any confirmation messages is 0. Round the confirmation rate to two decimal places.\n\nWrite a solution to find the confirmation rate of each user.\n\nReturn the result table in any order.\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nSignups table:\n+---------+---------------------+\n| user_id | time_stamp          |\n+---------+---------------------+\n| 3       | 2020-03-21 10:16:13 |\n| 7       | 2020-01-04 13:57:59 |\n| 2       | 2020-07-29 23:09:44 |\n| 6       | 2020-12-09 10:39:37 |\n+---------+---------------------+\nConfirmations table:\n+---------+---------------------+-----------+\n| user_id | time_stamp          | action    |\n+---------+---------------------+-----------+\n| 3       | 2021-01-06 03:30:46 | timeout   |\n| 3       | 2021-07-14 14:00:00 | timeout   |\n| 7       | 2021-06-12 11:57:29 | confirmed |\n| 7       | 2021-06-13 12:58:28 | confirmed |\n| 7       | 2021-06-14 13:59:27 | confirmed |\n| 2       | 2021-01-22 00:00:00 | confirmed |\n| 2       | 2021-02-28 23:59:59 | timeout   |\n+---------+---------------------+-----------+\nOutput: \n+---------+-------------------+\n| user_id | confirmation_rate |\n+---------+-------------------+\n| 6       | 0.00              |\n| 3       | 0.00              |\n| 7       | 1.00              |\n| 2       | 0.50              |\n+---------+-------------------+\nExplanation: \nUser 6 did not request any confirmation messages. The confirmation rate is 0.\nUser 3 made 2 requests and both timed out. The confirmation rate is 0.\nUser 7 made 3 requests and all were confirmed. The confirmation rate is 1.\nUser 2 made 2 requests where one was confirmed and the other timed out. The confirmation rate is 1 / 2 = 0.5.\n\n## My Submission\n\n- Runtime: 646 ms\n- Memory: 0B\n",
+      "files": [
+        {
+          "path": "problems/lc-confirmation-rate/lc-confirmation-rate.sql",
+          "content": "select s.user_id, round(avg(if(c.action = 'confirmed', 1, 0)),2) as confirmation_rate\nfrom Signups s \nleft join Confirmations c\non s.user_id = c.user_id\ngroup by s.user_id;"
+        },
+        {
+          "path": "problems/lc-confirmation-rate/README.md",
+          "content": "# Confirmation Rate\n\n**Difficulty:** Medium  |  **Acceptance:** 62.9%\n\n**Tags:** `Database`\n\n## Problem\n\nTable: Signups\n\n+----------------+----------+\n| Column Name    | Type     |\n+----------------+----------+\n| user_id        | int      |\n| time_stamp     | datetime |\n+----------------+----------+\nuser_id is the column of unique values for this table.\nEach row contains information about the signup time for the user with ID user_id.\n\n&nbsp;\n\nTable: Confirmations\n\n+----------------+----------+\n| Column Name    | Type     |\n+----------------+----------+\n| user_id        | int      |\n| time_stamp     | datetime |\n| action         | ENUM     |\n+----------------+----------+\n(user_id, time_stamp) is the primary key (combination of columns with unique values) for this table.\nuser_id is a foreign key (reference column) to the Signups table.\naction is an ENUM (category) of the type ('confirmed', 'timeout')\nEach row of this table indicates that the user with ID user_id requested a confirmation message at time_stamp and that confirmation message was either confirmed ('confirmed') or expired without confirming ('timeout').\n\n&nbsp;\n\nThe confirmation rate of a user is the number of 'confirmed' messages divided by the total number of requested confirmation messages. The confirmation rate of a user that did not request any confirmation messages is 0. Round the confirmation rate to two decimal places.\n\nWrite a solution to find the confirmation rate of each user.\n\nReturn the result table in any order.\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nSignups table:\n+---------+---------------------+\n| user_id | time_stamp          |\n+---------+---------------------+\n| 3       | 2020-03-21 10:16:13 |\n| 7       | 2020-01-04 13:57:59 |\n| 2       | 2020-07-29 23:09:44 |\n| 6       | 2020-12-09 10:39:37 |\n+---------+---------------------+\nConfirmations table:\n+---------+---------------------+-----------+\n| user_id | time_stamp          | action    |\n+---------+---------------------+-----------+\n| 3       | 2021-01-06 03:30:46 | timeout   |\n| 3       | 2021-07-14 14:00:00 | timeout   |\n| 7       | 2021-06-12 11:57:29 | confirmed |\n| 7       | 2021-06-13 12:58:28 | confirmed |\n| 7       | 2021-06-14 13:59:27 | confirmed |\n| 2       | 2021-01-22 00:00:00 | confirmed |\n| 2       | 2021-02-28 23:59:59 | timeout   |\n+---------+---------------------+-----------+\nOutput: \n+---------+-------------------+\n| user_id | confirmation_rate |\n+---------+-------------------+\n| 6       | 0.00              |\n| 3       | 0.00              |\n| 7       | 1.00              |\n| 2       | 0.50              |\n+---------+-------------------+\nExplanation: \nUser 6 did not request any confirmation messages. The confirmation rate is 0.\nUser 3 made 2 requests and both timed out. The confirmation rate is 0.\nUser 7 made 3 requests and all were confirmed. The confirmation rate is 1.\nUser 2 made 2 requests where one was confirmed and the other timed out. The confirmation rate is 1 / 2 = 0.5.\n\n## My Submission\n\n- Runtime: 646 ms\n- Memory: 0B\n"
+        }
+      ],
+      "timestamp": 1761552776000,
+      "runtime": "646 ms",
+      "memory": "0B",
+      "runtimePct": 88.2494999999999,
+      "memoryPct": 100,
+      "problemStatement": "<p>Table: <code>Signups</code></p>\n\n<pre>\n+----------------+----------+\n| Column Name    | Type     |\n+----------------+----------+\n| user_id        | int      |\n| time_stamp     | datetime |\n+----------------+----------+\nuser_id is the column of unique values for this table.\nEach row contains information about the signup time for the user with ID user_id.\n</pre>\n\n<p>&nbsp;</p>\n\n<p>Table: <code>Confirmations</code></p>\n\n<pre>\n+----------------+----------+\n| Column Name    | Type     |\n+----------------+----------+\n| user_id        | int      |\n| time_stamp     | datetime |\n| action         | ENUM     |\n+----------------+----------+\n(user_id, time_stamp) is the primary key (combination of columns with unique values) for this table.\nuser_id is a foreign key (reference column) to the Signups table.\naction is an ENUM (category) of the type (&#39;confirmed&#39;, &#39;timeout&#39;)\nEach row of this table indicates that the user with ID user_id requested a confirmation message at time_stamp and that confirmation message was either confirmed (&#39;confirmed&#39;) or expired without confirming (&#39;timeout&#39;).\n</pre>\n\n<p>&nbsp;</p>\n\n<p>The <strong>confirmation rate</strong> of a user is the number of <code>&#39;confirmed&#39;</code> messages divided by the total number of requested confirmation messages. The confirmation rate of a user that did not request any confirmation messages is <code>0</code>. Round the confirmation rate to <strong>two decimal</strong> places.</p>\n\n<p>Write a solution to find the <strong>confirmation rate</strong> of each user.</p>\n\n<p>Return the result table in <strong>any order</strong>.</p>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> \nSignups table:\n+---------+---------------------+\n| user_id | time_stamp          |\n+---------+---------------------+\n| 3       | 2020-03-21 10:16:13 |\n| 7       | 2020-01-04 13:57:59 |\n| 2       | 2020-07-29 23:09:44 |\n| 6       | 2020-12-09 10:39:37 |\n+---------+---------------------+\nConfirmations table:\n+---------+---------------------+-----------+\n| user_id | time_stamp          | action    |\n+---------+---------------------+-----------+\n| 3       | 2021-01-06 03:30:46 | timeout   |\n| 3       | 2021-07-14 14:00:00 | timeout   |\n| 7       | 2021-06-12 11:57:29 | confirmed |\n| 7       | 2021-06-13 12:58:28 | confirmed |\n| 7       | 2021-06-14 13:59:27 | confirmed |\n| 2       | 2021-01-22 00:00:00 | confirmed |\n| 2       | 2021-02-28 23:59:59 | timeout   |\n+---------+---------------------+-----------+\n<strong>Output:</strong> \n+---------+-------------------+\n| user_id | confirmation_rate |\n+---------+-------------------+\n| 6       | 0.00              |\n| 3       | 0.00              |\n| 7       | 1.00              |\n| 2       | 0.50              |\n+---------+-------------------+\n<strong>Explanation:</strong> \nUser 6 did not request any confirmation messages. The confirmation rate is 0.\nUser 3 made 2 requests and both timed out. The confirmation rate is 0.\nUser 7 made 3 requests and all were confirmed. The confirmation rate is 1.\nUser 2 made 2 requests where one was confirmed and the other timed out. The confirmation rate is 1 / 2 = 0.5.\n</pre>\n",
+      "hints": null,
+      "acRate": 62.94564887920209,
+      "similar": null,
+      "hasSimilar": null
+    },
+    {
+      "id": "lc-project-employees-i::1812959488",
+      "submissionId": 1812959488,
+      "platform": "leetcode",
+      "title": "Project Employees I",
+      "titleSlug": "project-employees-i",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
+      "code": "select p.project_id, round(avg(e.experience_years),2) as average_years\nfrom Project p\njoin Employee e\non p.employee_id = e.employee_id\ngroup by project_id;",
+      "readmeContent": "# Project Employees I\n\n**Difficulty:** Easy  |  **Acceptance:** 67.5%\n\n**Tags:** `Database`\n\n## Problem\n\nTable: Project\n\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| project_id  | int     |\n| employee_id | int     |\n+-------------+---------+\n(project_id, employee_id) is the primary key of this table.\nemployee_id is a foreign key to Employee table.\nEach row of this table indicates that the employee with employee_id is working on the project with project_id.\n\n&nbsp;\n\nTable: Employee\n\n+------------------+---------+\n| Column Name      | Type    |\n+------------------+---------+\n| employee_id      | int     |\n| name             | varchar |\n| experience_years | int     |\n+------------------+---------+\nemployee_id is the primary key of this table. It's guaranteed that experience_years is not NULL.\nEach row of this table contains information about one employee.\n\n&nbsp;\n\nWrite an SQL query that reports the average experience years of all the employees for each project, rounded to 2 digits.\n\nReturn the result table in any order.\n\nThe query result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nProject table:\n+-------------+-------------+\n| project_id  | employee_id |\n+-------------+-------------+\n| 1           | 1           |\n| 1           | 2           |\n| 1           | 3           |\n| 2           | 1           |\n| 2           | 4           |\n+-------------+-------------+\nEmployee table:\n+-------------+--------+------------------+\n| employee_id | name   | experience_years |\n+-------------+--------+------------------+\n| 1           | Khaled | 3                |\n| 2           | Ali    | 2                |\n| 3           | John   | 1                |\n| 4           | Doe    | 2                |\n+-------------+--------+------------------+\nOutput: \n+-------------+---------------+\n| project_id  | average_years |\n+-------------+---------------+\n| 1           | 2.00          |\n| 2           | 2.50          |\n+-------------+---------------+\nExplanation: The average experience years for the first project is (3 + 2 + 1) / 3 = 2.00 and for the second project is (3 + 2) / 2 = 2.50\n\n## My Submission\n\n- Runtime: 512 ms\n- Memory: 0B\n",
+      "files": [
+        {
+          "path": "problems/lc-project-employees-i/lc-project-employees-i.sql",
+          "content": "select p.project_id, round(avg(e.experience_years),2) as average_years\nfrom Project p\njoin Employee e\non p.employee_id = e.employee_id\ngroup by project_id;"
+        },
+        {
+          "path": "problems/lc-project-employees-i/README.md",
+          "content": "# Project Employees I\n\n**Difficulty:** Easy  |  **Acceptance:** 67.5%\n\n**Tags:** `Database`\n\n## Problem\n\nTable: Project\n\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| project_id  | int     |\n| employee_id | int     |\n+-------------+---------+\n(project_id, employee_id) is the primary key of this table.\nemployee_id is a foreign key to Employee table.\nEach row of this table indicates that the employee with employee_id is working on the project with project_id.\n\n&nbsp;\n\nTable: Employee\n\n+------------------+---------+\n| Column Name      | Type    |\n+------------------+---------+\n| employee_id      | int     |\n| name             | varchar |\n| experience_years | int     |\n+------------------+---------+\nemployee_id is the primary key of this table. It's guaranteed that experience_years is not NULL.\nEach row of this table contains information about one employee.\n\n&nbsp;\n\nWrite an SQL query that reports the average experience years of all the employees for each project, rounded to 2 digits.\n\nReturn the result table in any order.\n\nThe query result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nProject table:\n+-------------+-------------+\n| project_id  | employee_id |\n+-------------+-------------+\n| 1           | 1           |\n| 1           | 2           |\n| 1           | 3           |\n| 2           | 1           |\n| 2           | 4           |\n+-------------+-------------+\nEmployee table:\n+-------------+--------+------------------+\n| employee_id | name   | experience_years |\n+-------------+--------+------------------+\n| 1           | Khaled | 3                |\n| 2           | Ali    | 2                |\n| 3           | John   | 1                |\n| 4           | Doe    | 2                |\n+-------------+--------+------------------+\nOutput: \n+-------------+---------------+\n| project_id  | average_years |\n+-------------+---------------+\n| 1           | 2.00          |\n| 2           | 2.50          |\n+-------------+---------------+\nExplanation: The average experience years for the first project is (3 + 2 + 1) / 3 = 2.00 and for the second project is (3 + 2) / 2 = 2.50\n\n## My Submission\n\n- Runtime: 512 ms\n- Memory: 0B\n"
+        }
+      ],
+      "timestamp": 1761553176000,
+      "runtime": "512 ms",
+      "memory": "0B",
+      "runtimePct": 82.07340000000002,
+      "memoryPct": 100,
+      "problemStatement": "<p>Table: <code>Project</code></p>\n\n<pre>\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| project_id  | int     |\n| employee_id | int     |\n+-------------+---------+\n(project_id, employee_id) is the primary key of this table.\nemployee_id is a foreign key to <code>Employee</code> table.\nEach row of this table indicates that the employee with employee_id is working on the project with project_id.\n</pre>\n\n<p>&nbsp;</p>\n\n<p>Table: <code>Employee</code></p>\n\n<pre>\n+------------------+---------+\n| Column Name      | Type    |\n+------------------+---------+\n| employee_id      | int     |\n| name             | varchar |\n| experience_years | int     |\n+------------------+---------+\nemployee_id is the primary key of this table. It&#39;s guaranteed that experience_years is not NULL.\nEach row of this table contains information about one employee.\n</pre>\n\n<p>&nbsp;</p>\n\n<p>Write an SQL query that reports the <strong>average</strong> experience years of all the employees for each project, <strong>rounded to 2 digits</strong>.</p>\n\n<p>Return the result table in <strong>any order</strong>.</p>\n\n<p>The query result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> \nProject table:\n+-------------+-------------+\n| project_id  | employee_id |\n+-------------+-------------+\n| 1           | 1           |\n| 1           | 2           |\n| 1           | 3           |\n| 2           | 1           |\n| 2           | 4           |\n+-------------+-------------+\nEmployee table:\n+-------------+--------+------------------+\n| employee_id | name   | experience_years |\n+-------------+--------+------------------+\n| 1           | Khaled | 3                |\n| 2           | Ali    | 2                |\n| 3           | John   | 1                |\n| 4           | Doe    | 2                |\n+-------------+--------+------------------+\n<strong>Output:</strong> \n+-------------+---------------+\n| project_id  | average_years |\n+-------------+---------------+\n| 1           | 2.00          |\n| 2           | 2.50          |\n+-------------+---------------+\n<strong>Explanation:</strong> The average experience years for the first project is (3 + 2 + 1) / 3 = 2.00 and for the second project is (3 + 2) / 2 = 2.50\n</pre>\n",
+      "hints": null,
+      "acRate": 67.49428232730233,
+      "similar": null,
+      "hasSimilar": null
+    },
+    {
+      "id": "lc-percentage-of-users-attended-a-contest::1812971092",
+      "submissionId": 1812971092,
+      "platform": "leetcode",
+      "title": "Percentage of Users Attended a Contest",
+      "titleSlug": "percentage-of-users-attended-a-contest",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
+      "code": "select \ncontest_id, \nround(count(distinct user_id) * 100 /(select count(user_id) from Users) ,2) as percentage\nfrom  Register\ngroup by contest_id\norder by percentage desc,contest_id",
+      "readmeContent": "# Percentage of Users Attended a Contest\n\n**Difficulty:** Easy  |  **Acceptance:** 61.4%\n\n**Tags:** `Database`\n\n## Problem\n\nTable: Users\n\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| user_id     | int     |\n| user_name   | varchar |\n+-------------+---------+\nuser_id is the primary key (column with unique values) for this table.\nEach row of this table contains the name and the id of a user.\n\n&nbsp;\n\nTable: Register\n\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| contest_id  | int     |\n| user_id     | int     |\n+-------------+---------+\n(contest_id, user_id) is the primary key (combination of columns with unique values) for this table.\nEach row of this table contains the id of a user and the contest they registered into.\n\n&nbsp;\n\nWrite a solution to find the percentage of the users registered in each contest rounded to two decimals.\n\nReturn the result table ordered by percentage in descending order. In case of a tie, order it by contest_id in ascending order.\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nUsers table:\n+---------+-----------+\n| user_id | user_name |\n+---------+-----------+\n| 6       | Alice     |\n| 2       | Bob       |\n| 7       | Alex      |\n+---------+-----------+\nRegister table:\n+------------+---------+\n| contest_id | user_id |\n+------------+---------+\n| 215        | 6       |\n| 209        | 2       |\n| 208        | 2       |\n| 210        | 6       |\n| 208        | 6       |\n| 209        | 7       |\n| 209        | 6       |\n| 215        | 7       |\n| 208        | 7       |\n| 210        | 2       |\n| 207        | 2       |\n| 210        | 7       |\n+------------+---------+\nOutput: \n+------------+------------+\n| contest_id | percentage |\n+------------+------------+\n| 208        | 100.0      |\n| 209        | 100.0      |\n| 210        | 100.0      |\n| 215        | 66.67      |\n| 207        | 33.33      |\n+------------+------------+\nExplanation: \nAll the users registered in contests 208, 209, and 210. The percentage is 100% and we sort them in the answer table by contest_id in ascending order.\nAlice and Alex registered in contest 215 and the percentage is ((2/3) * 100) = 66.67%\nBob registered in contest 207 and the percentage is ((1/3) * 100) = 33.33%\n\n## My Submission\n\n- Runtime: 913 ms\n- Memory: 0B\n\n## Similar Problems\n\n- [Queries Quality and Percentage](https://leetcode.com/problems/queries-quality-and-percentage/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-percentage-of-users-attended-a-contest/lc-percentage-of-users-attended-a-contest.sql",
+          "content": "select \ncontest_id, \nround(count(distinct user_id) * 100 /(select count(user_id) from Users) ,2) as percentage\nfrom  Register\ngroup by contest_id\norder by percentage desc,contest_id"
+        },
+        {
+          "path": "problems/lc-percentage-of-users-attended-a-contest/README.md",
+          "content": "# Percentage of Users Attended a Contest\n\n**Difficulty:** Easy  |  **Acceptance:** 61.4%\n\n**Tags:** `Database`\n\n## Problem\n\nTable: Users\n\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| user_id     | int     |\n| user_name   | varchar |\n+-------------+---------+\nuser_id is the primary key (column with unique values) for this table.\nEach row of this table contains the name and the id of a user.\n\n&nbsp;\n\nTable: Register\n\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| contest_id  | int     |\n| user_id     | int     |\n+-------------+---------+\n(contest_id, user_id) is the primary key (combination of columns with unique values) for this table.\nEach row of this table contains the id of a user and the contest they registered into.\n\n&nbsp;\n\nWrite a solution to find the percentage of the users registered in each contest rounded to two decimals.\n\nReturn the result table ordered by percentage in descending order. In case of a tie, order it by contest_id in ascending order.\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nUsers table:\n+---------+-----------+\n| user_id | user_name |\n+---------+-----------+\n| 6       | Alice     |\n| 2       | Bob       |\n| 7       | Alex      |\n+---------+-----------+\nRegister table:\n+------------+---------+\n| contest_id | user_id |\n+------------+---------+\n| 215        | 6       |\n| 209        | 2       |\n| 208        | 2       |\n| 210        | 6       |\n| 208        | 6       |\n| 209        | 7       |\n| 209        | 6       |\n| 215        | 7       |\n| 208        | 7       |\n| 210        | 2       |\n| 207        | 2       |\n| 210        | 7       |\n+------------+---------+\nOutput: \n+------------+------------+\n| contest_id | percentage |\n+------------+------------+\n| 208        | 100.0      |\n| 209        | 100.0      |\n| 210        | 100.0      |\n| 215        | 66.67      |\n| 207        | 33.33      |\n+------------+------------+\nExplanation: \nAll the users registered in contests 208, 209, and 210. The percentage is 100% and we sort them in the answer table by contest_id in ascending order.\nAlice and Alex registered in contest 215 and the percentage is ((2/3) * 100) = 66.67%\nBob registered in contest 207 and the percentage is ((1/3) * 100) = 33.33%\n\n## My Submission\n\n- Runtime: 913 ms\n- Memory: 0B\n\n## Similar Problems\n\n- [Queries Quality and Percentage](https://leetcode.com/problems/queries-quality-and-percentage/) — Easy\n"
+        }
+      ],
+      "timestamp": 1761554314000,
+      "runtime": "913 ms",
+      "memory": "0B",
+      "runtimePct": 93.979,
+      "memoryPct": 100,
+      "problemStatement": "<p>Table: <code>Users</code></p>\n\n<pre>\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| user_id     | int     |\n| user_name   | varchar |\n+-------------+---------+\nuser_id is the primary key (column with unique values) for this table.\nEach row of this table contains the name and the id of a user.\n</pre>\n\n<p>&nbsp;</p>\n\n<p>Table: <code>Register</code></p>\n\n<pre>\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| contest_id  | int     |\n| user_id     | int     |\n+-------------+---------+\n(contest_id, user_id) is the primary key (combination of columns with unique values) for this table.\nEach row of this table contains the id of a user and the contest they registered into.\n</pre>\n\n<p>&nbsp;</p>\n\n<p>Write a solution to find the percentage of the users registered in each contest rounded to <strong>two decimals</strong>.</p>\n\n<p>Return the result table ordered by <code>percentage</code> in <strong>descending order</strong>. In case of a tie, order it by <code>contest_id</code> in <strong>ascending order</strong>.</p>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> \nUsers table:\n+---------+-----------+\n| user_id | user_name |\n+---------+-----------+\n| 6       | Alice     |\n| 2       | Bob       |\n| 7       | Alex      |\n+---------+-----------+\nRegister table:\n+------------+---------+\n| contest_id | user_id |\n+------------+---------+\n| 215        | 6       |\n| 209        | 2       |\n| 208        | 2       |\n| 210        | 6       |\n| 208        | 6       |\n| 209        | 7       |\n| 209        | 6       |\n| 215        | 7       |\n| 208        | 7       |\n| 210        | 2       |\n| 207        | 2       |\n| 210        | 7       |\n+------------+---------+\n<strong>Output:</strong> \n+------------+------------+\n| contest_id | percentage |\n+------------+------------+\n| 208        | 100.0      |\n| 209        | 100.0      |\n| 210        | 100.0      |\n| 215        | 66.67      |\n| 207        | 33.33      |\n+------------+------------+\n<strong>Explanation:</strong> \nAll the users registered in contests 208, 209, and 210. The percentage is 100% and we sort them in the answer table by contest_id in ascending order.\nAlice and Alex registered in contest 215 and the percentage is ((2/3) * 100) = 66.67%\nBob registered in contest 207 and the percentage is ((1/3) * 100) = 33.33%\n</pre>\n",
+      "hints": null,
+      "acRate": 61.433616853544926,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "queries-quality-and-percentage",
+          "title": "Queries Quality and Percentage",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-remove-zeros-in-decimal-representation::1813666556",
+      "submissionId": 1813666556,
+      "platform": "leetcode",
+      "title": "Remove Zeros in Decimal Representation",
+      "titleSlug": "remove-zeros-in-decimal-representation",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python",
+        "ext": "py",
+        "slug": "python"
+      },
+      "tags": [
+        "Math",
+        "Simulation"
+      ],
+      "topic": "Math",
+      "code": "class Solution(object):\n    def removeZeros(self, n):\n        return int(str(n).replace('0', ''))\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+      "readmeContent": "# Remove Zeros in Decimal Representation\n\n**Difficulty:** Easy  |  **Acceptance:** 75.9%\n\n**Tags:** `Math`, `Simulation`\n\n## Problem\n\nYou are given a positive integer n.\n\nReturn the integer obtained by removing all zeros from the decimal representation of n.\n\n&nbsp;\nExample 1:\n\nInput: n = 1020030\n\nOutput: 123\n\nExplanation:\n\nAfter removing all zeros from 1020030, we get 123.\n\nExample 2:\n\nInput: n = 1\n\nOutput: 1\n\nExplanation:\n\n1 has no zero in its decimal representation. Therefore, the answer is 1.\n\n&nbsp;\nConstraints:\n\n\t1 <= n <= 1015\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 12.5 MB\n",
+      "files": [
+        {
+          "path": "problems/lc-remove-zeros-in-decimal-representation/lc-remove-zeros-in-decimal-representation.py",
+          "content": "class Solution(object):\n    def removeZeros(self, n):\n        return int(str(n).replace('0', ''))\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+        },
+        {
+          "path": "problems/lc-remove-zeros-in-decimal-representation/README.md",
+          "content": "# Remove Zeros in Decimal Representation\n\n**Difficulty:** Easy  |  **Acceptance:** 75.9%\n\n**Tags:** `Math`, `Simulation`\n\n## Problem\n\nYou are given a positive integer n.\n\nReturn the integer obtained by removing all zeros from the decimal representation of n.\n\n&nbsp;\nExample 1:\n\nInput: n = 1020030\n\nOutput: 123\n\nExplanation:\n\nAfter removing all zeros from 1020030, we get 123.\n\nExample 2:\n\nInput: n = 1\n\nOutput: 1\n\nExplanation:\n\n1 has no zero in its decimal representation. Therefore, the answer is 1.\n\n&nbsp;\nConstraints:\n\n\t1 <= n <= 1015\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 12.5 MB\n"
+        }
+      ],
+      "timestamp": 1761623340000,
+      "runtime": "0 ms",
+      "memory": "12.5 MB",
+      "runtimePct": 100,
+      "memoryPct": 22.641400000000004,
+      "problemStatement": "<p>You are given a <strong>positive</strong> integer <code>n</code>.</p>\n\n<p>Return the integer obtained by removing all zeros from the decimal representation of <code>n</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">n = 1020030</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">123</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>After removing all zeros from 1<strong><u>0</u></strong>2<strong><u>00</u></strong>3<strong><u>0</u></strong>, we get 123.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">n = 1</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">1</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>1 has no zero in its decimal representation. Therefore, the answer is 1.</p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 10<sup>15</sup></code></li>\n</ul>\n",
+      "hints": [
+        "Convert to a string and filter out the <code>'0'</code> characters."
+      ],
+      "acRate": 75.86837294332724,
+      "similar": null,
+      "hasSimilar": null
+    },
+    {
+      "id": "lc-remove-duplicates-from-sorted-array::1813681167",
+      "submissionId": 1813681167,
+      "platform": "leetcode",
+      "title": "Remove Duplicates from Sorted Array",
+      "titleSlug": "remove-duplicates-from-sorted-array",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python",
+        "ext": "py",
+        "slug": "python"
+      },
+      "tags": [
+        "Array",
+        "Two Pointers"
+      ],
+      "topic": "Two Pointers",
+      "code": "class Solution(object):\n    def removeDuplicates(self, nums):\n        if not nums:\n            return 0\n\n        i = 0\n        for j in range(1,len(nums)):\n            if nums[j] != nums[i]:\n                i += 1\n                nums[i] = nums[j]\n        return i+1 \n",
+      "readmeContent": "# Remove Duplicates from Sorted Array\n\n**Difficulty:** Easy  |  **Acceptance:** 63.9%\n\n**Tags:** `Array`, `Two Pointers`\n\n## Problem\n\nGiven an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.\n\nConsider the number of unique elements in&nbsp;nums to be k​​​​​​​​​​​​​​. After removing duplicates, return the number of unique elements&nbsp;k.\n\nThe first&nbsp;k&nbsp;elements of&nbsp;nums&nbsp;should contain the unique numbers in sorted order. The remaining elements beyond index&nbsp;k - 1&nbsp;can be ignored.\n\nCustom Judge:\n\nThe judge will test your solution with the following code:\n\nint[] nums = [...]; // Input array\nint[] expectedNums = [...]; // The expected answer with correct length\n\nint k = removeDuplicates(nums); // Calls your implementation\n\nassert k == expectedNums.length;\nfor (int i = 0; i < k; i++) {\n    assert nums[i] == expectedNums[i];\n}\n\nIf all assertions pass, then your solution will be accepted.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,1,2]\nOutput: 2, nums = [1,2,_]\nExplanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n\nExample 2:\n\nInput: nums = [0,0,1,1,1,2,2,3,3,4]\nOutput: 5, nums = [0,1,2,3,4,_,_,_,_,_]\nExplanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 3 * 104\n\t-100 <= nums[i] <= 100\n\tnums is sorted in non-decreasing order.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 14 MB\n\n## Similar Problems\n\n- [Remove Element](https://leetcode.com/problems/remove-element/) — Easy\n- [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) — Medium\n- [Apply Operations to an Array](https://leetcode.com/problems/apply-operations-to-an-array/) — Easy\n- [Sum of Distances](https://leetcode.com/problems/sum-of-distances/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-remove-duplicates-from-sorted-array/lc-remove-duplicates-from-sorted-array.py",
+          "content": "class Solution(object):\n    def removeDuplicates(self, nums):\n        if not nums:\n            return 0\n\n        i = 0\n        for j in range(1,len(nums)):\n            if nums[j] != nums[i]:\n                i += 1\n                nums[i] = nums[j]\n        return i+1 \n"
+        },
+        {
+          "path": "problems/lc-remove-duplicates-from-sorted-array/README.md",
+          "content": "# Remove Duplicates from Sorted Array\n\n**Difficulty:** Easy  |  **Acceptance:** 63.9%\n\n**Tags:** `Array`, `Two Pointers`\n\n## Problem\n\nGiven an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.\n\nConsider the number of unique elements in&nbsp;nums to be k​​​​​​​​​​​​​​. After removing duplicates, return the number of unique elements&nbsp;k.\n\nThe first&nbsp;k&nbsp;elements of&nbsp;nums&nbsp;should contain the unique numbers in sorted order. The remaining elements beyond index&nbsp;k - 1&nbsp;can be ignored.\n\nCustom Judge:\n\nThe judge will test your solution with the following code:\n\nint[] nums = [...]; // Input array\nint[] expectedNums = [...]; // The expected answer with correct length\n\nint k = removeDuplicates(nums); // Calls your implementation\n\nassert k == expectedNums.length;\nfor (int i = 0; i < k; i++) {\n    assert nums[i] == expectedNums[i];\n}\n\nIf all assertions pass, then your solution will be accepted.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,1,2]\nOutput: 2, nums = [1,2,_]\nExplanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n\nExample 2:\n\nInput: nums = [0,0,1,1,1,2,2,3,3,4]\nOutput: 5, nums = [0,1,2,3,4,_,_,_,_,_]\nExplanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 3 * 104\n\t-100 <= nums[i] <= 100\n\tnums is sorted in non-decreasing order.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 14 MB\n\n## Similar Problems\n\n- [Remove Element](https://leetcode.com/problems/remove-element/) — Easy\n- [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) — Medium\n- [Apply Operations to an Array](https://leetcode.com/problems/apply-operations-to-an-array/) — Easy\n- [Sum of Distances](https://leetcode.com/problems/sum-of-distances/) — Medium\n"
+        }
+      ],
+      "timestamp": 1761624683000,
+      "runtime": "0 ms",
+      "memory": "14 MB",
+      "runtimePct": 100,
+      "memoryPct": 15.571499999999983,
+      "problemStatement": "<p>Given an integer array <code>nums</code> sorted in <strong>non-decreasing order</strong>, remove the duplicates <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\"><strong>in-place</strong></a> such that each unique element appears only <strong>once</strong>. The <strong>relative order</strong> of the elements should be kept the <strong>same</strong>.</p>\n\n<p>Consider the number of <em>unique elements</em> in&nbsp;<code>nums</code> to be <code>k<strong>​​​​​​​</strong></code>​​​​​​​. <meta charset=\"UTF-8\" />After removing duplicates, return the number of unique elements&nbsp;<code>k</code>.</p>\n\n<p><meta charset=\"UTF-8\" />The first&nbsp;<code>k</code>&nbsp;elements of&nbsp;<code>nums</code>&nbsp;should contain the unique numbers in <strong>sorted order</strong>. The remaining elements beyond index&nbsp;<code>k - 1</code>&nbsp;can be ignored.</p>\n\n<p><strong>Custom Judge:</strong></p>\n\n<p>The judge will test your solution with the following code:</p>\n\n<pre>\nint[] nums = [...]; // Input array\nint[] expectedNums = [...]; // The expected answer with correct length\n\nint k = removeDuplicates(nums); // Calls your implementation\n\nassert k == expectedNums.length;\nfor (int i = 0; i &lt; k; i++) {\n    assert nums[i] == expectedNums[i];\n}\n</pre>\n\n<p>If all assertions pass, then your solution will be <strong>accepted</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,1,2]\n<strong>Output:</strong> 2, nums = [1,2,_]\n<strong>Explanation:</strong> Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [0,0,1,1,1,2,2,3,3,4]\n<strong>Output:</strong> 5, nums = [0,1,2,3,4,_,_,_,_,_]\n<strong>Explanation:</strong> Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li><code>-100 &lt;= nums[i] &lt;= 100</code></li>\n\t<li><code>nums</code> is sorted in <strong>non-decreasing</strong> order.</li>\n</ul>\n",
+      "hints": [
+        "In this problem, the key point to focus on is the input array being sorted. As far as duplicate elements are concerned, what is their positioning in the array when the given array is sorted? Look at the image below for the answer. If we know the position of one of the elements, do we also know the positioning of all the duplicate elements?\r\n\r\n<br>\r\n<img src=\"https://assets.leetcode.com/uploads/2019/10/20/hint_rem_dup.png\" width=\"500\"/>",
+        "We need to modify the array in-place and the size of the final array would potentially be smaller than the size of the input array. So, we ought to use a two-pointer approach here. One, that would keep track of the current element in the original array and another one for just the unique elements.",
+        "Essentially, once an element is encountered, you simply need to <b>bypass</b> its duplicates and move on to the next unique element."
+      ],
+      "acRate": 63.934382768904484,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "remove-element",
+          "title": "Remove Element",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "remove-duplicates-from-sorted-array-ii",
+          "title": "Remove Duplicates from Sorted Array II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "apply-operations-to-an-array",
+          "title": "Apply Operations to an Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "sum-of-distances",
+          "title": "Sum of Distances",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-maximum-subarray::1813687231",
+      "submissionId": 1813687231,
+      "platform": "leetcode",
+      "title": "Maximum Subarray",
+      "titleSlug": "maximum-subarray",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python",
+        "ext": "py",
+        "slug": "python"
+      },
+      "tags": [
+        "Array",
+        "Divide and Conquer",
+        "Dynamic Programming"
+      ],
+      "topic": "Dynamic Programming",
+      "code": "class Solution(object):\n    def maxSubArray(self, nums):\n        max_sum = nums[0]\n        curr_sum = 0\n\n        for num in nums:\n            curr_sum += num\n            if curr_sum > max_sum:\n                max_sum = curr_sum\n            if curr_sum < 0:\n                curr_sum = 0\n        return max_sum\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+      "readmeContent": "# Maximum Subarray\n\n**Difficulty:** Medium  |  **Acceptance:** 54.0%\n\n**Tags:** `Array`, `Divide and Conquer`, `Dynamic Programming`\n\n## Problem\n\nGiven an integer array nums, find the subarray with the largest sum, and return its sum.\n\n&nbsp;\nExample 1:\n\nInput: nums = [-2,1,-3,4,-1,2,1,-5,4]\nOutput: 6\nExplanation: The subarray [4,-1,2,1] has the largest sum 6.\n\nExample 2:\n\nInput: nums = [1]\nOutput: 1\nExplanation: The subarray [1] has the largest sum 1.\n\nExample 3:\n\nInput: nums = [5,4,-1,7,8]\nOutput: 23\nExplanation: The subarray [5,4,-1,7,8] has the largest sum 23.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 105\n\t-104 <= nums[i] <= 104\n\n&nbsp;\nFollow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.\n\n## My Submission\n\n- Runtime: 26 ms\n- Memory: 22.1 MB\n\n## Similar Problems\n\n- [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) — Easy\n- [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) — Medium\n- [Degree of an Array](https://leetcode.com/problems/degree-of-an-array/) — Easy\n- [Longest Turbulent Subarray](https://leetcode.com/problems/longest-turbulent-subarray/) — Medium\n- [Maximum Score Of Spliced Array](https://leetcode.com/problems/maximum-score-of-spliced-array/) — Hard\n",
+      "files": [
+        {
+          "path": "problems/lc-maximum-subarray/lc-maximum-subarray.py",
+          "content": "class Solution(object):\n    def maxSubArray(self, nums):\n        max_sum = nums[0]\n        curr_sum = 0\n\n        for num in nums:\n            curr_sum += num\n            if curr_sum > max_sum:\n                max_sum = curr_sum\n            if curr_sum < 0:\n                curr_sum = 0\n        return max_sum\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+        },
+        {
+          "path": "problems/lc-maximum-subarray/README.md",
+          "content": "# Maximum Subarray\n\n**Difficulty:** Medium  |  **Acceptance:** 54.0%\n\n**Tags:** `Array`, `Divide and Conquer`, `Dynamic Programming`\n\n## Problem\n\nGiven an integer array nums, find the subarray with the largest sum, and return its sum.\n\n&nbsp;\nExample 1:\n\nInput: nums = [-2,1,-3,4,-1,2,1,-5,4]\nOutput: 6\nExplanation: The subarray [4,-1,2,1] has the largest sum 6.\n\nExample 2:\n\nInput: nums = [1]\nOutput: 1\nExplanation: The subarray [1] has the largest sum 1.\n\nExample 3:\n\nInput: nums = [5,4,-1,7,8]\nOutput: 23\nExplanation: The subarray [5,4,-1,7,8] has the largest sum 23.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 105\n\t-104 <= nums[i] <= 104\n\n&nbsp;\nFollow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.\n\n## My Submission\n\n- Runtime: 26 ms\n- Memory: 22.1 MB\n\n## Similar Problems\n\n- [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) — Easy\n- [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) — Medium\n- [Degree of an Array](https://leetcode.com/problems/degree-of-an-array/) — Easy\n- [Longest Turbulent Subarray](https://leetcode.com/problems/longest-turbulent-subarray/) — Medium\n- [Maximum Score Of Spliced Array](https://leetcode.com/problems/maximum-score-of-spliced-array/) — Hard\n"
+        }
+      ],
+      "timestamp": 1761625204000,
+      "runtime": "26 ms",
+      "memory": "22.1 MB",
+      "runtimePct": 96.6746,
+      "memoryPct": 5.272000000000023,
+      "problemStatement": "<p>Given an integer array <code>nums</code>, find the <span data-keyword=\"subarray-nonempty\">subarray</span> with the largest sum, and return <em>its sum</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-2,1,-3,4,-1,2,1,-5,4]\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> The subarray [4,-1,2,1] has the largest sum 6.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> The subarray [1] has the largest sum 1.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [5,4,-1,7,8]\n<strong>Output:</strong> 23\n<strong>Explanation:</strong> The subarray [5,4,-1,7,8] has the largest sum 23.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> If you have figured out the <code>O(n)</code> solution, try coding another solution using the <strong>divide and conquer</strong> approach, which is more subtle.</p>\n",
+      "hints": null,
+      "acRate": 53.96546144387323,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "best-time-to-buy-and-sell-stock",
+          "title": "Best Time to Buy and Sell Stock",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-product-subarray",
+          "title": "Maximum Product Subarray",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "degree-of-an-array",
+          "title": "Degree of an Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "longest-turbulent-subarray",
+          "title": "Longest Turbulent Subarray",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "maximum-score-of-spliced-array",
+          "title": "Maximum Score Of Spliced Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-absolute-sum-of-any-subarray",
+          "title": "Maximum Absolute Sum of Any Subarray",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "substring-with-largest-variance",
+          "title": "Substring With Largest Variance",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "count-subarrays-with-score-less-than-k",
+          "title": "Count Subarrays With Score Less Than K",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "maximum-value-of-a-string-in-an-array",
+          "title": "Maximum Value of a String in an Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-the-substring-with-maximum-cost",
+          "title": "Find the Substring With Maximum Cost",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "k-items-with-the-maximum-sum",
+          "title": "K Items With the Maximum Sum",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-good-subarray-sum",
+          "title": "Maximum Good Subarray Sum",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "maximize-subarray-sum-after-removing-all-occurrences-of-one-element",
+          "title": "Maximize Subarray Sum After Removing All Occurrences of One Element",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-queries-quality-and-percentage::1814086212",
+      "submissionId": 1814086212,
+      "platform": "leetcode",
+      "title": "Queries Quality and Percentage",
+      "titleSlug": "queries-quality-and-percentage",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
+      "code": "select query_name,\nround(avg(rating  / position),2) as quality,\nround(sum(case when rating <3 then 1 else 0 end)*100/count(query_name),2) as poor_query_percentage\nfrom Queries\ngroup by query_name;\n",
+      "readmeContent": "# Queries Quality and Percentage\n\n**Difficulty:** Easy  |  **Acceptance:** 55.3%\n\n**Tags:** `Database`\n\n## Problem\n\nTable: Queries\n\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| query_name  | varchar |\n| result      | varchar |\n| position    | int     |\n| rating      | int     |\n+-------------+---------+\nThis table may have duplicate rows.\nThis table contains information collected from some queries on a database.\nThe position column has a value from 1 to 500.\nThe rating column has a value from 1 to 5. Query with rating less than 3 is a poor query.\n\n&nbsp;\n\nWe define query quality as:\n\nThe average of the ratio between query rating and its position.\n\nWe also define poor query percentage as:\n\nThe percentage of all queries with rating less than 3.\n\nWrite a solution to find each query_name, the quality and poor_query_percentage.\n\nBoth quality and poor_query_percentage should be rounded to 2 decimal places.\n\nReturn the result table in any order.\n\nThe&nbsp;result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nQueries table:\n+------------+-------------------+----------+--------+\n| query_name | result            | position | rating |\n+------------+-------------------+----------+--------+\n| Dog        | Golden Retriever  | 1        | 5      |\n| Dog        | German Shepherd   | 2        | 5      |\n| Dog        | Mule              | 200      | 1      |\n| Cat        | Shirazi           | 5        | 2      |\n| Cat        | Siamese           | 3        | 3      |\n| Cat        | Sphynx            | 7        | 4      |\n+------------+-------------------+----------+--------+\nOutput: \n+------------+---------+-----------------------+\n| query_name | quality | poor_query_percentage |\n+------------+---------+-----------------------+\n| Dog        | 2.50    | 33.33                 |\n| Cat        | 0.66    | 33.33                 |\n+------------+---------+-----------------------+\nExplanation: \nDog queries quality is ((5 / 1) + (5 / 2) + (1 / 200)) / 3 = 2.50\nDog queries poor_ query_percentage is (1 / 3) * 100 = 33.33\n\nCat queries quality equals ((2 / 5) + (3 / 3) + (4 / 7)) / 3 = 0.66\nCat queries poor_ query_percentage is (1 / 3) * 100 = 33.33\n\n## My Submission\n\n- Runtime: 357 ms\n- Memory: 0B\n\n## Similar Problems\n\n- [Percentage of Users Attended a Contest](https://leetcode.com/problems/percentage-of-users-attended-a-contest/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-queries-quality-and-percentage/lc-queries-quality-and-percentage.sql",
+          "content": "select query_name,\nround(avg(rating  / position),2) as quality,\nround(sum(case when rating <3 then 1 else 0 end)*100/count(query_name),2) as poor_query_percentage\nfrom Queries\ngroup by query_name;\n"
+        },
+        {
+          "path": "problems/lc-queries-quality-and-percentage/README.md",
+          "content": "# Queries Quality and Percentage\n\n**Difficulty:** Easy  |  **Acceptance:** 55.3%\n\n**Tags:** `Database`\n\n## Problem\n\nTable: Queries\n\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| query_name  | varchar |\n| result      | varchar |\n| position    | int     |\n| rating      | int     |\n+-------------+---------+\nThis table may have duplicate rows.\nThis table contains information collected from some queries on a database.\nThe position column has a value from 1 to 500.\nThe rating column has a value from 1 to 5. Query with rating less than 3 is a poor query.\n\n&nbsp;\n\nWe define query quality as:\n\nThe average of the ratio between query rating and its position.\n\nWe also define poor query percentage as:\n\nThe percentage of all queries with rating less than 3.\n\nWrite a solution to find each query_name, the quality and poor_query_percentage.\n\nBoth quality and poor_query_percentage should be rounded to 2 decimal places.\n\nReturn the result table in any order.\n\nThe&nbsp;result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nQueries table:\n+------------+-------------------+----------+--------+\n| query_name | result            | position | rating |\n+------------+-------------------+----------+--------+\n| Dog        | Golden Retriever  | 1        | 5      |\n| Dog        | German Shepherd   | 2        | 5      |\n| Dog        | Mule              | 200      | 1      |\n| Cat        | Shirazi           | 5        | 2      |\n| Cat        | Siamese           | 3        | 3      |\n| Cat        | Sphynx            | 7        | 4      |\n+------------+-------------------+----------+--------+\nOutput: \n+------------+---------+-----------------------+\n| query_name | quality | poor_query_percentage |\n+------------+---------+-----------------------+\n| Dog        | 2.50    | 33.33                 |\n| Cat        | 0.66    | 33.33                 |\n+------------+---------+-----------------------+\nExplanation: \nDog queries quality is ((5 / 1) + (5 / 2) + (1 / 200)) / 3 = 2.50\nDog queries poor_ query_percentage is (1 / 3) * 100 = 33.33\n\nCat queries quality equals ((2 / 5) + (3 / 3) + (4 / 7)) / 3 = 0.66\nCat queries poor_ query_percentage is (1 / 3) * 100 = 33.33\n\n## My Submission\n\n- Runtime: 357 ms\n- Memory: 0B\n\n## Similar Problems\n\n- [Percentage of Users Attended a Contest](https://leetcode.com/problems/percentage-of-users-attended-a-contest/) — Easy\n"
+        }
+      ],
+      "timestamp": 1761659336000,
+      "runtime": "357 ms",
+      "memory": "0B",
+      "runtimePct": 85.18950000000002,
+      "memoryPct": 100,
+      "problemStatement": "<p>Table: <code>Queries</code></p>\n\n<pre>\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| query_name  | varchar |\n| result      | varchar |\n| position    | int     |\n| rating      | int     |\n+-------------+---------+\nThis table may have duplicate rows.\nThis table contains information collected from some queries on a database.\nThe <code>position</code> column has a value from <strong>1</strong> to <strong>500</strong>.\nThe <code>rating</code> column has a value from <strong>1</strong> to <strong>5</strong>. Query with <code>rating</code> less than 3 is a poor query.\n</pre>\n\n<p>&nbsp;</p>\n\n<p>We define query <code>quality</code> as:</p>\n\n<blockquote>\n<p>The average of the ratio between query rating and its position.</p>\n</blockquote>\n\n<p>We also define <code>poor query percentage</code> as:</p>\n\n<blockquote>\n<p>The percentage of all queries with rating less than 3.</p>\n</blockquote>\n\n<p>Write a solution to find each <code>query_name</code>, the <code>quality</code> and <code>poor_query_percentage</code>.</p>\n\n<p>Both <code>quality</code> and <code>poor_query_percentage</code> should be <strong>rounded to 2 decimal places</strong>.</p>\n\n<p>Return the result table in <strong>any order</strong>.</p>\n\n<p>The&nbsp;result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> \nQueries table:\n+------------+-------------------+----------+--------+\n| query_name | result            | position | rating |\n+------------+-------------------+----------+--------+\n| Dog        | Golden Retriever  | 1        | 5      |\n| Dog        | German Shepherd   | 2        | 5      |\n| Dog        | Mule              | 200      | 1      |\n| Cat        | Shirazi           | 5        | 2      |\n| Cat        | Siamese           | 3        | 3      |\n| Cat        | Sphynx            | 7        | 4      |\n+------------+-------------------+----------+--------+\n<strong>Output:</strong> \n+------------+---------+-----------------------+\n| query_name | quality | poor_query_percentage |\n+------------+---------+-----------------------+\n| Dog        | 2.50    | 33.33                 |\n| Cat        | 0.66    | 33.33                 |\n+------------+---------+-----------------------+\n<strong>Explanation:</strong> \nDog queries quality is ((5 / 1) + (5 / 2) + (1 / 200)) / 3 = 2.50\nDog queries poor_ query_percentage is (1 / 3) * 100 = 33.33\n\nCat queries quality equals ((2 / 5) + (3 / 3) + (4 / 7)) / 3 = 0.66\nCat queries poor_ query_percentage is (1 / 3) * 100 = 33.33\n</pre>\n",
+      "hints": null,
+      "acRate": 55.28710100058494,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "percentage-of-users-attended-a-contest",
+          "title": "Percentage of Users Attended a Contest",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-monthly-transactions-i::1814104521",
+      "submissionId": 1814104521,
+      "platform": "leetcode",
+      "title": "Monthly Transactions I",
+      "titleSlug": "monthly-transactions-i",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
+      "code": "select left(trans_date,7) as month, country,\ncount(id) as trans_count,\nsum(state ='approved') as approved_count,\nsum(amount) as trans_total_amount,\nsum((state='approved')*amount) as approved_total_amount\nfrom Transactions\ngroup by month, country;",
+      "readmeContent": "# Monthly Transactions I\n\n**Difficulty:** Medium  |  **Acceptance:** 60.1%\n\n**Tags:** `Database`\n\n## Problem\n\nTable: Transactions\n\n+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| id            | int     |\n| country       | varchar |\n| state         | enum    |\n| amount        | int     |\n| trans_date    | date    |\n+---------------+---------+\nid is the primary key of this table.\nThe table has information about incoming transactions.\nThe state column is an enum of type [\"approved\", \"declined\"].\n\n&nbsp;\n\nWrite an SQL query to find for each month and country, the number of transactions and their total amount, the number of approved transactions and their total amount.\n\nReturn the result table in any order.\n\nThe query result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nTransactions table:\n+------+---------+----------+--------+------------+\n| id   | country | state    | amount | trans_date |\n+------+---------+----------+--------+------------+\n| 121  | US      | approved | 1000   | 2018-12-18 |\n| 122  | US      | declined | 2000   | 2018-12-19 |\n| 123  | US      | approved | 2000   | 2019-01-01 |\n| 124  | DE      | approved | 2000   | 2019-01-07 |\n+------+---------+----------+--------+------------+\nOutput: \n+----------+---------+-------------+----------------+--------------------+-----------------------+\n| month    | country | trans_count | approved_count | trans_total_amount | approved_total_amount |\n+----------+---------+-------------+----------------+--------------------+-----------------------+\n| 2018-12  | US      | 2           | 1              | 3000               | 1000                  |\n| 2019-01  | US      | 1           | 1              | 2000               | 2000                  |\n| 2019-01  | DE      | 1           | 1              | 2000               | 2000                  |\n+----------+---------+-------------+----------------+--------------------+-----------------------+\n\n## My Submission\n\n- Runtime: 593 ms\n- Memory: 0B\n",
+      "files": [
+        {
+          "path": "problems/lc-monthly-transactions-i/lc-monthly-transactions-i.sql",
+          "content": "select left(trans_date,7) as month, country,\ncount(id) as trans_count,\nsum(state ='approved') as approved_count,\nsum(amount) as trans_total_amount,\nsum((state='approved')*amount) as approved_total_amount\nfrom Transactions\ngroup by month, country;"
+        },
+        {
+          "path": "problems/lc-monthly-transactions-i/README.md",
+          "content": "# Monthly Transactions I\n\n**Difficulty:** Medium  |  **Acceptance:** 60.1%\n\n**Tags:** `Database`\n\n## Problem\n\nTable: Transactions\n\n+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| id            | int     |\n| country       | varchar |\n| state         | enum    |\n| amount        | int     |\n| trans_date    | date    |\n+---------------+---------+\nid is the primary key of this table.\nThe table has information about incoming transactions.\nThe state column is an enum of type [\"approved\", \"declined\"].\n\n&nbsp;\n\nWrite an SQL query to find for each month and country, the number of transactions and their total amount, the number of approved transactions and their total amount.\n\nReturn the result table in any order.\n\nThe query result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nTransactions table:\n+------+---------+----------+--------+------------+\n| id   | country | state    | amount | trans_date |\n+------+---------+----------+--------+------------+\n| 121  | US      | approved | 1000   | 2018-12-18 |\n| 122  | US      | declined | 2000   | 2018-12-19 |\n| 123  | US      | approved | 2000   | 2019-01-01 |\n| 124  | DE      | approved | 2000   | 2019-01-07 |\n+------+---------+----------+--------+------------+\nOutput: \n+----------+---------+-------------+----------------+--------------------+-----------------------+\n| month    | country | trans_count | approved_count | trans_total_amount | approved_total_amount |\n+----------+---------+-------------+----------------+--------------------+-----------------------+\n| 2018-12  | US      | 2           | 1              | 3000               | 1000                  |\n| 2019-01  | US      | 1           | 1              | 2000               | 2000                  |\n| 2019-01  | DE      | 1           | 1              | 2000               | 2000                  |\n+----------+---------+-------------+----------------+--------------------+-----------------------+\n\n## My Submission\n\n- Runtime: 593 ms\n- Memory: 0B\n"
+        }
+      ],
+      "timestamp": 1761660566000,
+      "runtime": "593 ms",
+      "memory": "0B",
+      "runtimePct": 75.64949999999993,
+      "memoryPct": 100,
+      "problemStatement": "<p>Table: <code>Transactions</code></p>\n\n<pre>\n+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| id            | int     |\n| country       | varchar |\n| state         | enum    |\n| amount        | int     |\n| trans_date    | date    |\n+---------------+---------+\nid is the primary key of this table.\nThe table has information about incoming transactions.\nThe state column is an enum of type [&quot;approved&quot;, &quot;declined&quot;].\n</pre>\n\n<p>&nbsp;</p>\n\n<p>Write an SQL query to find for each month and country, the number of transactions and their total amount, the number of approved transactions and their total amount.</p>\n\n<p>Return the result table in <strong>any order</strong>.</p>\n\n<p>The query result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> \nTransactions table:\n+------+---------+----------+--------+------------+\n| id   | country | state    | amount | trans_date |\n+------+---------+----------+--------+------------+\n| 121  | US      | approved | 1000   | 2018-12-18 |\n| 122  | US      | declined | 2000   | 2018-12-19 |\n| 123  | US      | approved | 2000   | 2019-01-01 |\n| 124  | DE      | approved | 2000   | 2019-01-07 |\n+------+---------+----------+--------+------------+\n<strong>Output:</strong> \n+----------+---------+-------------+----------------+--------------------+-----------------------+\n| month    | country | trans_count | approved_count | trans_total_amount | approved_total_amount |\n+----------+---------+-------------+----------------+--------------------+-----------------------+\n| 2018-12  | US      | 2           | 1              | 3000               | 1000                  |\n| 2019-01  | US      | 1           | 1              | 2000               | 2000                  |\n| 2019-01  | DE      | 1           | 1              | 2000               | 2000                  |\n+----------+---------+-------------+----------------+--------------------+-----------------------+\n</pre>\n",
+      "hints": null,
+      "acRate": 60.08384331993667,
+      "similar": null,
+      "hasSimilar": null
+    },
+    {
+      "id": "lc-immediate-food-delivery-ii::1814118251",
+      "submissionId": 1814118251,
+      "platform": "leetcode",
+      "title": "Immediate Food Delivery II",
+      "titleSlug": "immediate-food-delivery-ii",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
+      "code": "select\nround(sum( order_date = customer_pref_delivery_date)*100 / count(*),2) as immediate_percentage\nfrom Delivery\nwhere (customer_id, order_date) in (\n    select customer_id, min(order_date)\n as first_order_date\nfrom Delivery\ngroup by customer_id);",
+      "readmeContent": "# Immediate Food Delivery II\n\n**Difficulty:** Medium  |  **Acceptance:** 57.2%\n\n**Tags:** `Database`\n\n## Problem\n\nTable: Delivery\n\n+-----------------------------+---------+\n| Column Name                 | Type    |\n+-----------------------------+---------+\n| delivery_id                 | int     |\n| customer_id                 | int     |\n| order_date                  | date    |\n| customer_pref_delivery_date | date    |\n+-----------------------------+---------+\ndelivery_id is the column of unique values of this table.\nThe table holds information about food delivery to customers that make orders at some date and specify a preferred delivery date (on the same order date or after it).\n\n&nbsp;\n\nIf the customer's preferred delivery date is the same as the order date, then the order is called immediate; otherwise, it is called scheduled.\n\nThe first order of a customer is the order with the earliest order date that the customer made. It is guaranteed that a customer has precisely one first order.\n\nWrite a solution to find the percentage of immediate orders in the first orders of all customers, rounded to 2 decimal places.\n\nThe&nbsp;result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nDelivery table:\n+-------------+-------------+------------+-----------------------------+\n| delivery_id | customer_id | order_date | customer_pref_delivery_date |\n+-------------+-------------+------------+-----------------------------+\n| 1           | 1           | 2019-08-01 | 2019-08-02                  |\n| 2           | 2           | 2019-08-02 | 2019-08-02                  |\n| 3           | 1           | 2019-08-11 | 2019-08-12                  |\n| 4           | 3           | 2019-08-24 | 2019-08-24                  |\n| 5           | 3           | 2019-08-21 | 2019-08-22                  |\n| 6           | 2           | 2019-08-11 | 2019-08-13                  |\n| 7           | 4           | 2019-08-09 | 2019-08-09                  |\n+-------------+-------------+------------+-----------------------------+\nOutput: \n+----------------------+\n| immediate_percentage |\n+----------------------+\n| 50.00                |\n+----------------------+\nExplanation: \nThe customer id 1 has a first order with delivery id 1 and it is scheduled.\nThe customer id 2 has a first order with delivery id 2 and it is immediate.\nThe customer id 3 has a first order with delivery id 5 and it is scheduled.\nThe customer id 4 has a first order with delivery id 7 and it is immediate.\nHence, half the customers have immediate first orders.\n\n## My Submission\n\n- Runtime: 566 ms\n- Memory: 0B\n",
+      "files": [
+        {
+          "path": "problems/lc-immediate-food-delivery-ii/lc-immediate-food-delivery-ii.sql",
+          "content": "select\nround(sum( order_date = customer_pref_delivery_date)*100 / count(*),2) as immediate_percentage\nfrom Delivery\nwhere (customer_id, order_date) in (\n    select customer_id, min(order_date)\n as first_order_date\nfrom Delivery\ngroup by customer_id);"
+        },
+        {
+          "path": "problems/lc-immediate-food-delivery-ii/README.md",
+          "content": "# Immediate Food Delivery II\n\n**Difficulty:** Medium  |  **Acceptance:** 57.2%\n\n**Tags:** `Database`\n\n## Problem\n\nTable: Delivery\n\n+-----------------------------+---------+\n| Column Name                 | Type    |\n+-----------------------------+---------+\n| delivery_id                 | int     |\n| customer_id                 | int     |\n| order_date                  | date    |\n| customer_pref_delivery_date | date    |\n+-----------------------------+---------+\ndelivery_id is the column of unique values of this table.\nThe table holds information about food delivery to customers that make orders at some date and specify a preferred delivery date (on the same order date or after it).\n\n&nbsp;\n\nIf the customer's preferred delivery date is the same as the order date, then the order is called immediate; otherwise, it is called scheduled.\n\nThe first order of a customer is the order with the earliest order date that the customer made. It is guaranteed that a customer has precisely one first order.\n\nWrite a solution to find the percentage of immediate orders in the first orders of all customers, rounded to 2 decimal places.\n\nThe&nbsp;result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nDelivery table:\n+-------------+-------------+------------+-----------------------------+\n| delivery_id | customer_id | order_date | customer_pref_delivery_date |\n+-------------+-------------+------------+-----------------------------+\n| 1           | 1           | 2019-08-01 | 2019-08-02                  |\n| 2           | 2           | 2019-08-02 | 2019-08-02                  |\n| 3           | 1           | 2019-08-11 | 2019-08-12                  |\n| 4           | 3           | 2019-08-24 | 2019-08-24                  |\n| 5           | 3           | 2019-08-21 | 2019-08-22                  |\n| 6           | 2           | 2019-08-11 | 2019-08-13                  |\n| 7           | 4           | 2019-08-09 | 2019-08-09                  |\n+-------------+-------------+------------+-----------------------------+\nOutput: \n+----------------------+\n| immediate_percentage |\n+----------------------+\n| 50.00                |\n+----------------------+\nExplanation: \nThe customer id 1 has a first order with delivery id 1 and it is scheduled.\nThe customer id 2 has a first order with delivery id 2 and it is immediate.\nThe customer id 3 has a first order with delivery id 5 and it is scheduled.\nThe customer id 4 has a first order with delivery id 7 and it is immediate.\nHence, half the customers have immediate first orders.\n\n## My Submission\n\n- Runtime: 566 ms\n- Memory: 0B\n"
+        }
+      ],
+      "timestamp": 1761661493000,
+      "runtime": "566 ms",
+      "memory": "0B",
+      "runtimePct": 98.75409999999998,
+      "memoryPct": 100,
+      "problemStatement": "<p>Table: <code>Delivery</code></p>\n\n<pre>\n+-----------------------------+---------+\n| Column Name                 | Type    |\n+-----------------------------+---------+\n| delivery_id                 | int     |\n| customer_id                 | int     |\n| order_date                  | date    |\n| customer_pref_delivery_date | date    |\n+-----------------------------+---------+\ndelivery_id is the column of unique values of this table.\nThe table holds information about food delivery to customers that make orders at some date and specify a preferred delivery date (on the same order date or after it).\n</pre>\n\n<p>&nbsp;</p>\n\n<p>If the customer&#39;s preferred delivery date is the same as the order date, then the order is called <strong>immediate;</strong> otherwise, it is called <strong>scheduled</strong>.</p>\n\n<p>The <strong>first order</strong> of a customer is the order with the earliest order date that the customer made. It is guaranteed that a customer has precisely one first order.</p>\n\n<p>Write a solution to find the percentage of immediate orders in the first orders of all customers, <strong>rounded to 2 decimal places</strong>.</p>\n\n<p>The&nbsp;result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> \nDelivery table:\n+-------------+-------------+------------+-----------------------------+\n| delivery_id | customer_id | order_date | customer_pref_delivery_date |\n+-------------+-------------+------------+-----------------------------+\n| 1           | 1           | 2019-08-01 | 2019-08-02                  |\n| 2           | 2           | 2019-08-02 | 2019-08-02                  |\n| 3           | 1           | 2019-08-11 | 2019-08-12                  |\n| 4           | 3           | 2019-08-24 | 2019-08-24                  |\n| 5           | 3           | 2019-08-21 | 2019-08-22                  |\n| 6           | 2           | 2019-08-11 | 2019-08-13                  |\n| 7           | 4           | 2019-08-09 | 2019-08-09                  |\n+-------------+-------------+------------+-----------------------------+\n<strong>Output:</strong> \n+----------------------+\n| immediate_percentage |\n+----------------------+\n| 50.00                |\n+----------------------+\n<strong>Explanation:</strong> \nThe customer id 1 has a first order with delivery id 1 and it is scheduled.\nThe customer id 2 has a first order with delivery id 2 and it is immediate.\nThe customer id 3 has a first order with delivery id 5 and it is scheduled.\nThe customer id 4 has a first order with delivery id 7 and it is immediate.\nHence, half the customers have immediate first orders.\n</pre>\n",
+      "hints": null,
+      "acRate": 57.23808184809418,
+      "similar": null,
+      "hasSimilar": null
+    },
+    {
+      "id": "lc-game-play-analysis-iv::1814143936",
+      "submissionId": 1814143936,
+      "platform": "leetcode",
+      "title": "Game Play Analysis IV",
+      "titleSlug": "game-play-analysis-iv",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
+      "code": "SELECT\nROUND(COUNT(a1.player_id)/(SELECT COUNT(DISTINCT player_id) FROM Activity),2) AS fraction\nFROM (\n    SELECT \n    player_id, MIN(event_date) as event_date\n    FROM Activity\n    GROUP BY player_id\n) as a1\nJOIN Activity a2\nON a1.player_id = a2.player_id\nAND DATEDIFF(a2.event_date, a1.event_date) = 1;",
+      "readmeContent": "# Game Play Analysis IV\n\n**Difficulty:** Medium  |  **Acceptance:** 42.7%\n\n**Tags:** `Database`\n\n## Problem\n\nTable: Activity\n\n+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| player_id    | int     |\n| device_id    | int     |\n| event_date   | date    |\n| games_played | int     |\n+--------------+---------+\n(player_id, event_date) is the primary key (combination of columns with unique values) of this table.\nThis table shows the activity of players of some games.\nEach row is a record of a player who logged in and played a number of games (possibly 0) before logging out on someday using some device.\n\n \n\nWrite a solution to report the fraction of players that logged in again on the day after the day they first logged in, rounded to 2 decimal places. In other words, you need to determine the number of players who logged in on the day immediately following their initial login, and divide it by the number of total players.\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nActivity table:\n+-----------+-----------+------------+--------------+\n| player_id | device_id | event_date | games_played |\n+-----------+-----------+------------+--------------+\n| 1         | 2         | 2016-03-01 | 5            |\n| 1         | 2         | 2016-03-02 | 6            |\n| 2         | 3         | 2017-06-25 | 1            |\n| 3         | 1         | 2016-03-02 | 0            |\n| 3         | 4         | 2018-07-03 | 5            |\n+-----------+-----------+------------+--------------+\nOutput: \n+-----------+\n| fraction  |\n+-----------+\n| 0.33      |\n+-----------+\nExplanation: \nOnly the player with id 1 logged back in after the first day he had logged in so the answer is 1/3 = 0.33\n\n## My Submission\n\n- Runtime: 543 ms\n- Memory: 0B\n",
+      "files": [
+        {
+          "path": "problems/lc-game-play-analysis-iv/lc-game-play-analysis-iv.sql",
+          "content": "SELECT\nROUND(COUNT(a1.player_id)/(SELECT COUNT(DISTINCT player_id) FROM Activity),2) AS fraction\nFROM (\n    SELECT \n    player_id, MIN(event_date) as event_date\n    FROM Activity\n    GROUP BY player_id\n) as a1\nJOIN Activity a2\nON a1.player_id = a2.player_id\nAND DATEDIFF(a2.event_date, a1.event_date) = 1;"
+        },
+        {
+          "path": "problems/lc-game-play-analysis-iv/README.md",
+          "content": "# Game Play Analysis IV\n\n**Difficulty:** Medium  |  **Acceptance:** 42.7%\n\n**Tags:** `Database`\n\n## Problem\n\nTable: Activity\n\n+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| player_id    | int     |\n| device_id    | int     |\n| event_date   | date    |\n| games_played | int     |\n+--------------+---------+\n(player_id, event_date) is the primary key (combination of columns with unique values) of this table.\nThis table shows the activity of players of some games.\nEach row is a record of a player who logged in and played a number of games (possibly 0) before logging out on someday using some device.\n\n \n\nWrite a solution to report the fraction of players that logged in again on the day after the day they first logged in, rounded to 2 decimal places. In other words, you need to determine the number of players who logged in on the day immediately following their initial login, and divide it by the number of total players.\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nActivity table:\n+-----------+-----------+------------+--------------+\n| player_id | device_id | event_date | games_played |\n+-----------+-----------+------------+--------------+\n| 1         | 2         | 2016-03-01 | 5            |\n| 1         | 2         | 2016-03-02 | 6            |\n| 2         | 3         | 2017-06-25 | 1            |\n| 3         | 1         | 2016-03-02 | 0            |\n| 3         | 4         | 2018-07-03 | 5            |\n+-----------+-----------+------------+--------------+\nOutput: \n+-----------+\n| fraction  |\n+-----------+\n| 0.33      |\n+-----------+\nExplanation: \nOnly the player with id 1 logged back in after the first day he had logged in so the answer is 1/3 = 0.33\n\n## My Submission\n\n- Runtime: 543 ms\n- Memory: 0B\n"
+        }
+      ],
+      "timestamp": 1761663258000,
+      "runtime": "543 ms",
+      "memory": "0B",
+      "runtimePct": 88.17139999999993,
+      "memoryPct": 100,
+      "problemStatement": "<p>Table: <code>Activity</code></p>\n\n<pre>\n+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| player_id    | int     |\n| device_id    | int     |\n| event_date   | date    |\n| games_played | int     |\n+--------------+---------+\n(player_id, event_date) is the primary key (combination of columns with unique values) of this table.\nThis table shows the activity of players of some games.\nEach row is a record of a player who logged in and played a number of games (possibly 0) before logging out on someday using some device.\n</pre>\n\n<p> </p>\n\n<p>Write a solution to report the <strong>fraction</strong> of players that logged in again on the day after the day they first logged in, <strong>rounded to 2 decimal places</strong>. In other words, you need to determine the number of players who logged in on the day immediately following their initial login, and divide it by the number of total players.</p>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> \nActivity table:\n+-----------+-----------+------------+--------------+\n| player_id | device_id | event_date | games_played |\n+-----------+-----------+------------+--------------+\n| 1         | 2         | 2016-03-01 | 5            |\n| 1         | 2         | 2016-03-02 | 6            |\n| 2         | 3         | 2017-06-25 | 1            |\n| 3         | 1         | 2016-03-02 | 0            |\n| 3         | 4         | 2018-07-03 | 5            |\n+-----------+-----------+------------+--------------+\n<strong>Output:</strong> \n+-----------+\n| fraction  |\n+-----------+\n| 0.33      |\n+-----------+\n<strong>Explanation:</strong> \nOnly the player with id 1 logged back in after the first day he had logged in so the answer is 1/3 = 0.33\n</pre>\n",
+      "hints": null,
+      "acRate": 42.71176018691604,
+      "similar": null,
+      "hasSimilar": null
+    },
+    {
+      "id": "lc-roman-to-integer::1814750261",
+      "submissionId": 1814750261,
+      "platform": "leetcode",
+      "title": "Roman to Integer",
+      "titleSlug": "roman-to-integer",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python",
+        "ext": "py",
+        "slug": "python"
+      },
+      "tags": [
+        "Hash Table",
+        "Math",
+        "String"
+      ],
+      "topic": "Math",
+      "code": "class Solution(object):\n    def romanToInt(self, s):\n        roman = {'I':1,'V':5, 'X':10, 'L':50,'C':100, 'D':500, 'M':1000}\n        total = 0\n\n        for i in range(len(s)-1):\n            if roman[s[i]] < roman[s[i+1]]:\n                total -= roman[s[i]]\n            else:\n                total += roman[s[i]]\n        total += roman[s[-1]]\n        return total",
+      "readmeContent": "# Roman to Integer\n\n**Difficulty:** Easy  |  **Acceptance:** 67.3%\n\n**Tags:** `Hash Table`, `Math`, `String`\n\n## Problem\n\nRoman numerals are represented by seven different symbols:&nbsp;I, V, X, L, C, D and M.\n\nSymbol       Value\nI             1\nV             5\nX             10\nL             50\nC             100\nD             500\nM             1000\n\nFor example,&nbsp;2 is written as II&nbsp;in Roman numeral, just two ones added together. 12 is written as&nbsp;XII, which is simply X + II. The number 27 is written as XXVII, which is XX + V + II.\n\nRoman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:\n\n\tI can be placed before V (5) and X (10) to make 4 and 9.&nbsp;\n\tX can be placed before L (50) and C (100) to make 40 and 90.&nbsp;\n\tC can be placed before D (500) and M (1000) to make 400 and 900.\n\nGiven a roman numeral, convert it to an integer.\n\n&nbsp;\nExample 1:\n\nInput: s = \"III\"\nOutput: 3\nExplanation: III = 3.\n\nExample 2:\n\nInput: s = \"LVIII\"\nOutput: 58\nExplanation: L = 50, V= 5, III = 3.\n\nExample 3:\n\nInput: s = \"MCMXCIV\"\nOutput: 1994\nExplanation: M = 1000, CM = 900, XC = 90 and IV = 4.\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 15\n\ts contains only&nbsp;the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').\n\tIt is guaranteed&nbsp;that s is a valid roman numeral in the range [1, 3999].\n\n## My Submission\n\n- Runtime: 8 ms\n- Memory: 12.3 MB\n\n## Similar Problems\n\n- [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-roman-to-integer/lc-roman-to-integer.py",
+          "content": "class Solution(object):\n    def romanToInt(self, s):\n        roman = {'I':1,'V':5, 'X':10, 'L':50,'C':100, 'D':500, 'M':1000}\n        total = 0\n\n        for i in range(len(s)-1):\n            if roman[s[i]] < roman[s[i+1]]:\n                total -= roman[s[i]]\n            else:\n                total += roman[s[i]]\n        total += roman[s[-1]]\n        return total"
+        },
+        {
+          "path": "problems/lc-roman-to-integer/README.md",
+          "content": "# Roman to Integer\n\n**Difficulty:** Easy  |  **Acceptance:** 67.3%\n\n**Tags:** `Hash Table`, `Math`, `String`\n\n## Problem\n\nRoman numerals are represented by seven different symbols:&nbsp;I, V, X, L, C, D and M.\n\nSymbol       Value\nI             1\nV             5\nX             10\nL             50\nC             100\nD             500\nM             1000\n\nFor example,&nbsp;2 is written as II&nbsp;in Roman numeral, just two ones added together. 12 is written as&nbsp;XII, which is simply X + II. The number 27 is written as XXVII, which is XX + V + II.\n\nRoman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:\n\n\tI can be placed before V (5) and X (10) to make 4 and 9.&nbsp;\n\tX can be placed before L (50) and C (100) to make 40 and 90.&nbsp;\n\tC can be placed before D (500) and M (1000) to make 400 and 900.\n\nGiven a roman numeral, convert it to an integer.\n\n&nbsp;\nExample 1:\n\nInput: s = \"III\"\nOutput: 3\nExplanation: III = 3.\n\nExample 2:\n\nInput: s = \"LVIII\"\nOutput: 58\nExplanation: L = 50, V= 5, III = 3.\n\nExample 3:\n\nInput: s = \"MCMXCIV\"\nOutput: 1994\nExplanation: M = 1000, CM = 900, XC = 90 and IV = 4.\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 15\n\ts contains only&nbsp;the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').\n\tIt is guaranteed&nbsp;that s is a valid roman numeral in the range [1, 3999].\n\n## My Submission\n\n- Runtime: 8 ms\n- Memory: 12.3 MB\n\n## Similar Problems\n\n- [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) — Medium\n"
+        }
+      ],
+      "timestamp": 1761718840000,
+      "runtime": "8 ms",
+      "memory": "12.3 MB",
+      "runtimePct": 65.41409999999999,
+      "memoryPct": 58.94859999999999,
+      "problemStatement": "<p>Roman numerals are represented by seven different symbols:&nbsp;<code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> and <code>M</code>.</p>\n\n<pre>\n<strong>Symbol</strong>       <strong>Value</strong>\nI             1\nV             5\nX             10\nL             50\nC             100\nD             500\nM             1000</pre>\n\n<p>For example,&nbsp;<code>2</code> is written as <code>II</code>&nbsp;in Roman numeral, just two ones added together. <code>12</code> is written as&nbsp;<code>XII</code>, which is simply <code>X + II</code>. The number <code>27</code> is written as <code>XXVII</code>, which is <code>XX + V + II</code>.</p>\n\n<p>Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not <code>IIII</code>. Instead, the number four is written as <code>IV</code>. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as <code>IX</code>. There are six instances where subtraction is used:</p>\n\n<ul>\n\t<li><code>I</code> can be placed before <code>V</code> (5) and <code>X</code> (10) to make 4 and 9.&nbsp;</li>\n\t<li><code>X</code> can be placed before <code>L</code> (50) and <code>C</code> (100) to make 40 and 90.&nbsp;</li>\n\t<li><code>C</code> can be placed before <code>D</code> (500) and <code>M</code> (1000) to make 400 and 900.</li>\n</ul>\n\n<p>Given a roman numeral, convert it to an integer.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;III&quot;\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> III = 3.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;LVIII&quot;\n<strong>Output:</strong> 58\n<strong>Explanation:</strong> L = 50, V= 5, III = 3.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;MCMXCIV&quot;\n<strong>Output:</strong> 1994\n<strong>Explanation:</strong> M = 1000, CM = 900, XC = 90 and IV = 4.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 15</code></li>\n\t<li><code>s</code> contains only&nbsp;the characters <code>(&#39;I&#39;, &#39;V&#39;, &#39;X&#39;, &#39;L&#39;, &#39;C&#39;, &#39;D&#39;, &#39;M&#39;)</code>.</li>\n\t<li>It is <strong>guaranteed</strong>&nbsp;that <code>s</code> is a valid roman numeral in the range <code>[1, 3999]</code>.</li>\n</ul>\n",
+      "hints": [
+        "Problem is simpler to solve by working the string from back to front and using a map."
+      ],
+      "acRate": 67.2819365652179,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "integer-to-roman",
+          "title": "Integer to Roman",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-longest-common-prefix::1814758721",
+      "submissionId": 1814758721,
+      "platform": "leetcode",
+      "title": "Longest Common Prefix",
+      "titleSlug": "longest-common-prefix",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python",
+        "ext": "py",
+        "slug": "python"
+      },
+      "tags": [
+        "Array",
+        "String",
+        "Trie"
+      ],
+      "topic": "Trie",
+      "code": "class Solution(object):\n    def longestCommonPrefix(self, strs):\n        if not strs:\n            return \"\"\n        prefix = strs[0]\n        for word in strs[1:]:\n            while word[:len(prefix)] != prefix:\n                prefix = prefix[:-1]\n                if not prefix:\n                    return \"\"\n        return prefix\n                ",
+      "readmeContent": "# Longest Common Prefix\n\n**Difficulty:** Easy  |  **Acceptance:** 48.5%\n\n**Tags:** `Array`, `String`, `Trie`\n\n## Problem\n\nWrite a function to find the longest common prefix string amongst an array of strings.\n\nIf there is no common prefix, return an empty string \"\".\n\n&nbsp;\nExample 1:\n\nInput: strs = [\"flower\",\"flow\",\"flight\"]\nOutput: \"fl\"\n\nExample 2:\n\nInput: strs = [\"dog\",\"racecar\",\"car\"]\nOutput: \"\"\nExplanation: There is no common prefix among the input strings.\n\n&nbsp;\nConstraints:\n\n\t1 <= strs.length <= 200\n\t0 <= strs[i].length <= 200\n\tstrs[i] consists of only lowercase English letters if it is non-empty.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 12.4 MB\n\n## Similar Problems\n\n- [Smallest Missing Integer Greater Than Sequential Prefix Sum](https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum/) — Easy\n- [Find the Length of the Longest Common Prefix](https://leetcode.com/problems/find-the-length-of-the-longest-common-prefix/) — Medium\n- [Longest Common Suffix Queries](https://leetcode.com/problems/longest-common-suffix-queries/) — Hard\n",
+      "files": [
+        {
+          "path": "problems/lc-longest-common-prefix/lc-longest-common-prefix.py",
+          "content": "class Solution(object):\n    def longestCommonPrefix(self, strs):\n        if not strs:\n            return \"\"\n        prefix = strs[0]\n        for word in strs[1:]:\n            while word[:len(prefix)] != prefix:\n                prefix = prefix[:-1]\n                if not prefix:\n                    return \"\"\n        return prefix\n                "
+        },
+        {
+          "path": "problems/lc-longest-common-prefix/README.md",
+          "content": "# Longest Common Prefix\n\n**Difficulty:** Easy  |  **Acceptance:** 48.5%\n\n**Tags:** `Array`, `String`, `Trie`\n\n## Problem\n\nWrite a function to find the longest common prefix string amongst an array of strings.\n\nIf there is no common prefix, return an empty string \"\".\n\n&nbsp;\nExample 1:\n\nInput: strs = [\"flower\",\"flow\",\"flight\"]\nOutput: \"fl\"\n\nExample 2:\n\nInput: strs = [\"dog\",\"racecar\",\"car\"]\nOutput: \"\"\nExplanation: There is no common prefix among the input strings.\n\n&nbsp;\nConstraints:\n\n\t1 <= strs.length <= 200\n\t0 <= strs[i].length <= 200\n\tstrs[i] consists of only lowercase English letters if it is non-empty.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 12.4 MB\n\n## Similar Problems\n\n- [Smallest Missing Integer Greater Than Sequential Prefix Sum](https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum/) — Easy\n- [Find the Length of the Longest Common Prefix](https://leetcode.com/problems/find-the-length-of-the-longest-common-prefix/) — Medium\n- [Longest Common Suffix Queries](https://leetcode.com/problems/longest-common-suffix-queries/) — Hard\n"
+        }
+      ],
+      "timestamp": 1761719474000,
+      "runtime": "0 ms",
+      "memory": "12.4 MB",
+      "runtimePct": 100,
+      "memoryPct": 70.8679,
+      "problemStatement": "<p>Write a function to find the longest common prefix string amongst an array of strings.</p>\n\n<p>If there is no common prefix, return an empty string <code>&quot;&quot;</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> strs = [&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;]\n<strong>Output:</strong> &quot;fl&quot;\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> strs = [&quot;dog&quot;,&quot;racecar&quot;,&quot;car&quot;]\n<strong>Output:</strong> &quot;&quot;\n<strong>Explanation:</strong> There is no common prefix among the input strings.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= strs.length &lt;= 200</code></li>\n\t<li><code>0 &lt;= strs[i].length &lt;= 200</code></li>\n\t<li><code>strs[i]</code> consists of only lowercase English letters if it is non-empty.</li>\n</ul>\n",
+      "hints": null,
+      "acRate": 48.500615516410875,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "smallest-missing-integer-greater-than-sequential-prefix-sum",
+          "title": "Smallest Missing Integer Greater Than Sequential Prefix Sum",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-the-length-of-the-longest-common-prefix",
+          "title": "Find the Length of the Longest Common Prefix",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "longest-common-suffix-queries",
+          "title": "Longest Common Suffix Queries",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-valid-parentheses::1815862601",
+      "submissionId": 1815862601,
+      "platform": "leetcode",
+      "title": "Valid Parentheses",
+      "titleSlug": "valid-parentheses",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python",
+        "ext": "py",
+        "slug": "python"
+      },
+      "tags": [
+        "String",
+        "Stack",
+        "Bracket Sequences"
+      ],
+      "topic": "Stack",
+      "code": "class Solution(object):\n    def isValid(self, s):\n        stack =[]\n        mapping = {')':'(','}':'{',']':'['}\n\n        for c in s:\n            if c in mapping:\n                if stack and stack[-1] == mapping[c]:\n                    stack.pop()\n                else:\n                    return False\n            else:\n                stack.append(c)\n        return not stack",
+      "readmeContent": "# Valid Parentheses\n\n**Difficulty:** Easy  |  **Acceptance:** 45.3%\n\n**Tags:** `String`, `Stack`, `Bracket Sequences`\n\n## Problem\n\nGiven a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\n\nAn input string is valid if:\n\n\tOpen brackets must be closed by the same type of brackets.\n\tOpen brackets must be closed in the correct order.\n\tEvery close bracket has a corresponding open bracket of the same type.\n\n&nbsp;\nExample 1:\n\nInput: s = \"()\"\n\nOutput: true\n\nExample 2:\n\nInput: s = \"()[]{}\"\n\nOutput: true\n\nExample 3:\n\nInput: s = \"(]\"\n\nOutput: false\n\nExample 4:\n\nInput: s = \"([])\"\n\nOutput: true\n\nExample 5:\n\nInput: s = \"([)]\"\n\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 104\n\ts consists of parentheses only '()[]{}'.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 12.6 MB\n\n## Similar Problems\n\n- [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) — Medium\n- [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) — Hard\n- [Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/) — Hard\n- [Check If Word Is Valid After Substitutions](https://leetcode.com/problems/check-if-word-is-valid-after-substitutions/) — Medium\n- [Check if a Parentheses String Can Be Valid](https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-valid-parentheses/lc-valid-parentheses.py",
+          "content": "class Solution(object):\n    def isValid(self, s):\n        stack =[]\n        mapping = {')':'(','}':'{',']':'['}\n\n        for c in s:\n            if c in mapping:\n                if stack and stack[-1] == mapping[c]:\n                    stack.pop()\n                else:\n                    return False\n            else:\n                stack.append(c)\n        return not stack"
+        },
+        {
+          "path": "problems/lc-valid-parentheses/README.md",
+          "content": "# Valid Parentheses\n\n**Difficulty:** Easy  |  **Acceptance:** 45.3%\n\n**Tags:** `String`, `Stack`, `Bracket Sequences`\n\n## Problem\n\nGiven a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\n\nAn input string is valid if:\n\n\tOpen brackets must be closed by the same type of brackets.\n\tOpen brackets must be closed in the correct order.\n\tEvery close bracket has a corresponding open bracket of the same type.\n\n&nbsp;\nExample 1:\n\nInput: s = \"()\"\n\nOutput: true\n\nExample 2:\n\nInput: s = \"()[]{}\"\n\nOutput: true\n\nExample 3:\n\nInput: s = \"(]\"\n\nOutput: false\n\nExample 4:\n\nInput: s = \"([])\"\n\nOutput: true\n\nExample 5:\n\nInput: s = \"([)]\"\n\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 104\n\ts consists of parentheses only '()[]{}'.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 12.6 MB\n\n## Similar Problems\n\n- [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) — Medium\n- [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) — Hard\n- [Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/) — Hard\n- [Check If Word Is Valid After Substitutions](https://leetcode.com/problems/check-if-word-is-valid-after-substitutions/) — Medium\n- [Check if a Parentheses String Can Be Valid](https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid/) — Medium\n"
+        }
+      ],
+      "timestamp": 1761821338000,
+      "runtime": "0 ms",
+      "memory": "12.6 MB",
+      "runtimePct": 100,
+      "memoryPct": 11.526299999999985,
+      "problemStatement": "<p>Given a string <code>s</code> containing just the characters <code>&#39;(&#39;</code>, <code>&#39;)&#39;</code>, <code>&#39;{&#39;</code>, <code>&#39;}&#39;</code>, <code>&#39;[&#39;</code> and <code>&#39;]&#39;</code>, determine if the input string is valid.</p>\n\n<p>An input string is valid if:</p>\n\n<ol>\n\t<li>Open brackets must be closed by the same type of brackets.</li>\n\t<li>Open brackets must be closed in the correct order.</li>\n\t<li>Every close bracket has a corresponding open bracket of the same type.</li>\n</ol>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;()&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;()[]{}&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;(]&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n</div>\n\n<p><strong class=\"example\">Example 4:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;([])&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p><strong class=\"example\">Example 5:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;([)]&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>s</code> consists of parentheses only <code>&#39;()[]{}&#39;</code>.</li>\n</ul>\n",
+      "hints": [
+        "Use a stack of characters.",
+        "When you encounter an opening bracket, push it to the top of the stack.",
+        "When you encounter a closing bracket, check if the top of the stack was the opening for it. If yes, pop it from the stack. Otherwise, return false."
+      ],
+      "acRate": 45.30220571503737,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "generate-parentheses",
+          "title": "Generate Parentheses",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "longest-valid-parentheses",
+          "title": "Longest Valid Parentheses",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "remove-invalid-parentheses",
+          "title": "Remove Invalid Parentheses",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "check-if-word-is-valid-after-substitutions",
+          "title": "Check If Word Is Valid After Substitutions",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "check-if-a-parentheses-string-can-be-valid",
+          "title": "Check if a Parentheses String Can Be Valid",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "move-pieces-to-obtain-a-string",
+          "title": "Move Pieces to Obtain a String",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 20,
+            "platform": "leetcode",
+            "slug": "valid-parentheses"
+          }
+        ],
+        "canonicalId": "valid-parentheses",
+        "canonicalTitle": "Valid Parentheses",
+        "confirmedBy": "system-init",
+        "difficulty": "easy",
+        "pattern": "stack",
+        "tags": [
+          "string"
+        ],
+        "topic": "stack",
+        "voteCount": 98
+      }
+    },
+    {
+      "id": "lc-min-stack::1816183516",
+      "submissionId": 1816183516,
+      "platform": "leetcode",
+      "title": "Min Stack",
+      "titleSlug": "min-stack",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python",
+        "ext": "py",
+        "slug": "python"
+      },
+      "tags": [
+        "Stack",
+        "Design"
+      ],
+      "topic": "Stack",
+      "code": "class MinStack(object):\n\n    def __init__(self):\n        self.stack =[]\n        self.minstack = []\n\n    def push(self, val):\n        self.stack.append(val)\n        if not self.minstack or val <= self.minstack[-1]:\n            self.minstack.append(val)\n\n    def pop(self):\n        if self.stack[-1] == self.minstack[-1]:\n            self.minstack.pop()\n        self.stack.pop()\n\n    def top(self):\n        return self.stack[-1]\n\n    def getMin(self):\n        return self.minstack[-1]\n \n",
+      "readmeContent": "# Min Stack\n\n**Difficulty:** Medium  |  **Acceptance:** 58.8%\n\n**Tags:** `Stack`, `Design`\n\n## Problem\n\nDesign a stack that supports push, pop, top, and retrieving the minimum element in constant time.\n\nImplement the MinStack class:\n\n\tMinStack() initializes the stack object.\n\tvoid push(int value) pushes the element value onto the stack.\n\tvoid pop() removes the element on the top of the stack.\n\tint top() gets the top element of the stack.\n\tint getMin() retrieves the minimum element in the stack.\n\nYou must implement a solution with O(1) time complexity for each function.\n\n&nbsp;\nExample 1:\n\nInput\n[\"MinStack\",\"push\",\"push\",\"push\",\"getMin\",\"pop\",\"top\",\"getMin\"]\n[[],[-2],[0],[-3],[],[],[],[]]\n\nOutput\n[null,null,null,null,-3,null,0,-2]\n\nExplanation\nMinStack minStack = new MinStack();\nminStack.push(-2);\nminStack.push(0);\nminStack.push(-3);\nminStack.getMin(); // return -3\nminStack.pop();\nminStack.top();    // return 0\nminStack.getMin(); // return -2\n\n&nbsp;\nConstraints:\n\n\t-231 <= val <= 231 - 1\n\tMethods pop, top and getMin operations will always be called on non-empty stacks.\n\tAt most 3 * 104 calls will be made to push, pop, top, and getMin.\n\n## My Submission\n\n- Runtime: 9 ms\n- Memory: 15.6 MB\n\n## Similar Problems\n\n- [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) — Hard\n",
+      "files": [
+        {
+          "path": "problems/lc-min-stack/lc-min-stack.py",
+          "content": "class MinStack(object):\n\n    def __init__(self):\n        self.stack =[]\n        self.minstack = []\n\n    def push(self, val):\n        self.stack.append(val)\n        if not self.minstack or val <= self.minstack[-1]:\n            self.minstack.append(val)\n\n    def pop(self):\n        if self.stack[-1] == self.minstack[-1]:\n            self.minstack.pop()\n        self.stack.pop()\n\n    def top(self):\n        return self.stack[-1]\n\n    def getMin(self):\n        return self.minstack[-1]\n \n"
+        },
+        {
+          "path": "problems/lc-min-stack/README.md",
+          "content": "# Min Stack\n\n**Difficulty:** Medium  |  **Acceptance:** 58.8%\n\n**Tags:** `Stack`, `Design`\n\n## Problem\n\nDesign a stack that supports push, pop, top, and retrieving the minimum element in constant time.\n\nImplement the MinStack class:\n\n\tMinStack() initializes the stack object.\n\tvoid push(int value) pushes the element value onto the stack.\n\tvoid pop() removes the element on the top of the stack.\n\tint top() gets the top element of the stack.\n\tint getMin() retrieves the minimum element in the stack.\n\nYou must implement a solution with O(1) time complexity for each function.\n\n&nbsp;\nExample 1:\n\nInput\n[\"MinStack\",\"push\",\"push\",\"push\",\"getMin\",\"pop\",\"top\",\"getMin\"]\n[[],[-2],[0],[-3],[],[],[],[]]\n\nOutput\n[null,null,null,null,-3,null,0,-2]\n\nExplanation\nMinStack minStack = new MinStack();\nminStack.push(-2);\nminStack.push(0);\nminStack.push(-3);\nminStack.getMin(); // return -3\nminStack.pop();\nminStack.top();    // return 0\nminStack.getMin(); // return -2\n\n&nbsp;\nConstraints:\n\n\t-231 <= val <= 231 - 1\n\tMethods pop, top and getMin operations will always be called on non-empty stacks.\n\tAt most 3 * 104 calls will be made to push, pop, top, and getMin.\n\n## My Submission\n\n- Runtime: 9 ms\n- Memory: 15.6 MB\n\n## Similar Problems\n\n- [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) — Hard\n"
+        }
+      ],
+      "timestamp": 1761846139000,
+      "runtime": "9 ms",
+      "memory": "15.6 MB",
+      "runtimePct": 100,
+      "memoryPct": 100,
+      "problemStatement": "<p>Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.</p>\n\n<p>Implement the <code>MinStack</code> class:</p>\n\n<ul>\n\t<li><code>MinStack()</code> initializes the stack object.</li>\n\t<li><code>void push(int value)</code> pushes the element <code>value</code> onto the stack.</li>\n\t<li><code>void pop()</code> removes the element on the top of the stack.</li>\n\t<li><code>int top()</code> gets the top element of the stack.</li>\n\t<li><code>int getMin()</code> retrieves the minimum element in the stack.</li>\n</ul>\n\n<p>You must implement a solution with <code>O(1)</code> time complexity for each function.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input</strong>\n[&quot;MinStack&quot;,&quot;push&quot;,&quot;push&quot;,&quot;push&quot;,&quot;getMin&quot;,&quot;pop&quot;,&quot;top&quot;,&quot;getMin&quot;]\n[[],[-2],[0],[-3],[],[],[],[]]\n\n<strong>Output</strong>\n[null,null,null,null,-3,null,0,-2]\n\n<strong>Explanation</strong>\nMinStack minStack = new MinStack();\nminStack.push(-2);\nminStack.push(0);\nminStack.push(-3);\nminStack.getMin(); // return -3\nminStack.pop();\nminStack.top();    // return 0\nminStack.getMin(); // return -2\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup> &lt;= val &lt;= 2<sup>31</sup> - 1</code></li>\n\t<li>Methods <code>pop</code>, <code>top</code> and <code>getMin</code> operations will always be called on <strong>non-empty</strong> stacks.</li>\n\t<li>At most <code>3 * 10<sup>4</sup></code> calls will be made to <code>push</code>, <code>pop</code>, <code>top</code>, and <code>getMin</code>.</li>\n</ul>\n",
+      "hints": [
+        "Consider each node in the stack having a minimum value. (Credits to @aakarshmadhavan)"
+      ],
+      "acRate": 58.75661537664369,
+      "similar": [
+        {
+          "difficulty": "Hard",
+          "titleSlug": "sliding-window-maximum",
+          "title": "Sliding Window Maximum",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 155,
+            "platform": "leetcode",
+            "slug": "min-stack"
+          }
+        ],
+        "canonicalId": "min-stack",
+        "canonicalTitle": "Min Stack",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "design",
+        "tags": [
+          "stack"
+        ],
+        "topic": "stack",
+        "voteCount": 94
+      }
+    },
+    {
+      "id": "lc-number-of-unique-subjects-taught-by-each-teacher::1816190831",
+      "submissionId": 1816190831,
+      "platform": "leetcode",
+      "title": "Number of Unique Subjects Taught by Each Teacher",
+      "titleSlug": "number-of-unique-subjects-taught-by-each-teacher",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
+      "code": "select teacher_id, \ncount(distinct subject_id) as cnt\nfrom Teacher\ngroup by teacher_id;",
+      "readmeContent": "# Number of Unique Subjects Taught by Each Teacher\n\n**Difficulty:** Easy  |  **Acceptance:** 89.4%\n\n**Tags:** `Database`\n\n## Problem\n\nTable: Teacher\n\n+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| teacher_id  | int  |\n| subject_id  | int  |\n| dept_id     | int  |\n+-------------+------+\n(subject_id, dept_id) is the primary key (combinations of columns with unique values) of this table.\nEach row in this table indicates that the teacher with teacher_id teaches the subject subject_id in the department dept_id.\n\n&nbsp;\n\nWrite a solution to calculate&nbsp;the number of unique subjects each teacher teaches in the university.\n\nReturn the result table in any order.\n\nThe&nbsp;result format is shown in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nTeacher table:\n+------------+------------+---------+\n| teacher_id | subject_id | dept_id |\n+------------+------------+---------+\n| 1          | 2          | 3       |\n| 1          | 2          | 4       |\n| 1          | 3          | 3       |\n| 2          | 1          | 1       |\n| 2          | 2          | 1       |\n| 2          | 3          | 1       |\n| 2          | 4          | 1       |\n+------------+------------+---------+\nOutput:  \n+------------+-----+\n| teacher_id | cnt |\n+------------+-----+\n| 1          | 2   |\n| 2          | 4   |\n+------------+-----+\nExplanation: \nTeacher 1:\n  - They teach subject 2 in departments 3 and 4.\n  - They teach subject 3 in department 3.\nTeacher 2:\n  - They teach subject 1 in department 1.\n  - They teach subject 2 in department 1.\n  - They teach subject 3 in department 1.\n  - They teach subject 4 in department 1.\n\n## My Submission\n\n- Runtime: 445 ms\n- Memory: 0B\n",
+      "files": [
+        {
+          "path": "problems/lc-number-of-unique-subjects-taught-by-each-teacher/lc-number-of-unique-subjects-taught-by-each-teacher.sql",
+          "content": "select teacher_id, \ncount(distinct subject_id) as cnt\nfrom Teacher\ngroup by teacher_id;"
+        },
+        {
+          "path": "problems/lc-number-of-unique-subjects-taught-by-each-teacher/README.md",
+          "content": "# Number of Unique Subjects Taught by Each Teacher\n\n**Difficulty:** Easy  |  **Acceptance:** 89.4%\n\n**Tags:** `Database`\n\n## Problem\n\nTable: Teacher\n\n+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| teacher_id  | int  |\n| subject_id  | int  |\n| dept_id     | int  |\n+-------------+------+\n(subject_id, dept_id) is the primary key (combinations of columns with unique values) of this table.\nEach row in this table indicates that the teacher with teacher_id teaches the subject subject_id in the department dept_id.\n\n&nbsp;\n\nWrite a solution to calculate&nbsp;the number of unique subjects each teacher teaches in the university.\n\nReturn the result table in any order.\n\nThe&nbsp;result format is shown in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nTeacher table:\n+------------+------------+---------+\n| teacher_id | subject_id | dept_id |\n+------------+------------+---------+\n| 1          | 2          | 3       |\n| 1          | 2          | 4       |\n| 1          | 3          | 3       |\n| 2          | 1          | 1       |\n| 2          | 2          | 1       |\n| 2          | 3          | 1       |\n| 2          | 4          | 1       |\n+------------+------------+---------+\nOutput:  \n+------------+-----+\n| teacher_id | cnt |\n+------------+-----+\n| 1          | 2   |\n| 2          | 4   |\n+------------+-----+\nExplanation: \nTeacher 1:\n  - They teach subject 2 in departments 3 and 4.\n  - They teach subject 3 in department 3.\nTeacher 2:\n  - They teach subject 1 in department 1.\n  - They teach subject 2 in department 1.\n  - They teach subject 3 in department 1.\n  - They teach subject 4 in department 1.\n\n## My Submission\n\n- Runtime: 445 ms\n- Memory: 0B\n"
+        }
+      ],
+      "timestamp": 1761846582000,
+      "runtime": "445 ms",
+      "memory": "0B",
+      "runtimePct": 99.91959999999997,
+      "memoryPct": 100,
+      "problemStatement": "<p>Table: <code>Teacher</code></p>\n\n<pre>\n+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| teacher_id  | int  |\n| subject_id  | int  |\n| dept_id     | int  |\n+-------------+------+\n(subject_id, dept_id) is the primary key (combinations of columns with unique values) of this table.\nEach row in this table indicates that the teacher with teacher_id teaches the subject subject_id in the department dept_id.\n</pre>\n\n<p>&nbsp;</p>\n\n<p>Write a solution to calculate&nbsp;the number of unique subjects each teacher teaches in the university.</p>\n\n<p>Return the result table in <strong>any order</strong>.</p>\n\n<p>The&nbsp;result format is shown in the following example.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> \nTeacher table:\n+------------+------------+---------+\n| teacher_id | subject_id | dept_id |\n+------------+------------+---------+\n| 1          | 2          | 3       |\n| 1          | 2          | 4       |\n| 1          | 3          | 3       |\n| 2          | 1          | 1       |\n| 2          | 2          | 1       |\n| 2          | 3          | 1       |\n| 2          | 4          | 1       |\n+------------+------------+---------+\n<strong>Output:</strong>  \n+------------+-----+\n| teacher_id | cnt |\n+------------+-----+\n| 1          | 2   |\n| 2          | 4   |\n+------------+-----+\n<strong>Explanation:</strong> \nTeacher 1:\n  - They teach subject 2 in departments 3 and 4.\n  - They teach subject 3 in department 3.\nTeacher 2:\n  - They teach subject 1 in department 1.\n  - They teach subject 2 in department 1.\n  - They teach subject 3 in department 1.\n  - They teach subject 4 in department 1.\n</pre>\n",
+      "hints": null,
+      "acRate": 89.37970688877886,
+      "similar": null,
+      "hasSimilar": null
+    },
+    {
+      "id": "lc-user-activity-for-the-past-30-days-i::1816203887",
+      "submissionId": 1816203887,
+      "platform": "leetcode",
+      "title": "User Activity for the Past 30 Days I",
+      "titleSlug": "user-activity-for-the-past-30-days-i",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
+      "code": "# Write your MySQL query statement below\nSELECT activity_date AS day, COUNT(DISTINCT user_id) AS active_users\nFROM Activity\nWHERE activity_date BETWEEN '2019-06-28' AND '2019-07-27'\nGROUP BY activity_date;",
+      "readmeContent": "# User Activity for the Past 30 Days I\n\n**Difficulty:** Easy  |  **Acceptance:** 51.8%\n\n**Tags:** `Database`\n\n## Problem\n\nTable: Activity\n\n+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| user_id       | int     |\n| session_id    | int     |\n| activity_date | date    |\n| activity_type | enum    |\n+---------------+---------+\nThis table may have duplicate rows.\nThe activity_type column is an ENUM (category) of type ('open_session', 'end_session', 'scroll_down', 'send_message').\nThe table shows the user activities for a social media website. \nNote that each session belongs to exactly one user.\n\n&nbsp;\n\nWrite a solution to find the daily active user count for a period of 30 days ending 2019-07-27 inclusively. A user was active on someday if they made at least one activity on that day.\n\nReturn the result table in any order.\n\nThe&nbsp;result format is in the following example.\n\nNote: Any activity from ('open_session', 'end_session', 'scroll_down', 'send_message') will be considered valid activity for a user to be considered active on a day.\n\n&nbsp;\nExample 1:\n\nInput: \nActivity table:\n+---------+------------+---------------+---------------+\n| user_id | session_id | activity_date | activity_type |\n+---------+------------+---------------+---------------+\n| 1       | 1          | 2019-07-20    | open_session  |\n| 1       | 1          | 2019-07-20    | scroll_down   |\n| 1       | 1          | 2019-07-20    | end_session   |\n| 2       | 4          | 2019-07-20    | open_session  |\n| 2       | 4          | 2019-07-21    | send_message  |\n| 2       | 4          | 2019-07-21    | end_session   |\n| 3       | 2          | 2019-07-21    | open_session  |\n| 3       | 2          | 2019-07-21    | send_message  |\n| 3       | 2          | 2019-07-21    | end_session   |\n| 4       | 3          | 2019-06-25    | open_session  |\n| 4       | 3          | 2019-06-25    | end_session   |\n+---------+------------+---------------+---------------+\nOutput: \n+------------+--------------+ \n| day        | active_users |\n+------------+--------------+ \n| 2019-07-20 | 2            |\n| 2019-07-21 | 2            |\n+------------+--------------+ \nExplanation: Note that we do not care about days with zero active users.\n\n## My Submission\n\n- Runtime: 458 ms\n- Memory: 0B\n",
+      "files": [
+        {
+          "path": "problems/lc-user-activity-for-the-past-30-days-i/lc-user-activity-for-the-past-30-days-i.sql",
+          "content": "# Write your MySQL query statement below\nSELECT activity_date AS day, COUNT(DISTINCT user_id) AS active_users\nFROM Activity\nWHERE activity_date BETWEEN '2019-06-28' AND '2019-07-27'\nGROUP BY activity_date;"
+        },
+        {
+          "path": "problems/lc-user-activity-for-the-past-30-days-i/README.md",
+          "content": "# User Activity for the Past 30 Days I\n\n**Difficulty:** Easy  |  **Acceptance:** 51.8%\n\n**Tags:** `Database`\n\n## Problem\n\nTable: Activity\n\n+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| user_id       | int     |\n| session_id    | int     |\n| activity_date | date    |\n| activity_type | enum    |\n+---------------+---------+\nThis table may have duplicate rows.\nThe activity_type column is an ENUM (category) of type ('open_session', 'end_session', 'scroll_down', 'send_message').\nThe table shows the user activities for a social media website. \nNote that each session belongs to exactly one user.\n\n&nbsp;\n\nWrite a solution to find the daily active user count for a period of 30 days ending 2019-07-27 inclusively. A user was active on someday if they made at least one activity on that day.\n\nReturn the result table in any order.\n\nThe&nbsp;result format is in the following example.\n\nNote: Any activity from ('open_session', 'end_session', 'scroll_down', 'send_message') will be considered valid activity for a user to be considered active on a day.\n\n&nbsp;\nExample 1:\n\nInput: \nActivity table:\n+---------+------------+---------------+---------------+\n| user_id | session_id | activity_date | activity_type |\n+---------+------------+---------------+---------------+\n| 1       | 1          | 2019-07-20    | open_session  |\n| 1       | 1          | 2019-07-20    | scroll_down   |\n| 1       | 1          | 2019-07-20    | end_session   |\n| 2       | 4          | 2019-07-20    | open_session  |\n| 2       | 4          | 2019-07-21    | send_message  |\n| 2       | 4          | 2019-07-21    | end_session   |\n| 3       | 2          | 2019-07-21    | open_session  |\n| 3       | 2          | 2019-07-21    | send_message  |\n| 3       | 2          | 2019-07-21    | end_session   |\n| 4       | 3          | 2019-06-25    | open_session  |\n| 4       | 3          | 2019-06-25    | end_session   |\n+---------+------------+---------------+---------------+\nOutput: \n+------------+--------------+ \n| day        | active_users |\n+------------+--------------+ \n| 2019-07-20 | 2            |\n| 2019-07-21 | 2            |\n+------------+--------------+ \nExplanation: Note that we do not care about days with zero active users.\n\n## My Submission\n\n- Runtime: 458 ms\n- Memory: 0B\n"
+        }
+      ],
+      "timestamp": 1761847384000,
+      "runtime": "458 ms",
+      "memory": "0B",
+      "runtimePct": 97.82799999999995,
+      "memoryPct": 100,
+      "problemStatement": "<p>Table: <code>Activity</code></p>\n\n<pre>\n+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| user_id       | int     |\n| session_id    | int     |\n| activity_date | date    |\n| activity_type | enum    |\n+---------------+---------+\nThis table may have duplicate rows.\nThe activity_type column is an ENUM (category) of type (&#39;open_session&#39;, &#39;end_session&#39;, &#39;scroll_down&#39;, &#39;send_message&#39;).\nThe table shows the user activities for a social media website. \nNote that each session belongs to exactly one user.\n</pre>\n\n<p>&nbsp;</p>\n\n<p>Write a solution to find the daily active user count for a period of <code>30</code> days ending <code>2019-07-27</code> inclusively. A user was active on someday if they made at least one activity on that day.</p>\n\n<p>Return the result table in <strong>any order</strong>.</p>\n\n<p>The&nbsp;result format is in the following example.</p>\n\n<p>Note: <strong>Any</strong> activity from (<code>&#39;open_session&#39;</code>, <code>&#39;end_session&#39;</code>, <code>&#39;scroll_down&#39;</code>, <code>&#39;send_message&#39;</code>) will be considered valid activity for a user to be considered active on a day.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> \nActivity table:\n+---------+------------+---------------+---------------+\n| user_id | session_id | activity_date | activity_type |\n+---------+------------+---------------+---------------+\n| 1       | 1          | 2019-07-20    | open_session  |\n| 1       | 1          | 2019-07-20    | scroll_down   |\n| 1       | 1          | 2019-07-20    | end_session   |\n| 2       | 4          | 2019-07-20    | open_session  |\n| 2       | 4          | 2019-07-21    | send_message  |\n| 2       | 4          | 2019-07-21    | end_session   |\n| 3       | 2          | 2019-07-21    | open_session  |\n| 3       | 2          | 2019-07-21    | send_message  |\n| 3       | 2          | 2019-07-21    | end_session   |\n| 4       | 3          | 2019-06-25    | open_session  |\n| 4       | 3          | 2019-06-25    | end_session   |\n+---------+------------+---------------+---------------+\n<strong>Output:</strong> \n+------------+--------------+ \n| day        | active_users |\n+------------+--------------+ \n| 2019-07-20 | 2            |\n| 2019-07-21 | 2            |\n+------------+--------------+ \n<strong>Explanation:</strong> Note that we do not care about days with zero active users.\n</pre>\n",
+      "hints": null,
+      "acRate": 51.82743650808372,
+      "similar": null,
+      "hasSimilar": null
+    },
+    {
+      "id": "lc-implement-queue-using-stacks::1817013688",
+      "submissionId": 1817013688,
+      "platform": "leetcode",
+      "title": "Implement Queue using Stacks",
+      "titleSlug": "implement-queue-using-stacks",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python",
+        "ext": "py",
+        "slug": "python"
+      },
+      "tags": [
+        "Stack",
+        "Design",
+        "Queue"
+      ],
+      "topic": "Stack",
+      "code": "class MyQueue(object):\n\n    def __init__(self):\n        self.in_stack = []\n        self.out_stack = []\n\n    def push(self, x):\n        \"\"\"\n        :type x: int\n        :rtype: None\n        \"\"\"\n        self.in_stack.append(x)\n\n    def pop(self):\n        \"\"\"\n        :rtype: int\n        \"\"\"\n        self.move()\n        return self.out_stack.pop()\n\n    def peek(self):\n        \"\"\"\n        :rtype: int\n        \"\"\"\n        self.move()\n        return self.out_stack[-1]\n\n    def empty(self):\n        \"\"\"\n        :rtype: bool\n        \"\"\"\n        return not self.in_stack and not self.out_stack\n\n    def move(self):\n        if not self.out_stack:\n            while self.in_stack:\n                self.out_stack.append(self.in_stack.pop())\n\n# Your MyQueue object will be instantiated and called as such:\n# obj = MyQueue()\n# obj.push(x)\n# param_2 = obj.pop()\n# param_3 = obj.peek()\n# param_4 = obj.empty()",
+      "readmeContent": "# Implement Queue using Stacks\n\n**Difficulty:** Easy  |  **Acceptance:** 70.3%\n\n**Tags:** `Stack`, `Design`, `Queue`\n\n## Problem\n\nImplement a first in first out (FIFO) queue using only two stacks. The implemented queue should support all the functions of a normal queue (push, peek, pop, and empty).\n\nImplement the MyQueue class:\n\n\tvoid push(int x) Pushes element x to the back of the queue.\n\tint pop() Removes the element from the front of the queue and returns it.\n\tint peek() Returns the element at the front of the queue.\n\tboolean empty() Returns true if the queue is empty, false otherwise.\n\nNotes:\n\n\tYou must use only standard operations of a stack, which means only push to top, peek/pop from top, size, and is empty operations are valid.\n\tDepending on your language, the stack may not be supported natively. You may simulate a stack using a list or deque (double-ended queue) as long as you use only a stack's standard operations.\n\n&nbsp;\nExample 1:\n\nInput\n[\"MyQueue\", \"push\", \"push\", \"peek\", \"pop\", \"empty\"]\n[[], [1], [2], [], [], []]\nOutput\n[null, null, null, 1, 1, false]\n\nExplanation\nMyQueue myQueue = new MyQueue();\nmyQueue.push(1); // queue is: [1]\nmyQueue.push(2); // queue is: [1, 2] (leftmost is front of the queue)\nmyQueue.peek(); // return 1\nmyQueue.pop(); // return 1, queue is [2]\nmyQueue.empty(); // return false\n\n&nbsp;\nConstraints:\n\n\t1 <= x <= 9\n\tAt most 100&nbsp;calls will be made to push, pop, peek, and empty.\n\tAll the calls to pop and peek are valid.\n\n&nbsp;\nFollow-up: Can you implement the queue such that each operation is amortized O(1) time complexity? In other words, performing n operations will take overall O(n) time even if one of those operations may take longer.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 12.5 MB\n\n## Similar Problems\n\n- [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-implement-queue-using-stacks/lc-implement-queue-using-stacks.py",
+          "content": "class MyQueue(object):\n\n    def __init__(self):\n        self.in_stack = []\n        self.out_stack = []\n\n    def push(self, x):\n        \"\"\"\n        :type x: int\n        :rtype: None\n        \"\"\"\n        self.in_stack.append(x)\n\n    def pop(self):\n        \"\"\"\n        :rtype: int\n        \"\"\"\n        self.move()\n        return self.out_stack.pop()\n\n    def peek(self):\n        \"\"\"\n        :rtype: int\n        \"\"\"\n        self.move()\n        return self.out_stack[-1]\n\n    def empty(self):\n        \"\"\"\n        :rtype: bool\n        \"\"\"\n        return not self.in_stack and not self.out_stack\n\n    def move(self):\n        if not self.out_stack:\n            while self.in_stack:\n                self.out_stack.append(self.in_stack.pop())\n\n# Your MyQueue object will be instantiated and called as such:\n# obj = MyQueue()\n# obj.push(x)\n# param_2 = obj.pop()\n# param_3 = obj.peek()\n# param_4 = obj.empty()"
+        },
+        {
+          "path": "problems/lc-implement-queue-using-stacks/README.md",
+          "content": "# Implement Queue using Stacks\n\n**Difficulty:** Easy  |  **Acceptance:** 70.3%\n\n**Tags:** `Stack`, `Design`, `Queue`\n\n## Problem\n\nImplement a first in first out (FIFO) queue using only two stacks. The implemented queue should support all the functions of a normal queue (push, peek, pop, and empty).\n\nImplement the MyQueue class:\n\n\tvoid push(int x) Pushes element x to the back of the queue.\n\tint pop() Removes the element from the front of the queue and returns it.\n\tint peek() Returns the element at the front of the queue.\n\tboolean empty() Returns true if the queue is empty, false otherwise.\n\nNotes:\n\n\tYou must use only standard operations of a stack, which means only push to top, peek/pop from top, size, and is empty operations are valid.\n\tDepending on your language, the stack may not be supported natively. You may simulate a stack using a list or deque (double-ended queue) as long as you use only a stack's standard operations.\n\n&nbsp;\nExample 1:\n\nInput\n[\"MyQueue\", \"push\", \"push\", \"peek\", \"pop\", \"empty\"]\n[[], [1], [2], [], [], []]\nOutput\n[null, null, null, 1, 1, false]\n\nExplanation\nMyQueue myQueue = new MyQueue();\nmyQueue.push(1); // queue is: [1]\nmyQueue.push(2); // queue is: [1, 2] (leftmost is front of the queue)\nmyQueue.peek(); // return 1\nmyQueue.pop(); // return 1, queue is [2]\nmyQueue.empty(); // return false\n\n&nbsp;\nConstraints:\n\n\t1 <= x <= 9\n\tAt most 100&nbsp;calls will be made to push, pop, peek, and empty.\n\tAll the calls to pop and peek are valid.\n\n&nbsp;\nFollow-up: Can you implement the queue such that each operation is amortized O(1) time complexity? In other words, performing n operations will take overall O(n) time even if one of those operations may take longer.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 12.5 MB\n\n## Similar Problems\n\n- [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) — Easy\n"
+        }
+      ],
+      "timestamp": 1761929141000,
+      "runtime": "0 ms",
+      "memory": "12.5 MB",
+      "runtimePct": 100,
+      "memoryPct": 29.0805,
+      "problemStatement": "<p>Implement a first in first out (FIFO) queue using only two stacks. The implemented queue should support all the functions of a normal queue (<code>push</code>, <code>peek</code>, <code>pop</code>, and <code>empty</code>).</p>\n\n<p>Implement the <code>MyQueue</code> class:</p>\n\n<ul>\n\t<li><code>void push(int x)</code> Pushes element x to the back of the queue.</li>\n\t<li><code>int pop()</code> Removes the element from the front of the queue and returns it.</li>\n\t<li><code>int peek()</code> Returns the element at the front of the queue.</li>\n\t<li><code>boolean empty()</code> Returns <code>true</code> if the queue is empty, <code>false</code> otherwise.</li>\n</ul>\n\n<p><strong>Notes:</strong></p>\n\n<ul>\n\t<li>You must use <strong>only</strong> standard operations of a stack, which means only <code>push to top</code>, <code>peek/pop from top</code>, <code>size</code>, and <code>is empty</code> operations are valid.</li>\n\t<li>Depending on your language, the stack may not be supported natively. You may simulate a stack using a list or deque (double-ended queue) as long as you use only a stack&#39;s standard operations.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input</strong>\n[&quot;MyQueue&quot;, &quot;push&quot;, &quot;push&quot;, &quot;peek&quot;, &quot;pop&quot;, &quot;empty&quot;]\n[[], [1], [2], [], [], []]\n<strong>Output</strong>\n[null, null, null, 1, 1, false]\n\n<strong>Explanation</strong>\nMyQueue myQueue = new MyQueue();\nmyQueue.push(1); // queue is: [1]\nmyQueue.push(2); // queue is: [1, 2] (leftmost is front of the queue)\nmyQueue.peek(); // return 1\nmyQueue.pop(); // return 1, queue is [2]\nmyQueue.empty(); // return false\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= x &lt;= 9</code></li>\n\t<li>At most <code>100</code>&nbsp;calls will be made to <code>push</code>, <code>pop</code>, <code>peek</code>, and <code>empty</code>.</li>\n\t<li>All the calls to <code>pop</code> and <code>peek</code> are valid.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow-up:</strong> Can you implement the queue such that each operation is <strong><a href=\"https://en.wikipedia.org/wiki/Amortized_analysis\" target=\"_blank\">amortized</a></strong> <code>O(1)</code> time complexity? In other words, performing <code>n</code> operations will take overall <code>O(n)</code> time even if one of those operations may take longer.</p>\n",
+      "hints": null,
+      "acRate": 70.31774874892179,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "implement-stack-using-queues",
+          "title": "Implement Stack using Queues",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-reverse-linked-list::1817021395",
+      "submissionId": 1817021395,
+      "platform": "leetcode",
+      "title": "Reverse Linked List",
+      "titleSlug": "reverse-linked-list",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python",
+        "ext": "py",
+        "slug": "python"
+      },
+      "tags": [
+        "Linked List",
+        "Recursion"
+      ],
+      "topic": "Linked List",
+      "code": "# Definition for singly-linked list.\n# class ListNode(object):\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution(object):\n    def reverseList(self, head):\n        \"\"\"\n        :type head: Optional[ListNode]\n        :rtype: Optional[ListNode]\n        \"\"\"\n        prev = None\n        current = head\n\n        while current:\n            next_node = current.next\n            current.next = prev\n            prev = current\n            current = next_node\n        return prev",
+      "readmeContent": "# Reverse Linked List\n\n**Difficulty:** Easy  |  **Acceptance:** 81.1%\n\n**Tags:** `Linked List`, `Recursion`\n\n## Problem\n\nGiven the head of a singly linked list, reverse the list, and return the reversed list.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,2,3,4,5]\nOutput: [5,4,3,2,1]\n\nExample 2:\n\nInput: head = [1,2]\nOutput: [2,1]\n\nExample 3:\n\nInput: head = []\nOutput: []\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is the range [0, 5000].\n\t-5000 <= Node.val <= 5000\n\n&nbsp;\nFollow up: A linked list can be reversed either iteratively or recursively. Could you implement both?\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 14.1 MB\n\n## Similar Problems\n\n- [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/) — Medium\n- [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) — Easy\n- [Reverse Nodes in Even Length Groups](https://leetcode.com/problems/reverse-nodes-in-even-length-groups/) — Medium\n- [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/) — Medium\n- [Remove Nodes From Linked List](https://leetcode.com/problems/remove-nodes-from-linked-list/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-reverse-linked-list/lc-reverse-linked-list.py",
+          "content": "# Definition for singly-linked list.\n# class ListNode(object):\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution(object):\n    def reverseList(self, head):\n        \"\"\"\n        :type head: Optional[ListNode]\n        :rtype: Optional[ListNode]\n        \"\"\"\n        prev = None\n        current = head\n\n        while current:\n            next_node = current.next\n            current.next = prev\n            prev = current\n            current = next_node\n        return prev"
+        },
+        {
+          "path": "problems/lc-reverse-linked-list/README.md",
+          "content": "# Reverse Linked List\n\n**Difficulty:** Easy  |  **Acceptance:** 81.1%\n\n**Tags:** `Linked List`, `Recursion`\n\n## Problem\n\nGiven the head of a singly linked list, reverse the list, and return the reversed list.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,2,3,4,5]\nOutput: [5,4,3,2,1]\n\nExample 2:\n\nInput: head = [1,2]\nOutput: [2,1]\n\nExample 3:\n\nInput: head = []\nOutput: []\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is the range [0, 5000].\n\t-5000 <= Node.val <= 5000\n\n&nbsp;\nFollow up: A linked list can be reversed either iteratively or recursively. Could you implement both?\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 14.1 MB\n\n## Similar Problems\n\n- [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/) — Medium\n- [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) — Easy\n- [Reverse Nodes in Even Length Groups](https://leetcode.com/problems/reverse-nodes-in-even-length-groups/) — Medium\n- [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/) — Medium\n- [Remove Nodes From Linked List](https://leetcode.com/problems/remove-nodes-from-linked-list/) — Medium\n"
+        }
+      ],
+      "timestamp": 1761929655000,
+      "runtime": "0 ms",
+      "memory": "14.1 MB",
+      "runtimePct": 100,
+      "memoryPct": 91.06400000000001,
+      "problemStatement": "<p>Given the <code>head</code> of a singly linked list, reverse the list, and return <em>the reversed list</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/02/19/rev1ex1.jpg\" style=\"width: 542px; height: 222px;\" />\n<pre>\n<strong>Input:</strong> head = [1,2,3,4,5]\n<strong>Output:</strong> [5,4,3,2,1]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/02/19/rev1ex2.jpg\" style=\"width: 182px; height: 222px;\" />\n<pre>\n<strong>Input:</strong> head = [1,2]\n<strong>Output:</strong> [2,1]\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> head = []\n<strong>Output:</strong> []\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the list is the range <code>[0, 5000]</code>.</li>\n\t<li><code>-5000 &lt;= Node.val &lt;= 5000</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> A linked list can be reversed either iteratively or recursively. Could you implement both?</p>\n",
+      "hints": null,
+      "acRate": 81.13686787307513,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "reverse-linked-list-ii",
+          "title": "Reverse Linked List II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "palindrome-linked-list",
+          "title": "Palindrome Linked List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "reverse-nodes-in-even-length-groups",
+          "title": "Reverse Nodes in Even Length Groups",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-twin-sum-of-a-linked-list",
+          "title": "Maximum Twin Sum of a Linked List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "remove-nodes-from-linked-list",
+          "title": "Remove Nodes From Linked List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "insert-greatest-common-divisors-in-linked-list",
+          "title": "Insert Greatest Common Divisors in Linked List",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 206,
+            "platform": "leetcode",
+            "slug": "reverse-linked-list"
+          }
+        ],
+        "canonicalId": "reverse-linked-list",
+        "canonicalTitle": "Reverse Linked List",
+        "confirmedBy": "system-init",
+        "difficulty": "easy",
+        "pattern": "iteration",
+        "tags": [
+          "linked-list"
+        ],
+        "topic": "linked-list",
+        "voteCount": 99
+      }
+    },
+    {
+      "id": "lc-product-sales-analysis-iii::1817037392",
+      "submissionId": 1817037392,
+      "platform": "leetcode",
+      "title": "Product Sales Analysis III",
+      "titleSlug": "product-sales-analysis-iii",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
+      "code": "# Write your MySQL query statement below\nselect product_id, year as first_year, quantity, price\nfrom Sales \nwhere (product_id, year) in (\n    select product_id, min(year)\n    from Sales\n    group by product_id\n);",
+      "readmeContent": "# Product Sales Analysis III\n\n**Difficulty:** Medium  |  **Acceptance:** 46.8%\n\n**Tags:** `Database`\n\n## Problem\n\nTable: Sales\n\n+-------------+-------+\n| Column Name | Type  |\n+-------------+-------+\n| sale_id     | int   |\n| product_id  | int   |\n| year        | int   |\n| quantity    | int   |\n| price       | int   |\n+-------------+-------+\n(sale_id, year) is the primary key (combination of columns with unique values) of this table.\nEach row records a sale of a product in a given year.\nA product may have multiple sales entries in the same year.\nNote that the per-unit price.\n\nWrite a solution to find all sales that occurred in the first year each product was sold.\n\n\t\n\tFor each product_id, identify the earliest year it appears in the Sales table.\n\t\n\t\n\tReturn all sales entries for that product in that year.\n\t\n\nReturn a table with the following columns: product_id, first_year, quantity, and price.\nReturn the result in any order.\n\n&nbsp;\nExample 1:\n\nInput: \nSales table:\n+---------+------------+------+----------+-------+\n| sale_id | product_id | year | quantity | price |\n+---------+------------+------+----------+-------+ \n| 1       | 100        | 2008 | 10       | 5000  |\n| 2       | 100        | 2009 | 12       | 5000  |\n| 7       | 200        | 2011 | 15       | 9000  |\n+---------+------------+------+----------+-------+\n\nOutput: \n+------------+------------+----------+-------+\n| product_id | first_year | quantity | price |\n+------------+------------+----------+-------+ \n| 100        | 2008       | 10       | 5000  |\n| 200        | 2011       | 15       | 9000  |\n+------------+------------+----------+-------+\n\n## My Submission\n\n- Runtime: 661 ms\n- Memory: 0B\n",
+      "files": [
+        {
+          "path": "problems/lc-product-sales-analysis-iii/lc-product-sales-analysis-iii.sql",
+          "content": "# Write your MySQL query statement below\nselect product_id, year as first_year, quantity, price\nfrom Sales \nwhere (product_id, year) in (\n    select product_id, min(year)\n    from Sales\n    group by product_id\n);"
+        },
+        {
+          "path": "problems/lc-product-sales-analysis-iii/README.md",
+          "content": "# Product Sales Analysis III\n\n**Difficulty:** Medium  |  **Acceptance:** 46.8%\n\n**Tags:** `Database`\n\n## Problem\n\nTable: Sales\n\n+-------------+-------+\n| Column Name | Type  |\n+-------------+-------+\n| sale_id     | int   |\n| product_id  | int   |\n| year        | int   |\n| quantity    | int   |\n| price       | int   |\n+-------------+-------+\n(sale_id, year) is the primary key (combination of columns with unique values) of this table.\nEach row records a sale of a product in a given year.\nA product may have multiple sales entries in the same year.\nNote that the per-unit price.\n\nWrite a solution to find all sales that occurred in the first year each product was sold.\n\n\t\n\tFor each product_id, identify the earliest year it appears in the Sales table.\n\t\n\t\n\tReturn all sales entries for that product in that year.\n\t\n\nReturn a table with the following columns: product_id, first_year, quantity, and price.\nReturn the result in any order.\n\n&nbsp;\nExample 1:\n\nInput: \nSales table:\n+---------+------------+------+----------+-------+\n| sale_id | product_id | year | quantity | price |\n+---------+------------+------+----------+-------+ \n| 1       | 100        | 2008 | 10       | 5000  |\n| 2       | 100        | 2009 | 12       | 5000  |\n| 7       | 200        | 2011 | 15       | 9000  |\n+---------+------------+------+----------+-------+\n\nOutput: \n+------------+------------+----------+-------+\n| product_id | first_year | quantity | price |\n+------------+------------+----------+-------+ \n| 100        | 2008       | 10       | 5000  |\n| 200        | 2011       | 15       | 9000  |\n+------------+------------+----------+-------+\n\n## My Submission\n\n- Runtime: 661 ms\n- Memory: 0B\n"
+        }
+      ],
+      "timestamp": 1761930713000,
+      "runtime": "661 ms",
+      "memory": "0B",
+      "runtimePct": 97.5890999999999,
+      "memoryPct": 100,
+      "problemStatement": "<p>Table: <code>Sales</code></p>\n\n<pre>\n+-------------+-------+\n| Column Name | Type  |\n+-------------+-------+\n| sale_id     | int   |\n| product_id  | int   |\n| year        | int   |\n| quantity    | int   |\n| price       | int   |\n+-------------+-------+\n(sale_id, year) is the primary key (combination of columns with unique values) of this table.\nEach row records a sale of a product in a given year.\nA product may have multiple sales entries in the same year.\nNote that the per-unit price.\n\n</pre>\n\n<p>Write a solution to find all sales that occurred in the <strong data-end=\"967\" data-start=\"953\">first year</strong> each product was sold.</p>\n\n<ul data-end=\"1234\" data-start=\"992\">\n\t<li data-end=\"1078\" data-start=\"992\">\n\t<p data-end=\"1078\" data-start=\"994\">For each <code data-end=\"1015\" data-start=\"1003\">product_id</code>, identify the earliest <code data-end=\"1045\" data-start=\"1039\">year</code> it appears in the <code data-end=\"1071\" data-start=\"1064\">Sales</code> table.</p>\n\t</li>\n\t<li data-end=\"1140\" data-start=\"1079\">\n\t<p data-end=\"1140\" data-start=\"1081\">Return <strong data-end=\"1095\" data-start=\"1088\">all</strong> sales entries for that product in that year.</p>\n\t</li>\n</ul>\n\n<p data-end=\"1234\" data-start=\"1143\">Return a table with the following columns: <strong>product_id</strong>,<strong> first_year</strong>, <strong>quantity, </strong>and<strong> price</strong>.<br />\nReturn the result in any order.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> \nSales table:\n+---------+------------+------+----------+-------+\n| sale_id | product_id | year | quantity | price |\n+---------+------------+------+----------+-------+ \n| 1       | 100        | 2008 | 10       | 5000  |\n| 2       | 100        | 2009 | 12       | 5000  |\n| 7       | 200        | 2011 | 15       | 9000  |\n+---------+------------+------+----------+-------+\n\n<strong>Output:</strong> \n+------------+------------+----------+-------+\n| product_id | first_year | quantity | price |\n+------------+------------+----------+-------+ \n| 100        | 2008       | 10       | 5000  |\n| 200        | 2011       | 15       | 9000  |\n+------------+------------+----------+-------+\n</pre>\n",
+      "hints": null,
+      "acRate": 46.76009591759465,
+      "similar": null,
+      "hasSimilar": null
     }
   ]
 }
