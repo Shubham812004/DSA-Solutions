@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-trapping-rain-water` |
 | Topics | Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack |
-| Solved | 2026-11-20 |
-| Runtime | 1 ms (beats 77.5872%) |
-| Memory | 47 MB (beats 88.85749999999996%) |
+| Solved | 2025-11-19 |
+| Runtime | 8 ms (beats 68.77910000000001%) |
+| Memory | 13.5 MB (beats 44.2929%) |
 
 ## Problem Statement
 
@@ -39,24 +39,27 @@ Given `n` non-negative integers representing an elevation map where the width of
 
 ## Solutions
 
-```Java
-class Solution {
-    public int trap(int[] height) {
-        int l = 0, r = height.length-1;
-        int leftMax = 0, rightMax= 0;
-        int water = 0;
-        while(l < r){
-            leftMax = Math.max(leftMax, height[l]);
-            rightMax = Math.max(rightMax, height[r]);
-            if(leftMax <= rightMax){
-                water += leftMax - height[l];
-                l++;
-            }else{
-                water += rightMax - height[r];
-                r--;
-            }
-        }
-        return water;
-    }
-}
+```Python
+class Solution(object):
+    def trap(self, height):
+        left = 0
+        right = len(height) -1
+        water = 0
+        leftmax = 0
+        rightmax = 0
+        while left < right:
+            if height[left] < height[right]:
+                if height[left] >= leftmax:
+                    leftmax = height[left]
+                else:
+                    water += leftmax - height[left]
+                left += 1
+            else:
+                if height[right] >= rightmax:
+                    rightmax = height[right]
+                else:
+                    water += rightmax - height[right]
+                right -= 1
+        return water
+
 ```
