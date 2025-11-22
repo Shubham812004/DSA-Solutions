@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-11-09T05:24:57.970Z",
+  "updatedAt": "2026-11-09T05:42:30.606Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 248,
+    "total": 249,
     "easy": 114,
-    "medium": 120,
+    "medium": 121,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 57,
-      "leetcode": 191
+      "leetcode": 192
     },
     "byLang": {
       "Unknown": 51,
       "Java": 133,
-      "Python": 29,
+      "Python": 30,
       "MySQL": 35
     },
     "byTopic": {
@@ -22,7 +22,7 @@
       "Binary Search": 4,
       "Searching": 8,
       "String": 25,
-      "Array": 131,
+      "Array": 132,
       "Greedy": 1,
       "Untagged": 1,
       "Prefix Sum": 2,
@@ -5798,6 +5798,97 @@
         "problems/lc-game-play-analysis-iv/lc-game-play-analysis-iv.sql",
         "problems/lc-game-play-analysis-iv/README.md"
       ]
+    },
+    {
+      "id": "lc-group-anagrams",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Group Anagrams",
+      "titleSlug": "group-anagrams",
+      "difficulty": "Medium",
+      "topic": "Array",
+      "tags": [
+        "Array",
+        "String",
+        "Hash Table",
+        "Sorting"
+      ],
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 49,
+            "platform": "leetcode",
+            "slug": "group-anagrams"
+          }
+        ],
+        "canonicalId": "group-anagrams",
+        "canonicalTitle": "Group Anagrams",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "hash-map",
+        "tags": [
+          "array",
+          "string"
+        ],
+        "topic": "arrays",
+        "voteCount": 94
+      },
+      "readmeContent": "# [49] Group Anagrams\n**Difficulty:** Medium  |  **Acceptance:** 73.5%  |  **Likes:** 22776 / **Dislikes:** 790\n**Tags:** `Array`, `Hash Table`, `String`, `Sorting`\n## Problem\nGiven an array of strings strs, group the anagrams together. You can return the answer in any order.\n\n&nbsp;\nExample 1:\n\nInput: strs = [\"eat\",\"tea\",\"tan\",\"ate\",\"nat\",\"bat\"]\n\nOutput: [[\"bat\"],[\"nat\",\"tan\"],[\"ate\",\"eat\",\"tea\"]]\n\nExplanation:\n\n\tThere is no string in strs that can be rearranged to form \"bat\".\n\tThe strings \"nat\" and \"tan\" are anagrams as they can be rearranged to form each other.\n\tThe strings \"ate\", \"eat\", and \"tea\" are anagrams as they can be rearranged to form each other.\n\nExample 2:\n\nInput: strs = [\"\"]\n\nOutput: [[\"\"]]\n\nExample 3:\n\nInput: strs = [\"a\"]\n\nOutput: [[\"a\"]]\n\n&nbsp;\nConstraints:\n\n\t1 <= strs.length <= 104\n\t0 <= strs[i].length <= 100\n\tstrs[i] consists of lowercase English letters.\n## My Submission\n\n- Runtime: 23 ms (beats 48.2%)\n- Memory: 16.2 MB (beats 56.3%)\n\n## Similar Problems\n\n- [Valid Anagram](https://leetcode.com/problems/valid-anagram/) — Easy\n- [Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/) — Easy\n- [Count Anagrams](https://leetcode.com/problems/count-anagrams/) — Hard\n",
+      "code": "class Solution(object):\n    def groupAnagrams(self, strs):\n        freq = {}\n        for word in strs:\n            sorted_word = ''.join(sorted(word))\n            if sorted_word not in freq:\n                freq[sorted_word] = []\n            freq[sorted_word].append(word)\n        return list(freq.values())",
+      "files": [
+        {
+          "path": "problems/group-anagrams/leetcode/lc-group-anagrams.py",
+          "content": "class Solution(object):\n    def groupAnagrams(self, strs):\n        freq = {}\n        for word in strs:\n            sorted_word = ''.join(sorted(word))\n            if sorted_word not in freq:\n                freq[sorted_word] = []\n            freq[sorted_word].append(word)\n        return list(freq.values())"
+        },
+        {
+          "path": "problems/group-anagrams/README.md",
+          "content": "# [49] Group Anagrams\n**Difficulty:** Medium  |  **Acceptance:** 73.5%  |  **Likes:** 22776 / **Dislikes:** 790\n**Tags:** `Array`, `Hash Table`, `String`, `Sorting`\n## Problem\nGiven an array of strings strs, group the anagrams together. You can return the answer in any order.\n\n&nbsp;\nExample 1:\n\nInput: strs = [\"eat\",\"tea\",\"tan\",\"ate\",\"nat\",\"bat\"]\n\nOutput: [[\"bat\"],[\"nat\",\"tan\"],[\"ate\",\"eat\",\"tea\"]]\n\nExplanation:\n\n\tThere is no string in strs that can be rearranged to form \"bat\".\n\tThe strings \"nat\" and \"tan\" are anagrams as they can be rearranged to form each other.\n\tThe strings \"ate\", \"eat\", and \"tea\" are anagrams as they can be rearranged to form each other.\n\nExample 2:\n\nInput: strs = [\"\"]\n\nOutput: [[\"\"]]\n\nExample 3:\n\nInput: strs = [\"a\"]\n\nOutput: [[\"a\"]]\n\n&nbsp;\nConstraints:\n\n\t1 <= strs.length <= 104\n\t0 <= strs[i].length <= 100\n\tstrs[i] consists of lowercase English letters.\n## My Submission\n\n- Runtime: 23 ms (beats 48.2%)\n- Memory: 16.2 MB (beats 56.3%)\n\n## Similar Problems\n\n- [Valid Anagram](https://leetcode.com/problems/valid-anagram/) — Easy\n- [Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/) — Easy\n- [Count Anagrams](https://leetcode.com/problems/count-anagrams/) — Hard\n"
+        }
+      ],
+      "lang": {
+        "name": "Python",
+        "ext": "py",
+        "slug": "python"
+      },
+      "runtime": "23 ms",
+      "memory": "16.2 MB",
+      "runtimePct": 48.209399999999995,
+      "memoryPct": 56.3027,
+      "timestamp": 1763797436000,
+      "acRate": 73.50994463730585,
+      "likes": 22776,
+      "dislikes": 790,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "valid-anagram",
+          "title": "Valid Anagram",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "find-resultant-array-after-removing-anagrams",
+          "title": "Find Resultant Array After Removing Anagrams",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "count-anagrams",
+          "title": "Count Anagrams",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given an array of strings <code>strs</code>, group the <span data-keyword=\"anagram\">anagrams</span> together. You can return the answer in <strong>any order</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">strs = [&quot;eat&quot;,&quot;tea&quot;,&quot;tan&quot;,&quot;ate&quot;,&quot;nat&quot;,&quot;bat&quot;]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[[&quot;bat&quot;],[&quot;nat&quot;,&quot;tan&quot;],[&quot;ate&quot;,&quot;eat&quot;,&quot;tea&quot;]]</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<ul>\n\t<li>There is no string in strs that can be rearranged to form <code>&quot;bat&quot;</code>.</li>\n\t<li>The strings <code>&quot;nat&quot;</code> and <code>&quot;tan&quot;</code> are anagrams as they can be rearranged to form each other.</li>\n\t<li>The strings <code>&quot;ate&quot;</code>, <code>&quot;eat&quot;</code>, and <code>&quot;tea&quot;</code> are anagrams as they can be rearranged to form each other.</li>\n</ul>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">strs = [&quot;&quot;]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[[&quot;&quot;]]</span></p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">strs = [&quot;a&quot;]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[[&quot;a&quot;]]</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= strs.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>0 &lt;= strs[i].length &lt;= 100</code></li>\n\t<li><code>strs[i]</code> consists of lowercase English letters.</li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/group-anagrams/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
     },
     {
       "id": "lc-group-anagrams::1810440257",

@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-group-anagrams` |
 | Topics | Array, String, Hash Table, Sorting |
-| Solved | 2025-10-24 |
-| Runtime | 19 ms (beats 76.31739999999996%) |
-| Memory | 16.1 MB (beats 59.25059999999999%) |
+| Solved | 2025-11-22 |
+| Runtime | 23 ms (beats 48.209399999999995%) |
+| Memory | 16.2 MB (beats 56.3027%) |
 
 ## Problem Statement
 
@@ -55,14 +55,13 @@ Given an array of strings `strs`, group the anagrams together. You can return th
 ## Solutions
 
 ```Python
-from collections import defaultdict
 class Solution(object):
     def groupAnagrams(self, strs):
-        anagrams = defaultdict(list)
-
+        freq = {}
         for word in strs:
-            key =''.join(sorted(word))
-            anagrams[key].append(word)
-        return list(anagrams.values())
-        
+            sorted_word = ''.join(sorted(word))
+            if sorted_word not in freq:
+                freq[sorted_word] = []
+            freq[sorted_word].append(word)
+        return list(freq.values())
 ```

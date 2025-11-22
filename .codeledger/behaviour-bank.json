@@ -101,6 +101,25 @@
       "Monotonic Stack"
     ]
   },
+  "leetcode::group-anagrams": {
+    "difficulty": "Medium",
+    "lang": "Python",
+    "platform": "leetcode",
+    "slug": "group-anagrams",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python",
+        "ts": 1794202950498
+      }
+    ],
+    "tags": [
+      "Array",
+      "String",
+      "Hash Table",
+      "Sorting"
+    ]
+  },
   "leetcode::longest-palindromic-substring": {
     "difficulty": "Medium",
     "lang": "Java",
