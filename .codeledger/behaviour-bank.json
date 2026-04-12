@@ -362,6 +362,24 @@
       "Matrix"
     ]
   },
+  "leetcode::set-matrix-zeroes": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "set-matrix-zeroes",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1793942255151
+      }
+    ],
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Matrix"
+    ]
+  },
   "leetcode::split-array-largest-sum": {
     "difficulty": "Hard",
     "lang": "Java",

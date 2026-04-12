@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-11-05T17:43:59.073Z",
+  "updatedAt": "2026-11-06T05:17:35.234Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 245,
+    "total": 246,
     "easy": 113,
-    "medium": 118,
+    "medium": 119,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 57,
-      "leetcode": 188
+      "leetcode": 189
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 130,
+      "Java": 131,
       "Python": 29,
       "MySQL": 35
     },
@@ -22,7 +22,7 @@
       "Binary Search": 4,
       "Searching": 8,
       "String": 24,
-      "Array": 129,
+      "Array": 130,
       "Greedy": 1,
       "Untagged": 1,
       "Prefix Sum": 2,
@@ -15551,6 +15551,89 @@
         "problems/lc-search-insert-position/lc-search-insert-position.java",
         "problems/lc-search-insert-position/README.md"
       ]
+    },
+    {
+      "id": "lc-set-matrix-zeroes",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Set Matrix Zeroes",
+      "titleSlug": "set-matrix-zeroes",
+      "difficulty": "Medium",
+      "topic": "Math",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Matrix"
+      ],
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 73,
+            "platform": "leetcode",
+            "slug": "set-matrix-zeroes"
+          }
+        ],
+        "canonicalId": "set-matrix-zeroes",
+        "canonicalTitle": "Set Matrix Zeroes",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "matrix",
+        "tags": [
+          "array"
+        ],
+        "topic": "math",
+        "voteCount": 95
+      },
+      "readmeContent": "# [73] Set Matrix Zeroes\n**Difficulty:** Medium  |  **Acceptance:** 63.8%  |  **Likes:** 17607 / **Dislikes:** 877\n**Tags:** `Array`, `Hash Table`, `Matrix`\n## Problem\nGiven an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.\n\nYou must do it in place.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,1,1],[1,0,1],[1,1,1]]\nOutput: [[1,0,1],[0,0,0],[1,0,1]]\n\nExample 2:\n\nInput: matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]\nOutput: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[0].length\n\t1 <= m, n <= 200\n\t-231 <= matrix[i][j] <= 231 - 1\n\n&nbsp;\nFollow up:\n\n\tA straightforward solution using O(mn) space is probably a bad idea.\n\tA simple improvement uses O(m + n) space, but still not the best solution.\n\tCould you devise a constant space solution?\n## My Submission\n\n- Runtime: 1 ms (beats 96.5%)\n- Memory: 47.5 MB (beats 63.0%)\n\n## Similar Problems\n\n- [Game of Life](https://leetcode.com/problems/game-of-life/) — Medium\n- [Number of Laser Beams in a Bank](https://leetcode.com/problems/number-of-laser-beams-in-a-bank/) — Medium\n",
+      "code": "class Solution {\n    public void setZeroes(int[][] matrix) {\n        int n = matrix.length;\n        int m = matrix[0].length;\n\n        int[] col = new int[m];\n        int[] row = new int[n];\n\n        for(int i=0; i<n; i++){\n            for(int j=0; j<m; j++){\n                if(matrix[i][j] == 0){\n                    row[i] = 1;\n                    col[j] = 1;\n                }\n            }\n        }\n        for(int i=0; i<n; i++){\n            for(int j=0; j<m; j++){\n                if(row[i] == 1 || col[j] == 1){\n                    matrix[i][j] = 0;\n                }\n            }\n        }\n    }\n}",
+      "files": [
+        {
+          "path": "problems/set-matrix-zeroes/leetcode/lc-set-matrix-zeroes.java",
+          "content": "class Solution {\n    public void setZeroes(int[][] matrix) {\n        int n = matrix.length;\n        int m = matrix[0].length;\n\n        int[] col = new int[m];\n        int[] row = new int[n];\n\n        for(int i=0; i<n; i++){\n            for(int j=0; j<m; j++){\n                if(matrix[i][j] == 0){\n                    row[i] = 1;\n                    col[j] = 1;\n                }\n            }\n        }\n        for(int i=0; i<n; i++){\n            for(int j=0; j<m; j++){\n                if(row[i] == 1 || col[j] == 1){\n                    matrix[i][j] = 0;\n                }\n            }\n        }\n    }\n}"
+        },
+        {
+          "path": "problems/set-matrix-zeroes/README.md",
+          "content": "# [73] Set Matrix Zeroes\n**Difficulty:** Medium  |  **Acceptance:** 63.8%  |  **Likes:** 17607 / **Dislikes:** 877\n**Tags:** `Array`, `Hash Table`, `Matrix`\n## Problem\nGiven an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.\n\nYou must do it in place.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,1,1],[1,0,1],[1,1,1]]\nOutput: [[1,0,1],[0,0,0],[1,0,1]]\n\nExample 2:\n\nInput: matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]\nOutput: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[0].length\n\t1 <= m, n <= 200\n\t-231 <= matrix[i][j] <= 231 - 1\n\n&nbsp;\nFollow up:\n\n\tA straightforward solution using O(mn) space is probably a bad idea.\n\tA simple improvement uses O(m + n) space, but still not the best solution.\n\tCould you devise a constant space solution?\n## My Submission\n\n- Runtime: 1 ms (beats 96.5%)\n- Memory: 47.5 MB (beats 63.0%)\n\n## Similar Problems\n\n- [Game of Life](https://leetcode.com/problems/game-of-life/) — Medium\n- [Number of Laser Beams in a Bank](https://leetcode.com/problems/number-of-laser-beams-in-a-bank/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "1 ms",
+      "memory": "47.5 MB",
+      "runtimePct": 96.5468,
+      "memoryPct": 63.0305,
+      "timestamp": 1776000147000,
+      "acRate": 63.849605681047706,
+      "likes": 17607,
+      "dislikes": 877,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "game-of-life",
+          "title": "Game of Life",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "number-of-laser-beams-in-a-bank",
+          "title": "Number of Laser Beams in a Bank",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given an <code>m x n</code> integer matrix <code>matrix</code>, if an element is <code>0</code>, set its entire row and column to <code>0</code>&#39;s.</p>\n\n<p>You must do it <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\">in place</a>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/08/17/mat1.jpg\" style=\"width: 450px; height: 169px;\" />\n<pre>\n<strong>Input:</strong> matrix = [[1,1,1],[1,0,1],[1,1,1]]\n<strong>Output:</strong> [[1,0,1],[0,0,0],[1,0,1]]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/08/17/mat2.jpg\" style=\"width: 450px; height: 137px;\" />\n<pre>\n<strong>Input:</strong> matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]\n<strong>Output:</strong> [[0,0,0,0],[0,4,5,0],[0,3,1,0]]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>m == matrix.length</code></li>\n\t<li><code>n == matrix[0].length</code></li>\n\t<li><code>1 &lt;= m, n &lt;= 200</code></li>\n\t<li><code>-2<sup>31</sup> &lt;= matrix[i][j] &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong></p>\n\n<ul>\n\t<li>A straightforward solution using <code>O(mn)</code> space is probably a bad idea.</li>\n\t<li>A simple improvement uses <code>O(m + n)</code> space, but still not the best solution.</li>\n\t<li>Could you devise a constant space solution?</li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/set-matrix-zeroes/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
     },
     {
       "id": "lc-set-mismatch::1993493098",
