@@ -718,6 +718,24 @@
       "Recursion"
     ]
   },
+  "leetcode::rotate-array": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "rotate-array",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1795011552601
+      }
+    ],
+    "tags": [
+      "Array",
+      "Math",
+      "Two Pointers"
+    ]
+  },
   "leetcode::rotate-image": {
     "difficulty": "Medium",
     "lang": "Java",
@@ -937,6 +955,24 @@
       "Heap (Priority Queue)",
       "Bucket Sort",
       "Counting"
+    ]
+  },
+  "leetcode::spiral-matrix": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "spiral-matrix",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1795013744064
+      }
+    ],
+    "tags": [
+      "Array",
+      "Matrix",
+      "Simulation"
     ]
   },
   "leetcode::split-array-largest-sum": {

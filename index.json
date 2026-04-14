@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-11-18T14:18:54.189Z",
+  "updatedAt": "2026-11-18T14:55:44.159Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 266,
+    "total": 268,
     "easy": 117,
-    "medium": 135,
+    "medium": 137,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 57,
-      "leetcode": 209
+      "leetcode": 211
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 150,
+      "Java": 152,
       "Python": 30,
       "MySQL": 35
     },
@@ -22,7 +22,7 @@
       "Binary Search": 4,
       "Searching": 8,
       "String": 27,
-      "Array": 141,
+      "Array": 143,
       "Greedy": 1,
       "Untagged": 1,
       "Prefix Sum": 2,
@@ -15528,6 +15528,72 @@
       ]
     },
     {
+      "id": "lc-rotate-array",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Rotate Array",
+      "titleSlug": "rotate-array",
+      "difficulty": "Medium",
+      "topic": "Math",
+      "tags": [
+        "Array",
+        "Math",
+        "Two Pointers"
+      ],
+      "canonical": null,
+      "readmeContent": "# [189] Rotate Array\n**Difficulty:** Medium  |  **Acceptance:** 45.8%  |  **Likes:** 21739 / **Dislikes:** 2221\n**Tags:** `Array`, `Math`, `Two Pointers`\n## Problem\nGiven an integer array nums, rotate the array to the right by k steps, where k is non-negative.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,2,3,4,5,6,7], k = 3\nOutput: [5,6,7,1,2,3,4]\nExplanation:\nrotate 1 steps to the right: [7,1,2,3,4,5,6]\nrotate 2 steps to the right: [6,7,1,2,3,4,5]\nrotate 3 steps to the right: [5,6,7,1,2,3,4]\n\nExample 2:\n\nInput: nums = [-1,-100,3,99], k = 2\nOutput: [3,99,-1,-100]\nExplanation: \nrotate 1 steps to the right: [99,-1,-100,3]\nrotate 2 steps to the right: [3,99,-1,-100]\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 105\n\t-231 <= nums[i] <= 231 - 1\n\t0 <= k <= 105\n\n&nbsp;\nFollow up:\n\n\tTry to come up with as many solutions as you can. There are at least three different ways to solve this problem.\n\tCould you do it in-place with O(1) extra space?\n## My Submission\n\n- Runtime: 5 ms (beats 68.9%)\n- Memory: 268.7 MB (beats 38.7%)\n\n## Similar Problems\n\n- [Rotate List](https://leetcode.com/problems/rotate-list/) — Medium\n- [Make K-Subarray Sums Equal](https://leetcode.com/problems/make-k-subarray-sums-equal/) — Medium\n",
+      "code": "class Solution {\n    public void rotate(int[] nums, int k) {\n        int n = nums.length;\n        k = k % n;\n        rotate(nums, 0, n-1);\n        rotate(nums, 0, k-1);\n        rotate(nums, k, n-1);\n\n    }\n    public void rotate(int[] nums, int l, int r){\n        while(l < r){\n            int temp = nums[l];\n            nums[l] = nums[r];\n            nums[r] = temp;\n            l++;\n            r--;\n        }\n    }\n}",
+      "files": [
+        {
+          "path": "problems/lc-rotate-array/lc-rotate-array.java",
+          "content": "class Solution {\n    public void rotate(int[] nums, int k) {\n        int n = nums.length;\n        k = k % n;\n        rotate(nums, 0, n-1);\n        rotate(nums, 0, k-1);\n        rotate(nums, k, n-1);\n\n    }\n    public void rotate(int[] nums, int l, int r){\n        while(l < r){\n            int temp = nums[l];\n            nums[l] = nums[r];\n            nums[r] = temp;\n            l++;\n            r--;\n        }\n    }\n}"
+        },
+        {
+          "path": "problems/lc-rotate-array/README.md",
+          "content": "# [189] Rotate Array\n**Difficulty:** Medium  |  **Acceptance:** 45.8%  |  **Likes:** 21739 / **Dislikes:** 2221\n**Tags:** `Array`, `Math`, `Two Pointers`\n## Problem\nGiven an integer array nums, rotate the array to the right by k steps, where k is non-negative.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,2,3,4,5,6,7], k = 3\nOutput: [5,6,7,1,2,3,4]\nExplanation:\nrotate 1 steps to the right: [7,1,2,3,4,5,6]\nrotate 2 steps to the right: [6,7,1,2,3,4,5]\nrotate 3 steps to the right: [5,6,7,1,2,3,4]\n\nExample 2:\n\nInput: nums = [-1,-100,3,99], k = 2\nOutput: [3,99,-1,-100]\nExplanation: \nrotate 1 steps to the right: [99,-1,-100,3]\nrotate 2 steps to the right: [3,99,-1,-100]\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 105\n\t-231 <= nums[i] <= 231 - 1\n\t0 <= k <= 105\n\n&nbsp;\nFollow up:\n\n\tTry to come up with as many solutions as you can. There are at least three different ways to solve this problem.\n\tCould you do it in-place with O(1) extra space?\n## My Submission\n\n- Runtime: 5 ms (beats 68.9%)\n- Memory: 268.7 MB (beats 38.7%)\n\n## Similar Problems\n\n- [Rotate List](https://leetcode.com/problems/rotate-list/) — Medium\n- [Make K-Subarray Sums Equal](https://leetcode.com/problems/make-k-subarray-sums-equal/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "5 ms",
+      "memory": "268.7 MB",
+      "runtimePct": 68.8947,
+      "memoryPct": 38.74509999999995,
+      "timestamp": 1791307504000,
+      "acRate": 45.81641466770864,
+      "likes": 21739,
+      "dislikes": 2221,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "rotate-list",
+          "title": "Rotate List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "make-k-subarray-sums-equal",
+          "title": "Make K-Subarray Sums Equal",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given an integer array <code>nums</code>, rotate the array to the right by <code>k</code> steps, where <code>k</code> is non-negative.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,4,5,6,7], k = 3\n<strong>Output:</strong> [5,6,7,1,2,3,4]\n<strong>Explanation:</strong>\nrotate 1 steps to the right: [7,1,2,3,4,5,6]\nrotate 2 steps to the right: [6,7,1,2,3,4,5]\nrotate 3 steps to the right: [5,6,7,1,2,3,4]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-1,-100,3,99], k = 2\n<strong>Output:</strong> [3,99,-1,-100]\n<strong>Explanation:</strong> \nrotate 1 steps to the right: [99,-1,-100,3]\nrotate 2 steps to the right: [3,99,-1,-100]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>\n\t<li><code>0 &lt;= k &lt;= 10<sup>5</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong></p>\n\n<ul>\n\t<li>Try to come up with as many solutions as you can. There are at least <strong>three</strong> different ways to solve this problem.</li>\n\t<li>Could you do it in-place with <code>O(1)</code> extra space?</li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/rotate-array/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": true,
+      "duplicateOf": "lc-rotate-array::2162694467",
+      "_requestAIReview": true,
+      "platform": "leetcode",
+      "methods": [],
+      "manuallyEdited": false
+    },
+    {
       "id": "lc-rotate-array::2129851950",
       "submissionId": 2129851950,
       "platform": "leetcode",
@@ -17569,6 +17635,97 @@
         "problems/lc-sort-colors/lc-sort-colors.java",
         "problems/lc-sort-colors/README.md"
       ]
+    },
+    {
+      "id": "lc-spiral-matrix",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Spiral Matrix",
+      "titleSlug": "spiral-matrix",
+      "difficulty": "Medium",
+      "topic": "Math",
+      "tags": [
+        "Array",
+        "Matrix",
+        "Simulation"
+      ],
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 54,
+            "platform": "leetcode",
+            "slug": "spiral-matrix"
+          }
+        ],
+        "canonicalId": "spiral-matrix",
+        "canonicalTitle": "Spiral Matrix",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "simulation",
+        "tags": [
+          "array"
+        ],
+        "topic": "math",
+        "voteCount": 96
+      },
+      "readmeContent": "# [54] Spiral Matrix\n**Difficulty:** Medium  |  **Acceptance:** 58.3%  |  **Likes:** 18049 / **Dislikes:** 1620\n**Tags:** `Array`, `Matrix`, `Simulation`\n## Problem\nGiven an m x n matrix, return all elements of the matrix in spiral order.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [1,2,3,6,9,8,7,4,5]\n\nExample 2:\n\nInput: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]\nOutput: [1,2,3,4,8,12,11,10,9,5,6,7]\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 10\n\t-100 <= matrix[i][j] <= 100\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 42.8 MB (beats 55.8%)\n\n## Similar Problems\n\n- [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/) — Medium\n- [Spiral Matrix III](https://leetcode.com/problems/spiral-matrix-iii/) — Medium\n- [Spiral Matrix IV](https://leetcode.com/problems/spiral-matrix-iv/) — Medium\n",
+      "code": "class Solution {\n    public List<Integer> spiralOrder(int[][] matrix) {\n        int n = matrix.length;\n        int m = matrix[0].length;\n\n        int top = 0, bottom = n - 1;\n        int left = 0, right = m - 1;\n\n        List<Integer> ans = new ArrayList<>();\n\n        while (top <= bottom && left <= right) {\n            for (int i = left; i <= right; i++) {\n                ans.add(matrix[top][i]);\n            }\n            top++;\n\n            for (int i = top; i <= bottom; i++) {\n                ans.add(matrix[i][right]);\n            }\n            right--;\n\n            if (top <= bottom) {\n                for (int i = right; i >= left; i--) {\n                    ans.add(matrix[bottom][i]);\n                }\n                bottom--;\n            }\n\n            if (left <= right) {\n                for (int i = bottom; i >= top; i--) {\n                    ans.add(matrix[i][left]);\n                }\n                left++;\n            }\n        }\n        return ans;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/spiral-matrix/leetcode/lc-spiral-matrix.java",
+          "content": "class Solution {\n    public List<Integer> spiralOrder(int[][] matrix) {\n        int n = matrix.length;\n        int m = matrix[0].length;\n\n        int top = 0, bottom = n - 1;\n        int left = 0, right = m - 1;\n\n        List<Integer> ans = new ArrayList<>();\n\n        while (top <= bottom && left <= right) {\n            for (int i = left; i <= right; i++) {\n                ans.add(matrix[top][i]);\n            }\n            top++;\n\n            for (int i = top; i <= bottom; i++) {\n                ans.add(matrix[i][right]);\n            }\n            right--;\n\n            if (top <= bottom) {\n                for (int i = right; i >= left; i--) {\n                    ans.add(matrix[bottom][i]);\n                }\n                bottom--;\n            }\n\n            if (left <= right) {\n                for (int i = bottom; i >= top; i--) {\n                    ans.add(matrix[i][left]);\n                }\n                left++;\n            }\n        }\n        return ans;\n    }\n}"
+        },
+        {
+          "path": "problems/spiral-matrix/README.md",
+          "content": "# [54] Spiral Matrix\n**Difficulty:** Medium  |  **Acceptance:** 58.3%  |  **Likes:** 18049 / **Dislikes:** 1620\n**Tags:** `Array`, `Matrix`, `Simulation`\n## Problem\nGiven an m x n matrix, return all elements of the matrix in spiral order.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [1,2,3,6,9,8,7,4,5]\n\nExample 2:\n\nInput: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]\nOutput: [1,2,3,4,8,12,11,10,9,5,6,7]\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 10\n\t-100 <= matrix[i][j] <= 100\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 42.8 MB (beats 55.8%)\n\n## Similar Problems\n\n- [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/) — Medium\n- [Spiral Matrix III](https://leetcode.com/problems/spiral-matrix-iii/) — Medium\n- [Spiral Matrix IV](https://leetcode.com/problems/spiral-matrix-iv/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "0 ms",
+      "memory": "42.8 MB",
+      "runtimePct": 100,
+      "memoryPct": 55.7898,
+      "timestamp": 1776170011000,
+      "acRate": 58.300430531446445,
+      "likes": 18049,
+      "dislikes": 1620,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "spiral-matrix-ii",
+          "title": "Spiral Matrix II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "spiral-matrix-iii",
+          "title": "Spiral Matrix III",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "spiral-matrix-iv",
+          "title": "Spiral Matrix IV",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given an <code>m x n</code> <code>matrix</code>, return <em>all elements of the</em> <code>matrix</code> <em>in spiral order</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/11/13/spiral1.jpg\" style=\"width: 242px; height: 242px;\" />\n<pre>\n<strong>Input:</strong> matrix = [[1,2,3],[4,5,6],[7,8,9]]\n<strong>Output:</strong> [1,2,3,6,9,8,7,4,5]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/11/13/spiral.jpg\" style=\"width: 322px; height: 242px;\" />\n<pre>\n<strong>Input:</strong> matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]\n<strong>Output:</strong> [1,2,3,4,8,12,11,10,9,5,6,7]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>m == matrix.length</code></li>\n\t<li><code>n == matrix[i].length</code></li>\n\t<li><code>1 &lt;= m, n &lt;= 10</code></li>\n\t<li><code>-100 &lt;= matrix[i][j] &lt;= 100</code></li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/spiral-matrix/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": true,
+      "duplicateOf": "lc-spiral-matrix::1978254878",
+      "_requestAIReview": true,
+      "platform": "leetcode",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-spiral-matrix::1978254878",

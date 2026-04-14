@@ -8,7 +8,7 @@
 | Topics | Array, Matrix, Simulation |
 | Solved | 2026-04-14 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 42.8 MB (beats 89.62899999999998%) |
+| Memory | 42.8 MB (beats 55.7898%) |
 
 ## Problem Statement
 
@@ -37,30 +37,6 @@ Given an `m x n` `matrix`, return _all elements of the_ `matrix` _in spiral orde
 	- `1 <= m, n <= 10`
 
 	- `-100 <= matrix[i][j] <= 100`
-
-## Hints
-
-<details>
-<summary>Hint 1</summary>
-
-Well for some problems, the best way really is to come up with some algorithms for simulation. Basically, you need to simulate what the problem asks us to do.
-
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-We go boundary by boundary and move inwards. That is the essential operation. First row, last column, last row, first column, and then we move inwards by 1 and repeat. That's all. That is all the simulation that we need.
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-Think about when you want to switch the progress on one of the indexes. If you progress on i out of [i, j], you'll shift in the same column. Similarly, by changing values for j, you'd be shifting in the same row.
-Also, keep track of the end of a boundary so that you can move inwards and then keep repeating. It's always best to simulate edge cases like a single column or a single row to see if anything breaks or not.
-
-</details>
 
 ## Solutions
 
