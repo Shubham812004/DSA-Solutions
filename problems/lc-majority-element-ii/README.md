@@ -7,8 +7,8 @@
 | Problem ID | `lc-majority-element-ii` |
 | Topics | Array, Hash Table, Sorting, Counting, Boyer–moore Majority Vote Algorithm |
 | Solved | 2026-04-16 |
-| Runtime | 14 ms (beats 42.35930000000001%) |
-| Memory | 51 MB (beats 96.61570000000003%) |
+| Runtime | 2 ms (beats 99.88900000000001%) |
+| Memory | 52.6 MB (beats 40.50650000000003%) |
 
 ## Problem Statement
 
@@ -71,17 +71,36 @@ Consider using Boyer-Moore Voting Algorithm, which is efficient for finding elem
 ```Java
 class Solution {
     public List<Integer> majorityElement(int[] nums) {
-        int n = nums.length;
-        HashMap<Integer, Integer> map = new HashMap<>();
-        List<Integer> res = new ArrayList<>();
+        int count1 = 0, count2 = 0;
+        int element1 = 0, element2 = 0;
+
         for(int num : nums){
-            map.put(num, map.getOrDefault(num, 0)+1);
-        }
-        for(Map.Entry<Integer, Integer> entry : map.entrySet()){
-            if(entry.getValue() > n/3){
-                res.add(entry.getKey());
+            if(num == element1){
+                count1++;
+            }else if(num == element2){
+                count2++;
+            }else if(count1 == 0){
+                element1 = num;
+                count1 = 1;
+            }else if(count2 == 0){
+                element2 = num;
+                count2 = 1;
+            }else{
+                count1--;
+                count2--;
             }
         }
+        count1 = 0;
+        count2 = 0;
+        for(int num : nums){
+            if(num == element1) count1++;
+            else if(num == element2) count2++;
+        }
+
+        int n = nums.length;
+        List<Integer> res = new ArrayList<>();
+        if(count1 > n/3) res.add(element1);
+        if(count2 > n/3) res.add(element2);
         return res;
     }
 }
