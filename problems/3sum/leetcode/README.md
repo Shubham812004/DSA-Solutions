@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-3sum` |
 | Topics | Array, Two Pointers, Sorting |
-| Solved | 2025-10-27 |
-| Runtime | 730 ms (beats 70.40849999999968%) |
-| Memory | 18.3 MB (beats 82.18669999999999%) |
+| Solved | 2026-04-17 |
+| Runtime | 34 ms (beats 56.37319999999997%) |
+| Memory | 59.1 MB (beats 59.70329999999986%) |
 
 ## Problem Statement
 
@@ -74,35 +74,36 @@ The second train of thought for two-sum is, without changing the array, can we u
 
 ## Solutions
 
-```Python
-class Solution(object):
-    def threeSum(self, nums):
-        res = []
-        nums.sort()
-
-        for i in range(len(nums)):
-            if i > 0 and nums[i] == nums[i - 1]:
-                continue
-
-            left, right = i + 1, len(nums) - 1
-
-            while left < right:
-                total = nums[i] + nums[left] + nums[right]
-
-                if total < 0:
-                    left += 1
-                elif total > 0:
-                    right -= 1
-                else:
-                    res.append([nums[i], nums[left], nums[right]])
-                    left += 1
-                    right -= 1
-
-                    while left < right and nums[left] == nums[left-1]:
-                        left += 1
-                    while left < right and nums[right] == nums[right+1]:
-                        right -=1
-        
-        return res
-
+```Java
+class Solution {
+    public List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+        Arrays.sort(nums);
+        for(int i=0; i<nums.length; i++){
+            if(i>0 && nums[i] == nums[i-1]) continue;
+            int left = i+1;
+            int right = nums.length-1;
+            while(left < right){
+                int sum = nums[i] + nums[left] + nums[right];
+                if(sum == 0){
+                    res.add(Arrays.asList(nums[i], nums[left], nums[right]));
+                    left++;
+                    right--;
+                    while(left < right && nums[left] == nums[left - 1]){
+                        left++;
+                    }
+                    while(left < right && nums[right] == nums[right + 1]){
+                        right--;
+                    }
+                }
+                else if(sum < 0){
+                    left++;
+                }else{
+                    right--;
+                }
+            }
+        }
+        return res;
+    }
+}
 ```
