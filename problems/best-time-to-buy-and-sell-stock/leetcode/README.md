@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-best-time-to-buy-and-sell-stock` |
 | Topics | Array, Dynamic Programming |
-| Solved | 2025-10-23 |
-| Runtime | 33 ms (beats 86.40959999999998%) |
-| Memory | 19.1 MB (beats 50.45979999999997%) |
+| Solved | 2026-04-18 |
+| Runtime | 1 ms (beats 99.9222%) |
+| Memory | 94.3 MB (beats 70.42210000000011%) |
 
 ## Problem Statement
 
@@ -43,18 +43,19 @@ Note that buying on day 2 and selling on day 1 is not allowed because you must b
 
 ## Solutions
 
-```Python
-class Solution(object):
-    def maxProfit(self, prices):
-        min_price = 'inf'
-        max_price = 0
-
-        for price in prices:
-            if price < min_price:
-                min_price = price
-            elif price - min_price > max_price:
-                max_price = price - min_price
-        return max_price
-
-        
+```Java
+class Solution {
+    public int maxProfit(int[] prices) {
+        int minPrice = Integer.MAX_VALUE;
+        int maxProfit = 0;
+        for(int price : prices){
+            if(price < minPrice){
+                minPrice = price;
+            }
+            int profit = price - minPrice;
+            maxProfit = Math.max(maxProfit, profit);
+        }
+        return maxProfit;
+    }
+}
 ```
