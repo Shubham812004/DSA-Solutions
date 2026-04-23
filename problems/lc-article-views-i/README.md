@@ -6,8 +6,8 @@
 | Platform | Leetcode |
 | Problem ID | `lc-article-views-i` |
 | Topics | Database |
-| Solved | 2025-10-19 |
-| Runtime | 393 ms (beats 95.38149999999993%) |
+| Solved | 2026-04-23 |
+| Runtime | 499 ms (beats 26.370199999999954%) |
 | Memory | 0B (beats 100%) |
 
 ## Problem Statement
@@ -63,8 +63,8 @@ Views table:
 
 ```MySQL
 # Write your MySQL query statement below
-select distinct author_id as id
-from Views
-where viewer_id = author_id 
-order by id;
+SELECT DISTINCT author_id AS id
+FROM Views
+WHERE author_id = viewer_id
+ORDER BY id;
 ```
