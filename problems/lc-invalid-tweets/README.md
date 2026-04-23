@@ -6,8 +6,8 @@
 | Platform | Leetcode |
 | Problem ID | `lc-invalid-tweets` |
 | Topics | Database |
-| Solved | 2025-10-19 |
-| Runtime | 536 ms (beats 98.68439999999998%) |
+| Solved | 2026-04-23 |
+| Runtime | 569 ms (beats 92.28919999999997%) |
 | Memory | 0B (beats 100%) |
 
 ## Problem Statement
@@ -58,7 +58,7 @@ Tweet 2 has length = 33. It is an invalid tweet.
 
 ```MySQL
 # Write your MySQL query statement below
-select tweet_id 
-from Tweets
-where length(content) > 15 ;
+SELECT tweet_id
+FROM Tweets
+WHERE length(content) > 15;
 ```
