@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-4sum` |
 | Topics | Array, Two Pointers, Sorting |
-| Solved | 2026-04-17 |
-| Runtime | 19 ms (beats 79.8942%) |
-| Memory | 45.6 MB (beats 77.18670000000002%) |
+| Solved | 2026-04-28 |
+| Runtime | 20 ms (beats 64.1351%) |
+| Memory | 45.7 MB (beats 62.93610000000002%) |
 
 ## Problem Statement
 
@@ -56,22 +56,24 @@ class Solution {
             for(int j=i+1; j<nums.length; j++){
                 if(j>i+1 && nums[j] == nums[j-1]) continue;
                 int left = j+1;
-                int right = nums.length - 1;
+                int right = nums.length-1;
                 while(left < right){
-                    long sum = (long)nums[i] + nums[j] + nums[left] + nums[right];
+                    long sum = (long) nums[i] + nums[j] + nums[left] + nums[right];
                     if(sum == target){
                         res.add(Arrays.asList(nums[i], nums[j], nums[left], nums[right]));
                         left++;
                         right--;
-                        while(left < right && nums[left] == nums[left - 1]){
+                        while(left < right && nums[left] == nums[left-1]){
                             left++;
                         }
-                        while(left < right && nums[right] == nums[right + 1]){
+                        while(left < right && nums[right] == nums[right+1]){
                             right--;
                         }
-                    }else if(sum < target){
+                    }
+                    else if(sum < target){
                         left++;
-                    }else{
+                    }
+                    else{
                         right--;
                     }
                 }
