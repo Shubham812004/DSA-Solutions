@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-3sum` |
 | Topics | Array, Two Pointers, Sorting |
-| Solved | 2026-04-17 |
+| Solved | 2026-04-28 |
 | Runtime | 34 ms (beats 56.37319999999997%) |
-| Memory | 59.1 MB (beats 59.70329999999986%) |
+| Memory | 59 MB (beats 74.30309999999986%) |
 
 ## Problem Statement
 
@@ -98,7 +98,8 @@ class Solution {
                 }
                 else if(sum < 0){
                     left++;
-                }else{
+                }
+                else{
                     right--;
                 }
             }
