@@ -6,7 +6,7 @@
 | Platform | Leetcode |
 | Problem ID | `lc-majority-element-ii` |
 | Topics | Array, Hash Table, Sorting, Counting, Boyer–moore Majority Vote Algorithm |
-| Solved | 2026-04-16 |
+| Solved | 2026-04-29 |
 | Runtime | 2 ms (beats 99.88900000000001%) |
 | Memory | 52.6 MB (beats 40.50650000000003%) |
 
@@ -71,13 +71,12 @@ Consider using Boyer-Moore Voting Algorithm, which is efficient for finding elem
 ```Java
 class Solution {
     public List<Integer> majorityElement(int[] nums) {
-        int count1 = 0, count2 = 0;
-        int element1 = 0, element2 = 0;
-
+        List<Integer> res = new ArrayList<>();
+        int count1 =0, element1 = 0, count2 =0, element2 = 0;
         for(int num : nums){
-            if(num == element1){
+            if(element1 == num){
                 count1++;
-            }else if(num == element2){
+            }else if(element2 == num){
                 count2++;
             }else if(count1 == 0){
                 element1 = num;
@@ -96,9 +95,7 @@ class Solution {
             if(num == element1) count1++;
             else if(num == element2) count2++;
         }
-
         int n = nums.length;
-        List<Integer> res = new ArrayList<>();
         if(count1 > n/3) res.add(element1);
         if(count2 > n/3) res.add(element2);
         return res;

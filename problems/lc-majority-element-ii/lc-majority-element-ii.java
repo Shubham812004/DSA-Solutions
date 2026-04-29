@@ -1,12 +1,11 @@
 class Solution {
     public List<Integer> majorityElement(int[] nums) {
-        int count1 = 0, count2 = 0;
-        int element1 = 0, element2 = 0;
-
+        List<Integer> res = new ArrayList<>();
+        int count1 =0, element1 = 0, count2 =0, element2 = 0;
         for(int num : nums){
-            if(num == element1){
+            if(element1 == num){
                 count1++;
-            }else if(num == element2){
+            }else if(element2 == num){
                 count2++;
             }else if(count1 == 0){
                 element1 = num;
@@ -25,9 +24,7 @@ class Solution {
             if(num == element1) count1++;
             else if(num == element2) count2++;
         }
-
         int n = nums.length;
-        List<Integer> res = new ArrayList<>();
         if(count1 > n/3) res.add(element1);
         if(count2 > n/3) res.add(element2);
         return res;
