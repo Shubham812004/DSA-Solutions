@@ -7,8 +7,8 @@
 | Problem ID | `lc-set-mismatch` |
 | Topics | Array, Hash Table, Bit Manipulation, Sorting |
 | Solved | 2026-05-02 |
-| Runtime | 22 ms (beats 12.59129999999998%) |
-| Memory | 48.2 MB (beats 8.509099999999986%) |
+| Runtime | 14 ms (beats 34.37789999999998%) |
+| Memory | 47.5 MB (beats 76.35299999999998%) |
 
 ## Problem Statement
 
@@ -42,30 +42,22 @@ Find the number that occurs twice and the number that is missing and return _the
 ```Java
 class Solution {
     public int[] findErrorNums(int[] nums) {
-        ArrayList<Integer> arr = new ArrayList<>();
         Set<Integer> set = new HashSet<>();
-        Arrays.sort(nums);
-        for(int i=1; i<nums.length; i++){
-            if(nums[i] == nums[i-1]){
-                arr.add(nums[i]);
+        int duplicate = -1;
+        for(int num: nums){
+            if(set.contains(num)){
+                duplicate = num;
             }
-        }
-        for(int i=0; i<nums.length; i++){
-            set.add(nums[i]);
+            set.add(num);
         }
         int n = nums.length;
-        int sum = 0;
         int expectedSum = n*(n+1)/2;
-        for(int x : set){
-            sum += x;
+        int sum = 0;
+        for(int num : set){
+            sum += num;
         }
-        int num = expectedSum - sum;
-        arr.add(num);
-        int[] res = new int[arr.size()];
-        for(int i=0; i<arr.size(); i++){
-            res[i] = arr.get(i); 
-        }
-        return res;
+        int missing = expectedSum - sum;
+        return new int[]{duplicate, missing};
     }
 }
 ```
