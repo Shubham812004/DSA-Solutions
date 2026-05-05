@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-merge-sorted-array` |
 | Topics | Array, Two Pointers, Sorting |
-| Solved | 2025-10-27 |
+| Solved | 2026-05-05 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 12.6 MB (beats 22.681199999999997%) |
+| Memory | 43.4 MB (beats 94.57140000000005%) |
 
 ## Problem Statement
 
@@ -78,11 +78,29 @@ If you simply consider one element each at a time from the two arrays and make a
 
 ## Solutions
 
-```Python
-class Solution(object):
-    def merge(self, nums1, m, nums2, n):
-        for i in range(n):
-            nums1[m+i] = nums2[i]
-        nums1.sort()
-
+```Java
+class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int i = m-1;
+        int j= n-1;
+        int k = m+n-1;
+        while(i >= 0 && j >= 0){
+            if(nums1[i] > nums2[j]){
+                nums1[k] = nums1[i];
+                i--;
+                k--;
+            }
+            else{
+                nums1[k] = nums2[j];
+                j--;
+                k--;
+            }
+        }
+        while(j>=0){
+            nums1[k] = nums2[j];
+            j--;
+            k--;
+        }
+    }
+}
 ```
