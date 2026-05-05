@@ -6,8 +6,8 @@
 | Platform | Leetcode |
 | Problem ID | `lc-set-mismatch` |
 | Topics | Array, Hash Table, Bit Manipulation, Sorting |
-| Solved | 2026-05-02 |
-| Runtime | 14 ms (beats 34.37789999999998%) |
+| Solved | 2026-05-05 |
+| Runtime | 15 ms (beats 26.47439999999998%) |
 | Memory | 47.5 MB (beats 76.35299999999998%) |
 
 ## Problem Statement
@@ -43,8 +43,8 @@ Find the number that occurs twice and the number that is missing and return _the
 class Solution {
     public int[] findErrorNums(int[] nums) {
         Set<Integer> set = new HashSet<>();
-        int duplicate = -1;
-        for(int num: nums){
+        int duplicate = 0;
+        for(int num : nums){
             if(set.contains(num)){
                 duplicate = num;
             }
@@ -52,11 +52,11 @@ class Solution {
         }
         int n = nums.length;
         int expectedSum = n*(n+1)/2;
-        int sum = 0;
-        for(int num : set){
-            sum += num;
+        int actaulSum = 0;
+        for(int num: set){
+            actaulSum += num;
         }
-        int missing = expectedSum - sum;
+        int missing = expectedSum - actaulSum;
         return new int[]{duplicate, missing};
     }
 }
