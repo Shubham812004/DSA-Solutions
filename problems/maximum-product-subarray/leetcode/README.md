@@ -7,8 +7,8 @@
 | Problem ID | `lc-maximum-product-subarray` |
 | Topics | Array, Dynamic Programming |
 | Solved | 2026-05-05 |
-| Runtime | 272 ms (beats 6.612699999999959%) |
-| Memory | 47.2 MB (beats 72.44179999999999%) |
+| Runtime | 293 ms (beats 5.655899999999959%) |
+| Memory | 47.3 MB (beats 33.76479999999999%) |
 
 ## Problem Statement
 
@@ -47,10 +47,7 @@ The test cases are generated so that the answer will fit in a **32-bit** integer
 ```Java
 class Solution {
     public int maxProduct(int[] nums) {
-        int maxProd = 0;
-        if(nums.length <= 1 && nums[0] < 0){
-            return nums[0];
-        }
+        int maxProd = nums[0];
         for (int i = 0; i < nums.length; i++) {
             int prod = 1;
             for (int j = i; j < nums.length; j++) {
