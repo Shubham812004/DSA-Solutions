@@ -48,7 +48,7 @@ The test cases are generated so that the answer will fit in a **32-bit** integer
 class Solution {
     public int maxProduct(int[] nums) {
         int n = nums.length;
-        int maxProd = nums[0];
+        int maxProd = Integer.MIN_VALUE;
         int prefix = 1, suffix = 1;
         for(int i=0; i<n; i++){
             if(prefix == 0) prefix = 1;
