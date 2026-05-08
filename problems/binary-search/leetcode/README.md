@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-binary-search` |
 | Topics | Array, Binary Search |
-| Solved | 2025-11-03 |
+| Solved | 2026-05-08 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 13.2 MB (beats 96.8656%) |
+| Memory | 48.4 MB (beats 49.25989999999993%) |
 
 ## Problem Statement
 
@@ -44,20 +44,22 @@ You must write an algorithm with `O(log n)` runtime complexity.
 
 ## Solutions
 
-```Python
-class Solution(object):
-    def search(self, nums, target):
-        left = 0
-        right = len(nums)-1
-
-        while left <= right:
-            mid = (left + right)//2
-            if nums[mid] == target:
-                return mid
-            elif nums[mid] < target:
-                left = mid + 1
-            else:
-                right = mid -1
-        return -1
-    
+```Java
+class Solution {
+    public int search(int[] nums, int target) {
+        int low = 0;
+        int high = nums.length - 1;
+        while(low <= high){
+            int mid = (low + high)/2;
+            if(nums[mid] == target){
+                return mid;
+            }else if(target < nums[mid]){
+                high = mid - 1;
+            }else{
+                low = mid + 1;
+            }
+        }
+        return -1;
+    }
+}
 ```
