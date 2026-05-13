@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-maximum-product-subarray` |
 | Topics | Array, Dynamic Programming |
-| Solved | 2026-09-21 |
-| Runtime | 1 ms (beats 94.2844%) |
-| Memory | 47.3 MB (beats 30.381899999999998%) |
+| Solved | 2026-05-13 |
+| Runtime | 2 ms (beats 76.67280000000001%) |
+| Memory | 47.2 MB (beats 42.3561%) |
 
 ## Problem Statement
 

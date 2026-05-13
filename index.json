@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T05:06:24.110Z",
+  "updatedAt": "2026-11-18T05:11:12.657Z",
   "layoutVersion": 3,
   "stats": {
     "total": 264,
@@ -9816,7 +9816,7 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "readmeContent": "# [152] Maximum Product Subarray\n**Difficulty:** Medium  |  **Acceptance:** 37.3%  |  **Likes:** 20978 / **Dislikes:** 850\n**Tags:** `Array`, `Dynamic Programming`\n## Problem\nGiven an integer array nums, find a subarray that has the largest product, and return the product.\n\nThe test cases are generated so that the answer will fit in a 32-bit integer.\n\nNote that the product of an array with a single element is the value of that element.\n\n&nbsp;\n​​​​​​​Example 1:\n\nInput: nums = [2,3,-2,4]\nOutput: 6\nExplanation: [2,3] has the largest product 6.\n\nExample 2:\n\nInput: nums = [-2,0,-1]\nOutput: 0\nExplanation: The result cannot be 2, because [-2,-1] is not a subarray.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 2 * 104\n\t-10 <= nums[i] <= 10\n\tThe product of any subarray of nums is guaranteed to fit in a 32-bit integer.\n## My Submission\n\n- Runtime: 1 ms (beats 94.3%)\n- Memory: 47.3 MB (beats 30.4%)\n\n## Similar Problems\n\n- [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) — Medium\n- [House Robber](https://leetcode.com/problems/house-robber/) — Medium\n- [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) — Medium\n- [Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/) — Easy\n- [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) — Medium\n",
+      "readmeContent": "# [152] Maximum Product Subarray\n**Difficulty:** Medium  |  **Acceptance:** 37.3%  |  **Likes:** 20978 / **Dislikes:** 850\n**Tags:** `Array`, `Dynamic Programming`\n## Problem\nGiven an integer array nums, find a subarray that has the largest product, and return the product.\n\nThe test cases are generated so that the answer will fit in a 32-bit integer.\n\nNote that the product of an array with a single element is the value of that element.\n\n&nbsp;\n​​​​​​​Example 1:\n\nInput: nums = [2,3,-2,4]\nOutput: 6\nExplanation: [2,3] has the largest product 6.\n\nExample 2:\n\nInput: nums = [-2,0,-1]\nOutput: 0\nExplanation: The result cannot be 2, because [-2,-1] is not a subarray.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 2 * 104\n\t-10 <= nums[i] <= 10\n\tThe product of any subarray of nums is guaranteed to fit in a 32-bit integer.\n## My Submission\n\n- Runtime: 2 ms (beats 76.7%)\n- Memory: 47.2 MB (beats 42.4%)\n\n## Similar Problems\n\n- [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) — Medium\n- [House Robber](https://leetcode.com/problems/house-robber/) — Medium\n- [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) — Medium\n- [Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/) — Easy\n- [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) — Medium\n",
       "code": "class Solution {\n    public int maxProduct(int[] nums) {\n        int n = nums.length;\n        int maxProd = Integer.MIN_VALUE;\n        int prefix = 1, suffix = 1;\n        for(int i=0; i<n; i++){\n            if(prefix == 0) prefix = 1;\n            if(suffix == 0) suffix = 1;\n            prefix *= nums[i];\n            suffix *= nums[n-i-1];\n            maxProd = Math.max(maxProd, Math.max(prefix, suffix));\n        }\n        return maxProd;\n    }\n}",
       "files": [
         {
@@ -9825,7 +9825,7 @@
         },
         {
           "path": "problems/maximum-product-subarray/README.md",
-          "content": "# [152] Maximum Product Subarray\n**Difficulty:** Medium  |  **Acceptance:** 37.3%  |  **Likes:** 20978 / **Dislikes:** 850\n**Tags:** `Array`, `Dynamic Programming`\n## Problem\nGiven an integer array nums, find a subarray that has the largest product, and return the product.\n\nThe test cases are generated so that the answer will fit in a 32-bit integer.\n\nNote that the product of an array with a single element is the value of that element.\n\n&nbsp;\n​​​​​​​Example 1:\n\nInput: nums = [2,3,-2,4]\nOutput: 6\nExplanation: [2,3] has the largest product 6.\n\nExample 2:\n\nInput: nums = [-2,0,-1]\nOutput: 0\nExplanation: The result cannot be 2, because [-2,-1] is not a subarray.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 2 * 104\n\t-10 <= nums[i] <= 10\n\tThe product of any subarray of nums is guaranteed to fit in a 32-bit integer.\n## My Submission\n\n- Runtime: 1 ms (beats 94.3%)\n- Memory: 47.3 MB (beats 30.4%)\n\n## Similar Problems\n\n- [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) — Medium\n- [House Robber](https://leetcode.com/problems/house-robber/) — Medium\n- [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) — Medium\n- [Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/) — Easy\n- [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) — Medium\n"
+          "content": "# [152] Maximum Product Subarray\n**Difficulty:** Medium  |  **Acceptance:** 37.3%  |  **Likes:** 20978 / **Dislikes:** 850\n**Tags:** `Array`, `Dynamic Programming`\n## Problem\nGiven an integer array nums, find a subarray that has the largest product, and return the product.\n\nThe test cases are generated so that the answer will fit in a 32-bit integer.\n\nNote that the product of an array with a single element is the value of that element.\n\n&nbsp;\n​​​​​​​Example 1:\n\nInput: nums = [2,3,-2,4]\nOutput: 6\nExplanation: [2,3] has the largest product 6.\n\nExample 2:\n\nInput: nums = [-2,0,-1]\nOutput: 0\nExplanation: The result cannot be 2, because [-2,-1] is not a subarray.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 2 * 104\n\t-10 <= nums[i] <= 10\n\tThe product of any subarray of nums is guaranteed to fit in a 32-bit integer.\n## My Submission\n\n- Runtime: 2 ms (beats 76.7%)\n- Memory: 47.2 MB (beats 42.4%)\n\n## Similar Problems\n\n- [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) — Medium\n- [House Robber](https://leetcode.com/problems/house-robber/) — Medium\n- [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) — Medium\n- [Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/) — Easy\n- [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) — Medium\n"
         }
       ],
       "lang": {
@@ -9833,12 +9833,12 @@
         "ext": "java",
         "slug": "java"
       },
-      "runtime": "1 ms",
-      "memory": "47.3 MB",
-      "runtimePct": 94.2844,
-      "memoryPct": 30.381899999999998,
-      "timestamp": 1789968997000,
-      "acRate": 37.315195249337215,
+      "runtime": "2 ms",
+      "memory": "47.2 MB",
+      "runtimePct": 76.67280000000001,
+      "memoryPct": 42.3561,
+      "timestamp": 1778689153000,
+      "acRate": 37.31524048781279,
       "likes": 20978,
       "dislikes": 850,
       "similar": [
@@ -9884,7 +9884,11 @@
       "_requestAIReview": true,
       "platform": "leetcode",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
+        "problems/maximum-product-subarray/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-maximum-product-subarray::1995896290",
