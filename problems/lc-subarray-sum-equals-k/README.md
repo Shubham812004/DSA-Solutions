@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-subarray-sum-equals-k` |
 | Topics | Array, Hash Table, Prefix Sum |
-| Solved | 2026-04-14 |
-| Runtime | 1536 ms (beats 19.039700000000167%) |
-| Memory | 48.3 MB (beats 96.39050000000003%) |
+| Solved | 2026-05-16 |
+| Runtime | 23 ms (beats 92.43540000000002%) |
+| Memory | 48.7 MB (beats 60.02820000000002%) |
 
 ## Problem Statement
 
@@ -73,18 +73,20 @@ Can we use this property to optimize it.
 
 ```Java
 class Solution {
-    public int subarraySum(int[] nums, int k) {
-        int length = 0;
-        for (int i = 0; i < nums.length; i++) {
-            int sum = 0;
-            for (int j = i; j < nums.length; j++) {
-                sum += nums[j];
-                if (sum == k) {
-                    length++;
-                }
+    public int subarraySum(int[] nums, int k){
+        HashMap<Integer, Integer> map = new HashMap<>();
+        map.put(0, 1);
+        int sum = 0;
+        int count = 0;
+        for(int num : nums){
+            sum += num;
+            if(map.containsKey(sum - k)){
+                count += map.get(sum - k);
             }
+            map.put(sum, map.getOrDefault(sum, 0)+1);
         }
-        return length;
-    }
+        return count;
+    }   
+    
 }
 ```
