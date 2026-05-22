@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-remove-duplicates-from-sorted-array` |
 | Topics | Array, Two Pointers |
-| Solved | 2025-10-28 |
-| Runtime | 0 ms (beats 100%) |
-| Memory | 14 MB (beats 15.571499999999983%) |
+| Solved | 2026-05-22 |
+| Runtime | 1 ms (beats 78.3531%) |
+| Memory | 46.9 MB (beats 9.113099999999987%) |
 
 ## Problem Statement
 
@@ -85,17 +85,17 @@ Essentially, once an element is encountered, you simply need to **bypass** its d
 
 ## Solutions
 
-```Python
-class Solution(object):
-    def removeDuplicates(self, nums):
-        if not nums:
-            return 0
-
-        i = 0
-        for j in range(1,len(nums)):
-            if nums[j] != nums[i]:
-                i += 1
-                nums[i] = nums[j]
-        return i+1 
-
+```Java
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int k = 1;
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != nums[i - 1]) {
+                nums[k] = nums[i];
+                k++;
+            }
+        }
+        return k;
+    }
+}
 ```
