@@ -8,7 +8,7 @@
 | Topics | Dynamic Programming, Array |
 | Solved | 2026-05-22 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 42.9 MB (beats 19.6565%) |
+| Memory | 42.6 MB (beats 74.4354%) |
 
 ## Problem Statement
 
@@ -45,7 +45,7 @@ Total amount you can rob = 2 + 9 + 1 = 12.
 ```Java
 class Solution {
     public int rob(int[] nums) {
-        if(nums.length <= 1){
+        if(nums.length == 1){
             return nums[0];
         }
         if(nums.length == 2){
