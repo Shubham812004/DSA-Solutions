@@ -8,7 +8,7 @@
 | Topics | Dynamic Programming, Array |
 | Solved | 2026-05-22 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 42.6 MB (beats 74.4354%) |
+| Memory | 42.9 MB (beats 37.911%) |
 
 ## Problem Statement
 
@@ -47,9 +47,6 @@ class Solution {
     public int rob(int[] nums) {
         if(nums.length == 1){
             return nums[0];
-        }
-        if(nums.length == 2){
-            return Math.max(nums[0], nums[1]);
         }
         int first = nums[0];
         int second = Math.max(first, nums[1]);
