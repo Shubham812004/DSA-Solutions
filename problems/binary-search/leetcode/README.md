@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-binary-search` |
 | Topics | Array, Binary Search |
-| Solved | 2026-05-08 |
+| Solved | 2026-05-23 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 48.4 MB (beats 49.25989999999993%) |
+| Memory | 48.1 MB (beats 83.75699999999993%) |
 
 ## Problem Statement
 
@@ -50,13 +50,15 @@ class Solution {
         int low = 0;
         int high = nums.length - 1;
         while(low <= high){
-            int mid = (low + high)/2;
+            int mid = (low + high) / 2;
             if(nums[mid] == target){
                 return mid;
-            }else if(target < nums[mid]){
-                high = mid - 1;
-            }else{
+            }
+            else if(nums[mid] < target){
                 low = mid + 1;
+            }
+            else{
+                high = mid - 1;
             }
         }
         return -1;
