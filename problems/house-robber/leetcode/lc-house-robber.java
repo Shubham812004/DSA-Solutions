@@ -7,7 +7,7 @@ class Solution {
         int second = Math.max(first, nums[1]);
         for(int i=2; i<nums.length; i++){
             int third = nums[i] + first;
-            third = Math.max(second, third);
+            third = Math.max(third, second);
             first = second;
             second = third;
         }
