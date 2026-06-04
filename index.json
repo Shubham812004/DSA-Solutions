@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-11-13T17:04:42.029Z",
+  "updatedAt": "2026-11-14T06:50:31.354Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 258,
+    "total": 259,
     "easy": 114,
-    "medium": 130,
+    "medium": 131,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 57,
-      "leetcode": 201
+      "leetcode": 202
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 142,
+      "Java": 143,
       "Python": 30,
       "MySQL": 35
     },
@@ -32,7 +32,7 @@
       "Hash Table": 6,
       "Linked List": 11,
       "Database": 35,
-      "Dynamic Programming": 6
+      "Dynamic Programming": 7
     }
   },
   "meta": {
@@ -6264,6 +6264,144 @@
       ]
     },
     {
+      "id": "lc-house-robber",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "House Robber",
+      "titleSlug": "house-robber",
+      "difficulty": "Medium",
+      "topic": "Dynamic Programming",
+      "tags": [
+        "Dynamic Programming",
+        "Array"
+      ],
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 198,
+            "platform": "leetcode",
+            "slug": "house-robber"
+          }
+        ],
+        "canonicalId": "house-robber",
+        "canonicalTitle": "House Robber",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "dp",
+        "tags": [
+          "dp"
+        ],
+        "topic": "dynamic-programming",
+        "voteCount": 98
+      },
+      "readmeContent": "# [198] House Robber\n**Difficulty:** Medium  |  **Acceptance:** 53.7%  |  **Likes:** 24061 / **Dislikes:** 538\n**Tags:** `Array`, `Dynamic Programming`\n## Problem\nYou are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night.\n\nGiven an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,2,3,1]\nOutput: 4\nExplanation: Rob house 1 (money = 1) and then rob house 3 (money = 3).\nTotal amount you can rob = 1 + 3 = 4.\n\nExample 2:\n\nInput: nums = [2,7,9,3,1]\nOutput: 12\nExplanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (money = 1).\nTotal amount you can rob = 2 + 9 + 1 = 12.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 100\n\t0 <= nums[i] <= 400\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 43 MB (beats 11.9%)\n\n## Similar Problems\n\n- [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) — Medium\n- [House Robber II](https://leetcode.com/problems/house-robber-ii/) — Medium\n- [House Robber III](https://leetcode.com/problems/house-robber-iii/) — Medium\n- [Non-negative Integers without Consecutive Ones](https://leetcode.com/problems/non-negative-integers-without-consecutive-ones/) — Hard\n- [Delete and Earn](https://leetcode.com/problems/delete-and-earn/) — Medium\n",
+      "code": "class Solution {\n    public int rob(int[] nums) {\n        if(nums.length == 1){\n            return nums[0];\n        }\n        int first = nums[0];\n        int second = Math.max(first, nums[1]);\n        for(int i=2; i<nums.length; i++){\n            int third = nums[i] + first;\n            third = Math.max(third, second);\n            first = second;\n            second = third;\n        }\n        return second;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/house-robber/leetcode/lc-house-robber.java",
+          "content": "class Solution {\n    public int rob(int[] nums) {\n        if(nums.length == 1){\n            return nums[0];\n        }\n        int first = nums[0];\n        int second = Math.max(first, nums[1]);\n        for(int i=2; i<nums.length; i++){\n            int third = nums[i] + first;\n            third = Math.max(third, second);\n            first = second;\n            second = third;\n        }\n        return second;\n    }\n}"
+        },
+        {
+          "path": "problems/house-robber/README.md",
+          "content": "# [198] House Robber\n**Difficulty:** Medium  |  **Acceptance:** 53.7%  |  **Likes:** 24061 / **Dislikes:** 538\n**Tags:** `Array`, `Dynamic Programming`\n## Problem\nYou are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night.\n\nGiven an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,2,3,1]\nOutput: 4\nExplanation: Rob house 1 (money = 1) and then rob house 3 (money = 3).\nTotal amount you can rob = 1 + 3 = 4.\n\nExample 2:\n\nInput: nums = [2,7,9,3,1]\nOutput: 12\nExplanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (money = 1).\nTotal amount you can rob = 2 + 9 + 1 = 12.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 100\n\t0 <= nums[i] <= 400\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 43 MB (beats 11.9%)\n\n## Similar Problems\n\n- [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) — Medium\n- [House Robber II](https://leetcode.com/problems/house-robber-ii/) — Medium\n- [House Robber III](https://leetcode.com/problems/house-robber-iii/) — Medium\n- [Non-negative Integers without Consecutive Ones](https://leetcode.com/problems/non-negative-integers-without-consecutive-ones/) — Hard\n- [Delete and Earn](https://leetcode.com/problems/delete-and-earn/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "0 ms",
+      "memory": "43 MB",
+      "runtimePct": 100,
+      "memoryPct": 11.921799999999994,
+      "timestamp": 1780590969000,
+      "acRate": 53.740534082732594,
+      "likes": 24061,
+      "dislikes": 538,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-product-subarray",
+          "title": "Maximum Product Subarray",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "house-robber-ii",
+          "title": "House Robber II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "house-robber-iii",
+          "title": "House Robber III",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "non-negative-integers-without-consecutive-ones",
+          "title": "Non-negative Integers without Consecutive Ones",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "delete-and-earn",
+          "title": "Delete and Earn",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "solving-questions-with-brainpower",
+          "title": "Solving Questions With Brainpower",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "count-number-of-ways-to-place-houses",
+          "title": "Count Number of Ways to Place Houses",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "house-robber-iv",
+          "title": "House Robber IV",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "mice-and-cheese",
+          "title": "Mice and Cheese",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "largest-element-in-an-array-after-merge-operations",
+          "title": "Largest Element in an Array after Merge Operations",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "house-robber-v",
+          "title": "House Robber V",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and <b>it will automatically contact the police if two adjacent houses were broken into on the same night</b>.</p>\n\n<p>Given an integer array <code>nums</code> representing the amount of money of each house, return <em>the maximum amount of money you can rob tonight <b>without alerting the police</b></em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,1]\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> Rob house 1 (money = 1) and then rob house 3 (money = 3).\nTotal amount you can rob = 1 + 3 = 4.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,7,9,3,1]\n<strong>Output:</strong> 12\n<strong>Explanation:</strong> Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (money = 1).\nTotal amount you can rob = 2 + 9 + 1 = 12.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 100</code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= 400</code></li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/house-robber/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": true,
+      "duplicateOf": "lc-house-robber::2013382897",
+      "_requestAIReview": true,
+      "platform": "leetcode",
+      "methods": [],
+      "manuallyEdited": false
+    },
+    {
       "id": "lc-house-robber-ii::2009648208",
       "submissionId": 2009648208,
       "platform": "leetcode",
@@ -7273,7 +7411,7 @@
         "topic": "binary-search",
         "voteCount": 94
       },
-      "readmeContent": "# [875] Koko Eating Bananas\n**Difficulty:** Medium  |  **Acceptance:** 50.8%  |  **Likes:** 14509 / **Dislikes:** 955\n**Tags:** `Array`, `Binary Search`\n## Problem\nKoko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas. The guards have gone and will come back in h hours.\n\nKoko can decide her bananas-per-hour eating speed of k. Each hour, she chooses some pile of bananas and eats k bananas from that pile. If the pile has less than k bananas, she eats all of them instead and will not eat any more bananas during this hour.\n\nKoko likes to eat slowly but still wants to finish eating all the bananas before the guards return.\n\nReturn the minimum integer k such that she can eat all the bananas within h hours.\n\n&nbsp;\nExample 1:\n\nInput: piles = [3,6,7,11], h = 8\nOutput: 4\n\nExample 2:\n\nInput: piles = [30,11,23,4,20], h = 5\nOutput: 30\n\nExample 3:\n\nInput: piles = [30,11,23,4,20], h = 6\nOutput: 23\n\n&nbsp;\nConstraints:\n\n\t1 <= piles.length <= 104\n\tpiles.length <= h <= 109\n\t1 <= piles[i] <= 109\n## My Submission\n\n- Runtime: 9 ms (beats 60.6%)\n- Memory: 47.2 MB (beats 93.5%)\n\n## Similar Problems\n\n- [Maximum Candies Allocated to K Children](https://leetcode.com/problems/maximum-candies-allocated-to-k-children/) — Medium\n- [Minimized Maximum of Products Distributed to Any Store](https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/) — Medium\n- [Frog Jump II](https://leetcode.com/problems/frog-jump-ii/) — Medium\n- [Minimum Time to Repair Cars](https://leetcode.com/problems/minimum-time-to-repair-cars/) — Medium\n",
+      "readmeContent": "# [875] Koko Eating Bananas\n**Difficulty:** Medium  |  **Acceptance:** 50.8%  |  **Likes:** 14523 / **Dislikes:** 956\n**Tags:** `Array`, `Binary Search`\n## Problem\nKoko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas. The guards have gone and will come back in h hours.\n\nKoko can decide her bananas-per-hour eating speed of k. Each hour, she chooses some pile of bananas and eats k bananas from that pile. If the pile has less than k bananas, she eats all of them instead and will not eat any more bananas during this hour.\n\nKoko likes to eat slowly but still wants to finish eating all the bananas before the guards return.\n\nReturn the minimum integer k such that she can eat all the bananas within h hours.\n\n&nbsp;\nExample 1:\n\nInput: piles = [3,6,7,11], h = 8\n\nOutput: 4\n\nExplanation:\n\nAt a speed of 4 bananas per hour, Koko takes 1, 2, 2, and 3 hours to finish the respective piles, totaling 8 hours.\n\nExample 2:\n\nInput: piles = [30,11,23,4,20], h = 5\n\nOutput: 30\n\nExplanation:\n\nKoko must finish each pile in exactly 1 hour, so her minimum eating speed must be 30 bananas per hour.\n\nExample 3:\n\nInput: piles = [30,11,23,4,20], h = 6\n\nOutput: 23\n\nExplanation:\n\nAt a speed of 23 bananas per hour, Koko takes 2 hours for the first pile and 1 hour for each remaining pile, totaling 6 hours.\n\n&nbsp;\nConstraints:\n\n\t1 <= piles.length <= 104\n\tpiles.length <= h <= 109\n\t1 <= piles[i] <= 109\n## My Submission\n\n- Runtime: 9 ms (beats 60.9%)\n- Memory: 47.2 MB (beats 92.7%)\n\n## Similar Problems\n\n- [Maximum Candies Allocated to K Children](https://leetcode.com/problems/maximum-candies-allocated-to-k-children/) — Medium\n- [Minimized Maximum of Products Distributed to Any Store](https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/) — Medium\n- [Frog Jump II](https://leetcode.com/problems/frog-jump-ii/) — Medium\n- [Minimum Time to Repair Cars](https://leetcode.com/problems/minimum-time-to-repair-cars/) — Medium\n",
       "code": "class Solution {\n    public int minEatingSpeed(int[] piles, int h) {\n        int l = 1;\n        int r = Arrays.stream(piles).max().getAsInt();\n        int ans = -1;\n        while(l <= r){\n            int m = l + (r - l)/2;\n            if(helper(piles, h, m)){\n                ans = m;\n                r = m-1;\n            }\n            else{\n                l = m + 1;\n            }\n        }\n        return ans;\n    }\n    boolean helper(int[] piles, int h, int m){\n        long total = 0;\n        for(int pile : piles){\n            total += (pile + m -1)/m;\n        }\n        return total <= h;\n    }\n}",
       "files": [
         {
@@ -7282,7 +7420,7 @@
         },
         {
           "path": "problems/koko-eating-bananas/README.md",
-          "content": "# [875] Koko Eating Bananas\n**Difficulty:** Medium  |  **Acceptance:** 50.8%  |  **Likes:** 14509 / **Dislikes:** 955\n**Tags:** `Array`, `Binary Search`\n## Problem\nKoko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas. The guards have gone and will come back in h hours.\n\nKoko can decide her bananas-per-hour eating speed of k. Each hour, she chooses some pile of bananas and eats k bananas from that pile. If the pile has less than k bananas, she eats all of them instead and will not eat any more bananas during this hour.\n\nKoko likes to eat slowly but still wants to finish eating all the bananas before the guards return.\n\nReturn the minimum integer k such that she can eat all the bananas within h hours.\n\n&nbsp;\nExample 1:\n\nInput: piles = [3,6,7,11], h = 8\nOutput: 4\n\nExample 2:\n\nInput: piles = [30,11,23,4,20], h = 5\nOutput: 30\n\nExample 3:\n\nInput: piles = [30,11,23,4,20], h = 6\nOutput: 23\n\n&nbsp;\nConstraints:\n\n\t1 <= piles.length <= 104\n\tpiles.length <= h <= 109\n\t1 <= piles[i] <= 109\n## My Submission\n\n- Runtime: 9 ms (beats 60.6%)\n- Memory: 47.2 MB (beats 93.5%)\n\n## Similar Problems\n\n- [Maximum Candies Allocated to K Children](https://leetcode.com/problems/maximum-candies-allocated-to-k-children/) — Medium\n- [Minimized Maximum of Products Distributed to Any Store](https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/) — Medium\n- [Frog Jump II](https://leetcode.com/problems/frog-jump-ii/) — Medium\n- [Minimum Time to Repair Cars](https://leetcode.com/problems/minimum-time-to-repair-cars/) — Medium\n"
+          "content": "# [875] Koko Eating Bananas\n**Difficulty:** Medium  |  **Acceptance:** 50.8%  |  **Likes:** 14523 / **Dislikes:** 956\n**Tags:** `Array`, `Binary Search`\n## Problem\nKoko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas. The guards have gone and will come back in h hours.\n\nKoko can decide her bananas-per-hour eating speed of k. Each hour, she chooses some pile of bananas and eats k bananas from that pile. If the pile has less than k bananas, she eats all of them instead and will not eat any more bananas during this hour.\n\nKoko likes to eat slowly but still wants to finish eating all the bananas before the guards return.\n\nReturn the minimum integer k such that she can eat all the bananas within h hours.\n\n&nbsp;\nExample 1:\n\nInput: piles = [3,6,7,11], h = 8\n\nOutput: 4\n\nExplanation:\n\nAt a speed of 4 bananas per hour, Koko takes 1, 2, 2, and 3 hours to finish the respective piles, totaling 8 hours.\n\nExample 2:\n\nInput: piles = [30,11,23,4,20], h = 5\n\nOutput: 30\n\nExplanation:\n\nKoko must finish each pile in exactly 1 hour, so her minimum eating speed must be 30 bananas per hour.\n\nExample 3:\n\nInput: piles = [30,11,23,4,20], h = 6\n\nOutput: 23\n\nExplanation:\n\nAt a speed of 23 bananas per hour, Koko takes 2 hours for the first pile and 1 hour for each remaining pile, totaling 6 hours.\n\n&nbsp;\nConstraints:\n\n\t1 <= piles.length <= 104\n\tpiles.length <= h <= 109\n\t1 <= piles[i] <= 109\n## My Submission\n\n- Runtime: 9 ms (beats 60.9%)\n- Memory: 47.2 MB (beats 92.7%)\n\n## Similar Problems\n\n- [Maximum Candies Allocated to K Children](https://leetcode.com/problems/maximum-candies-allocated-to-k-children/) — Medium\n- [Minimized Maximum of Products Distributed to Any Store](https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/) — Medium\n- [Frog Jump II](https://leetcode.com/problems/frog-jump-ii/) — Medium\n- [Minimum Time to Repair Cars](https://leetcode.com/problems/minimum-time-to-repair-cars/) — Medium\n"
         }
       ],
       "lang": {
@@ -7292,12 +7430,12 @@
       },
       "runtime": "9 ms",
       "memory": "47.2 MB",
-      "runtimePct": 60.58909999999999,
-      "memoryPct": 93.54099999999998,
+      "runtimePct": 60.90720000000002,
+      "memoryPct": 92.71939999999996,
       "timestamp": 1794291009000,
-      "acRate": 50.79965664098244,
-      "likes": 14509,
-      "dislikes": 955,
+      "acRate": 50.81113731039535,
+      "likes": 14523,
+      "dislikes": 956,
       "similar": [
         {
           "difficulty": "Medium",
@@ -7324,7 +7462,7 @@
           "isPaidOnly": false
         }
       ],
-      "problemStatement": "<p>Koko loves to eat bananas. There are <code>n</code> piles of bananas, the <code>i<sup>th</sup></code> pile has <code>piles[i]</code> bananas. The guards have gone and will come back in <code>h</code> hours.</p>\n\n<p>Koko can decide her bananas-per-hour eating speed of <code>k</code>. Each hour, she chooses some pile of bananas and eats <code>k</code> bananas from that pile. If the pile has less than <code>k</code> bananas, she eats all of them instead and will not eat any more bananas during this hour.</p>\n\n<p>Koko likes to eat slowly but still wants to finish eating all the bananas before the guards return.</p>\n\n<p>Return <em>the minimum integer</em> <code>k</code> <em>such that she can eat all the bananas within</em> <code>h</code> <em>hours</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> piles = [3,6,7,11], h = 8\n<strong>Output:</strong> 4\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> piles = [30,11,23,4,20], h = 5\n<strong>Output:</strong> 30\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> piles = [30,11,23,4,20], h = 6\n<strong>Output:</strong> 23\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= piles.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>piles.length &lt;= h &lt;= 10<sup>9</sup></code></li>\n\t<li><code>1 &lt;= piles[i] &lt;= 10<sup>9</sup></code></li>\n</ul>\n",
+      "problemStatement": "<p>Koko loves to eat bananas. There are <code>n</code> piles of bananas, the <code>i<sup>th</sup></code> pile has <code>piles[i]</code> bananas. The guards have gone and will come back in <code>h</code> hours.</p>\n\n<p>Koko can decide her bananas-per-hour eating speed of <code>k</code>. Each hour, she chooses some pile of bananas and eats <code>k</code> bananas from that pile. If the pile has less than <code>k</code> bananas, she eats all of them instead and will not eat any more bananas during this hour.</p>\n\n<p>Koko likes to eat slowly but still wants to finish eating all the bananas before the guards return.</p>\n\n<p>Return the <strong>minimum</strong> integer <code>k</code> such that she can eat all the bananas <strong>within</strong> <code>h</code> hours.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">piles = [3,6,7,11], h = 8</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">4</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>At a speed of 4 bananas per hour, Koko takes 1, 2, 2, and 3 hours to finish the respective piles, totaling 8 hours.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">piles = [30,11,23,4,20], h = 5</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">30</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>Koko must finish each pile in exactly 1 hour, so her minimum eating speed must be 30 bananas per hour.</p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">piles = [30,11,23,4,20], h = 6</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">23</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>At a speed of 23 bananas per hour, Koko takes 2 hours for the first pile and 1 hour for each remaining pile, totaling 6 hours.</p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= piles.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>piles.length &lt;= h &lt;= 10<sup>9</sup></code></li>\n\t<li><code>1 &lt;= piles[i] &lt;= 10<sup>9</sup></code></li>\n</ul>\n",
       "elapsedSeconds": 0,
       "hasSimilar": true,
       "submissionsUrl": "https://leetcode.com/problems/koko-eating-bananas/submissions/",
@@ -7704,7 +7842,7 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 39.0%  |  **Likes:** 33383 / **Dislikes:** 2052\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.5%)\n- Memory: 43.4 MB (beats 66.3%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
+      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 39.0%  |  **Likes:** 33384 / **Dislikes:** 2052\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.6%)\n- Memory: 43.4 MB (beats 64.9%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
       "code": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = palindrome(s, i, i);\n            int even = palindrome(s, i, i+1);\n            int max = Math.max(odd, even);\n            if(max > (end - start)){\n                start = i - (max-1)/2;\n                end = i + max/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int palindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        }\n        return r-l-1;\n    }\n}",
       "files": [
         {
@@ -7713,7 +7851,7 @@
         },
         {
           "path": "problems/longest-palindromic-substring/README.md",
-          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 39.0%  |  **Likes:** 33383 / **Dislikes:** 2052\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.5%)\n- Memory: 43.4 MB (beats 66.3%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
+          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 39.0%  |  **Likes:** 33384 / **Dislikes:** 2052\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.6%)\n- Memory: 43.4 MB (beats 64.9%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
         }
       ],
       "lang": {
@@ -7723,11 +7861,11 @@
       },
       "runtime": "14 ms",
       "memory": "43.4 MB",
-      "runtimePct": 93.51899999999999,
-      "memoryPct": 66.33149999999998,
+      "runtimePct": 93.5824,
+      "memoryPct": 64.90389999999998,
       "timestamp": 1790779293000,
-      "acRate": 38.959087815236394,
-      "likes": 33383,
+      "acRate": 38.96364680314582,
+      "likes": 33384,
       "dislikes": 2052,
       "similar": [
         {

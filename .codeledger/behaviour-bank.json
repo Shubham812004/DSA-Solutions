@@ -229,6 +229,23 @@
       "Sorting"
     ]
   },
+  "leetcode::house-robber": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "house-robber",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794639031253
+      }
+    ],
+    "tags": [
+      "Dynamic Programming",
+      "Array"
+    ]
+  },
   "leetcode::koko-eating-bananas": {
     "difficulty": "Medium",
     "lang": "Java",
@@ -249,6 +266,11 @@
         "elapsedSeconds": 0,
         "lang": "Java",
         "ts": 1794291013664
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794589497643
       }
     ],
     "tags": [
@@ -262,11 +284,6 @@
     "platform": "leetcode",
     "slug": "longest-palindromic-substring",
     "solves": [
-      {
-        "elapsedSeconds": 0,
-        "lang": "Java",
-        "ts": 1793595159245
-      },
       {
         "elapsedSeconds": 0,
         "lang": "Java",
@@ -311,6 +328,11 @@
         "elapsedSeconds": 0,
         "lang": "Java",
         "ts": 1794505331126
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794633739723
       }
     ],
     "tags": [

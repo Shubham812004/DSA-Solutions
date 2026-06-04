@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-house-robber` |
 | Topics | Dynamic Programming, Array |
-| Solved | 2026-05-26 |
+| Solved | 2026-06-04 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 42.8 MB (beats 56.4848%) |
+| Memory | 43 MB (beats 11.921799999999994%) |
 
 ## Problem Statement
 
