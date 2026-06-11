@@ -1,0 +1,15 @@
+{
+  "autoReview": false,
+  "claude_enabled": false,
+  "deepseek_enabled": false,
+  "gamificationEnabled": true,
+  "gemini_enabled": false,
+  "gitProvider": "github",
+  "github_owner": "",
+  "github_pages_url": "https://shubham812004.github.io/DSA-Solutions/",
+  "github_repo": "DSA-Solutions",
+  "manual_enabled": false,
+  "ollama_enabled": false,
+  "openai_enabled": false,
+  "openrouter_enabled": false
+}
