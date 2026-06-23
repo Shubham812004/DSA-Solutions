@@ -1,33 +1,33 @@
 {
-  "updatedAt": "2026-10-14T04:26:19.441Z",
+  "updatedAt": "2026-10-14T05:11:32.467Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 231,
+    "total": 232,
     "easy": 111,
     "medium": 108,
-    "hard": 2,
+    "hard": 3,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 52,
-      "leetcode": 179
+      "leetcode": 180
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 116,
+      "Java": 117,
       "Python": 29,
       "MySQL": 35
     },
     "byTopic": {
       "Matrix": 1,
       "Binary Search": 4,
-      "String": 21,
-      "Array": 106,
+      "String": 22,
+      "Array": 109,
       "Greedy": 1,
-      "Untagged": 25,
+      "Untagged": 21,
       "Prefix Sum": 2,
       "Math": 6,
       "Searching": 1,
-      "Two Pointers": 4,
+      "Two Pointers": 5,
       "Linked List": 11,
       "Database": 35,
       "Dynamic Programming": 6,
@@ -1041,7 +1041,10 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "String",
+        "Two Pointers"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -1049,7 +1052,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given a string <strong>s</strong>, find if it is a palindrome.&nbsp;</span><span>A string is considered a palindrome if it reads the same forwards and backwards.</span></p>\n<p><span><strong>Examples :</strong></span></p>\n<pre><span><strong>Input: </strong>s = \"abba\"\n<strong>Output: </strong>true\n<strong>Explanation: </strong>\"abba\"<spanSegoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\"> reads the same forwards </span><spanSegoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">and</span><spanSegoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\"> backwards, so it </span><spanSegoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">is</span><spanSegoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\"> a palindrome.</span></span></pre>\n<pre><span><strong>Input:</strong> s = \"abc\" \n<strong>Output:</strong> false\n<strong>Explanation: </strong>\"abc\"<spanSegoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\"> does </span><spanSegoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">not</span><spanSegoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\"> read the same forwards </span><spanSegoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">and</span><spanSegoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\"> backwards, so it </span><spanSegoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">is</span><spanSegoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\"> </span><spanSegoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">not</span><spanSegoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\"> a palindrome.</span></span></pre>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -1069,7 +1072,11 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array",
+        "Searching",
+        "Binary Search"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -1077,7 +1084,7 @@
       "importedAt": 1791696375464,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an array <strong>arr[]&nbsp;</strong>where no two adjacent elements are same, find the index of a peak element. An element is considered to be a peak if it is greater than its adjacent elements (if they exist). </span></p><p><span>If there are multiple peak elements, Return index of any one of them. </span><span>The output will be&nbsp;</span><span>\"true\"</span><span>&nbsp;if the index returned by your function is correct; otherwise, it will be \"</span><span>false\"</span><span>.</span></p><p><span><strong>Note:</strong> Consider the element before the first element and the element after the last element to be negative infinity.</span></p><p><span><strong>Examples :<br /></strong></span></p><pre><span><strong>Input: </strong>arr = [1, 2, 4, 5, 7, 8, 3]\n<strong>Output:</strong> true\n<strong>Explanation: </strong>arr[5] = 8 is a peak element because arr[4] &lt; arr[5] &gt; arr[6].</span></pre><pre><span><strong>Input: </strong>arr = [10, 20, 15, 2, 23, 90, 80]\n<strong>Output: </strong>true<strong>\nExplanation: </strong>Element 20 at index 1 is a peak since 10 &lt; 20 &gt; 15. Index 5 (value 90) is also a peak, but returning any one peak index is valid.</span></pre><p><span><strong>Constraints:</strong><br /><span>1</span>&nbsp;&le; arr.size() &le; 10<sup>6</sup><br />-2<sup>31</sup> &le; arr[i] &le; 2<sup>31</sup> - 1</span></p>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -1097,7 +1104,10 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Two Pointers",
+        "Array"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -1105,7 +1115,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>You are given a sorted array <strong>arr[] </strong>containing positive integers. Your task is to remove all duplicate elements from this array such that each element appears only once. Return an array containing these distinct elements in the same order as they appeared.<br /><br /></span><strong>Examples :</strong></p><pre><span><strong>Input: </strong>arr[] = [2, 2, 2, 2, 2]\n<strong>Output:</strong> [2]\n<strong>Explanation:</strong> After removing all the duplicates only one instance of 2 will remain i.e. [2] so modified array will contains 2 at first position and you should return array containing [2] after modifying the array.</span>\n</pre><pre><span><strong>Input: </strong>arr[] = [1, 2, 4]\n<strong>Output:</strong> [1, 2, 4]<br /></span><span><strong>Explanation</strong></span><span><strong>:  </strong>As the array does not contain any duplicates so you should return [1, 2, 4].</span></pre>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -1125,7 +1135,9 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -1133,7 +1145,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an array <strong>arr[] </strong>of integers which may or may not contain duplicate elements. Your task is to remove duplicate elements. Your result should have elements according their first appearance in the input array.</span></p>\n<p><span><strong>Examples:</strong></span></p>\n<pre><span><strong>Input: </strong>arr[] = [1, 2, 3, 1, 4, 2]\n<strong>Output: </strong>[1, 2, 3, 4]<br /><strong>Explanation: </strong>2 and 1 have more than 1 occurence.</span></pre>\n<pre><span><strong>Input: </strong>arr[] = [1, 2, 3, 4]\n<strong>Output: </strong>[1, 2, 3, 4]<br /><strong>Explanation: </strong>There is no duplicate element.</span></pre>\n<p><span><strong>Constraints:</strong><br />1&lt;=arr.size()&lt;=10<sup>6</sup><br />1&lt;=arr[i]&lt;=10<sup>5</sup></span></p>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -6919,7 +6931,11 @@
       "_requestAIReview": true,
       "platform": "leetcode",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/longest-palindromic-substring/leetcode/lc-longest-palindromic-substring.java",
+        "problems/longest-palindromic-substring/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-longest-palindromic-substring::1809241760",
@@ -15003,6 +15019,104 @@
         "problems/spiral-matrix/leetcode/lc-spiral-matrix.java",
         "problems/spiral-matrix/leetcode/README.md"
       ]
+    },
+    {
+      "id": "lc-split-array-largest-sum",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Split Array Largest Sum",
+      "titleSlug": "split-array-largest-sum",
+      "difficulty": "Hard",
+      "topic": "Dynamic Programming",
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Dynamic Programming",
+        "Greedy",
+        "Prefix Sum"
+      ],
+      "canonical": null,
+      "readmeContent": "# [410] Split Array Largest Sum\n**Difficulty:** Hard  |  **Acceptance:** 61.6%  |  **Likes:** 11763 / **Dislikes:** 278\n**Tags:** `Array`, `Binary Search`, `Dynamic Programming`, `Greedy`, `Prefix Sum`\n## Problem\nGiven an integer array nums and an integer k, split nums into k non-empty subarrays such that the largest sum of any subarray is minimized.\n\nReturn the minimized largest sum of the split.\n\nA subarray is a contiguous part of the array.\n\n&nbsp;\nExample 1:\n\nInput: nums = [7,2,5,10,8], k = 2\nOutput: 18\nExplanation: There are four ways to split nums into two subarrays.\nThe best way is to split it into [7,2,5] and [10,8], where the largest sum among the two subarrays is only 18.\n\nExample 2:\n\nInput: nums = [1,2,3,4,5], k = 2\nOutput: 9\nExplanation: There are four ways to split nums into two subarrays.\nThe best way is to split it into [1,2,3] and [4,5], where the largest sum among the two subarrays is only 9.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 1000\n\t0 <= nums[i] <= 106\n\t1 <= k <= min(50, nums.length)\n## My Submission\n\n- Runtime: 2 ms (beats 35.0%)\n- Memory: 42.9 MB (beats 83.3%)\n\n## Similar Problems\n\n- [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) — Medium\n- [Fair Distribution of Cookies](https://leetcode.com/problems/fair-distribution-of-cookies/) — Medium\n- [Maximum Total Beauty of the Gardens](https://leetcode.com/problems/maximum-total-beauty-of-the-gardens/) — Hard\n- [Number of Ways to Split Array](https://leetcode.com/problems/number-of-ways-to-split-array/) — Medium\n- [Minimum Cost to Split an Array](https://leetcode.com/problems/minimum-cost-to-split-an-array/) — Hard\n",
+      "code": "class Solution {\n    public int splitArray(int[] nums, int k) {\n        int low = Arrays.stream(nums).min().getAsInt();\n        int high = 0;\n        for(int num : nums){\n            high += num;\n        }\n        while(low <= high){\n            int mid = low + (high - low) / 2;\n            if(helper(nums, k, mid)){\n                high = mid - 1;\n            }\n            else{\n                low = mid + 1;\n            }\n        }\n        return low;\n    }\n\n    boolean helper(int[] nums, int k, int limit){\n        int count = 1;\n        int sum = 0;\n        for(int i=0; i<nums.length; i++){\n            if(nums[i] > limit) return false;\n            if(sum + nums[i] > limit){\n                count += 1;\n                sum = nums[i];\n            }\n            else{\n                sum += nums[i];\n            }\n        }\n        if(count > k){\n            return false;\n        }\n        else{\n            return true;\n        }\n    }\n}",
+      "files": [
+        {
+          "path": "problems/lc-split-array-largest-sum/lc-split-array-largest-sum.java",
+          "content": "class Solution {\n    public int splitArray(int[] nums, int k) {\n        int low = Arrays.stream(nums).min().getAsInt();\n        int high = 0;\n        for(int num : nums){\n            high += num;\n        }\n        while(low <= high){\n            int mid = low + (high - low) / 2;\n            if(helper(nums, k, mid)){\n                high = mid - 1;\n            }\n            else{\n                low = mid + 1;\n            }\n        }\n        return low;\n    }\n\n    boolean helper(int[] nums, int k, int limit){\n        int count = 1;\n        int sum = 0;\n        for(int i=0; i<nums.length; i++){\n            if(nums[i] > limit) return false;\n            if(sum + nums[i] > limit){\n                count += 1;\n                sum = nums[i];\n            }\n            else{\n                sum += nums[i];\n            }\n        }\n        if(count > k){\n            return false;\n        }\n        else{\n            return true;\n        }\n    }\n}"
+        },
+        {
+          "path": "problems/lc-split-array-largest-sum/README.md",
+          "content": "# [410] Split Array Largest Sum\n**Difficulty:** Hard  |  **Acceptance:** 61.6%  |  **Likes:** 11763 / **Dislikes:** 278\n**Tags:** `Array`, `Binary Search`, `Dynamic Programming`, `Greedy`, `Prefix Sum`\n## Problem\nGiven an integer array nums and an integer k, split nums into k non-empty subarrays such that the largest sum of any subarray is minimized.\n\nReturn the minimized largest sum of the split.\n\nA subarray is a contiguous part of the array.\n\n&nbsp;\nExample 1:\n\nInput: nums = [7,2,5,10,8], k = 2\nOutput: 18\nExplanation: There are four ways to split nums into two subarrays.\nThe best way is to split it into [7,2,5] and [10,8], where the largest sum among the two subarrays is only 18.\n\nExample 2:\n\nInput: nums = [1,2,3,4,5], k = 2\nOutput: 9\nExplanation: There are four ways to split nums into two subarrays.\nThe best way is to split it into [1,2,3] and [4,5], where the largest sum among the two subarrays is only 9.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 1000\n\t0 <= nums[i] <= 106\n\t1 <= k <= min(50, nums.length)\n## My Submission\n\n- Runtime: 2 ms (beats 35.0%)\n- Memory: 42.9 MB (beats 83.3%)\n\n## Similar Problems\n\n- [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) — Medium\n- [Fair Distribution of Cookies](https://leetcode.com/problems/fair-distribution-of-cookies/) — Medium\n- [Maximum Total Beauty of the Gardens](https://leetcode.com/problems/maximum-total-beauty-of-the-gardens/) — Hard\n- [Number of Ways to Split Array](https://leetcode.com/problems/number-of-ways-to-split-array/) — Medium\n- [Minimum Cost to Split an Array](https://leetcode.com/problems/minimum-cost-to-split-an-array/) — Hard\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "2 ms",
+      "memory": "42.9 MB",
+      "runtimePct": 34.9914,
+      "memoryPct": 83.32109999999999,
+      "timestamp": 1782193982000,
+      "acRate": 61.60911430991249,
+      "likes": 11763,
+      "dislikes": 278,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "capacity-to-ship-packages-within-d-days",
+          "title": "Capacity To Ship Packages Within D Days",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "fair-distribution-of-cookies",
+          "title": "Fair Distribution of Cookies",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "maximum-total-beauty-of-the-gardens",
+          "title": "Maximum Total Beauty of the Gardens",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "number-of-ways-to-split-array",
+          "title": "Number of Ways to Split Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "minimum-cost-to-split-an-array",
+          "title": "Minimum Cost to Split an Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "distribute-elements-into-two-arrays-i",
+          "title": "Distribute Elements Into Two Arrays I",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "distribute-elements-into-two-arrays-ii",
+          "title": "Distribute Elements Into Two Arrays II",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given an integer array <code>nums</code> and an integer <code>k</code>, split <code>nums</code> into <code>k</code> non-empty subarrays such that the largest sum of any subarray is <strong>minimized</strong>.</p>\n\n<p>Return <em>the minimized largest sum of the split</em>.</p>\n\n<p>A <strong>subarray</strong> is a contiguous part of the array.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [7,2,5,10,8], k = 2\n<strong>Output:</strong> 18\n<strong>Explanation:</strong> There are four ways to split nums into two subarrays.\nThe best way is to split it into [7,2,5] and [10,8], where the largest sum among the two subarrays is only 18.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,4,5], k = 2\n<strong>Output:</strong> 9\n<strong>Explanation:</strong> There are four ways to split nums into two subarrays.\nThe best way is to split it into [1,2,3] and [4,5], where the largest sum among the two subarrays is only 9.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 1000</code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= 10<sup>6</sup></code></li>\n\t<li><code>1 &lt;= k &lt;= min(50, nums.length)</code></li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/split-array-largest-sum/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-sqrtx::2158800022",

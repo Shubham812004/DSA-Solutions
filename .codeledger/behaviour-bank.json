@@ -57,5 +57,30 @@
       "Array",
       "Binary Search"
     ]
+  },
+  "leetcode::split-array-largest-sum": {
+    "difficulty": "Hard",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "split-array-largest-sum",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1791951993264
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1791954692163
+      }
+    ],
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Dynamic Programming",
+      "Greedy",
+      "Prefix Sum"
+    ]
   }
 }
