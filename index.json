@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-10-15T05:12:12.064Z",
+  "updatedAt": "2026-10-16T04:48:59.639Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 235,
+    "total": 236,
     "easy": 112,
-    "medium": 109,
+    "medium": 110,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 54,
-      "leetcode": 181
+      "leetcode": 182
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 120,
+      "Java": 121,
       "Python": 29,
       "MySQL": 35
     },
@@ -22,9 +22,9 @@
       "Binary Search": 4,
       "Searching": 2,
       "String": 23,
-      "Array": 112,
+      "Array": 115,
       "Greedy": 1,
-      "Untagged": 19,
+      "Untagged": 17,
       "Prefix Sum": 2,
       "Math": 6,
       "Two Pointers": 5,
@@ -1268,7 +1268,9 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -1276,7 +1278,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an array <strong>arr[]</strong>. Rotate the array to the left (counter-clockwise direction) by <strong>d</strong> steps, where <em>d</em> is a positive integer.&nbsp;Do the mentioned change in the&nbsp;array in place.</span></p><p><span><strong>Note: </strong>Consider the array as circular.</span></p><p><span><strong>Examples :<br /></strong></span></p><pre><span><strong>Input: </strong>arr[] = [1, 2, 3, 4, 5], d = 2\n<strong>Output: </strong>[3, 4, 5, 1, 2]\n<strong>Explanation:</strong> when rotated by 2 elements, it becomes [3, 4, 5, 1, 2].</span></pre><pre><span><strong>Input: </strong>arr[] = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20], d = 3\n<strong>Output: </strong>[8, 10, 12, 14, 16, 18, 20, 2, 4, 6]<strong>\nExplanation: </strong>when rotated by 3 elements, it becomes [8, 10, 12, 14, 16, 18, 20, 2, 4, 6].<br /></span></pre><pre><span><strong>Input: </strong>arr[] = [7, 3, 9, 1], d = 9\n<strong>Output: </strong>[3, 9, 1, 7]<strong>\nExplanation: </strong>when we rotate 9 times, we'll get [3, 9, 1, 7] as resultant array.</span></pre>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -1296,7 +1298,10 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array",
+        "Searching"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -1304,7 +1309,7 @@
       "importedAt": 1791696375464,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an increasing sorted rotated array <strong>arr[] </strong>of distinct integers. The array is right-rotated&nbsp;<strong>k</strong>&nbsp;times. Find the value of&nbsp;<strong>k</strong>.</span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input: </strong>arr[] = [5, 1, 2, 3, 4]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> The given array is [5, 1, 2, 3, 4]. The original sorted array is [1, 2, 3, 4, 5]. We can see that the array was rotated 1 times to the right.<br /></span></pre><pre><span><strong>Input: </strong>arr = [1, 2, 3, 4, 5]\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> The given array is not rotated.</span></pre><pre><span><strong>Input: </strong>arr = [6, 9, 2, 4]\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> The original array is [2, 4, 6, 9] and we get the above array after two rotations.</span></pre>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -6953,7 +6958,7 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.8%  |  **Likes:** 33303 / **Dislikes:** 2043\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.2%)\n- Memory: 43.4 MB (beats 80.5%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
+      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.8%  |  **Likes:** 33305 / **Dislikes:** 2044\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.2%)\n- Memory: 43.4 MB (beats 80.2%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
       "code": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = palindrome(s, i, i);\n            int even = palindrome(s, i, i+1);\n            int max = Math.max(odd, even);\n            if(max > (end - start)){\n                start = i - (max-1)/2;\n                end = i + max/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int palindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        }\n        return r-l-1;\n    }\n}",
       "files": [
         {
@@ -6962,7 +6967,7 @@
         },
         {
           "path": "problems/longest-palindromic-substring/README.md",
-          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.8%  |  **Likes:** 33303 / **Dislikes:** 2043\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.2%)\n- Memory: 43.4 MB (beats 80.5%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
+          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.8%  |  **Likes:** 33305 / **Dislikes:** 2044\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.2%)\n- Memory: 43.4 MB (beats 80.2%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
         }
       ],
       "lang": {
@@ -6972,12 +6977,12 @@
       },
       "runtime": "14 ms",
       "memory": "43.4 MB",
-      "runtimePct": 93.20119999999999,
-      "memoryPct": 80.49239999999999,
+      "runtimePct": 93.21589999999999,
+      "memoryPct": 80.17589999999998,
       "timestamp": 1790779293000,
-      "acRate": 38.83999359631793,
-      "likes": 33303,
-      "dislikes": 2043,
+      "acRate": 38.84827102370022,
+      "likes": 33305,
+      "dislikes": 2044,
       "similar": [
         {
           "difficulty": "Hard",
@@ -11638,16 +11643,16 @@
         "Two Pointers"
       ],
       "canonical": null,
-      "readmeContent": "# [283] Move Zeroes\n**Difficulty:** Easy  |  **Acceptance:** 64.5%  |  **Likes:** 20034 / **Dislikes:** 632\n**Tags:** `Array`, `Two Pointers`\n## Problem\nGiven an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.\n\nNote that you must do this in-place without making a copy of the array.\n\n&nbsp;\nExample 1:\nInput: nums = [0,1,0,3,12]\nOutput: [1,3,12,0,0]\nExample 2:\nInput: nums = [0]\nOutput: [0]\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 104\n\t-231 <= nums[i] <= 231 - 1\n\n&nbsp;\nFollow up: Could you minimize the total number of operations done?\n## My Submission\n\n- Runtime: 2 ms (beats 91.5%)\n- Memory: 47.8 MB (beats 56.8%)\n\n## Similar Problems\n\n- [Remove Element](https://leetcode.com/problems/remove-element/) — Easy\n- [Apply Operations to an Array](https://leetcode.com/problems/apply-operations-to-an-array/) — Easy\n",
-      "code": "class Solution {\n    public void moveZeroes(int[] nums) {\n        int l = 0;\n        for (int r = 0; r < nums.length; r++) {\n            if (nums[r] != 0) {\n                int temp = nums[r];\n                nums[r] = nums[l];\n                nums[l] = temp;\n                l++;\n            }\n        }\n    }\n}",
+      "readmeContent": "# [283] Move Zeroes\n**Difficulty:** Easy  |  **Acceptance:** 64.5%  |  **Likes:** 20034 / **Dislikes:** 632\n**Tags:** `Array`, `Two Pointers`\n## Problem\nGiven an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.\n\nNote that you must do this in-place without making a copy of the array.\n\n&nbsp;\nExample 1:\nInput: nums = [0,1,0,3,12]\nOutput: [1,3,12,0,0]\nExample 2:\nInput: nums = [0]\nOutput: [0]\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 104\n\t-231 <= nums[i] <= 231 - 1\n\n&nbsp;\nFollow up: Could you minimize the total number of operations done?\n## My Submission\n\n- Runtime: 2 ms (beats 91.5%)\n- Memory: 47.8 MB (beats 37.8%)\n\n## Similar Problems\n\n- [Remove Element](https://leetcode.com/problems/remove-element/) — Easy\n- [Apply Operations to an Array](https://leetcode.com/problems/apply-operations-to-an-array/) — Easy\n",
+      "code": "class Solution {\n    public void moveZeroes(int[] nums) {\n      int j =0;\n      for(int i=0; i<nums.length; i++){\n        if(nums[i] != 0){\n            nums[j] = nums[i];\n            j++;\n        }\n      }\n      while(j < nums.length){\n        nums[j] = 0;\n        j++;\n      }  \n    }\n}",
       "files": [
         {
           "path": "problems/lc-move-zeroes/lc-move-zeroes.java",
-          "content": "class Solution {\n    public void moveZeroes(int[] nums) {\n        int l = 0;\n        for (int r = 0; r < nums.length; r++) {\n            if (nums[r] != 0) {\n                int temp = nums[r];\n                nums[r] = nums[l];\n                nums[l] = temp;\n                l++;\n            }\n        }\n    }\n}"
+          "content": "class Solution {\n    public void moveZeroes(int[] nums) {\n      int j =0;\n      for(int i=0; i<nums.length; i++){\n        if(nums[i] != 0){\n            nums[j] = nums[i];\n            j++;\n        }\n      }\n      while(j < nums.length){\n        nums[j] = 0;\n        j++;\n      }  \n    }\n}"
         },
         {
           "path": "problems/lc-move-zeroes/README.md",
-          "content": "# [283] Move Zeroes\n**Difficulty:** Easy  |  **Acceptance:** 64.5%  |  **Likes:** 20034 / **Dislikes:** 632\n**Tags:** `Array`, `Two Pointers`\n## Problem\nGiven an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.\n\nNote that you must do this in-place without making a copy of the array.\n\n&nbsp;\nExample 1:\nInput: nums = [0,1,0,3,12]\nOutput: [1,3,12,0,0]\nExample 2:\nInput: nums = [0]\nOutput: [0]\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 104\n\t-231 <= nums[i] <= 231 - 1\n\n&nbsp;\nFollow up: Could you minimize the total number of operations done?\n## My Submission\n\n- Runtime: 2 ms (beats 91.5%)\n- Memory: 47.8 MB (beats 56.8%)\n\n## Similar Problems\n\n- [Remove Element](https://leetcode.com/problems/remove-element/) — Easy\n- [Apply Operations to an Array](https://leetcode.com/problems/apply-operations-to-an-array/) — Easy\n"
+          "content": "# [283] Move Zeroes\n**Difficulty:** Easy  |  **Acceptance:** 64.5%  |  **Likes:** 20034 / **Dislikes:** 632\n**Tags:** `Array`, `Two Pointers`\n## Problem\nGiven an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.\n\nNote that you must do this in-place without making a copy of the array.\n\n&nbsp;\nExample 1:\nInput: nums = [0,1,0,3,12]\nOutput: [1,3,12,0,0]\nExample 2:\nInput: nums = [0]\nOutput: [0]\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 104\n\t-231 <= nums[i] <= 231 - 1\n\n&nbsp;\nFollow up: Could you minimize the total number of operations done?\n## My Submission\n\n- Runtime: 2 ms (beats 91.5%)\n- Memory: 47.8 MB (beats 37.8%)\n\n## Similar Problems\n\n- [Remove Element](https://leetcode.com/problems/remove-element/) — Easy\n- [Apply Operations to an Array](https://leetcode.com/problems/apply-operations-to-an-array/) — Easy\n"
         }
       ],
       "lang": {
@@ -11658,9 +11663,9 @@
       "runtime": "2 ms",
       "memory": "47.8 MB",
       "runtimePct": 91.5406,
-      "memoryPct": 56.77990000000005,
-      "timestamp": 1788281516000,
-      "acRate": 64.48882348819284,
+      "memoryPct": 37.76300000000005,
+      "timestamp": 1775118827000,
+      "acRate": 64.4888354322465,
       "likes": 20034,
       "dislikes": 632,
       "similar": [
@@ -11686,7 +11691,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/lc-move-zeroes/lc-move-zeroes.java",
+        "problems/lc-move-zeroes/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-move-zeroes::1812907226",
@@ -14042,6 +14053,89 @@
       ]
     },
     {
+      "id": "lc-search-a-2d-matrix",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Search a 2D Matrix",
+      "titleSlug": "search-a-2d-matrix",
+      "difficulty": "Medium",
+      "topic": "Binary Search",
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Matrix"
+      ],
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 74,
+            "platform": "leetcode",
+            "slug": "search-a-2d-matrix"
+          }
+        ],
+        "canonicalId": "search-a-2d-matrix",
+        "canonicalTitle": "Search a 2D Matrix",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "binary-search",
+        "tags": [
+          "array"
+        ],
+        "topic": "binary-search",
+        "voteCount": 89
+      },
+      "readmeContent": "# [74] Search a 2D Matrix\n**Difficulty:** Medium  |  **Acceptance:** 54.3%  |  **Likes:** 18354 / **Dislikes:** 502\n**Tags:** `Array`, `Binary Search`, `Matrix`\n## Problem\nYou are given an m x n integer matrix matrix with the following two properties:\n\n\tEach row is sorted in non-decreasing order.\n\tThe first integer of each row is greater than the last integer of the previous row.\n\nGiven an integer target, return true if target is in matrix or false otherwise.\n\nYou must write a solution in O(log(m * n)) time complexity.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3\nOutput: true\n\nExample 2:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13\nOutput: false\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 100\n\t-104 <= matrix[i][j], target <= 104\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 44 MB (beats 24.0%)\n\n## Similar Problems\n\n- [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) — Medium\n- [Split Message Based on Limit](https://leetcode.com/problems/split-message-based-on-limit/) — Hard\n",
+      "code": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        int n = matrix[0].length;\n        int m = matrix.length;\n        int low = 0;\n        int high = m*n-1;\n        while(low <= high){\n            int mid = low + (high - low) / 2;\n            int row = mid/n;\n            int col = mid%n;\n            if(matrix[row][col] == target){\n                return true;\n            }\n            else if(matrix[row][col] > target){\n                high = mid - 1;\n            }\n            else{\n                low = mid + 1;\n            }\n        }\n        return false;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/search-a-2d-matrix/leetcode/lc-search-a-2d-matrix.java",
+          "content": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        int n = matrix[0].length;\n        int m = matrix.length;\n        int low = 0;\n        int high = m*n-1;\n        while(low <= high){\n            int mid = low + (high - low) / 2;\n            int row = mid/n;\n            int col = mid%n;\n            if(matrix[row][col] == target){\n                return true;\n            }\n            else if(matrix[row][col] > target){\n                high = mid - 1;\n            }\n            else{\n                low = mid + 1;\n            }\n        }\n        return false;\n    }\n}"
+        },
+        {
+          "path": "problems/search-a-2d-matrix/README.md",
+          "content": "# [74] Search a 2D Matrix\n**Difficulty:** Medium  |  **Acceptance:** 54.3%  |  **Likes:** 18354 / **Dislikes:** 502\n**Tags:** `Array`, `Binary Search`, `Matrix`\n## Problem\nYou are given an m x n integer matrix matrix with the following two properties:\n\n\tEach row is sorted in non-decreasing order.\n\tThe first integer of each row is greater than the last integer of the previous row.\n\nGiven an integer target, return true if target is in matrix or false otherwise.\n\nYou must write a solution in O(log(m * n)) time complexity.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3\nOutput: true\n\nExample 2:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13\nOutput: false\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 100\n\t-104 <= matrix[i][j], target <= 104\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 44 MB (beats 24.0%)\n\n## Similar Problems\n\n- [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) — Medium\n- [Split Message Based on Limit](https://leetcode.com/problems/split-message-based-on-limit/) — Hard\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "0 ms",
+      "memory": "44 MB",
+      "runtimePct": 100,
+      "memoryPct": 23.995100000000022,
+      "timestamp": 1783403020000,
+      "acRate": 54.3428130088161,
+      "likes": 18354,
+      "dislikes": 502,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "search-a-2d-matrix-ii",
+          "title": "Search a 2D Matrix II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "split-message-based-on-limit",
+          "title": "Split Message Based on Limit",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>You are given an <code>m x n</code> integer matrix <code>matrix</code> with the following two properties:</p>\n\n<ul>\n\t<li>Each row is sorted in non-decreasing order.</li>\n\t<li>The first integer of each row is greater than the last integer of the previous row.</li>\n</ul>\n\n<p>Given an integer <code>target</code>, return <code>true</code> <em>if</em> <code>target</code> <em>is in</em> <code>matrix</code> <em>or</em> <code>false</code> <em>otherwise</em>.</p>\n\n<p>You must write a solution in <code>O(log(m * n))</code> time complexity.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/10/05/mat.jpg\" style=\"width: 322px; height: 242px;\" />\n<pre>\n<strong>Input:</strong> matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3\n<strong>Output:</strong> true\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/10/05/mat2.jpg\" style=\"width: 322px; height: 242px;\" />\n<pre>\n<strong>Input:</strong> matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13\n<strong>Output:</strong> false\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>m == matrix.length</code></li>\n\t<li><code>n == matrix[i].length</code></li>\n\t<li><code>1 &lt;= m, n &lt;= 100</code></li>\n\t<li><code>-10<sup>4</sup> &lt;= matrix[i][j], target &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/search-a-2d-matrix/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
+    },
+    {
       "id": "lc-search-in-rotated-sorted-array-ii::2016425874",
       "submissionId": 2016425874,
       "platform": "leetcode",
@@ -15189,7 +15283,7 @@
         "Prefix Sum"
       ],
       "canonical": null,
-      "readmeContent": "# [410] Split Array Largest Sum\n**Difficulty:** Hard  |  **Acceptance:** 61.6%  |  **Likes:** 11763 / **Dislikes:** 278\n**Tags:** `Array`, `Binary Search`, `Dynamic Programming`, `Greedy`, `Prefix Sum`\n## Problem\nGiven an integer array nums and an integer k, split nums into k non-empty subarrays such that the largest sum of any subarray is minimized.\n\nReturn the minimized largest sum of the split.\n\nA subarray is a contiguous part of the array.\n\n&nbsp;\nExample 1:\n\nInput: nums = [7,2,5,10,8], k = 2\nOutput: 18\nExplanation: There are four ways to split nums into two subarrays.\nThe best way is to split it into [7,2,5] and [10,8], where the largest sum among the two subarrays is only 18.\n\nExample 2:\n\nInput: nums = [1,2,3,4,5], k = 2\nOutput: 9\nExplanation: There are four ways to split nums into two subarrays.\nThe best way is to split it into [1,2,3] and [4,5], where the largest sum among the two subarrays is only 9.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 1000\n\t0 <= nums[i] <= 106\n\t1 <= k <= min(50, nums.length)\n## My Submission\n\n- Runtime: 2 ms (beats 35.0%)\n- Memory: 42.3 MB (beats 99.4%)\n\n## Similar Problems\n\n- [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) — Medium\n- [Fair Distribution of Cookies](https://leetcode.com/problems/fair-distribution-of-cookies/) — Medium\n- [Maximum Total Beauty of the Gardens](https://leetcode.com/problems/maximum-total-beauty-of-the-gardens/) — Hard\n- [Number of Ways to Split Array](https://leetcode.com/problems/number-of-ways-to-split-array/) — Medium\n- [Minimum Cost to Split an Array](https://leetcode.com/problems/minimum-cost-to-split-an-array/) — Hard\n",
+      "readmeContent": "# [410] Split Array Largest Sum\n**Difficulty:** Hard  |  **Acceptance:** 61.6%  |  **Likes:** 11769 / **Dislikes:** 278\n**Tags:** `Array`, `Binary Search`, `Dynamic Programming`, `Greedy`, `Prefix Sum`\n## Problem\nGiven an integer array nums and an integer k, split nums into k non-empty subarrays such that the largest sum of any subarray is minimized.\n\nReturn the minimized largest sum of the split.\n\nA subarray is a contiguous part of the array.\n\n&nbsp;\nExample 1:\n\nInput: nums = [7,2,5,10,8], k = 2\nOutput: 18\nExplanation: There are four ways to split nums into two subarrays.\nThe best way is to split it into [7,2,5] and [10,8], where the largest sum among the two subarrays is only 18.\n\nExample 2:\n\nInput: nums = [1,2,3,4,5], k = 2\nOutput: 9\nExplanation: There are four ways to split nums into two subarrays.\nThe best way is to split it into [1,2,3] and [4,5], where the largest sum among the two subarrays is only 9.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 1000\n\t0 <= nums[i] <= 106\n\t1 <= k <= min(50, nums.length)\n## My Submission\n\n- Runtime: 2 ms (beats 35.3%)\n- Memory: 42.3 MB (beats 99.4%)\n\n## Similar Problems\n\n- [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) — Medium\n- [Fair Distribution of Cookies](https://leetcode.com/problems/fair-distribution-of-cookies/) — Medium\n- [Maximum Total Beauty of the Gardens](https://leetcode.com/problems/maximum-total-beauty-of-the-gardens/) — Hard\n- [Number of Ways to Split Array](https://leetcode.com/problems/number-of-ways-to-split-array/) — Medium\n- [Minimum Cost to Split an Array](https://leetcode.com/problems/minimum-cost-to-split-an-array/) — Hard\n",
       "code": "class Solution {\n    public int splitArray(int[] nums, int k) {\n        if(k > nums.length) return -1;\n        int l = Arrays.stream(nums).max().getAsInt();\n        int h = 0;\n        for(int num : nums){\n            h += num;\n        }\n        int ans = -1;\n        while(l <= h){\n            int m = l + (h - l)/2;\n            if(helper(nums, k, m)){\n                ans = m;\n                h = m-1;\n            }\n            else{\n                l = m+1;\n            }\n        }\n        return ans;\n    }\n\n    public boolean helper(int[] nums, int k, int m){\n        int count = 1;\n        int sum = 0;\n        for(int num : nums){\n            if(sum + num <= m){\n                sum += num;\n            }\n            else{\n                count++;\n                sum = num;\n            }\n        }\n        return count <= k;\n    }\n}",
       "files": [
         {
@@ -15198,7 +15292,7 @@
         },
         {
           "path": "problems/lc-split-array-largest-sum/README.md",
-          "content": "# [410] Split Array Largest Sum\n**Difficulty:** Hard  |  **Acceptance:** 61.6%  |  **Likes:** 11763 / **Dislikes:** 278\n**Tags:** `Array`, `Binary Search`, `Dynamic Programming`, `Greedy`, `Prefix Sum`\n## Problem\nGiven an integer array nums and an integer k, split nums into k non-empty subarrays such that the largest sum of any subarray is minimized.\n\nReturn the minimized largest sum of the split.\n\nA subarray is a contiguous part of the array.\n\n&nbsp;\nExample 1:\n\nInput: nums = [7,2,5,10,8], k = 2\nOutput: 18\nExplanation: There are four ways to split nums into two subarrays.\nThe best way is to split it into [7,2,5] and [10,8], where the largest sum among the two subarrays is only 18.\n\nExample 2:\n\nInput: nums = [1,2,3,4,5], k = 2\nOutput: 9\nExplanation: There are four ways to split nums into two subarrays.\nThe best way is to split it into [1,2,3] and [4,5], where the largest sum among the two subarrays is only 9.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 1000\n\t0 <= nums[i] <= 106\n\t1 <= k <= min(50, nums.length)\n## My Submission\n\n- Runtime: 2 ms (beats 35.0%)\n- Memory: 42.3 MB (beats 99.4%)\n\n## Similar Problems\n\n- [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) — Medium\n- [Fair Distribution of Cookies](https://leetcode.com/problems/fair-distribution-of-cookies/) — Medium\n- [Maximum Total Beauty of the Gardens](https://leetcode.com/problems/maximum-total-beauty-of-the-gardens/) — Hard\n- [Number of Ways to Split Array](https://leetcode.com/problems/number-of-ways-to-split-array/) — Medium\n- [Minimum Cost to Split an Array](https://leetcode.com/problems/minimum-cost-to-split-an-array/) — Hard\n"
+          "content": "# [410] Split Array Largest Sum\n**Difficulty:** Hard  |  **Acceptance:** 61.6%  |  **Likes:** 11769 / **Dislikes:** 278\n**Tags:** `Array`, `Binary Search`, `Dynamic Programming`, `Greedy`, `Prefix Sum`\n## Problem\nGiven an integer array nums and an integer k, split nums into k non-empty subarrays such that the largest sum of any subarray is minimized.\n\nReturn the minimized largest sum of the split.\n\nA subarray is a contiguous part of the array.\n\n&nbsp;\nExample 1:\n\nInput: nums = [7,2,5,10,8], k = 2\nOutput: 18\nExplanation: There are four ways to split nums into two subarrays.\nThe best way is to split it into [7,2,5] and [10,8], where the largest sum among the two subarrays is only 18.\n\nExample 2:\n\nInput: nums = [1,2,3,4,5], k = 2\nOutput: 9\nExplanation: There are four ways to split nums into two subarrays.\nThe best way is to split it into [1,2,3] and [4,5], where the largest sum among the two subarrays is only 9.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 1000\n\t0 <= nums[i] <= 106\n\t1 <= k <= min(50, nums.length)\n## My Submission\n\n- Runtime: 2 ms (beats 35.3%)\n- Memory: 42.3 MB (beats 99.4%)\n\n## Similar Problems\n\n- [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) — Medium\n- [Fair Distribution of Cookies](https://leetcode.com/problems/fair-distribution-of-cookies/) — Medium\n- [Maximum Total Beauty of the Gardens](https://leetcode.com/problems/maximum-total-beauty-of-the-gardens/) — Hard\n- [Number of Ways to Split Array](https://leetcode.com/problems/number-of-ways-to-split-array/) — Medium\n- [Minimum Cost to Split an Array](https://leetcode.com/problems/minimum-cost-to-split-an-array/) — Hard\n"
         }
       ],
       "lang": {
@@ -15208,11 +15302,11 @@
       },
       "runtime": "2 ms",
       "memory": "42.3 MB",
-      "runtimePct": 34.9914,
-      "memoryPct": 99.42549999999999,
+      "runtimePct": 35.305800000000005,
+      "memoryPct": 99.3821,
       "timestamp": 1791955835000,
-      "acRate": 61.609417245538864,
-      "likes": 11763,
+      "acRate": 61.61852708417646,
+      "likes": 11769,
       "dislikes": 278,
       "similar": [
         {

@@ -7,8 +7,8 @@
 | Problem ID | `lc-split-array-largest-sum` |
 | Topics | Array, Binary Search, Dynamic Programming, Greedy, Prefix Sum |
 | Solved | 2026-10-14 |
-| Runtime | 2 ms (beats 34.9914%) |
-| Memory | 42.3 MB (beats 99.42549999999999%) |
+| Runtime | 2 ms (beats 35.305800000000005%) |
+| Memory | 42.3 MB (beats 99.3821%) |
 
 ## Problem Statement
 

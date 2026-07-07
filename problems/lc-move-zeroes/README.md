@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-move-zeroes` |
 | Topics | Array, Two Pointers |
-| Solved | 2026-09-01 |
+| Solved | 2026-04-02 |
 | Runtime | 2 ms (beats 91.5406%) |
-| Memory | 47.8 MB (beats 56.77990000000005%) |
+| Memory | 47.8 MB (beats 37.76300000000005%) |
 
 ## Problem Statement
 
@@ -44,15 +44,17 @@ Given an integer array `nums`, move all `0`'s to the end of it while maintaining
 ```Java
 class Solution {
     public void moveZeroes(int[] nums) {
-        int l = 0;
-        for (int r = 0; r < nums.length; r++) {
-            if (nums[r] != 0) {
-                int temp = nums[r];
-                nums[r] = nums[l];
-                nums[l] = temp;
-                l++;
-            }
+      int j =0;
+      for(int i=0; i<nums.length; i++){
+        if(nums[i] != 0){
+            nums[j] = nums[i];
+            j++;
         }
+      }
+      while(j < nums.length){
+        nums[j] = 0;
+        j++;
+      }  
     }
 }
 ```
