@@ -1,30 +1,30 @@
 {
-  "updatedAt": "2026-10-16T05:14:28.130Z",
+  "updatedAt": "2026-10-21T04:51:34.423Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 237,
+    "total": 238,
     "easy": 113,
-    "medium": 110,
+    "medium": 111,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 55,
-      "leetcode": 182
+      "leetcode": 183
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 122,
+      "Java": 123,
       "Python": 29,
       "MySQL": 35
     },
     "byTopic": {
       "Matrix": 1,
       "Binary Search": 4,
-      "Searching": 3,
-      "String": 23,
-      "Array": 115,
+      "Searching": 5,
+      "String": 24,
+      "Array": 119,
       "Greedy": 1,
-      "Untagged": 17,
+      "Untagged": 11,
       "Prefix Sum": 2,
       "Math": 6,
       "Two Pointers": 5,
@@ -1352,7 +1352,14 @@
       "timestamp": 1792127667719,
       "elapsedSeconds": 164,
       "_requestAIReview": true,
-      "platform": "geeksforgeeks"
+      "platform": "geeksforgeeks",
+      "_committedPaths": [
+        "problems/gfg-search-in-a-matrix17201720/gfg-search-in-a-matrix17201720.java",
+        "problems/gfg-search-in-a-matrix17201720/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "gfg-search-in-a-rotated-array4618",
@@ -1365,7 +1372,10 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Searching",
+        "Divide and Conquer"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -1373,7 +1383,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an array <strong>arr[]</strong> of <strong>distinct </strong>elements, <span>which was&nbsp;</span></span><span>initially <strong data-start=\"177\" data-end=\"206\">sorted in ascending order</strong> but then <strong data-start=\"216\" data-end=\"227\">rotated</strong> at some unknown pivot,</span> <span>the task is to find the index of a target <strong>key</strong>.&nbsp;</span><span> If the key is not present in the array, return <strong>-1</strong>.</span></p><p><span><strong>Examples :</strong></span></p><pre><span><strong>Input: </strong>arr[] = [5, 6, 7, 8, 9, 10, 1, 2, 3], key = 3\n<strong>Output:</strong> 8\n<strong>Explanation:</strong> 3 is found at index 8.</span></pre><pre><span><strong>Input:</strong> arr[] = [3, 5, 1, 2], key = 6</span><span><strong>\nOutput</strong>: -1</span><span><strong>\nExplanation</strong>: There is no element that has value 6.<br /></span></pre><pre><span><strong>Input:</strong> arr[] = [33, 42, 72, 99], key = 42\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> 42 is found at index 1.</span></pre>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -1393,7 +1403,9 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Searching"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -1401,7 +1413,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given a sorted array <strong>arr[]&nbsp;</strong>(0-index based) of distinct integers and an integer </span><strong>k</strong><span>, find the index</span><strong> </strong><span>of k if it is present in the arr[]. If not, return the index</span><strong> </strong><span>where k should be inserted to maintain the </span><span>sorted order</span><span>.</span></p><p><span><strong>Examples :</strong></span></p><pre><span><strong>Input: </strong>arr[] = [1, 3, 5, 6], k = 5<strong>\nOutput: </strong>2<strong>\nExplanation: </strong>Since 5 is found at index 2 as arr[2] = 5, the output is 2.</span></pre><pre><span><strong>Input: </strong>arr[] = [1, 3, 5, 6], k = 2<strong>\nOutput: </strong>1<strong>\nExplanation: </strong>The element 2 is not present in the array, but inserting it at index 1 will maintain the sorted order.</span></pre><pre><span><strong>Input:</strong> arr[] = [2, 6, 7, 10, 14], k = 15</span><br /><span><strong>Output:</strong> 5</span><br /><span><strong>Explanation:</strong> The element 15 is not present in the array, but inserting it after index 4 will maintain the sorted order.</span></pre><p><span><strong>Constraints:<br /></strong>1 &le; arr.size() &le; 10<sup>4</sup><br />-10<sup>3</sup> &le; arr[i] &le; 10<sup>3</sup><br />-10<sup>3</sup>&nbsp;&le; k &le; 10<sup>3</sup></span></p>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -1421,7 +1433,10 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array",
+        "Searching"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -1429,7 +1444,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an array of positive integers <strong>arr[]</strong>, return the<strong> </strong>second largest element from the array. </span><span>If the second largest element doesn't exist then return <strong>-1.</strong></span></p><p><span>Note: The second largest element should not be equal to the largest element.</span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input:</strong> arr[] = [12, 35, 1, 10, 34, 1]\n<strong>Output:</strong> 34\n<strong>Explanation: </strong>The largest element of the array is 35 and the second largest element is 34.</span></pre><pre><span><strong>Input:</strong> arr[] = [10, 5, 10]\n<strong>Output:</strong> 5\n<strong>Explanation: </strong>The largest element of the array is 10 and the second largest element is 5.</span></pre><pre><span><strong>Input:</strong> arr[] = [10, 10, 10]\n<strong>Output:</strong> -1\n<strong>Explanation: </strong>The largest element of the array is 10 and the second largest element does not exist.</span></pre><p><span><strong>Constraints:</strong><br />2 &le; arr.size() &le; 10<sup>5</sup><br />1 &le; arr[i]<sub>&nbsp;</sub>&le; 10<sup>5</sup></span></p>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -1449,7 +1464,10 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array",
+        "Sliding Window"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -1457,7 +1475,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given&nbsp;</span><span>a number&nbsp;</span><strong>x </strong><span>and&nbsp;an array of integers </span><strong>arr</strong><span>, find the smallest subarray with sum strictly greater than the given value. If such a subarray do not exist return 0 in that case.</span></p>\n<p><span><strong>Examples:</strong></span></p>\n<pre><span><strong>Input: </strong>x = 51, arr[] = [1, 4, 45, 6, 0, 19]\n<strong>Output:</strong> 3\n<strong>Explanation: </strong>Minimum length subarray is [4, 45, 6]</span></pre>\n<pre><span><strong>Input: </strong>x = 100, arr[] = [1, 10, 5, 2, 7]\n<strong>Output:</strong> 0\n<strong>Explanation: </strong>No subarray exist</span></pre>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -1477,7 +1495,10 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "String",
+        "Sorting"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -1485,7 +1506,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given a string consisting of lowercase letters, arrange all its letters in ascending order.&nbsp;</span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input: </strong>s = \"edcab\"\n<strong>Output:</strong> \"abcde\"\n<strong>Explanation: </strong>characters are in ascending order in \"abcde\".</span>\n</pre><pre><span><strong>Input: </strong>s = \"xzy\"\n<strong>Output:</strong> \"xyz\"\n<strong>Explanation: </strong>characters are in ascending order in \"xyz\".</span></pre>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -1505,7 +1526,10 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -1513,7 +1537,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an array <strong>arr[]</strong> containing only 0s, 1s, and 2s<strong>.</strong> Sort the array in ascending order.&nbsp;</span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input: </strong>arr[] = [0, 1, 2, 0, 1, 2]\n<strong>Output: </strong>[0, 0, 1, 1, 2, 2]\n<strong>Explanation: </strong>0s, 1s and 2s are segregated into ascending order.</span></pre><pre><span><strong>Input: </strong><span>arr[] = [0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1]\n</span><strong>Output: </strong><span>[0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2]\n</span><strong>Explanation: </strong><span>0s, 1s and 2s are segregated into ascending order.</span></span></pre><p><span><strong>Follow up:</strong> Could you come up with a one-pass algorithm using only constant extra space?</span></p>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -14176,6 +14200,65 @@
       ],
       "methods": [],
       "manuallyEdited": false
+    },
+    {
+      "id": "lc-search-a-2d-matrix-ii",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Search a 2D Matrix II",
+      "titleSlug": "search-a-2d-matrix-ii",
+      "difficulty": "Medium",
+      "topic": "Divide and Conquer",
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Divide and Conquer",
+        "Matrix"
+      ],
+      "canonical": null,
+      "readmeContent": "# [240] Search a 2D Matrix II\n**Difficulty:** Medium  |  **Acceptance:** 58.3%  |  **Likes:** 13418 / **Dislikes:** 239\n**Tags:** `Array`, `Binary Search`, `Divide and Conquer`, `Matrix`\n## Problem\nWrite an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:\n\n\tIntegers in each row are sorted in ascending from left to right.\n\tIntegers in each column are sorted in ascending from top to bottom.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5\nOutput: true\n\nExample 2:\n\nInput: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 20\nOutput: false\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= n, m <= 300\n\t-109 <= matrix[i][j] <= 109\n\tAll the integers in each row are sorted in ascending order.\n\tAll the integers in each column are sorted in ascending order.\n\t-109 <= target <= 109\n## My Submission\n\n- Runtime: 3 ms (beats 86.0%)\n- Memory: 48.1 MB (beats 60.7%)\n\n## Similar Problems\n\n- [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) — Medium\n",
+      "code": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        int i = matrix.length-1;\n        int j = 0;\n        while(i >= 0 && j < matrix[0].length){\n            if(matrix[i][j] == target){\n                return true;\n            }\n            if(target < matrix[i][j]){\n                i--;\n            }\n            else{\n                j++;\n            }\n        }\n        return false;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/lc-search-a-2d-matrix-ii/lc-search-a-2d-matrix-ii.java",
+          "content": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        int i = matrix.length-1;\n        int j = 0;\n        while(i >= 0 && j < matrix[0].length){\n            if(matrix[i][j] == target){\n                return true;\n            }\n            if(target < matrix[i][j]){\n                i--;\n            }\n            else{\n                j++;\n            }\n        }\n        return false;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-search-a-2d-matrix-ii/README.md",
+          "content": "# [240] Search a 2D Matrix II\n**Difficulty:** Medium  |  **Acceptance:** 58.3%  |  **Likes:** 13418 / **Dislikes:** 239\n**Tags:** `Array`, `Binary Search`, `Divide and Conquer`, `Matrix`\n## Problem\nWrite an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:\n\n\tIntegers in each row are sorted in ascending from left to right.\n\tIntegers in each column are sorted in ascending from top to bottom.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5\nOutput: true\n\nExample 2:\n\nInput: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 20\nOutput: false\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= n, m <= 300\n\t-109 <= matrix[i][j] <= 109\n\tAll the integers in each row are sorted in ascending order.\n\tAll the integers in each column are sorted in ascending order.\n\t-109 <= target <= 109\n## My Submission\n\n- Runtime: 3 ms (beats 86.0%)\n- Memory: 48.1 MB (beats 60.7%)\n\n## Similar Problems\n\n- [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "3 ms",
+      "memory": "48.1 MB",
+      "runtimePct": 86.0419,
+      "memoryPct": 60.65329999999997,
+      "timestamp": 1783577528000,
+      "acRate": 58.28754723803799,
+      "likes": 13418,
+      "dislikes": 239,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "search-a-2d-matrix",
+          "title": "Search a 2D Matrix",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Write an efficient algorithm that searches for a value <code>target</code> in an <code>m x n</code> integer matrix <code>matrix</code>. This matrix has the following properties:</p>\n\n<ul>\n\t<li>Integers in each row are sorted in ascending from left to right.</li>\n\t<li>Integers in each column are sorted in ascending from top to bottom.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/11/24/searchgrid2.jpg\" style=\"width: 300px; height: 300px;\" />\n<pre>\n<strong>Input:</strong> matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5\n<strong>Output:</strong> true\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/11/24/searchgrid.jpg\" style=\"width: 300px; height: 300px;\" />\n<pre>\n<strong>Input:</strong> matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 20\n<strong>Output:</strong> false\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>m == matrix.length</code></li>\n\t<li><code>n == matrix[i].length</code></li>\n\t<li><code>1 &lt;= n, m &lt;= 300</code></li>\n\t<li><code>-10<sup>9</sup> &lt;= matrix[i][j] &lt;= 10<sup>9</sup></code></li>\n\t<li>All the integers in each row are <strong>sorted</strong> in ascending order.</li>\n\t<li>All the integers in each column are <strong>sorted</strong> in ascending order.</li>\n\t<li><code>-10<sup>9</sup> &lt;= target &lt;= 10<sup>9</sup></code></li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/search-a-2d-matrix-ii/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
     },
     {
       "id": "lc-search-in-rotated-sorted-array-ii::2016425874",

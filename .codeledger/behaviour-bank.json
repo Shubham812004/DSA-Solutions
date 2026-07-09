@@ -184,6 +184,25 @@
       "Matrix"
     ]
   },
+  "leetcode::search-a-2d-matrix-ii": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "search-a-2d-matrix-ii",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1792558294328
+      }
+    ],
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Divide and Conquer",
+      "Matrix"
+    ]
+  },
   "leetcode::split-array-largest-sum": {
     "difficulty": "Hard",
     "lang": "Java",
