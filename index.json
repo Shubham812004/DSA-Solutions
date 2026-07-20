@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-11-19T04:50:45.699Z",
+  "updatedAt": "2026-11-19T04:56:06.581Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 269,
-    "easy": 117,
+    "total": 270,
+    "easy": 118,
     "medium": 138,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 57,
-      "leetcode": 212
+      "leetcode": 213
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 153,
+      "Java": 154,
       "Python": 30,
       "MySQL": 35
     },
@@ -29,7 +29,7 @@
       "Math": 6,
       "Two Pointers": 7,
       "Stack": 6,
-      "Hash Table": 6,
+      "Hash Table": 7,
       "Linked List": 13,
       "Database": 35,
       "Dynamic Programming": 7,
@@ -7577,6 +7577,69 @@
         "problems/lc-invalid-tweets/lc-invalid-tweets.sql",
         "problems/lc-invalid-tweets/README.md"
       ]
+    },
+    {
+      "id": "lc-isomorphic-strings",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Isomorphic Strings",
+      "titleSlug": "isomorphic-strings",
+      "difficulty": "Easy",
+      "topic": "Hash Table",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "canonical": null,
+      "readmeContent": "# [205] Isomorphic Strings\n**Difficulty:** Easy  |  **Acceptance:** 49.3%  |  **Likes:** 10933 / **Dislikes:** 2309\n**Tags:** `Hash Table`, `String`\n## Problem\nGiven two strings s and t, determine if they are isomorphic.\n\nTwo strings s and t are isomorphic if the characters in s can be replaced to get t.\n\nAll occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.\n\n&nbsp;\nExample 1:\n\nInput: s = \"egg\", t = \"add\"\n\nOutput: true\n\nExplanation:\n\nThe strings s and t can be made identical by:\n\n\tMapping 'e' to 'a'.\n\tMapping 'g' to 'd'.\n\nExample 2:\n\nInput: s = \"f11\", t = \"b23\"\n\nOutput: false\n\nExplanation:\n\nThe strings s and t can not be made identical as '1' needs to be mapped to both '2' and '3'.\n\nExample 3:\n\nInput: s = \"paper\", t = \"title\"\n\nOutput: true\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 5 * 104\n\tt.length == s.length\n\ts and t consist of any valid ascii character.\n## My Submission\n\n- Runtime: 24 ms (beats 22.3%)\n- Memory: 43.7 MB (beats 47.3%)\n\n## Similar Problems\n\n- [Word Pattern](https://leetcode.com/problems/word-pattern/) — Easy\n- [Find and Replace Pattern](https://leetcode.com/problems/find-and-replace-pattern/) — Medium\n",
+      "code": "class Solution {\n    public boolean isIsomorphic(String s, String t) {\n        HashMap<Character, Character> mapST = new HashMap<>();\n        HashMap<Character, Character> mapTS = new HashMap<>();;\n        for(int i=0; i<s.length(); i++){\n            char ch1 = s.charAt(i);\n            char ch2 = t.charAt(i);\n            if(mapST.containsKey(ch1) && mapST.get(ch1) != ch2){\n                return false;\n            }\n            if(mapTS.containsKey(ch2) && mapTS.get(ch2) != ch1){\n                return false;\n            }\n            mapST.put(ch1, ch2);\n            mapTS.put(ch2, ch1);\n        }\n        return true;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/lc-isomorphic-strings/lc-isomorphic-strings.java",
+          "content": "class Solution {\n    public boolean isIsomorphic(String s, String t) {\n        HashMap<Character, Character> mapST = new HashMap<>();\n        HashMap<Character, Character> mapTS = new HashMap<>();;\n        for(int i=0; i<s.length(); i++){\n            char ch1 = s.charAt(i);\n            char ch2 = t.charAt(i);\n            if(mapST.containsKey(ch1) && mapST.get(ch1) != ch2){\n                return false;\n            }\n            if(mapTS.containsKey(ch2) && mapTS.get(ch2) != ch1){\n                return false;\n            }\n            mapST.put(ch1, ch2);\n            mapTS.put(ch2, ch1);\n        }\n        return true;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-isomorphic-strings/README.md",
+          "content": "# [205] Isomorphic Strings\n**Difficulty:** Easy  |  **Acceptance:** 49.3%  |  **Likes:** 10933 / **Dislikes:** 2309\n**Tags:** `Hash Table`, `String`\n## Problem\nGiven two strings s and t, determine if they are isomorphic.\n\nTwo strings s and t are isomorphic if the characters in s can be replaced to get t.\n\nAll occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.\n\n&nbsp;\nExample 1:\n\nInput: s = \"egg\", t = \"add\"\n\nOutput: true\n\nExplanation:\n\nThe strings s and t can be made identical by:\n\n\tMapping 'e' to 'a'.\n\tMapping 'g' to 'd'.\n\nExample 2:\n\nInput: s = \"f11\", t = \"b23\"\n\nOutput: false\n\nExplanation:\n\nThe strings s and t can not be made identical as '1' needs to be mapped to both '2' and '3'.\n\nExample 3:\n\nInput: s = \"paper\", t = \"title\"\n\nOutput: true\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 5 * 104\n\tt.length == s.length\n\ts and t consist of any valid ascii character.\n## My Submission\n\n- Runtime: 24 ms (beats 22.3%)\n- Memory: 43.7 MB (beats 47.3%)\n\n## Similar Problems\n\n- [Word Pattern](https://leetcode.com/problems/word-pattern/) — Easy\n- [Find and Replace Pattern](https://leetcode.com/problems/find-and-replace-pattern/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "24 ms",
+      "memory": "43.7 MB",
+      "runtimePct": 22.332000000000015,
+      "memoryPct": 47.337700000000034,
+      "timestamp": 1784561862000,
+      "acRate": 49.33138464347487,
+      "likes": 10933,
+      "dislikes": 2309,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "word-pattern",
+          "title": "Word Pattern",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-and-replace-pattern",
+          "title": "Find and Replace Pattern",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given two strings <code>s</code> and <code>t</code>, <em>determine if they are isomorphic</em>.</p>\n\n<p>Two strings <code>s</code> and <code>t</code> are isomorphic if the characters in <code>s</code> can be replaced to get <code>t</code>.</p>\n\n<p>All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;egg&quot;, t = &quot;add&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>The strings <code>s</code> and <code>t</code> can be made identical by:</p>\n\n<ul>\n\t<li>Mapping <code>&#39;e&#39;</code> to <code>&#39;a&#39;</code>.</li>\n\t<li>Mapping <code>&#39;g&#39;</code> to <code>&#39;d&#39;</code>.</li>\n</ul>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;f11&quot;, t = &quot;b23&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>The strings <code>s</code> and <code>t</code> can not be made identical as <code>&#39;1&#39;</code> needs to be mapped to both <code>&#39;2&#39;</code> and <code>&#39;3&#39;</code>.</p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;paper&quot;, t = &quot;title&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 5 * 10<sup>4</sup></code></li>\n\t<li><code>t.length == s.length</code></li>\n\t<li><code>s</code> and <code>t</code> consist of any valid ascii character.</li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/isomorphic-strings/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
     },
     {
       "id": "lc-koko-eating-bananas",

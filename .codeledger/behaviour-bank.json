@@ -302,6 +302,23 @@
       "Array"
     ]
   },
+  "leetcode::isomorphic-strings": {
+    "difficulty": "Easy",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "isomorphic-strings",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1795064166415
+      }
+    ],
+    "tags": [
+      "Hash Table",
+      "String"
+    ]
+  },
   "leetcode::koko-eating-bananas": {
     "difficulty": "Medium",
     "lang": "Java",
