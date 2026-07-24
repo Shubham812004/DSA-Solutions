@@ -571,6 +571,27 @@
       "Monotonic Stack"
     ]
   },
+  "leetcode::number-of-islands": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "number-of-islands",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794851469580
+      }
+    ],
+    "tags": [
+      "Graph",
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union Find",
+      "Matrix"
+    ]
+  },
   "leetcode::product-of-array-except-self": {
     "difficulty": "Medium",
     "lang": "Java",
