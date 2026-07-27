@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-11-19T14:36:58.577Z",
+  "updatedAt": "2026-11-20T04:55:21.594Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 274,
-    "easy": 120,
+    "total": 275,
+    "easy": 121,
     "medium": 140,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 57,
-      "leetcode": 217
+      "leetcode": 218
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 158,
+      "Java": 159,
       "Python": 30,
       "MySQL": 35
     },
@@ -22,7 +22,7 @@
       "Binary Search": 4,
       "Searching": 8,
       "String": 28,
-      "Array": 144,
+      "Array": 145,
       "Greedy": 1,
       "Untagged": 1,
       "Prefix Sum": 2,
@@ -6091,7 +6091,7 @@
       "runtimePct": 99.823,
       "memoryPct": 91.1363,
       "timestamp": 1795075597000,
-      "acRate": 60.86437553300422,
+      "acRate": 60.86433401395887,
       "likes": 5595,
       "dislikes": 523,
       "similar": [
@@ -8271,7 +8271,7 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 39.0%  |  **Likes:** 33392 / **Dislikes:** 2052\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.7%)\n- Memory: 43 MB (beats 83.3%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
+      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 39.0%  |  **Likes:** 33394 / **Dislikes:** 2052\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.7%)\n- Memory: 43 MB (beats 83.3%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
       "code": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        int len = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = isPalindrome(s, i, i);\n            int even = isPalindrome(s, i, i+1);\n            len = Math.max(odd, even);\n\n            if(len > end-start){\n                start = i - (len-1)/2;\n                end = i + len/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    int isPalindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        }\n        return r-l-1;\n    }\n}",
       "files": [
         {
@@ -8280,7 +8280,7 @@
         },
         {
           "path": "problems/longest-palindromic-substring/README.md",
-          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 39.0%  |  **Likes:** 33392 / **Dislikes:** 2052\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.7%)\n- Memory: 43 MB (beats 83.3%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
+          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 39.0%  |  **Likes:** 33394 / **Dislikes:** 2052\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.7%)\n- Memory: 43 MB (beats 83.3%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
         }
       ],
       "lang": {
@@ -8293,8 +8293,8 @@
       "runtimePct": 93.72039999999998,
       "memoryPct": 83.27730000000003,
       "timestamp": 1795063839000,
-      "acRate": 38.983065250614644,
-      "likes": 33392,
+      "acRate": 38.984883020560574,
+      "likes": 33394,
       "dislikes": 2052,
       "similar": [
         {
@@ -14987,6 +14987,81 @@
       ]
     },
     {
+      "id": "lc-remove-duplicates-from-sorted-array",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Remove Duplicates from Sorted Array",
+      "titleSlug": "remove-duplicates-from-sorted-array",
+      "difficulty": "Easy",
+      "topic": "Two Pointers",
+      "tags": [
+        "Array",
+        "Two Pointers"
+      ],
+      "canonical": null,
+      "readmeContent": "# [26] Remove Duplicates from Sorted Array\n**Difficulty:** Easy  |  **Acceptance:** 64.1%  |  **Likes:** 20088 / **Dislikes:** 20715\n**Tags:** `Array`, `Two Pointers`\n## Problem\nGiven an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.\n\nConsider the number of unique elements in&nbsp;nums to be k​​​​​​​​​​​​​​. After removing duplicates, return the number of unique elements&nbsp;k.\n\nThe first&nbsp;k&nbsp;elements of&nbsp;nums&nbsp;should contain the unique numbers in sorted order. The remaining elements beyond index&nbsp;k - 1&nbsp;can be ignored.\n\nCustom Judge:\n\nThe judge will test your solution with the following code:\n\nint[] nums = [...]; // Input array\nint[] expectedNums = [...]; // The expected answer with correct length\n\nint k = removeDuplicates(nums); // Calls your implementation\n\nassert k == expectedNums.length;\nfor (int i = 0; i < k; i++) {\n    assert nums[i] == expectedNums[i];\n}\n\nIf all assertions pass, then your solution will be accepted.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,1,2]\nOutput: 2, nums = [1,2,_]\nExplanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n\nExample 2:\n\nInput: nums = [0,0,1,1,1,2,2,3,3,4]\nOutput: 5, nums = [0,1,2,3,4,_,_,_,_,_]\nExplanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 3 * 104\n\t-100 <= nums[i] <= 100\n\tnums is sorted in non-decreasing order.\n## My Submission\n\n- Runtime: 1 ms (beats 89.3%)\n- Memory: 46.6 MB (beats 45.9%)\n\n## Similar Problems\n\n- [Remove Element](https://leetcode.com/problems/remove-element/) — Easy\n- [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) — Medium\n- [Apply Operations to an Array](https://leetcode.com/problems/apply-operations-to-an-array/) — Easy\n- [Sum of Distances](https://leetcode.com/problems/sum-of-distances/) — Medium\n",
+      "code": "class Solution {\n    public int removeDuplicates(int[] nums) {\n        int i = 1;\n        for(int j=1; j<nums.length; j++){\n            if(nums[j] != nums[j-1]){\n                nums[i] = nums[j];\n                i++;\n            }\n        }\n        return i;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/lc-remove-duplicates-from-sorted-array/lc-remove-duplicates-from-sorted-array.java",
+          "content": "class Solution {\n    public int removeDuplicates(int[] nums) {\n        int i = 1;\n        for(int j=1; j<nums.length; j++){\n            if(nums[j] != nums[j-1]){\n                nums[i] = nums[j];\n                i++;\n            }\n        }\n        return i;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-remove-duplicates-from-sorted-array/README.md",
+          "content": "# [26] Remove Duplicates from Sorted Array\n**Difficulty:** Easy  |  **Acceptance:** 64.1%  |  **Likes:** 20088 / **Dislikes:** 20715\n**Tags:** `Array`, `Two Pointers`\n## Problem\nGiven an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.\n\nConsider the number of unique elements in&nbsp;nums to be k​​​​​​​​​​​​​​. After removing duplicates, return the number of unique elements&nbsp;k.\n\nThe first&nbsp;k&nbsp;elements of&nbsp;nums&nbsp;should contain the unique numbers in sorted order. The remaining elements beyond index&nbsp;k - 1&nbsp;can be ignored.\n\nCustom Judge:\n\nThe judge will test your solution with the following code:\n\nint[] nums = [...]; // Input array\nint[] expectedNums = [...]; // The expected answer with correct length\n\nint k = removeDuplicates(nums); // Calls your implementation\n\nassert k == expectedNums.length;\nfor (int i = 0; i < k; i++) {\n    assert nums[i] == expectedNums[i];\n}\n\nIf all assertions pass, then your solution will be accepted.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,1,2]\nOutput: 2, nums = [1,2,_]\nExplanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n\nExample 2:\n\nInput: nums = [0,0,1,1,1,2,2,3,3,4]\nOutput: 5, nums = [0,1,2,3,4,_,_,_,_,_]\nExplanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 3 * 104\n\t-100 <= nums[i] <= 100\n\tnums is sorted in non-decreasing order.\n## My Submission\n\n- Runtime: 1 ms (beats 89.3%)\n- Memory: 46.6 MB (beats 45.9%)\n\n## Similar Problems\n\n- [Remove Element](https://leetcode.com/problems/remove-element/) — Easy\n- [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) — Medium\n- [Apply Operations to an Array](https://leetcode.com/problems/apply-operations-to-an-array/) — Easy\n- [Sum of Distances](https://leetcode.com/problems/sum-of-distances/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "1 ms",
+      "memory": "46.6 MB",
+      "runtimePct": 89.2942,
+      "memoryPct": 45.87250000000006,
+      "timestamp": 1785162830000,
+      "acRate": 64.08403930950045,
+      "likes": 20088,
+      "dislikes": 20715,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "remove-element",
+          "title": "Remove Element",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "remove-duplicates-from-sorted-array-ii",
+          "title": "Remove Duplicates from Sorted Array II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "apply-operations-to-an-array",
+          "title": "Apply Operations to an Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "sum-of-distances",
+          "title": "Sum of Distances",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given an integer array <code>nums</code> sorted in <strong>non-decreasing order</strong>, remove the duplicates <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\"><strong>in-place</strong></a> such that each unique element appears only <strong>once</strong>. The <strong>relative order</strong> of the elements should be kept the <strong>same</strong>.</p>\n\n<p>Consider the number of <em>unique elements</em> in&nbsp;<code>nums</code> to be <code>k<strong>​​​​​​​</strong></code>​​​​​​​. <meta charset=\"UTF-8\" />After removing duplicates, return the number of unique elements&nbsp;<code>k</code>.</p>\n\n<p><meta charset=\"UTF-8\" />The first&nbsp;<code>k</code>&nbsp;elements of&nbsp;<code>nums</code>&nbsp;should contain the unique numbers in <strong>sorted order</strong>. The remaining elements beyond index&nbsp;<code>k - 1</code>&nbsp;can be ignored.</p>\n\n<p><strong>Custom Judge:</strong></p>\n\n<p>The judge will test your solution with the following code:</p>\n\n<pre>\nint[] nums = [...]; // Input array\nint[] expectedNums = [...]; // The expected answer with correct length\n\nint k = removeDuplicates(nums); // Calls your implementation\n\nassert k == expectedNums.length;\nfor (int i = 0; i &lt; k; i++) {\n    assert nums[i] == expectedNums[i];\n}\n</pre>\n\n<p>If all assertions pass, then your solution will be <strong>accepted</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,1,2]\n<strong>Output:</strong> 2, nums = [1,2,_]\n<strong>Explanation:</strong> Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [0,0,1,1,1,2,2,3,3,4]\n<strong>Output:</strong> 5, nums = [0,1,2,3,4,_,_,_,_,_]\n<strong>Explanation:</strong> Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li><code>-100 &lt;= nums[i] &lt;= 100</code></li>\n\t<li><code>nums</code> is sorted in <strong>non-decreasing</strong> order.</li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
+    },
+    {
       "id": "lc-remove-duplicates-from-sorted-array::1813681167",
       "submissionId": 1813681167,
       "platform": "leetcode",
@@ -15329,7 +15404,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/lc-repeated-dna-sequences/lc-repeated-dna-sequences.java",
+        "problems/lc-repeated-dna-sequences/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-replace-employee-id-with-the-unique-identifier::1807318172",

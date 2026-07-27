@@ -245,6 +245,31 @@
         "elapsedSeconds": 0,
         "lang": "Java",
         "ts": 1795095645649
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1795099871990
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1795099898708
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1795099903344
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1795099920781
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1795099942089
       }
     ],
     "tags": [
@@ -423,11 +448,6 @@
       {
         "elapsedSeconds": 0,
         "lang": "Java",
-        "ts": 1793942262816
-      },
-      {
-        "elapsedSeconds": 0,
-        "lang": "Java",
         "ts": 1794201225265
       },
       {
@@ -469,6 +489,11 @@
         "elapsedSeconds": 0,
         "lang": "Java",
         "ts": 1795063845561
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1795099815290
       }
     ],
     "tags": [
@@ -794,6 +819,23 @@
     "tags": [
       "Array",
       "Prefix Sum"
+    ]
+  },
+  "leetcode::remove-duplicates-from-sorted-array": {
+    "difficulty": "Easy",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "remove-duplicates-from-sorted-array",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1795150521486
+      }
+    ],
+    "tags": [
+      "Array",
+      "Two Pointers"
     ]
   },
   "leetcode::repeated-dna-sequences": {

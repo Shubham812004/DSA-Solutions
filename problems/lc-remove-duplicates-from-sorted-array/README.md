@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-remove-duplicates-from-sorted-array` |
 | Topics | Array, Two Pointers |
-| Solved | 2026-05-22 |
-| Runtime | 1 ms (beats 78.3531%) |
-| Memory | 46.9 MB (beats 9.113099999999987%) |
+| Solved | 2026-07-27 |
+| Runtime | 1 ms (beats 89.2942%) |
+| Memory | 46.6 MB (beats 45.87250000000006%) |
 
 ## Problem Statement
 
@@ -60,42 +60,19 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 	- `nums` is sorted in **non-decreasing** order.
 
-## Hints
-
-<details>
-<summary>Hint 1</summary>
-
-In this problem, the key point to focus on is the input array being sorted. As far as duplicate elements are concerned, what is their positioning in the array when the given array is sorted? Look at the image below for the answer. If we know the position of one of the elements, do we also know the positioning of all the duplicate elements?
-
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-We need to modify the array in-place and the size of the final array would potentially be smaller than the size of the input array. So, we ought to use a two-pointer approach here. One, that would keep track of the current element in the original array and another one for just the unique elements.
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-Essentially, once an element is encountered, you simply need to **bypass** its duplicates and move on to the next unique element.
-
-</details>
-
 ## Solutions
 
 ```Java
 class Solution {
     public int removeDuplicates(int[] nums) {
-        int k = 1;
-        for (int i = 1; i < nums.length; i++) {
-            if (nums[i] != nums[i - 1]) {
-                nums[k] = nums[i];
-                k++;
+        int i = 1;
+        for(int j=1; j<nums.length; j++){
+            if(nums[j] != nums[j-1]){
+                nums[i] = nums[j];
+                i++;
             }
         }
-        return k;
+        return i;
     }
 }
 ```
