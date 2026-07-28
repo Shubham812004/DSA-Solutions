@@ -1343,6 +1343,26 @@
       "Prefix Sum"
     ]
   },
+  "leetcode::trapping-rain-water": {
+    "difficulty": "Hard",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "trapping-rain-water",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1795155452857
+      }
+    ],
+    "tags": [
+      "Array",
+      "Two Pointers",
+      "Dynamic Programming",
+      "Stack",
+      "Monotonic Stack"
+    ]
+  },
   "leetcode::two-sum-ii-input-array-is-sorted": {
     "difficulty": "Medium",
     "lang": "Java",
