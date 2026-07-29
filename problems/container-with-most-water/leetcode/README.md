@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-container-with-most-water` |
 | Topics | Array, Two Pointers, Greedy |
-| Solved | 2026-08-16 |
+| Solved | 2026-11-09 |
 | Runtime | 5 ms (beats 83.18379999999999%) |
-| Memory | 77.3 MB (beats 48.08060000000007%) |
+| Memory | 77 MB (beats 74.90870000000007%) |
 
 ## Problem Statement
 
@@ -54,8 +54,8 @@ class Solution {
         while(l < r){
             int h = Math.min(height[l], height[r]);
             int w = r-l;
-            int area = h * w;
-            maxArea = Math.max(area, maxArea);
+            int area = h*w;
+            maxArea = Math.max(maxArea, area);
             if(height[l] < height[r]){
                 l++;
             }

@@ -1,15 +1,15 @@
 {
   "schema": 1,
-  "asOf": "2026-11-09",
+  "asOf": "2026-11-10",
   "currentStreak": 8,
   "longestStreak": 8,
   "freezes": 1,
-  "totalPoints": 3795,
-  "totalSolves": 204,
+  "totalPoints": 3820,
+  "totalSolves": 205,
   "totalRecalls": 0,
   "byDifficulty": {
     "Easy": 92,
-    "Medium": 109,
+    "Medium": 110,
     "Hard": 3
   },
   "level": 6,

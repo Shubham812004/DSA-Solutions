@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-11-09T16:47:17.551Z",
+  "updatedAt": "2026-11-10T05:15:10.896Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 255,
+    "total": 256,
     "easy": 114,
-    "medium": 127,
+    "medium": 128,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 57,
-      "leetcode": 198
+      "leetcode": 199
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 139,
+      "Java": 140,
       "Python": 30,
       "MySQL": 35
     },
@@ -22,7 +22,7 @@
       "Binary Search": 4,
       "Searching": 8,
       "String": 26,
-      "Array": 135,
+      "Array": 136,
       "Greedy": 1,
       "Untagged": 1,
       "Prefix Sum": 2,
@@ -4188,16 +4188,16 @@
         "topic": "two-pointers",
         "voteCount": 94
       },
-      "readmeContent": "# [11] Container With Most Water\n**Difficulty:** Medium  |  **Acceptance:** 61.1%  |  **Likes:** 35353 / **Dislikes:** 2289\n**Tags:** `Array`, `Two Pointers`, `Greedy`\n## Problem\nYou are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).\n\nFind two lines that together with the x-axis form a container, such that the container contains the most water.\n\nReturn the maximum amount of water a container can store.\n\nNotice that you may not slant the container.\n\n&nbsp;\nExample 1:\n\nInput: height = [1,8,6,2,5,4,8,3,7]\nOutput: 49\nExplanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.\n\nExample 2:\n\nInput: height = [1,1]\nOutput: 1\n\n&nbsp;\nConstraints:\n\n\tn == height.length\n\t2 <= n <= 105\n\t0 <= height[i] <= 104\n## My Submission\n\n- Runtime: 5 ms (beats 83.2%)\n- Memory: 77.3 MB (beats 48.1%)\n\n## Similar Problems\n\n- [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) — Hard\n- [Maximum Tastiness of Candy Basket](https://leetcode.com/problems/maximum-tastiness-of-candy-basket/) — Medium\n- [House Robber IV](https://leetcode.com/problems/house-robber-iv/) — Medium\n",
-      "code": "class Solution {\n    public int maxArea(int[] height) {\n        int l = 0;\n        int r = height.length-1;\n        int maxArea = 0;\n        while(l < r){\n            int h = Math.min(height[l], height[r]);\n            int w = r-l;\n            int area = h * w;\n            maxArea = Math.max(area, maxArea);\n            if(height[l] < height[r]){\n                l++;\n            }\n            else{\n                r--;\n            }\n        }\n        return maxArea;\n    }\n}",
+      "readmeContent": "# [11] Container With Most Water\n**Difficulty:** Medium  |  **Acceptance:** 61.1%  |  **Likes:** 35353 / **Dislikes:** 2289\n**Tags:** `Array`, `Two Pointers`, `Greedy`\n## Problem\nYou are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).\n\nFind two lines that together with the x-axis form a container, such that the container contains the most water.\n\nReturn the maximum amount of water a container can store.\n\nNotice that you may not slant the container.\n\n&nbsp;\nExample 1:\n\nInput: height = [1,8,6,2,5,4,8,3,7]\nOutput: 49\nExplanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.\n\nExample 2:\n\nInput: height = [1,1]\nOutput: 1\n\n&nbsp;\nConstraints:\n\n\tn == height.length\n\t2 <= n <= 105\n\t0 <= height[i] <= 104\n## My Submission\n\n- Runtime: 5 ms (beats 83.2%)\n- Memory: 77 MB (beats 74.9%)\n\n## Similar Problems\n\n- [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) — Hard\n- [Maximum Tastiness of Candy Basket](https://leetcode.com/problems/maximum-tastiness-of-candy-basket/) — Medium\n- [House Robber IV](https://leetcode.com/problems/house-robber-iv/) — Medium\n",
+      "code": "class Solution {\n    public int maxArea(int[] height) {\n        int l = 0;\n        int r = height.length-1;\n        int maxArea = 0;\n        while(l < r){\n            int h = Math.min(height[l], height[r]);\n            int w = r-l;\n            int area = h*w;\n            maxArea = Math.max(maxArea, area);\n            if(height[l] < height[r]){\n                l++;\n            }\n            else{\n                r--;\n            }\n        }\n        return maxArea;\n    }\n}",
       "files": [
         {
           "path": "problems/container-with-most-water/leetcode/lc-container-with-most-water.java",
-          "content": "class Solution {\n    public int maxArea(int[] height) {\n        int l = 0;\n        int r = height.length-1;\n        int maxArea = 0;\n        while(l < r){\n            int h = Math.min(height[l], height[r]);\n            int w = r-l;\n            int area = h * w;\n            maxArea = Math.max(area, maxArea);\n            if(height[l] < height[r]){\n                l++;\n            }\n            else{\n                r--;\n            }\n        }\n        return maxArea;\n    }\n}"
+          "content": "class Solution {\n    public int maxArea(int[] height) {\n        int l = 0;\n        int r = height.length-1;\n        int maxArea = 0;\n        while(l < r){\n            int h = Math.min(height[l], height[r]);\n            int w = r-l;\n            int area = h*w;\n            maxArea = Math.max(maxArea, area);\n            if(height[l] < height[r]){\n                l++;\n            }\n            else{\n                r--;\n            }\n        }\n        return maxArea;\n    }\n}"
         },
         {
           "path": "problems/container-with-most-water/README.md",
-          "content": "# [11] Container With Most Water\n**Difficulty:** Medium  |  **Acceptance:** 61.1%  |  **Likes:** 35353 / **Dislikes:** 2289\n**Tags:** `Array`, `Two Pointers`, `Greedy`\n## Problem\nYou are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).\n\nFind two lines that together with the x-axis form a container, such that the container contains the most water.\n\nReturn the maximum amount of water a container can store.\n\nNotice that you may not slant the container.\n\n&nbsp;\nExample 1:\n\nInput: height = [1,8,6,2,5,4,8,3,7]\nOutput: 49\nExplanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.\n\nExample 2:\n\nInput: height = [1,1]\nOutput: 1\n\n&nbsp;\nConstraints:\n\n\tn == height.length\n\t2 <= n <= 105\n\t0 <= height[i] <= 104\n## My Submission\n\n- Runtime: 5 ms (beats 83.2%)\n- Memory: 77.3 MB (beats 48.1%)\n\n## Similar Problems\n\n- [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) — Hard\n- [Maximum Tastiness of Candy Basket](https://leetcode.com/problems/maximum-tastiness-of-candy-basket/) — Medium\n- [House Robber IV](https://leetcode.com/problems/house-robber-iv/) — Medium\n"
+          "content": "# [11] Container With Most Water\n**Difficulty:** Medium  |  **Acceptance:** 61.1%  |  **Likes:** 35353 / **Dislikes:** 2289\n**Tags:** `Array`, `Two Pointers`, `Greedy`\n## Problem\nYou are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).\n\nFind two lines that together with the x-axis form a container, such that the container contains the most water.\n\nReturn the maximum amount of water a container can store.\n\nNotice that you may not slant the container.\n\n&nbsp;\nExample 1:\n\nInput: height = [1,8,6,2,5,4,8,3,7]\nOutput: 49\nExplanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.\n\nExample 2:\n\nInput: height = [1,1]\nOutput: 1\n\n&nbsp;\nConstraints:\n\n\tn == height.length\n\t2 <= n <= 105\n\t0 <= height[i] <= 104\n## My Submission\n\n- Runtime: 5 ms (beats 83.2%)\n- Memory: 77 MB (beats 74.9%)\n\n## Similar Problems\n\n- [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) — Hard\n- [Maximum Tastiness of Candy Basket](https://leetcode.com/problems/maximum-tastiness-of-candy-basket/) — Medium\n- [House Robber IV](https://leetcode.com/problems/house-robber-iv/) — Medium\n"
         }
       ],
       "lang": {
@@ -4206,11 +4206,11 @@
         "slug": "java"
       },
       "runtime": "5 ms",
-      "memory": "77.3 MB",
+      "memory": "77 MB",
       "runtimePct": 83.18379999999999,
-      "memoryPct": 48.08060000000007,
-      "timestamp": 1786858998000,
-      "acRate": 61.11544395021215,
+      "memoryPct": 74.90870000000007,
+      "timestamp": 1794243110000,
+      "acRate": 61.11546855611747,
       "likes": 35353,
       "dislikes": 2289,
       "similar": [
@@ -4242,7 +4242,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/container-with-most-water/leetcode/lc-container-with-most-water.java",
+        "problems/container-with-most-water/leetcode/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-container-with-most-water::2004864095",
@@ -7598,7 +7604,7 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33377 / **Dislikes:** 2050\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.5%)\n- Memory: 43.4 MB (beats 68.0%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
+      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33378 / **Dislikes:** 2050\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.5%)\n- Memory: 43.4 MB (beats 67.5%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
       "code": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = palindrome(s, i, i);\n            int even = palindrome(s, i, i+1);\n            int max = Math.max(odd, even);\n            if(max > (end - start)){\n                start = i - (max-1)/2;\n                end = i + max/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int palindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        }\n        return r-l-1;\n    }\n}",
       "files": [
         {
@@ -7607,7 +7613,7 @@
         },
         {
           "path": "problems/longest-palindromic-substring/README.md",
-          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33377 / **Dislikes:** 2050\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.5%)\n- Memory: 43.4 MB (beats 68.0%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
+          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33378 / **Dislikes:** 2050\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.5%)\n- Memory: 43.4 MB (beats 67.5%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
         }
       ],
       "lang": {
@@ -7617,11 +7623,11 @@
       },
       "runtime": "14 ms",
       "memory": "43.4 MB",
-      "runtimePct": 93.53219999999999,
-      "memoryPct": 67.98,
+      "runtimePct": 93.54270000000002,
+      "memoryPct": 67.4886,
       "timestamp": 1790779293000,
-      "acRate": 38.94597511361672,
-      "likes": 33377,
+      "acRate": 38.947430931013926,
+      "likes": 33378,
       "dislikes": 2050,
       "similar": [
         {
@@ -12354,6 +12360,101 @@
         "problems/lc-minimum-number-of-days-to-make-m-bouquets/README.md"
       ],
       "_requestAIReview": true
+    },
+    {
+      "id": "lc-minimum-size-subarray-sum",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Minimum Size Subarray Sum",
+      "titleSlug": "minimum-size-subarray-sum",
+      "difficulty": "Medium",
+      "topic": "Sliding Window",
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Sliding Window",
+        "Prefix Sum"
+      ],
+      "canonical": null,
+      "readmeContent": "# [209] Minimum Size Subarray Sum\n**Difficulty:** Medium  |  **Acceptance:** 53.3%  |  **Likes:** 14934 / **Dislikes:** 567\n**Tags:** `Array`, `Binary Search`, `Sliding Window`, `Prefix Sum`\n## Problem\nGiven an array of positive integers nums and a positive integer target, return the minimal length of a subarray whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.\n\n&nbsp;\nExample 1:\n\nInput: target = 7, nums = [2,3,1,2,4,3]\nOutput: 2\nExplanation: The subarray [4,3] has the minimal length under the problem constraint.\n\nExample 2:\n\nInput: target = 4, nums = [1,4,4]\nOutput: 1\n\nExample 3:\n\nInput: target = 11, nums = [1,1,1,1,1,1,1,1]\nOutput: 0\n\n&nbsp;\nConstraints:\n\n\t1 <= target <= 109\n\t1 <= nums.length <= 105\n\t1 <= nums[i] <= 104\n\n&nbsp;\nFollow up: If you have figured out the O(n) solution, try coding another solution of which the time complexity is O(n log(n)).\n## My Submission\n\n- Runtime: 1 ms (beats 99.8%)\n- Memory: 69.5 MB (beats 8.3%)\n\n## Similar Problems\n\n- [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) — Hard\n- [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) — Medium\n- [Minimum Operations to Reduce X to Zero](https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/) — Medium\n- [K Radius Subarray Averages](https://leetcode.com/problems/k-radius-subarray-averages/) — Medium\n- [Maximum Product After K Increments](https://leetcode.com/problems/maximum-product-after-k-increments/) — Medium\n",
+      "code": "class Solution {\n    public int minSubArrayLen(int target, int[] nums) {\n        int l = 0;\n        int sum = 0;\n        int minLen = Integer.MAX_VALUE;\n        for(int r=0; r<nums.length; r++){\n            sum += nums[r];\n            while(sum >= target){\n                minLen = Math.min(minLen, r-l+1);\n                sum -= nums[l];\n                l++;\n            }\n        }\n        if(minLen == Integer.MAX_VALUE){\n            return 0;\n        }\n        else{\n            return minLen;\n        }\n    }\n}",
+      "files": [
+        {
+          "path": "problems/lc-minimum-size-subarray-sum/lc-minimum-size-subarray-sum.java",
+          "content": "class Solution {\n    public int minSubArrayLen(int target, int[] nums) {\n        int l = 0;\n        int sum = 0;\n        int minLen = Integer.MAX_VALUE;\n        for(int r=0; r<nums.length; r++){\n            sum += nums[r];\n            while(sum >= target){\n                minLen = Math.min(minLen, r-l+1);\n                sum -= nums[l];\n                l++;\n            }\n        }\n        if(minLen == Integer.MAX_VALUE){\n            return 0;\n        }\n        else{\n            return minLen;\n        }\n    }\n}"
+        },
+        {
+          "path": "problems/lc-minimum-size-subarray-sum/README.md",
+          "content": "# [209] Minimum Size Subarray Sum\n**Difficulty:** Medium  |  **Acceptance:** 53.3%  |  **Likes:** 14934 / **Dislikes:** 567\n**Tags:** `Array`, `Binary Search`, `Sliding Window`, `Prefix Sum`\n## Problem\nGiven an array of positive integers nums and a positive integer target, return the minimal length of a subarray whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.\n\n&nbsp;\nExample 1:\n\nInput: target = 7, nums = [2,3,1,2,4,3]\nOutput: 2\nExplanation: The subarray [4,3] has the minimal length under the problem constraint.\n\nExample 2:\n\nInput: target = 4, nums = [1,4,4]\nOutput: 1\n\nExample 3:\n\nInput: target = 11, nums = [1,1,1,1,1,1,1,1]\nOutput: 0\n\n&nbsp;\nConstraints:\n\n\t1 <= target <= 109\n\t1 <= nums.length <= 105\n\t1 <= nums[i] <= 104\n\n&nbsp;\nFollow up: If you have figured out the O(n) solution, try coding another solution of which the time complexity is O(n log(n)).\n## My Submission\n\n- Runtime: 1 ms (beats 99.8%)\n- Memory: 69.5 MB (beats 8.3%)\n\n## Similar Problems\n\n- [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) — Hard\n- [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) — Medium\n- [Minimum Operations to Reduce X to Zero](https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/) — Medium\n- [K Radius Subarray Averages](https://leetcode.com/problems/k-radius-subarray-averages/) — Medium\n- [Maximum Product After K Increments](https://leetcode.com/problems/maximum-product-after-k-increments/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "1 ms",
+      "memory": "69.5 MB",
+      "runtimePct": 99.8421,
+      "memoryPct": 8.342699999999992,
+      "timestamp": 1785310585000,
+      "acRate": 53.268649447363416,
+      "likes": 14934,
+      "dislikes": 567,
+      "similar": [
+        {
+          "difficulty": "Hard",
+          "titleSlug": "minimum-window-substring",
+          "title": "Minimum Window Substring",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-length-of-repeated-subarray",
+          "title": "Maximum Length of Repeated Subarray",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "minimum-operations-to-reduce-x-to-zero",
+          "title": "Minimum Operations to Reduce X to Zero",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "k-radius-subarray-averages",
+          "title": "K Radius Subarray Averages",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-product-after-k-increments",
+          "title": "Maximum Product After K Increments",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "shortest-subarray-with-or-at-least-k-i",
+          "title": "Shortest Subarray With OR at Least K I",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "minimum-positive-sum-subarray",
+          "title": "Minimum Positive Sum Subarray ",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given an array of positive integers <code>nums</code> and a positive integer <code>target</code>, return <em>the <strong>minimal length</strong> of a </em><span data-keyword=\"subarray-nonempty\"><em>subarray</em></span><em> whose sum is greater than or equal to</em> <code>target</code>. If there is no such subarray, return <code>0</code> instead.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> target = 7, nums = [2,3,1,2,4,3]\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> The subarray [4,3] has the minimal length under the problem constraint.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> target = 4, nums = [1,4,4]\n<strong>Output:</strong> 1\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> target = 11, nums = [1,1,1,1,1,1,1,1]\n<strong>Output:</strong> 0\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= target &lt;= 10<sup>9</sup></code></li>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> If you have figured out the <code>O(n)</code> solution, try coding another solution of which the time complexity is <code>O(n log(n))</code>.",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/minimum-size-subarray-sum/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
     },
     {
       "id": "lc-minimum-speed-to-arrive-on-time::2166972610",
