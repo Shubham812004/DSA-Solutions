@@ -116,6 +116,11 @@
         "elapsedSeconds": 0,
         "lang": "Java",
         "ts": 1794204563829
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794240660950
       }
     ],
     "tags": [
@@ -149,11 +154,6 @@
     "platform": "leetcode",
     "slug": "longest-palindromic-substring",
     "solves": [
-      {
-        "elapsedSeconds": 0,
-        "lang": "Java",
-        "ts": 1792126027846
-      },
       {
         "elapsedSeconds": 0,
         "lang": "Java",
@@ -198,6 +198,11 @@
         "elapsedSeconds": 0,
         "lang": "Java",
         "ts": 1794201225265
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794240670956
       }
     ],
     "tags": [
@@ -488,6 +493,11 @@
         "elapsedSeconds": 0,
         "lang": "Java",
         "ts": 1794203716512
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794240695080
       }
     ],
     "tags": [
@@ -605,6 +615,24 @@
       "Array",
       "Hash Table",
       "Prefix Sum"
+    ]
+  },
+  "leetcode::two-sum-ii-input-array-is-sorted": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "two-sum-ii-input-array-is-sorted",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794240761907
+      }
+    ],
+    "tags": [
+      "Array",
+      "Two Pointers",
+      "Binary Search"
     ]
   },
   "leetcode::valid-anagram": {

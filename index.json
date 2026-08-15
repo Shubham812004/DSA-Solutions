@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-11-09T06:09:24.032Z",
+  "updatedAt": "2026-11-09T16:12:42.013Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 252,
+    "total": 253,
     "easy": 114,
-    "medium": 124,
+    "medium": 125,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 57,
-      "leetcode": 195
+      "leetcode": 196
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 136,
+      "Java": 137,
       "Python": 30,
       "MySQL": 35
     },
@@ -22,7 +22,7 @@
       "Binary Search": 4,
       "Searching": 8,
       "String": 26,
-      "Array": 132,
+      "Array": 133,
       "Greedy": 1,
       "Untagged": 1,
       "Prefix Sum": 2,
@@ -4881,7 +4881,7 @@
       "runtimePct": 11.105300000000053,
       "memoryPct": 75.05230000000002,
       "timestamp": 1794204558000,
-      "acRate": 54.777174009108464,
+      "acRate": 54.778908412047755,
       "likes": 13495,
       "dislikes": 387,
       "similar": [
@@ -7396,7 +7396,7 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33375 / **Dislikes:** 2050\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.5%)\n- Memory: 43.4 MB (beats 68.0%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
+      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33377 / **Dislikes:** 2050\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.5%)\n- Memory: 43.4 MB (beats 68.0%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
       "code": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = palindrome(s, i, i);\n            int even = palindrome(s, i, i+1);\n            int max = Math.max(odd, even);\n            if(max > (end - start)){\n                start = i - (max-1)/2;\n                end = i + max/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int palindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        }\n        return r-l-1;\n    }\n}",
       "files": [
         {
@@ -7405,7 +7405,7 @@
         },
         {
           "path": "problems/longest-palindromic-substring/README.md",
-          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33375 / **Dislikes:** 2050\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.5%)\n- Memory: 43.4 MB (beats 68.0%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
+          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33377 / **Dislikes:** 2050\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.5%)\n- Memory: 43.4 MB (beats 68.0%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
         }
       ],
       "lang": {
@@ -7418,8 +7418,8 @@
       "runtimePct": 93.53219999999999,
       "memoryPct": 67.98,
       "timestamp": 1790779293000,
-      "acRate": 38.944525323300624,
-      "likes": 33375,
+      "acRate": 38.94597511361672,
+      "likes": 33377,
       "dislikes": 2050,
       "similar": [
         {
@@ -16251,7 +16251,7 @@
         "Counting"
       ],
       "canonical": null,
-      "readmeContent": "# [451] Sort Characters By Frequency\n**Difficulty:** Medium  |  **Acceptance:** 75.9%  |  **Likes:** 9486 / **Dislikes:** 342\n**Tags:** `Hash Table`, `String`, `Sorting`, `Heap (Priority Queue)`, `Bucket Sort`, `Counting`\n## Problem\nGiven a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string.\n\nReturn the sorted string. If there are multiple answers, return any of them.\n\n&nbsp;\nExample 1:\n\nInput: s = \"tree\"\nOutput: \"eert\"\nExplanation: 'e' appears twice while 'r' and 't' both appear once.\nSo 'e' must appear before both 'r' and 't'. Therefore \"eetr\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cccaaa\"\nOutput: \"aaaccc\"\nExplanation: Both 'c' and 'a' appear three times, so both \"cccaaa\" and \"aaaccc\" are valid answers.\nNote that \"cacaca\" is incorrect, as the same characters must be together.\n\nExample 3:\n\nInput: s = \"Aabb\"\nOutput: \"bbAa\"\nExplanation: \"bbaA\" is also a valid answer, but \"Aabb\" is incorrect.\nNote that 'A' and 'a' are treated as two different characters.\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 5 * 105\n\ts consists of uppercase and lowercase English letters and digits.\n## My Submission\n\n- Runtime: 14 ms (beats 64.8%)\n- Memory: 46.6 MB (beats 52.6%)\n\n## Similar Problems\n\n- [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) — Medium\n- [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) — Easy\n- [Sort Array by Increasing Frequency](https://leetcode.com/problems/sort-array-by-increasing-frequency/) — Easy\n- [Percentage of Letter in String](https://leetcode.com/problems/percentage-of-letter-in-string/) — Easy\n- [Maximum Number of Pairs in Array](https://leetcode.com/problems/maximum-number-of-pairs-in-array/) — Easy\n",
+      "readmeContent": "# [451] Sort Characters By Frequency\n**Difficulty:** Medium  |  **Acceptance:** 75.9%  |  **Likes:** 9488 / **Dislikes:** 342\n**Tags:** `Hash Table`, `String`, `Sorting`, `Heap (Priority Queue)`, `Bucket Sort`, `Counting`\n## Problem\nGiven a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string.\n\nReturn the sorted string. If there are multiple answers, return any of them.\n\n&nbsp;\nExample 1:\n\nInput: s = \"tree\"\nOutput: \"eert\"\nExplanation: 'e' appears twice while 'r' and 't' both appear once.\nSo 'e' must appear before both 'r' and 't'. Therefore \"eetr\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cccaaa\"\nOutput: \"aaaccc\"\nExplanation: Both 'c' and 'a' appear three times, so both \"cccaaa\" and \"aaaccc\" are valid answers.\nNote that \"cacaca\" is incorrect, as the same characters must be together.\n\nExample 3:\n\nInput: s = \"Aabb\"\nOutput: \"bbAa\"\nExplanation: \"bbaA\" is also a valid answer, but \"Aabb\" is incorrect.\nNote that 'A' and 'a' are treated as two different characters.\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 5 * 105\n\ts consists of uppercase and lowercase English letters and digits.\n## My Submission\n\n- Runtime: 14 ms (beats 64.8%)\n- Memory: 46.6 MB (beats 52.6%)\n\n## Similar Problems\n\n- [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) — Medium\n- [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) — Easy\n- [Sort Array by Increasing Frequency](https://leetcode.com/problems/sort-array-by-increasing-frequency/) — Easy\n- [Percentage of Letter in String](https://leetcode.com/problems/percentage-of-letter-in-string/) — Easy\n- [Maximum Number of Pairs in Array](https://leetcode.com/problems/maximum-number-of-pairs-in-array/) — Easy\n",
       "code": "class Solution {\n    public String frequencySort(String s) {\n        HashMap<Character, Integer> map = new HashMap<>();\n        for(int i=0; i<s.length(); i++){\n            char ch = s.charAt(i);\n            map.put(ch, map.getOrDefault(ch, 0)+1);\n        }\n        PriorityQueue<Map.Entry<Character, Integer>> pq = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());\n        for(Map.Entry<Character, Integer> entry : map.entrySet()){\n            pq.add(entry);\n        }\n        StringBuilder str = new StringBuilder();\n        while(!pq.isEmpty()){\n            Map.Entry<Character, Integer> curr = pq.poll();\n            int freq = curr.getValue();\n            char ch = curr.getKey();\n            while(freq > 0){\n                str.append(ch);\n                freq--;\n            }\n        }\n        return str.toString();\n    }\n}",
       "files": [
         {
@@ -16260,7 +16260,7 @@
         },
         {
           "path": "problems/lc-sort-characters-by-frequency/README.md",
-          "content": "# [451] Sort Characters By Frequency\n**Difficulty:** Medium  |  **Acceptance:** 75.9%  |  **Likes:** 9486 / **Dislikes:** 342\n**Tags:** `Hash Table`, `String`, `Sorting`, `Heap (Priority Queue)`, `Bucket Sort`, `Counting`\n## Problem\nGiven a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string.\n\nReturn the sorted string. If there are multiple answers, return any of them.\n\n&nbsp;\nExample 1:\n\nInput: s = \"tree\"\nOutput: \"eert\"\nExplanation: 'e' appears twice while 'r' and 't' both appear once.\nSo 'e' must appear before both 'r' and 't'. Therefore \"eetr\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cccaaa\"\nOutput: \"aaaccc\"\nExplanation: Both 'c' and 'a' appear three times, so both \"cccaaa\" and \"aaaccc\" are valid answers.\nNote that \"cacaca\" is incorrect, as the same characters must be together.\n\nExample 3:\n\nInput: s = \"Aabb\"\nOutput: \"bbAa\"\nExplanation: \"bbaA\" is also a valid answer, but \"Aabb\" is incorrect.\nNote that 'A' and 'a' are treated as two different characters.\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 5 * 105\n\ts consists of uppercase and lowercase English letters and digits.\n## My Submission\n\n- Runtime: 14 ms (beats 64.8%)\n- Memory: 46.6 MB (beats 52.6%)\n\n## Similar Problems\n\n- [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) — Medium\n- [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) — Easy\n- [Sort Array by Increasing Frequency](https://leetcode.com/problems/sort-array-by-increasing-frequency/) — Easy\n- [Percentage of Letter in String](https://leetcode.com/problems/percentage-of-letter-in-string/) — Easy\n- [Maximum Number of Pairs in Array](https://leetcode.com/problems/maximum-number-of-pairs-in-array/) — Easy\n"
+          "content": "# [451] Sort Characters By Frequency\n**Difficulty:** Medium  |  **Acceptance:** 75.9%  |  **Likes:** 9488 / **Dislikes:** 342\n**Tags:** `Hash Table`, `String`, `Sorting`, `Heap (Priority Queue)`, `Bucket Sort`, `Counting`\n## Problem\nGiven a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string.\n\nReturn the sorted string. If there are multiple answers, return any of them.\n\n&nbsp;\nExample 1:\n\nInput: s = \"tree\"\nOutput: \"eert\"\nExplanation: 'e' appears twice while 'r' and 't' both appear once.\nSo 'e' must appear before both 'r' and 't'. Therefore \"eetr\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cccaaa\"\nOutput: \"aaaccc\"\nExplanation: Both 'c' and 'a' appear three times, so both \"cccaaa\" and \"aaaccc\" are valid answers.\nNote that \"cacaca\" is incorrect, as the same characters must be together.\n\nExample 3:\n\nInput: s = \"Aabb\"\nOutput: \"bbAa\"\nExplanation: \"bbaA\" is also a valid answer, but \"Aabb\" is incorrect.\nNote that 'A' and 'a' are treated as two different characters.\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 5 * 105\n\ts consists of uppercase and lowercase English letters and digits.\n## My Submission\n\n- Runtime: 14 ms (beats 64.8%)\n- Memory: 46.6 MB (beats 52.6%)\n\n## Similar Problems\n\n- [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) — Medium\n- [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) — Easy\n- [Sort Array by Increasing Frequency](https://leetcode.com/problems/sort-array-by-increasing-frequency/) — Easy\n- [Percentage of Letter in String](https://leetcode.com/problems/percentage-of-letter-in-string/) — Easy\n- [Maximum Number of Pairs in Array](https://leetcode.com/problems/maximum-number-of-pairs-in-array/) — Easy\n"
         }
       ],
       "lang": {
@@ -16273,8 +16273,8 @@
       "runtimePct": 64.7971,
       "memoryPct": 52.622899999999994,
       "timestamp": 1785737253000,
-      "acRate": 75.92309621394098,
-      "likes": 9486,
+      "acRate": 75.92430186086445,
+      "likes": 9488,
       "dislikes": 342,
       "similar": [
         {
@@ -17394,6 +17394,89 @@
         "problems/lc-sum-of-primes-between-number-and-its-reverse/lc-sum-of-primes-between-number-and-its-reverse.java",
         "problems/lc-sum-of-primes-between-number-and-its-reverse/README.md"
       ]
+    },
+    {
+      "id": "lc-two-sum-ii-input-array-is-sorted",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Two Sum II - Input Array Is Sorted",
+      "titleSlug": "two-sum-ii-input-array-is-sorted",
+      "difficulty": "Medium",
+      "topic": "Two Pointers",
+      "tags": [
+        "Array",
+        "Two Pointers",
+        "Binary Search"
+      ],
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 167,
+            "platform": "leetcode",
+            "slug": "two-sum-ii-input-array-is-sorted"
+          }
+        ],
+        "canonicalId": "two-sum-ii-input-array-is-sorted",
+        "canonicalTitle": "Two Sum II - Input Array Is Sorted",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "two-pointer",
+        "tags": [
+          "array"
+        ],
+        "topic": "two-pointers",
+        "voteCount": 89
+      },
+      "readmeContent": "# [167] Two Sum II - Input Array Is Sorted\n**Difficulty:** Medium  |  **Acceptance:** 66.1%  |  **Likes:** 14002 / **Dislikes:** 1552\n**Tags:** `Array`, `Two Pointers`, `Binary Search`\n## Problem\nYou are given a 1-indexed array of integers numbers that is already sorted in non-decreasing order.\n\nFind two numbers such that they add up to a specific target number. Let these two numbers be numbers[index1] and numbers[index2] where 1 <= index1 < index2 <= numbers.length.\n\nReturn the indices of the two numbers index1 and index2 as an integer array [index1, index2] of length 2.\n\nThe tests are generated such that there is exactly one solution. You may not use the same element twice.\n\nYour solution must use only constant extra space.\n\n&nbsp;\nExample 1:\n\nInput: numbers = [2,7,11,15], target = 9\nOutput: [1,2]\nExplanation: The sum of 2 and 7 is 9. Therefore, index1 = 1, index2 = 2. We return [1, 2].\n\nExample 2:\n\nInput: numbers = [2,3,4], target = 6\nOutput: [1,3]\nExplanation: The sum of 2 and 4 is 6. Therefore index1 = 1, index2 = 3. We return [1, 3].\n\nExample 3:\n\nInput: numbers = [-1,0], target = -1\nOutput: [1,2]\nExplanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We return [1, 2].\n\n&nbsp;\nConstraints:\n\n\t2 <= numbers.length <= 3 * 104\n\t-1000 <= numbers[i] <= 1000\n\tnumbers is sorted in non-decreasing order.\n\t-1000 <= target <= 1000\n\tThe tests are generated such that there is exactly one solution.\n## My Submission\n\n- Runtime: 2 ms (beats 97.7%)\n- Memory: 48.3 MB (beats 59.7%)\n\n## Similar Problems\n\n- [Two Sum](https://leetcode.com/problems/two-sum/) — Easy\n- [Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/) — Easy\n",
+      "code": "class Solution {\n    public int[] twoSum(int[] numbers, int target) {\n        int l = 0;\n        int r = numbers.length-1;\n        while(l <= r){\n            int sum = numbers[l] + numbers[r];\n            if(sum == target){\n                return new int[]{l+1,r+1};\n            }\n            else if(sum < target){\n                l++;\n            }\n            else{\n                r--;\n            }\n        }\n        return new int[]{}; \n    }\n}",
+      "files": [
+        {
+          "path": "problems/two-sum-ii-input-array-is-sorted/leetcode/lc-two-sum-ii-input-array-is-sorted.java",
+          "content": "class Solution {\n    public int[] twoSum(int[] numbers, int target) {\n        int l = 0;\n        int r = numbers.length-1;\n        while(l <= r){\n            int sum = numbers[l] + numbers[r];\n            if(sum == target){\n                return new int[]{l+1,r+1};\n            }\n            else if(sum < target){\n                l++;\n            }\n            else{\n                r--;\n            }\n        }\n        return new int[]{}; \n    }\n}"
+        },
+        {
+          "path": "problems/two-sum-ii-input-array-is-sorted/README.md",
+          "content": "# [167] Two Sum II - Input Array Is Sorted\n**Difficulty:** Medium  |  **Acceptance:** 66.1%  |  **Likes:** 14002 / **Dislikes:** 1552\n**Tags:** `Array`, `Two Pointers`, `Binary Search`\n## Problem\nYou are given a 1-indexed array of integers numbers that is already sorted in non-decreasing order.\n\nFind two numbers such that they add up to a specific target number. Let these two numbers be numbers[index1] and numbers[index2] where 1 <= index1 < index2 <= numbers.length.\n\nReturn the indices of the two numbers index1 and index2 as an integer array [index1, index2] of length 2.\n\nThe tests are generated such that there is exactly one solution. You may not use the same element twice.\n\nYour solution must use only constant extra space.\n\n&nbsp;\nExample 1:\n\nInput: numbers = [2,7,11,15], target = 9\nOutput: [1,2]\nExplanation: The sum of 2 and 7 is 9. Therefore, index1 = 1, index2 = 2. We return [1, 2].\n\nExample 2:\n\nInput: numbers = [2,3,4], target = 6\nOutput: [1,3]\nExplanation: The sum of 2 and 4 is 6. Therefore index1 = 1, index2 = 3. We return [1, 3].\n\nExample 3:\n\nInput: numbers = [-1,0], target = -1\nOutput: [1,2]\nExplanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We return [1, 2].\n\n&nbsp;\nConstraints:\n\n\t2 <= numbers.length <= 3 * 104\n\t-1000 <= numbers[i] <= 1000\n\tnumbers is sorted in non-decreasing order.\n\t-1000 <= target <= 1000\n\tThe tests are generated such that there is exactly one solution.\n## My Submission\n\n- Runtime: 2 ms (beats 97.7%)\n- Memory: 48.3 MB (beats 59.7%)\n\n## Similar Problems\n\n- [Two Sum](https://leetcode.com/problems/two-sum/) — Easy\n- [Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/) — Easy\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "2 ms",
+      "memory": "48.3 MB",
+      "runtimePct": 97.7441,
+      "memoryPct": 59.73589999999997,
+      "timestamp": 1786774127000,
+      "acRate": 66.0969512568169,
+      "likes": 14002,
+      "dislikes": 1552,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "two-sum",
+          "title": "Two Sum",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "two-sum-iv-input-is-a-bst",
+          "title": "Two Sum IV - Input is a BST",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>You are given a <strong>1-indexed</strong> array of integers <code>numbers</code> that is already <strong>sorted in non-decreasing order</strong>.</p>\n\n<p>Find <strong>two</strong> numbers such that they add up to a specific <code>target</code> number. Let these two numbers be <code>numbers[index<sub>1</sub>]</code> and <code>numbers[index<sub>2</sub>]</code> where <code>1 &lt;= index<sub>1</sub> &lt; index<sub>2</sub> &lt;= numbers.length</code>.</p>\n\n<p>Return the indices of the two numbers <code>index<sub>1</sub></code> and <code>index<sub>2</sub></code> as an integer array <code>[index<sub>1</sub>, index<sub>2</sub>]</code> of length 2.</p>\n\n<p>The tests are generated such that there is <strong>exactly one solution</strong>. You <strong>may not</strong> use the same element twice.</p>\n\n<p>Your solution must use only constant extra space.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> numbers = [<u>2</u>,<u>7</u>,11,15], target = 9\n<strong>Output:</strong> [1,2]\n<strong>Explanation:</strong> The sum of 2 and 7 is 9. Therefore, index<sub>1</sub> = 1, index<sub>2</sub> = 2. We return [1, 2].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> numbers = [<u>2</u>,3,<u>4</u>], target = 6\n<strong>Output:</strong> [1,3]\n<strong>Explanation:</strong> The sum of 2 and 4 is 6. Therefore index<sub>1</sub> = 1, index<sub>2</sub> = 3. We return [1, 3].\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> numbers = [<u>-1</u>,<u>0</u>], target = -1\n<strong>Output:</strong> [1,2]\n<strong>Explanation:</strong> The sum of -1 and 0 is -1. Therefore index<sub>1</sub> = 1, index<sub>2</sub> = 2. We return [1, 2].\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= numbers.length &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li><code>-1000 &lt;= numbers[i] &lt;= 1000</code></li>\n\t<li><code>numbers</code> is sorted in <strong>non-decreasing order</strong>.</li>\n\t<li><code>-1000 &lt;= target &lt;= 1000</code></li>\n\t<li>The tests are generated such that there is <strong>exactly one solution</strong>.</li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
     },
     {
       "id": "lc-two-sum::1807651380",
