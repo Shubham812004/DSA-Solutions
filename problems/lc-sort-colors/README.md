@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-sort-colors` |
 | Topics | Array, Two Pointers, Sorting, Quicksort, Bubble Sort |
-| Solved | 2026-04-15 |
+| Solved | 2026-08-15 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 43.2 MB (beats 88.05120000000001%) |
+| Memory | 43.4 MB (beats 31.4867%) |
 
 ## Problem Statement
 
@@ -54,57 +54,31 @@ The array has one each of 0, 1, and 2, arranged in-place in the order 0, 1, 2.
 
 **Follow up:** Could you come up with a one-pass algorithm using only constant extra space?
 
-## Hints
-
-<details>
-<summary>Hint 1</summary>
-
-A rather straight forward solution is a two-pass algorithm using counting sort.
-
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-Iterate the array counting number of 0's, 1's, and 2's.
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-Overwrite array with the total number of 0's, then 1's and followed by 2's.
-
-</details>
-
 ## Solutions
 
 ```Java
 class Solution {
-
-    public void swap(int[] nums, int left, int right){
-        while(left < right){
-            int temp = nums[left];
-            nums[left] = nums[right];
-            nums[right] = temp;
-            left++;
-            right--;
-        }
+    public void swap(int[] nums, int l, int r){
+        int temp = nums[l];
+        nums[l] = nums[r];
+        nums[r] = temp;
     }
     public void sortColors(int[] nums) {
-        int low = 0, mid = 0, high = nums.length - 1;
-        while(mid <= high){
+        int l = 0;
+        int mid = 0;
+        int r = nums.length-1;
+        while(mid <= r){
             if(nums[mid] == 0){
-                swap(nums, low, mid);
-                low++;
+                swap(nums, l, mid);
+                l++;
                 mid++;
             }
             else if(nums[mid] == 1){
                 mid++;
             }
             else{
-                swap(nums, mid, high);
-                high--;
+                swap(nums, mid, r);
+                r--;
             }
         }
     }

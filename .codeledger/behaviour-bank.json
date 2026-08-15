@@ -1139,6 +1139,26 @@
       "Counting"
     ]
   },
+  "leetcode::sort-colors": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "sort-colors",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1795154366950
+      }
+    ],
+    "tags": [
+      "Array",
+      "Two Pointers",
+      "Sorting",
+      "Quicksort",
+      "Bubble Sort"
+    ]
+  },
   "leetcode::spiral-matrix": {
     "difficulty": "Medium",
     "lang": "Java",
