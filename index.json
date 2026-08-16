@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-11-09T16:28:16.759Z",
+  "updatedAt": "2026-11-09T16:47:17.551Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 254,
+    "total": 255,
     "easy": 114,
-    "medium": 126,
+    "medium": 127,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 57,
-      "leetcode": 197
+      "leetcode": 198
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 138,
+      "Java": 139,
       "Python": 30,
       "MySQL": 35
     },
@@ -22,7 +22,7 @@
       "Binary Search": 4,
       "Searching": 8,
       "String": 26,
-      "Array": 134,
+      "Array": 135,
       "Greedy": 1,
       "Untagged": 1,
       "Prefix Sum": 2,
@@ -1986,7 +1986,11 @@
       "_requestAIReview": true,
       "platform": "leetcode",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/3sum/leetcode/lc-3sum.java",
+        "problems/3sum/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-3sum::1812933130",
@@ -4150,6 +4154,95 @@
         "problems/lc-confirmation-rate/lc-confirmation-rate.sql",
         "problems/lc-confirmation-rate/README.md"
       ]
+    },
+    {
+      "id": "lc-container-with-most-water",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Container With Most Water",
+      "titleSlug": "container-with-most-water",
+      "difficulty": "Medium",
+      "topic": "Two Pointers",
+      "tags": [
+        "Array",
+        "Two Pointers",
+        "Greedy"
+      ],
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 11,
+            "platform": "leetcode",
+            "slug": "container-with-most-water"
+          }
+        ],
+        "canonicalId": "container-with-most-water",
+        "canonicalTitle": "Container With Most Water",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "greedy",
+        "tags": [
+          "array"
+        ],
+        "topic": "two-pointers",
+        "voteCount": 94
+      },
+      "readmeContent": "# [11] Container With Most Water\n**Difficulty:** Medium  |  **Acceptance:** 61.1%  |  **Likes:** 35353 / **Dislikes:** 2289\n**Tags:** `Array`, `Two Pointers`, `Greedy`\n## Problem\nYou are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).\n\nFind two lines that together with the x-axis form a container, such that the container contains the most water.\n\nReturn the maximum amount of water a container can store.\n\nNotice that you may not slant the container.\n\n&nbsp;\nExample 1:\n\nInput: height = [1,8,6,2,5,4,8,3,7]\nOutput: 49\nExplanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.\n\nExample 2:\n\nInput: height = [1,1]\nOutput: 1\n\n&nbsp;\nConstraints:\n\n\tn == height.length\n\t2 <= n <= 105\n\t0 <= height[i] <= 104\n## My Submission\n\n- Runtime: 5 ms (beats 83.2%)\n- Memory: 77.3 MB (beats 48.1%)\n\n## Similar Problems\n\n- [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) — Hard\n- [Maximum Tastiness of Candy Basket](https://leetcode.com/problems/maximum-tastiness-of-candy-basket/) — Medium\n- [House Robber IV](https://leetcode.com/problems/house-robber-iv/) — Medium\n",
+      "code": "class Solution {\n    public int maxArea(int[] height) {\n        int l = 0;\n        int r = height.length-1;\n        int maxArea = 0;\n        while(l < r){\n            int h = Math.min(height[l], height[r]);\n            int w = r-l;\n            int area = h * w;\n            maxArea = Math.max(area, maxArea);\n            if(height[l] < height[r]){\n                l++;\n            }\n            else{\n                r--;\n            }\n        }\n        return maxArea;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/container-with-most-water/leetcode/lc-container-with-most-water.java",
+          "content": "class Solution {\n    public int maxArea(int[] height) {\n        int l = 0;\n        int r = height.length-1;\n        int maxArea = 0;\n        while(l < r){\n            int h = Math.min(height[l], height[r]);\n            int w = r-l;\n            int area = h * w;\n            maxArea = Math.max(area, maxArea);\n            if(height[l] < height[r]){\n                l++;\n            }\n            else{\n                r--;\n            }\n        }\n        return maxArea;\n    }\n}"
+        },
+        {
+          "path": "problems/container-with-most-water/README.md",
+          "content": "# [11] Container With Most Water\n**Difficulty:** Medium  |  **Acceptance:** 61.1%  |  **Likes:** 35353 / **Dislikes:** 2289\n**Tags:** `Array`, `Two Pointers`, `Greedy`\n## Problem\nYou are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).\n\nFind two lines that together with the x-axis form a container, such that the container contains the most water.\n\nReturn the maximum amount of water a container can store.\n\nNotice that you may not slant the container.\n\n&nbsp;\nExample 1:\n\nInput: height = [1,8,6,2,5,4,8,3,7]\nOutput: 49\nExplanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.\n\nExample 2:\n\nInput: height = [1,1]\nOutput: 1\n\n&nbsp;\nConstraints:\n\n\tn == height.length\n\t2 <= n <= 105\n\t0 <= height[i] <= 104\n## My Submission\n\n- Runtime: 5 ms (beats 83.2%)\n- Memory: 77.3 MB (beats 48.1%)\n\n## Similar Problems\n\n- [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) — Hard\n- [Maximum Tastiness of Candy Basket](https://leetcode.com/problems/maximum-tastiness-of-candy-basket/) — Medium\n- [House Robber IV](https://leetcode.com/problems/house-robber-iv/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "5 ms",
+      "memory": "77.3 MB",
+      "runtimePct": 83.18379999999999,
+      "memoryPct": 48.08060000000007,
+      "timestamp": 1786858998000,
+      "acRate": 61.11544395021215,
+      "likes": 35353,
+      "dislikes": 2289,
+      "similar": [
+        {
+          "difficulty": "Hard",
+          "titleSlug": "trapping-rain-water",
+          "title": "Trapping Rain Water",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-tastiness-of-candy-basket",
+          "title": "Maximum Tastiness of Candy Basket",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "house-robber-iv",
+          "title": "House Robber IV",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>You are given an integer array <code>height</code> of length <code>n</code>. There are <code>n</code> vertical lines drawn such that the two endpoints of the <code>i<sup>th</sup></code> line are <code>(i, 0)</code> and <code>(i, height[i])</code>.</p>\n\n<p>Find two lines that together with the x-axis form a container, such that the container contains the most water.</p>\n\n<p>Return <em>the maximum amount of water a container can store</em>.</p>\n\n<p><strong>Notice</strong> that you may not slant the container.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/17/question_11.jpg\" style=\"width: 600px; height: 287px;\" />\n<pre>\n<strong>Input:</strong> height = [1,8,6,2,5,4,8,3,7]\n<strong>Output:</strong> 49\n<strong>Explanation:</strong> The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> height = [1,1]\n<strong>Output:</strong> 1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == height.length</code></li>\n\t<li><code>2 &lt;= n &lt;= 10<sup>5</sup></code></li>\n\t<li><code>0 &lt;= height[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/container-with-most-water/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
     },
     {
       "id": "lc-container-with-most-water::2004864095",

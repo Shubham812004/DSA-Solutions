@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-container-with-most-water` |
 | Topics | Array, Two Pointers, Greedy |
-| Solved | 2026-05-16 |
-| Runtime | 5 ms (beats 82.38489999999999%) |
-| Memory | 77.3 MB (beats 68.56489999999987%) |
+| Solved | 2026-08-16 |
+| Runtime | 5 ms (beats 83.18379999999999%) |
+| Memory | 77.3 MB (beats 48.08060000000007%) |
 
 ## Problem Statement
 
@@ -43,46 +43,24 @@ Return _the maximum amount of water a container can store_.
 
 	- `0 <= height[i] <= 104`
 
-## Hints
-
-<details>
-<summary>Hint 1</summary>
-
-If you simulate the problem, it will be O(n^2) which is not efficient.
-
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-Try to use two-pointers. Set one pointer to the left and one to the right of the array. Always move the pointer that points to the lower line.
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-How can you calculate the amount of water at each step?
-
-</details>
-
 ## Solutions
 
 ```Java
 class Solution {
     public int maxArea(int[] height) {
-        int left = 0;
-        int right = height.length -1;
-        int maxArea= 0;
-        while(left < right){
-            int h = Math.min(height[left], height[right]);
-            int w = right - left;
-            int area = h*w;
-            maxArea = Math.max(maxArea, area);
-            if(height[left] < height[right]){
-                left++;
-            }else{
-                right--;
+        int l = 0;
+        int r = height.length-1;
+        int maxArea = 0;
+        while(l < r){
+            int h = Math.min(height[l], height[r]);
+            int w = r-l;
+            int area = h * w;
+            maxArea = Math.max(area, maxArea);
+            if(height[l] < height[r]){
+                l++;
+            }
+            else{
+                r--;
             }
         }
         return maxArea;

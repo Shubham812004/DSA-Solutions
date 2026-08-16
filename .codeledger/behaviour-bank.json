@@ -106,6 +106,24 @@
       "Sorting"
     ]
   },
+  "leetcode::container-with-most-water": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "container-with-most-water",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794242837436
+      }
+    ],
+    "tags": [
+      "Array",
+      "Two Pointers",
+      "Greedy"
+    ]
+  },
   "leetcode::daily-temperatures": {
     "difficulty": "Medium",
     "lang": "Java",
