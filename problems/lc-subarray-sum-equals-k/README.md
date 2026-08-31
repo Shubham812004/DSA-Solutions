@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-subarray-sum-equals-k` |
 | Topics | Array, Hash Table, Prefix Sum |
-| Solved | 2026-05-20 |
-| Runtime | 23 ms (beats 92.43540000000002%) |
-| Memory | 48.9 MB (beats 47.08350000000002%) |
+| Solved | 2026-08-31 |
+| Runtime | 24 ms (beats 79.46730000000001%) |
+| Memory | 48.7 MB (beats 46.14580000000004%) |
 
 ## Problem Statement
 
@@ -37,53 +37,21 @@ A subarray is a contiguous **non-empty** sequence of elements within an array.
 
 	- `-107 <= k <= 107`
 
-## Hints
-
-<details>
-<summary>Hint 1</summary>
-
-Will Brute force work here? Try to optimize it.
-
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-Can we optimize it by using some extra space?
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-What about storing sum frequencies in a hash table? Will it be useful?
-
-</details>
-
-<details>
-<summary>Hint 4</summary>
-
-sum(i,j)=sum(0,j)-sum(0,i), where sum(i,j) represents the sum of all the elements from index i to j-1.
-
-Can we use this property to optimize it.
-
-</details>
-
 ## Solutions
 
 ```Java
 class Solution {
     public int subarraySum(int[] nums, int k) {
         HashMap<Integer, Integer> map = new HashMap<>();
-        map.put(0,1);
-        int count = 0;
+        map.put(0, 1);
+        int count =0;
         int sum = 0;
         for(int num : nums){
             sum += num;
             if(map.containsKey(sum - k)) count += map.get(sum - k);
             map.put(sum, map.getOrDefault(sum, 0)+1);
         }
-        return count++;
+        return count;
     }
 }
 ```

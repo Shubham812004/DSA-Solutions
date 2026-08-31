@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-11-05T17:06:43.392Z",
+  "updatedAt": "2026-11-05T17:08:30.377Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 243,
+    "total": 244,
     "easy": 113,
-    "medium": 116,
+    "medium": 117,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 57,
-      "leetcode": 186
+      "leetcode": 187
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 128,
+      "Java": 129,
       "Python": 29,
       "MySQL": 35
     },
@@ -22,7 +22,7 @@
       "Binary Search": 4,
       "Searching": 8,
       "String": 24,
-      "Array": 127,
+      "Array": 128,
       "Greedy": 1,
       "Untagged": 1,
       "Prefix Sum": 2,
@@ -16032,6 +16032,100 @@
         "problems/lc-students-and-examinations/lc-students-and-examinations.sql",
         "problems/lc-students-and-examinations/README.md"
       ]
+    },
+    {
+      "id": "lc-subarray-sum-equals-k",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Subarray Sum Equals K",
+      "titleSlug": "subarray-sum-equals-k",
+      "difficulty": "Medium",
+      "topic": "Hash Table",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Prefix Sum"
+      ],
+      "canonical": null,
+      "readmeContent": "# [560] Subarray Sum Equals K\n**Difficulty:** Medium  |  **Acceptance:** 48.4%  |  **Likes:** 26060 / **Dislikes:** 881\n**Tags:** `Array`, `Hash Table`, `Prefix Sum`\n## Problem\nGiven an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.\n\nA subarray is a contiguous non-empty sequence of elements within an array.\n\n&nbsp;\nExample 1:\nInput: nums = [1,1,1], k = 2\nOutput: 2\nExample 2:\nInput: nums = [1,2,3], k = 3\nOutput: 2\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 2 * 104\n\t-1000 <= nums[i] <= 1000\n\t-107 <= k <= 107\n## My Submission\n\n- Runtime: 24 ms (beats 79.5%)\n- Memory: 48.7 MB (beats 46.1%)\n\n## Similar Problems\n\n- [Two Sum](https://leetcode.com/problems/two-sum/) — Easy\n- [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/) — Medium\n- [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) — Medium\n- [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) — Easy\n- [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/) — Medium\n",
+      "code": "class Solution {\n    public int subarraySum(int[] nums, int k) {\n        HashMap<Integer, Integer> map = new HashMap<>();\n        map.put(0, 1);\n        int count =0;\n        int sum = 0;\n        for(int num : nums){\n            sum += num;\n            if(map.containsKey(sum - k)) count += map.get(sum - k);\n            map.put(sum, map.getOrDefault(sum, 0)+1);\n        }\n        return count;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/lc-subarray-sum-equals-k/lc-subarray-sum-equals-k.java",
+          "content": "class Solution {\n    public int subarraySum(int[] nums, int k) {\n        HashMap<Integer, Integer> map = new HashMap<>();\n        map.put(0, 1);\n        int count =0;\n        int sum = 0;\n        for(int num : nums){\n            sum += num;\n            if(map.containsKey(sum - k)) count += map.get(sum - k);\n            map.put(sum, map.getOrDefault(sum, 0)+1);\n        }\n        return count;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-subarray-sum-equals-k/README.md",
+          "content": "# [560] Subarray Sum Equals K\n**Difficulty:** Medium  |  **Acceptance:** 48.4%  |  **Likes:** 26060 / **Dislikes:** 881\n**Tags:** `Array`, `Hash Table`, `Prefix Sum`\n## Problem\nGiven an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.\n\nA subarray is a contiguous non-empty sequence of elements within an array.\n\n&nbsp;\nExample 1:\nInput: nums = [1,1,1], k = 2\nOutput: 2\nExample 2:\nInput: nums = [1,2,3], k = 3\nOutput: 2\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 2 * 104\n\t-1000 <= nums[i] <= 1000\n\t-107 <= k <= 107\n## My Submission\n\n- Runtime: 24 ms (beats 79.5%)\n- Memory: 48.7 MB (beats 46.1%)\n\n## Similar Problems\n\n- [Two Sum](https://leetcode.com/problems/two-sum/) — Easy\n- [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/) — Medium\n- [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) — Medium\n- [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) — Easy\n- [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "24 ms",
+      "memory": "48.7 MB",
+      "runtimePct": 79.46730000000001,
+      "memoryPct": 46.14580000000004,
+      "timestamp": 1788156104000,
+      "acRate": 48.4087067156549,
+      "likes": 26060,
+      "dislikes": 881,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "two-sum",
+          "title": "Two Sum",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "continuous-subarray-sum",
+          "title": "Continuous Subarray Sum",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "subarray-product-less-than-k",
+          "title": "Subarray Product Less Than K",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "find-pivot-index",
+          "title": "Find Pivot Index",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "subarray-sums-divisible-by-k",
+          "title": "Subarray Sums Divisible by K",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "minimum-operations-to-reduce-x-to-zero",
+          "title": "Minimum Operations to Reduce X to Zero",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "k-radius-subarray-averages",
+          "title": "K Radius Subarray Averages",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given an array of integers <code>nums</code> and an integer <code>k</code>, return <em>the total number of subarrays whose sum equals to</em> <code>k</code>.</p>\n\n<p>A subarray is a contiguous <strong>non-empty</strong> sequence of elements within an array.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [1,1,1], k = 2\n<strong>Output:</strong> 2\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [1,2,3], k = 3\n<strong>Output:</strong> 2\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 2 * 10<sup>4</sup></code></li>\n\t<li><code>-1000 &lt;= nums[i] &lt;= 1000</code></li>\n\t<li><code>-10<sup>7</sup> &lt;= k &lt;= 10<sup>7</sup></code></li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/subarray-sum-equals-k/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
     },
     {
       "id": "lc-subarray-sum-equals-k::1978320870",

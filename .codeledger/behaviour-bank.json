@@ -404,5 +404,23 @@
       "Greedy",
       "Prefix Sum"
     ]
+  },
+  "leetcode::subarray-sum-equals-k": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "subarray-sum-equals-k",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1793898510136
+      }
+    ],
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Prefix Sum"
+    ]
   }
 }
