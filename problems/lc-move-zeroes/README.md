@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-move-zeroes` |
 | Topics | Array, Two Pointers |
-| Solved | 2025-10-27 |
-| Runtime | 7 ms (beats 55.718700000000005%) |
-| Memory | 13.6 MB (beats 49.29669999999999%) |
+| Solved | 2026-09-01 |
+| Runtime | 2 ms (beats 91.5406%) |
+| Memory | 47.8 MB (beats 56.77990000000005%) |
 
 ## Problem Statement
 
@@ -39,32 +39,20 @@ Given an integer array `nums`, move all `0`'s to the end of it while maintaining
 
 **Follow up:** Could you minimize the total number of operations done?
 
-## Hints
-
-<details>
-<summary>Hint 1</summary>
-
-**In-place** means we should not be allocating any space for extra array. But we are allowed to modify the existing array. However, as a first step, try coming up with a solution that makes use of additional space. For this problem as well, first apply the idea discussed using an additional array and the in-place solution will pop up eventually.
-
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-A **two-pointer** approach could be helpful here. The idea would be to have one pointer for iterating the array and another pointer that just works on the non-zero elements of the array.
-
-</details>
-
 ## Solutions
 
-```Python
-class Solution(object):
-    def moveZeroes(self, nums):
-        non_zero = 0
-
-        for i in range(len(nums)):
-            if nums[i] != 0:
-                nums[non_zero], nums[i] = nums[i], nums[non_zero]
-                non_zero += 1
-        
+```Java
+class Solution {
+    public void moveZeroes(int[] nums) {
+        int l = 0;
+        for (int r = 0; r < nums.length; r++) {
+            if (nums[r] != 0) {
+                int temp = nums[r];
+                nums[r] = nums[l];
+                nums[l] = temp;
+                l++;
+            }
+        }
+    }
+}
 ```

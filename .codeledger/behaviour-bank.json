@@ -48,6 +48,11 @@
         "elapsedSeconds": 0,
         "lang": "Java",
         "ts": 1791954811693
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1791960517880
       }
     ],
     "tags": [
@@ -97,6 +102,23 @@
       "Binary Search"
     ]
   },
+  "leetcode::move-zeroes": {
+    "difficulty": "Easy",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "move-zeroes",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1792041131924
+      }
+    ],
+    "tags": [
+      "Array",
+      "Two Pointers"
+    ]
+  },
   "leetcode::split-array-largest-sum": {
     "difficulty": "Hard",
     "lang": "Java",
@@ -127,6 +149,16 @@
         "elapsedSeconds": 0,
         "lang": "Java",
         "ts": 1791955839978
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1791960510117
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1791960512290
       }
     ],
     "tags": [
