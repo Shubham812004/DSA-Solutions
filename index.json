@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-11-14T06:50:31.354Z",
+  "updatedAt": "2026-11-16T04:45:32.038Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 259,
-    "easy": 114,
+    "total": 260,
+    "easy": 115,
     "medium": 131,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 57,
-      "leetcode": 202
+      "leetcode": 203
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 143,
+      "Java": 144,
       "Python": 30,
       "MySQL": 35
     },
@@ -21,7 +21,7 @@
       "Matrix": 1,
       "Binary Search": 4,
       "Searching": 8,
-      "String": 26,
+      "String": 27,
       "Array": 138,
       "Greedy": 1,
       "Untagged": 1,
@@ -6399,7 +6399,11 @@
       "_requestAIReview": true,
       "platform": "leetcode",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/house-robber/leetcode/lc-house-robber.java",
+        "problems/house-robber/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-house-robber-ii::2009648208",
@@ -7842,7 +7846,7 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 39.0%  |  **Likes:** 33384 / **Dislikes:** 2052\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.6%)\n- Memory: 43.4 MB (beats 64.9%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
+      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 39.0%  |  **Likes:** 33390 / **Dislikes:** 2052\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.7%)\n- Memory: 43.4 MB (beats 63.6%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
       "code": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = palindrome(s, i, i);\n            int even = palindrome(s, i, i+1);\n            int max = Math.max(odd, even);\n            if(max > (end - start)){\n                start = i - (max-1)/2;\n                end = i + max/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int palindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        }\n        return r-l-1;\n    }\n}",
       "files": [
         {
@@ -7851,7 +7855,7 @@
         },
         {
           "path": "problems/longest-palindromic-substring/README.md",
-          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 39.0%  |  **Likes:** 33384 / **Dislikes:** 2052\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.6%)\n- Memory: 43.4 MB (beats 64.9%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
+          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 39.0%  |  **Likes:** 33390 / **Dislikes:** 2052\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.7%)\n- Memory: 43.4 MB (beats 63.6%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
         }
       ],
       "lang": {
@@ -7861,11 +7865,11 @@
       },
       "runtime": "14 ms",
       "memory": "43.4 MB",
-      "runtimePct": 93.5824,
-      "memoryPct": 64.90389999999998,
+      "runtimePct": 93.6515,
+      "memoryPct": 63.56350000000001,
       "timestamp": 1790779293000,
-      "acRate": 38.96364680314582,
-      "likes": 33384,
+      "acRate": 38.97043767353189,
+      "likes": 33390,
       "dislikes": 2052,
       "similar": [
         {
@@ -19052,6 +19056,115 @@
         "problems/valid-palindrome/leetcode/lc-valid-palindrome.java",
         "problems/valid-palindrome/leetcode/README.md"
       ]
+    },
+    {
+      "id": "lc-valid-parentheses",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Valid Parentheses",
+      "titleSlug": "valid-parentheses",
+      "difficulty": "Easy",
+      "topic": "Stack",
+      "tags": [
+        "String",
+        "Stack",
+        "Bracket Sequences"
+      ],
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 20,
+            "platform": "leetcode",
+            "slug": "valid-parentheses"
+          }
+        ],
+        "canonicalId": "valid-parentheses",
+        "canonicalTitle": "Valid Parentheses",
+        "confirmedBy": "system-init",
+        "difficulty": "easy",
+        "pattern": "stack",
+        "tags": [
+          "string"
+        ],
+        "topic": "stack",
+        "voteCount": 98
+      },
+      "readmeContent": "# [20] Valid Parentheses\n**Difficulty:** Easy  |  **Acceptance:** 45.4%  |  **Likes:** 28944 / **Dislikes:** 2059\n**Tags:** `String`, `Stack`, `Bracket Sequences`\n## Problem\nGiven a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\n\nAn input string is valid if:\n\n\tOpen brackets must be closed by the same type of brackets.\n\tOpen brackets must be closed in the correct order.\n\tEvery close bracket has a corresponding open bracket of the same type.\n\n&nbsp;\nExample 1:\n\nInput: s = \"()\"\n\nOutput: true\n\nExample 2:\n\nInput: s = \"()[]{}\"\n\nOutput: true\n\nExample 3:\n\nInput: s = \"(]\"\n\nOutput: false\n\nExample 4:\n\nInput: s = \"([])\"\n\nOutput: true\n\nExample 5:\n\nInput: s = \"([)]\"\n\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 104\n\ts consists of parentheses only '()[]{}'.\n## My Submission\n\n- Runtime: 3 ms (beats 85.3%)\n- Memory: 43 MB (beats 67.4%)\n\n## Similar Problems\n\n- [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) — Medium\n- [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) — Hard\n- [Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/) — Hard\n- [Check If Word Is Valid After Substitutions](https://leetcode.com/problems/check-if-word-is-valid-after-substitutions/) — Medium\n- [Check if a Parentheses String Can Be Valid](https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid/) — Medium\n",
+      "code": "class Solution {\n    public boolean isValid(String s) {\n        Stack<Character> stack = new Stack<>();\n        for(int i=0; i<s.length(); i++){\n            char ch = s.charAt(i);\n            if(ch == '(' || ch == '{' || ch == '['){\n                stack.push(ch);\n            }\n            else{\n                if(stack.isEmpty()){\n                    return false;\n                }\n                char top = stack.peek();\n                if(ch == ')' && top == '(' || ch == ']' && top == '[' || ch == '}' && top == '{'){\n                    stack.pop();\n                }\n                else{\n                    return false;\n                }\n            }\n        }\n        return stack.isEmpty();\n    }\n}",
+      "files": [
+        {
+          "path": "problems/valid-parentheses/leetcode/lc-valid-parentheses.java",
+          "content": "class Solution {\n    public boolean isValid(String s) {\n        Stack<Character> stack = new Stack<>();\n        for(int i=0; i<s.length(); i++){\n            char ch = s.charAt(i);\n            if(ch == '(' || ch == '{' || ch == '['){\n                stack.push(ch);\n            }\n            else{\n                if(stack.isEmpty()){\n                    return false;\n                }\n                char top = stack.peek();\n                if(ch == ')' && top == '(' || ch == ']' && top == '[' || ch == '}' && top == '{'){\n                    stack.pop();\n                }\n                else{\n                    return false;\n                }\n            }\n        }\n        return stack.isEmpty();\n    }\n}"
+        },
+        {
+          "path": "problems/valid-parentheses/README.md",
+          "content": "# [20] Valid Parentheses\n**Difficulty:** Easy  |  **Acceptance:** 45.4%  |  **Likes:** 28944 / **Dislikes:** 2059\n**Tags:** `String`, `Stack`, `Bracket Sequences`\n## Problem\nGiven a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\n\nAn input string is valid if:\n\n\tOpen brackets must be closed by the same type of brackets.\n\tOpen brackets must be closed in the correct order.\n\tEvery close bracket has a corresponding open bracket of the same type.\n\n&nbsp;\nExample 1:\n\nInput: s = \"()\"\n\nOutput: true\n\nExample 2:\n\nInput: s = \"()[]{}\"\n\nOutput: true\n\nExample 3:\n\nInput: s = \"(]\"\n\nOutput: false\n\nExample 4:\n\nInput: s = \"([])\"\n\nOutput: true\n\nExample 5:\n\nInput: s = \"([)]\"\n\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 104\n\ts consists of parentheses only '()[]{}'.\n## My Submission\n\n- Runtime: 3 ms (beats 85.3%)\n- Memory: 43 MB (beats 67.4%)\n\n## Similar Problems\n\n- [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) — Medium\n- [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) — Hard\n- [Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/) — Hard\n- [Check If Word Is Valid After Substitutions](https://leetcode.com/problems/check-if-word-is-valid-after-substitutions/) — Medium\n- [Check if a Parentheses String Can Be Valid](https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "3 ms",
+      "memory": "43 MB",
+      "runtimePct": 85.29480000000001,
+      "memoryPct": 67.44189999999999,
+      "timestamp": 1788359736000,
+      "acRate": 45.43114462024804,
+      "likes": 28944,
+      "dislikes": 2059,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "generate-parentheses",
+          "title": "Generate Parentheses",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "longest-valid-parentheses",
+          "title": "Longest Valid Parentheses",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "remove-invalid-parentheses",
+          "title": "Remove Invalid Parentheses",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "check-if-word-is-valid-after-substitutions",
+          "title": "Check If Word Is Valid After Substitutions",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "check-if-a-parentheses-string-can-be-valid",
+          "title": "Check if a Parentheses String Can Be Valid",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "move-pieces-to-obtain-a-string",
+          "title": "Move Pieces to Obtain a String",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given a string <code>s</code> containing just the characters <code>&#39;(&#39;</code>, <code>&#39;)&#39;</code>, <code>&#39;{&#39;</code>, <code>&#39;}&#39;</code>, <code>&#39;[&#39;</code> and <code>&#39;]&#39;</code>, determine if the input string is valid.</p>\n\n<p>An input string is valid if:</p>\n\n<ol>\n\t<li>Open brackets must be closed by the same type of brackets.</li>\n\t<li>Open brackets must be closed in the correct order.</li>\n\t<li>Every close bracket has a corresponding open bracket of the same type.</li>\n</ol>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;()&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;()[]{}&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;(]&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n</div>\n\n<p><strong class=\"example\">Example 4:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;([])&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p><strong class=\"example\">Example 5:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;([)]&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>s</code> consists of parentheses only <code>&#39;()[]{}&#39;</code>.</li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/valid-parentheses/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": true,
+      "duplicateOf": "lc-valid-parentheses::2128547824",
+      "_requestAIReview": true,
+      "platform": "leetcode",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-valid-parentheses::1815862601",

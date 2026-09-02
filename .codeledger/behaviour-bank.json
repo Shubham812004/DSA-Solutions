@@ -287,11 +287,6 @@
       {
         "elapsedSeconds": 0,
         "lang": "Java",
-        "ts": 1793681813424
-      },
-      {
-        "elapsedSeconds": 0,
-        "lang": "Java",
         "ts": 1793771734544
       },
       {
@@ -333,6 +328,11 @@
         "elapsedSeconds": 0,
         "lang": "Java",
         "ts": 1794633739723
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794804265725
       }
     ],
     "tags": [
@@ -967,6 +967,24 @@
       "String",
       "Hash Table",
       "Sorting"
+    ]
+  },
+  "leetcode::valid-parentheses": {
+    "difficulty": "Easy",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "valid-parentheses",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794804331874
+      }
+    ],
+    "tags": [
+      "String",
+      "Stack",
+      "Bracket Sequences"
     ]
   }
 }

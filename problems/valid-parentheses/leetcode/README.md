@@ -7,8 +7,8 @@
 | Problem ID | `lc-valid-parentheses` |
 | Topics | String, Stack, Bracket Sequences |
 | Solved | 2026-09-02 |
-| Runtime | 3 ms (beats 83.1157%) |
-| Memory | 43 MB (beats 84.54160000000003%) |
+| Runtime | 3 ms (beats 85.29480000000001%) |
+| Memory | 43 MB (beats 67.44189999999999%) |
 
 ## Problem Statement
 
@@ -61,29 +61,6 @@ An input string is valid if:
 	- `1 <= s.length <= 104`
 
 	- `s` consists of parentheses only `'()[]{}'`.
-
-## Hints
-
-<details>
-<summary>Hint 1</summary>
-
-Use a stack of characters.
-
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-When you encounter an opening bracket, push it to the top of the stack.
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-When you encounter a closing bracket, check if the top of the stack was the opening for it. If yes, pop it from the stack. Otherwise, return false.
-
-</details>
 
 ## Solutions
 
