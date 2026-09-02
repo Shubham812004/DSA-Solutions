@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-reverse-linked-list` |
 | Topics | Linked List, Recursion |
-| Solved | 2025-10-31 |
+| Solved | 2026-09-02 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 14.1 MB (beats 91.06400000000001%) |
+| Memory | 44.4 MB (beats 14.23939999999999%) |
 
 ## Problem Statement
 
@@ -45,25 +45,28 @@ Given the `head` of a singly linked list, reverse the list, and return _the reve
 
 ## Solutions
 
-```Python
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution(object):
-    def reverseList(self, head):
-        """
-        :type head: Optional[ListNode]
-        :rtype: Optional[ListNode]
-        """
-        prev = None
-        current = head
-
-        while current:
-            next_node = current.next
-            current.next = prev
-            prev = current
-            current = next_node
-        return prev
+```Java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        ListNode previous = null;
+        ListNode current = head;
+        while(current != null){
+            ListNode next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+        return previous;
+    }
+}
 ```
