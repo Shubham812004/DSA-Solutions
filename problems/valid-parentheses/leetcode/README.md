@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-valid-parentheses` |
 | Topics | String, Stack, Bracket Sequences |
-| Solved | 2025-10-30 |
-| Runtime | 0 ms (beats 100%) |
-| Memory | 12.6 MB (beats 11.526299999999985%) |
+| Solved | 2026-09-02 |
+| Runtime | 3 ms (beats 83.1157%) |
+| Memory | 43.2 MB (beats 71.76760000000003%) |
 
 ## Problem Statement
 
@@ -87,19 +87,28 @@ When you encounter a closing bracket, check if the top of the stack was the open
 
 ## Solutions
 
-```Python
-class Solution(object):
-    def isValid(self, s):
-        stack =[]
-        mapping = {')':'(','}':'{',']':'['}
-
-        for c in s:
-            if c in mapping:
-                if stack and stack[-1] == mapping[c]:
-                    stack.pop()
-                else:
-                    return False
-            else:
-                stack.append(c)
-        return not stack
+```Java
+class Solution {
+    public boolean isValid(String s) {
+        Stack<Character> stack = new Stack<>();
+        for(int i=0; i<s.length(); i++){
+            char ch = s.charAt(i);
+            if(ch == '(' || ch == '{' || ch == '['){
+                stack.push(ch);
+            }
+            else{
+                if(stack.isEmpty()){
+                    return false;
+                }
+                if(ch == ')' && stack.peek() == '(' || ch == ']' && stack.peek() == '[' || ch == '}' && stack.peek() == '{'){
+                    stack.pop();
+                }
+                else{
+                    return false;
+                }
+            }
+        }
+        return stack.isEmpty();
+    }
+}
 ```
