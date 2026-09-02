@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-merge-intervals` |
 | Topics | Array, Sorting, Quicksort |
-| Solved | 2026-05-04 |
-| Runtime | 7 ms (beats 98.8287%) |
-| Memory | 49.3 MB (beats 14.1785%) |
+| Solved | 2026-09-02 |
+| Runtime | 8 ms (beats 89.4118%) |
+| Memory | 49.4 MB (beats 14.1785%) |
 
 ## Problem Statement
 
@@ -49,24 +49,24 @@ Given an array of `intervals` where `intervals[i] = [starti, endi]`, merge all o
 ```Java
 class Solution {
     public int[][] merge(int[][] intervals) {
-        Arrays.sort(intervals, (a,b) -> a[0] - b[0]);
-        List<int[]> res = new ArrayList<>();
+        List<int[]> list = new ArrayList<>();
+        Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
         int start = intervals[0][0];
         int end = intervals[0][1];
-        for(int i=0; i<intervals.length; i++){
+        for(int i=1; i<intervals.length; i++){
             int nextStart = intervals[i][0];
             int nextEnd = intervals[i][1];
             if(nextStart <= end){
                 end = Math.max(end, nextEnd);
             }
             else{
-                res.add(new int[]{start, end});
+                list.add(new int[]{start, end});
                 start = nextStart;
                 end = nextEnd;
             }
         }
-        res.add(new int[]{start, end});
-        return res.toArray(new int[res.size()][]);
+        list.add(new int[]{start, end});
+        return list.toArray(new int[list.size()][]);
     }
 }
 ```
