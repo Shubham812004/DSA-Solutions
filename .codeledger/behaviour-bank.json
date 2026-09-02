@@ -574,6 +574,23 @@
       "Prefix Sum"
     ]
   },
+  "leetcode::reverse-linked-list": {
+    "difficulty": "Easy",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "reverse-linked-list",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794811804969
+      }
+    ],
+    "tags": [
+      "Linked List",
+      "Recursion"
+    ]
+  },
   "leetcode::rotate-image": {
     "difficulty": "Medium",
     "lang": "Java",
