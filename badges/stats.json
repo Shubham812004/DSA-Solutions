@@ -4,11 +4,11 @@
   "currentStreak": 13,
   "longestStreak": 13,
   "freezes": 3,
-  "totalPoints": 3915,
-  "totalSolves": 210,
+  "totalPoints": 3925,
+  "totalSolves": 211,
   "totalRecalls": 0,
   "byDifficulty": {
-    "Easy": 94,
+    "Easy": 95,
     "Medium": 113,
     "Hard": 3
   },

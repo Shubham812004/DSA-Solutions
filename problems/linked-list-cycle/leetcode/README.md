@@ -8,7 +8,7 @@
 | Topics | Linked List, Hash Table, Two Pointers, Floyd's Cycle Finding Algorithm |
 | Solved | 2026-09-02 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 45.9 MB (beats 99.85299999999997%) |
+| Memory | 45.9 MB (beats 98.07900000000002%) |
 
 ## Problem Statement
 

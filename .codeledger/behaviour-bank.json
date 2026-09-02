@@ -288,6 +288,25 @@
       "Binary Search"
     ]
   },
+  "leetcode::linked-list-cycle": {
+    "difficulty": "Easy",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "linked-list-cycle",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794850941881
+      }
+    ],
+    "tags": [
+      "Linked List",
+      "Hash Table",
+      "Two Pointers",
+      "Floyd's Cycle Finding Algorithm"
+    ]
+  },
   "leetcode::longest-palindromic-substring": {
     "difficulty": "Medium",
     "lang": "Java",
