@@ -295,6 +295,24 @@
       "Prefix Sum"
     ]
   },
+  "leetcode::rotate-image": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "rotate-image",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1793942807603
+      }
+    ],
+    "tags": [
+      "Array",
+      "Math",
+      "Matrix"
+    ]
+  },
   "leetcode::search-a-2d-matrix": {
     "difficulty": "Medium",
     "lang": "Java",
@@ -491,6 +509,24 @@
       "Array",
       "Hash Table",
       "Prefix Sum"
+    ]
+  },
+  "leetcode::valid-anagram": {
+    "difficulty": "Easy",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "valid-anagram",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794201172590
+      }
+    ],
+    "tags": [
+      "String",
+      "Hash Table",
+      "Sorting"
     ]
   }
 }

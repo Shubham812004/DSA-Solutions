@@ -7,8 +7,8 @@
 | Problem ID | `lc-valid-anagram` |
 | Topics | String, Hash Table, Sorting |
 | Solved | 2026-09-02 |
-| Runtime | 6 ms (beats 45.7278%) |
-| Memory | 44.5 MB (beats 65.04800000000002%) |
+| Runtime | 6 ms (beats 49.26620000000001%) |
+| Memory | 44.5 MB (beats 60.69989999999998%) |
 
 ## Problem Statement
 

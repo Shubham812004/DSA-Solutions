@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-11-06T05:26:35.033Z",
+  "updatedAt": "2026-11-09T05:12:52.688Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 246,
-    "easy": 113,
-    "medium": 119,
+    "total": 248,
+    "easy": 114,
+    "medium": 120,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 57,
-      "leetcode": 189
+      "leetcode": 191
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 131,
+      "Java": 133,
       "Python": 29,
       "MySQL": 35
     },
@@ -21,8 +21,8 @@
       "Matrix": 1,
       "Binary Search": 4,
       "Searching": 8,
-      "String": 24,
-      "Array": 130,
+      "String": 25,
+      "Array": 131,
       "Greedy": 1,
       "Untagged": 1,
       "Prefix Sum": 2,
@@ -14594,6 +14594,83 @@
       ]
     },
     {
+      "id": "lc-rotate-image",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Rotate Image",
+      "titleSlug": "rotate-image",
+      "difficulty": "Medium",
+      "topic": "Math",
+      "tags": [
+        "Array",
+        "Math",
+        "Matrix"
+      ],
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 48,
+            "platform": "leetcode",
+            "slug": "rotate-image"
+          }
+        ],
+        "canonicalId": "rotate-image",
+        "canonicalTitle": "Rotate Image",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "matrix",
+        "tags": [
+          "array"
+        ],
+        "topic": "math",
+        "voteCount": 97
+      },
+      "readmeContent": "# [48] Rotate Image\n**Difficulty:** Medium  |  **Acceptance:** 80.9%  |  **Likes:** 20516 / **Dislikes:** 1004\n**Tags:** `Array`, `Math`, `Matrix`\n## Problem\nYou are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).\n\nYou have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [[7,4,1],[8,5,2],[9,6,3]]\n\nExample 2:\n\nInput: matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]\nOutput: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]\n\n&nbsp;\nConstraints:\n\n\tn == matrix.length == matrix[i].length\n\t1 <= n <= 20\n\t-1000 <= matrix[i][j] <= 1000\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 43.7 MB (beats 53.4%)\n\n## Similar Problems\n\n- [Determine Whether Matrix Can Be Obtained By Rotation](https://leetcode.com/problems/determine-whether-matrix-can-be-obtained-by-rotation/) — Easy\n",
+      "code": "class Solution {\n    public void rotate(int[][] matrix) {\n        int n = matrix.length;\n        int m = matrix[0].length;\n        for(int i=0; i<n-1; i++){\n            for(int j=i+1; j<n; j++){\n                int temp = matrix[i][j];\n                matrix[i][j] = matrix[j][i];\n                matrix[j][i] = temp;\n            }\n        }\n        for(int i=0; i<n; i++){\n            int left = 0;\n            int right = n-1;\n            while(left < right){\n                int temp = matrix[i][left];\n                matrix[i][left] = matrix[i][right];\n                matrix[i][right] = temp;\n                left++;\n                right--;\n            }\n        }\n    }\n}",
+      "files": [
+        {
+          "path": "problems/rotate-image/leetcode/lc-rotate-image.java",
+          "content": "class Solution {\n    public void rotate(int[][] matrix) {\n        int n = matrix.length;\n        int m = matrix[0].length;\n        for(int i=0; i<n-1; i++){\n            for(int j=i+1; j<n; j++){\n                int temp = matrix[i][j];\n                matrix[i][j] = matrix[j][i];\n                matrix[j][i] = temp;\n            }\n        }\n        for(int i=0; i<n; i++){\n            int left = 0;\n            int right = n-1;\n            while(left < right){\n                int temp = matrix[i][left];\n                matrix[i][left] = matrix[i][right];\n                matrix[i][right] = temp;\n                left++;\n                right--;\n            }\n        }\n    }\n}"
+        },
+        {
+          "path": "problems/rotate-image/README.md",
+          "content": "# [48] Rotate Image\n**Difficulty:** Medium  |  **Acceptance:** 80.9%  |  **Likes:** 20516 / **Dislikes:** 1004\n**Tags:** `Array`, `Math`, `Matrix`\n## Problem\nYou are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).\n\nYou have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [[7,4,1],[8,5,2],[9,6,3]]\n\nExample 2:\n\nInput: matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]\nOutput: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]\n\n&nbsp;\nConstraints:\n\n\tn == matrix.length == matrix[i].length\n\t1 <= n <= 20\n\t-1000 <= matrix[i][j] <= 1000\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 43.7 MB (beats 53.4%)\n\n## Similar Problems\n\n- [Determine Whether Matrix Can Be Obtained By Rotation](https://leetcode.com/problems/determine-whether-matrix-can-be-obtained-by-rotation/) — Easy\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "0 ms",
+      "memory": "43.7 MB",
+      "runtimePct": 100,
+      "memoryPct": 53.405799999999985,
+      "timestamp": 1776065823000,
+      "acRate": 80.88276215665877,
+      "likes": 20516,
+      "dislikes": 1004,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "determine-whether-matrix-can-be-obtained-by-rotation",
+          "title": "Determine Whether Matrix Can Be Obtained By Rotation",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>You are given an <code>n x n</code> 2D <code>matrix</code> representing an image, rotate the image by <strong>90</strong> degrees (clockwise).</p>\n\n<p>You have to rotate the image <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\"><strong>in-place</strong></a>, which means you have to modify the input 2D matrix directly. <strong>DO NOT</strong> allocate another 2D matrix and do the rotation.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/08/28/mat1.jpg\" style=\"width: 500px; height: 188px;\" />\n<pre>\n<strong>Input:</strong> matrix = [[1,2,3],[4,5,6],[7,8,9]]\n<strong>Output:</strong> [[7,4,1],[8,5,2],[9,6,3]]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/08/28/mat2.jpg\" style=\"width: 500px; height: 201px;\" />\n<pre>\n<strong>Input:</strong> matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]\n<strong>Output:</strong> [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == matrix.length == matrix[i].length</code></li>\n\t<li><code>1 &lt;= n &lt;= 20</code></li>\n\t<li><code>-1000 &lt;= matrix[i][j] &lt;= 1000</code></li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/rotate-image/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
+    },
+    {
       "id": "lc-score-validator::1998911984",
       "submissionId": 1998911984,
       "platform": "leetcode",
@@ -17146,6 +17223,98 @@
         "problems/lc-user-activity-for-the-past-30-days-i/lc-user-activity-for-the-past-30-days-i.sql",
         "problems/lc-user-activity-for-the-past-30-days-i/README.md"
       ]
+    },
+    {
+      "id": "lc-valid-anagram",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Valid Anagram",
+      "titleSlug": "valid-anagram",
+      "difficulty": "Easy",
+      "topic": "Array",
+      "tags": [
+        "String",
+        "Hash Table",
+        "Sorting"
+      ],
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 242,
+            "platform": "leetcode",
+            "slug": "valid-anagram"
+          }
+        ],
+        "canonicalId": "valid-anagram",
+        "canonicalTitle": "Valid Anagram",
+        "confirmedBy": "system-init",
+        "difficulty": "easy",
+        "pattern": "counting",
+        "tags": [
+          "string",
+          "hash-table"
+        ],
+        "topic": "arrays",
+        "voteCount": 92
+      },
+      "readmeContent": "# [242] Valid Anagram\n**Difficulty:** Easy  |  **Acceptance:** 68.8%  |  **Likes:** 14916 / **Dislikes:** 495\n**Tags:** `Hash Table`, `String`, `Sorting`\n## Problem\nGiven two strings s and t, return true if t is an anagram of s, and false otherwise.\n\n&nbsp;\nExample 1:\n\nInput: s = \"anagram\", t = \"nagaram\"\n\nOutput: true\n\nExample 2:\n\nInput: s = \"rat\", t = \"car\"\n\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length, t.length <= 5 * 104\n\ts and t consist of lowercase English letters.\n\n&nbsp;\nFollow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?\n## My Submission\n\n- Runtime: 6 ms (beats 49.3%)\n- Memory: 44.5 MB (beats 60.7%)\n\n## Similar Problems\n\n- [Group Anagrams](https://leetcode.com/problems/group-anagrams/) — Medium\n- [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) — Medium\n- [Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/) — Easy\n",
+      "code": "class Solution {\n    public boolean isAnagram(String s, String t) {\n        if(s.length() != t.length()) return false;\n        int[] count = new int[26];\n        for(int i=0; i<s.length(); i++){\n            count[s.charAt(i) - 'a']++;\n            count[t.charAt(i) - 'a']--;\n        }\n        for(int num : count){\n            if(num != 0){\n                return false;\n            }\n        }\n        return true;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/valid-anagram/leetcode/lc-valid-anagram.java",
+          "content": "class Solution {\n    public boolean isAnagram(String s, String t) {\n        if(s.length() != t.length()) return false;\n        int[] count = new int[26];\n        for(int i=0; i<s.length(); i++){\n            count[s.charAt(i) - 'a']++;\n            count[t.charAt(i) - 'a']--;\n        }\n        for(int num : count){\n            if(num != 0){\n                return false;\n            }\n        }\n        return true;\n    }\n}"
+        },
+        {
+          "path": "problems/valid-anagram/README.md",
+          "content": "# [242] Valid Anagram\n**Difficulty:** Easy  |  **Acceptance:** 68.8%  |  **Likes:** 14916 / **Dislikes:** 495\n**Tags:** `Hash Table`, `String`, `Sorting`\n## Problem\nGiven two strings s and t, return true if t is an anagram of s, and false otherwise.\n\n&nbsp;\nExample 1:\n\nInput: s = \"anagram\", t = \"nagaram\"\n\nOutput: true\n\nExample 2:\n\nInput: s = \"rat\", t = \"car\"\n\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length, t.length <= 5 * 104\n\ts and t consist of lowercase English letters.\n\n&nbsp;\nFollow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?\n## My Submission\n\n- Runtime: 6 ms (beats 49.3%)\n- Memory: 44.5 MB (beats 60.7%)\n\n## Similar Problems\n\n- [Group Anagrams](https://leetcode.com/problems/group-anagrams/) — Medium\n- [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) — Medium\n- [Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/) — Easy\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "6 ms",
+      "memory": "44.5 MB",
+      "runtimePct": 49.26620000000001,
+      "memoryPct": 60.69989999999998,
+      "timestamp": 1788334486000,
+      "acRate": 68.80710362898706,
+      "likes": 14916,
+      "dislikes": 495,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "group-anagrams",
+          "title": "Group Anagrams",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-all-anagrams-in-a-string",
+          "title": "Find All Anagrams in a String",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "find-resultant-array-after-removing-anagrams",
+          "title": "Find Resultant Array After Removing Anagrams",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given two strings <code>s</code> and <code>t</code>, return <code>true</code> if <code>t</code> is an <span data-keyword=\"anagram\">anagram</span> of <code>s</code>, and <code>false</code> otherwise.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;anagram&quot;, t = &quot;nagaram&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;rat&quot;, t = &quot;car&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length, t.length &lt;= 5 * 10<sup>4</sup></code></li>\n\t<li><code>s</code> and <code>t</code> consist of lowercase English letters.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> What if the inputs contain Unicode characters? How would you adapt your solution to such a case?</p>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/valid-anagram/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": true,
+      "duplicateOf": "lc-valid-anagram::2128155435",
+      "_requestAIReview": true,
+      "platform": "leetcode",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-valid-anagram::1810433410",
