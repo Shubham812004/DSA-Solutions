@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-middle-of-the-linked-list` |
 | Topics | Linked List, Two Pointers |
-| Solved | 2025-11-02 |
+| Solved | 2026-09-02 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 12.5 MB (beats 24.05690000000002%) |
+| Memory | 42.6 MB (beats 84.99280000000003%) |
 
 ## Problem Statement
 
@@ -40,19 +40,26 @@ If there are two middle nodes, return **the second middle** node.
 
 ## Solutions
 
-```Python
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution(object):
-    def middleNode(self, head):
-        slow = head
-        fast = head
-
-        while fast and fast.next:
-            slow = slow.next
-            fast = fast.next.next
-        return slow
+```Java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode middleNode(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+}
 ```
