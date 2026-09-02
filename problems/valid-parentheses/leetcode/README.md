@@ -8,7 +8,7 @@
 | Topics | String, Stack, Bracket Sequences |
 | Solved | 2026-09-02 |
 | Runtime | 3 ms (beats 83.1157%) |
-| Memory | 43.2 MB (beats 71.76760000000003%) |
+| Memory | 43 MB (beats 84.54160000000003%) |
 
 ## Problem Statement
 
@@ -100,7 +100,8 @@ class Solution {
                 if(stack.isEmpty()){
                     return false;
                 }
-                if(ch == ')' && stack.peek() == '(' || ch == ']' && stack.peek() == '[' || ch == '}' && stack.peek() == '{'){
+                char top = stack.peek();
+                if(ch == ')' && top == '(' || ch == ']' && top == '[' || ch == '}' && top == '{'){
                     stack.pop();
                 }
                 else{

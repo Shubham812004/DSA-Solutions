@@ -10,7 +10,8 @@ class Solution {
                 if(stack.isEmpty()){
                     return false;
                 }
-                if(ch == ')' && stack.peek() == '(' || ch == ']' && stack.peek() == '[' || ch == '}' && stack.peek() == '{'){
+                char top = stack.peek();
+                if(ch == ')' && top == '(' || ch == ']' && top == '[' || ch == '}' && top == '{'){
                     stack.pop();
                 }
                 else{
