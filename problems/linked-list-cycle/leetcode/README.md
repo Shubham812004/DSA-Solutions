@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-linked-list-cycle` |
 | Topics | Linked List, Hash Table, Two Pointers, Floyd's Cycle Finding Algorithm |
-| Solved | 2025-11-02 |
-| Runtime | 29 ms (beats 92.098%) |
-| Memory | 19.6 MB (beats 14.288300000000024%) |
+| Solved | 2026-09-02 |
+| Runtime | 0 ms (beats 100%) |
+| Memory | 45.9 MB (beats 99.85299999999997%) |
 
 ## Problem Statement
 
@@ -54,21 +54,28 @@ Return `true`_ if there is a cycle in the linked list_. Otherwise, return `false
 
 ## Solutions
 
-```Python
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
-class Solution(object):
-    def hasCycle(self, head):
-        slow = head
-        fast = head
-        while fast and fast.next:
-            slow = slow.next
-            fast = fast.next.next
-            if slow == fast:
-                return True
-        return False
+```Java
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if(slow == fast) return true;
+        }
+        return false;
+    }
+}
 ```
