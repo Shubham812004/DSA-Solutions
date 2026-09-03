@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-contains-duplicate` |
 | Topics | Array, Hash Table, Sorting |
-| Solved | 2025-10-24 |
-| Runtime | 21 ms (beats 72.91160000000002%) |
-| Memory | 25.9 MB (beats 43.02039999999995%) |
+| Solved | 2026-09-03 |
+| Runtime | 18 ms (beats 76.48720000000003%) |
+| Memory | 108 MB (beats 64.55250000000017%) |
 
 ## Problem Statement
 
@@ -52,13 +52,17 @@ All elements are distinct.
 
 ## Solutions
 
-```Python
-class Solution(object):
-    def containsDuplicate(self, nums):
-        seen = set()
-        for num in nums:
-            if num in seen:
-                return True
-            seen.add(num)
-        return False
+```Java
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        HashSet<Integer> set = new HashSet<>();
+        for(int i=0; i<nums.length; i++){
+            if(set.contains(nums[i]))
+                return true;
+            else
+                set.add(nums[i]);
+        }
+        return false;
+    }
+}
 ```
