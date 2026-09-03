@@ -7,8 +7,8 @@
 | Problem ID | `lc-rotate-array` |
 | Topics | Array, Math, Two Pointers |
 | Solved | 2026-09-03 |
-| Runtime | 4 ms (beats 98.1593%) |
-| Memory | 268.8 MB (beats 49.101499999999646%) |
+| Runtime | 5 ms (beats 46.6821%) |
+| Memory | 268.9 MB (beats 24.72799999999965%) |
 
 ## Problem Statement
 
@@ -86,7 +86,7 @@ The other line of thought is a tad bit complicated but essentially it builds on 
 ```Java
 class Solution {
     public void reverse(int[] nums, int l, int r){
-        while(l <= r){
+        while(l < r){
             int temp = nums[l];
             nums[l] = nums[r];
             nums[r] = temp;
