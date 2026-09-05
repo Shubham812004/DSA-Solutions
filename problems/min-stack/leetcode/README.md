@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-min-stack` |
 | Topics | Stack, Design |
-| Solved | 2025-10-30 |
-| Runtime | 9 ms (beats 100%) |
-| Memory | 15.6 MB (beats 100%) |
+| Solved | 2026-09-05 |
+| Runtime | 33 ms (beats 69.46889999999999%) |
+| Memory | 99.6 MB (beats 87.0123%) |
 
 ## Problem Statement
 
@@ -70,28 +70,46 @@ Consider each node in the stack having a minimum value. (Credits to @aakarshmadh
 
 ## Solutions
 
-```Python
-class MinStack(object):
+```Java
+class MinStack {
 
-    def __init__(self):
-        self.stack =[]
-        self.minstack = []
+    Stack<Integer> minStack = new Stack<>();
+    Stack<Integer> mainStack = new Stack<>();
 
-    def push(self, val):
-        self.stack.append(val)
-        if not self.minstack or val <= self.minstack[-1]:
-            self.minstack.append(val)
+    public MinStack() {
+    }
+    
+    public void push(int value) {
+        mainStack.push(value);
+        if(minStack.isEmpty()){
+            minStack.push(value);
+        }
+        else{
+            int minValue = Math.min(value, minStack.peek());
+            minStack.push(minValue);
+        }
+    }
+    
+    public void pop() {
+        mainStack.pop();
+        minStack.pop();
+    }
+    
+    public int top() {
+       return mainStack.peek();
+    }
+    
+    public int getMin() {
+        return minStack.peek();
+    }
+}
 
-    def pop(self):
-        if self.stack[-1] == self.minstack[-1]:
-            self.minstack.pop()
-        self.stack.pop()
-
-    def top(self):
-        return self.stack[-1]
-
-    def getMin(self):
-        return self.minstack[-1]
- 
-
+/**
+ * Your MinStack object will be instantiated and called as such:
+ * MinStack obj = new MinStack();
+ * obj.push(value);
+ * obj.pop();
+ * int param_3 = obj.top();
+ * int param_4 = obj.getMin();
+ */
 ```
