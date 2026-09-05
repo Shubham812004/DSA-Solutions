@@ -7,8 +7,8 @@
 | Problem ID | `lc-min-stack` |
 | Topics | Stack, Design |
 | Solved | 2026-09-05 |
-| Runtime | 33 ms (beats 69.46889999999999%) |
-| Memory | 99.6 MB (beats 87.0123%) |
+| Runtime | 37 ms (beats 15.946599999999991%) |
+| Memory | 100 MB (beats 53.1755%) |
 
 ## Problem Statement
 
@@ -72,33 +72,33 @@ Consider each node in the stack having a minimum value. (Credits to @aakarshmadh
 
 ```Java
 class MinStack {
-
-    Stack<Integer> minStack = new Stack<>();
-    Stack<Integer> mainStack = new Stack<>();
+    Stack<Integer> mainStack;
+    Stack<Integer> minStack;
 
     public MinStack() {
+        this.mainStack = new Stack<>();
+        this.minStack = new Stack<>();
     }
-    
+
     public void push(int value) {
         mainStack.push(value);
-        if(minStack.isEmpty()){
+        if (minStack.isEmpty()) {
             minStack.push(value);
-        }
-        else{
+        } else {
             int minValue = Math.min(value, minStack.peek());
             minStack.push(minValue);
         }
     }
-    
+
     public void pop() {
         mainStack.pop();
         minStack.pop();
     }
-    
+
     public int top() {
-       return mainStack.peek();
+        return mainStack.peek();
     }
-    
+
     public int getMin() {
         return minStack.peek();
     }
