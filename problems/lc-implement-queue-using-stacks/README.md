@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-implement-queue-using-stacks` |
 | Topics | Stack, Design, Queue |
-| Solved | 2025-10-31 |
+| Solved | 2026-09-07 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 12.5 MB (beats 29.0805%) |
+| Memory | 42.7 MB (beats 69.08179999999999%) |
 
 ## Problem Statement
 
@@ -64,49 +64,49 @@ myQueue.empty(); // return false
 
 ## Solutions
 
-```Python
-class MyQueue(object):
+```Java
+class MyQueue {
+    Stack<Integer> stackIn = new Stack<>();
+    Stack<Integer> stackOut = new Stack<>();
 
-    def __init__(self):
-        self.in_stack = []
-        self.out_stack = []
+    public MyQueue() {
+    }
+    
+    public void push(int x) {
+        stackIn.push(x);
+    }
+    
+    public int pop() {
+        if(stackOut.isEmpty()){
+            while(!stackIn.isEmpty()){
+                int value = stackIn.pop();
+                stackOut.push(value);
+            }
+        }
+        return stackOut.pop();   
+    }
+    
+    public int peek() {
+        if(stackOut.isEmpty()){
+            while(!stackIn.isEmpty()){
+                int value = stackIn.pop();
+                stackOut.push(value);
+            }
+        }
+        return stackOut.peek();
+    }
+    
+    public boolean empty() {
+        return stackOut.isEmpty() && stackIn.isEmpty();
+    }
+}
 
-    def push(self, x):
-        """
-        :type x: int
-        :rtype: None
-        """
-        self.in_stack.append(x)
-
-    def pop(self):
-        """
-        :rtype: int
-        """
-        self.move()
-        return self.out_stack.pop()
-
-    def peek(self):
-        """
-        :rtype: int
-        """
-        self.move()
-        return self.out_stack[-1]
-
-    def empty(self):
-        """
-        :rtype: bool
-        """
-        return not self.in_stack and not self.out_stack
-
-    def move(self):
-        if not self.out_stack:
-            while self.in_stack:
-                self.out_stack.append(self.in_stack.pop())
-
-# Your MyQueue object will be instantiated and called as such:
-# obj = MyQueue()
-# obj.push(x)
-# param_2 = obj.pop()
-# param_3 = obj.peek()
-# param_4 = obj.empty()
+/**
+ * Your MyQueue object will be instantiated and called as such:
+ * MyQueue obj = new MyQueue();
+ * obj.push(x);
+ * int param_2 = obj.pop();
+ * int param_3 = obj.peek();
+ * boolean param_4 = obj.empty();
+ */
 ```
