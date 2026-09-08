@@ -918,6 +918,23 @@
       "Two Pointers"
     ]
   },
+  "leetcode::remove-nth-node-from-end-of-list": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "remove-nth-node-from-end-of-list",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1795440251813
+      }
+    ],
+    "tags": [
+      "Linked List",
+      "Two Pointers"
+    ]
+  },
   "leetcode::repeated-dna-sequences": {
     "difficulty": "Medium",
     "lang": "Java",

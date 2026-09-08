@@ -8,7 +8,7 @@
 | Topics | Linked List, Two Pointers |
 | Solved | 2026-09-08 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 43.6 MB (beats 21.191300000000016%) |
+| Memory | 43.6 MB (beats 10.195900000000034%) |
 
 ## Problem Statement
 
@@ -46,15 +46,6 @@ Given the `head` of a linked list, remove the `nth` node from the end of the lis
  
 
 **Follow up:** Could you do this in one pass?
-
-## Hints
-
-<details>
-<summary>Hint 1</summary>
-
-Maintain two pointers and update one with a delay of n steps.
-
-</details>
 
 ## Solutions
 
