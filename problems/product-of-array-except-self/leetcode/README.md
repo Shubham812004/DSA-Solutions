@@ -1,0 +1,90 @@
+# Product of Array Except Self
+
+| Field | Value |
+|-------|-------|
+| Difficulty | Medium |
+| Platform | Leetcode |
+| Problem ID | `lc-product-of-array-except-self` |
+| Topics | Array, Prefix Sum |
+| Solved | 2026-09-17 |
+| Runtime | 2 ms (beats 91.5801%) |
+| Memory | 63.2 MB (beats 98.41269999999996%) |
+
+## Problem Statement
+
+Given an integer array `nums`, return _an array_ `answer` _such that_ `answer[i]` _is equal to the product of all the elements of_ `nums` _except_ `nums[i]`.
+
+The product of any prefix or suffix of `nums` is **guaranteed** to fit in a **32-bit** integer.
+
+You must write an algorithm that runs in `O(n)` time and without using the division operation.
+
+ 
+
+**Example 1:**
+
+**Input:** nums = [1,2,3,4]
+**Output:** [24,12,8,6]
+**Example 2:**
+
+**Input:** nums = [-1,1,0,-3,3]
+**Output:** [0,0,9,0,0]
+
+ 
+
+**Constraints:**
+
+	- `2 <= nums.length <= 105`
+
+	- `-30 <= nums[i] <= 30`
+
+	- The input is generated such that `answer[i]` is **guaranteed** to fit in a **32-bit** integer.
+
+ 
+
+**Follow up:** Can you solve the problem in `O(1)` extra space complexity? (The output array **does not** count as extra space for space complexity analysis.)
+
+## Hints
+
+<details>
+<summary>Hint 1</summary>
+
+Think how you can efficiently utilize prefix and suffix products to calculate the product of all elements except self for each index. Can you pre-compute the prefix and suffix products in linear time to avoid redundant calculations?
+
+</details>
+
+<details>
+<summary>Hint 2</summary>
+
+Can you minimize additional space usage by reusing memory or modifying the input array to store intermediate results?
+
+</details>
+
+## Solutions
+
+```Java
+class Solution {
+    public int[] productExceptSelf(int[] nums) {
+        int n = nums.length;
+        int[] prefix = new int[n];
+        int[] suffix = new int[n];
+        for(int i=0; i<n; i++){
+            prefix[i] = 1;
+            suffix[i] = 1;
+        }
+        int preProd = 1;
+        for(int i=0; i<n; i++){
+            prefix[i] = preProd;
+            preProd *= nums[i];
+        }
+        int sufProd = 1;
+        for(int i=n-1; i >= 0; i--){
+            suffix[i] = sufProd;
+            sufProd *= nums[i];
+        }
+        for(int i=0; i<n; i++){
+            nums[i] = prefix[i] * suffix[i];
+        }
+        return nums;
+    }
+}
+```
