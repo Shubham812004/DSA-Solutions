@@ -7,8 +7,8 @@
 | Problem ID | `lc-product-of-array-except-self` |
 | Topics | Array, Prefix Sum |
 | Solved | 2026-09-17 |
-| Runtime | 1 ms (beats 99.9023%) |
-| Memory | 72.3 MB (beats 17.645299999999896%) |
+| Runtime | 2 ms (beats 91.5801%) |
+| Memory | 72.1 MB (beats 44.568999999999896%) |
 
 ## Problem Statement
 
@@ -66,9 +66,7 @@ class Solution {
     public int[] productExceptSelf(int[] nums) {
         int n = nums.length;
         int[] res = new int[n];
-        for(int i=0; i<n; i++){
-            res[i] = 1;
-        }
+        
         int preProd = 1;
         for(int i=0; i<n; i++){
             res[i] = preProd;
