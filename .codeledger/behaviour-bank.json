@@ -273,6 +273,23 @@
       "Monotonic Stack"
     ]
   },
+  "leetcode::product-of-array-except-self": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "product-of-array-except-self",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1793899634515
+      }
+    ],
+    "tags": [
+      "Array",
+      "Prefix Sum"
+    ]
+  },
   "leetcode::search-a-2d-matrix": {
     "difficulty": "Medium",
     "lang": "Java",
@@ -420,6 +437,26 @@
         "elapsedSeconds": 0,
         "lang": "Java",
         "ts": 1793898715997
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Python",
+        "ts": 1793898727533
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1793898747722
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1793898749670
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1793898770523
       }
     ],
     "tags": [

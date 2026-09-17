@@ -7,8 +7,8 @@
 | Problem ID | `lc-product-of-array-except-self` |
 | Topics | Array, Prefix Sum |
 | Solved | 2026-09-17 |
-| Runtime | 2 ms (beats 91.5801%) |
-| Memory | 72.1 MB (beats 44.568999999999896%) |
+| Runtime | 2 ms (beats 92.5184%) |
+| Memory | 72.1 MB (beats 33.67500000000012%) |
 
 ## Problem Statement
 
@@ -42,22 +42,6 @@ You must write an algorithm that runs in `O(n)` time and without using the divis
  
 
 **Follow up:** Can you solve the problem in `O(1)` extra space complexity? (The output array **does not** count as extra space for space complexity analysis.)
-
-## Hints
-
-<details>
-<summary>Hint 1</summary>
-
-Think how you can efficiently utilize prefix and suffix products to calculate the product of all elements except self for each index. Can you pre-compute the prefix and suffix products in linear time to avoid redundant calculations?
-
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-Can you minimize additional space usage by reusing memory or modifying the input array to store intermediate results?
-
-</details>
 
 ## Solutions
 
