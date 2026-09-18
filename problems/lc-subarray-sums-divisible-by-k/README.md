@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-subarray-sums-divisible-by-k` |
 | Topics | Array, Hash Table, Prefix Sum |
-| Solved | 2026-05-21 |
-| Runtime | 24 ms (beats 65.55919999999999%) |
-| Memory | 51.3 MB (beats 70.55829999999996%) |
+| Solved | 2026-09-18 |
+| Runtime | 26 ms (beats 26.81839999999999%) |
+| Memory | 51.3 MB (beats 73.99419999999996%) |
 
 ## Problem Statement
 
@@ -46,9 +46,9 @@ A **subarray** is a **contiguous** part of an array.
 class Solution {
     public int subarraysDivByK(int[] nums, int k) {
         HashMap<Integer, Integer> map = new HashMap<>();
+        map.put(0,1);
         int count = 0;
         int sum = 0;
-        map.put(0,1);
         for(int i=0; i<nums.length; i++){
             sum += nums[i];
             int rem = sum % k;
