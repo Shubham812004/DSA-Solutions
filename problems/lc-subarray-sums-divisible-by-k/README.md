@@ -7,8 +7,8 @@
 | Problem ID | `lc-subarray-sums-divisible-by-k` |
 | Topics | Array, Hash Table, Prefix Sum |
 | Solved | 2026-09-18 |
-| Runtime | 26 ms (beats 26.81839999999999%) |
-| Memory | 51.3 MB (beats 73.99419999999996%) |
+| Runtime | 26 ms (beats 31.35829999999999%) |
+| Memory | 51.3 MB (beats 55.6541%) |
 
 ## Problem Statement
 

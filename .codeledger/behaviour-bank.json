@@ -1042,6 +1042,24 @@
       "Prefix Sum"
     ]
   },
+  "leetcode::subarray-sums-divisible-by-k": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "subarray-sums-divisible-by-k",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794987678674
+      }
+    ],
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Prefix Sum"
+    ]
+  },
   "leetcode::two-sum-ii-input-array-is-sorted": {
     "difficulty": "Medium",
     "lang": "Java",

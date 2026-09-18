@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-11-18T06:35:20.096Z",
+  "updatedAt": "2026-11-18T07:41:19.600Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 265,
+    "total": 266,
     "easy": 117,
-    "medium": 134,
+    "medium": 135,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 57,
-      "leetcode": 208
+      "leetcode": 209
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 149,
+      "Java": 150,
       "Python": 30,
       "MySQL": 35
     },
@@ -22,7 +22,7 @@
       "Binary Search": 4,
       "Searching": 8,
       "String": 27,
-      "Array": 140,
+      "Array": 141,
       "Greedy": 1,
       "Untagged": 1,
       "Prefix Sum": 2,
@@ -4612,7 +4612,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/lc-continuous-subarray-sum/lc-continuous-subarray-sum.java",
+        "problems/lc-continuous-subarray-sum/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-count-indices-with-opposite-parity::1993799059",
@@ -18303,6 +18309,96 @@
         "problems/lc-subarray-sum-equals-k/lc-subarray-sum-equals-k.java",
         "problems/lc-subarray-sum-equals-k/README.md"
       ]
+    },
+    {
+      "id": "lc-subarray-sums-divisible-by-k",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Subarray Sums Divisible by K",
+      "titleSlug": "subarray-sums-divisible-by-k",
+      "difficulty": "Medium",
+      "topic": "Hash Table",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Prefix Sum"
+      ],
+      "canonical": null,
+      "readmeContent": "# [974] Subarray Sums Divisible by K\n**Difficulty:** Medium  |  **Acceptance:** 56.9%  |  **Likes:** 8115 / **Dislikes:** 352\n**Tags:** `Array`, `Hash Table`, `Prefix Sum`\n## Problem\nGiven an integer array nums and an integer k, return the number of non-empty subarrays that have a sum divisible by k.\n\nA subarray is a contiguous part of an array.\n\n&nbsp;\nExample 1:\n\nInput: nums = [4,5,0,-2,-3,1], k = 5\nOutput: 7\nExplanation: There are 7 subarrays with a sum divisible by k = 5:\n[4, 5, 0, -2, -3, 1], [5], [5, 0], [5, 0, -2, -3], [0], [0, -2, -3], [-2, -3]\n\nExample 2:\n\nInput: nums = [5], k = 9\nOutput: 0\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 3 * 104\n\t-104 <= nums[i] <= 104\n\t2 <= k <= 104\n## My Submission\n\n- Runtime: 26 ms (beats 31.4%)\n- Memory: 51.3 MB (beats 55.7%)\n\n## Similar Problems\n\n- [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) — Medium\n- [Make Sum Divisible by P](https://leetcode.com/problems/make-sum-divisible-by-p/) — Medium\n- [Count Number of Bad Pairs](https://leetcode.com/problems/count-number-of-bad-pairs/) — Medium\n- [Find the Divisibility Array of a String](https://leetcode.com/problems/find-the-divisibility-array-of-a-string/) — Medium\n- [Count of Interesting Subarrays](https://leetcode.com/problems/count-of-interesting-subarrays/) — Medium\n",
+      "code": "class Solution {\n    public int subarraysDivByK(int[] nums, int k) {\n        HashMap<Integer, Integer> map = new HashMap<>();\n        map.put(0,1);\n        int count = 0;\n        int sum = 0;\n        for(int i=0; i<nums.length; i++){\n            sum += nums[i];\n            int rem = sum % k;\n            if(rem < 0){\n                rem += k;\n            }\n            if(map.containsKey(rem)) count += map.get(rem);\n            map.put(rem, map.getOrDefault(rem, 0)+1);\n        }\n        return count;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/lc-subarray-sums-divisible-by-k/lc-subarray-sums-divisible-by-k.java",
+          "content": "class Solution {\n    public int subarraysDivByK(int[] nums, int k) {\n        HashMap<Integer, Integer> map = new HashMap<>();\n        map.put(0,1);\n        int count = 0;\n        int sum = 0;\n        for(int i=0; i<nums.length; i++){\n            sum += nums[i];\n            int rem = sum % k;\n            if(rem < 0){\n                rem += k;\n            }\n            if(map.containsKey(rem)) count += map.get(rem);\n            map.put(rem, map.getOrDefault(rem, 0)+1);\n        }\n        return count;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-subarray-sums-divisible-by-k/README.md",
+          "content": "# [974] Subarray Sums Divisible by K\n**Difficulty:** Medium  |  **Acceptance:** 56.9%  |  **Likes:** 8115 / **Dislikes:** 352\n**Tags:** `Array`, `Hash Table`, `Prefix Sum`\n## Problem\nGiven an integer array nums and an integer k, return the number of non-empty subarrays that have a sum divisible by k.\n\nA subarray is a contiguous part of an array.\n\n&nbsp;\nExample 1:\n\nInput: nums = [4,5,0,-2,-3,1], k = 5\nOutput: 7\nExplanation: There are 7 subarrays with a sum divisible by k = 5:\n[4, 5, 0, -2, -3, 1], [5], [5, 0], [5, 0, -2, -3], [0], [0, -2, -3], [-2, -3]\n\nExample 2:\n\nInput: nums = [5], k = 9\nOutput: 0\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 3 * 104\n\t-104 <= nums[i] <= 104\n\t2 <= k <= 104\n## My Submission\n\n- Runtime: 26 ms (beats 31.4%)\n- Memory: 51.3 MB (beats 55.7%)\n\n## Similar Problems\n\n- [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) — Medium\n- [Make Sum Divisible by P](https://leetcode.com/problems/make-sum-divisible-by-p/) — Medium\n- [Count Number of Bad Pairs](https://leetcode.com/problems/count-number-of-bad-pairs/) — Medium\n- [Find the Divisibility Array of a String](https://leetcode.com/problems/find-the-divisibility-array-of-a-string/) — Medium\n- [Count of Interesting Subarrays](https://leetcode.com/problems/count-of-interesting-subarrays/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "26 ms",
+      "memory": "51.3 MB",
+      "runtimePct": 31.35829999999999,
+      "memoryPct": 55.6541,
+      "timestamp": 1789707658000,
+      "acRate": 56.942820631338535,
+      "likes": 8115,
+      "dislikes": 352,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "subarray-sum-equals-k",
+          "title": "Subarray Sum Equals K",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "make-sum-divisible-by-p",
+          "title": "Make Sum Divisible by P",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "count-number-of-bad-pairs",
+          "title": "Count Number of Bad Pairs",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-the-divisibility-array-of-a-string",
+          "title": "Find the Divisibility Array of a String",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "count-of-interesting-subarrays",
+          "title": "Count of Interesting Subarrays",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-subarray-sum-with-length-divisible-by-k",
+          "title": "Maximum Subarray Sum With Length Divisible by K",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given an integer array <code>nums</code> and an integer <code>k</code>, return <em>the number of non-empty <strong>subarrays</strong> that have a sum divisible by </em><code>k</code>.</p>\n\n<p>A <strong>subarray</strong> is a <strong>contiguous</strong> part of an array.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [4,5,0,-2,-3,1], k = 5\n<strong>Output:</strong> 7\n<strong>Explanation:</strong> There are 7 subarrays with a sum divisible by k = 5:\n[4, 5, 0, -2, -3, 1], [5], [5, 0], [5, 0, -2, -3], [0], [0, -2, -3], [-2, -3]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [5], k = 9\n<strong>Output:</strong> 0\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n\t<li><code>2 &lt;= k &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/subarray-sums-divisible-by-k/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": true,
+      "duplicateOf": "lc-subarray-sums-divisible-by-k::2145369923",
+      "_requestAIReview": true,
+      "platform": "leetcode",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-subarray-sums-divisible-by-k::2009246149",
