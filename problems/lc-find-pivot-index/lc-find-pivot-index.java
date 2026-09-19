@@ -4,12 +4,12 @@ class Solution {
         for(int num : nums){
             total += num;
         }
-        int leftMost = 0;
+        int sum = 0;
         for(int i=0; i<nums.length; i++){
-            leftMost += nums[i];
-            int rightMost = total - leftMost;
-            if((leftMost - nums[i]) == rightMost)
-                return i;
+            sum += nums[i];
+            int rightMost = total - sum;
+            int leftMost = sum - nums[i];
+            if(leftMost == rightMost) return i;
         }
         return -1;
     }

@@ -8,7 +8,7 @@
 | Topics | Array, Prefix Sum |
 | Solved | 2026-09-19 |
 | Runtime | 1 ms (beats 95.9319%) |
-| Memory | 47.2 MB (beats 87.92249999999993%) |
+| Memory | 47.4 MB (beats 40.61949999999993%) |
 
 ## Problem Statement
 
@@ -91,12 +91,12 @@ class Solution {
         for(int num : nums){
             total += num;
         }
-        int leftMost = 0;
+        int sum = 0;
         for(int i=0; i<nums.length; i++){
-            leftMost += nums[i];
-            int rightMost = total - leftMost;
-            if((leftMost - nums[i]) == rightMost)
-                return i;
+            sum += nums[i];
+            int rightMost = total - sum;
+            int leftMost = sum - nums[i];
+            if(leftMost == rightMost) return i;
         }
         return -1;
     }
