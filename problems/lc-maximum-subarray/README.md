@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-maximum-subarray` |
 | Topics | Array, Divide and Conquer, Dynamic Programming |
-| Solved | 2026-05-02 |
+| Solved | 2026-09-21 |
 | Runtime | 1 ms (beats 99.9298%) |
-| Memory | 77.1 MB (beats 82.29399999999995%) |
+| Memory | 77.2 MB (beats 48.79539999999996%) |
 
 ## Problem Statement
 
@@ -52,15 +52,15 @@ Given an integer array `nums`, find the subarray with the largest sum, and retur
 class Solution {
     public int maxSubArray(int[] nums) {
         int sum = 0;
-        int largestSum = nums[0];
-        for(int i=0; i<nums.length; i++){
-            sum += nums[i];
-            largestSum = Math.max(sum, largestSum);
+        int maxSum = Integer.MIN_VALUE;
+        for(int num : nums){
+            sum += num;
+            maxSum = Math.max(sum, maxSum);
             if(sum < 0){
                 sum = 0;
             }
         }
-        return largestSum;
+        return maxSum;
     }
 }
 ```
