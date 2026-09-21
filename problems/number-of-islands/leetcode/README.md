@@ -7,8 +7,8 @@
 | Problem ID | `lc-number-of-islands` |
 | Topics | Graph, Array, Depth-First Search, Breadth-First Search, Union Find, Matrix |
 | Solved | 2026-07-24 |
-| Runtime | 4 ms (beats 46.78069999999999%) |
-| Memory | 52.1 MB (beats 42.79350000000001%) |
+| Runtime | 4 ms (beats 46.95399999999999%) |
+| Memory | 52.1 MB (beats 41.293499999999995%) |
 
 ## Problem Statement
 

@@ -447,6 +447,23 @@
       "Sorting"
     ]
   },
+  "leetcode::maximum-product-subarray": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "maximum-product-subarray",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794978383912
+      }
+    ],
+    "tags": [
+      "Array",
+      "Dynamic Programming"
+    ]
+  },
   "leetcode::maximum-subarray": {
     "difficulty": "Medium",
     "lang": "Java",
@@ -581,6 +598,11 @@
         "elapsedSeconds": 0,
         "lang": "Java",
         "ts": 1794851469580
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794978190446
       }
     ],
     "tags": [

@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-11-16T17:51:09.689Z",
+  "updatedAt": "2026-11-18T05:06:24.110Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 263,
+    "total": 264,
     "easy": 117,
-    "medium": 132,
+    "medium": 133,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 57,
-      "leetcode": 206
+      "leetcode": 207
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 147,
+      "Java": 148,
       "Python": 30,
       "MySQL": 35
     },
@@ -22,7 +22,7 @@
       "Binary Search": 4,
       "Searching": 8,
       "String": 27,
-      "Array": 138,
+      "Array": 139,
       "Greedy": 1,
       "Untagged": 1,
       "Prefix Sum": 2,
@@ -9785,6 +9785,108 @@
       ]
     },
     {
+      "id": "lc-maximum-product-subarray",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Maximum Product Subarray",
+      "titleSlug": "maximum-product-subarray",
+      "difficulty": "Medium",
+      "topic": "Dynamic Programming",
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 152,
+            "platform": "leetcode",
+            "slug": "maximum-product-subarray"
+          }
+        ],
+        "canonicalId": "maximum-product-subarray",
+        "canonicalTitle": "Maximum Product Subarray",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "kadane-variant",
+        "tags": [
+          "array"
+        ],
+        "topic": "dynamic-programming",
+        "voteCount": 97
+      },
+      "readmeContent": "# [152] Maximum Product Subarray\n**Difficulty:** Medium  |  **Acceptance:** 37.3%  |  **Likes:** 20978 / **Dislikes:** 850\n**Tags:** `Array`, `Dynamic Programming`\n## Problem\nGiven an integer array nums, find a subarray that has the largest product, and return the product.\n\nThe test cases are generated so that the answer will fit in a 32-bit integer.\n\nNote that the product of an array with a single element is the value of that element.\n\n&nbsp;\n​​​​​​​Example 1:\n\nInput: nums = [2,3,-2,4]\nOutput: 6\nExplanation: [2,3] has the largest product 6.\n\nExample 2:\n\nInput: nums = [-2,0,-1]\nOutput: 0\nExplanation: The result cannot be 2, because [-2,-1] is not a subarray.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 2 * 104\n\t-10 <= nums[i] <= 10\n\tThe product of any subarray of nums is guaranteed to fit in a 32-bit integer.\n## My Submission\n\n- Runtime: 1 ms (beats 94.3%)\n- Memory: 47.3 MB (beats 30.4%)\n\n## Similar Problems\n\n- [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) — Medium\n- [House Robber](https://leetcode.com/problems/house-robber/) — Medium\n- [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) — Medium\n- [Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/) — Easy\n- [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) — Medium\n",
+      "code": "class Solution {\n    public int maxProduct(int[] nums) {\n        int n = nums.length;\n        int maxProd = Integer.MIN_VALUE;\n        int prefix = 1, suffix = 1;\n        for(int i=0; i<n; i++){\n            if(prefix == 0) prefix = 1;\n            if(suffix == 0) suffix = 1;\n            prefix *= nums[i];\n            suffix *= nums[n-i-1];\n            maxProd = Math.max(maxProd, Math.max(prefix, suffix));\n        }\n        return maxProd;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
+          "content": "class Solution {\n    public int maxProduct(int[] nums) {\n        int n = nums.length;\n        int maxProd = Integer.MIN_VALUE;\n        int prefix = 1, suffix = 1;\n        for(int i=0; i<n; i++){\n            if(prefix == 0) prefix = 1;\n            if(suffix == 0) suffix = 1;\n            prefix *= nums[i];\n            suffix *= nums[n-i-1];\n            maxProd = Math.max(maxProd, Math.max(prefix, suffix));\n        }\n        return maxProd;\n    }\n}"
+        },
+        {
+          "path": "problems/maximum-product-subarray/README.md",
+          "content": "# [152] Maximum Product Subarray\n**Difficulty:** Medium  |  **Acceptance:** 37.3%  |  **Likes:** 20978 / **Dislikes:** 850\n**Tags:** `Array`, `Dynamic Programming`\n## Problem\nGiven an integer array nums, find a subarray that has the largest product, and return the product.\n\nThe test cases are generated so that the answer will fit in a 32-bit integer.\n\nNote that the product of an array with a single element is the value of that element.\n\n&nbsp;\n​​​​​​​Example 1:\n\nInput: nums = [2,3,-2,4]\nOutput: 6\nExplanation: [2,3] has the largest product 6.\n\nExample 2:\n\nInput: nums = [-2,0,-1]\nOutput: 0\nExplanation: The result cannot be 2, because [-2,-1] is not a subarray.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 2 * 104\n\t-10 <= nums[i] <= 10\n\tThe product of any subarray of nums is guaranteed to fit in a 32-bit integer.\n## My Submission\n\n- Runtime: 1 ms (beats 94.3%)\n- Memory: 47.3 MB (beats 30.4%)\n\n## Similar Problems\n\n- [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) — Medium\n- [House Robber](https://leetcode.com/problems/house-robber/) — Medium\n- [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) — Medium\n- [Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/) — Easy\n- [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "1 ms",
+      "memory": "47.3 MB",
+      "runtimePct": 94.2844,
+      "memoryPct": 30.381899999999998,
+      "timestamp": 1789968997000,
+      "acRate": 37.315195249337215,
+      "likes": 20978,
+      "dislikes": 850,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-subarray",
+          "title": "Maximum Subarray",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "house-robber",
+          "title": "House Robber",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "product-of-array-except-self",
+          "title": "Product of Array Except Self",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "maximum-product-of-three-numbers",
+          "title": "Maximum Product of Three Numbers",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "subarray-product-less-than-k",
+          "title": "Subarray Product Less Than K",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given an integer array <code>nums</code>, find a <span data-keyword=\"subarray-nonempty\">subarray</span> that has the largest product, and return <em>the product</em>.</p>\n\n<p>The test cases are generated so that the answer will fit in a <strong>32-bit</strong> integer.</p>\n\n<p><strong>Note</strong> that the product of an array with a single element is the value of that element.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">​​​​​​​Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,3,-2,4]\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> [2,3] has the largest product 6.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-2,0,-1]\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> The result cannot be 2, because [-2,-1] is not a subarray.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 2 * 10<sup>4</sup></code></li>\n\t<li><code>-10 &lt;= nums[i] &lt;= 10</code></li>\n\t<li>The product of any subarray of <code>nums</code> is <strong>guaranteed</strong> to fit in a <strong>32-bit</strong> integer.</li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/maximum-product-subarray/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": true,
+      "duplicateOf": "lc-maximum-product-subarray::1996456582",
+      "_requestAIReview": true,
+      "platform": "leetcode",
+      "methods": [],
+      "manuallyEdited": false
+    },
+    {
       "id": "lc-maximum-product-subarray::1995896290",
       "submissionId": 1995896290,
       "platform": "leetcode",
@@ -13262,7 +13364,7 @@
         "topic": "graphs",
         "voteCount": 99
       },
-      "readmeContent": "# [200] Number of Islands\n**Difficulty:** Medium  |  **Acceptance:** 65.4%  |  **Likes:** 25582 / **Dislikes:** 638\n**Tags:** `Array`, `Depth-First Search`, `Breadth-First Search`, `Union-Find`, `Matrix`\n## Problem\nGiven an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.\n\nAn island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.\n\n&nbsp;\nExample 1:\n\nInput: grid = [\n  [\"1\",\"1\",\"1\",\"1\",\"0\"],\n  [\"1\",\"1\",\"0\",\"1\",\"0\"],\n  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n  [\"0\",\"0\",\"0\",\"0\",\"0\"]\n]\nOutput: 1\n\nExample 2:\n\nInput: grid = [\n  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n  [\"0\",\"0\",\"1\",\"0\",\"0\"],\n  [\"0\",\"0\",\"0\",\"1\",\"1\"]\n]\nOutput: 3\n\n&nbsp;\nConstraints:\n\n\tm == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 300\n\tgrid[i][j] is '0' or '1'.\n## My Submission\n\n- Runtime: 4 ms (beats 46.8%)\n- Memory: 52.1 MB (beats 42.8%)\n\n## Similar Problems\n\n- [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/) — Medium\n- [Battleships in a Board](https://leetcode.com/problems/battleships-in-a-board/) — Medium\n- [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) — Medium\n- [Count Sub Islands](https://leetcode.com/problems/count-sub-islands/) — Medium\n- [Find All Groups of Farmland](https://leetcode.com/problems/find-all-groups-of-farmland/) — Medium\n",
+      "readmeContent": "# [200] Number of Islands\n**Difficulty:** Medium  |  **Acceptance:** 65.4%  |  **Likes:** 25588 / **Dislikes:** 638\n**Tags:** `Array`, `Depth-First Search`, `Breadth-First Search`, `Union-Find`, `Matrix`\n## Problem\nGiven an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.\n\nAn island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.\n\n&nbsp;\nExample 1:\n\nInput: grid = [\n  [\"1\",\"1\",\"1\",\"1\",\"0\"],\n  [\"1\",\"1\",\"0\",\"1\",\"0\"],\n  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n  [\"0\",\"0\",\"0\",\"0\",\"0\"]\n]\nOutput: 1\n\nExample 2:\n\nInput: grid = [\n  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n  [\"0\",\"0\",\"1\",\"0\",\"0\"],\n  [\"0\",\"0\",\"0\",\"1\",\"1\"]\n]\nOutput: 3\n\n&nbsp;\nConstraints:\n\n\tm == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 300\n\tgrid[i][j] is '0' or '1'.\n## My Submission\n\n- Runtime: 4 ms (beats 47.0%)\n- Memory: 52.1 MB (beats 41.3%)\n\n## Similar Problems\n\n- [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/) — Medium\n- [Battleships in a Board](https://leetcode.com/problems/battleships-in-a-board/) — Medium\n- [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) — Medium\n- [Count Sub Islands](https://leetcode.com/problems/count-sub-islands/) — Medium\n- [Find All Groups of Farmland](https://leetcode.com/problems/find-all-groups-of-farmland/) — Medium\n",
       "code": "class Solution {\n    public void dfs(char[][] grid, boolean[][] visited, int row, int col){\n        if(row < 0 || row >= grid.length || col < 0 || col >= grid[0].length){\n            return;\n        }\n        if(grid[row][col] == '0' || visited[row][col]){\n            return;\n        }\n        visited[row][col] = true;\n\n        dfs(grid, visited, row-1, col);\n        dfs(grid, visited, row+1, col);\n        dfs(grid, visited, row, col-1);\n        dfs(grid, visited, row, col+1);\n    }\n    public int numIslands(char[][] grid) {\n        int n = grid.length;\n        int m = grid[0].length;\n        boolean[][] visited = new boolean[n][m];\n        int count = 0;\n        for(int i=0; i<n; i++){\n            for(int j=0; j<m; j++){\n                if(grid[i][j] == '1' && !visited[i][j]){\n                    count++;\n                    dfs(grid, visited, i, j);\n                }\n            }\n        }\n        return count;\n    }\n}",
       "files": [
         {
@@ -13271,7 +13373,7 @@
         },
         {
           "path": "problems/number-of-islands/README.md",
-          "content": "# [200] Number of Islands\n**Difficulty:** Medium  |  **Acceptance:** 65.4%  |  **Likes:** 25582 / **Dislikes:** 638\n**Tags:** `Array`, `Depth-First Search`, `Breadth-First Search`, `Union-Find`, `Matrix`\n## Problem\nGiven an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.\n\nAn island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.\n\n&nbsp;\nExample 1:\n\nInput: grid = [\n  [\"1\",\"1\",\"1\",\"1\",\"0\"],\n  [\"1\",\"1\",\"0\",\"1\",\"0\"],\n  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n  [\"0\",\"0\",\"0\",\"0\",\"0\"]\n]\nOutput: 1\n\nExample 2:\n\nInput: grid = [\n  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n  [\"0\",\"0\",\"1\",\"0\",\"0\"],\n  [\"0\",\"0\",\"0\",\"1\",\"1\"]\n]\nOutput: 3\n\n&nbsp;\nConstraints:\n\n\tm == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 300\n\tgrid[i][j] is '0' or '1'.\n## My Submission\n\n- Runtime: 4 ms (beats 46.8%)\n- Memory: 52.1 MB (beats 42.8%)\n\n## Similar Problems\n\n- [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/) — Medium\n- [Battleships in a Board](https://leetcode.com/problems/battleships-in-a-board/) — Medium\n- [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) — Medium\n- [Count Sub Islands](https://leetcode.com/problems/count-sub-islands/) — Medium\n- [Find All Groups of Farmland](https://leetcode.com/problems/find-all-groups-of-farmland/) — Medium\n"
+          "content": "# [200] Number of Islands\n**Difficulty:** Medium  |  **Acceptance:** 65.4%  |  **Likes:** 25588 / **Dislikes:** 638\n**Tags:** `Array`, `Depth-First Search`, `Breadth-First Search`, `Union-Find`, `Matrix`\n## Problem\nGiven an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.\n\nAn island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.\n\n&nbsp;\nExample 1:\n\nInput: grid = [\n  [\"1\",\"1\",\"1\",\"1\",\"0\"],\n  [\"1\",\"1\",\"0\",\"1\",\"0\"],\n  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n  [\"0\",\"0\",\"0\",\"0\",\"0\"]\n]\nOutput: 1\n\nExample 2:\n\nInput: grid = [\n  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n  [\"0\",\"0\",\"1\",\"0\",\"0\"],\n  [\"0\",\"0\",\"0\",\"1\",\"1\"]\n]\nOutput: 3\n\n&nbsp;\nConstraints:\n\n\tm == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 300\n\tgrid[i][j] is '0' or '1'.\n## My Submission\n\n- Runtime: 4 ms (beats 47.0%)\n- Memory: 52.1 MB (beats 41.3%)\n\n## Similar Problems\n\n- [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/) — Medium\n- [Battleships in a Board](https://leetcode.com/problems/battleships-in-a-board/) — Medium\n- [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) — Medium\n- [Count Sub Islands](https://leetcode.com/problems/count-sub-islands/) — Medium\n- [Find All Groups of Farmland](https://leetcode.com/problems/find-all-groups-of-farmland/) — Medium\n"
         }
       ],
       "lang": {
@@ -13281,11 +13383,11 @@
       },
       "runtime": "4 ms",
       "memory": "52.1 MB",
-      "runtimePct": 46.78069999999999,
-      "memoryPct": 42.79350000000001,
+      "runtimePct": 46.95399999999999,
+      "memoryPct": 41.293499999999995,
       "timestamp": 1784877861000,
-      "acRate": 65.42489899631414,
-      "likes": 25582,
+      "acRate": 65.42889082398608,
+      "likes": 25588,
       "dislikes": 638,
       "similar": [
         {
@@ -13346,7 +13448,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/number-of-islands/leetcode/lc-number-of-islands.java",
+        "problems/number-of-islands/leetcode/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-number-of-unique-subjects-taught-by-each-teacher::1816190831",

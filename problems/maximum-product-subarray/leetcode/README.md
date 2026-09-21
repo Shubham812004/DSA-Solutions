@@ -7,8 +7,8 @@
 | Problem ID | `lc-maximum-product-subarray` |
 | Topics | Array, Dynamic Programming |
 | Solved | 2026-09-21 |
-| Runtime | 1 ms (beats 93.2677%) |
-| Memory | 47.3 MB (beats 52.483299999999986%) |
+| Runtime | 1 ms (beats 94.2844%) |
+| Memory | 47.3 MB (beats 30.381899999999998%) |
 
 ## Problem Statement
 
