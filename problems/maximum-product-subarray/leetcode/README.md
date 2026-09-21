@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-maximum-product-subarray` |
 | Topics | Array, Dynamic Programming |
-| Solved | 2026-05-13 |
-| Runtime | 2 ms (beats 70.19%) |
-| Memory | 47.2 MB (beats 72.44179999999999%) |
+| Solved | 2026-09-21 |
+| Runtime | 269 ms (beats 10.28109999999996%) |
+| Memory | 47.4 MB (beats 15.934099999999987%) |
 
 ## Problem Statement
 
@@ -47,15 +47,13 @@ The test cases are generated so that the answer will fit in a **32-bit** integer
 ```Java
 class Solution {
     public int maxProduct(int[] nums) {
-        int n = nums.length;
         int maxProd = Integer.MIN_VALUE;
-        int prefix = 1, suffix = 1;
-        for(int i=0; i<n; i++){
-            if(prefix == 0) prefix = 1;
-            if(suffix == 0) suffix = 1;
-            prefix *= nums[i];
-            suffix *= nums[n-i-1];
-            maxProd = Math.max(maxProd, Math.max(prefix, suffix));
+        for(int i=0; i<nums.length; i++){
+            int prod = 1;
+            for(int j=i; j<nums.length; j++){
+                prod *= nums[j];
+                maxProd = Math.max(maxProd, prod);
+            }
         }
         return maxProd;
     }
