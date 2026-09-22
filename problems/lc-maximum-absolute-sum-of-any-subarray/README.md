@@ -8,7 +8,7 @@
 | Topics | Array, Dynamic Programming |
 | Solved | 2026-09-22 |
 | Runtime | 4 ms (beats 91.474%) |
-| Memory | 66.8 MB (beats 49.15689999999996%) |
+| Memory | 67 MB (beats 29.60009999999996%) |
 
 ## Problem Statement
 
@@ -86,12 +86,10 @@ class Solution {
         for(int num : nums){
             sum1 += num;
             sum2 += num;
-            minSum = Math.min(minSum, sum1);
-            maxSum = Math.max(maxSum, sum2);
-            if(sum2 < 0){
-                sum2 = 0;
-            }
-            if(sum1 > 0) sum1 = 0;
+            maxSum = Math.max(maxSum, sum1);
+            minSum = Math.min(minSum, sum2);
+            if(sum1 < 0) sum1 = 0;
+            if(sum2 > 0) sum2 = 0;
         }
         return Math.max(maxSum, Math.abs(minSum));
     }
