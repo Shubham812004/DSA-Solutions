@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-maximum-subarray` |
 | Topics | Array, Divide and Conquer, Dynamic Programming |
-| Solved | 2026-09-21 |
+| Solved | 2026-09-23 |
 | Runtime | 1 ms (beats 99.9298%) |
-| Memory | 77.2 MB (beats 48.79539999999996%) |
+| Memory | 80.9 MB (beats 5.930399999999959%) |
 
 ## Problem Statement
 
@@ -55,10 +55,9 @@ class Solution {
         int maxSum = Integer.MIN_VALUE;
         for(int num : nums){
             sum += num;
-            maxSum = Math.max(sum, maxSum);
-            if(sum < 0){
+            maxSum = Math.max(maxSum, sum);
+            if(sum < 0)
                 sum = 0;
-            }
         }
         return maxSum;
     }
