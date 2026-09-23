@@ -110,11 +110,6 @@
       {
         "elapsedSeconds": 0,
         "lang": "Java",
-        "ts": 1791954811693
-      },
-      {
-        "elapsedSeconds": 0,
-        "lang": "Java",
         "ts": 1791960517880
       },
       {
@@ -156,6 +151,11 @@
         "elapsedSeconds": 0,
         "lang": "Java",
         "ts": 1793681813424
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1793771734544
       }
     ],
     "tags": [
@@ -186,6 +186,24 @@
       "Array",
       "Binary Search",
       "Sorting"
+    ]
+  },
+  "leetcode::maximum-subarray": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "maximum-subarray",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1793898090043
+      }
+    ],
+    "tags": [
+      "Array",
+      "Divide and Conquer",
+      "Dynamic Programming"
     ]
   },
   "leetcode::minimum-number-of-days-to-make-m-bouquets": {

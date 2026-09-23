@@ -6,15 +6,15 @@
 
 # Shubham812004's DSA Solutions
 
-[![Solutions](https://img.shields.io/badge/Solutions-242-06b6d4?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Easy](https://img.shields.io/badge/Easy-113-22c55e?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Medium](https://img.shields.io/badge/Medium-115-f59e0b?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Hard](https://img.shields.io/badge/Hard-4-ef4444?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Languages](https://img.shields.io/badge/Languages-4-14b8a6?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Platforms](https://img.shields.io/badge/Platforms-2-6366f1?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/)
+[![Solutions](https://img.shields.io/badge/Solutions-243-06b6d4?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Easy](https://img.shields.io/badge/Easy-113-22c55e?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Medium](https://img.shields.io/badge/Medium-116-f59e0b?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Hard](https://img.shields.io/badge/Hard-4-ef4444?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Languages](https://img.shields.io/badge/Languages-4-14b8a6?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Platforms](https://img.shields.io/badge/Platforms-2-6366f1?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/)
 
 <!-- codeledger:gamification:start -->
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://shubham812004.github.io/DSA-Solutions/badges/card-light.svg?v=3485-0-191-2026-11-05">
-  <img src="https://shubham812004.github.io/DSA-Solutions/badges/card.svg?v=3485-0-191-2026-11-05" alt="Streak card" width="420">
+  <source media="(prefers-color-scheme: light)" srcset="https://shubham812004.github.io/DSA-Solutions/badges/card-light.svg?v=3510-0-192-2026-11-05">
+  <img src="https://shubham812004.github.io/DSA-Solutions/badges/card.svg?v=3510-0-192-2026-11-05" alt="Streak card" width="420">
 </picture>
 
-![Streak](https://shubham812004.github.io/DSA-Solutions/badges/streak.svg?v=3485-0-191-2026-11-05) ![Points](https://shubham812004.github.io/DSA-Solutions/badges/points.svg?v=3485-0-191-2026-11-05) ![Level](https://shubham812004.github.io/DSA-Solutions/badges/level.svg?v=3485-0-191-2026-11-05) ![Freezes](https://shubham812004.github.io/DSA-Solutions/badges/freezes.svg?v=3485-0-191-2026-11-05)
+![Streak](https://shubham812004.github.io/DSA-Solutions/badges/streak.svg?v=3510-0-192-2026-11-05) ![Points](https://shubham812004.github.io/DSA-Solutions/badges/points.svg?v=3510-0-192-2026-11-05) ![Level](https://shubham812004.github.io/DSA-Solutions/badges/level.svg?v=3510-0-192-2026-11-05) ![Freezes](https://shubham812004.github.io/DSA-Solutions/badges/freezes.svg?v=3510-0-192-2026-11-05)
 
 🩸 First Blood · 🔟 Ten Down · 💯 Century · 🎯 Well Rounded · ⚡ Double Day · 🪃 Comeback · ⭐ Engineer
 <!-- codeledger:gamification:end -->
@@ -23,7 +23,7 @@
 
 **[View Live Dashboard →](https://shubham812004.github.io/DSA-Solutions/)**
 
-*Last updated: Nov 3, 2026*
+*Last updated: Nov 5, 2026*
 
 [![CodeLedger](https://raw.githubusercontent.com/Life-Experimentalist/Code-Ledger/refs/heads/main/src/assets/images/social%20preview.png)](https://shubham812004.github.io/DSA-Solutions/)
 
@@ -33,11 +33,11 @@
 
 ## Stats
 
-**By Platform:** leetcode (185) · geeksforgeeks (57)
+**By Platform:** leetcode (186) · geeksforgeeks (57)
 
-**Top Languages:** Java (127) · Unknown (51) · MySQL (35) · Python (29)
+**Top Languages:** Java (128) · Unknown (51) · MySQL (35) · Python (29)
 
-**Top Topics:** Array (126) · Database (35) · String (24) · Linked List (11) · Searching (8) · Two Pointers (7) · Math (6) · Stack (6) · Dynamic Programming (6) · Binary Search (4)
+**Top Topics:** Array (127) · Database (35) · String (24) · Linked List (11) · Searching (8) · Two Pointers (7) · Math (6) · Stack (6) · Dynamic Programming (6) · Binary Search (4)
 
 ---
 
@@ -88,6 +88,7 @@ Built with [CodeLedger](https://codeledger.vkrishna04.me) · [⭐ Star the exten
 </div>
 
 <!-- CODELEDGER_AUTO_GENERATED_END -->
+
 
 
 

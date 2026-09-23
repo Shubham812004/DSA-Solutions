@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-11-03T05:16:04.080Z",
+  "updatedAt": "2026-11-05T17:01:30.132Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 242,
+    "total": 243,
     "easy": 113,
-    "medium": 115,
+    "medium": 116,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 57,
-      "leetcode": 185
+      "leetcode": 186
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 127,
+      "Java": 128,
       "Python": 29,
       "MySQL": 35
     },
@@ -22,7 +22,7 @@
       "Binary Search": 4,
       "Searching": 8,
       "String": 24,
-      "Array": 126,
+      "Array": 127,
       "Greedy": 1,
       "Untagged": 1,
       "Prefix Sum": 2,
@@ -1414,7 +1414,8 @@
       ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "problemStatement": "<p><span>Given a strictly sorted 2D matrix<strong> mat</strong>[][] of size <strong>n x m&nbsp;</strong>and<strong>&nbsp;</strong>a number&nbsp;<strong>x.</strong> Find whether the number <strong>x</strong> is present in the matrix or not.<br /><strong>Note:</strong> In a strictly sorted matrix, each row is sorted in strictly increasing order, and&nbsp;the first element of the <strong>i</strong><sup>th</sup>&nbsp;row (<strong>i</strong>!=0) is greater than the last element of the (<strong>i-1</strong>)<sup>th&nbsp;</sup>row.</span><br /><br /><span><strong>Examples:</strong></span></p><pre><span><strong>Input</strong>: mat[][] = [[1, 5, 9], [14, 20, 21], [30, 34, 43]], x = 14\n<strong>Output</strong>: true\n<strong>Explanation</strong>: 14 is present in the matrix, so output is true.\n</span></pre><pre><span><strong>Input</strong>: mat[][] = [[1, 5, 9, 11], [14, 20, 21, 26], [30, 34, 43, 50]], x = 42<br /><strong>Output</strong>: false\n<strong>Explanation</strong>: 42 is not present in the matrix.<br /></span></pre><pre><span><strong>Input</strong>: mat[][] = [[87, 96, 99], [101, 103, 111]], x = 101</span><br /><span><strong>Output</strong>: true\n<strong>Explanation</strong>: 101 is present in the matrix.</span></pre><p><span><strong>Constraints:<br /></strong>1 &le; n, m &le; 1000<br />1 &le; mat[i][j] &le; 10<sup>9</sup><br />1 &le; x &le; 10<sup>9</sup></span></p>"
     },
     {
       "id": "gfg-search-in-a-matrix17201720",
@@ -1457,7 +1458,8 @@
       ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "problemStatement": "<p><span>Given a 2D integer matrix <strong>mat[][]</strong>, where every row and column is sorted in increasing order and a number <strong>x</strong>, return <strong>true </strong>if the element <strong>x</strong> is present in the matrix. Otherwise, return <strong>false</strong>.</span></p><p><strong><span>Examples:</span></strong></p><pre><span><strong>Input</strong>: mat[][] = [[3, 30, 38], [20, 52, 54], [35, 60, 69]], x = 62\n<strong>Output</strong>: false\n<strong>Explanation</strong>: 62 is not present in the matrix, so output is false.<br /></span></pre><pre><span><strong>Input</strong>: mat[][] = [[18, 21, 27],  [38, 55, 67]], x = 55\n<strong>Output</strong>: true\n<strong>Explanation</strong>: 55 is present in the matrix.</span></pre><pre><span><strong>Input</strong>: mat[][] = [[1, 2, 3], [4, 5, 6], [7, 8, 9]], x = 3\n<strong>Output</strong>: true\n<strong>Explanation</strong>: 3 is present in the matrix.</span></pre>"
     },
     {
       "id": "gfg-search-in-a-rotated-array4618",
@@ -4618,7 +4620,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/daily-temperatures/leetcode/lc-daily-temperatures.java",
+        "problems/daily-temperatures/leetcode/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-employee-bonus::1809653418",
@@ -7221,7 +7229,7 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33359 / **Dislikes:** 2048\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.4%)\n- Memory: 43.4 MB (beats 71.4%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
+      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33363 / **Dislikes:** 2048\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.4%)\n- Memory: 43.4 MB (beats 70.9%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
       "code": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = palindrome(s, i, i);\n            int even = palindrome(s, i, i+1);\n            int max = Math.max(odd, even);\n            if(max > (end - start)){\n                start = i - (max-1)/2;\n                end = i + max/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int palindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        }\n        return r-l-1;\n    }\n}",
       "files": [
         {
@@ -7230,7 +7238,7 @@
         },
         {
           "path": "problems/longest-palindromic-substring/README.md",
-          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33359 / **Dislikes:** 2048\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.4%)\n- Memory: 43.4 MB (beats 71.4%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
+          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33363 / **Dislikes:** 2048\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.4%)\n- Memory: 43.4 MB (beats 70.9%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
         }
       ],
       "lang": {
@@ -7240,11 +7248,11 @@
       },
       "runtime": "14 ms",
       "memory": "43.4 MB",
-      "runtimePct": 93.38229999999999,
-      "memoryPct": 71.43969999999999,
+      "runtimePct": 93.4421,
+      "memoryPct": 70.89400000000002,
       "timestamp": 1790779293000,
-      "acRate": 38.92330109936445,
-      "likes": 33359,
+      "acRate": 38.92785319331115,
+      "likes": 33363,
       "dislikes": 2048,
       "similar": [
         {
@@ -9788,6 +9796,138 @@
         "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
         "problems/maximum-product-subarray/leetcode/README.md"
       ]
+    },
+    {
+      "id": "lc-maximum-subarray",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Maximum Subarray",
+      "titleSlug": "maximum-subarray",
+      "difficulty": "Medium",
+      "topic": "Dynamic Programming",
+      "tags": [
+        "Array",
+        "Divide and Conquer",
+        "Dynamic Programming"
+      ],
+      "canonical": null,
+      "readmeContent": "# [53] Maximum Subarray\n**Difficulty:** Medium  |  **Acceptance:** 54.0%  |  **Likes:** 38631 / **Dislikes:** 1647\n**Tags:** `Array`, `Divide and Conquer`, `Dynamic Programming`\n## Problem\nGiven an integer array nums, find the subarray with the largest sum, and return its sum.\n\n&nbsp;\nExample 1:\n\nInput: nums = [-2,1,-3,4,-1,2,1,-5,4]\nOutput: 6\nExplanation: The subarray [4,-1,2,1] has the largest sum 6.\n\nExample 2:\n\nInput: nums = [1]\nOutput: 1\nExplanation: The subarray [1] has the largest sum 1.\n\nExample 3:\n\nInput: nums = [5,4,-1,7,8]\nOutput: 23\nExplanation: The subarray [5,4,-1,7,8] has the largest sum 23.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 105\n\t-104 <= nums[i] <= 104\n\n&nbsp;\nFollow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.\n## My Submission\n\n- Runtime: 1 ms (beats 99.9%)\n- Memory: 80.9 MB (beats 6.3%)\n\n## Similar Problems\n\n- [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) — Easy\n- [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) — Medium\n- [Degree of an Array](https://leetcode.com/problems/degree-of-an-array/) — Easy\n- [Longest Turbulent Subarray](https://leetcode.com/problems/longest-turbulent-subarray/) — Medium\n- [Maximum Score Of Spliced Array](https://leetcode.com/problems/maximum-score-of-spliced-array/) — Hard\n",
+      "code": "class Solution {\n    public int maxSubArray(int[] nums) {\n        int sum = 0;\n        int maxSum = Integer.MIN_VALUE;\n        for(int num : nums){\n            sum += num;\n            maxSum = Math.max(maxSum, sum);\n            if(sum < 0)\n                sum = 0;\n        }\n        return maxSum;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/lc-maximum-subarray/lc-maximum-subarray.java",
+          "content": "class Solution {\n    public int maxSubArray(int[] nums) {\n        int sum = 0;\n        int maxSum = Integer.MIN_VALUE;\n        for(int num : nums){\n            sum += num;\n            maxSum = Math.max(maxSum, sum);\n            if(sum < 0)\n                sum = 0;\n        }\n        return maxSum;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-maximum-subarray/README.md",
+          "content": "# [53] Maximum Subarray\n**Difficulty:** Medium  |  **Acceptance:** 54.0%  |  **Likes:** 38631 / **Dislikes:** 1647\n**Tags:** `Array`, `Divide and Conquer`, `Dynamic Programming`\n## Problem\nGiven an integer array nums, find the subarray with the largest sum, and return its sum.\n\n&nbsp;\nExample 1:\n\nInput: nums = [-2,1,-3,4,-1,2,1,-5,4]\nOutput: 6\nExplanation: The subarray [4,-1,2,1] has the largest sum 6.\n\nExample 2:\n\nInput: nums = [1]\nOutput: 1\nExplanation: The subarray [1] has the largest sum 1.\n\nExample 3:\n\nInput: nums = [5,4,-1,7,8]\nOutput: 23\nExplanation: The subarray [5,4,-1,7,8] has the largest sum 23.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 105\n\t-104 <= nums[i] <= 104\n\n&nbsp;\nFollow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.\n## My Submission\n\n- Runtime: 1 ms (beats 99.9%)\n- Memory: 80.9 MB (beats 6.3%)\n\n## Similar Problems\n\n- [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) — Easy\n- [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) — Medium\n- [Degree of an Array](https://leetcode.com/problems/degree-of-an-array/) — Easy\n- [Longest Turbulent Subarray](https://leetcode.com/problems/longest-turbulent-subarray/) — Medium\n- [Maximum Score Of Spliced Array](https://leetcode.com/problems/maximum-score-of-spliced-array/) — Hard\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "1 ms",
+      "memory": "80.9 MB",
+      "runtimePct": 99.9465,
+      "memoryPct": 6.290300000000078,
+      "timestamp": 1790149598000,
+      "acRate": 54.04138617880453,
+      "likes": 38631,
+      "dislikes": 1647,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "best-time-to-buy-and-sell-stock",
+          "title": "Best Time to Buy and Sell Stock",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-product-subarray",
+          "title": "Maximum Product Subarray",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "degree-of-an-array",
+          "title": "Degree of an Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "longest-turbulent-subarray",
+          "title": "Longest Turbulent Subarray",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "maximum-score-of-spliced-array",
+          "title": "Maximum Score Of Spliced Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-absolute-sum-of-any-subarray",
+          "title": "Maximum Absolute Sum of Any Subarray",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "substring-with-largest-variance",
+          "title": "Substring With Largest Variance",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "count-subarrays-with-score-less-than-k",
+          "title": "Count Subarrays With Score Less Than K",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "maximum-value-of-a-string-in-an-array",
+          "title": "Maximum Value of a String in an Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-the-substring-with-maximum-cost",
+          "title": "Find the Substring With Maximum Cost",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "k-items-with-the-maximum-sum",
+          "title": "K Items With the Maximum Sum",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-good-subarray-sum",
+          "title": "Maximum Good Subarray Sum",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "maximize-subarray-sum-after-removing-all-occurrences-of-one-element",
+          "title": "Maximize Subarray Sum After Removing All Occurrences of One Element",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given an integer array <code>nums</code>, find the <span data-keyword=\"subarray-nonempty\">subarray</span> with the largest sum, and return <em>its sum</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-2,1,-3,4,-1,2,1,-5,4]\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> The subarray [4,-1,2,1] has the largest sum 6.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> The subarray [1] has the largest sum 1.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [5,4,-1,7,8]\n<strong>Output:</strong> 23\n<strong>Explanation:</strong> The subarray [5,4,-1,7,8] has the largest sum 23.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> If you have figured out the <code>O(n)</code> solution, try coding another solution using the <strong>divide and conquer</strong> approach, which is more subtle.</p>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/maximum-subarray/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": true,
+      "duplicateOf": "lc-maximum-subarray::2150624078",
+      "_requestAIReview": true,
+      "platform": "leetcode",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-maximum-subarray::1813687231",

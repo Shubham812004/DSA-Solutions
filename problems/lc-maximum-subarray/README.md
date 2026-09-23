@@ -7,8 +7,8 @@
 | Problem ID | `lc-maximum-subarray` |
 | Topics | Array, Divide and Conquer, Dynamic Programming |
 | Solved | 2026-09-23 |
-| Runtime | 1 ms (beats 99.9298%) |
-| Memory | 80.9 MB (beats 5.930399999999959%) |
+| Runtime | 1 ms (beats 99.9465%) |
+| Memory | 80.9 MB (beats 6.290300000000078%) |
 
 ## Problem Statement
 
