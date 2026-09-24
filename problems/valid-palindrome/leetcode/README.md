@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-valid-palindrome` |
 | Topics | String, Two Pointers |
-| Solved | 2025-10-27 |
-| Runtime | 13 ms (beats 78.67419999999998%) |
-| Memory | 14.2 MB (beats 12.651400000000006%) |
+| Solved | 2026-09-24 |
+| Runtime | 2 ms (beats 99.2813%) |
+| Memory | 44.5 MB (beats 53.026700000000005%) |
 
 ## Problem Statement
 
@@ -47,11 +47,27 @@ Since an empty string reads the same forward and backward, it is a palindrome.
 
 ## Solutions
 
-```Python
-class Solution(object):
-    def isPalindrome(self, s):
-        cleaned = ''.join(ch.lower() for ch in s if ch.isalnum())
-        return cleaned == cleaned[::-1]
-       
-        
+```Java
+class Solution {
+    public boolean isPalindrome(String s) {
+        if(s.length() == 0 || s.length() == 1){
+            return true;
+        }
+        int l = 0;
+        int r = s.length()-1;
+        while(l <= r){
+            if(!Character.isLetterOrDigit(s.charAt(l)))
+                l++;
+            else if(!Character.isLetterOrDigit(s.charAt(r)))
+                r--;
+            else if(Character.toLowerCase(s.charAt(l)) != Character.toLowerCase(s.charAt(r)))
+                return false;
+            else{
+                l++;
+                r--;
+            }
+        }
+        return true;
+    }
+}
 ```
