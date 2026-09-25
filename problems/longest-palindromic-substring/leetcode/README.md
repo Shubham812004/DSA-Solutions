@@ -7,8 +7,8 @@
 | Problem ID | `lc-longest-palindromic-substring` |
 | Topics | String, Two Pointers, Dynamic Programming, Manacher |
 | Solved | 2026-09-25 |
-| Runtime | 1590 ms (beats 8.670199999999854%) |
-| Memory | 46.3 MB (beats 41.405300000000025%) |
+| Runtime | 14 ms (beats 93.1986%) |
+| Memory | 43.3 MB (beats 94.88770000000002%) |
 
 ## Problem Statement
 
@@ -64,26 +64,25 @@ If we use brute-force and check whether for every start and end position a subst
 ```Java
 class Solution {
     public String longestPalindrome(String s) {
-        String result = "";
+        int start = 0;
+        int end = 0;
         for(int i=0; i<s.length(); i++){
-            for(int j=i; j<s.length(); j++){
-                if(isPalindrome(s, i, j)){
-                    if(j-i+1 > result.length())
-                        result = s.substring(i, j+1);
-                }
+            int odd = isPalindrome(s, i, i);
+            int even = isPalindrome(s, i, i+1);
+            int maxLen = Math.max(odd, even);
+            if(maxLen > (end - start)){
+                start = i - (maxLen-1)/2;
+                end = i + maxLen/2;
             }
         }
-        return result;
+        return s.substring(start, end+1);
     }
-    public boolean isPalindrome(String s, int l, int r){
-        while(l <= r){
-            if(s.charAt(l) != s.charAt(r)){
-                return false;
-            }
-            l++;
-            r--;
-        }
-        return true;
+    public int isPalindrome(String s, int l, int r){
+        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){
+            l--;
+            r++;
+        } 
+        return r-l-1;
     }
 }
 ```
