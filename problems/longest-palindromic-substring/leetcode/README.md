@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-longest-palindromic-substring` |
 | Topics | String, Two Pointers, Dynamic Programming, Manacher |
-| Solved | 2025-10-23 |
-| Runtime | 352 ms (beats 70.0691000000002%) |
-| Memory | 12.6 MB (beats 7.174599999999998%) |
+| Solved | 2026-09-25 |
+| Runtime | 1590 ms (beats 8.670199999999854%) |
+| Memory | 46.3 MB (beats 41.405300000000025%) |
 
 ## Problem Statement
 
@@ -61,27 +61,29 @@ If we use brute-force and check whether for every start and end position a subst
 
 ## Solutions
 
-```Python
-class Solution:
-    def longestPalindrome(self, s):
-        if s == 0:
-            return ""
-        
-        def expand(left, right):
-            while left >= 0 and right < len(s) and s[left] == s[right]:
-                left -= 1
-                right += 1
-            return left + 1, right - 1
-        
-        start, end = 0, 0
-        for i in range(len(s)):
-            l1, r1 = expand(i, i)
-            l2, r2 = expand(i, i + 1)
-            
-            if r1 - l1 > end - start:
-                start, end = l1, r1
-            if r2 - l2 > end - start:
-                start, end = l2, r2
-        
-        return s[start:end + 1]
+```Java
+class Solution {
+    public String longestPalindrome(String s) {
+        String result = "";
+        for(int i=0; i<s.length(); i++){
+            for(int j=i; j<s.length(); j++){
+                if(isPalindrome(s, i, j)){
+                    if(j-i+1 > result.length())
+                        result = s.substring(i, j+1);
+                }
+            }
+        }
+        return result;
+    }
+    public boolean isPalindrome(String s, int l, int r){
+        while(l <= r){
+            if(s.charAt(l) != s.charAt(r)){
+                return false;
+            }
+            l++;
+            r--;
+        }
+        return true;
+    }
+}
 ```
