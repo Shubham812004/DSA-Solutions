@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-longest-palindromic-substring` |
 | Topics | String, Two Pointers, Dynamic Programming, Manacher |
-| Solved | 2026-09-25 |
+| Solved | 2026-09-27 |
 | Runtime | 14 ms (beats 93.1986%) |
-| Memory | 43.3 MB (beats 94.88770000000002%) |
+| Memory | 43.5 MB (beats 70.51630000000003%) |
 
 ## Problem Statement
 
@@ -69,10 +69,10 @@ class Solution {
         for(int i=0; i<s.length(); i++){
             int odd = isPalindrome(s, i, i);
             int even = isPalindrome(s, i, i+1);
-            int maxLen = Math.max(odd, even);
-            if(maxLen > (end - start)){
-                start = i - (maxLen-1)/2;
-                end = i + maxLen/2;
+            int max = Math.max(even, odd);
+            if(max > (end - start)){
+                start = i - (max - 1)/2;
+                end = i + max/2;
             }
         }
         return s.substring(start, end+1);
@@ -81,7 +81,7 @@ class Solution {
         while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){
             l--;
             r++;
-        } 
+        }
         return r-l-1;
     }
 }
