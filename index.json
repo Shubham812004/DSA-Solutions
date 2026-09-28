@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-11-09T05:49:58.494Z",
+  "updatedAt": "2026-11-09T05:54:10.428Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 250,
+    "total": 251,
     "easy": 114,
-    "medium": 122,
+    "medium": 123,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 57,
-      "leetcode": 193
+      "leetcode": 194
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 134,
+      "Java": 135,
       "Python": 30,
       "MySQL": 35
     },
@@ -29,7 +29,7 @@
       "Math": 6,
       "Two Pointers": 7,
       "Stack": 6,
-      "Hash Table": 4,
+      "Hash Table": 5,
       "Linked List": 11,
       "Database": 35,
       "Dynamic Programming": 6
@@ -4846,6 +4846,72 @@
       ]
     },
     {
+      "id": "lc-find-all-anagrams-in-a-string",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Find All Anagrams in a String",
+      "titleSlug": "find-all-anagrams-in-a-string",
+      "difficulty": "Medium",
+      "topic": "Hash Table",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Sliding Window"
+      ],
+      "canonical": null,
+      "readmeContent": "# [438] Find All Anagrams in a String\n**Difficulty:** Medium  |  **Acceptance:** 54.8%  |  **Likes:** 13495 / **Dislikes:** 387\n**Tags:** `Hash Table`, `String`, `Sliding Window`\n## Problem\nGiven two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order.\n\n&nbsp;\nExample 1:\n\nInput: s = \"cbaebabacd\", p = \"abc\"\nOutput: [0,6]\nExplanation:\nThe substring with start index = 0 is \"cba\", which is an anagram of \"abc\".\nThe substring with start index = 6 is \"bac\", which is an anagram of \"abc\".\n\nExample 2:\n\nInput: s = \"abab\", p = \"ab\"\nOutput: [0,1,2]\nExplanation:\nThe substring with start index = 0 is \"ab\", which is an anagram of \"ab\".\nThe substring with start index = 1 is \"ba\", which is an anagram of \"ab\".\nThe substring with start index = 2 is \"ab\", which is an anagram of \"ab\".\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length, p.length <= 3 * 104\n\ts and p consist of lowercase English letters.\n## My Submission\n\n- Runtime: 359 ms (beats 11.8%)\n- Memory: 47.3 MB (beats 23.7%)\n\n## Similar Problems\n\n- [Valid Anagram](https://leetcode.com/problems/valid-anagram/) — Easy\n- [Permutation in String](https://leetcode.com/problems/permutation-in-string/) — Medium\n",
+      "code": "class Solution {\n    public List<Integer> findAnagrams(String s, String p) {\n        List<Integer> res = new ArrayList<>();\n        int n = s.length();\n        int k = p.length();\n        int[] kCount = new int[26];\n        for(char c : p.toCharArray()){\n            kCount[c - 'a']++;\n        }\n        for(int i=0; i<=n-k; i++){\n            int[] sCount = new int[26];\n            for(int j=i; j<i+k; j++){\n                sCount[s.charAt(j) - 'a']++;\n            }\n            if(Arrays.equals(sCount, kCount)) res.add(i);\n        }\n        return res;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/lc-find-all-anagrams-in-a-string/lc-find-all-anagrams-in-a-string.java",
+          "content": "class Solution {\n    public List<Integer> findAnagrams(String s, String p) {\n        List<Integer> res = new ArrayList<>();\n        int n = s.length();\n        int k = p.length();\n        int[] kCount = new int[26];\n        for(char c : p.toCharArray()){\n            kCount[c - 'a']++;\n        }\n        for(int i=0; i<=n-k; i++){\n            int[] sCount = new int[26];\n            for(int j=i; j<i+k; j++){\n                sCount[s.charAt(j) - 'a']++;\n            }\n            if(Arrays.equals(sCount, kCount)) res.add(i);\n        }\n        return res;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-find-all-anagrams-in-a-string/README.md",
+          "content": "# [438] Find All Anagrams in a String\n**Difficulty:** Medium  |  **Acceptance:** 54.8%  |  **Likes:** 13495 / **Dislikes:** 387\n**Tags:** `Hash Table`, `String`, `Sliding Window`\n## Problem\nGiven two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order.\n\n&nbsp;\nExample 1:\n\nInput: s = \"cbaebabacd\", p = \"abc\"\nOutput: [0,6]\nExplanation:\nThe substring with start index = 0 is \"cba\", which is an anagram of \"abc\".\nThe substring with start index = 6 is \"bac\", which is an anagram of \"abc\".\n\nExample 2:\n\nInput: s = \"abab\", p = \"ab\"\nOutput: [0,1,2]\nExplanation:\nThe substring with start index = 0 is \"ab\", which is an anagram of \"ab\".\nThe substring with start index = 1 is \"ba\", which is an anagram of \"ab\".\nThe substring with start index = 2 is \"ab\", which is an anagram of \"ab\".\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length, p.length <= 3 * 104\n\ts and p consist of lowercase English letters.\n## My Submission\n\n- Runtime: 359 ms (beats 11.8%)\n- Memory: 47.3 MB (beats 23.7%)\n\n## Similar Problems\n\n- [Valid Anagram](https://leetcode.com/problems/valid-anagram/) — Easy\n- [Permutation in String](https://leetcode.com/problems/permutation-in-string/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "359 ms",
+      "memory": "47.3 MB",
+      "runtimePct": 11.794300000000053,
+      "memoryPct": 23.72230000000002,
+      "timestamp": 1790575925000,
+      "acRate": 54.77714075716524,
+      "likes": 13495,
+      "dislikes": 387,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "valid-anagram",
+          "title": "Valid Anagram",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "permutation-in-string",
+          "title": "Permutation in String",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given two strings <code>s</code> and <code>p</code>, return an array of all the start indices of <code>p</code>&#39;s <span data-keyword=\"anagram\">anagrams</span> in <code>s</code>. You may return the answer in <strong>any order</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;cbaebabacd&quot;, p = &quot;abc&quot;\n<strong>Output:</strong> [0,6]\n<strong>Explanation:</strong>\nThe substring with start index = 0 is &quot;cba&quot;, which is an anagram of &quot;abc&quot;.\nThe substring with start index = 6 is &quot;bac&quot;, which is an anagram of &quot;abc&quot;.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;abab&quot;, p = &quot;ab&quot;\n<strong>Output:</strong> [0,1,2]\n<strong>Explanation:</strong>\nThe substring with start index = 0 is &quot;ab&quot;, which is an anagram of &quot;ab&quot;.\nThe substring with start index = 1 is &quot;ba&quot;, which is an anagram of &quot;ab&quot;.\nThe substring with start index = 2 is &quot;ab&quot;, which is an anagram of &quot;ab&quot;.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length, p.length &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li><code>s</code> and <code>p</code> consist of lowercase English letters.</li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/find-all-anagrams-in-a-string/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": true,
+      "duplicateOf": "lc-find-all-anagrams-in-a-string::2155641276",
+      "_requestAIReview": true,
+      "platform": "leetcode",
+      "methods": [],
+      "manuallyEdited": false
+    },
+    {
       "id": "lc-find-all-anagrams-in-a-string::2155641276",
       "submissionId": 2155641276,
       "platform": "leetcode",
@@ -8060,7 +8126,7 @@
       "runtimePct": 20.77080000000003,
       "memoryPct": 64.89089999999997,
       "timestamp": 1794203393000,
-      "acRate": 40.09859880785368,
+      "acRate": 40.09859576080023,
       "likes": 46115,
       "dislikes": 2259,
       "similar": [
@@ -8124,7 +8190,11 @@
       "_requestAIReview": true,
       "platform": "leetcode",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/longest-substring-without-repeating-characters/leetcode/lc-longest-substring-without-repeating-characters.java",
+        "problems/longest-substring-without-repeating-characters/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-longest-substring-without-repeating-characters::1807691146",

@@ -101,6 +101,24 @@
       "Monotonic Stack"
     ]
   },
+  "leetcode::find-all-anagrams-in-a-string": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "find-all-anagrams-in-a-string",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794203650340
+      }
+    ],
+    "tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ]
+  },
   "leetcode::group-anagrams": {
     "difficulty": "Medium",
     "lang": "Python",
@@ -199,6 +217,16 @@
         "elapsedSeconds": 0,
         "lang": "Java",
         "ts": 1794203398384
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794203409847
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794203419130
       }
     ],
     "tags": [

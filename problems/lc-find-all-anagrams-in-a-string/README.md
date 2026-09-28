@@ -7,8 +7,8 @@
 | Problem ID | `lc-find-all-anagrams-in-a-string` |
 | Topics | Hash Table, String, Sliding Window |
 | Solved | 2026-09-28 |
-| Runtime | 359 ms (beats 11.50430000000003%) |
-| Memory | 47.3 MB (beats 26.90329999999995%) |
+| Runtime | 359 ms (beats 11.794300000000053%) |
+| Memory | 47.3 MB (beats 23.72230000000002%) |
 
 ## Problem Statement
 
