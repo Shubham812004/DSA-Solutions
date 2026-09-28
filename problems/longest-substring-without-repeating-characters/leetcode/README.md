@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-longest-substring-without-repeating-characters` |
 | Topics | String, Hash Table, Sliding Window |
-| Solved | 2026-09-02 |
+| Solved | 2026-09-28 |
 | Runtime | 65 ms (beats 51.75710000000006%) |
-| Memory | 47.9 MB (beats 60.330200000000005%) |
+| Memory | 47.8 MB (beats 76.98910000000001%) |
 
 ## Problem Statement
 
@@ -57,10 +57,10 @@ There are less than 100 unique characters. We can check all substrings with leng
 ```Java
 class Solution {
     public int lengthOfLongestSubstring(String s) {
-        HashSet<Character> set = new HashSet<>();
-        int maxLen = 0;
+        Set<Character> set = new HashSet<>();
         int l = 0;
-        for(int r=0; r<s.length(); r++){
+        int maxLen = 0;
+        for (int r = 0; r < s.length(); r++) {
             while(set.contains(s.charAt(r))){
                 set.remove(s.charAt(l));
                 l++;
