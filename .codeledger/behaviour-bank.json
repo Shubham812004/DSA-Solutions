@@ -1,4 +1,23 @@
 {
+  "leetcode::longest-palindromic-substring": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "longest-palindromic-substring",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1791951979212
+      }
+    ],
+    "tags": [
+      "String",
+      "Two Pointers",
+      "Dynamic Programming",
+      "Manacher"
+    ]
+  },
   "leetcode::magnetic-force-between-two-balls": {
     "difficulty": "Medium",
     "lang": "Java",
@@ -9,6 +28,11 @@
         "elapsedSeconds": 0,
         "lang": "Java",
         "ts": 1791783800252
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1791809920105
       }
     ],
     "tags": [

@@ -6,15 +6,15 @@
 
 # Shubham812004's DSA Solutions
 
-[![Solutions](https://img.shields.io/badge/Solutions-230-06b6d4?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Easy](https://img.shields.io/badge/Easy-111-22c55e?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Medium](https://img.shields.io/badge/Medium-107-f59e0b?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Hard](https://img.shields.io/badge/Hard-2-ef4444?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Languages](https://img.shields.io/badge/Languages-4-14b8a6?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Platforms](https://img.shields.io/badge/Platforms-2-6366f1?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/)
+[![Solutions](https://img.shields.io/badge/Solutions-231-06b6d4?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Easy](https://img.shields.io/badge/Easy-111-22c55e?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Medium](https://img.shields.io/badge/Medium-108-f59e0b?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Hard](https://img.shields.io/badge/Hard-2-ef4444?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Languages](https://img.shields.io/badge/Languages-4-14b8a6?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Platforms](https://img.shields.io/badge/Platforms-2-6366f1?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/)
 
 <!-- codeledger:gamification:start -->
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://shubham812004.github.io/DSA-Solutions/badges/card-light.svg?v=3165-2-179-2026-10-13">
-  <img src="https://shubham812004.github.io/DSA-Solutions/badges/card.svg?v=3165-2-179-2026-10-13" alt="Streak card" width="420">
+  <source media="(prefers-color-scheme: light)" srcset="https://shubham812004.github.io/DSA-Solutions/badges/card-light.svg?v=3190-3-180-2026-10-14">
+  <img src="https://shubham812004.github.io/DSA-Solutions/badges/card.svg?v=3190-3-180-2026-10-14" alt="Streak card" width="420">
 </picture>
 
-![Streak](https://shubham812004.github.io/DSA-Solutions/badges/streak.svg?v=3165-2-179-2026-10-13) ![Points](https://shubham812004.github.io/DSA-Solutions/badges/points.svg?v=3165-2-179-2026-10-13) ![Level](https://shubham812004.github.io/DSA-Solutions/badges/level.svg?v=3165-2-179-2026-10-13) ![Freezes](https://shubham812004.github.io/DSA-Solutions/badges/freezes.svg?v=3165-2-179-2026-10-13)
+![Streak](https://shubham812004.github.io/DSA-Solutions/badges/streak.svg?v=3190-3-180-2026-10-14) ![Points](https://shubham812004.github.io/DSA-Solutions/badges/points.svg?v=3190-3-180-2026-10-14) ![Level](https://shubham812004.github.io/DSA-Solutions/badges/level.svg?v=3190-3-180-2026-10-14) ![Freezes](https://shubham812004.github.io/DSA-Solutions/badges/freezes.svg?v=3190-3-180-2026-10-14)
 
 🩸 First Blood · 🔟 Ten Down · 💯 Century · 🎯 Well Rounded · ⚡ Double Day · ⭐ Engineer
 <!-- codeledger:gamification:end -->
@@ -23,7 +23,7 @@
 
 **[View Live Dashboard →](https://shubham812004.github.io/DSA-Solutions/)**
 
-*Last updated: Oct 12, 2026*
+*Last updated: Oct 14, 2026*
 
 [![CodeLedger](https://raw.githubusercontent.com/Life-Experimentalist/Code-Ledger/refs/heads/main/src/assets/images/social%20preview.png)](https://shubham812004.github.io/DSA-Solutions/)
 
@@ -33,11 +33,11 @@
 
 ## Stats
 
-**By Platform:** leetcode (178) · geeksforgeeks (52)
+**By Platform:** leetcode (179) · geeksforgeeks (52)
 
-**Top Languages:** Java (115) · Unknown (51) · MySQL (35) · Python (29)
+**Top Languages:** Java (116) · Unknown (51) · MySQL (35) · Python (29)
 
-**Top Topics:** Array (101) · Untagged (35) · Database (35) · String (19) · Linked List (11) · Dynamic Programming (6) · Math (5) · Stack (5) · Binary Search (3) · Hash Table (3)
+**Top Topics:** Array (106) · Database (35) · Untagged (25) · String (21) · Linked List (11) · Math (6) · Dynamic Programming (6) · Stack (5) · Binary Search (4) · Two Pointers (4)
 
 ---
 
@@ -80,6 +80,7 @@ Built with [CodeLedger](https://codeledger.vkrishna04.me) · [⭐ Star the exten
 </div>
 
 <!-- CODELEDGER_AUTO_GENERATED_END -->
+
 
 
 

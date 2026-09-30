@@ -1,38 +1,38 @@
 {
-  "updatedAt": "2026-10-12T05:43:20.382Z",
+  "updatedAt": "2026-10-14T04:26:19.441Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 230,
+    "total": 231,
     "easy": 111,
-    "medium": 107,
+    "medium": 108,
     "hard": 2,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 52,
-      "leetcode": 178
+      "leetcode": 179
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 115,
+      "Java": 116,
       "Python": 29,
       "MySQL": 35
     },
     "byTopic": {
       "Matrix": 1,
-      "Binary Search": 3,
-      "String": 19,
-      "Array": 101,
+      "Binary Search": 4,
+      "String": 21,
+      "Array": 106,
       "Greedy": 1,
-      "Untagged": 35,
-      "Prefix Sum": 1,
-      "Math": 5,
+      "Untagged": 25,
+      "Prefix Sum": 2,
+      "Math": 6,
       "Searching": 1,
+      "Two Pointers": 4,
       "Linked List": 11,
       "Database": 35,
       "Dynamic Programming": 6,
       "Hash Table": 3,
-      "Stack": 5,
-      "Two Pointers": 3
+      "Stack": 5
     }
   },
   "meta": {
@@ -576,7 +576,10 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -584,7 +587,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>You are given an integer array <strong>arr[].</strong> You need to find the maximum sum of a subarray (containing at least one element) in the array <strong>arr[]</strong>.</span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input: </strong>arr[] = [2, 3, -8, 7, -1, 2, 3]\n<strong>Output: </strong>11<strong>\nExplanation: </strong>The subarray [7, -1, 2, 3] has the largest sum 11.\n</span></pre><pre><span><strong>Input: </strong>arr[] = [-2, -4]\n<strong>Output: </strong>-2<strong>\nExplanation: </strong>The subarray [-2] has the largest sum -2.</span></pre><pre><span><strong>Input: </strong>arr[] = [5, 4, 1, 7, 8]\n<strong>Output: </strong>25<strong>\nExplanation: </strong>The subarray [5, 4, 1, 7, 8] has the largest sum 25.</span></pre>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -604,7 +607,10 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Binary Search",
+        "Array"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -612,7 +618,7 @@
       "importedAt": 1791696375464,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p data-start=\"120\" data-end=\"259\"><span>Koko is given an array<strong> arr[],</strong> where each element represents a pile of bananas. She has exactly <strong>k</strong>&nbsp;hours to eat all the bananas.</span></p>\n<p data-start=\"261\" data-end=\"337\"><span>Each hour, Koko can choose one pile and eat up to<strong> s&nbsp;</strong>bananas from it.</span></p>\n<ul>\n<li data-start=\"261\" data-end=\"337\"><span>If the pile has <strong data-start=\"356\" data-end=\"368\">atleast</strong> <strong>s</strong> bananas, she eats exactly <strong>s</strong> bananas.</span></li>\n<li data-start=\"261\" data-end=\"337\"><span>If the pile has fewer than <strong>s</strong> bananas, she eats the entire pile in that hour.</span></li>\n</ul>\n<p><span> </span></p>\n<p data-start=\"504\" data-end=\"549\"><span>Koko can only eat from one pile per hour.</span></p>\n<p><span> </span></p>\n<p data-start=\"551\" data-end=\"681\"><span>Your task is to find the <strong data-start=\"576\" data-end=\"600\">minimum </strong>value of <strong>s</strong> (bananas per hour) such that Koko can finish all the piles within <strong>k&nbsp;</strong>hours.</span></p>\n<p><strong><span>Examples:</span></strong></p>\n<pre><strong><span>Input:</span><span> </span></strong><span><span>arr[]</span><span> = [5, 10, 3], k = 4</span>\n<strong><span>Output:</span> </strong>5</span><span><br /></span><strong><span>Explanation: </span></strong><span><span>If Koko eats at the rate of 5 bananas per hour:<br />First pile of 5 bananas will be finished in 1 hour.\nSecond pile of 10 bananas will be finished in 2 hours.\nThird pile of 3 bananas will be finished in 1 hours.<br />Therefore, Koko can finish all piles of bananas in 1 + 2 + 1 = 4 hours.</span></span></pre>\n<pre><span><span><strong>Input:</strong> arr[] = [5, 10, 15, 20], k = 7\n<strong>Output:</strong> 10\n<strong>Explanation:</strong> If Koko eats at the rate of 10 bananas per hour, it will take 6 hours to finish all the piles.</span></span></pre>\n<p><strong><span>Constraint:</span></strong><br /><span>1&nbsp;&le;&nbsp;arr.size() &le; k &le; 10<sup>6</sup><br />1 &le; arr[i] &le; 10</span><sup><span>6</span></sup></p>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -632,7 +638,9 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -640,7 +648,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an array <strong>arr[].</strong><strong> </strong>The task is to find the largest element and return it.</span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input: </strong>arr[] = [1, 8, 7, 56, 90]\n<strong>Output: </strong>90\n<strong>Explanation: </strong>The largest element of the given array is 90.</span></pre><pre><span><strong>Input: </strong>arr[] = [5, 5, 5, 5]\n<strong>Output: </strong>5\n<strong>Explanation: </strong>The largest element of the given array is 5.</span></pre><pre><span><strong>Input: </strong>arr[] = [10]\n<strong>Output: </strong>10\n<strong>Explanation: </strong>There is only one element which is the largest.</span></pre>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -660,7 +668,11 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "String",
+        "Two Pointers",
+        "Sliding Window"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -668,7 +680,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given a string <strong>s</strong>, find the length of the longest substring with all distinct<strong> </strong>characters.&nbsp;</span></p>\n<p><span><strong>Examples:</strong></span></p>\n<pre><span><strong>Input: </strong>s = \"geeksforgeeks\"\n<strong>Output:</strong> 7\n<strong>Explanation</strong>: \"eksforg\" is the longest substring with all distinct characters.\n</span></pre>\n<pre><span><strong>Input</strong>: s = \"aaa\"\n<strong>Output:</strong> 1\n<strong>Explanation</strong>: \"a\" is the longest substring with all distinct characters.<br /></span></pre>\n<pre><span><strong>Input: </strong>s = \"abcdefabcbb\"<strong>\nOutput: </strong>6<strong>\nExplanation: </strong>The longest substring with all distinct characters is \"abcdef\", which has a length of 6.</span></pre>\n<p><span><strong>Constraints:</strong><br />1 &le; s.size() &le; 10<sup>5</sup><sup><br /></sup>s consists of lowercase english letters.</span></p>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -688,7 +700,11 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Two Pointers",
+        "Hash Table",
+        "String"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -696,7 +712,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p data-start=\"157\" data-end=\"313\"><span>You are given a string <strong>s</strong> </span><span>consisting only lowercase alphabets </span><span>and an integer </span><strong>k</strong><span>. Your task is to find the <strong>length </strong>of the <strong>longest substring</strong> that contains exactly </span><strong>k</strong><span> distinct characters.</span></p><p data-start=\"157\" data-end=\"313\"><span><span><strong>Note :</strong> If no such substring exists, return </span><strong>-1</strong><span>.&nbsp;</span></span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input: </strong>s = \"aabacbebebe</span><span>\", k = 3\n<strong>Output:</strong> 7\n<strong>Explanation</strong>: The longest substring with exactly 3 distinct characters is \"cbebebe\", which includes 'c', 'b', and 'e'.\n</span></pre><pre><span><strong>Input</strong>: s = \"aaaa\", k = 2\n<strong>Output:</strong> -1\n<strong>Explanation</strong>: There's no substring with 2 distinct characters.<br /></span></pre><pre><span><strong>Input: </strong>s = \"aabaaab\", k = 2\n<strong>Output:</strong> 7\n<strong>Explanation</strong>: </span><span>The entire string \"aabaaab\" has exactly 2 unique characters 'a' and 'b', making it the longest valid substring.</span></pre>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -716,7 +732,9 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -724,7 +742,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an array<strong> arr[] </strong>consisting of only <strong>0&rsquo;s and 1&rsquo;s</strong>, return <strong>count</strong> of the maximum number of consecutive 1&rsquo;s or 0&rsquo;s present in the array.&nbsp;</span></p>\n<p><span><strong>Examples:</strong></span></p>\n<pre><span><strong>Input: </strong>arr[] = [0, 1, 0, 1, 1, 1, 1]<strong><br /></strong><strong>Output: </strong>4<strong><br /></strong><strong>Explanation: </strong>The maximum number of consecutive 1&rsquo;s in the array is 4 from index 3-6.</span></pre>\n<pre><span><strong>Input: </strong>arr[] = [0, 0, 1, 0, 1, 0]<strong><br /></strong><strong>Output: </strong>2<strong><br /></strong><strong>Explanation: </strong>The maximum number of consecutive 0&rsquo;s in the array is 2 from index 0-1.</span></pre>\n<pre><span><strong>Input: </strong>arr[] = [0, 0, 0, 0]<strong><br /></strong><strong>Output: </strong>4</span><br /><span><strong>Explanation: </strong>The maximum number of consecutive 0&rsquo;s in the array is 4.</span></pre>\n<p><span><strong>Constraints:<br /></strong>1 &le; arr.size() &le; 10<sup>5</sup><br />0 &le; arr[i] &le; 1</span></p>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -744,7 +762,10 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Prefix Sum",
+        "Sliding Window"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -752,7 +773,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an array of integers<strong> arr[]&nbsp;</strong> and a number<strong> k</strong>. Return&nbsp;the maximum sum of a subarray of size k.</span></p><p><span><strong>Note:</strong> A subarray is a contiguous part of any given array.</span></p><p><strong><span>Examples:</span></strong></p><pre><span><strong>Input:</strong> arr[] = [100, 200, 300, 400], k = 2\n<strong>Output: </strong>700\n<strong>Explanation: </strong>arr<sub>2</sub><sub> </sub>+ arr<sub>3</sub> = 700, which is maximum.</span></pre><pre><span><strong>Input: </strong>arr[] = [1, 4, 2, 10, 23, 3, 1, 0, 20], k = 4\n<strong>Output: </strong>39\n<strong>Explanation: </strong>arr<sub>1</sub> + arr<sub>2</sub> + arr<sub>3 </sub>+ arr<sub>4</sub> = 39, </span><span><span>which is maximum.</span><br /></span></pre><pre><span><span><strong>Input:</strong> arr[] = [100, 200, 300, 400], k = 1\n<strong>Output: </strong>400\n<strong>Explanation: </strong>arr<sub>3</sub> = 400, which is maximum.</span></span></pre>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -772,7 +793,12 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Sliding Window",
+        "Two Pointers"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -780,7 +806,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given a binary array <strong>arr[]</strong> containing only 0s and 1s and an integer <strong>k</strong>, you are allowed to flip at most <strong>k</strong>&nbsp;0s to 1s. Find the maximum number of consecutive <strong>1's</strong> that can be obtained in the array after performing the operation at most <strong>k</strong>&nbsp;times.</span></p>\n<p><span><strong>Examples:</strong></span></p>\n<pre><span><strong>Input: </strong>arr[] = [1, 0, 1], k = 1\n<strong>Output: </strong>3\n<strong>Explanation: </strong></span><span>By flipping the zero at index 1, we get the longest subarray from index 0 to 2 containing all 1&rsquo;s.</span></pre>\n<pre><span><strong>Input: </strong>arr[] = [1, 0, 0, 1, 0, 1, 0, 1], k = 2\n<strong>Output: </strong>5\n<strong>Explanation: </strong>By flipping the zeroes at indices 4 and 6, we get the longest subarray from index 3 to 7 containing all 1&rsquo;s.\n</span></pre>\n<pre><span><strong>Input: </strong>arr[] = [1, 1], k = 2\n<strong>Output: </strong>2\n<strong>Explanation: </strong>Since the array is already having the max consecutive 1's, hence we dont need to perform any operation. Hence the answer is 2.</span></pre>\n<p><span><strong>Constraints:</strong><br />1 &le; arr.size() &le; 10<sup>5</sup><br />0 &le; k &le; arr.size()<br />0 &le; arr[i] &le; 1</span></p>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -800,7 +826,10 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -808,7 +837,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an array&nbsp;<strong>arr[]</strong>&nbsp;that contains positive and negative integers (may contain 0 as well). Find the&nbsp;maximum&nbsp;product that we can get in a subarray of<strong>&nbsp;</strong>arr[].</span></p><p><span><strong>Note:</strong> It is guaranteed that the answer fits in a 32-bit integer.</span></p><p><span><strong>Examples<br /></strong></span></p><pre><span><strong>Input:</strong> arr[] = [-2, 6, -3, -10, 0, 2]\n<strong>Output:</strong> 180\n<strong>Explanation:</strong> The subarray with maximum product is [6, -3, -10] with product = 6 * (-3) * (-10) = 180.</span></pre><pre><span><strong>Input:</strong> arr[] = [-1, -3, -10, 0, 6]\n<strong>Output:</strong> 30\n<strong>Explanation:</strong> The subarray with maximum product is [-3, -10] with product = (-3) * (-10) = 30.</span></pre><pre><span><strong>Input: </strong>arr[] = [2, 3, 4] <br /><strong>Output:</strong> 24 <br /><strong>Explanation:</strong> For an array with all positive elements, the result is product of all elements. </span></pre>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -828,7 +857,9 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Math"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -836,7 +867,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span><span data-lexical-text=\"true\">Given an array <strong>arr[]</strong>,</span><span data-lexical-text=\"true\"> return the floor value of the mean of its elements.</span></span></p><p><span><strong>Examples:</strong></span></p><p><span id=\"docs-internal-guid-fe7bc5c6-7fff-0b45-ed17-2cba5ebd6719\"></span></p><pre><span><strong>Input</strong>: arr[] = [1, 3, 4, 2, 6, 5, 8, 7]</span><br /><span><strong>Output</strong>: 4</span><br /><span><strong>Explanation</strong>: Sum of the elements is 1 + 3 + 4 + 2 + 6 + 5 + 8 + 7 = 36, Mean = 36/8 = 4.5, floor(4.5) = 4.</span></pre><p><span><span id=\"docs-internal-guid-5df1ba42-7fff-5fb3-2a38-dfc42b417b17\"></span></span></p><pre><span><strong>Input</strong>: arr[] = [4, 4, 4, 4, 4]</span><br /><span><strong>Output</strong>: 4</span><br /><span><strong>Explanation:</strong> Sum of the elements is 4 + 4 + 4 + 4 + 4 = 20, Mean = 20/5 = 4</span></pre>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -6787,6 +6818,110 @@
       ]
     },
     {
+      "id": "lc-longest-palindromic-substring",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Longest Palindromic Substring",
+      "titleSlug": "longest-palindromic-substring",
+      "difficulty": "Medium",
+      "topic": "Dynamic Programming",
+      "tags": [
+        "String",
+        "Two Pointers",
+        "Dynamic Programming",
+        "Manacher"
+      ],
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 5,
+            "platform": "leetcode",
+            "slug": "longest-palindromic-substring"
+          }
+        ],
+        "canonicalId": "longest-palindromic-substring",
+        "canonicalTitle": "Longest Palindromic Substring",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "expand-around-center",
+        "tags": [
+          "string"
+        ],
+        "topic": "dynamic-programming",
+        "voteCount": 97
+      },
+      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.8%  |  **Likes:** 33303 / **Dislikes:** 2043\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.2%)\n- Memory: 43.4 MB (beats 80.5%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
+      "code": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = palindrome(s, i, i);\n            int even = palindrome(s, i, i+1);\n            int max = Math.max(odd, even);\n            if(max > (end - start)){\n                start = i - (max-1)/2;\n                end = i + max/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int palindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        }\n        return r-l-1;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/longest-palindromic-substring/leetcode/lc-longest-palindromic-substring.java",
+          "content": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = palindrome(s, i, i);\n            int even = palindrome(s, i, i+1);\n            int max = Math.max(odd, even);\n            if(max > (end - start)){\n                start = i - (max-1)/2;\n                end = i + max/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int palindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        }\n        return r-l-1;\n    }\n}"
+        },
+        {
+          "path": "problems/longest-palindromic-substring/README.md",
+          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.8%  |  **Likes:** 33303 / **Dislikes:** 2043\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.2%)\n- Memory: 43.4 MB (beats 80.5%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "14 ms",
+      "memory": "43.4 MB",
+      "runtimePct": 93.20119999999999,
+      "memoryPct": 80.49239999999999,
+      "timestamp": 1790779293000,
+      "acRate": 38.83913665991884,
+      "likes": 33303,
+      "dislikes": 2043,
+      "similar": [
+        {
+          "difficulty": "Hard",
+          "titleSlug": "shortest-palindrome",
+          "title": "Shortest Palindrome",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "palindrome-pairs",
+          "title": "Palindrome Pairs",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "longest-palindromic-subsequence",
+          "title": "Longest Palindromic Subsequence",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "palindromic-substrings",
+          "title": "Palindromic Substrings",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "maximum-number-of-non-overlapping-palindrome-substrings",
+          "title": "Maximum Number of Non-overlapping Palindrome Substrings",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given a string <code>s</code>, return <em>the longest</em> <span data-keyword=\"palindromic-string\"><em>palindromic</em></span> <span data-keyword=\"substring-nonempty\"><em>substring</em></span> in <code>s</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;babad&quot;\n<strong>Output:</strong> &quot;bab&quot;\n<strong>Explanation:</strong> &quot;aba&quot; is also a valid answer.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;cbbd&quot;\n<strong>Output:</strong> &quot;bb&quot;\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 1000</code></li>\n\t<li><code>s</code> consist of only digits and English letters.</li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/longest-palindromic-substring/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": true,
+      "duplicateOf": "lc-longest-palindromic-substring::2158261343",
+      "_requestAIReview": true,
+      "platform": "leetcode",
+      "methods": [],
+      "manuallyEdited": false
+    },
+    {
       "id": "lc-longest-palindromic-substring::1809241760",
       "submissionId": 1809241760,
       "platform": "leetcode",
@@ -7818,7 +7953,7 @@
       "runtimePct": 6.893000000000019,
       "memoryPct": 64.38509999999988,
       "timestamp": 1791783794000,
-      "acRate": 72.75195423343571,
+      "acRate": 72.7528041833226,
       "likes": 3335,
       "dislikes": 277,
       "similar": [
@@ -7838,7 +7973,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/lc-magnetic-force-between-two-balls/lc-magnetic-force-between-two-balls.java",
+        "problems/lc-magnetic-force-between-two-balls/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-majority-element-ii::1980144296",
