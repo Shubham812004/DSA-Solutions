@@ -789,6 +789,25 @@
       "Matrix"
     ]
   },
+  "leetcode::permutation-in-string": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "permutation-in-string",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1795160926504
+      }
+    ],
+    "tags": [
+      "String",
+      "Hash Table",
+      "Two Pointers",
+      "Sliding Window"
+    ]
+  },
   "leetcode::product-of-array-except-self": {
     "difficulty": "Medium",
     "lang": "Java",
@@ -1373,6 +1392,16 @@
         "elapsedSeconds": 0,
         "lang": "Python",
         "ts": 1795160781626
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1795160793505
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1795160810898
       }
     ],
     "tags": [

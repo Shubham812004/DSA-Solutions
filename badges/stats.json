@@ -4,17 +4,17 @@
   "currentStreak": 17,
   "longestStreak": 17,
   "freezes": 5,
-  "totalPoints": 4290,
-  "totalSolves": 227,
+  "totalPoints": 4315,
+  "totalSolves": 228,
   "totalRecalls": 0,
   "byDifficulty": {
     "Easy": 99,
-    "Medium": 124,
+    "Medium": 125,
     "Hard": 4
   },
   "level": 6,
   "levelName": "Architect",
-  "activeDays": 97,
+  "activeDays": 96,
   "dailyTargetPoints": 25,
   "achievements": [
     "first-blood",

@@ -7,8 +7,8 @@
 | Problem ID | `lc-permutation-in-string` |
 | Topics | String, Hash Table, Two Pointers, Sliding Window |
 | Solved | 2026-09-30 |
-| Runtime | 5 ms (beats 97.44700000000002%) |
-| Memory | 44.3 MB (beats 38.790200000000006%) |
+| Runtime | 5 ms (beats 98.318%) |
+| Memory | 44.3 MB (beats 34.415000000000006%) |
 
 ## Problem Statement
 
@@ -36,50 +36,6 @@ In other words, return `true` if one of `s1`'s permutations is the substring of 
 	- `1 <= s1.length, s2.length <= 104`
 
 	- `s1` and `s2` consist of lowercase English letters.
-
-## Hints
-
-<details>
-<summary>Hint 1</summary>
-
-Obviously, brute force will result in TLE. Think of something else.
-
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-How will you check whether one string is a permutation of another string?
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-One way is to sort the string and then compare. But, Is there a better way?
-
-</details>
-
-<details>
-<summary>Hint 4</summary>
-
-If one string is a permutation of another string then they must have one common metric. What is that?
-
-</details>
-
-<details>
-<summary>Hint 5</summary>
-
-Both strings must have same character frequencies, if  one is permutation of another. Which data structure should be used to store frequencies?
-
-</details>
-
-<details>
-<summary>Hint 6</summary>
-
-What about hash table?  An array of size 26?
-
-</details>
 
 ## Solutions
 
