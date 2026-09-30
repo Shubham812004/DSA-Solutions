@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-binary-search` |
 | Topics | Array, Binary Search |
-| Solved | 2026-09-02 |
+| Solved | 2026-09-30 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 48.5 MB (beats 13.767299999999931%) |
+| Memory | 48.2 MB (beats 68.65719999999993%) |
 
 ## Problem Statement
 
@@ -50,7 +50,7 @@ class Solution {
         int l = 0;
         int r = nums.length-1;
         while(l <= r){
-            int m = (l + r)/2;
+            int m = (l+r)/2;
             if(nums[m] == target){
                 return m;
             }
