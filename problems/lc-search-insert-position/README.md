@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-search-insert-position` |
 | Topics | Array, Binary Search |
-| Solved | 2026-09-11 |
+| Solved | 2026-10-02 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 44.6 MB (beats 66.69590000000002%) |
+| Memory | 44.9 MB (beats 12.745500000000021%) |
 
 ## Problem Statement
 
@@ -50,10 +50,10 @@ You must write an algorithm with `O(log n)` runtime complexity.
 ```Java
 class Solution {
     public int searchInsert(int[] nums, int target) {
-        int l=0;
+        int l = 0;
         int r = nums.length-1;
         while(l <= r){
-            int m = (l + r) / 2;
+            int m = l + (r - l) /2;
             if(nums[m] == target){
                 return m;
             }
@@ -61,7 +61,7 @@ class Solution {
                 l = m + 1;
             }
             else{
-                r = m-1;
+                r = m - 1;
             }
         }
         return l;
