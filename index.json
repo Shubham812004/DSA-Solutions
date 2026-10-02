@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-11-10T05:15:10.896Z",
+  "updatedAt": "2026-11-10T05:32:06.253Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 256,
+    "total": 257,
     "easy": 114,
-    "medium": 128,
+    "medium": 129,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 57,
-      "leetcode": 199
+      "leetcode": 200
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 140,
+      "Java": 141,
       "Python": 30,
       "MySQL": 35
     },
@@ -22,7 +22,7 @@
       "Binary Search": 4,
       "Searching": 8,
       "String": 26,
-      "Array": 136,
+      "Array": 137,
       "Greedy": 1,
       "Untagged": 1,
       "Prefix Sum": 2,
@@ -12454,7 +12454,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/lc-minimum-size-subarray-sum/lc-minimum-size-subarray-sum.java",
+        "problems/lc-minimum-size-subarray-sum/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-minimum-speed-to-arrive-on-time::2166972610",
@@ -15471,6 +15477,90 @@
         "problems/lc-search-a-2d-matrix-ii/lc-search-a-2d-matrix-ii.java",
         "problems/lc-search-a-2d-matrix-ii/README.md"
       ],
+      "methods": [],
+      "manuallyEdited": false
+    },
+    {
+      "id": "lc-search-in-rotated-sorted-array",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Search in Rotated Sorted Array",
+      "titleSlug": "search-in-rotated-sorted-array",
+      "difficulty": "Medium",
+      "topic": "Binary Search",
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 33,
+            "platform": "leetcode",
+            "slug": "search-in-rotated-sorted-array"
+          }
+        ],
+        "canonicalId": "search-in-rotated-sorted-array",
+        "canonicalTitle": "Search in Rotated Sorted Array",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "binary-search",
+        "tags": [
+          "array"
+        ],
+        "topic": "binary-search",
+        "voteCount": 96
+      },
+      "readmeContent": "# [33] Search in Rotated Sorted Array\n**Difficulty:** Medium  |  **Acceptance:** 45.9%  |  **Likes:** 31108 / **Dislikes:** 1870\n**Tags:** `Array`, `Binary Search`\n## Problem\nThere is an integer array nums sorted in ascending order (with distinct values).\n\nPrior to being passed to your function, nums is possibly left rotated at an unknown index k (1 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,5,6,7] might be left rotated by&nbsp;3&nbsp;indices and become [4,5,6,7,0,1,2].\n\nGiven the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.\n\nYou must write an algorithm with O(log n) runtime complexity.\n\n&nbsp;\nExample 1:\nInput: nums = [4,5,6,7,0,1,2], target = 0\nOutput: 4\nExample 2:\nInput: nums = [4,5,6,7,0,1,2], target = 3\nOutput: -1\nExample 3:\nInput: nums = [1], target = 0\nOutput: -1\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 5000\n\t-104 <= nums[i] <= 104\n\tAll values of nums are unique.\n\tnums is an ascending array that is possibly rotated.\n\t-104 <= target <= 104\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 43.9 MB (beats 19.5%)\n\n## Similar Problems\n\n- [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) — Medium\n- [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) — Medium\n",
+      "code": "class Solution {\n    public int search(int[] nums, int target) {\n        int l = 0;\n        int r = nums.length-1;\n        while(l <= r){\n            int m = l+(r-l)/2;\n            if(nums[m] == target) return m;\n            else if(nums[l] <= nums[m]){\n                if(nums[l] <= target && target <= nums[m]){\n                    r = m-1;\n                }\n                else{\n                    l = m+1;\n                }\n            }\n            else{\n                if(nums[m] <= target && target <= nums[r]){\n                    l = m+1;\n                }\n                else{\n                    r = m-1;\n                }\n            }\n        }\n        return -1;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/search-in-rotated-sorted-array/leetcode/lc-search-in-rotated-sorted-array.java",
+          "content": "class Solution {\n    public int search(int[] nums, int target) {\n        int l = 0;\n        int r = nums.length-1;\n        while(l <= r){\n            int m = l+(r-l)/2;\n            if(nums[m] == target) return m;\n            else if(nums[l] <= nums[m]){\n                if(nums[l] <= target && target <= nums[m]){\n                    r = m-1;\n                }\n                else{\n                    l = m+1;\n                }\n            }\n            else{\n                if(nums[m] <= target && target <= nums[r]){\n                    l = m+1;\n                }\n                else{\n                    r = m-1;\n                }\n            }\n        }\n        return -1;\n    }\n}"
+        },
+        {
+          "path": "problems/search-in-rotated-sorted-array/README.md",
+          "content": "# [33] Search in Rotated Sorted Array\n**Difficulty:** Medium  |  **Acceptance:** 45.9%  |  **Likes:** 31108 / **Dislikes:** 1870\n**Tags:** `Array`, `Binary Search`\n## Problem\nThere is an integer array nums sorted in ascending order (with distinct values).\n\nPrior to being passed to your function, nums is possibly left rotated at an unknown index k (1 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,5,6,7] might be left rotated by&nbsp;3&nbsp;indices and become [4,5,6,7,0,1,2].\n\nGiven the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.\n\nYou must write an algorithm with O(log n) runtime complexity.\n\n&nbsp;\nExample 1:\nInput: nums = [4,5,6,7,0,1,2], target = 0\nOutput: 4\nExample 2:\nInput: nums = [4,5,6,7,0,1,2], target = 3\nOutput: -1\nExample 3:\nInput: nums = [1], target = 0\nOutput: -1\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 5000\n\t-104 <= nums[i] <= 104\n\tAll values of nums are unique.\n\tnums is an ascending array that is possibly rotated.\n\t-104 <= target <= 104\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 43.9 MB (beats 19.5%)\n\n## Similar Problems\n\n- [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) — Medium\n- [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "0 ms",
+      "memory": "43.9 MB",
+      "runtimePct": 100,
+      "memoryPct": 19.508899999999986,
+      "timestamp": 1790923085000,
+      "acRate": 45.86153507985887,
+      "likes": 31108,
+      "dislikes": 1870,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "search-in-rotated-sorted-array-ii",
+          "title": "Search in Rotated Sorted Array II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-minimum-in-rotated-sorted-array",
+          "title": "Find Minimum in Rotated Sorted Array",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>There is an integer array <code>nums</code> sorted in ascending order (with <strong>distinct</strong> values).</p>\n\n<p>Prior to being passed to your function, <code>nums</code> is <strong>possibly left rotated</strong> at an unknown index <code>k</code> (<code>1 &lt;= k &lt; nums.length</code>) such that the resulting array is <code>[nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]]</code> (<strong>0-indexed</strong>). For example, <code>[0,1,2,4,5,6,7]</code> might be left rotated by&nbsp;<code>3</code>&nbsp;indices and become <code>[4,5,6,7,0,1,2]</code>.</p>\n\n<p>Given the array <code>nums</code> <strong>after</strong> the possible rotation and an integer <code>target</code>, return <em>the index of </em><code>target</code><em> if it is in </em><code>nums</code><em>, or </em><code>-1</code><em> if it is not in </em><code>nums</code>.</p>\n\n<p>You must write an algorithm with <code>O(log n)</code> runtime complexity.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [4,5,6,7,0,1,2], target = 0\n<strong>Output:</strong> 4\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [4,5,6,7,0,1,2], target = 3\n<strong>Output:</strong> -1\n</pre><p><strong class=\"example\">Example 3:</strong></p>\n<pre><strong>Input:</strong> nums = [1], target = 0\n<strong>Output:</strong> -1\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 5000</code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n\t<li>All values of <code>nums</code> are <strong>unique</strong>.</li>\n\t<li><code>nums</code> is an ascending array that is possibly rotated.</li>\n\t<li><code>-10<sup>4</sup> &lt;= target &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/search-in-rotated-sorted-array/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": true,
+      "duplicateOf": "lc-search-in-rotated-sorted-array::2159868297",
+      "_requestAIReview": true,
+      "platform": "leetcode",
       "methods": [],
       "manuallyEdited": false
     },

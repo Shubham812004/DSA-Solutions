@@ -525,6 +525,23 @@
       "Matrix"
     ]
   },
+  "leetcode::search-in-rotated-sorted-array": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "search-in-rotated-sorted-array",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794288726106
+      }
+    ],
+    "tags": [
+      "Array",
+      "Binary Search"
+    ]
+  },
   "leetcode::set-matrix-zeroes": {
     "difficulty": "Medium",
     "lang": "Java",
