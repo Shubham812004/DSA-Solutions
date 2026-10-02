@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-search-in-rotated-sorted-array` |
 | Topics | Array, Binary Search |
-| Solved | 2026-09-12 |
+| Solved | 2026-10-02 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 43.6 MB (beats 81.90389999999998%) |
+| Memory | 43.9 MB (beats 47.25879999999998%) |
 
 ## Problem Statement
 
@@ -54,13 +54,11 @@ You must write an algorithm with `O(log n)` runtime complexity.
 ```Java
 class Solution {
     public int search(int[] nums, int target) {
-        int l=0;
-        int r=nums.length-1;
+        int l = 0;
+        int r = nums.length-1;
         while(l <= r){
-            int m = (l + r)/2;
-            if(nums[m] == target){
-                return m;
-            }
+            int m = l+(r-l)/2;
+            if(nums[m] == target) return m;
             if(nums[l] <= nums[m]){
                 if(nums[l] <= target && target <= nums[m]){
                     r = m-1;
