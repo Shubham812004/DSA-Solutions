@@ -8,7 +8,7 @@
 | Topics | Array, Binary Search |
 | Solved | 2026-10-02 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 43.9 MB (beats 47.25879999999998%) |
+| Memory | 43.9 MB (beats 28.57209999999998%) |
 
 ## Problem Statement
 
@@ -59,7 +59,7 @@ class Solution {
         while(l <= r){
             int m = l+(r-l)/2;
             if(nums[m] == target) return m;
-            if(nums[l] <= nums[m]){
+            else if(nums[l] <= nums[m]){
                 if(nums[l] <= target && target <= nums[m]){
                     r = m-1;
                 }
@@ -67,7 +67,7 @@ class Solution {
                     l = m+1;
                 }
             }
-            if(nums[m] <= nums[r]){
+            else{
                 if(nums[m] <= target && target <= nums[r]){
                     l = m+1;
                 }
