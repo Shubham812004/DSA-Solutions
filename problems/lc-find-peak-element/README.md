@@ -8,7 +8,7 @@
 | Topics | Array, Binary Search |
 | Solved | 2026-10-04 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 44.6 MB (beats 6.5178999999999565%) |
+| Memory | 44.6 MB (beats 11.147200000000003%) |
 
 ## Problem Statement
 
