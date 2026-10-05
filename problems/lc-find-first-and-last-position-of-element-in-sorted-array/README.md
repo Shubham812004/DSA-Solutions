@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-find-first-and-last-position-of-element-in-sorted-array` |
 | Topics | Array, Binary Search |
-| Solved | 2026-09-11 |
+| Solved | 2026-10-05 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 48.4 MB (beats 14.31120000000005%) |
+| Memory | 48.1 MB (beats 50.88440000000005%) |
 
 ## Problem Statement
 
@@ -50,45 +50,44 @@ You must write an algorithm with `O(log n)` runtime complexity.
 ```Java
 class Solution {
     public int[] searchRange(int[] nums, int target) {
-        int firstPos = findFirst(nums, target);
-        int lastPos = findLast(nums, target);
-        return new int[]{firstPos, lastPos};
+        int first = lowerBound(nums, target);
+        int last = upperBound(nums, target);
+        return new int[]{first, last};
     }
-    public int findFirst(int[] nums, int target){
+    public int lowerBound(int[] nums, int target){
         int ans = -1;
         int l = 0;
         int r = nums.length-1;
         while(l <= r){
-            int m = (l + r)/2;
+            int m = l + (r - l)/2;
             if(nums[m] == target){
                 ans = m;
                 r = m - 1;
             }
             else if(nums[m] < target){
-                l = m + 1;
+                l = m+1;
             }
             else{
-                r = m - 1;
+                r = m-1;
             }
         }
         return ans;
     }
-
-    public int findLast(int[] nums, int target){
+    public int upperBound(int[] nums, int target){
         int ans = -1;
         int l = 0;
         int r = nums.length-1;
         while(l <= r){
-            int m = (l + r)/2;
+            int m = l + (r - l)/2;
             if(nums[m] == target){
                 ans = m;
-                l = m + 1;
+                l = m+1;
             }
             else if(nums[m] < target){
-                l = m + 1;
+                l = m+1;
             }
             else{
-                r = m - 1;
+                r = m-1;
             }
         }
         return ans;
