@@ -225,6 +225,23 @@
       "Sliding Window"
     ]
   },
+  "leetcode::find-first-and-last-position-of-element-in-sorted-array": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "find-first-and-last-position-of-element-in-sorted-array",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1795161381649
+      }
+    ],
+    "tags": [
+      "Array",
+      "Binary Search"
+    ]
+  },
   "leetcode::find-the-difference": {
     "difficulty": "Easy",
     "lang": "Java",
