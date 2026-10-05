@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-rotate-array` |
 | Topics | Array, Math, Two Pointers |
-| Solved | 2026-09-03 |
-| Runtime | 5 ms (beats 46.6821%) |
-| Memory | 268.9 MB (beats 24.72799999999965%) |
+| Solved | 2026-10-05 |
+| Runtime | 4 ms (beats 98.1593%) |
+| Memory | 268.8 MB (beats 49.101499999999646%) |
 
 ## Problem Statement
 
@@ -85,7 +85,15 @@ The other line of thought is a tad bit complicated but essentially it builds on 
 
 ```Java
 class Solution {
-    public void reverse(int[] nums, int l, int r){
+    public void rotate(int[] nums, int k) {
+        int n = nums.length;
+        k = k % n;
+        rotate(nums, 0, n-1);
+        rotate(nums, 0, k-1);
+        rotate(nums, k, n-1);
+
+    }
+    public void rotate(int[] nums, int l, int r){
         while(l < r){
             int temp = nums[l];
             nums[l] = nums[r];
@@ -93,13 +101,6 @@ class Solution {
             l++;
             r--;
         }
-    }
-    public void rotate(int[] nums, int k) {
-        int n = nums.length;
-        k = k%n;
-        reverse(nums, 0, n-1);
-        reverse(nums, 0, k-1);
-        reverse(nums, k, n-1);
     }
 }
 ```
