@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-rotate-array` |
 | Topics | Array, Math, Two Pointers |
-| Solved | 2026-10-05 |
-| Runtime | 4 ms (beats 98.1593%) |
-| Memory | 268.8 MB (beats 49.101499999999646%) |
+| Solved | 2026-10-06 |
+| Runtime | 5 ms (beats 46.6821%) |
+| Memory | 268.7 MB (beats 49.101499999999646%) |
 
 ## Problem Statement
 
