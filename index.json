@@ -1,31 +1,31 @@
 {
-  "updatedAt": "2026-10-11T05:45:58.208Z",
+  "updatedAt": "2026-10-11T05:46:56.109Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 202,
-    "easy": 105,
-    "medium": 85,
+    "total": 227,
+    "easy": 111,
+    "medium": 104,
     "hard": 2,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 51,
-      "leetcode": 151
+      "leetcode": 176
     },
     "byLang": {
       "Unknown": 51,
       "MySQL": 35,
       "Python": 29,
-      "Java": 87
+      "Java": 112
     },
     "byTopic": {
       "Untagged": 51,
       "Database": 35,
-      "Array": 77,
+      "Array": 91,
       "Linked List": 11,
-      "String": 11,
-      "Two Pointers": 1,
-      "Math": 3,
-      "Hash Table": 2,
+      "String": 18,
+      "Two Pointers": 3,
+      "Math": 4,
+      "Hash Table": 3,
       "Stack": 5,
       "Dynamic Programming": 6
     }
@@ -12896,6 +12896,1953 @@
           "submissionId": 2149376359
         }
       ]
+    },
+    {
+      "id": "lc-maximum-absolute-sum-of-any-subarray::2149376359",
+      "submissionId": 2149376359,
+      "platform": "leetcode",
+      "title": "Maximum Absolute Sum of Any Subarray",
+      "titleSlug": "maximum-absolute-sum-of-any-subarray",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "topic": "Dynamic Programming",
+      "code": "class Solution {\n    public int maxAbsoluteSum(int[] nums) {\n        int sum1 = 0;\n        int sum2 = 0;\n        int minSum = Integer.MAX_VALUE;\n        int maxSum = Integer.MIN_VALUE;\n        for(int num : nums){\n            sum1 += num;\n            sum2 += num;\n            maxSum = Math.max(maxSum, sum1);\n            minSum = Math.min(minSum, sum2);\n            if(sum1 < 0) sum1 = 0;\n            if(sum2 > 0) sum2 = 0;\n        }\n        return Math.max(maxSum, Math.abs(minSum));\n    }\n}",
+      "readmeContent": "# Maximum Absolute Sum of Any Subarray\n\n**Difficulty:** Medium  |  **Acceptance:** 70.6%\n\n**Tags:** `Array`, `Dynamic Programming`\n\n## Problem\n\nYou are given an integer array nums. The absolute sum of a subarray [numsl, numsl+1, ..., numsr-1, numsr] is abs(numsl + numsl+1 + ... + numsr-1 + numsr).\n\nReturn the maximum absolute sum of any (possibly empty) subarray of nums.\n\nNote that abs(x) is defined as follows:\n\n\tIf x is a negative integer, then abs(x) = -x.\n\tIf x is a non-negative integer, then abs(x) = x.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,-3,2,3,-4]\nOutput: 5\nExplanation: The subarray [2,3] has absolute sum = abs(2+3) = abs(5) = 5.\n\nExample 2:\n\nInput: nums = [2,-5,1,-4,3,-2]\nOutput: 8\nExplanation: The subarray [-5,1,-4] has absolute sum = abs(-5+1-4) = abs(-8) = 8.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 105\n\t-104 <= nums[i] <= 104\n\n## My Submission\n\n- Runtime: 4 ms\n- Memory: 67 MB\n\n## Similar Problems\n\n- [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-maximum-absolute-sum-of-any-subarray/lc-maximum-absolute-sum-of-any-subarray.java",
+          "content": "class Solution {\n    public int maxAbsoluteSum(int[] nums) {\n        int sum1 = 0;\n        int sum2 = 0;\n        int minSum = Integer.MAX_VALUE;\n        int maxSum = Integer.MIN_VALUE;\n        for(int num : nums){\n            sum1 += num;\n            sum2 += num;\n            maxSum = Math.max(maxSum, sum1);\n            minSum = Math.min(minSum, sum2);\n            if(sum1 < 0) sum1 = 0;\n            if(sum2 > 0) sum2 = 0;\n        }\n        return Math.max(maxSum, Math.abs(minSum));\n    }\n}"
+        },
+        {
+          "path": "problems/lc-maximum-absolute-sum-of-any-subarray/README.md",
+          "content": "# Maximum Absolute Sum of Any Subarray\n\n**Difficulty:** Medium  |  **Acceptance:** 70.6%\n\n**Tags:** `Array`, `Dynamic Programming`\n\n## Problem\n\nYou are given an integer array nums. The absolute sum of a subarray [numsl, numsl+1, ..., numsr-1, numsr] is abs(numsl + numsl+1 + ... + numsr-1 + numsr).\n\nReturn the maximum absolute sum of any (possibly empty) subarray of nums.\n\nNote that abs(x) is defined as follows:\n\n\tIf x is a negative integer, then abs(x) = -x.\n\tIf x is a non-negative integer, then abs(x) = x.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,-3,2,3,-4]\nOutput: 5\nExplanation: The subarray [2,3] has absolute sum = abs(2+3) = abs(5) = 5.\n\nExample 2:\n\nInput: nums = [2,-5,1,-4,3,-2]\nOutput: 8\nExplanation: The subarray [-5,1,-4] has absolute sum = abs(-5+1-4) = abs(-8) = 8.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 105\n\t-104 <= nums[i] <= 104\n\n## My Submission\n\n- Runtime: 4 ms\n- Memory: 67 MB\n\n## Similar Problems\n\n- [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) — Medium\n"
+        }
+      ],
+      "timestamp": 1790056534000,
+      "runtime": "4 ms",
+      "memory": "67 MB",
+      "runtimePct": 91.474,
+      "memoryPct": 29.60009999999996,
+      "problemStatement": "<p>You are given an integer array <code>nums</code>. The <strong>absolute sum</strong> of a subarray <code>[nums<sub>l</sub>, nums<sub>l+1</sub>, ..., nums<sub>r-1</sub>, nums<sub>r</sub>]</code> is <code>abs(nums<sub>l</sub> + nums<sub>l+1</sub> + ... + nums<sub>r-1</sub> + nums<sub>r</sub>)</code>.</p>\n\n<p>Return <em>the <strong>maximum</strong> absolute sum of any <strong>(possibly empty)</strong> subarray of </em><code>nums</code>.</p>\n\n<p>Note that <code>abs(x)</code> is defined as follows:</p>\n\n<ul>\n\t<li>If <code>x</code> is a negative integer, then <code>abs(x) = -x</code>.</li>\n\t<li>If <code>x</code> is a non-negative integer, then <code>abs(x) = x</code>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,-3,2,3,-4]\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> The subarray [2,3] has absolute sum = abs(2+3) = abs(5) = 5.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,-5,1,-4,3,-2]\n<strong>Output:</strong> 8\n<strong>Explanation:</strong> The subarray [-5,1,-4] has absolute sum = abs(-5+1-4) = abs(-8) = 8.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
+      "hints": [
+        "What if we asked for maximum sum, not absolute sum?",
+        "It's a standard problem that can be solved by Kadane's algorithm.",
+        "The key idea is the max absolute sum will be either the max sum or the min sum.",
+        "So just run kadane twice, once calculating the max sum and once calculating the min sum."
+      ],
+      "acRate": 70.56081870020992,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-subarray",
+          "title": "Maximum Subarray",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "isDuplicate": true,
+      "duplicateOf": "lc-maximum-absolute-sum-of-any-subarray::2149344092"
+    },
+    {
+      "id": "lc-maximum-subarray::2150624078",
+      "submissionId": 2150624078,
+      "platform": "leetcode",
+      "title": "Maximum Subarray",
+      "titleSlug": "maximum-subarray",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array",
+        "Divide and Conquer",
+        "Dynamic Programming"
+      ],
+      "topic": "Dynamic Programming",
+      "code": "class Solution {\n    public int maxSubArray(int[] nums) {\n        int sum = 0;\n        int maxSum = Integer.MIN_VALUE;\n        for(int num : nums){\n            sum += num;\n            maxSum = Math.max(maxSum, sum);\n            if(sum < 0)\n                sum = 0;\n        }\n        return maxSum;\n    }\n}",
+      "readmeContent": "# Maximum Subarray\n\n**Difficulty:** Medium  |  **Acceptance:** 54.0%\n\n**Tags:** `Array`, `Divide and Conquer`, `Dynamic Programming`\n\n## Problem\n\nGiven an integer array nums, find the subarray with the largest sum, and return its sum.\n\n&nbsp;\nExample 1:\n\nInput: nums = [-2,1,-3,4,-1,2,1,-5,4]\nOutput: 6\nExplanation: The subarray [4,-1,2,1] has the largest sum 6.\n\nExample 2:\n\nInput: nums = [1]\nOutput: 1\nExplanation: The subarray [1] has the largest sum 1.\n\nExample 3:\n\nInput: nums = [5,4,-1,7,8]\nOutput: 23\nExplanation: The subarray [5,4,-1,7,8] has the largest sum 23.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 105\n\t-104 <= nums[i] <= 104\n\n&nbsp;\nFollow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.\n\n## My Submission\n\n- Runtime: 1 ms\n- Memory: 80.9 MB\n\n## Similar Problems\n\n- [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) — Easy\n- [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) — Medium\n- [Degree of an Array](https://leetcode.com/problems/degree-of-an-array/) — Easy\n- [Longest Turbulent Subarray](https://leetcode.com/problems/longest-turbulent-subarray/) — Medium\n- [Maximum Score Of Spliced Array](https://leetcode.com/problems/maximum-score-of-spliced-array/) — Hard\n",
+      "files": [
+        {
+          "path": "problems/lc-maximum-subarray/lc-maximum-subarray.java",
+          "content": "class Solution {\n    public int maxSubArray(int[] nums) {\n        int sum = 0;\n        int maxSum = Integer.MIN_VALUE;\n        for(int num : nums){\n            sum += num;\n            maxSum = Math.max(maxSum, sum);\n            if(sum < 0)\n                sum = 0;\n        }\n        return maxSum;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-maximum-subarray/README.md",
+          "content": "# Maximum Subarray\n\n**Difficulty:** Medium  |  **Acceptance:** 54.0%\n\n**Tags:** `Array`, `Divide and Conquer`, `Dynamic Programming`\n\n## Problem\n\nGiven an integer array nums, find the subarray with the largest sum, and return its sum.\n\n&nbsp;\nExample 1:\n\nInput: nums = [-2,1,-3,4,-1,2,1,-5,4]\nOutput: 6\nExplanation: The subarray [4,-1,2,1] has the largest sum 6.\n\nExample 2:\n\nInput: nums = [1]\nOutput: 1\nExplanation: The subarray [1] has the largest sum 1.\n\nExample 3:\n\nInput: nums = [5,4,-1,7,8]\nOutput: 23\nExplanation: The subarray [5,4,-1,7,8] has the largest sum 23.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 105\n\t-104 <= nums[i] <= 104\n\n&nbsp;\nFollow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.\n\n## My Submission\n\n- Runtime: 1 ms\n- Memory: 80.9 MB\n\n## Similar Problems\n\n- [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) — Easy\n- [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) — Medium\n- [Degree of an Array](https://leetcode.com/problems/degree-of-an-array/) — Easy\n- [Longest Turbulent Subarray](https://leetcode.com/problems/longest-turbulent-subarray/) — Medium\n- [Maximum Score Of Spliced Array](https://leetcode.com/problems/maximum-score-of-spliced-array/) — Hard\n"
+        }
+      ],
+      "timestamp": 1790149598000,
+      "runtime": "1 ms",
+      "memory": "80.9 MB",
+      "runtimePct": 99.9298,
+      "memoryPct": 5.930399999999959,
+      "problemStatement": "<p>Given an integer array <code>nums</code>, find the <span data-keyword=\"subarray-nonempty\">subarray</span> with the largest sum, and return <em>its sum</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-2,1,-3,4,-1,2,1,-5,4]\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> The subarray [4,-1,2,1] has the largest sum 6.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> The subarray [1] has the largest sum 1.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [5,4,-1,7,8]\n<strong>Output:</strong> 23\n<strong>Explanation:</strong> The subarray [5,4,-1,7,8] has the largest sum 23.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> If you have figured out the <code>O(n)</code> solution, try coding another solution using the <strong>divide and conquer</strong> approach, which is more subtle.</p>\n",
+      "hints": null,
+      "acRate": 53.96546144387323,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "best-time-to-buy-and-sell-stock",
+          "title": "Best Time to Buy and Sell Stock",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-product-subarray",
+          "title": "Maximum Product Subarray",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "degree-of-an-array",
+          "title": "Degree of an Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "longest-turbulent-subarray",
+          "title": "Longest Turbulent Subarray",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "maximum-score-of-spliced-array",
+          "title": "Maximum Score Of Spliced Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-absolute-sum-of-any-subarray",
+          "title": "Maximum Absolute Sum of Any Subarray",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "substring-with-largest-variance",
+          "title": "Substring With Largest Variance",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "count-subarrays-with-score-less-than-k",
+          "title": "Count Subarrays With Score Less Than K",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "maximum-value-of-a-string-in-an-array",
+          "title": "Maximum Value of a String in an Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-the-substring-with-maximum-cost",
+          "title": "Find the Substring With Maximum Cost",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "k-items-with-the-maximum-sum",
+          "title": "K Items With the Maximum Sum",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-good-subarray-sum",
+          "title": "Maximum Good Subarray Sum",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "maximize-subarray-sum-after-removing-all-occurrences-of-one-element",
+          "title": "Maximize Subarray Sum After Removing All Occurrences of One Element",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "isDuplicate": true,
+      "duplicateOf": "lc-maximum-subarray::1993471635"
+    },
+    {
+      "id": "lc-reverse-string::2150626722",
+      "submissionId": 2150626722,
+      "platform": "leetcode",
+      "title": "Reverse String",
+      "titleSlug": "reverse-string",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Two Pointers",
+        "String"
+      ],
+      "topic": "Two Pointers",
+      "code": "class Solution {\n    public void reverseString(char[] s) {\n        int l = 0;\n        int r = s.length-1;\n        while(l <= r){\n            swap(s, l, r);\n            l++;\n            r--;\n        }\n        \n    }\n    public void swap(char[] s, int l, int r){\n        char temp = s[l];\n        s[l] = s[r];\n        s[r] = temp;\n    }\n}",
+      "readmeContent": "# Reverse String\n\n**Difficulty:** Easy  |  **Acceptance:** 81.4%\n\n**Tags:** `Two Pointers`, `String`\n\n## Problem\n\nWrite a function that reverses a string. The input string is given as an array of characters s.\n\nYou must do this by modifying the input array in-place with O(1) extra memory.\n\n&nbsp;\nExample 1:\nInput: s = [\"h\",\"e\",\"l\",\"l\",\"o\"]\nOutput: [\"o\",\"l\",\"l\",\"e\",\"h\"]\nExample 2:\nInput: s = [\"H\",\"a\",\"n\",\"n\",\"a\",\"h\"]\nOutput: [\"h\",\"a\",\"n\",\"n\",\"a\",\"H\"]\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 105\n\ts[i] is a printable ascii character.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 48.1 MB\n\n## Similar Problems\n\n- [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/) — Easy\n- [Reverse String II](https://leetcode.com/problems/reverse-string-ii/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-reverse-string/lc-reverse-string.java",
+          "content": "class Solution {\n    public void reverseString(char[] s) {\n        int l = 0;\n        int r = s.length-1;\n        while(l <= r){\n            swap(s, l, r);\n            l++;\n            r--;\n        }\n        \n    }\n    public void swap(char[] s, int l, int r){\n        char temp = s[l];\n        s[l] = s[r];\n        s[r] = temp;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-reverse-string/README.md",
+          "content": "# Reverse String\n\n**Difficulty:** Easy  |  **Acceptance:** 81.4%\n\n**Tags:** `Two Pointers`, `String`\n\n## Problem\n\nWrite a function that reverses a string. The input string is given as an array of characters s.\n\nYou must do this by modifying the input array in-place with O(1) extra memory.\n\n&nbsp;\nExample 1:\nInput: s = [\"h\",\"e\",\"l\",\"l\",\"o\"]\nOutput: [\"o\",\"l\",\"l\",\"e\",\"h\"]\nExample 2:\nInput: s = [\"H\",\"a\",\"n\",\"n\",\"a\",\"h\"]\nOutput: [\"h\",\"a\",\"n\",\"n\",\"a\",\"H\"]\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 105\n\ts[i] is a printable ascii character.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 48.1 MB\n\n## Similar Problems\n\n- [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/) — Easy\n- [Reverse String II](https://leetcode.com/problems/reverse-string-ii/) — Easy\n"
+        }
+      ],
+      "timestamp": 1790149833000,
+      "runtime": "0 ms",
+      "memory": "48.1 MB",
+      "runtimePct": 100,
+      "memoryPct": 73.53929999999998,
+      "problemStatement": "<p>Write a function that reverses a string. The input string is given as an array of characters <code>s</code>.</p>\n\n<p>You must do this by modifying the input array <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\">in-place</a> with <code>O(1)</code> extra memory.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> s = [\"h\",\"e\",\"l\",\"l\",\"o\"]\n<strong>Output:</strong> [\"o\",\"l\",\"l\",\"e\",\"h\"]\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> s = [\"H\",\"a\",\"n\",\"n\",\"a\",\"h\"]\n<strong>Output:</strong> [\"h\",\"a\",\"n\",\"n\",\"a\",\"H\"]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>s[i]</code> is a <a href=\"https://en.wikipedia.org/wiki/ASCII#Printable_characters\" target=\"_blank\">printable ascii character</a>.</li>\n</ul>\n",
+      "hints": [
+        "The entire logic for reversing a string is based on using the opposite directional two-pointer approach!"
+      ],
+      "acRate": 81.4313748741522,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "reverse-vowels-of-a-string",
+          "title": "Reverse Vowels of a String",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "reverse-string-ii",
+          "title": "Reverse String II",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-valid-palindrome::2151733729",
+      "submissionId": 2151733729,
+      "platform": "leetcode",
+      "title": "Valid Palindrome",
+      "titleSlug": "valid-palindrome",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "String",
+        "Two Pointers"
+      ],
+      "topic": "Two Pointers",
+      "code": "class Solution {\n    public boolean isPalindrome(String s) {\n        if(s.length() == 0 || s.length() == 1){\n            return true;\n        }\n        int l = 0;\n        int r = s.length()-1;\n        while(l <= r){\n            if(!Character.isLetterOrDigit(s.charAt(l)))\n                l++;\n            else if(!Character.isLetterOrDigit(s.charAt(r)))\n                r--;\n            else if(Character.toLowerCase(s.charAt(l)) != Character.toLowerCase(s.charAt(r)))\n                return false;\n            else{\n                l++;\n                r--;\n            }\n        }\n        return true;\n    }\n}",
+      "readmeContent": "# Valid Palindrome\n\n**Difficulty:** Easy  |  **Acceptance:** 54.5%\n\n**Tags:** `Two Pointers`, `String`\n\n## Problem\n\nA phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.\n\nGiven a string s, return true if it is a palindrome, or false otherwise.\n\n&nbsp;\nExample 1:\n\nInput: s = \"A man, a plan, a canal: Panama\"\nOutput: true\nExplanation: \"amanaplanacanalpanama\" is a palindrome.\n\nExample 2:\n\nInput: s = \"race a car\"\nOutput: false\nExplanation: \"raceacar\" is not a palindrome.\n\nExample 3:\n\nInput: s = \" \"\nOutput: true\nExplanation: s is an empty string \"\" after removing non-alphanumeric characters.\nSince an empty string reads the same forward and backward, it is a palindrome.\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 2 * 105\n\ts consists only of printable ASCII characters.\n\n## My Submission\n\n- Runtime: 2 ms\n- Memory: 44.5 MB\n\n## Similar Problems\n\n- [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) — Easy\n- [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/) — Easy\n- [Maximum Product of the Length of Two Palindromic Subsequences](https://leetcode.com/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/) — Medium\n- [Find First Palindromic String in the Array](https://leetcode.com/problems/find-first-palindromic-string-in-the-array/) — Easy\n- [Maximum Palindromes After Operations](https://leetcode.com/problems/maximum-palindromes-after-operations/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-valid-palindrome/lc-valid-palindrome.java",
+          "content": "class Solution {\n    public boolean isPalindrome(String s) {\n        if(s.length() == 0 || s.length() == 1){\n            return true;\n        }\n        int l = 0;\n        int r = s.length()-1;\n        while(l <= r){\n            if(!Character.isLetterOrDigit(s.charAt(l)))\n                l++;\n            else if(!Character.isLetterOrDigit(s.charAt(r)))\n                r--;\n            else if(Character.toLowerCase(s.charAt(l)) != Character.toLowerCase(s.charAt(r)))\n                return false;\n            else{\n                l++;\n                r--;\n            }\n        }\n        return true;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-valid-palindrome/README.md",
+          "content": "# Valid Palindrome\n\n**Difficulty:** Easy  |  **Acceptance:** 54.5%\n\n**Tags:** `Two Pointers`, `String`\n\n## Problem\n\nA phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.\n\nGiven a string s, return true if it is a palindrome, or false otherwise.\n\n&nbsp;\nExample 1:\n\nInput: s = \"A man, a plan, a canal: Panama\"\nOutput: true\nExplanation: \"amanaplanacanalpanama\" is a palindrome.\n\nExample 2:\n\nInput: s = \"race a car\"\nOutput: false\nExplanation: \"raceacar\" is not a palindrome.\n\nExample 3:\n\nInput: s = \" \"\nOutput: true\nExplanation: s is an empty string \"\" after removing non-alphanumeric characters.\nSince an empty string reads the same forward and backward, it is a palindrome.\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 2 * 105\n\ts consists only of printable ASCII characters.\n\n## My Submission\n\n- Runtime: 2 ms\n- Memory: 44.5 MB\n\n## Similar Problems\n\n- [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) — Easy\n- [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/) — Easy\n- [Maximum Product of the Length of Two Palindromic Subsequences](https://leetcode.com/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/) — Medium\n- [Find First Palindromic String in the Array](https://leetcode.com/problems/find-first-palindromic-string-in-the-array/) — Easy\n- [Maximum Palindromes After Operations](https://leetcode.com/problems/maximum-palindromes-after-operations/) — Medium\n"
+        }
+      ],
+      "timestamp": 1790235047000,
+      "runtime": "2 ms",
+      "memory": "44.5 MB",
+      "runtimePct": 99.2813,
+      "memoryPct": 53.026700000000005,
+      "problemStatement": "<p>A phrase is a <strong>palindrome</strong> if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.</p>\n\n<p>Given a string <code>s</code>, return <code>true</code><em> if it is a <strong>palindrome</strong>, or </em><code>false</code><em> otherwise</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;A man, a plan, a canal: Panama&quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> &quot;amanaplanacanalpanama&quot; is a palindrome.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;race a car&quot;\n<strong>Output:</strong> false\n<strong>Explanation:</strong> &quot;raceacar&quot; is not a palindrome.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot; &quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> s is an empty string &quot;&quot; after removing non-alphanumeric characters.\nSince an empty string reads the same forward and backward, it is a palindrome.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 2 * 10<sup>5</sup></code></li>\n\t<li><code>s</code> consists only of printable ASCII characters.</li>\n</ul>\n",
+      "hints": null,
+      "acRate": 54.476135099296826,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "palindrome-linked-list",
+          "title": "Palindrome Linked List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "valid-palindrome-ii",
+          "title": "Valid Palindrome II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-product-of-the-length-of-two-palindromic-subsequences",
+          "title": "Maximum Product of the Length of Two Palindromic Subsequences",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "find-first-palindromic-string-in-the-array",
+          "title": "Find First Palindromic String in the Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-palindromes-after-operations",
+          "title": "Maximum Palindromes After Operations",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 125,
+            "platform": "leetcode",
+            "slug": "valid-palindrome"
+          }
+        ],
+        "canonicalId": "valid-palindrome",
+        "canonicalTitle": "Valid Palindrome",
+        "confirmedBy": "system-init",
+        "difficulty": "easy",
+        "pattern": "two-pointer",
+        "tags": [
+          "string"
+        ],
+        "topic": "two-pointers",
+        "voteCount": 91
+      }
+    },
+    {
+      "id": "lc-valid-palindrome-ii::2151760350",
+      "submissionId": 2151760350,
+      "platform": "leetcode",
+      "title": "Valid Palindrome II",
+      "titleSlug": "valid-palindrome-ii",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Two Pointers",
+        "String",
+        "Greedy"
+      ],
+      "topic": "Greedy",
+      "code": "class Solution {\n    public boolean validPalindrome(String s) {\n        if(s.length() == 0 || s.length() == 1) return true;\n        int l = 0;\n        int r = s.length()-1;\n        while(l <= r){\n            if(s.charAt(l) != s.charAt(r)){\n                return isPalindrome(s, l+1, r) || isPalindrome(s, l, r-1);\n            }\n            l++;\n            r--;\n        }\n        return true;\n    }\n    public boolean isPalindrome(String s, int l, int r){\n        while(l <= r){\n            if(s.charAt(l) != s.charAt(r)){\n                return false;\n            }\n            l++;\n            r--;\n        }\n        return true;\n    }\n}",
+      "readmeContent": "# Valid Palindrome II\n\n**Difficulty:** Easy  |  **Acceptance:** 44.9%\n\n**Tags:** `Two Pointers`, `String`, `Greedy`\n\n## Problem\n\nGiven a string s, return true if the s can be palindrome after deleting at most one character from it.\n\n&nbsp;\nExample 1:\n\nInput: s = \"aba\"\nOutput: true\n\nExample 2:\n\nInput: s = \"abca\"\nOutput: true\nExplanation: You could delete the character 'c'.\n\nExample 3:\n\nInput: s = \"abc\"\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 105\n\ts consists of lowercase English letters.\n\n## My Submission\n\n- Runtime: 4 ms\n- Memory: 47.6 MB\n\n## Similar Problems\n\n- [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-valid-palindrome-ii/lc-valid-palindrome-ii.java",
+          "content": "class Solution {\n    public boolean validPalindrome(String s) {\n        if(s.length() == 0 || s.length() == 1) return true;\n        int l = 0;\n        int r = s.length()-1;\n        while(l <= r){\n            if(s.charAt(l) != s.charAt(r)){\n                return isPalindrome(s, l+1, r) || isPalindrome(s, l, r-1);\n            }\n            l++;\n            r--;\n        }\n        return true;\n    }\n    public boolean isPalindrome(String s, int l, int r){\n        while(l <= r){\n            if(s.charAt(l) != s.charAt(r)){\n                return false;\n            }\n            l++;\n            r--;\n        }\n        return true;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-valid-palindrome-ii/README.md",
+          "content": "# Valid Palindrome II\n\n**Difficulty:** Easy  |  **Acceptance:** 44.9%\n\n**Tags:** `Two Pointers`, `String`, `Greedy`\n\n## Problem\n\nGiven a string s, return true if the s can be palindrome after deleting at most one character from it.\n\n&nbsp;\nExample 1:\n\nInput: s = \"aba\"\nOutput: true\n\nExample 2:\n\nInput: s = \"abca\"\nOutput: true\nExplanation: You could delete the character 'c'.\n\nExample 3:\n\nInput: s = \"abc\"\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 105\n\ts consists of lowercase English letters.\n\n## My Submission\n\n- Runtime: 4 ms\n- Memory: 47.6 MB\n\n## Similar Problems\n\n- [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) — Easy\n"
+        }
+      ],
+      "timestamp": 1790237448000,
+      "runtime": "4 ms",
+      "memory": "47.6 MB",
+      "runtimePct": 98.1998,
+      "memoryPct": 84.23840000000001,
+      "problemStatement": "<p>Given a string <code>s</code>, return <code>true</code> <em>if the </em><code>s</code><em> can be palindrome after deleting <strong>at most one</strong> character from it</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;aba&quot;\n<strong>Output:</strong> true\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;abca&quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> You could delete the character &#39;c&#39;.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;abc&quot;\n<strong>Output:</strong> false\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>s</code> consists of lowercase English letters.</li>\n</ul>\n",
+      "hints": null,
+      "acRate": 44.86901631794041,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "valid-palindrome",
+          "title": "Valid Palindrome",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-longest-palindromic-substring::2152761012",
+      "submissionId": 2152761012,
+      "platform": "leetcode",
+      "title": "Longest Palindromic Substring",
+      "titleSlug": "longest-palindromic-substring",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "String",
+        "Two Pointers",
+        "Dynamic Programming",
+        "Manacher"
+      ],
+      "topic": "Dynamic Programming",
+      "code": "class Solution {\n    public String longestPalindrome(String s) {\n        String result = \"\";\n        for(int i=0; i<s.length(); i++){\n            for(int j=i; j<s.length(); j++){\n                if(isPalindrome(s, i, j)){\n                    if(j-i+1 > result.length())\n                        result = s.substring(i, j+1);\n                }\n            }\n        }\n        return result;\n    }\n    public boolean isPalindrome(String s, int l, int r){\n        while(l <= r){\n            if(s.charAt(l) != s.charAt(r)){\n                return false;\n            }\n            l++;\n            r--;\n        }\n        return true;\n    }\n}",
+      "readmeContent": "# Longest Palindromic Substring\n\n**Difficulty:** Medium  |  **Acceptance:** 38.8%\n\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n\n## Problem\n\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n\n## My Submission\n\n- Runtime: 1590 ms\n- Memory: 46.3 MB\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
+      "files": [
+        {
+          "path": "problems/lc-longest-palindromic-substring/lc-longest-palindromic-substring.java",
+          "content": "class Solution {\n    public String longestPalindrome(String s) {\n        String result = \"\";\n        for(int i=0; i<s.length(); i++){\n            for(int j=i; j<s.length(); j++){\n                if(isPalindrome(s, i, j)){\n                    if(j-i+1 > result.length())\n                        result = s.substring(i, j+1);\n                }\n            }\n        }\n        return result;\n    }\n    public boolean isPalindrome(String s, int l, int r){\n        while(l <= r){\n            if(s.charAt(l) != s.charAt(r)){\n                return false;\n            }\n            l++;\n            r--;\n        }\n        return true;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-longest-palindromic-substring/README.md",
+          "content": "# Longest Palindromic Substring\n\n**Difficulty:** Medium  |  **Acceptance:** 38.8%\n\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n\n## Problem\n\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n\n## My Submission\n\n- Runtime: 1590 ms\n- Memory: 46.3 MB\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
+        }
+      ],
+      "timestamp": 1790321932000,
+      "runtime": "1590 ms",
+      "memory": "46.3 MB",
+      "runtimePct": 8.670199999999854,
+      "memoryPct": 41.405300000000025,
+      "problemStatement": "<p>Given a string <code>s</code>, return <em>the longest</em> <span data-keyword=\"palindromic-string\"><em>palindromic</em></span> <span data-keyword=\"substring-nonempty\"><em>substring</em></span> in <code>s</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;babad&quot;\n<strong>Output:</strong> &quot;bab&quot;\n<strong>Explanation:</strong> &quot;aba&quot; is also a valid answer.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;cbbd&quot;\n<strong>Output:</strong> &quot;bb&quot;\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 1000</code></li>\n\t<li><code>s</code> consist of only digits and English letters.</li>\n</ul>\n",
+      "hints": [
+        "How can we reuse a previously computed palindrome to compute a larger palindrome?",
+        "If “aba” is a palindrome, is “xabax” a palindrome? Similarly is “xabay” a palindrome?",
+        "Complexity based hint:</br>\r\nIf we use brute-force and check whether for every start and end position a substring is a palindrome we have O(n^2) start - end pairs and O(n) palindromic checks. Can we reduce the time for palindromic checks to O(1) by reusing some previous computation."
+      ],
+      "acRate": 38.823306531032394,
+      "similar": [
+        {
+          "difficulty": "Hard",
+          "titleSlug": "shortest-palindrome",
+          "title": "Shortest Palindrome",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "palindrome-pairs",
+          "title": "Palindrome Pairs",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "longest-palindromic-subsequence",
+          "title": "Longest Palindromic Subsequence",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "palindromic-substrings",
+          "title": "Palindromic Substrings",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "maximum-number-of-non-overlapping-palindrome-substrings",
+          "title": "Maximum Number of Non-overlapping Palindrome Substrings",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "conflictPending": true,
+      "conflictCandidates": [
+        {
+          "id": "lc-longest-palindromic-substring::2152790022",
+          "code": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = isPalindrome(s, i, i);\n            int even = isPalindrome(s, i, i+1);\n            int maxLen = Math.max(odd, even);\n            if(maxLen > (end - start)){\n                start = i - (maxLen-1)/2;\n                end = i + maxLen/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int isPalindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        } \n        return r-l-1;\n    }\n}",
+          "lang": {
+            "name": "Java",
+            "ext": "java",
+            "slug": "java"
+          },
+          "runtime": "14 ms",
+          "memory": "43.3 MB",
+          "runtimePct": 93.1986,
+          "memoryPct": 94.88770000000002,
+          "timestamp": 1790324773000,
+          "submissionId": 2152790022
+        },
+        {
+          "id": "lc-longest-palindromic-substring::2155197334",
+          "code": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = isPalindrome(s, i, i);\n            int even = isPalindrome(s, i, i+1);\n            int max = Math.max(even, odd);\n            if(max > (end - start)){\n                start = i - (max - 1)/2;\n                end = i + max/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int isPalindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        }\n        return r-l-1;\n    }\n}",
+          "lang": {
+            "name": "Java",
+            "ext": "java",
+            "slug": "java"
+          },
+          "runtime": "14 ms",
+          "memory": "43.5 MB",
+          "runtimePct": 93.1986,
+          "memoryPct": 70.51630000000003,
+          "timestamp": 1790529173000,
+          "submissionId": 2155197334
+        },
+        {
+          "id": "lc-longest-palindromic-substring::2158261343",
+          "code": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = palindrome(s, i, i);\n            int even = palindrome(s, i, i+1);\n            int max = Math.max(odd, even);\n            if(max > (end - start)){\n                start = i - (max-1)/2;\n                end = i + max/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int palindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        }\n        return r-l-1;\n    }\n}",
+          "lang": {
+            "name": "Java",
+            "ext": "java",
+            "slug": "java"
+          },
+          "runtime": "14 ms",
+          "memory": "43.4 MB",
+          "runtimePct": 93.1986,
+          "memoryPct": 80.45790000000002,
+          "timestamp": 1790779292000,
+          "submissionId": 2158261343
+        }
+      ],
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 5,
+            "platform": "leetcode",
+            "slug": "longest-palindromic-substring"
+          }
+        ],
+        "canonicalId": "longest-palindromic-substring",
+        "canonicalTitle": "Longest Palindromic Substring",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "expand-around-center",
+        "tags": [
+          "string"
+        ],
+        "topic": "dynamic-programming",
+        "voteCount": 97
+      }
+    },
+    {
+      "id": "lc-longest-palindromic-substring::2152790022",
+      "submissionId": 2152790022,
+      "platform": "leetcode",
+      "title": "Longest Palindromic Substring",
+      "titleSlug": "longest-palindromic-substring",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "String",
+        "Two Pointers",
+        "Dynamic Programming",
+        "Manacher"
+      ],
+      "topic": "Dynamic Programming",
+      "code": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = isPalindrome(s, i, i);\n            int even = isPalindrome(s, i, i+1);\n            int maxLen = Math.max(odd, even);\n            if(maxLen > (end - start)){\n                start = i - (maxLen-1)/2;\n                end = i + maxLen/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int isPalindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        } \n        return r-l-1;\n    }\n}",
+      "readmeContent": "# Longest Palindromic Substring\n\n**Difficulty:** Medium  |  **Acceptance:** 38.8%\n\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n\n## Problem\n\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n\n## My Submission\n\n- Runtime: 14 ms\n- Memory: 43.3 MB\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
+      "files": [
+        {
+          "path": "problems/lc-longest-palindromic-substring/lc-longest-palindromic-substring.java",
+          "content": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = isPalindrome(s, i, i);\n            int even = isPalindrome(s, i, i+1);\n            int maxLen = Math.max(odd, even);\n            if(maxLen > (end - start)){\n                start = i - (maxLen-1)/2;\n                end = i + maxLen/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int isPalindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        } \n        return r-l-1;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-longest-palindromic-substring/README.md",
+          "content": "# Longest Palindromic Substring\n\n**Difficulty:** Medium  |  **Acceptance:** 38.8%\n\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n\n## Problem\n\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n\n## My Submission\n\n- Runtime: 14 ms\n- Memory: 43.3 MB\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
+        }
+      ],
+      "timestamp": 1790324773000,
+      "runtime": "14 ms",
+      "memory": "43.3 MB",
+      "runtimePct": 93.1986,
+      "memoryPct": 94.88770000000002,
+      "problemStatement": "<p>Given a string <code>s</code>, return <em>the longest</em> <span data-keyword=\"palindromic-string\"><em>palindromic</em></span> <span data-keyword=\"substring-nonempty\"><em>substring</em></span> in <code>s</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;babad&quot;\n<strong>Output:</strong> &quot;bab&quot;\n<strong>Explanation:</strong> &quot;aba&quot; is also a valid answer.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;cbbd&quot;\n<strong>Output:</strong> &quot;bb&quot;\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 1000</code></li>\n\t<li><code>s</code> consist of only digits and English letters.</li>\n</ul>\n",
+      "hints": [
+        "How can we reuse a previously computed palindrome to compute a larger palindrome?",
+        "If “aba” is a palindrome, is “xabax” a palindrome? Similarly is “xabay” a palindrome?",
+        "Complexity based hint:</br>\r\nIf we use brute-force and check whether for every start and end position a substring is a palindrome we have O(n^2) start - end pairs and O(n) palindromic checks. Can we reduce the time for palindromic checks to O(1) by reusing some previous computation."
+      ],
+      "acRate": 38.823306531032394,
+      "similar": [
+        {
+          "difficulty": "Hard",
+          "titleSlug": "shortest-palindrome",
+          "title": "Shortest Palindrome",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "palindrome-pairs",
+          "title": "Palindrome Pairs",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "longest-palindromic-subsequence",
+          "title": "Longest Palindromic Subsequence",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "palindromic-substrings",
+          "title": "Palindromic Substrings",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "maximum-number-of-non-overlapping-palindrome-substrings",
+          "title": "Maximum Number of Non-overlapping Palindrome Substrings",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "isDuplicate": true,
+      "duplicateOf": "lc-longest-palindromic-substring::2152761012",
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 5,
+            "platform": "leetcode",
+            "slug": "longest-palindromic-substring"
+          }
+        ],
+        "canonicalId": "longest-palindromic-substring",
+        "canonicalTitle": "Longest Palindromic Substring",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "expand-around-center",
+        "tags": [
+          "string"
+        ],
+        "topic": "dynamic-programming",
+        "voteCount": 97
+      }
+    },
+    {
+      "id": "lc-longest-palindromic-substring::2155197334",
+      "submissionId": 2155197334,
+      "platform": "leetcode",
+      "title": "Longest Palindromic Substring",
+      "titleSlug": "longest-palindromic-substring",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "String",
+        "Two Pointers",
+        "Dynamic Programming",
+        "Manacher"
+      ],
+      "topic": "Dynamic Programming",
+      "code": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = isPalindrome(s, i, i);\n            int even = isPalindrome(s, i, i+1);\n            int max = Math.max(even, odd);\n            if(max > (end - start)){\n                start = i - (max - 1)/2;\n                end = i + max/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int isPalindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        }\n        return r-l-1;\n    }\n}",
+      "readmeContent": "# Longest Palindromic Substring\n\n**Difficulty:** Medium  |  **Acceptance:** 38.8%\n\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n\n## Problem\n\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n\n## My Submission\n\n- Runtime: 14 ms\n- Memory: 43.5 MB\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
+      "files": [
+        {
+          "path": "problems/lc-longest-palindromic-substring/lc-longest-palindromic-substring.java",
+          "content": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = isPalindrome(s, i, i);\n            int even = isPalindrome(s, i, i+1);\n            int max = Math.max(even, odd);\n            if(max > (end - start)){\n                start = i - (max - 1)/2;\n                end = i + max/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int isPalindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        }\n        return r-l-1;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-longest-palindromic-substring/README.md",
+          "content": "# Longest Palindromic Substring\n\n**Difficulty:** Medium  |  **Acceptance:** 38.8%\n\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n\n## Problem\n\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n\n## My Submission\n\n- Runtime: 14 ms\n- Memory: 43.5 MB\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
+        }
+      ],
+      "timestamp": 1790529173000,
+      "runtime": "14 ms",
+      "memory": "43.5 MB",
+      "runtimePct": 93.1986,
+      "memoryPct": 70.51630000000003,
+      "problemStatement": "<p>Given a string <code>s</code>, return <em>the longest</em> <span data-keyword=\"palindromic-string\"><em>palindromic</em></span> <span data-keyword=\"substring-nonempty\"><em>substring</em></span> in <code>s</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;babad&quot;\n<strong>Output:</strong> &quot;bab&quot;\n<strong>Explanation:</strong> &quot;aba&quot; is also a valid answer.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;cbbd&quot;\n<strong>Output:</strong> &quot;bb&quot;\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 1000</code></li>\n\t<li><code>s</code> consist of only digits and English letters.</li>\n</ul>\n",
+      "hints": [
+        "How can we reuse a previously computed palindrome to compute a larger palindrome?",
+        "If “aba” is a palindrome, is “xabax” a palindrome? Similarly is “xabay” a palindrome?",
+        "Complexity based hint:</br>\r\nIf we use brute-force and check whether for every start and end position a substring is a palindrome we have O(n^2) start - end pairs and O(n) palindromic checks. Can we reduce the time for palindromic checks to O(1) by reusing some previous computation."
+      ],
+      "acRate": 38.823306531032394,
+      "similar": [
+        {
+          "difficulty": "Hard",
+          "titleSlug": "shortest-palindrome",
+          "title": "Shortest Palindrome",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "palindrome-pairs",
+          "title": "Palindrome Pairs",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "longest-palindromic-subsequence",
+          "title": "Longest Palindromic Subsequence",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "palindromic-substrings",
+          "title": "Palindromic Substrings",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "maximum-number-of-non-overlapping-palindrome-substrings",
+          "title": "Maximum Number of Non-overlapping Palindrome Substrings",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "isDuplicate": true,
+      "duplicateOf": "lc-longest-palindromic-substring::2152761012",
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 5,
+            "platform": "leetcode",
+            "slug": "longest-palindromic-substring"
+          }
+        ],
+        "canonicalId": "longest-palindromic-substring",
+        "canonicalTitle": "Longest Palindromic Substring",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "expand-around-center",
+        "tags": [
+          "string"
+        ],
+        "topic": "dynamic-programming",
+        "voteCount": 97
+      }
+    },
+    {
+      "id": "lc-find-all-anagrams-in-a-string::2155641276",
+      "submissionId": 2155641276,
+      "platform": "leetcode",
+      "title": "Find All Anagrams in a String",
+      "titleSlug": "find-all-anagrams-in-a-string",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Hash Table",
+        "String",
+        "Sliding Window"
+      ],
+      "topic": "Hash Table",
+      "code": "class Solution {\n    public List<Integer> findAnagrams(String s, String p) {\n        List<Integer> res = new ArrayList<>();\n        int n = s.length();\n        int k = p.length();\n        int[] kCount = new int[26];\n        for(char c : p.toCharArray()){\n            kCount[c - 'a']++;\n        }\n        for(int i=0; i<=n-k; i++){\n            int[] sCount = new int[26];\n            for(int j=i; j<i+k; j++){\n                sCount[s.charAt(j) - 'a']++;\n            }\n            if(Arrays.equals(sCount, kCount)) res.add(i);\n        }\n        return res;\n    }\n}",
+      "readmeContent": "# Find All Anagrams in a String\n\n**Difficulty:** Medium  |  **Acceptance:** 54.7%\n\n**Tags:** `Hash Table`, `String`, `Sliding Window`\n\n## Problem\n\nGiven two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order.\n\n&nbsp;\nExample 1:\n\nInput: s = \"cbaebabacd\", p = \"abc\"\nOutput: [0,6]\nExplanation:\nThe substring with start index = 0 is \"cba\", which is an anagram of \"abc\".\nThe substring with start index = 6 is \"bac\", which is an anagram of \"abc\".\n\nExample 2:\n\nInput: s = \"abab\", p = \"ab\"\nOutput: [0,1,2]\nExplanation:\nThe substring with start index = 0 is \"ab\", which is an anagram of \"ab\".\nThe substring with start index = 1 is \"ba\", which is an anagram of \"ab\".\nThe substring with start index = 2 is \"ab\", which is an anagram of \"ab\".\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length, p.length <= 3 * 104\n\ts and p consist of lowercase English letters.\n\n## My Submission\n\n- Runtime: 359 ms\n- Memory: 47.3 MB\n\n## Similar Problems\n\n- [Valid Anagram](https://leetcode.com/problems/valid-anagram/) — Easy\n- [Permutation in String](https://leetcode.com/problems/permutation-in-string/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-find-all-anagrams-in-a-string/lc-find-all-anagrams-in-a-string.java",
+          "content": "class Solution {\n    public List<Integer> findAnagrams(String s, String p) {\n        List<Integer> res = new ArrayList<>();\n        int n = s.length();\n        int k = p.length();\n        int[] kCount = new int[26];\n        for(char c : p.toCharArray()){\n            kCount[c - 'a']++;\n        }\n        for(int i=0; i<=n-k; i++){\n            int[] sCount = new int[26];\n            for(int j=i; j<i+k; j++){\n                sCount[s.charAt(j) - 'a']++;\n            }\n            if(Arrays.equals(sCount, kCount)) res.add(i);\n        }\n        return res;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-find-all-anagrams-in-a-string/README.md",
+          "content": "# Find All Anagrams in a String\n\n**Difficulty:** Medium  |  **Acceptance:** 54.7%\n\n**Tags:** `Hash Table`, `String`, `Sliding Window`\n\n## Problem\n\nGiven two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order.\n\n&nbsp;\nExample 1:\n\nInput: s = \"cbaebabacd\", p = \"abc\"\nOutput: [0,6]\nExplanation:\nThe substring with start index = 0 is \"cba\", which is an anagram of \"abc\".\nThe substring with start index = 6 is \"bac\", which is an anagram of \"abc\".\n\nExample 2:\n\nInput: s = \"abab\", p = \"ab\"\nOutput: [0,1,2]\nExplanation:\nThe substring with start index = 0 is \"ab\", which is an anagram of \"ab\".\nThe substring with start index = 1 is \"ba\", which is an anagram of \"ab\".\nThe substring with start index = 2 is \"ab\", which is an anagram of \"ab\".\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length, p.length <= 3 * 104\n\ts and p consist of lowercase English letters.\n\n## My Submission\n\n- Runtime: 359 ms\n- Memory: 47.3 MB\n\n## Similar Problems\n\n- [Valid Anagram](https://leetcode.com/problems/valid-anagram/) — Easy\n- [Permutation in String](https://leetcode.com/problems/permutation-in-string/) — Medium\n"
+        }
+      ],
+      "timestamp": 1790575925000,
+      "runtime": "359 ms",
+      "memory": "47.3 MB",
+      "runtimePct": 11.50430000000003,
+      "memoryPct": 26.90329999999995,
+      "problemStatement": "<p>Given two strings <code>s</code> and <code>p</code>, return an array of all the start indices of <code>p</code>&#39;s <span data-keyword=\"anagram\">anagrams</span> in <code>s</code>. You may return the answer in <strong>any order</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;cbaebabacd&quot;, p = &quot;abc&quot;\n<strong>Output:</strong> [0,6]\n<strong>Explanation:</strong>\nThe substring with start index = 0 is &quot;cba&quot;, which is an anagram of &quot;abc&quot;.\nThe substring with start index = 6 is &quot;bac&quot;, which is an anagram of &quot;abc&quot;.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;abab&quot;, p = &quot;ab&quot;\n<strong>Output:</strong> [0,1,2]\n<strong>Explanation:</strong>\nThe substring with start index = 0 is &quot;ab&quot;, which is an anagram of &quot;ab&quot;.\nThe substring with start index = 1 is &quot;ba&quot;, which is an anagram of &quot;ab&quot;.\nThe substring with start index = 2 is &quot;ab&quot;, which is an anagram of &quot;ab&quot;.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length, p.length &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li><code>s</code> and <code>p</code> consist of lowercase English letters.</li>\n</ul>\n",
+      "hints": null,
+      "acRate": 54.66347298830211,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "valid-anagram",
+          "title": "Valid Anagram",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "permutation-in-string",
+          "title": "Permutation in String",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-longest-substring-without-repeating-characters::2156217851",
+      "submissionId": 2156217851,
+      "platform": "leetcode",
+      "title": "Longest Substring Without Repeating Characters",
+      "titleSlug": "longest-substring-without-repeating-characters",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "String",
+        "Hash Table",
+        "Sliding Window"
+      ],
+      "topic": "Sliding Window",
+      "code": "class Solution {\n    public int lengthOfLongestSubstring(String s) {\n        Set<Character> set = new HashSet<>();\n        int l = 0;\n        int maxLen = 0;\n        for (int r = 0; r < s.length(); r++) {\n            while(set.contains(s.charAt(r))){\n                set.remove(s.charAt(l));\n                l++;\n            }\n            set.add(s.charAt(r));\n            maxLen = Math.max(maxLen, r-l+1);\n        }\n        return maxLen;\n    }\n}",
+      "readmeContent": "# Longest Substring Without Repeating Characters\n\n**Difficulty:** Medium  |  **Acceptance:** 40.0%\n\n**Tags:** `Hash Table`, `String`, `Sliding Window`\n\n## Problem\n\nGiven a string s, find the length of the longest substring without duplicate characters.\n\n&nbsp;\nExample 1:\n\nInput: s = \"abcabcbb\"\nOutput: 3\nExplanation: The answer is \"abc\", with the length of 3. Note that \"bca\" and \"cab\" are also correct answers.\n\nExample 2:\n\nInput: s = \"bbbbb\"\nOutput: 1\nExplanation: The answer is \"b\", with the length of 1.\n\nExample 3:\n\nInput: s = \"pwwkew\"\nOutput: 3\nExplanation: The answer is \"wke\", with the length of 3.\nNotice that the answer must be a substring, \"pwke\" is a subsequence and not a substring.\n\n&nbsp;\nConstraints:\n\n\t0 <= s.length <= 105\n\ts consists of English letters, digits, symbols and spaces.\n\n## My Submission\n\n- Runtime: 65 ms\n- Memory: 47.8 MB\n\n## Similar Problems\n\n- [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/) — Hard\n- [Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value/) — Medium\n- [Minimum Consecutive Cards to Pick Up](https://leetcode.com/problems/minimum-consecutive-cards-to-pick-up/) — Medium\n- [Longest Nice Subarray](https://leetcode.com/problems/longest-nice-subarray/) — Medium\n- [Optimal Partition of String](https://leetcode.com/problems/optimal-partition-of-string/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-longest-substring-without-repeating-characters/lc-longest-substring-without-repeating-characters.java",
+          "content": "class Solution {\n    public int lengthOfLongestSubstring(String s) {\n        Set<Character> set = new HashSet<>();\n        int l = 0;\n        int maxLen = 0;\n        for (int r = 0; r < s.length(); r++) {\n            while(set.contains(s.charAt(r))){\n                set.remove(s.charAt(l));\n                l++;\n            }\n            set.add(s.charAt(r));\n            maxLen = Math.max(maxLen, r-l+1);\n        }\n        return maxLen;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-longest-substring-without-repeating-characters/README.md",
+          "content": "# Longest Substring Without Repeating Characters\n\n**Difficulty:** Medium  |  **Acceptance:** 40.0%\n\n**Tags:** `Hash Table`, `String`, `Sliding Window`\n\n## Problem\n\nGiven a string s, find the length of the longest substring without duplicate characters.\n\n&nbsp;\nExample 1:\n\nInput: s = \"abcabcbb\"\nOutput: 3\nExplanation: The answer is \"abc\", with the length of 3. Note that \"bca\" and \"cab\" are also correct answers.\n\nExample 2:\n\nInput: s = \"bbbbb\"\nOutput: 1\nExplanation: The answer is \"b\", with the length of 1.\n\nExample 3:\n\nInput: s = \"pwwkew\"\nOutput: 3\nExplanation: The answer is \"wke\", with the length of 3.\nNotice that the answer must be a substring, \"pwke\" is a subsequence and not a substring.\n\n&nbsp;\nConstraints:\n\n\t0 <= s.length <= 105\n\ts consists of English letters, digits, symbols and spaces.\n\n## My Submission\n\n- Runtime: 65 ms\n- Memory: 47.8 MB\n\n## Similar Problems\n\n- [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/) — Hard\n- [Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value/) — Medium\n- [Minimum Consecutive Cards to Pick Up](https://leetcode.com/problems/minimum-consecutive-cards-to-pick-up/) — Medium\n- [Longest Nice Subarray](https://leetcode.com/problems/longest-nice-subarray/) — Medium\n- [Optimal Partition of String](https://leetcode.com/problems/optimal-partition-of-string/) — Medium\n"
+        }
+      ],
+      "timestamp": 1790613697000,
+      "runtime": "65 ms",
+      "memory": "47.8 MB",
+      "runtimePct": 51.75710000000006,
+      "memoryPct": 76.98910000000001,
+      "problemStatement": "<p>Given a string <code>s</code>, find the length of the <strong>longest</strong> <span data-keyword=\"substring-nonempty\"><strong>substring</strong></span> without duplicate characters.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;abcabcbb&quot;\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The answer is &quot;abc&quot;, with the length of 3. Note that <code>&quot;bca&quot;</code> and <code>&quot;cab&quot;</code> are also correct answers.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;bbbbb&quot;\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> The answer is &quot;b&quot;, with the length of 1.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;pwwkew&quot;\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The answer is &quot;wke&quot;, with the length of 3.\nNotice that the answer must be a substring, &quot;pwke&quot; is a subsequence and not a substring.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= s.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>s</code> consists of English letters, digits, symbols and spaces.</li>\n</ul>\n",
+      "hints": [
+        "There are less than 100 unique characters. We can check all substrings with length at most 100 for example. This is a good enough approximation."
+      ],
+      "acRate": 39.97417968192594,
+      "similar": [
+        {
+          "difficulty": "Hard",
+          "titleSlug": "subarrays-with-k-different-integers",
+          "title": "Subarrays with K Different Integers",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-erasure-value",
+          "title": "Maximum Erasure Value",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "minimum-consecutive-cards-to-pick-up",
+          "title": "Minimum Consecutive Cards to Pick Up",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "longest-nice-subarray",
+          "title": "Longest Nice Subarray",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "optimal-partition-of-string",
+          "title": "Optimal Partition of String",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "count-complete-subarrays-in-an-array",
+          "title": "Count Complete Subarrays in an Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-longest-special-substring-that-occurs-thrice-ii",
+          "title": "Find Longest Special Substring That Occurs Thrice II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-longest-special-substring-that-occurs-thrice-i",
+          "title": "Find Longest Special Substring That Occurs Thrice I",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "isDuplicate": true,
+      "duplicateOf": "lc-longest-substring-without-repeating-characters::2128482314",
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 3,
+            "platform": "leetcode",
+            "slug": "longest-substring-without-repeating-characters"
+          }
+        ],
+        "canonicalId": "longest-substring-without-repeating-characters",
+        "canonicalTitle": "Longest Substring Without Repeating Characters",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "sliding-window",
+        "tags": [
+          "string",
+          "hash-table"
+        ],
+        "topic": "sliding-window",
+        "voteCount": 97
+      }
+    },
+    {
+      "id": "lc-permutation-in-string::2157785433",
+      "submissionId": 2157785433,
+      "platform": "leetcode",
+      "title": "Permutation in String",
+      "titleSlug": "permutation-in-string",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "String",
+        "Hash Table",
+        "Two Pointers",
+        "Sliding Window"
+      ],
+      "topic": "Sliding Window",
+      "code": "class Solution {\n    public boolean checkInclusion(String s1, String s2) {\n        if(s1.length() > s2.length()) return false;\n\n        int[] freq1 = new int[26];\n        for(char ch : s1.toCharArray()){\n            freq1[ch - 'a']++;\n        }\n\n        int[] freq2 = new int[26];\n        int l = 0;\n        for(int r=0; r<s2.length(); r++){\n            freq2[s2.charAt(r) - 'a']++;\n\n            while(r-l+1 > s1.length()){\n                freq2[s2.charAt(l) - 'a']--;\n                l++;\n            }\n\n            if(Arrays.equals(freq1, freq2)) return true;\n        }\n        return false;\n    }\n}",
+      "readmeContent": "# Permutation in String\n\n**Difficulty:** Medium  |  **Acceptance:** 49.9%\n\n**Tags:** `Hash Table`, `Two Pointers`, `String`, `Sliding Window`\n\n## Problem\n\nGiven two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise.\n\nIn other words, return true if one of s1's permutations is the substring of s2.\n\n&nbsp;\nExample 1:\n\nInput: s1 = \"ab\", s2 = \"eidbaooo\"\nOutput: true\nExplanation: s2 contains one permutation of s1 (\"ba\").\n\nExample 2:\n\nInput: s1 = \"ab\", s2 = \"eidboaoo\"\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s1.length, s2.length <= 104\n\ts1 and s2 consist of lowercase English letters.\n\n## My Submission\n\n- Runtime: 5 ms\n- Memory: 44.3 MB\n\n## Similar Problems\n\n- [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) — Hard\n- [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-permutation-in-string/lc-permutation-in-string.java",
+          "content": "class Solution {\n    public boolean checkInclusion(String s1, String s2) {\n        if(s1.length() > s2.length()) return false;\n\n        int[] freq1 = new int[26];\n        for(char ch : s1.toCharArray()){\n            freq1[ch - 'a']++;\n        }\n\n        int[] freq2 = new int[26];\n        int l = 0;\n        for(int r=0; r<s2.length(); r++){\n            freq2[s2.charAt(r) - 'a']++;\n\n            while(r-l+1 > s1.length()){\n                freq2[s2.charAt(l) - 'a']--;\n                l++;\n            }\n\n            if(Arrays.equals(freq1, freq2)) return true;\n        }\n        return false;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-permutation-in-string/README.md",
+          "content": "# Permutation in String\n\n**Difficulty:** Medium  |  **Acceptance:** 49.9%\n\n**Tags:** `Hash Table`, `Two Pointers`, `String`, `Sliding Window`\n\n## Problem\n\nGiven two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise.\n\nIn other words, return true if one of s1's permutations is the substring of s2.\n\n&nbsp;\nExample 1:\n\nInput: s1 = \"ab\", s2 = \"eidbaooo\"\nOutput: true\nExplanation: s2 contains one permutation of s1 (\"ba\").\n\nExample 2:\n\nInput: s1 = \"ab\", s2 = \"eidboaoo\"\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s1.length, s2.length <= 104\n\ts1 and s2 consist of lowercase English letters.\n\n## My Submission\n\n- Runtime: 5 ms\n- Memory: 44.3 MB\n\n## Similar Problems\n\n- [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) — Hard\n- [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) — Medium\n"
+        }
+      ],
+      "timestamp": 1790744346000,
+      "runtime": "5 ms",
+      "memory": "44.3 MB",
+      "runtimePct": 97.44700000000002,
+      "memoryPct": 38.790200000000006,
+      "problemStatement": "<p>Given two strings <code>s1</code> and <code>s2</code>, return <code>true</code> if <code>s2</code> contains a <span data-keyword=\"permutation-string\">permutation</span> of <code>s1</code>, or <code>false</code> otherwise.</p>\n\n<p>In other words, return <code>true</code> if one of <code>s1</code>&#39;s permutations is the substring of <code>s2</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s1 = &quot;ab&quot;, s2 = &quot;eidbaooo&quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> s2 contains one permutation of s1 (&quot;ba&quot;).\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s1 = &quot;ab&quot;, s2 = &quot;eidboaoo&quot;\n<strong>Output:</strong> false\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s1.length, s2.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>s1</code> and <code>s2</code> consist of lowercase English letters.</li>\n</ul>\n",
+      "hints": [
+        "Obviously, brute force will result in TLE. Think of something else.",
+        "How will you check whether one string is a permutation of another string?",
+        "One way is to sort the string and then compare. But, Is there a better way?",
+        "If one string is a permutation of another string then they must have one common metric. What is that?",
+        "Both strings must have same character frequencies, if  one is permutation of another. Which data structure should be used to store frequencies?",
+        "What about hash table?  An array of size 26?"
+      ],
+      "acRate": 49.883154373692165,
+      "similar": [
+        {
+          "difficulty": "Hard",
+          "titleSlug": "minimum-window-substring",
+          "title": "Minimum Window Substring",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-all-anagrams-in-a-string",
+          "title": "Find All Anagrams in a String",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 567,
+            "platform": "leetcode",
+            "slug": "permutation-in-string"
+          }
+        ],
+        "canonicalId": "permutation-in-string",
+        "canonicalTitle": "Permutation in String",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "sliding-window",
+        "tags": [
+          "string"
+        ],
+        "topic": "sliding-window",
+        "voteCount": 93
+      }
+    },
+    {
+      "id": "lc-longest-palindromic-substring::2158261343",
+      "submissionId": 2158261343,
+      "platform": "leetcode",
+      "title": "Longest Palindromic Substring",
+      "titleSlug": "longest-palindromic-substring",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "String",
+        "Two Pointers",
+        "Dynamic Programming",
+        "Manacher"
+      ],
+      "topic": "Dynamic Programming",
+      "code": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = palindrome(s, i, i);\n            int even = palindrome(s, i, i+1);\n            int max = Math.max(odd, even);\n            if(max > (end - start)){\n                start = i - (max-1)/2;\n                end = i + max/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int palindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        }\n        return r-l-1;\n    }\n}",
+      "readmeContent": "# Longest Palindromic Substring\n\n**Difficulty:** Medium  |  **Acceptance:** 38.8%\n\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n\n## Problem\n\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n\n## My Submission\n\n- Runtime: 14 ms\n- Memory: 43.4 MB\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
+      "files": [
+        {
+          "path": "problems/lc-longest-palindromic-substring/lc-longest-palindromic-substring.java",
+          "content": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = palindrome(s, i, i);\n            int even = palindrome(s, i, i+1);\n            int max = Math.max(odd, even);\n            if(max > (end - start)){\n                start = i - (max-1)/2;\n                end = i + max/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int palindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        }\n        return r-l-1;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-longest-palindromic-substring/README.md",
+          "content": "# Longest Palindromic Substring\n\n**Difficulty:** Medium  |  **Acceptance:** 38.8%\n\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n\n## Problem\n\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n\n## My Submission\n\n- Runtime: 14 ms\n- Memory: 43.4 MB\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
+        }
+      ],
+      "timestamp": 1790779292000,
+      "runtime": "14 ms",
+      "memory": "43.4 MB",
+      "runtimePct": 93.1986,
+      "memoryPct": 80.45790000000002,
+      "problemStatement": "<p>Given a string <code>s</code>, return <em>the longest</em> <span data-keyword=\"palindromic-string\"><em>palindromic</em></span> <span data-keyword=\"substring-nonempty\"><em>substring</em></span> in <code>s</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;babad&quot;\n<strong>Output:</strong> &quot;bab&quot;\n<strong>Explanation:</strong> &quot;aba&quot; is also a valid answer.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;cbbd&quot;\n<strong>Output:</strong> &quot;bb&quot;\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 1000</code></li>\n\t<li><code>s</code> consist of only digits and English letters.</li>\n</ul>\n",
+      "hints": [
+        "How can we reuse a previously computed palindrome to compute a larger palindrome?",
+        "If “aba” is a palindrome, is “xabax” a palindrome? Similarly is “xabay” a palindrome?",
+        "Complexity based hint:</br>\r\nIf we use brute-force and check whether for every start and end position a substring is a palindrome we have O(n^2) start - end pairs and O(n) palindromic checks. Can we reduce the time for palindromic checks to O(1) by reusing some previous computation."
+      ],
+      "acRate": 38.823306531032394,
+      "similar": [
+        {
+          "difficulty": "Hard",
+          "titleSlug": "shortest-palindrome",
+          "title": "Shortest Palindrome",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "palindrome-pairs",
+          "title": "Palindrome Pairs",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "longest-palindromic-subsequence",
+          "title": "Longest Palindromic Subsequence",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "palindromic-substrings",
+          "title": "Palindromic Substrings",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "maximum-number-of-non-overlapping-palindrome-substrings",
+          "title": "Maximum Number of Non-overlapping Palindrome Substrings",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "isDuplicate": true,
+      "duplicateOf": "lc-longest-palindromic-substring::2152761012",
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 5,
+            "platform": "leetcode",
+            "slug": "longest-palindromic-substring"
+          }
+        ],
+        "canonicalId": "longest-palindromic-substring",
+        "canonicalTitle": "Longest Palindromic Substring",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "expand-around-center",
+        "tags": [
+          "string"
+        ],
+        "topic": "dynamic-programming",
+        "voteCount": 97
+      }
+    },
+    {
+      "id": "lc-binary-search::2158446952",
+      "submissionId": 2158446952,
+      "platform": "leetcode",
+      "title": "Binary Search",
+      "titleSlug": "binary-search",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "topic": "Binary Search",
+      "code": "class Solution {\n    public int search(int[] nums, int target) {\n        int l = 0;\n        int r = nums.length-1;\n        while(l <= r){\n            int m = (l+r)/2;\n            if(nums[m] == target){\n                return m;\n            }\n            else if(nums[m] < target){\n                l = m + 1;\n            }\n            else{\n                r = m - 1;\n            }\n        }\n        return -1;\n    }\n}",
+      "readmeContent": "# Binary Search\n\n**Difficulty:** Easy  |  **Acceptance:** 61.4%\n\n**Tags:** `Array`, `Binary Search`\n\n## Problem\n\nGiven an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.\n\nYou must write an algorithm with O(log n) runtime complexity.\n\n&nbsp;\nExample 1:\n\nInput: nums = [-1,0,3,5,9,12], target = 9\nOutput: 4\nExplanation: 9 exists in nums and its index is 4\n\nExample 2:\n\nInput: nums = [-1,0,3,5,9,12], target = 2\nOutput: -1\nExplanation: 2 does not exist in nums so return -1\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 104\n\t-104 < nums[i], target < 104\n\tAll the integers in nums are unique.\n\tnums is sorted in ascending order.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 48.2 MB\n\n## Similar Problems\n\n- [Maximum Count of Positive Integer and Negative Integer](https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-binary-search/lc-binary-search.java",
+          "content": "class Solution {\n    public int search(int[] nums, int target) {\n        int l = 0;\n        int r = nums.length-1;\n        while(l <= r){\n            int m = (l+r)/2;\n            if(nums[m] == target){\n                return m;\n            }\n            else if(nums[m] < target){\n                l = m + 1;\n            }\n            else{\n                r = m - 1;\n            }\n        }\n        return -1;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-binary-search/README.md",
+          "content": "# Binary Search\n\n**Difficulty:** Easy  |  **Acceptance:** 61.4%\n\n**Tags:** `Array`, `Binary Search`\n\n## Problem\n\nGiven an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.\n\nYou must write an algorithm with O(log n) runtime complexity.\n\n&nbsp;\nExample 1:\n\nInput: nums = [-1,0,3,5,9,12], target = 9\nOutput: 4\nExplanation: 9 exists in nums and its index is 4\n\nExample 2:\n\nInput: nums = [-1,0,3,5,9,12], target = 2\nOutput: -1\nExplanation: 2 does not exist in nums so return -1\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 104\n\t-104 < nums[i], target < 104\n\tAll the integers in nums are unique.\n\tnums is sorted in ascending order.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 48.2 MB\n\n## Similar Problems\n\n- [Maximum Count of Positive Integer and Negative Integer](https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/) — Easy\n"
+        }
+      ],
+      "timestamp": 1790789994000,
+      "runtime": "0 ms",
+      "memory": "48.2 MB",
+      "runtimePct": 100,
+      "memoryPct": 68.65719999999993,
+      "problemStatement": "<p>Given an array of integers <code>nums</code> which is sorted in ascending order, and an integer <code>target</code>, write a function to search <code>target</code> in <code>nums</code>. If <code>target</code> exists, then return its index. Otherwise, return <code>-1</code>.</p>\n\n<p>You must write an algorithm with <code>O(log n)</code> runtime complexity.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-1,0,3,5,9,12], target = 9\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> 9 exists in nums and its index is 4\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-1,0,3,5,9,12], target = 2\n<strong>Output:</strong> -1\n<strong>Explanation:</strong> 2 does not exist in nums so return -1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-10<sup>4</sup> &lt; nums[i], target &lt; 10<sup>4</sup></code></li>\n\t<li>All the integers in <code>nums</code> are <strong>unique</strong>.</li>\n\t<li><code>nums</code> is sorted in ascending order.</li>\n</ul>\n",
+      "hints": null,
+      "acRate": 61.41475787330517,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "maximum-count-of-positive-integer-and-negative-integer",
+          "title": "Maximum Count of Positive Integer and Negative Integer",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "isDuplicate": true,
+      "duplicateOf": "lc-binary-search::1998238818",
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 704,
+            "platform": "leetcode",
+            "slug": "binary-search"
+          }
+        ],
+        "canonicalId": "binary-search",
+        "canonicalTitle": "Binary Search",
+        "confirmedBy": "system-init",
+        "difficulty": "easy",
+        "pattern": "binary-search",
+        "tags": [
+          "array"
+        ],
+        "topic": "binary-search",
+        "voteCount": 90
+      }
+    },
+    {
+      "id": "lc-sqrtx::2158800022",
+      "submissionId": 2158800022,
+      "platform": "leetcode",
+      "title": "Sqrt(x)",
+      "titleSlug": "sqrtx",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Math",
+        "Binary Search",
+        "Newton's Method"
+      ],
+      "topic": "Math",
+      "code": "class Solution {\n    public int mySqrt(int x) {\n        long l = 1;\n        long r = x;\n        while(l <= r){\n            long m = l + (r - l) / 2;\n            if(m * m == x){\n                return (int)m;\n            }\n            else if(m*m < x){\n                l = m + 1;\n            }\n            else{\n                r = m - 1;\n            }\n        }\n        return (int)l-1;\n    }\n}",
+      "readmeContent": "# Sqrt(x)\n\n**Difficulty:** Easy  |  **Acceptance:** 42.3%\n\n**Tags:** `Math`, `Binary Search`, `Newton's Method`\n\n## Problem\n\nGiven a non-negative integer x, return the square root of x rounded down to the nearest integer. The returned integer should be non-negative as well.\n\nYou must not use any built-in exponent function or operator.\n\n\tFor example, do not use pow(x, 0.5) in c++ or x ** 0.5 in python.\n\n&nbsp;\nExample 1:\n\nInput: x = 4\nOutput: 2\nExplanation: The square root of 4 is 2, so we return 2.\n\nExample 2:\n\nInput: x = 8\nOutput: 2\nExplanation: The square root of 8 is 2.82842..., and since we round it down to the nearest integer, 2 is returned.\n\n&nbsp;\nConstraints:\n\n\t0 <= x <= 231 - 1\n\n## My Submission\n\n- Runtime: 1 ms\n- Memory: 42.6 MB\n\n## Similar Problems\n\n- [Pow(x, n)](https://leetcode.com/problems/powx-n/) — Medium\n- [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-sqrtx/lc-sqrtx.java",
+          "content": "class Solution {\n    public int mySqrt(int x) {\n        long l = 1;\n        long r = x;\n        while(l <= r){\n            long m = l + (r - l) / 2;\n            if(m * m == x){\n                return (int)m;\n            }\n            else if(m*m < x){\n                l = m + 1;\n            }\n            else{\n                r = m - 1;\n            }\n        }\n        return (int)l-1;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-sqrtx/README.md",
+          "content": "# Sqrt(x)\n\n**Difficulty:** Easy  |  **Acceptance:** 42.3%\n\n**Tags:** `Math`, `Binary Search`, `Newton's Method`\n\n## Problem\n\nGiven a non-negative integer x, return the square root of x rounded down to the nearest integer. The returned integer should be non-negative as well.\n\nYou must not use any built-in exponent function or operator.\n\n\tFor example, do not use pow(x, 0.5) in c++ or x ** 0.5 in python.\n\n&nbsp;\nExample 1:\n\nInput: x = 4\nOutput: 2\nExplanation: The square root of 4 is 2, so we return 2.\n\nExample 2:\n\nInput: x = 8\nOutput: 2\nExplanation: The square root of 8 is 2.82842..., and since we round it down to the nearest integer, 2 is returned.\n\n&nbsp;\nConstraints:\n\n\t0 <= x <= 231 - 1\n\n## My Submission\n\n- Runtime: 1 ms\n- Memory: 42.6 MB\n\n## Similar Problems\n\n- [Pow(x, n)](https://leetcode.com/problems/powx-n/) — Medium\n- [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/) — Easy\n"
+        }
+      ],
+      "timestamp": 1790829896000,
+      "runtime": "1 ms",
+      "memory": "42.6 MB",
+      "runtimePct": 100,
+      "memoryPct": 42.52580000000002,
+      "problemStatement": "<p>Given a non-negative integer <code>x</code>, return <em>the square root of </em><code>x</code><em> rounded down to the nearest integer</em>. The returned integer should be <strong>non-negative</strong> as well.</p>\n\n<p>You <strong>must not use</strong> any built-in exponent function or operator.</p>\n\n<ul>\n\t<li>For example, do not use <code>pow(x, 0.5)</code> in c++ or <code>x ** 0.5</code> in python.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 4\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> The square root of 4 is 2, so we return 2.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 8\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> The square root of 8 is 2.82842..., and since we round it down to the nearest integer, 2 is returned.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= x &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n",
+      "hints": [
+        "Try exploring all integers. (Credits: @annujoshi)",
+        "Use the sorted property of integers to reduced the search space. (Credits: @annujoshi)"
+      ],
+      "acRate": 42.34955179841077,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "powx-n",
+          "title": "Pow(x, n)",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "valid-perfect-square",
+          "title": "Valid Perfect Square",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-search-insert-position::2159846993",
+      "submissionId": 2159846993,
+      "platform": "leetcode",
+      "title": "Search Insert Position",
+      "titleSlug": "search-insert-position",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "topic": "Binary Search",
+      "code": "class Solution {\n    public int searchInsert(int[] nums, int target) {\n        int l = 0;\n        int r = nums.length-1;\n        while(l <= r){\n            int m = l + (r - l) /2;\n            if(nums[m] == target){\n                return m;\n            }\n            else if(nums[m] < target){\n                l = m + 1;\n            }\n            else{\n                r = m - 1;\n            }\n        }\n        return l;\n    }\n}",
+      "readmeContent": "# Search Insert Position\n\n**Difficulty:** Easy  |  **Acceptance:** 52.4%\n\n**Tags:** `Array`, `Binary Search`\n\n## Problem\n\nGiven a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.\n\nYou must&nbsp;write an algorithm with&nbsp;O(log n) runtime complexity.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,3,5,6], target = 5\nOutput: 2\n\nExample 2:\n\nInput: nums = [1,3,5,6], target = 2\nOutput: 1\n\nExample 3:\n\nInput: nums = [1,3,5,6], target = 7\nOutput: 4\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 104\n\t-104 <= nums[i] <= 104\n\tnums contains distinct values sorted in ascending order.\n\t-104 <= target <= 104\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 44.9 MB\n\n## Similar Problems\n\n- [First Bad Version](https://leetcode.com/problems/first-bad-version/) — Easy\n- [Minimum Operations to Exceed Threshold Value I](https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-i/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-search-insert-position/lc-search-insert-position.java",
+          "content": "class Solution {\n    public int searchInsert(int[] nums, int target) {\n        int l = 0;\n        int r = nums.length-1;\n        while(l <= r){\n            int m = l + (r - l) /2;\n            if(nums[m] == target){\n                return m;\n            }\n            else if(nums[m] < target){\n                l = m + 1;\n            }\n            else{\n                r = m - 1;\n            }\n        }\n        return l;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-search-insert-position/README.md",
+          "content": "# Search Insert Position\n\n**Difficulty:** Easy  |  **Acceptance:** 52.4%\n\n**Tags:** `Array`, `Binary Search`\n\n## Problem\n\nGiven a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.\n\nYou must&nbsp;write an algorithm with&nbsp;O(log n) runtime complexity.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,3,5,6], target = 5\nOutput: 2\n\nExample 2:\n\nInput: nums = [1,3,5,6], target = 2\nOutput: 1\n\nExample 3:\n\nInput: nums = [1,3,5,6], target = 7\nOutput: 4\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 104\n\t-104 <= nums[i] <= 104\n\tnums contains distinct values sorted in ascending order.\n\t-104 <= target <= 104\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 44.9 MB\n\n## Similar Problems\n\n- [First Bad Version](https://leetcode.com/problems/first-bad-version/) — Easy\n- [Minimum Operations to Exceed Threshold Value I](https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-i/) — Easy\n"
+        }
+      ],
+      "timestamp": 1790921635000,
+      "runtime": "0 ms",
+      "memory": "44.9 MB",
+      "runtimePct": 100,
+      "memoryPct": 12.745500000000021,
+      "problemStatement": "<p>Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.</p>\n\n<p>You must&nbsp;write an algorithm with&nbsp;<code>O(log n)</code> runtime complexity.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,3,5,6], target = 5\n<strong>Output:</strong> 2\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,3,5,6], target = 2\n<strong>Output:</strong> 1\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,3,5,6], target = 7\n<strong>Output:</strong> 4\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n\t<li><code>nums</code> contains <strong>distinct</strong> values sorted in <strong>ascending</strong> order.</li>\n\t<li><code>-10<sup>4</sup> &lt;= target &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
+      "hints": null,
+      "acRate": 52.428572401479215,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "first-bad-version",
+          "title": "First Bad Version",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "minimum-operations-to-exceed-threshold-value-i",
+          "title": "Minimum Operations to Exceed Threshold Value I",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "isDuplicate": true,
+      "duplicateOf": "lc-search-insert-position::2012882357"
+    },
+    {
+      "id": "lc-search-in-rotated-sorted-array::2159860171",
+      "submissionId": 2159860171,
+      "platform": "leetcode",
+      "title": "Search in Rotated Sorted Array",
+      "titleSlug": "search-in-rotated-sorted-array",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "topic": "Binary Search",
+      "code": "class Solution {\n    public int search(int[] nums, int target) {\n        int l = 0;\n        int r = nums.length-1;\n        while(l <= r){\n            int m = l+(r-l)/2;\n            if(nums[m] == target) return m;\n            if(nums[l] <= nums[m]){\n                if(nums[l] <= target && target <= nums[m]){\n                    r = m-1;\n                }\n                else{\n                    l = m+1;\n                }\n            }\n            if(nums[m] <= nums[r]){\n                if(nums[m] <= target && target <= nums[r]){\n                    l = m+1;\n                }\n                else{\n                    r = m-1;\n                }\n            }\n        }\n        return -1;\n    }\n}",
+      "readmeContent": "# Search in Rotated Sorted Array\n\n**Difficulty:** Medium  |  **Acceptance:** 45.8%\n\n**Tags:** `Array`, `Binary Search`\n\n## Problem\n\nThere is an integer array nums sorted in ascending order (with distinct values).\n\nPrior to being passed to your function, nums is possibly left rotated at an unknown index k (1 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,5,6,7] might be left rotated by&nbsp;3&nbsp;indices and become [4,5,6,7,0,1,2].\n\nGiven the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.\n\nYou must write an algorithm with O(log n) runtime complexity.\n\n&nbsp;\nExample 1:\nInput: nums = [4,5,6,7,0,1,2], target = 0\nOutput: 4\nExample 2:\nInput: nums = [4,5,6,7,0,1,2], target = 3\nOutput: -1\nExample 3:\nInput: nums = [1], target = 0\nOutput: -1\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 5000\n\t-104 <= nums[i] <= 104\n\tAll values of nums are unique.\n\tnums is an ascending array that is possibly rotated.\n\t-104 <= target <= 104\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 43.9 MB\n\n## Similar Problems\n\n- [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) — Medium\n- [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-search-in-rotated-sorted-array/lc-search-in-rotated-sorted-array.java",
+          "content": "class Solution {\n    public int search(int[] nums, int target) {\n        int l = 0;\n        int r = nums.length-1;\n        while(l <= r){\n            int m = l+(r-l)/2;\n            if(nums[m] == target) return m;\n            if(nums[l] <= nums[m]){\n                if(nums[l] <= target && target <= nums[m]){\n                    r = m-1;\n                }\n                else{\n                    l = m+1;\n                }\n            }\n            if(nums[m] <= nums[r]){\n                if(nums[m] <= target && target <= nums[r]){\n                    l = m+1;\n                }\n                else{\n                    r = m-1;\n                }\n            }\n        }\n        return -1;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-search-in-rotated-sorted-array/README.md",
+          "content": "# Search in Rotated Sorted Array\n\n**Difficulty:** Medium  |  **Acceptance:** 45.8%\n\n**Tags:** `Array`, `Binary Search`\n\n## Problem\n\nThere is an integer array nums sorted in ascending order (with distinct values).\n\nPrior to being passed to your function, nums is possibly left rotated at an unknown index k (1 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,5,6,7] might be left rotated by&nbsp;3&nbsp;indices and become [4,5,6,7,0,1,2].\n\nGiven the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.\n\nYou must write an algorithm with O(log n) runtime complexity.\n\n&nbsp;\nExample 1:\nInput: nums = [4,5,6,7,0,1,2], target = 0\nOutput: 4\nExample 2:\nInput: nums = [4,5,6,7,0,1,2], target = 3\nOutput: -1\nExample 3:\nInput: nums = [1], target = 0\nOutput: -1\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 5000\n\t-104 <= nums[i] <= 104\n\tAll values of nums are unique.\n\tnums is an ascending array that is possibly rotated.\n\t-104 <= target <= 104\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 43.9 MB\n\n## Similar Problems\n\n- [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) — Medium\n- [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) — Medium\n"
+        }
+      ],
+      "timestamp": 1790922540000,
+      "runtime": "0 ms",
+      "memory": "43.9 MB",
+      "runtimePct": 100,
+      "memoryPct": 47.25879999999998,
+      "problemStatement": "<p>There is an integer array <code>nums</code> sorted in ascending order (with <strong>distinct</strong> values).</p>\n\n<p>Prior to being passed to your function, <code>nums</code> is <strong>possibly left rotated</strong> at an unknown index <code>k</code> (<code>1 &lt;= k &lt; nums.length</code>) such that the resulting array is <code>[nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]]</code> (<strong>0-indexed</strong>). For example, <code>[0,1,2,4,5,6,7]</code> might be left rotated by&nbsp;<code>3</code>&nbsp;indices and become <code>[4,5,6,7,0,1,2]</code>.</p>\n\n<p>Given the array <code>nums</code> <strong>after</strong> the possible rotation and an integer <code>target</code>, return <em>the index of </em><code>target</code><em> if it is in </em><code>nums</code><em>, or </em><code>-1</code><em> if it is not in </em><code>nums</code>.</p>\n\n<p>You must write an algorithm with <code>O(log n)</code> runtime complexity.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [4,5,6,7,0,1,2], target = 0\n<strong>Output:</strong> 4\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [4,5,6,7,0,1,2], target = 3\n<strong>Output:</strong> -1\n</pre><p><strong class=\"example\">Example 3:</strong></p>\n<pre><strong>Input:</strong> nums = [1], target = 0\n<strong>Output:</strong> -1\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 5000</code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n\t<li>All values of <code>nums</code> are <strong>unique</strong>.</li>\n\t<li><code>nums</code> is an ascending array that is possibly rotated.</li>\n\t<li><code>-10<sup>4</sup> &lt;= target &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
+      "hints": null,
+      "acRate": 45.76283513565066,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "search-in-rotated-sorted-array-ii",
+          "title": "Search in Rotated Sorted Array II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-minimum-in-rotated-sorted-array",
+          "title": "Find Minimum in Rotated Sorted Array",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "isDuplicate": true,
+      "duplicateOf": "lc-search-in-rotated-sorted-array::2010425869",
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 33,
+            "platform": "leetcode",
+            "slug": "search-in-rotated-sorted-array"
+          }
+        ],
+        "canonicalId": "search-in-rotated-sorted-array",
+        "canonicalTitle": "Search in Rotated Sorted Array",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "binary-search",
+        "tags": [
+          "array"
+        ],
+        "topic": "binary-search",
+        "voteCount": 96
+      }
+    },
+    {
+      "id": "lc-search-in-rotated-sorted-array::2159868297",
+      "submissionId": 2159868297,
+      "platform": "leetcode",
+      "title": "Search in Rotated Sorted Array",
+      "titleSlug": "search-in-rotated-sorted-array",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "topic": "Binary Search",
+      "code": "class Solution {\n    public int search(int[] nums, int target) {\n        int l = 0;\n        int r = nums.length-1;\n        while(l <= r){\n            int m = l+(r-l)/2;\n            if(nums[m] == target) return m;\n            else if(nums[l] <= nums[m]){\n                if(nums[l] <= target && target <= nums[m]){\n                    r = m-1;\n                }\n                else{\n                    l = m+1;\n                }\n            }\n            else{\n                if(nums[m] <= target && target <= nums[r]){\n                    l = m+1;\n                }\n                else{\n                    r = m-1;\n                }\n            }\n        }\n        return -1;\n    }\n}",
+      "readmeContent": "# Search in Rotated Sorted Array\n\n**Difficulty:** Medium  |  **Acceptance:** 45.8%\n\n**Tags:** `Array`, `Binary Search`\n\n## Problem\n\nThere is an integer array nums sorted in ascending order (with distinct values).\n\nPrior to being passed to your function, nums is possibly left rotated at an unknown index k (1 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,5,6,7] might be left rotated by&nbsp;3&nbsp;indices and become [4,5,6,7,0,1,2].\n\nGiven the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.\n\nYou must write an algorithm with O(log n) runtime complexity.\n\n&nbsp;\nExample 1:\nInput: nums = [4,5,6,7,0,1,2], target = 0\nOutput: 4\nExample 2:\nInput: nums = [4,5,6,7,0,1,2], target = 3\nOutput: -1\nExample 3:\nInput: nums = [1], target = 0\nOutput: -1\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 5000\n\t-104 <= nums[i] <= 104\n\tAll values of nums are unique.\n\tnums is an ascending array that is possibly rotated.\n\t-104 <= target <= 104\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 43.9 MB\n\n## Similar Problems\n\n- [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) — Medium\n- [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-search-in-rotated-sorted-array/lc-search-in-rotated-sorted-array.java",
+          "content": "class Solution {\n    public int search(int[] nums, int target) {\n        int l = 0;\n        int r = nums.length-1;\n        while(l <= r){\n            int m = l+(r-l)/2;\n            if(nums[m] == target) return m;\n            else if(nums[l] <= nums[m]){\n                if(nums[l] <= target && target <= nums[m]){\n                    r = m-1;\n                }\n                else{\n                    l = m+1;\n                }\n            }\n            else{\n                if(nums[m] <= target && target <= nums[r]){\n                    l = m+1;\n                }\n                else{\n                    r = m-1;\n                }\n            }\n        }\n        return -1;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-search-in-rotated-sorted-array/README.md",
+          "content": "# Search in Rotated Sorted Array\n\n**Difficulty:** Medium  |  **Acceptance:** 45.8%\n\n**Tags:** `Array`, `Binary Search`\n\n## Problem\n\nThere is an integer array nums sorted in ascending order (with distinct values).\n\nPrior to being passed to your function, nums is possibly left rotated at an unknown index k (1 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,5,6,7] might be left rotated by&nbsp;3&nbsp;indices and become [4,5,6,7,0,1,2].\n\nGiven the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.\n\nYou must write an algorithm with O(log n) runtime complexity.\n\n&nbsp;\nExample 1:\nInput: nums = [4,5,6,7,0,1,2], target = 0\nOutput: 4\nExample 2:\nInput: nums = [4,5,6,7,0,1,2], target = 3\nOutput: -1\nExample 3:\nInput: nums = [1], target = 0\nOutput: -1\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 5000\n\t-104 <= nums[i] <= 104\n\tAll values of nums are unique.\n\tnums is an ascending array that is possibly rotated.\n\t-104 <= target <= 104\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 43.9 MB\n\n## Similar Problems\n\n- [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) — Medium\n- [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) — Medium\n"
+        }
+      ],
+      "timestamp": 1790923084000,
+      "runtime": "0 ms",
+      "memory": "43.9 MB",
+      "runtimePct": 100,
+      "memoryPct": 28.57209999999998,
+      "problemStatement": "<p>There is an integer array <code>nums</code> sorted in ascending order (with <strong>distinct</strong> values).</p>\n\n<p>Prior to being passed to your function, <code>nums</code> is <strong>possibly left rotated</strong> at an unknown index <code>k</code> (<code>1 &lt;= k &lt; nums.length</code>) such that the resulting array is <code>[nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]]</code> (<strong>0-indexed</strong>). For example, <code>[0,1,2,4,5,6,7]</code> might be left rotated by&nbsp;<code>3</code>&nbsp;indices and become <code>[4,5,6,7,0,1,2]</code>.</p>\n\n<p>Given the array <code>nums</code> <strong>after</strong> the possible rotation and an integer <code>target</code>, return <em>the index of </em><code>target</code><em> if it is in </em><code>nums</code><em>, or </em><code>-1</code><em> if it is not in </em><code>nums</code>.</p>\n\n<p>You must write an algorithm with <code>O(log n)</code> runtime complexity.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [4,5,6,7,0,1,2], target = 0\n<strong>Output:</strong> 4\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [4,5,6,7,0,1,2], target = 3\n<strong>Output:</strong> -1\n</pre><p><strong class=\"example\">Example 3:</strong></p>\n<pre><strong>Input:</strong> nums = [1], target = 0\n<strong>Output:</strong> -1\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 5000</code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n\t<li>All values of <code>nums</code> are <strong>unique</strong>.</li>\n\t<li><code>nums</code> is an ascending array that is possibly rotated.</li>\n\t<li><code>-10<sup>4</sup> &lt;= target &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
+      "hints": null,
+      "acRate": 45.76283513565066,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "search-in-rotated-sorted-array-ii",
+          "title": "Search in Rotated Sorted Array II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-minimum-in-rotated-sorted-array",
+          "title": "Find Minimum in Rotated Sorted Array",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "isDuplicate": true,
+      "duplicateOf": "lc-search-in-rotated-sorted-array::2010425869",
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 33,
+            "platform": "leetcode",
+            "slug": "search-in-rotated-sorted-array"
+          }
+        ],
+        "canonicalId": "search-in-rotated-sorted-array",
+        "canonicalTitle": "Search in Rotated Sorted Array",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "binary-search",
+        "tags": [
+          "array"
+        ],
+        "topic": "binary-search",
+        "voteCount": 96
+      }
+    },
+    {
+      "id": "lc-find-minimum-in-rotated-sorted-array::2161251825",
+      "submissionId": 2161251825,
+      "platform": "leetcode",
+      "title": "Find Minimum in Rotated Sorted Array",
+      "titleSlug": "find-minimum-in-rotated-sorted-array",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "topic": "Binary Search",
+      "code": "class Solution {\n    public int findMin(int[] nums) {\n        int l = 0;\n        int r = nums.length-1;\n        int minValue = Integer.MAX_VALUE;\n        while(l <= r){\n            int m = l + (r - l)/2;\n            if(nums[m] < minValue){\n                minValue = nums[m];\n            }\n            if(nums[m] > nums[r]){\n                l = m + 1;\n            }\n            else{\n                r = m - 1;\n            }\n        }\n        return minValue;\n    }\n}",
+      "readmeContent": "# Find Minimum in Rotated Sorted Array\n\n**Difficulty:** Medium  |  **Acceptance:** 55.4%\n\n**Tags:** `Array`, `Binary Search`\n\n## Problem\n\nSuppose an array of length n sorted in ascending order is rotated between 1 and n times. For example, the array nums = [0,1,2,4,5,6,7] might become:\n\n\t[4,5,6,7,0,1,2] if it was rotated 4 times.\n\t[0,1,2,4,5,6,7] if it was rotated 7 times.\n\nNotice that rotating an array [a[0], a[1], a[2], ..., a[n-1]] 1 time results in the array [a[n-1], a[0], a[1], a[2], ..., a[n-2]].\n\nGiven the sorted rotated array nums of unique elements, return the minimum element of this array.\n\nYou must write an algorithm that runs in&nbsp;O(log n) time.\n\n&nbsp;\nExample 1:\n\nInput: nums = [3,4,5,1,2]\nOutput: 1\nExplanation: The original array was [1,2,3,4,5] rotated 3 times.\n\nExample 2:\n\nInput: nums = [4,5,6,7,0,1,2]\nOutput: 0\nExplanation: The original array was [0,1,2,4,5,6,7] and it was rotated 4 times.\n\nExample 3:\n\nInput: nums = [11,13,15,17]\nOutput: 11\nExplanation: The original array was [11,13,15,17] and it was rotated 4 times. \n\n&nbsp;\nConstraints:\n\n\tn == nums.length\n\t1 <= n <= 5000\n\t-5000 <= nums[i] <= 5000\n\tAll the integers of nums are unique.\n\tnums is sorted and rotated between 1 and n times.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 43.5 MB\n\n## Similar Problems\n\n- [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) — Medium\n- [Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/) — Hard\n",
+      "files": [
+        {
+          "path": "problems/lc-find-minimum-in-rotated-sorted-array/lc-find-minimum-in-rotated-sorted-array.java",
+          "content": "class Solution {\n    public int findMin(int[] nums) {\n        int l = 0;\n        int r = nums.length-1;\n        int minValue = Integer.MAX_VALUE;\n        while(l <= r){\n            int m = l + (r - l)/2;\n            if(nums[m] < minValue){\n                minValue = nums[m];\n            }\n            if(nums[m] > nums[r]){\n                l = m + 1;\n            }\n            else{\n                r = m - 1;\n            }\n        }\n        return minValue;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-find-minimum-in-rotated-sorted-array/README.md",
+          "content": "# Find Minimum in Rotated Sorted Array\n\n**Difficulty:** Medium  |  **Acceptance:** 55.4%\n\n**Tags:** `Array`, `Binary Search`\n\n## Problem\n\nSuppose an array of length n sorted in ascending order is rotated between 1 and n times. For example, the array nums = [0,1,2,4,5,6,7] might become:\n\n\t[4,5,6,7,0,1,2] if it was rotated 4 times.\n\t[0,1,2,4,5,6,7] if it was rotated 7 times.\n\nNotice that rotating an array [a[0], a[1], a[2], ..., a[n-1]] 1 time results in the array [a[n-1], a[0], a[1], a[2], ..., a[n-2]].\n\nGiven the sorted rotated array nums of unique elements, return the minimum element of this array.\n\nYou must write an algorithm that runs in&nbsp;O(log n) time.\n\n&nbsp;\nExample 1:\n\nInput: nums = [3,4,5,1,2]\nOutput: 1\nExplanation: The original array was [1,2,3,4,5] rotated 3 times.\n\nExample 2:\n\nInput: nums = [4,5,6,7,0,1,2]\nOutput: 0\nExplanation: The original array was [0,1,2,4,5,6,7] and it was rotated 4 times.\n\nExample 3:\n\nInput: nums = [11,13,15,17]\nOutput: 11\nExplanation: The original array was [11,13,15,17] and it was rotated 4 times. \n\n&nbsp;\nConstraints:\n\n\tn == nums.length\n\t1 <= n <= 5000\n\t-5000 <= nums[i] <= 5000\n\tAll the integers of nums are unique.\n\tnums is sorted and rotated between 1 and n times.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 43.5 MB\n\n## Similar Problems\n\n- [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) — Medium\n- [Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/) — Hard\n"
+        }
+      ],
+      "timestamp": 1791044367000,
+      "runtime": "0 ms",
+      "memory": "43.5 MB",
+      "runtimePct": 100,
+      "memoryPct": 86.25479999999999,
+      "problemStatement": "<p>Suppose an array of length <code>n</code> sorted in ascending order is <strong>rotated</strong> between <code>1</code> and <code>n</code> times. For example, the array <code>nums = [0,1,2,4,5,6,7]</code> might become:</p>\n\n<ul>\n\t<li><code>[4,5,6,7,0,1,2]</code> if it was rotated <code>4</code> times.</li>\n\t<li><code>[0,1,2,4,5,6,7]</code> if it was rotated <code>7</code> times.</li>\n</ul>\n\n<p>Notice that <strong>rotating</strong> an array <code>[a[0], a[1], a[2], ..., a[n-1]]</code> 1 time results in the array <code>[a[n-1], a[0], a[1], a[2], ..., a[n-2]]</code>.</p>\n\n<p>Given the sorted rotated array <code>nums</code> of <strong>unique</strong> elements, return <em>the minimum element of this array</em>.</p>\n\n<p>You must write an algorithm that runs in&nbsp;<code>O(log n) time</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,4,5,1,2]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> The original array was [1,2,3,4,5] rotated 3 times.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [4,5,6,7,0,1,2]\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> The original array was [0,1,2,4,5,6,7] and it was rotated 4 times.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [11,13,15,17]\n<strong>Output:</strong> 11\n<strong>Explanation:</strong> The original array was [11,13,15,17] and it was rotated 4 times. \n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == nums.length</code></li>\n\t<li><code>1 &lt;= n &lt;= 5000</code></li>\n\t<li><code>-5000 &lt;= nums[i] &lt;= 5000</code></li>\n\t<li>All the integers of <code>nums</code> are <strong>unique</strong>.</li>\n\t<li><code>nums</code> is sorted and rotated between <code>1</code> and <code>n</code> times.</li>\n</ul>\n",
+      "hints": [
+        "Array was originally in ascending order. Now that the array is rotated, there would be a point in the array where there is a small deflection from the increasing sequence. eg. The array would be something like [4, 5, 6, 7, 0, 1, 2].",
+        "You can divide the search space into two and see which direction to go.\r\nCan you think of an algorithm which has O(logN) search complexity?",
+        "<ol>\r\n<li>All the elements to the left of inflection point > first element of the array.</li>\r\n<li>All the elements to the right of inflection point < first element of the array.</li>\r\n<ol>"
+      ],
+      "acRate": 55.43171508722754,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "search-in-rotated-sorted-array",
+          "title": "Search in Rotated Sorted Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "find-minimum-in-rotated-sorted-array-ii",
+          "title": "Find Minimum in Rotated Sorted Array II",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "isDuplicate": true,
+      "duplicateOf": "lc-find-minimum-in-rotated-sorted-array::2016957001",
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 153,
+            "platform": "leetcode",
+            "slug": "find-minimum-in-rotated-sorted-array"
+          }
+        ],
+        "canonicalId": "find-minimum-in-rotated-sorted-array",
+        "canonicalTitle": "Find Minimum in Rotated Sorted Array",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "binary-search",
+        "tags": [
+          "array"
+        ],
+        "topic": "binary-search",
+        "voteCount": 95
+      }
+    },
+    {
+      "id": "lc-find-peak-element::2162319380",
+      "submissionId": 2162319380,
+      "platform": "leetcode",
+      "title": "Find Peak Element",
+      "titleSlug": "find-peak-element",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "topic": "Binary Search",
+      "code": "class Solution {\n    public int findPeakElement(int[] nums) {\n        int n = nums.length;\n        if(n == 1) return 0;\n        if(n == 2){\n            if(nums[0] > nums[1]) return 0;\n            else return 1;\n        }\n        if(nums[0] > nums[1]) return 0;\n        if(nums[n-1] > nums[n-2]) return n-1;\n        int l = 1;\n        int r = n-2;\n        while(l <= r){\n            int m = l + (r - l)/2;\n            if(nums[m] > nums[m-1] && nums[m] > nums[m+1]){\n                return m;\n            }\n            else if(nums[m] < nums[m+1]){\n                l = m+1;\n            }\n            else{\n                r = m-1;\n            }\n        }\n        return -1;\n    }\n}",
+      "readmeContent": "# Find Peak Element\n\n**Difficulty:** Medium  |  **Acceptance:** 47.3%\n\n**Tags:** `Array`, `Binary Search`\n\n## Problem\n\nA peak element is an element that is strictly greater than its neighbors.\n\nGiven a 0-indexed integer array nums, find a peak element, and return its index. If the array contains multiple peaks, return the index to any of the peaks.\n\nYou may imagine that nums[-1] = nums[n] = -&infin;. In other words, an element is always considered to be strictly greater than a neighbor that is outside the array.\n\nYou must write an algorithm that runs in O(log n) time.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,2,3,1]\nOutput: 2\nExplanation: 3 is a peak element and your function should return the index number 2.\n\nExample 2:\n\nInput: nums = [1,2,1,3,5,6,4]\nOutput: 5\nExplanation: Your function can return either index number 1 where the peak element is 2, or index number 5 where the peak element is 6.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 1000\n\t-231 <= nums[i] <= 231 - 1\n\tnums[i] != nums[i + 1] for all valid i.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 44.6 MB\n\n## Similar Problems\n\n- [Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/) — Medium\n- [Find a Peak Element II](https://leetcode.com/problems/find-a-peak-element-ii/) — Medium\n- [Count Hills and Valleys in an Array](https://leetcode.com/problems/count-hills-and-valleys-in-an-array/) — Easy\n- [Find the Peaks](https://leetcode.com/problems/find-the-peaks/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-find-peak-element/lc-find-peak-element.java",
+          "content": "class Solution {\n    public int findPeakElement(int[] nums) {\n        int n = nums.length;\n        if(n == 1) return 0;\n        if(n == 2){\n            if(nums[0] > nums[1]) return 0;\n            else return 1;\n        }\n        if(nums[0] > nums[1]) return 0;\n        if(nums[n-1] > nums[n-2]) return n-1;\n        int l = 1;\n        int r = n-2;\n        while(l <= r){\n            int m = l + (r - l)/2;\n            if(nums[m] > nums[m-1] && nums[m] > nums[m+1]){\n                return m;\n            }\n            else if(nums[m] < nums[m+1]){\n                l = m+1;\n            }\n            else{\n                r = m-1;\n            }\n        }\n        return -1;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-find-peak-element/README.md",
+          "content": "# Find Peak Element\n\n**Difficulty:** Medium  |  **Acceptance:** 47.3%\n\n**Tags:** `Array`, `Binary Search`\n\n## Problem\n\nA peak element is an element that is strictly greater than its neighbors.\n\nGiven a 0-indexed integer array nums, find a peak element, and return its index. If the array contains multiple peaks, return the index to any of the peaks.\n\nYou may imagine that nums[-1] = nums[n] = -&infin;. In other words, an element is always considered to be strictly greater than a neighbor that is outside the array.\n\nYou must write an algorithm that runs in O(log n) time.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,2,3,1]\nOutput: 2\nExplanation: 3 is a peak element and your function should return the index number 2.\n\nExample 2:\n\nInput: nums = [1,2,1,3,5,6,4]\nOutput: 5\nExplanation: Your function can return either index number 1 where the peak element is 2, or index number 5 where the peak element is 6.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 1000\n\t-231 <= nums[i] <= 231 - 1\n\tnums[i] != nums[i + 1] for all valid i.\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 44.6 MB\n\n## Similar Problems\n\n- [Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/) — Medium\n- [Find a Peak Element II](https://leetcode.com/problems/find-a-peak-element-ii/) — Medium\n- [Count Hills and Valleys in an Array](https://leetcode.com/problems/count-hills-and-valleys-in-an-array/) — Easy\n- [Find the Peaks](https://leetcode.com/problems/find-the-peaks/) — Easy\n"
+        }
+      ],
+      "timestamp": 1791132120000,
+      "runtime": "0 ms",
+      "memory": "44.6 MB",
+      "runtimePct": 100,
+      "memoryPct": 6.5178999999999565,
+      "problemStatement": "<p>A peak element is an element that is strictly greater than its neighbors.</p>\n\n<p>Given a <strong>0-indexed</strong> integer array <code>nums</code>, find a peak element, and return its index. If the array contains multiple peaks, return the index to <strong>any of the peaks</strong>.</p>\n\n<p>You may imagine that <code>nums[-1] = nums[n] = -&infin;</code>. In other words, an element is always considered to be strictly greater than a neighbor that is outside the array.</p>\n\n<p>You must write an algorithm that runs in <code>O(log n)</code> time.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,1]\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> 3 is a peak element and your function should return the index number 2.</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,1,3,5,6,4]\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> Your function can return either index number 1 where the peak element is 2, or index number 5 where the peak element is 6.</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 1000</code></li>\n\t<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>\n\t<li><code>nums[i] != nums[i + 1]</code> for all valid <code>i</code>.</li>\n</ul>\n",
+      "hints": null,
+      "acRate": 47.25043772234452,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "peak-index-in-a-mountain-array",
+          "title": "Peak Index in a Mountain Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-a-peak-element-ii",
+          "title": "Find a Peak Element II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "count-hills-and-valleys-in-an-array",
+          "title": "Count Hills and Valleys in an Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "find-the-peaks",
+          "title": "Find the Peaks",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-find-first-and-last-position-of-element-in-sorted-array::2162679219",
+      "submissionId": 2162679219,
+      "platform": "leetcode",
+      "title": "Find First and Last Position of Element in Sorted Array",
+      "titleSlug": "find-first-and-last-position-of-element-in-sorted-array",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "topic": "Binary Search",
+      "code": "class Solution {\n    public int[] searchRange(int[] nums, int target) {\n        int first = lowerBound(nums, target);\n        int last = upperBound(nums, target);\n        return new int[]{first, last};\n    }\n    public int lowerBound(int[] nums, int target){\n        int ans = -1;\n        int l = 0;\n        int r = nums.length-1;\n        while(l <= r){\n            int m = l + (r - l)/2;\n            if(nums[m] == target){\n                ans = m;\n                r = m - 1;\n            }\n            else if(nums[m] < target){\n                l = m+1;\n            }\n            else{\n                r = m-1;\n            }\n        }\n        return ans;\n    }\n    public int upperBound(int[] nums, int target){\n        int ans = -1;\n        int l = 0;\n        int r = nums.length-1;\n        while(l <= r){\n            int m = l + (r - l)/2;\n            if(nums[m] == target){\n                ans = m;\n                l = m+1;\n            }\n            else if(nums[m] < target){\n                l = m+1;\n            }\n            else{\n                r = m-1;\n            }\n        }\n        return ans;\n    }\n}",
+      "readmeContent": "# Find First and Last Position of Element in Sorted Array\n\n**Difficulty:** Medium  |  **Acceptance:** 49.8%\n\n**Tags:** `Array`, `Binary Search`\n\n## Problem\n\nGiven an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.\n\nIf target is not found in the array, return [-1, -1].\n\nYou must&nbsp;write an algorithm with&nbsp;O(log n) runtime complexity.\n\n&nbsp;\nExample 1:\nInput: nums = [5,7,7,8,8,10], target = 8\nOutput: [3,4]\nExample 2:\nInput: nums = [5,7,7,8,8,10], target = 6\nOutput: [-1,-1]\nExample 3:\nInput: nums = [], target = 0\nOutput: [-1,-1]\n\n&nbsp;\nConstraints:\n\n\t0 <= nums.length <= 105\n\t-109&nbsp;<= nums[i]&nbsp;<= 109\n\tnums is a non-decreasing array.\n\t-109&nbsp;<= target&nbsp;<= 109\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 48.1 MB\n\n## Similar Problems\n\n- [First Bad Version](https://leetcode.com/problems/first-bad-version/) — Easy\n- [Plates Between Candles](https://leetcode.com/problems/plates-between-candles/) — Medium\n- [Find Target Indices After Sorting Array](https://leetcode.com/problems/find-target-indices-after-sorting-array/) — Easy\n",
+      "files": [
+        {
+          "path": "problems/lc-find-first-and-last-position-of-element-in-sorted-array/lc-find-first-and-last-position-of-element-in-sorted-array.java",
+          "content": "class Solution {\n    public int[] searchRange(int[] nums, int target) {\n        int first = lowerBound(nums, target);\n        int last = upperBound(nums, target);\n        return new int[]{first, last};\n    }\n    public int lowerBound(int[] nums, int target){\n        int ans = -1;\n        int l = 0;\n        int r = nums.length-1;\n        while(l <= r){\n            int m = l + (r - l)/2;\n            if(nums[m] == target){\n                ans = m;\n                r = m - 1;\n            }\n            else if(nums[m] < target){\n                l = m+1;\n            }\n            else{\n                r = m-1;\n            }\n        }\n        return ans;\n    }\n    public int upperBound(int[] nums, int target){\n        int ans = -1;\n        int l = 0;\n        int r = nums.length-1;\n        while(l <= r){\n            int m = l + (r - l)/2;\n            if(nums[m] == target){\n                ans = m;\n                l = m+1;\n            }\n            else if(nums[m] < target){\n                l = m+1;\n            }\n            else{\n                r = m-1;\n            }\n        }\n        return ans;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-find-first-and-last-position-of-element-in-sorted-array/README.md",
+          "content": "# Find First and Last Position of Element in Sorted Array\n\n**Difficulty:** Medium  |  **Acceptance:** 49.8%\n\n**Tags:** `Array`, `Binary Search`\n\n## Problem\n\nGiven an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.\n\nIf target is not found in the array, return [-1, -1].\n\nYou must&nbsp;write an algorithm with&nbsp;O(log n) runtime complexity.\n\n&nbsp;\nExample 1:\nInput: nums = [5,7,7,8,8,10], target = 8\nOutput: [3,4]\nExample 2:\nInput: nums = [5,7,7,8,8,10], target = 6\nOutput: [-1,-1]\nExample 3:\nInput: nums = [], target = 0\nOutput: [-1,-1]\n\n&nbsp;\nConstraints:\n\n\t0 <= nums.length <= 105\n\t-109&nbsp;<= nums[i]&nbsp;<= 109\n\tnums is a non-decreasing array.\n\t-109&nbsp;<= target&nbsp;<= 109\n\n## My Submission\n\n- Runtime: 0 ms\n- Memory: 48.1 MB\n\n## Similar Problems\n\n- [First Bad Version](https://leetcode.com/problems/first-bad-version/) — Easy\n- [Plates Between Candles](https://leetcode.com/problems/plates-between-candles/) — Medium\n- [Find Target Indices After Sorting Array](https://leetcode.com/problems/find-target-indices-after-sorting-array/) — Easy\n"
+        }
+      ],
+      "timestamp": 1791172770000,
+      "runtime": "0 ms",
+      "memory": "48.1 MB",
+      "runtimePct": 100,
+      "memoryPct": 50.88440000000005,
+      "problemStatement": "<p>Given an array of integers <code>nums</code> sorted in non-decreasing order, find the starting and ending position of a given <code>target</code> value.</p>\n\n<p>If <code>target</code> is not found in the array, return <code>[-1, -1]</code>.</p>\n\n<p>You must&nbsp;write an algorithm with&nbsp;<code>O(log n)</code> runtime complexity.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [5,7,7,8,8,10], target = 8\n<strong>Output:</strong> [3,4]\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [5,7,7,8,8,10], target = 6\n<strong>Output:</strong> [-1,-1]\n</pre><p><strong class=\"example\">Example 3:</strong></p>\n<pre><strong>Input:</strong> nums = [], target = 0\n<strong>Output:</strong> [-1,-1]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-10<sup>9</sup>&nbsp;&lt;= nums[i]&nbsp;&lt;= 10<sup>9</sup></code></li>\n\t<li><code>nums</code> is a non-decreasing array.</li>\n\t<li><code>-10<sup>9</sup>&nbsp;&lt;= target&nbsp;&lt;= 10<sup>9</sup></code></li>\n</ul>\n",
+      "hints": null,
+      "acRate": 49.776508316385396,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "first-bad-version",
+          "title": "First Bad Version",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "plates-between-candles",
+          "title": "Plates Between Candles",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "find-target-indices-after-sorting-array",
+          "title": "Find Target Indices After Sorting Array",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "isDuplicate": true,
+      "duplicateOf": "lc-find-first-and-last-position-of-element-in-sorted-array::2014814319"
+    },
+    {
+      "id": "lc-rotate-array::2162694467",
+      "submissionId": 2162694467,
+      "platform": "leetcode",
+      "title": "Rotate Array",
+      "titleSlug": "rotate-array",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array",
+        "Math",
+        "Two Pointers"
+      ],
+      "topic": "Math",
+      "code": "class Solution {\n    public void rotate(int[] nums, int k) {\n        int n = nums.length;\n        k = k % n;\n        rotate(nums, 0, n-1);\n        rotate(nums, 0, k-1);\n        rotate(nums, k, n-1);\n\n    }\n    public void rotate(int[] nums, int l, int r){\n        while(l < r){\n            int temp = nums[l];\n            nums[l] = nums[r];\n            nums[r] = temp;\n            l++;\n            r--;\n        }\n    }\n}",
+      "readmeContent": "# Rotate Array\n\n**Difficulty:** Medium  |  **Acceptance:** 45.7%\n\n**Tags:** `Array`, `Math`, `Two Pointers`\n\n## Problem\n\nGiven an integer array nums, rotate the array to the right by k steps, where k is non-negative.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,2,3,4,5,6,7], k = 3\nOutput: [5,6,7,1,2,3,4]\nExplanation:\nrotate 1 steps to the right: [7,1,2,3,4,5,6]\nrotate 2 steps to the right: [6,7,1,2,3,4,5]\nrotate 3 steps to the right: [5,6,7,1,2,3,4]\n\nExample 2:\n\nInput: nums = [-1,-100,3,99], k = 2\nOutput: [3,99,-1,-100]\nExplanation: \nrotate 1 steps to the right: [99,-1,-100,3]\nrotate 2 steps to the right: [3,99,-1,-100]\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 105\n\t-231 <= nums[i] <= 231 - 1\n\t0 <= k <= 105\n\n&nbsp;\nFollow up:\n\n\tTry to come up with as many solutions as you can. There are at least three different ways to solve this problem.\n\tCould you do it in-place with O(1) extra space?\n\n## My Submission\n\n- Runtime: 4 ms\n- Memory: 268.8 MB\n\n## Similar Problems\n\n- [Rotate List](https://leetcode.com/problems/rotate-list/) — Medium\n- [Make K-Subarray Sums Equal](https://leetcode.com/problems/make-k-subarray-sums-equal/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-rotate-array/lc-rotate-array.java",
+          "content": "class Solution {\n    public void rotate(int[] nums, int k) {\n        int n = nums.length;\n        k = k % n;\n        rotate(nums, 0, n-1);\n        rotate(nums, 0, k-1);\n        rotate(nums, k, n-1);\n\n    }\n    public void rotate(int[] nums, int l, int r){\n        while(l < r){\n            int temp = nums[l];\n            nums[l] = nums[r];\n            nums[r] = temp;\n            l++;\n            r--;\n        }\n    }\n}"
+        },
+        {
+          "path": "problems/lc-rotate-array/README.md",
+          "content": "# Rotate Array\n\n**Difficulty:** Medium  |  **Acceptance:** 45.7%\n\n**Tags:** `Array`, `Math`, `Two Pointers`\n\n## Problem\n\nGiven an integer array nums, rotate the array to the right by k steps, where k is non-negative.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,2,3,4,5,6,7], k = 3\nOutput: [5,6,7,1,2,3,4]\nExplanation:\nrotate 1 steps to the right: [7,1,2,3,4,5,6]\nrotate 2 steps to the right: [6,7,1,2,3,4,5]\nrotate 3 steps to the right: [5,6,7,1,2,3,4]\n\nExample 2:\n\nInput: nums = [-1,-100,3,99], k = 2\nOutput: [3,99,-1,-100]\nExplanation: \nrotate 1 steps to the right: [99,-1,-100,3]\nrotate 2 steps to the right: [3,99,-1,-100]\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 105\n\t-231 <= nums[i] <= 231 - 1\n\t0 <= k <= 105\n\n&nbsp;\nFollow up:\n\n\tTry to come up with as many solutions as you can. There are at least three different ways to solve this problem.\n\tCould you do it in-place with O(1) extra space?\n\n## My Submission\n\n- Runtime: 4 ms\n- Memory: 268.8 MB\n\n## Similar Problems\n\n- [Rotate List](https://leetcode.com/problems/rotate-list/) — Medium\n- [Make K-Subarray Sums Equal](https://leetcode.com/problems/make-k-subarray-sums-equal/) — Medium\n"
+        }
+      ],
+      "timestamp": 1791174013000,
+      "runtime": "4 ms",
+      "memory": "268.8 MB",
+      "runtimePct": 98.1593,
+      "memoryPct": 49.101499999999646,
+      "problemStatement": "<p>Given an integer array <code>nums</code>, rotate the array to the right by <code>k</code> steps, where <code>k</code> is non-negative.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,4,5,6,7], k = 3\n<strong>Output:</strong> [5,6,7,1,2,3,4]\n<strong>Explanation:</strong>\nrotate 1 steps to the right: [7,1,2,3,4,5,6]\nrotate 2 steps to the right: [6,7,1,2,3,4,5]\nrotate 3 steps to the right: [5,6,7,1,2,3,4]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-1,-100,3,99], k = 2\n<strong>Output:</strong> [3,99,-1,-100]\n<strong>Explanation:</strong> \nrotate 1 steps to the right: [99,-1,-100,3]\nrotate 2 steps to the right: [3,99,-1,-100]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>\n\t<li><code>0 &lt;= k &lt;= 10<sup>5</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong></p>\n\n<ul>\n\t<li>Try to come up with as many solutions as you can. There are at least <strong>three</strong> different ways to solve this problem.</li>\n\t<li>Could you do it in-place with <code>O(1)</code> extra space?</li>\n</ul>\n",
+      "hints": [
+        "The easiest solution would use additional memory and that is perfectly fine.",
+        "The actual trick comes when trying to solve this problem without using any additional memory. This means you need to use the original array somehow to move the elements around. Now, we can place each element in its original location and shift all the elements around it to adjust as that would be too costly and most likely will time out on larger input arrays.",
+        "One line of thought is based on reversing the array (or parts of it) to obtain the desired result. Think about how reversal might potentially help us out by using an example.",
+        "The other line of thought is a tad bit complicated but essentially it builds on the idea of placing each element in its original position while keeping track of the element originally in that position. Basically, at every step, we place an element in its rightful position and keep track of the element already there or the one being overwritten in an additional variable. We can't do this in one linear pass and the idea here is based on <b>cyclic-dependencies</b> between elements."
+      ],
+      "acRate": 45.676162329022866,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "rotate-list",
+          "title": "Rotate List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "make-k-subarray-sums-equal",
+          "title": "Make K-Subarray Sums Equal",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "isDuplicate": true,
+      "duplicateOf": "lc-rotate-array::2129851950"
+    },
+    {
+      "id": "lc-rotate-array::2164529732",
+      "submissionId": 2164529732,
+      "platform": "leetcode",
+      "title": "Rotate Array",
+      "titleSlug": "rotate-array",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array",
+        "Math",
+        "Two Pointers"
+      ],
+      "topic": "Math",
+      "code": "class Solution {\n    public void rotate(int[] nums, int k) {\n        int n = nums.length;\n        k = k % n;\n        rotate(nums, 0, n-1);\n        rotate(nums, 0, k-1);\n        rotate(nums, k, n-1);\n\n    }\n    public void rotate(int[] nums, int l, int r){\n        while(l < r){\n            int temp = nums[l];\n            nums[l] = nums[r];\n            nums[r] = temp;\n            l++;\n            r--;\n        }\n    }\n}",
+      "readmeContent": "# Rotate Array\n\n**Difficulty:** Medium  |  **Acceptance:** 45.7%\n\n**Tags:** `Array`, `Math`, `Two Pointers`\n\n## Problem\n\nGiven an integer array nums, rotate the array to the right by k steps, where k is non-negative.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,2,3,4,5,6,7], k = 3\nOutput: [5,6,7,1,2,3,4]\nExplanation:\nrotate 1 steps to the right: [7,1,2,3,4,5,6]\nrotate 2 steps to the right: [6,7,1,2,3,4,5]\nrotate 3 steps to the right: [5,6,7,1,2,3,4]\n\nExample 2:\n\nInput: nums = [-1,-100,3,99], k = 2\nOutput: [3,99,-1,-100]\nExplanation: \nrotate 1 steps to the right: [99,-1,-100,3]\nrotate 2 steps to the right: [3,99,-1,-100]\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 105\n\t-231 <= nums[i] <= 231 - 1\n\t0 <= k <= 105\n\n&nbsp;\nFollow up:\n\n\tTry to come up with as many solutions as you can. There are at least three different ways to solve this problem.\n\tCould you do it in-place with O(1) extra space?\n\n## My Submission\n\n- Runtime: 5 ms\n- Memory: 268.7 MB\n\n## Similar Problems\n\n- [Rotate List](https://leetcode.com/problems/rotate-list/) — Medium\n- [Make K-Subarray Sums Equal](https://leetcode.com/problems/make-k-subarray-sums-equal/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-rotate-array/lc-rotate-array.java",
+          "content": "class Solution {\n    public void rotate(int[] nums, int k) {\n        int n = nums.length;\n        k = k % n;\n        rotate(nums, 0, n-1);\n        rotate(nums, 0, k-1);\n        rotate(nums, k, n-1);\n\n    }\n    public void rotate(int[] nums, int l, int r){\n        while(l < r){\n            int temp = nums[l];\n            nums[l] = nums[r];\n            nums[r] = temp;\n            l++;\n            r--;\n        }\n    }\n}"
+        },
+        {
+          "path": "problems/lc-rotate-array/README.md",
+          "content": "# Rotate Array\n\n**Difficulty:** Medium  |  **Acceptance:** 45.7%\n\n**Tags:** `Array`, `Math`, `Two Pointers`\n\n## Problem\n\nGiven an integer array nums, rotate the array to the right by k steps, where k is non-negative.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,2,3,4,5,6,7], k = 3\nOutput: [5,6,7,1,2,3,4]\nExplanation:\nrotate 1 steps to the right: [7,1,2,3,4,5,6]\nrotate 2 steps to the right: [6,7,1,2,3,4,5]\nrotate 3 steps to the right: [5,6,7,1,2,3,4]\n\nExample 2:\n\nInput: nums = [-1,-100,3,99], k = 2\nOutput: [3,99,-1,-100]\nExplanation: \nrotate 1 steps to the right: [99,-1,-100,3]\nrotate 2 steps to the right: [3,99,-1,-100]\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 105\n\t-231 <= nums[i] <= 231 - 1\n\t0 <= k <= 105\n\n&nbsp;\nFollow up:\n\n\tTry to come up with as many solutions as you can. There are at least three different ways to solve this problem.\n\tCould you do it in-place with O(1) extra space?\n\n## My Submission\n\n- Runtime: 5 ms\n- Memory: 268.7 MB\n\n## Similar Problems\n\n- [Rotate List](https://leetcode.com/problems/rotate-list/) — Medium\n- [Make K-Subarray Sums Equal](https://leetcode.com/problems/make-k-subarray-sums-equal/) — Medium\n"
+        }
+      ],
+      "timestamp": 1791307503000,
+      "runtime": "5 ms",
+      "memory": "268.7 MB",
+      "runtimePct": 46.6821,
+      "memoryPct": 49.101499999999646,
+      "problemStatement": "<p>Given an integer array <code>nums</code>, rotate the array to the right by <code>k</code> steps, where <code>k</code> is non-negative.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,4,5,6,7], k = 3\n<strong>Output:</strong> [5,6,7,1,2,3,4]\n<strong>Explanation:</strong>\nrotate 1 steps to the right: [7,1,2,3,4,5,6]\nrotate 2 steps to the right: [6,7,1,2,3,4,5]\nrotate 3 steps to the right: [5,6,7,1,2,3,4]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-1,-100,3,99], k = 2\n<strong>Output:</strong> [3,99,-1,-100]\n<strong>Explanation:</strong> \nrotate 1 steps to the right: [99,-1,-100,3]\nrotate 2 steps to the right: [3,99,-1,-100]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>\n\t<li><code>0 &lt;= k &lt;= 10<sup>5</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong></p>\n\n<ul>\n\t<li>Try to come up with as many solutions as you can. There are at least <strong>three</strong> different ways to solve this problem.</li>\n\t<li>Could you do it in-place with <code>O(1)</code> extra space?</li>\n</ul>\n",
+      "hints": [
+        "The easiest solution would use additional memory and that is perfectly fine.",
+        "The actual trick comes when trying to solve this problem without using any additional memory. This means you need to use the original array somehow to move the elements around. Now, we can place each element in its original location and shift all the elements around it to adjust as that would be too costly and most likely will time out on larger input arrays.",
+        "One line of thought is based on reversing the array (or parts of it) to obtain the desired result. Think about how reversal might potentially help us out by using an example.",
+        "The other line of thought is a tad bit complicated but essentially it builds on the idea of placing each element in its original position while keeping track of the element originally in that position. Basically, at every step, we place an element in its rightful position and keep track of the element already there or the one being overwritten in an additional variable. We can't do this in one linear pass and the idea here is based on <b>cyclic-dependencies</b> between elements."
+      ],
+      "acRate": 45.676162329022866,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "rotate-list",
+          "title": "Rotate List",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "make-k-subarray-sums-equal",
+          "title": "Make K-Subarray Sums Equal",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "isDuplicate": true,
+      "duplicateOf": "lc-rotate-array::2129851950"
+    },
+    {
+      "id": "lc-koko-eating-bananas::2164977018",
+      "submissionId": 2164977018,
+      "platform": "leetcode",
+      "title": "Koko Eating Bananas",
+      "titleSlug": "koko-eating-bananas",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "topic": "Binary Search",
+      "code": "class Solution {\n    public int minEatingSpeed(int[] piles, int h) {\n        int l = 1;\n        int r = Arrays.stream(piles).max().getAsInt();\n        int ans = -1;\n        while(l <= r){\n            int m = l + (r - l)/2;\n            long minHour = timeTaken(piles, m);\n            if(minHour <= h){\n                ans = m;\n                r = m-1;\n            }\n            else{\n                l = m+1;\n            }\n        }\n        return ans;\n    }\n\n    public long timeTaken(int[] piles, int m){\n        long total = 0;\n        for(int num : piles){\n            total += (num + m -1)/m;\n        }\n        return total;\n    }\n}",
+      "readmeContent": "# Koko Eating Bananas\n\n**Difficulty:** Medium  |  **Acceptance:** 50.7%\n\n**Tags:** `Array`, `Binary Search`\n\n## Problem\n\nKoko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas. The guards have gone and will come back in h hours.\n\nKoko can decide her bananas-per-hour eating speed of k. Each hour, she chooses some pile of bananas and eats k bananas from that pile. If the pile has less than k bananas, she eats all of them instead and will not eat any more bananas during this hour.\n\nKoko likes to eat slowly but still wants to finish eating all the bananas before the guards return.\n\nReturn the minimum integer k such that she can eat all the bananas within h hours.\n\n&nbsp;\nExample 1:\n\nInput: piles = [3,6,7,11], h = 8\nOutput: 4\n\nExample 2:\n\nInput: piles = [30,11,23,4,20], h = 5\nOutput: 30\n\nExample 3:\n\nInput: piles = [30,11,23,4,20], h = 6\nOutput: 23\n\n&nbsp;\nConstraints:\n\n\t1 <= piles.length <= 104\n\tpiles.length <= h <= 109\n\t1 <= piles[i] <= 109\n\n## My Submission\n\n- Runtime: 9 ms\n- Memory: 47.7 MB\n\n## Similar Problems\n\n- [Maximum Candies Allocated to K Children](https://leetcode.com/problems/maximum-candies-allocated-to-k-children/) — Medium\n- [Minimized Maximum of Products Distributed to Any Store](https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/) — Medium\n- [Frog Jump II](https://leetcode.com/problems/frog-jump-ii/) — Medium\n- [Minimum Time to Repair Cars](https://leetcode.com/problems/minimum-time-to-repair-cars/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-koko-eating-bananas/lc-koko-eating-bananas.java",
+          "content": "class Solution {\n    public int minEatingSpeed(int[] piles, int h) {\n        int l = 1;\n        int r = Arrays.stream(piles).max().getAsInt();\n        int ans = -1;\n        while(l <= r){\n            int m = l + (r - l)/2;\n            long minHour = timeTaken(piles, m);\n            if(minHour <= h){\n                ans = m;\n                r = m-1;\n            }\n            else{\n                l = m+1;\n            }\n        }\n        return ans;\n    }\n\n    public long timeTaken(int[] piles, int m){\n        long total = 0;\n        for(int num : piles){\n            total += (num + m -1)/m;\n        }\n        return total;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-koko-eating-bananas/README.md",
+          "content": "# Koko Eating Bananas\n\n**Difficulty:** Medium  |  **Acceptance:** 50.7%\n\n**Tags:** `Array`, `Binary Search`\n\n## Problem\n\nKoko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas. The guards have gone and will come back in h hours.\n\nKoko can decide her bananas-per-hour eating speed of k. Each hour, she chooses some pile of bananas and eats k bananas from that pile. If the pile has less than k bananas, she eats all of them instead and will not eat any more bananas during this hour.\n\nKoko likes to eat slowly but still wants to finish eating all the bananas before the guards return.\n\nReturn the minimum integer k such that she can eat all the bananas within h hours.\n\n&nbsp;\nExample 1:\n\nInput: piles = [3,6,7,11], h = 8\nOutput: 4\n\nExample 2:\n\nInput: piles = [30,11,23,4,20], h = 5\nOutput: 30\n\nExample 3:\n\nInput: piles = [30,11,23,4,20], h = 6\nOutput: 23\n\n&nbsp;\nConstraints:\n\n\t1 <= piles.length <= 104\n\tpiles.length <= h <= 109\n\t1 <= piles[i] <= 109\n\n## My Submission\n\n- Runtime: 9 ms\n- Memory: 47.7 MB\n\n## Similar Problems\n\n- [Maximum Candies Allocated to K Children](https://leetcode.com/problems/maximum-candies-allocated-to-k-children/) — Medium\n- [Minimized Maximum of Products Distributed to Any Store](https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/) — Medium\n- [Frog Jump II](https://leetcode.com/problems/frog-jump-ii/) — Medium\n- [Minimum Time to Repair Cars](https://leetcode.com/problems/minimum-time-to-repair-cars/) — Medium\n"
+        }
+      ],
+      "timestamp": 1791353493000,
+      "runtime": "9 ms",
+      "memory": "47.7 MB",
+      "runtimePct": 56.93479999999999,
+      "memoryPct": 73.53399999999995,
+      "problemStatement": "<p>Koko loves to eat bananas. There are <code>n</code> piles of bananas, the <code>i<sup>th</sup></code> pile has <code>piles[i]</code> bananas. The guards have gone and will come back in <code>h</code> hours.</p>\n\n<p>Koko can decide her bananas-per-hour eating speed of <code>k</code>. Each hour, she chooses some pile of bananas and eats <code>k</code> bananas from that pile. If the pile has less than <code>k</code> bananas, she eats all of them instead and will not eat any more bananas during this hour.</p>\n\n<p>Koko likes to eat slowly but still wants to finish eating all the bananas before the guards return.</p>\n\n<p>Return <em>the minimum integer</em> <code>k</code> <em>such that she can eat all the bananas within</em> <code>h</code> <em>hours</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> piles = [3,6,7,11], h = 8\n<strong>Output:</strong> 4\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> piles = [30,11,23,4,20], h = 5\n<strong>Output:</strong> 30\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> piles = [30,11,23,4,20], h = 6\n<strong>Output:</strong> 23\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= piles.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>piles.length &lt;= h &lt;= 10<sup>9</sup></code></li>\n\t<li><code>1 &lt;= piles[i] &lt;= 10<sup>9</sup></code></li>\n</ul>\n",
+      "hints": null,
+      "acRate": 50.67103242305735,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-candies-allocated-to-k-children",
+          "title": "Maximum Candies Allocated to K Children",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "minimized-maximum-of-products-distributed-to-any-store",
+          "title": "Minimized Maximum of Products Distributed to Any Store",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "frog-jump-ii",
+          "title": "Frog Jump II",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "minimum-time-to-repair-cars",
+          "title": "Minimum Time to Repair Cars",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true,
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 875,
+            "platform": "leetcode",
+            "slug": "koko-eating-bananas"
+          }
+        ],
+        "canonicalId": "koko-eating-bananas",
+        "canonicalTitle": "Koko Eating Bananas",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "binary-search",
+        "tags": [
+          "array"
+        ],
+        "topic": "binary-search",
+        "voteCount": 94
+      }
+    },
+    {
+      "id": "lc-capacity-to-ship-packages-within-d-days::2165936526",
+      "submissionId": 2165936526,
+      "platform": "leetcode",
+      "title": "Capacity To Ship Packages Within D Days",
+      "titleSlug": "capacity-to-ship-packages-within-d-days",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "topic": "Binary Search",
+      "code": "class Solution {\n    public int shipWithinDays(int[] weights, int days) {\n        int l = Arrays.stream(weights).max().getAsInt();\n        int r = 0;\n        for(int num : weights){\n            r += num;\n        }\n        int ans = Integer.MAX_VALUE;\n        while(l <= r){\n            int m = l + (r - l)/2;\n            boolean minCap = minimumWeight(weights, days, m);\n            if(minCap){\n                ans = m;\n                r = m-1;\n            }\n            else{\n                l = m+1;\n            }\n        }\n        return ans;\n    }\n\n    public boolean minimumWeight(int[] weights, int days, int minCap){\n        int count = 1;\n        int cap = 0;\n        for(int i=0; i<weights.length; i++){\n            if((cap + weights[i]) > minCap){\n                count++;\n                cap = weights[i];\n            }\n            else{\n                cap += weights[i];\n            }\n        }\n        return count <= days;\n    }\n}",
+      "readmeContent": "# Capacity To Ship Packages Within D Days\n\n**Difficulty:** Medium  |  **Acceptance:** 74.8%\n\n**Tags:** `Array`, `Binary Search`\n\n## Problem\n\nA conveyor belt has packages that must be shipped from one port to another within days days.\n\nThe ith package on the conveyor belt has a weight of weights[i]. Each day, we load the ship with packages on the conveyor belt (in the order given by weights). We may not load more weight than the maximum weight capacity of the ship.\n\nReturn the least weight capacity of the ship that will result in all the packages on the conveyor belt being shipped within days days.\n\n&nbsp;\nExample 1:\n\nInput: weights = [1,2,3,4,5,6,7,8,9,10], days = 5\nOutput: 15\nExplanation: A ship capacity of 15 is the minimum to ship all the packages in 5 days like this:\n1st day: 1, 2, 3, 4, 5\n2nd day: 6, 7\n3rd day: 8\n4th day: 9\n5th day: 10\n\nNote that the cargo must be shipped in the order given, so using a ship of capacity 14 and splitting the packages into parts like (2, 3, 4, 5), (1, 6, 7), (8), (9), (10) is not allowed.\n\nExample 2:\n\nInput: weights = [3,2,2,4,1,4], days = 3\nOutput: 6\nExplanation: A ship capacity of 6 is the minimum to ship all the packages in 3 days like this:\n1st day: 3, 2\n2nd day: 2, 4\n3rd day: 1, 4\n\nExample 3:\n\nInput: weights = [1,2,3,1,1], days = 4\nOutput: 3\nExplanation:\n1st day: 1\n2nd day: 2\n3rd day: 3\n4th day: 1, 1\n\n&nbsp;\nConstraints:\n\n\t1 <= days <= weights.length <= 5 * 104\n\t1 <= weights[i] <= 500\n\n## My Submission\n\n- Runtime: 15 ms\n- Memory: 49.9 MB\n\n## Similar Problems\n\n- [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) — Hard\n- [Minimized Maximum of Products Distributed to Any Store](https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/) — Medium\n- [Maximum Bags With Full Capacity of Rocks](https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks/) — Medium\n- [Minimum Total Distance Traveled](https://leetcode.com/problems/minimum-total-distance-traveled/) — Hard\n",
+      "files": [
+        {
+          "path": "problems/lc-capacity-to-ship-packages-within-d-days/lc-capacity-to-ship-packages-within-d-days.java",
+          "content": "class Solution {\n    public int shipWithinDays(int[] weights, int days) {\n        int l = Arrays.stream(weights).max().getAsInt();\n        int r = 0;\n        for(int num : weights){\n            r += num;\n        }\n        int ans = Integer.MAX_VALUE;\n        while(l <= r){\n            int m = l + (r - l)/2;\n            boolean minCap = minimumWeight(weights, days, m);\n            if(minCap){\n                ans = m;\n                r = m-1;\n            }\n            else{\n                l = m+1;\n            }\n        }\n        return ans;\n    }\n\n    public boolean minimumWeight(int[] weights, int days, int minCap){\n        int count = 1;\n        int cap = 0;\n        for(int i=0; i<weights.length; i++){\n            if((cap + weights[i]) > minCap){\n                count++;\n                cap = weights[i];\n            }\n            else{\n                cap += weights[i];\n            }\n        }\n        return count <= days;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-capacity-to-ship-packages-within-d-days/README.md",
+          "content": "# Capacity To Ship Packages Within D Days\n\n**Difficulty:** Medium  |  **Acceptance:** 74.8%\n\n**Tags:** `Array`, `Binary Search`\n\n## Problem\n\nA conveyor belt has packages that must be shipped from one port to another within days days.\n\nThe ith package on the conveyor belt has a weight of weights[i]. Each day, we load the ship with packages on the conveyor belt (in the order given by weights). We may not load more weight than the maximum weight capacity of the ship.\n\nReturn the least weight capacity of the ship that will result in all the packages on the conveyor belt being shipped within days days.\n\n&nbsp;\nExample 1:\n\nInput: weights = [1,2,3,4,5,6,7,8,9,10], days = 5\nOutput: 15\nExplanation: A ship capacity of 15 is the minimum to ship all the packages in 5 days like this:\n1st day: 1, 2, 3, 4, 5\n2nd day: 6, 7\n3rd day: 8\n4th day: 9\n5th day: 10\n\nNote that the cargo must be shipped in the order given, so using a ship of capacity 14 and splitting the packages into parts like (2, 3, 4, 5), (1, 6, 7), (8), (9), (10) is not allowed.\n\nExample 2:\n\nInput: weights = [3,2,2,4,1,4], days = 3\nOutput: 6\nExplanation: A ship capacity of 6 is the minimum to ship all the packages in 3 days like this:\n1st day: 3, 2\n2nd day: 2, 4\n3rd day: 1, 4\n\nExample 3:\n\nInput: weights = [1,2,3,1,1], days = 4\nOutput: 3\nExplanation:\n1st day: 1\n2nd day: 2\n3rd day: 3\n4th day: 1, 1\n\n&nbsp;\nConstraints:\n\n\t1 <= days <= weights.length <= 5 * 104\n\t1 <= weights[i] <= 500\n\n## My Submission\n\n- Runtime: 15 ms\n- Memory: 49.9 MB\n\n## Similar Problems\n\n- [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) — Hard\n- [Minimized Maximum of Products Distributed to Any Store](https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/) — Medium\n- [Maximum Bags With Full Capacity of Rocks](https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks/) — Medium\n- [Minimum Total Distance Traveled](https://leetcode.com/problems/minimum-total-distance-traveled/) — Hard\n"
+        }
+      ],
+      "timestamp": 1791434550000,
+      "runtime": "15 ms",
+      "memory": "49.9 MB",
+      "runtimePct": 8.293099999999995,
+      "memoryPct": 93.04580000000003,
+      "problemStatement": "<p>A conveyor belt has packages that must be shipped from one port to another within <code>days</code> days.</p>\n\n<p>The <code>i<sup>th</sup></code> package on the conveyor belt has a weight of <code>weights[i]</code>. Each day, we load the ship with packages on the conveyor belt (in the order given by <code>weights</code>). We may not load more weight than the maximum weight capacity of the ship.</p>\n\n<p>Return the least weight capacity of the ship that will result in all the packages on the conveyor belt being shipped within <code>days</code> days.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> weights = [1,2,3,4,5,6,7,8,9,10], days = 5\n<strong>Output:</strong> 15\n<strong>Explanation:</strong> A ship capacity of 15 is the minimum to ship all the packages in 5 days like this:\n1st day: 1, 2, 3, 4, 5\n2nd day: 6, 7\n3rd day: 8\n4th day: 9\n5th day: 10\n\nNote that the cargo must be shipped in the order given, so using a ship of capacity 14 and splitting the packages into parts like (2, 3, 4, 5), (1, 6, 7), (8), (9), (10) is not allowed.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> weights = [3,2,2,4,1,4], days = 3\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> A ship capacity of 6 is the minimum to ship all the packages in 3 days like this:\n1st day: 3, 2\n2nd day: 2, 4\n3rd day: 1, 4\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> weights = [1,2,3,1,1], days = 4\n<strong>Output:</strong> 3\n<strong>Explanation:</strong>\n1st day: 1\n2nd day: 2\n3rd day: 3\n4th day: 1, 1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= days &lt;= weights.length &lt;= 5 * 10<sup>4</sup></code></li>\n\t<li><code>1 &lt;= weights[i] &lt;= 500</code></li>\n</ul>\n",
+      "hints": [
+        "Binary search on the answer.  We need a function possible(capacity) which returns true if and only if we can do the task in D days."
+      ],
+      "acRate": 74.78364081418081,
+      "similar": [
+        {
+          "difficulty": "Hard",
+          "titleSlug": "split-array-largest-sum",
+          "title": "Split Array Largest Sum",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "minimized-maximum-of-products-distributed-to-any-store",
+          "title": "Minimized Maximum of Products Distributed to Any Store",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-bags-with-full-capacity-of-rocks",
+          "title": "Maximum Bags With Full Capacity of Rocks",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "minimum-total-distance-traveled",
+          "title": "Minimum Total Distance Traveled",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
+    },
+    {
+      "id": "lc-minimum-speed-to-arrive-on-time::2166972610",
+      "submissionId": 2166972610,
+      "platform": "leetcode",
+      "title": "Minimum Speed to Arrive on Time",
+      "titleSlug": "minimum-speed-to-arrive-on-time",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "topic": "Binary Search",
+      "code": "class Solution {\n    public int minSpeedOnTime(int[] dist, double hour) {\n        if (hour <= dist.length - 1) {\n            return -1;\n        }\n        int l = 1;\n        int r = 10_000_000;\n        int ans = Integer.MAX_VALUE;\n        while (l <= r) {\n            int m = l + (r - l) / 2;\n            if (helper(dist, hour, m)) {\n                ans = m;\n                r = m - 1;\n            } else {\n                l = m + 1;\n            }\n        }\n        if (ans == Integer.MAX_VALUE)\n            return -1;\n        else\n            return ans;\n    }\n\n    boolean helper(int[] dist, double hour, int s) {\n        double total = 0;\n        for (int i = 0; i < dist.length; i++) {\n            if (i != dist.length - 1) {\n                total += Math.ceil((double) dist[i] / s);\n            } else {\n                total += (double) dist[i] / s;\n            }\n        }\n        return total <= hour;\n    }\n}",
+      "readmeContent": "# Minimum Speed to Arrive on Time\n\n**Difficulty:** Medium  |  **Acceptance:** 48.3%\n\n**Tags:** `Array`, `Binary Search`\n\n## Problem\n\nYou are given a floating-point number hour, representing the amount of time you have to reach the office. To commute to the office, you must take n trains in sequential order. You are also given an integer array dist of length n, where dist[i] describes the distance (in kilometers) of the ith train ride.\n\nEach train can only depart at an integer hour, so you may need to wait in between each train ride.\n\n\tFor example, if the 1st train ride takes 1.5 hours, you must wait for an additional 0.5 hours before you can depart on the 2nd train ride at the 2 hour mark.\n\nReturn the minimum positive integer speed (in kilometers per hour) that all the trains must travel at for you to reach the office on time, or -1 if it is impossible to be on time.\n\nTests are generated such that the answer will not exceed 107 and hour will have at most two digits after the decimal point.\n\n&nbsp;\nExample 1:\n\nInput: dist = [1,3,2], hour = 6\nOutput: 1\nExplanation: At speed 1:\n- The first train ride takes 1/1 = 1 hour.\n- Since we are already at an integer hour, we depart immediately at the 1 hour mark. The second train takes 3/1 = 3 hours.\n- Since we are already at an integer hour, we depart immediately at the 4 hour mark. The third train takes 2/1 = 2 hours.\n- You will arrive at exactly the 6 hour mark.\n\nExample 2:\n\nInput: dist = [1,3,2], hour = 2.7\nOutput: 3\nExplanation: At speed 3:\n- The first train ride takes 1/3 = 0.33333 hours.\n- Since we are not at an integer hour, we wait until the 1 hour mark to depart. The second train ride takes 3/3 = 1 hour.\n- Since we are already at an integer hour, we depart immediately at the 2 hour mark. The third train takes 2/3 = 0.66667 hours.\n- You will arrive at the 2.66667 hour mark.\n\nExample 3:\n\nInput: dist = [1,3,2], hour = 1.9\nOutput: -1\nExplanation: It is impossible because the earliest the third train can depart is at the 2 hour mark.\n\n&nbsp;\nConstraints:\n\n\tn == dist.length\n\t1 <= n <= 105\n\t1 <= dist[i] <= 105\n\t1 <= hour <= 109\n\tThere will be at most two digits after the decimal point in hour.\n\n## My Submission\n\n- Runtime: 124 ms\n- Memory: 99.5 MB\n\n## Similar Problems\n\n- [Maximum Candies Allocated to K Children](https://leetcode.com/problems/maximum-candies-allocated-to-k-children/) — Medium\n- [Minimum Skips to Arrive at Meeting On Time](https://leetcode.com/problems/minimum-skips-to-arrive-at-meeting-on-time/) — Hard\n- [Minimum Time to Complete Trips](https://leetcode.com/problems/minimum-time-to-complete-trips/) — Medium\n- [The Latest Time to Catch a Bus](https://leetcode.com/problems/the-latest-time-to-catch-a-bus/) — Medium\n- [Minimize Maximum of Array](https://leetcode.com/problems/minimize-maximum-of-array/) — Medium\n",
+      "files": [
+        {
+          "path": "problems/lc-minimum-speed-to-arrive-on-time/lc-minimum-speed-to-arrive-on-time.java",
+          "content": "class Solution {\n    public int minSpeedOnTime(int[] dist, double hour) {\n        if (hour <= dist.length - 1) {\n            return -1;\n        }\n        int l = 1;\n        int r = 10_000_000;\n        int ans = Integer.MAX_VALUE;\n        while (l <= r) {\n            int m = l + (r - l) / 2;\n            if (helper(dist, hour, m)) {\n                ans = m;\n                r = m - 1;\n            } else {\n                l = m + 1;\n            }\n        }\n        if (ans == Integer.MAX_VALUE)\n            return -1;\n        else\n            return ans;\n    }\n\n    boolean helper(int[] dist, double hour, int s) {\n        double total = 0;\n        for (int i = 0; i < dist.length; i++) {\n            if (i != dist.length - 1) {\n                total += Math.ceil((double) dist[i] / s);\n            } else {\n                total += (double) dist[i] / s;\n            }\n        }\n        return total <= hour;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-minimum-speed-to-arrive-on-time/README.md",
+          "content": "# Minimum Speed to Arrive on Time\n\n**Difficulty:** Medium  |  **Acceptance:** 48.3%\n\n**Tags:** `Array`, `Binary Search`\n\n## Problem\n\nYou are given a floating-point number hour, representing the amount of time you have to reach the office. To commute to the office, you must take n trains in sequential order. You are also given an integer array dist of length n, where dist[i] describes the distance (in kilometers) of the ith train ride.\n\nEach train can only depart at an integer hour, so you may need to wait in between each train ride.\n\n\tFor example, if the 1st train ride takes 1.5 hours, you must wait for an additional 0.5 hours before you can depart on the 2nd train ride at the 2 hour mark.\n\nReturn the minimum positive integer speed (in kilometers per hour) that all the trains must travel at for you to reach the office on time, or -1 if it is impossible to be on time.\n\nTests are generated such that the answer will not exceed 107 and hour will have at most two digits after the decimal point.\n\n&nbsp;\nExample 1:\n\nInput: dist = [1,3,2], hour = 6\nOutput: 1\nExplanation: At speed 1:\n- The first train ride takes 1/1 = 1 hour.\n- Since we are already at an integer hour, we depart immediately at the 1 hour mark. The second train takes 3/1 = 3 hours.\n- Since we are already at an integer hour, we depart immediately at the 4 hour mark. The third train takes 2/1 = 2 hours.\n- You will arrive at exactly the 6 hour mark.\n\nExample 2:\n\nInput: dist = [1,3,2], hour = 2.7\nOutput: 3\nExplanation: At speed 3:\n- The first train ride takes 1/3 = 0.33333 hours.\n- Since we are not at an integer hour, we wait until the 1 hour mark to depart. The second train ride takes 3/3 = 1 hour.\n- Since we are already at an integer hour, we depart immediately at the 2 hour mark. The third train takes 2/3 = 0.66667 hours.\n- You will arrive at the 2.66667 hour mark.\n\nExample 3:\n\nInput: dist = [1,3,2], hour = 1.9\nOutput: -1\nExplanation: It is impossible because the earliest the third train can depart is at the 2 hour mark.\n\n&nbsp;\nConstraints:\n\n\tn == dist.length\n\t1 <= n <= 105\n\t1 <= dist[i] <= 105\n\t1 <= hour <= 109\n\tThere will be at most two digits after the decimal point in hour.\n\n## My Submission\n\n- Runtime: 124 ms\n- Memory: 99.5 MB\n\n## Similar Problems\n\n- [Maximum Candies Allocated to K Children](https://leetcode.com/problems/maximum-candies-allocated-to-k-children/) — Medium\n- [Minimum Skips to Arrive at Meeting On Time](https://leetcode.com/problems/minimum-skips-to-arrive-at-meeting-on-time/) — Hard\n- [Minimum Time to Complete Trips](https://leetcode.com/problems/minimum-time-to-complete-trips/) — Medium\n- [The Latest Time to Catch a Bus](https://leetcode.com/problems/the-latest-time-to-catch-a-bus/) — Medium\n- [Minimize Maximum of Array](https://leetcode.com/problems/minimize-maximum-of-array/) — Medium\n"
+        }
+      ],
+      "timestamp": 1791523962000,
+      "runtime": "124 ms",
+      "memory": "99.5 MB",
+      "runtimePct": 68.47599999999994,
+      "memoryPct": 23.98649999999997,
+      "problemStatement": "<p>You are given a floating-point number <code>hour</code>, representing the amount of time you have to reach the office. To commute to the office, you must take <code>n</code> trains in sequential order. You are also given an integer array <code>dist</code> of length <code>n</code>, where <code>dist[i]</code> describes the distance (in kilometers) of the <code>i<sup>th</sup></code> train ride.</p>\n\n<p>Each train can only depart at an integer hour, so you may need to wait in between each train ride.</p>\n\n<ul>\n\t<li>For example, if the <code>1<sup>st</sup></code> train ride takes <code>1.5</code> hours, you must wait for an additional <code>0.5</code> hours before you can depart on the <code>2<sup>nd</sup></code> train ride at the 2 hour mark.</li>\n</ul>\n\n<p>Return <em>the <strong>minimum positive integer</strong> speed <strong>(in kilometers per hour)</strong> that all the trains must travel at for you to reach the office on time, or </em><code>-1</code><em> if it is impossible to be on time</em>.</p>\n\n<p>Tests are generated such that the answer will not exceed <code>10<sup>7</sup></code> and <code>hour</code> will have <strong>at most two digits after the decimal point</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> dist = [1,3,2], hour = 6\n<strong>Output:</strong> 1\n<strong>Explanation: </strong>At speed 1:\n- The first train ride takes 1/1 = 1 hour.\n- Since we are already at an integer hour, we depart immediately at the 1 hour mark. The second train takes 3/1 = 3 hours.\n- Since we are already at an integer hour, we depart immediately at the 4 hour mark. The third train takes 2/1 = 2 hours.\n- You will arrive at exactly the 6 hour mark.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> dist = [1,3,2], hour = 2.7\n<strong>Output:</strong> 3\n<strong>Explanation: </strong>At speed 3:\n- The first train ride takes 1/3 = 0.33333 hours.\n- Since we are not at an integer hour, we wait until the 1 hour mark to depart. The second train ride takes 3/3 = 1 hour.\n- Since we are already at an integer hour, we depart immediately at the 2 hour mark. The third train takes 2/3 = 0.66667 hours.\n- You will arrive at the 2.66667 hour mark.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> dist = [1,3,2], hour = 1.9\n<strong>Output:</strong> -1\n<strong>Explanation:</strong> It is impossible because the earliest the third train can depart is at the 2 hour mark.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == dist.length</code></li>\n\t<li><code>1 &lt;= n &lt;= 10<sup>5</sup></code></li>\n\t<li><code>1 &lt;= dist[i] &lt;= 10<sup>5</sup></code></li>\n\t<li><code>1 &lt;= hour &lt;= 10<sup>9</sup></code></li>\n\t<li>There will be at most two digits after the decimal point in <code>hour</code>.</li>\n</ul>\n",
+      "hints": [
+        "Given the speed the trains are traveling at, can you find the total time it takes for you to arrive?",
+        "Is there a cutoff where any speeds larger will always allow you to arrive on time?"
+      ],
+      "acRate": 48.266043407517714,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-candies-allocated-to-k-children",
+          "title": "Maximum Candies Allocated to K Children",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "minimum-skips-to-arrive-at-meeting-on-time",
+          "title": "Minimum Skips to Arrive at Meeting On Time",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "minimum-time-to-complete-trips",
+          "title": "Minimum Time to Complete Trips",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "the-latest-time-to-catch-a-bus",
+          "title": "The Latest Time to Catch a Bus",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "minimize-maximum-of-array",
+          "title": "Minimize Maximum of Array",
+          "isPaidOnly": false
+        }
+      ],
+      "hasSimilar": true
     }
   ]
 }
