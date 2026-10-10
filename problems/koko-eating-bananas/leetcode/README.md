@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-koko-eating-bananas` |
 | Topics | Array, Binary Search |
-| Solved | 2026-10-07 |
-| Runtime | 9 ms (beats 56.93479999999999%) |
-| Memory | 47.7 MB (beats 73.53399999999995%) |
+| Solved | 2026-10-10 |
+| Runtime | 8 ms (beats 74.25779999999999%) |
+| Memory | 48 MB (beats 21.044099999999993%) |
 
 ## Problem Statement
 

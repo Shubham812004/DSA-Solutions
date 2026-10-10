@@ -194,6 +194,23 @@
       "Sorting"
     ]
   },
+  "leetcode::koko-eating-bananas": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "koko-eating-bananas",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794290042570
+      }
+    ],
+    "tags": [
+      "Array",
+      "Binary Search"
+    ]
+  },
   "leetcode::longest-palindromic-substring": {
     "difficulty": "Medium",
     "lang": "Java",
@@ -540,6 +557,21 @@
         "elapsedSeconds": 0,
         "lang": "Java",
         "ts": 1794289052643
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794289080841
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794289085504
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794289110545
       }
     ],
     "tags": [
