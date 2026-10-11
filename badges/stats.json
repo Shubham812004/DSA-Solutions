@@ -4,21 +4,25 @@
   "currentStreak": 0,
   "longestStreak": 0,
   "freezes": 0,
-  "totalPoints": 820,
-  "totalSolves": 51,
+  "totalPoints": 3910,
+  "totalSolves": 227,
   "totalRecalls": 0,
   "byDifficulty": {
     "Unknown": 10,
-    "Medium": 18,
-    "Easy": 22,
-    "Hard": 1
+    "Medium": 104,
+    "Easy": 111,
+    "Hard": 2
   },
-  "level": 4,
-  "levelName": "Analyst",
-  "activeDays": 0,
+  "level": 6,
+  "levelName": "Architect",
+  "activeDays": 71,
   "dailyTargetPoints": 25,
   "achievements": [
     "first-blood",
-    "ten-down"
+    "ten-down",
+    "century",
+    "well-rounded",
+    "double-day",
+    "level-five"
   ]
 }

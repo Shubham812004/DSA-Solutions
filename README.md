@@ -6,17 +6,17 @@
 
 # Shubham812004's DSA Solutions
 
-[![Solutions](https://img.shields.io/badge/Solutions-51-06b6d4?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Easy](https://img.shields.io/badge/Easy-22-22c55e?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Medium](https://img.shields.io/badge/Medium-18-f59e0b?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Hard](https://img.shields.io/badge/Hard-1-ef4444?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Languages](https://img.shields.io/badge/Languages-1-14b8a6?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Platforms](https://img.shields.io/badge/Platforms-1-6366f1?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/)
+[![Solutions](https://img.shields.io/badge/Solutions-227-06b6d4?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Easy](https://img.shields.io/badge/Easy-111-22c55e?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Medium](https://img.shields.io/badge/Medium-104-f59e0b?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Hard](https://img.shields.io/badge/Hard-2-ef4444?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Languages](https://img.shields.io/badge/Languages-4-14b8a6?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Platforms](https://img.shields.io/badge/Platforms-2-6366f1?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/)
 
 <!-- codeledger:gamification:start -->
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://shubham812004.github.io/DSA-Solutions/badges/card-light.svg?v=820-0-51-2026-10-11">
-  <img src="https://shubham812004.github.io/DSA-Solutions/badges/card.svg?v=820-0-51-2026-10-11" alt="Streak card" width="420">
+  <source media="(prefers-color-scheme: light)" srcset="https://shubham812004.github.io/DSA-Solutions/badges/card-light.svg?v=3910-0-227-2026-10-11">
+  <img src="https://shubham812004.github.io/DSA-Solutions/badges/card.svg?v=3910-0-227-2026-10-11" alt="Streak card" width="420">
 </picture>
 
-![Streak](https://shubham812004.github.io/DSA-Solutions/badges/streak.svg?v=820-0-51-2026-10-11) ![Points](https://shubham812004.github.io/DSA-Solutions/badges/points.svg?v=820-0-51-2026-10-11) ![Level](https://shubham812004.github.io/DSA-Solutions/badges/level.svg?v=820-0-51-2026-10-11) ![Freezes](https://shubham812004.github.io/DSA-Solutions/badges/freezes.svg?v=820-0-51-2026-10-11)
+![Streak](https://shubham812004.github.io/DSA-Solutions/badges/streak.svg?v=3910-0-227-2026-10-11) ![Points](https://shubham812004.github.io/DSA-Solutions/badges/points.svg?v=3910-0-227-2026-10-11) ![Level](https://shubham812004.github.io/DSA-Solutions/badges/level.svg?v=3910-0-227-2026-10-11) ![Freezes](https://shubham812004.github.io/DSA-Solutions/badges/freezes.svg?v=3910-0-227-2026-10-11)
 
-🩸 First Blood · 🔟 Ten Down
+🩸 First Blood · 🔟 Ten Down · 💯 Century · 🎯 Well Rounded · ⚡ Double Day · ⭐ Engineer
 <!-- codeledger:gamification:end -->
 
 > Automatically tracked by [CodeLedger](https://codeledger.vkrishna04.me) — every problem solved, committed to Git.
@@ -33,11 +33,28 @@
 
 ## Stats
 
-**By Platform:** geeksforgeeks (51)
+**By Platform:** leetcode (176) · geeksforgeeks (51)
 
-**Top Languages:** Unknown (51)
+**Top Languages:** Java (112) · Unknown (51) · MySQL (35) · Python (29)
 
-**Top Topics:** Untagged (51)
+**Top Topics:** Array (91) · Untagged (49) · Database (35) · String (18) · Linked List (11) · Dynamic Programming (6) · Stack (5) · Math (4) · Hash Table (3) · Two Pointers (3)
+
+---
+
+## Recent Solves
+
+| Problem | Difficulty | Language | Platform | Date |
+|---------|-----------|----------|----------|------|
+| [Minimum Speed to Arrive on Time](https://leetcode.com/problems/minimum-speed-to-arrive-on-time/) | Medium | Java | leetcode | Oct 9 |
+| [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) | Medium | Java | leetcode | Oct 8 |
+| [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | Medium | Java | leetcode | Oct 7 |
+| [Rotate Array](https://leetcode.com/problems/rotate-array/) | Medium | Java | leetcode | Oct 6 |
+| [Rotate Array](https://leetcode.com/problems/rotate-array/) | Medium | Java | leetcode | Oct 5 |
+| [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | Medium | Java | leetcode | Oct 5 |
+| [Find Peak Element](https://leetcode.com/problems/find-peak-element/) | Medium | Java | leetcode | Oct 4 |
+| [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Medium | Java | leetcode | Oct 3 |
+| [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | Medium | Java | leetcode | Oct 2 |
+| [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | Medium | Java | leetcode | Oct 2 |
 
 ---
 
@@ -80,4 +97,5 @@ Built with [CodeLedger](https://codeledger.vkrishna04.me) · [⭐ Star the exten
 </div>
 
 <!-- CODELEDGER_AUTO_GENERATED_END -->
+
 
