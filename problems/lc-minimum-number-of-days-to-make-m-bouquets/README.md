@@ -7,8 +7,8 @@
 | Problem ID | `lc-minimum-number-of-days-to-make-m-bouquets` |
 | Topics | Array, Binary Search |
 | Solved | 2026-10-11 |
-| Runtime | 18 ms (beats 46.775999999999996%) |
-| Memory | 82.6 MB (beats 47.28819999999992%) |
+| Runtime | 18 ms (beats 46.761799999999994%) |
+| Memory | 82.6 MB (beats 47.18579999999998%) |
 
 ## Problem Statement
 

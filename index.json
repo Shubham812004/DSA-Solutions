@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T04:40:17.904Z",
+  "updatedAt": "2026-10-12T05:02:08.362Z",
   "layoutVersion": 3,
   "stats": {
     "total": 229,
@@ -65,7 +65,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696377618
+      "urlVerifiedAt": 1791696377618,
+      "_committedPaths": [
+        "problems/gfg-addition-of-two-square-matrices4916/README.md"
+      ]
     },
     {
       "id": "gfg-aggressive-cows",
@@ -92,7 +95,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696378219
+      "urlVerifiedAt": 1791696378219,
+      "_committedPaths": [
+        "problems/gfg-aggressive-cows/README.md"
+      ]
     },
     {
       "id": "gfg-anagram-1587115620",
@@ -120,7 +126,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696378873
+      "urlVerifiedAt": 1791696378873,
+      "_committedPaths": [
+        "problems/gfg-anagram-1587115620/README.md"
+      ]
     },
     {
       "id": "gfg-array-subset-of-another-array2317",
@@ -149,7 +158,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696379640
+      "urlVerifiedAt": 1791696379640,
+      "_committedPaths": [
+        "problems/gfg-array-subset-of-another-array2317/README.md"
+      ]
     },
     {
       "id": "gfg-binary-search-1587115620",
@@ -178,7 +190,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696380278
+      "urlVerifiedAt": 1791696380278,
+      "_committedPaths": [
+        "problems/gfg-binary-search-1587115620/README.md"
+      ]
     },
     {
       "id": "gfg-buy-stock-2",
@@ -206,7 +221,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696380890
+      "urlVerifiedAt": 1791696380890,
+      "_committedPaths": [
+        "problems/gfg-buy-stock-2/README.md"
+      ]
     },
     {
       "id": "gfg-capacity-to-ship-packages-within-d-days",
@@ -234,7 +252,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696381549
+      "urlVerifiedAt": 1791696381549,
+      "_committedPaths": [
+        "problems/gfg-capacity-to-ship-packages-within-d-days/README.md"
+      ]
     },
     {
       "id": "gfg-ceil-in-a-sorted-array",
@@ -263,7 +284,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696382130
+      "urlVerifiedAt": 1791696382130,
+      "_committedPaths": [
+        "problems/gfg-ceil-in-a-sorted-array/README.md"
+      ]
     },
     {
       "id": "gfg-check-if-an-array-is-sorted0701",
@@ -291,7 +315,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696382676
+      "urlVerifiedAt": 1791696382676,
+      "_committedPaths": [
+        "problems/gfg-check-if-an-array-is-sorted0701/README.md"
+      ]
     },
     {
       "id": "gfg-container-with-most-water0535",
@@ -320,7 +347,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696383269
+      "urlVerifiedAt": 1791696383269,
+      "_committedPaths": [
+        "problems/gfg-container-with-most-water0535/README.md"
+      ]
     },
     {
       "id": "gfg-count-alphabets3649",
@@ -344,7 +374,10 @@
       "problemStatement": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/gfg-count-alphabets3649/README.md"
+      ]
     },
     {
       "id": "gfg-count-the-subarrays-having-product-less-than-k1708",
@@ -372,7 +405,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696385233
+      "urlVerifiedAt": 1791696385233,
+      "_committedPaths": [
+        "problems/gfg-count-the-subarrays-having-product-less-than-k1708/README.md"
+      ]
     },
     {
       "id": "gfg-equilibrium-point-1587115620",
@@ -400,7 +436,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696385864
+      "urlVerifiedAt": 1791696385864,
+      "_committedPaths": [
+        "problems/gfg-equilibrium-point-1587115620/README.md"
+      ]
     },
     {
       "id": "gfg-find-the-median0527",
@@ -428,7 +467,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696386513
+      "urlVerifiedAt": 1791696386513,
+      "_committedPaths": [
+        "problems/gfg-find-the-median0527/README.md"
+      ]
     },
     {
       "id": "gfg-find-the-smallest-and-second-smallest-element-in-an-array3226",
@@ -453,7 +495,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696387412
+      "urlVerifiedAt": 1791696387412,
+      "_committedPaths": [
+        "problems/gfg-find-the-smallest-and-second-smallest-element-in-an-array3226/README.md"
+      ]
     },
     {
       "id": "gfg-first-and-last-occurrences-of-x3116",
@@ -478,7 +523,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696388105
+      "urlVerifiedAt": 1791696388105,
+      "_committedPaths": [
+        "problems/gfg-first-and-last-occurrences-of-x3116/README.md"
+      ]
     },
     {
       "id": "gfg-floor-in-a-sorted-array-1587115620",
@@ -503,7 +551,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696388754
+      "urlVerifiedAt": 1791696388754,
+      "_committedPaths": [
+        "problems/gfg-floor-in-a-sorted-array-1587115620/README.md"
+      ]
     },
     {
       "id": "gfg-kadanes-algorithm-1587115620",
@@ -528,7 +579,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696389559
+      "urlVerifiedAt": 1791696389559,
+      "_committedPaths": [
+        "problems/gfg-kadanes-algorithm-1587115620/README.md"
+      ]
     },
     {
       "id": "gfg-koko-eating-bananas",
@@ -553,7 +607,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696390189
+      "urlVerifiedAt": 1791696390189,
+      "_committedPaths": [
+        "problems/gfg-koko-eating-bananas/README.md"
+      ]
     },
     {
       "id": "gfg-largest-element-in-array4009",
@@ -578,7 +635,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696390833
+      "urlVerifiedAt": 1791696390833,
+      "_committedPaths": [
+        "problems/gfg-largest-element-in-array4009/README.md"
+      ]
     },
     {
       "id": "gfg-longest-distinct-characters-in-string5848",
@@ -603,7 +663,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696391474
+      "urlVerifiedAt": 1791696391474,
+      "_committedPaths": [
+        "problems/gfg-longest-distinct-characters-in-string5848/README.md"
+      ]
     },
     {
       "id": "gfg-longest-k-unique-characters-substring0853",
@@ -628,7 +691,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696392037
+      "urlVerifiedAt": 1791696392037,
+      "_committedPaths": [
+        "problems/gfg-longest-k-unique-characters-substring0853/README.md"
+      ]
     },
     {
       "id": "gfg-max-consecutive-one",
@@ -653,7 +719,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696392709
+      "urlVerifiedAt": 1791696392709,
+      "_committedPaths": [
+        "problems/gfg-max-consecutive-one/README.md"
+      ]
     },
     {
       "id": "gfg-max-sum-subarray-of-size-k5313",
@@ -678,7 +747,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696393485
+      "urlVerifiedAt": 1791696393485,
+      "_committedPaths": [
+        "problems/gfg-max-sum-subarray-of-size-k5313/README.md"
+      ]
     },
     {
       "id": "gfg-maximize-number-of-1s0905",
@@ -703,7 +775,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696394183
+      "urlVerifiedAt": 1791696394183,
+      "_committedPaths": [
+        "problems/gfg-maximize-number-of-1s0905/README.md"
+      ]
     },
     {
       "id": "gfg-maximum-product-subarray3604",
@@ -728,7 +803,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696394823
+      "urlVerifiedAt": 1791696394823,
+      "_committedPaths": [
+        "problems/gfg-maximum-product-subarray3604/README.md"
+      ]
     },
     {
       "id": "gfg-mean0021",
@@ -753,7 +831,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696395474
+      "urlVerifiedAt": 1791696395474,
+      "_committedPaths": [
+        "problems/gfg-mean0021/README.md"
+      ]
     },
     {
       "id": "gfg-minimum-days-to-make-m-bouquets",
@@ -788,7 +869,14 @@
       "memory": null,
       "timestamp": 1791703637704,
       "elapsedSeconds": 97,
-      "platform": "geeksforgeeks"
+      "platform": "geeksforgeeks",
+      "_committedPaths": [
+        "problems/gfg-minimum-days-to-make-m-bouquets/gfg-minimum-days-to-make-m-bouquets.java",
+        "problems/gfg-minimum-days-to-make-m-bouquets/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "gfg-minimum-element-in-a-sorted-and-rotated-array3611",
@@ -813,7 +901,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696396119
+      "urlVerifiedAt": 1791696396119,
+      "_committedPaths": [
+        "problems/gfg-minimum-element-in-a-sorted-and-rotated-array3611/README.md"
+      ]
     },
     {
       "id": "gfg-move-all-zeroes-to-end-of-array0751",
@@ -838,7 +929,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696396751
+      "urlVerifiedAt": 1791696396751,
+      "_committedPaths": [
+        "problems/gfg-move-all-zeroes-to-end-of-array0751/README.md"
+      ]
     },
     {
       "id": "gfg-non-repeating-element3958",
@@ -863,7 +957,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696397400
+      "urlVerifiedAt": 1791696397400,
+      "_committedPaths": [
+        "problems/gfg-non-repeating-element3958/README.md"
+      ]
     },
     {
       "id": "gfg-number-of-occurrence2259",
@@ -888,7 +985,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696398034
+      "urlVerifiedAt": 1791696398034,
+      "_committedPaths": [
+        "problems/gfg-number-of-occurrence2259/README.md"
+      ]
     },
     {
       "id": "gfg-palindrome-string0817",
@@ -913,7 +1013,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696398853
+      "urlVerifiedAt": 1791696398853,
+      "_committedPaths": [
+        "problems/gfg-palindrome-string0817/README.md"
+      ]
     },
     {
       "id": "gfg-peak-element",
@@ -938,7 +1041,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696399475
+      "urlVerifiedAt": 1791696399475,
+      "_committedPaths": [
+        "problems/gfg-peak-element/README.md"
+      ]
     },
     {
       "id": "gfg-remove-duplicate-elements-from-sorted-array",
@@ -963,7 +1069,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696400105
+      "urlVerifiedAt": 1791696400105,
+      "_committedPaths": [
+        "problems/gfg-remove-duplicate-elements-from-sorted-array/README.md"
+      ]
     },
     {
       "id": "gfg-remove-duplicates-from-unsorted-array4141",
@@ -988,7 +1097,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696400755
+      "urlVerifiedAt": 1791696400755,
+      "_committedPaths": [
+        "problems/gfg-remove-duplicates-from-unsorted-array4141/README.md"
+      ]
     },
     {
       "id": "gfg-reverse-a-string",
@@ -1013,7 +1125,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696401369
+      "urlVerifiedAt": 1791696401369,
+      "_committedPaths": [
+        "problems/gfg-reverse-a-string/README.md"
+      ]
     },
     {
       "id": "gfg-reverse-an-array",
@@ -1038,7 +1153,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696402039
+      "urlVerifiedAt": 1791696402039,
+      "_committedPaths": [
+        "problems/gfg-reverse-an-array/README.md"
+      ]
     },
     {
       "id": "gfg-rotate-array-by-n-elements-1587115621",
@@ -1063,7 +1181,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696402674
+      "urlVerifiedAt": 1791696402674,
+      "_committedPaths": [
+        "problems/gfg-rotate-array-by-n-elements-1587115621/README.md"
+      ]
     },
     {
       "id": "gfg-rotation4723",
@@ -1088,7 +1209,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696403542
+      "urlVerifiedAt": 1791696403542,
+      "_committedPaths": [
+        "problems/gfg-rotation4723/README.md"
+      ]
     },
     {
       "id": "gfg-search-in-a-rotated-array4618",
@@ -1113,7 +1237,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696404281
+      "urlVerifiedAt": 1791696404281,
+      "_committedPaths": [
+        "problems/gfg-search-in-a-rotated-array4618/README.md"
+      ]
     },
     {
       "id": "gfg-search-insert-position-of-k-in-a-sorted-array",
@@ -1138,7 +1265,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696404916
+      "urlVerifiedAt": 1791696404916,
+      "_committedPaths": [
+        "problems/gfg-search-insert-position-of-k-in-a-sorted-array/README.md"
+      ]
     },
     {
       "id": "gfg-second-largest3735",
@@ -1163,7 +1293,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696405713
+      "urlVerifiedAt": 1791696405713,
+      "_committedPaths": [
+        "problems/gfg-second-largest3735/README.md"
+      ]
     },
     {
       "id": "gfg-smallest-subarray-with-sum-greater-than-x5651",
@@ -1188,7 +1321,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696406394
+      "urlVerifiedAt": 1791696406394,
+      "_committedPaths": [
+        "problems/gfg-smallest-subarray-with-sum-greater-than-x5651/README.md"
+      ]
     },
     {
       "id": "gfg-sort-a-string2943",
@@ -1213,7 +1349,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696406989
+      "urlVerifiedAt": 1791696406989,
+      "_committedPaths": [
+        "problems/gfg-sort-a-string2943/README.md"
+      ]
     },
     {
       "id": "gfg-sort-an-array-of-0s-1s-and-2s4231",
@@ -1238,7 +1377,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696407581
+      "urlVerifiedAt": 1791696407581,
+      "_committedPaths": [
+        "problems/gfg-sort-an-array-of-0s-1s-and-2s4231/README.md"
+      ]
     },
     {
       "id": "gfg-square-root",
@@ -1263,7 +1405,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696408194
+      "urlVerifiedAt": 1791696408194,
+      "_committedPaths": [
+        "problems/gfg-square-root/README.md"
+      ]
     },
     {
       "id": "gfg-string-palindromic-ignoring-spaces4723",
@@ -1288,7 +1433,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696408916
+      "urlVerifiedAt": 1791696408916,
+      "_committedPaths": [
+        "problems/gfg-string-palindromic-ignoring-spaces4723/README.md"
+      ]
     },
     {
       "id": "gfg-subarrays-with-sum-k",
@@ -1313,7 +1461,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696409544
+      "urlVerifiedAt": 1791696409544,
+      "_committedPaths": [
+        "problems/gfg-subarrays-with-sum-k/README.md"
+      ]
     },
     {
       "id": "gfg-sum-all-array-elements",
@@ -1338,7 +1489,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696410114
+      "urlVerifiedAt": 1791696410114,
+      "_committedPaths": [
+        "problems/gfg-sum-all-array-elements/README.md"
+      ]
     },
     {
       "id": "gfg-trapping-rain-water-1587115621",
@@ -1363,7 +1517,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696410852
+      "urlVerifiedAt": 1791696410852,
+      "_committedPaths": [
+        "problems/gfg-trapping-rain-water-1587115621/README.md"
+      ]
     },
     {
       "id": "gfg-triplet-sum-in-array-1587115621",
@@ -1388,7 +1545,10 @@
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696411633
+      "urlVerifiedAt": 1791696411633,
+      "_committedPaths": [
+        "problems/gfg-triplet-sum-in-array-1587115621/README.md"
+      ]
     },
     {
       "id": "lc-3sum::1812933130",
@@ -1497,6 +1657,10 @@
       "linkedSolutions": [
         "lc-3sum::1980848301",
         "lc-3sum::1990350392"
+      ],
+      "_committedPaths": [
+        "problems/3sum/leetcode/lc-3sum.py",
+        "problems/3sum/leetcode/README.md"
       ]
     },
     {
@@ -1624,6 +1788,10 @@
       "linkedSolutions": [
         "lc-3sum::1812933130",
         "lc-3sum::1990350392"
+      ],
+      "_committedPaths": [
+        "problems/3sum/leetcode/lc-3sum.java",
+        "problems/3sum/leetcode/README.md"
       ]
     },
     {
@@ -1735,6 +1903,10 @@
       "linkedSolutions": [
         "lc-3sum::1812933130",
         "lc-3sum::1980848301"
+      ],
+      "_committedPaths": [
+        "problems/3sum/leetcode/lc-3sum.java",
+        "problems/3sum/leetcode/README.md"
       ]
     },
     {
@@ -1825,6 +1997,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-4sum::1990357329"
+      ],
+      "_committedPaths": [
+        "problems/lc-4sum/lc-4sum.java",
+        "problems/lc-4sum/README.md"
       ]
     },
     {
@@ -1899,6 +2075,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-4sum::1981137064"
+      ],
+      "_committedPaths": [
+        "problems/lc-4sum/lc-4sum.java",
+        "problems/lc-4sum/README.md"
       ]
     },
     {
@@ -2027,6 +2207,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-add-two-numbers::1807676806"
+      ],
+      "_committedPaths": [
+        "problems/add-two-numbers/leetcode/lc-add-two-numbers.py",
+        "problems/add-two-numbers/leetcode/README.md"
       ]
     },
     {
@@ -2139,6 +2323,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-add-two-numbers::1807662365"
+      ],
+      "_committedPaths": [
+        "problems/add-two-numbers/leetcode/lc-add-two-numbers.py",
+        "problems/add-two-numbers/leetcode/README.md"
       ]
     },
     {
@@ -2202,6 +2390,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-article-views-i::1985838188"
+      ],
+      "_committedPaths": [
+        "problems/lc-article-views-i/lc-article-views-i.sql",
+        "problems/lc-article-views-i/README.md"
       ]
     },
     {
@@ -2249,6 +2441,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-article-views-i::1805948372"
+      ],
+      "_committedPaths": [
+        "problems/lc-article-views-i/lc-article-views-i.sql",
+        "problems/lc-article-views-i/README.md"
       ]
     },
     {
@@ -2295,7 +2491,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-assign-cookies/lc-assign-cookies.java",
+        "problems/lc-assign-cookies/README.md"
+      ]
     },
     {
       "id": "lc-average-selling-price::1807312858",
@@ -2337,7 +2537,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-average-selling-price/lc-average-selling-price.sql",
+        "problems/lc-average-selling-price/README.md"
+      ]
     },
     {
       "id": "lc-average-time-of-process-per-machine::1809639652",
@@ -2379,7 +2583,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-average-time-of-process-per-machine/lc-average-time-of-process-per-machine.sql",
+        "problems/lc-average-time-of-process-per-machine/README.md"
+      ]
     },
     {
       "id": "lc-best-time-to-buy-and-sell-stock::1809272618",
@@ -2494,6 +2702,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-best-time-to-buy-and-sell-stock::1981557158"
+      ],
+      "_committedPaths": [
+        "problems/best-time-to-buy-and-sell-stock/leetcode/lc-best-time-to-buy-and-sell-stock.py",
+        "problems/best-time-to-buy-and-sell-stock/leetcode/README.md"
       ]
     },
     {
@@ -2609,6 +2821,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-best-time-to-buy-and-sell-stock::1809272618"
+      ],
+      "_committedPaths": [
+        "problems/best-time-to-buy-and-sell-stock/leetcode/lc-best-time-to-buy-and-sell-stock.java",
+        "problems/best-time-to-buy-and-sell-stock/leetcode/README.md"
       ]
     },
     {
@@ -2651,7 +2867,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-big-countries/lc-big-countries.sql",
+        "problems/lc-big-countries/README.md"
+      ]
     },
     {
       "id": "lc-biggest-single-number::1818442089",
@@ -2693,7 +2913,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-biggest-single-number/lc-biggest-single-number.sql",
+        "problems/lc-biggest-single-number/README.md"
+      ]
     },
     {
       "id": "lc-binary-search::1819321741",
@@ -2769,6 +2993,10 @@
         "lc-binary-search::2010418254",
         "lc-binary-search::2128575594",
         "lc-binary-search::2158446952"
+      ],
+      "_committedPaths": [
+        "problems/binary-search/leetcode/lc-binary-search.py",
+        "problems/binary-search/leetcode/README.md"
       ]
     },
     {
@@ -2893,6 +3121,10 @@
         "lc-binary-search::2010418254",
         "lc-binary-search::2128575594",
         "lc-binary-search::2158446952"
+      ],
+      "_committedPaths": [
+        "problems/binary-search/leetcode/lc-binary-search.java",
+        "problems/binary-search/leetcode/README.md"
       ]
     },
     {
@@ -2971,6 +3203,10 @@
         "lc-binary-search::1998238818",
         "lc-binary-search::2128575594",
         "lc-binary-search::2158446952"
+      ],
+      "_committedPaths": [
+        "problems/binary-search/leetcode/lc-binary-search.java",
+        "problems/binary-search/leetcode/README.md"
       ]
     },
     {
@@ -3049,6 +3285,10 @@
         "lc-binary-search::1998238818",
         "lc-binary-search::2010418254",
         "lc-binary-search::2158446952"
+      ],
+      "_committedPaths": [
+        "problems/binary-search/leetcode/lc-binary-search.java",
+        "problems/binary-search/leetcode/README.md"
       ]
     },
     {
@@ -3127,6 +3367,10 @@
         "lc-binary-search::1998238818",
         "lc-binary-search::2010418254",
         "lc-binary-search::2128575594"
+      ],
+      "_committedPaths": [
+        "problems/binary-search/leetcode/lc-binary-search.java",
+        "problems/binary-search/leetcode/README.md"
       ]
     },
     {
@@ -3197,7 +3441,11 @@
       "hasSimilar": true,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-capacity-to-ship-packages-within-d-days/lc-capacity-to-ship-packages-within-d-days.java",
+        "problems/lc-capacity-to-ship-packages-within-d-days/README.md"
+      ]
     },
     {
       "id": "lc-classes-with-at-least-5-students::1817041965",
@@ -3239,7 +3487,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-classes-with-at-least-5-students/lc-classes-with-at-least-5-students.sql",
+        "problems/lc-classes-with-at-least-5-students/README.md"
+      ]
     },
     {
       "id": "lc-climbing-stairs::2005175463",
@@ -3360,7 +3612,11 @@
       },
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/climbing-stairs/leetcode/lc-climbing-stairs.java",
+        "problems/climbing-stairs/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-concatenate-array-with-reverse::1999417070",
@@ -3405,7 +3661,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-concatenate-array-with-reverse/lc-concatenate-array-with-reverse.java",
+        "problems/lc-concatenate-array-with-reverse/README.md"
+      ]
     },
     {
       "id": "lc-confirmation-rate::1812955501",
@@ -3447,7 +3707,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-confirmation-rate/lc-confirmation-rate.sql",
+        "problems/lc-confirmation-rate/README.md"
+      ]
     },
     {
       "id": "lc-container-with-most-water::2004864095",
@@ -3534,7 +3798,11 @@
       },
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/container-with-most-water/leetcode/lc-container-with-most-water.java",
+        "problems/container-with-most-water/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-contains-duplicate::1810413432",
@@ -3627,6 +3895,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-contains-duplicate::2129864960"
+      ],
+      "_committedPaths": [
+        "problems/contains-duplicate/leetcode/lc-contains-duplicate.py",
+        "problems/contains-duplicate/leetcode/README.md"
       ]
     },
     {
@@ -3720,6 +3992,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-contains-duplicate::1810413432"
+      ],
+      "_committedPaths": [
+        "problems/contains-duplicate/leetcode/lc-contains-duplicate.java",
+        "problems/contains-duplicate/leetcode/README.md"
       ]
     },
     {
@@ -3764,7 +4040,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-count-indices-with-opposite-parity/lc-count-indices-with-opposite-parity.java",
+        "problems/lc-count-indices-with-opposite-parity/README.md"
+      ]
     },
     {
       "id": "lc-customer-who-visited-but-did-not-make-any-transactions::1807336473",
@@ -3827,6 +4107,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-customer-who-visited-but-did-not-make-any-transactions::1807338875"
+      ],
+      "_committedPaths": [
+        "problems/lc-customer-who-visited-but-did-not-make-any-transactions/lc-customer-who-visited-but-did-not-make-any-transactions.sql",
+        "problems/lc-customer-who-visited-but-did-not-make-any-transactions/README.md"
       ]
     },
     {
@@ -3874,6 +4158,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-customer-who-visited-but-did-not-make-any-transactions::1807336473"
+      ],
+      "_committedPaths": [
+        "problems/lc-customer-who-visited-but-did-not-make-any-transactions/lc-customer-who-visited-but-did-not-make-any-transactions.sql",
+        "problems/lc-customer-who-visited-but-did-not-make-any-transactions/README.md"
       ]
     },
     {
@@ -3916,7 +4204,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-customers-who-bought-all-products/lc-customers-who-bought-all-products.sql",
+        "problems/lc-customers-who-bought-all-products/README.md"
+      ]
     },
     {
       "id": "lc-employee-bonus::1809653418",
@@ -4005,6 +4297,10 @@
       "linkedSolutions": [
         "lc-employee-bonus::1809654238",
         "lc-employee-bonus::1809654586"
+      ],
+      "_committedPaths": [
+        "problems/lc-employee-bonus/lc-employee-bonus.sql",
+        "problems/lc-employee-bonus/README.md"
       ]
     },
     {
@@ -4063,6 +4359,10 @@
       "linkedSolutions": [
         "lc-employee-bonus::1809653418",
         "lc-employee-bonus::1809654586"
+      ],
+      "_committedPaths": [
+        "problems/lc-employee-bonus/lc-employee-bonus.sql",
+        "problems/lc-employee-bonus/README.md"
       ]
     },
     {
@@ -4121,6 +4421,10 @@
       "linkedSolutions": [
         "lc-employee-bonus::1809653418",
         "lc-employee-bonus::1809654238"
+      ],
+      "_committedPaths": [
+        "problems/lc-employee-bonus/lc-employee-bonus.sql",
+        "problems/lc-employee-bonus/README.md"
       ]
     },
     {
@@ -4178,7 +4482,11 @@
       "hasSimilar": true,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-find-all-anagrams-in-a-string/lc-find-all-anagrams-in-a-string.java",
+        "problems/lc-find-all-anagrams-in-a-string/README.md"
+      ]
     },
     {
       "id": "lc-find-customer-referee::1985829899",
@@ -4222,7 +4530,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-find-customer-referee/lc-find-customer-referee.sql",
+        "problems/lc-find-customer-referee/README.md"
+      ]
     },
     {
       "id": "lc-find-first-and-last-position-of-element-in-sorted-array::2014814319",
@@ -4321,6 +4633,10 @@
       "linkedSolutions": [
         "lc-find-first-and-last-position-of-element-in-sorted-array::2138221866",
         "lc-find-first-and-last-position-of-element-in-sorted-array::2162679219"
+      ],
+      "_committedPaths": [
+        "problems/lc-find-first-and-last-position-of-element-in-sorted-array/lc-find-first-and-last-position-of-element-in-sorted-array.java",
+        "problems/lc-find-first-and-last-position-of-element-in-sorted-array/README.md"
       ]
     },
     {
@@ -4389,6 +4705,10 @@
       "linkedSolutions": [
         "lc-find-first-and-last-position-of-element-in-sorted-array::2014814319",
         "lc-find-first-and-last-position-of-element-in-sorted-array::2162679219"
+      ],
+      "_committedPaths": [
+        "problems/lc-find-first-and-last-position-of-element-in-sorted-array/lc-find-first-and-last-position-of-element-in-sorted-array.java",
+        "problems/lc-find-first-and-last-position-of-element-in-sorted-array/README.md"
       ]
     },
     {
@@ -4457,6 +4777,10 @@
       "linkedSolutions": [
         "lc-find-first-and-last-position-of-element-in-sorted-array::2014814319",
         "lc-find-first-and-last-position-of-element-in-sorted-array::2138221866"
+      ],
+      "_committedPaths": [
+        "problems/lc-find-first-and-last-position-of-element-in-sorted-array/lc-find-first-and-last-position-of-element-in-sorted-array.java",
+        "problems/lc-find-first-and-last-position-of-element-in-sorted-array/README.md"
       ]
     },
     {
@@ -4499,7 +4823,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-find-followers-count/lc-find-followers-count.sql",
+        "problems/lc-find-followers-count/README.md"
+      ]
     },
     {
       "id": "lc-find-minimum-in-rotated-sorted-array::2016957001",
@@ -4600,6 +4928,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-find-minimum-in-rotated-sorted-array::2161251825"
+      ],
+      "_committedPaths": [
+        "problems/find-minimum-in-rotated-sorted-array/leetcode/lc-find-minimum-in-rotated-sorted-array.java",
+        "problems/find-minimum-in-rotated-sorted-array/leetcode/README.md"
       ]
     },
     {
@@ -4685,6 +5017,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-find-minimum-in-rotated-sorted-array::2016957001"
+      ],
+      "_committedPaths": [
+        "problems/find-minimum-in-rotated-sorted-array/leetcode/lc-find-minimum-in-rotated-sorted-array.java",
+        "problems/find-minimum-in-rotated-sorted-array/leetcode/README.md"
       ]
     },
     {
@@ -4753,7 +5089,11 @@
       "hasSimilar": true,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-find-peak-element/lc-find-peak-element.java",
+        "problems/lc-find-peak-element/README.md"
+      ]
     },
     {
       "id": "lc-find-pivot-index::2146339391",
@@ -4846,6 +5186,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-find-pivot-index::2146344407"
+      ],
+      "_committedPaths": [
+        "problems/lc-find-pivot-index/lc-find-pivot-index.java",
+        "problems/lc-find-pivot-index/README.md"
       ]
     },
     {
@@ -4923,6 +5267,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-find-pivot-index::2146339391"
+      ],
+      "_committedPaths": [
+        "problems/lc-find-pivot-index/lc-find-pivot-index.java",
+        "problems/lc-find-pivot-index/README.md"
       ]
     },
     {
@@ -4981,7 +5329,11 @@
       "hasSimilar": true,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-first-unique-character-in-a-string/lc-first-unique-character-in-a-string.java",
+        "problems/lc-first-unique-character-in-a-string/README.md"
+      ]
     },
     {
       "id": "lc-game-play-analysis-iv::1814143936",
@@ -5023,7 +5375,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-game-play-analysis-iv/lc-game-play-analysis-iv.sql",
+        "problems/lc-game-play-analysis-iv/README.md"
+      ]
     },
     {
       "id": "lc-group-anagrams::1810440257",
@@ -5108,7 +5464,11 @@
       },
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/group-anagrams/leetcode/lc-group-anagrams.py",
+        "problems/group-anagrams/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-house-robber-ii::2009648208",
@@ -5192,7 +5552,11 @@
       },
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/house-robber-ii/leetcode/lc-house-robber-ii.java",
+        "problems/house-robber-ii/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-house-robber::2009605889",
@@ -5375,6 +5739,10 @@
         "lc-house-robber::2009606176",
         "lc-house-robber::2009606438",
         "lc-house-robber::2013382897"
+      ],
+      "_committedPaths": [
+        "problems/house-robber/leetcode/lc-house-robber.java",
+        "problems/house-robber/leetcode/README.md"
       ]
     },
     {
@@ -5512,6 +5880,10 @@
         "lc-house-robber::2009605889",
         "lc-house-robber::2009606438",
         "lc-house-robber::2013382897"
+      ],
+      "_committedPaths": [
+        "problems/house-robber/leetcode/lc-house-robber.java",
+        "problems/house-robber/leetcode/README.md"
       ]
     },
     {
@@ -5649,6 +6021,10 @@
         "lc-house-robber::2009605889",
         "lc-house-robber::2009606176",
         "lc-house-robber::2013382897"
+      ],
+      "_committedPaths": [
+        "problems/house-robber/leetcode/lc-house-robber.java",
+        "problems/house-robber/leetcode/README.md"
       ]
     },
     {
@@ -5786,6 +6162,10 @@
         "lc-house-robber::2009605889",
         "lc-house-robber::2009606176",
         "lc-house-robber::2009606438"
+      ],
+      "_committedPaths": [
+        "problems/house-robber/leetcode/lc-house-robber.java",
+        "problems/house-robber/leetcode/README.md"
       ]
     },
     {
@@ -5828,7 +6208,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-immediate-food-delivery-ii/lc-immediate-food-delivery-ii.sql",
+        "problems/lc-immediate-food-delivery-ii/README.md"
+      ]
     },
     {
       "id": "lc-implement-queue-using-stacks::1817013688",
@@ -5882,6 +6266,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-implement-queue-using-stacks::2134254408"
+      ],
+      "_committedPaths": [
+        "problems/lc-implement-queue-using-stacks/lc-implement-queue-using-stacks.py",
+        "problems/lc-implement-queue-using-stacks/README.md"
       ]
     },
     {
@@ -5936,6 +6324,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-implement-queue-using-stacks::1817013688"
+      ],
+      "_committedPaths": [
+        "problems/lc-implement-queue-using-stacks/lc-implement-queue-using-stacks.java",
+        "problems/lc-implement-queue-using-stacks/README.md"
       ]
     },
     {
@@ -5999,6 +6391,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-invalid-tweets::1985839546"
+      ],
+      "_committedPaths": [
+        "problems/lc-invalid-tweets/lc-invalid-tweets.sql",
+        "problems/lc-invalid-tweets/README.md"
       ]
     },
     {
@@ -6046,6 +6442,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-invalid-tweets::1805950930"
+      ],
+      "_committedPaths": [
+        "problems/lc-invalid-tweets/lc-invalid-tweets.sql",
+        "problems/lc-invalid-tweets/README.md"
       ]
     },
     {
@@ -6134,7 +6534,11 @@
       },
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/koko-eating-bananas/leetcode/lc-koko-eating-bananas.java",
+        "problems/koko-eating-bananas/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-linked-list-cycle::1818419089",
@@ -6215,6 +6619,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-linked-list-cycle::2128698923"
+      ],
+      "_committedPaths": [
+        "problems/linked-list-cycle/leetcode/lc-linked-list-cycle.py",
+        "problems/linked-list-cycle/leetcode/README.md"
       ]
     },
     {
@@ -6296,6 +6704,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-linked-list-cycle::1818419089"
+      ],
+      "_committedPaths": [
+        "problems/linked-list-cycle/leetcode/lc-linked-list-cycle.java",
+        "problems/linked-list-cycle/leetcode/README.md"
       ]
     },
     {
@@ -6359,7 +6771,11 @@
       "hasSimilar": true,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-longest-common-prefix/lc-longest-common-prefix.py",
+        "problems/lc-longest-common-prefix/README.md"
+      ]
     },
     {
       "id": "lc-longest-palindromic-substring::1809241760",
@@ -6465,6 +6881,10 @@
         "lc-longest-palindromic-substring::2152790022",
         "lc-longest-palindromic-substring::2155197334",
         "lc-longest-palindromic-substring::2158261343"
+      ],
+      "_committedPaths": [
+        "problems/longest-palindromic-substring/leetcode/lc-longest-palindromic-substring.py",
+        "problems/longest-palindromic-substring/leetcode/README.md"
       ]
     },
     {
@@ -6619,6 +7039,10 @@
         "lc-longest-palindromic-substring::2152790022",
         "lc-longest-palindromic-substring::2155197334",
         "lc-longest-palindromic-substring::2158261343"
+      ],
+      "_committedPaths": [
+        "problems/longest-palindromic-substring/leetcode/lc-longest-palindromic-substring.java",
+        "problems/longest-palindromic-substring/leetcode/README.md"
       ]
     },
     {
@@ -6727,6 +7151,10 @@
         "lc-longest-palindromic-substring::2152761012",
         "lc-longest-palindromic-substring::2155197334",
         "lc-longest-palindromic-substring::2158261343"
+      ],
+      "_committedPaths": [
+        "problems/longest-palindromic-substring/leetcode/lc-longest-palindromic-substring.java",
+        "problems/longest-palindromic-substring/leetcode/README.md"
       ]
     },
     {
@@ -6835,6 +7263,10 @@
         "lc-longest-palindromic-substring::2152761012",
         "lc-longest-palindromic-substring::2152790022",
         "lc-longest-palindromic-substring::2158261343"
+      ],
+      "_committedPaths": [
+        "problems/longest-palindromic-substring/leetcode/lc-longest-palindromic-substring.java",
+        "problems/longest-palindromic-substring/leetcode/README.md"
       ]
     },
     {
@@ -6943,6 +7375,10 @@
         "lc-longest-palindromic-substring::2152761012",
         "lc-longest-palindromic-substring::2152790022",
         "lc-longest-palindromic-substring::2155197334"
+      ],
+      "_committedPaths": [
+        "problems/longest-palindromic-substring/leetcode/lc-longest-palindromic-substring.java",
+        "problems/longest-palindromic-substring/leetcode/README.md"
       ]
     },
     {
@@ -7063,6 +7499,10 @@
       "linkedSolutions": [
         "lc-longest-substring-without-repeating-characters::2128482314",
         "lc-longest-substring-without-repeating-characters::2156217851"
+      ],
+      "_committedPaths": [
+        "problems/longest-substring-without-repeating-characters/leetcode/lc-longest-substring-without-repeating-characters.py",
+        "problems/longest-substring-without-repeating-characters/leetcode/README.md"
       ]
     },
     {
@@ -7201,6 +7641,10 @@
       "linkedSolutions": [
         "lc-longest-substring-without-repeating-characters::1807691146",
         "lc-longest-substring-without-repeating-characters::2156217851"
+      ],
+      "_committedPaths": [
+        "problems/longest-substring-without-repeating-characters/leetcode/lc-longest-substring-without-repeating-characters.java",
+        "problems/longest-substring-without-repeating-characters/leetcode/README.md"
       ]
     },
     {
@@ -7323,6 +7767,10 @@
       "linkedSolutions": [
         "lc-longest-substring-without-repeating-characters::1807691146",
         "lc-longest-substring-without-repeating-characters::2128482314"
+      ],
+      "_committedPaths": [
+        "problems/longest-substring-without-repeating-characters/leetcode/lc-longest-substring-without-repeating-characters.java",
+        "problems/longest-substring-without-repeating-characters/leetcode/README.md"
       ]
     },
     {
@@ -7423,6 +7871,10 @@
       "linkedSolutions": [
         "lc-majority-element-ii::1980156549",
         "lc-majority-element-ii::1991205322"
+      ],
+      "_committedPaths": [
+        "problems/lc-majority-element-ii/lc-majority-element-ii.java",
+        "problems/lc-majority-element-ii/README.md"
       ]
     },
     {
@@ -7492,6 +7944,10 @@
       "linkedSolutions": [
         "lc-majority-element-ii::1980144296",
         "lc-majority-element-ii::1991205322"
+      ],
+      "_committedPaths": [
+        "problems/lc-majority-element-ii/lc-majority-element-ii.java",
+        "problems/lc-majority-element-ii/README.md"
       ]
     },
     {
@@ -7561,6 +8017,10 @@
       "linkedSolutions": [
         "lc-majority-element-ii::1980144296",
         "lc-majority-element-ii::1980156549"
+      ],
+      "_committedPaths": [
+        "problems/lc-majority-element-ii/lc-majority-element-ii.java",
+        "problems/lc-majority-element-ii/README.md"
       ]
     },
     {
@@ -7645,7 +8105,11 @@
       "hasSimilar": true,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-majority-element/lc-majority-element.java",
+        "problems/lc-majority-element/README.md"
+      ]
     },
     {
       "id": "lc-managers-with-at-least-5-direct-reports::1812951325",
@@ -7692,7 +8156,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-managers-with-at-least-5-direct-reports/lc-managers-with-at-least-5-direct-reports.sql",
+        "problems/lc-managers-with-at-least-5-direct-reports/README.md"
+      ]
     },
     {
       "id": "lc-maximum-absolute-sum-of-any-subarray::2149344092",
@@ -7768,6 +8236,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-maximum-absolute-sum-of-any-subarray::2149376359"
+      ],
+      "_committedPaths": [
+        "problems/lc-maximum-absolute-sum-of-any-subarray/lc-maximum-absolute-sum-of-any-subarray.java",
+        "problems/lc-maximum-absolute-sum-of-any-subarray/README.md"
       ]
     },
     {
@@ -7828,6 +8300,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-maximum-absolute-sum-of-any-subarray::2149344092"
+      ],
+      "_committedPaths": [
+        "problems/lc-maximum-absolute-sum-of-any-subarray/lc-maximum-absolute-sum-of-any-subarray.java",
+        "problems/lc-maximum-absolute-sum-of-any-subarray/README.md"
       ]
     },
     {
@@ -7878,7 +8354,11 @@
       "hasSimilar": true,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-maximum-average-subarray-i/lc-maximum-average-subarray-i.java",
+        "problems/lc-maximum-average-subarray-i/README.md"
+      ]
     },
     {
       "id": "lc-maximum-product-subarray::1995896290",
@@ -8073,6 +8553,10 @@
         "lc-maximum-product-subarray::2002287041",
         "lc-maximum-product-subarray::2148277376",
         "lc-maximum-product-subarray::2148302061"
+      ],
+      "_committedPaths": [
+        "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
+        "problems/maximum-product-subarray/leetcode/README.md"
       ]
     },
     {
@@ -8177,6 +8661,10 @@
         "lc-maximum-product-subarray::2002287041",
         "lc-maximum-product-subarray::2148277376",
         "lc-maximum-product-subarray::2148302061"
+      ],
+      "_committedPaths": [
+        "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
+        "problems/maximum-product-subarray/leetcode/README.md"
       ]
     },
     {
@@ -8281,6 +8769,10 @@
         "lc-maximum-product-subarray::2002287041",
         "lc-maximum-product-subarray::2148277376",
         "lc-maximum-product-subarray::2148302061"
+      ],
+      "_committedPaths": [
+        "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
+        "problems/maximum-product-subarray/leetcode/README.md"
       ]
     },
     {
@@ -8385,6 +8877,10 @@
         "lc-maximum-product-subarray::2002287041",
         "lc-maximum-product-subarray::2148277376",
         "lc-maximum-product-subarray::2148302061"
+      ],
+      "_committedPaths": [
+        "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
+        "problems/maximum-product-subarray/leetcode/README.md"
       ]
     },
     {
@@ -8489,6 +8985,10 @@
         "lc-maximum-product-subarray::1996456582",
         "lc-maximum-product-subarray::2148277376",
         "lc-maximum-product-subarray::2148302061"
+      ],
+      "_committedPaths": [
+        "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
+        "problems/maximum-product-subarray/leetcode/README.md"
       ]
     },
     {
@@ -8593,6 +9093,10 @@
         "lc-maximum-product-subarray::1996456582",
         "lc-maximum-product-subarray::2002287041",
         "lc-maximum-product-subarray::2148302061"
+      ],
+      "_committedPaths": [
+        "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
+        "problems/maximum-product-subarray/leetcode/README.md"
       ]
     },
     {
@@ -8697,6 +9201,10 @@
         "lc-maximum-product-subarray::1996456582",
         "lc-maximum-product-subarray::2002287041",
         "lc-maximum-product-subarray::2148277376"
+      ],
+      "_committedPaths": [
+        "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
+        "problems/maximum-product-subarray/leetcode/README.md"
       ]
     },
     {
@@ -8825,6 +9333,10 @@
         "lc-maximum-subarray::1993471635",
         "lc-maximum-subarray::2148270155",
         "lc-maximum-subarray::2150624078"
+      ],
+      "_committedPaths": [
+        "problems/lc-maximum-subarray/lc-maximum-subarray.py",
+        "problems/lc-maximum-subarray/README.md"
       ]
     },
     {
@@ -8986,6 +9498,10 @@
         "lc-maximum-subarray::1813687231",
         "lc-maximum-subarray::2148270155",
         "lc-maximum-subarray::2150624078"
+      ],
+      "_committedPaths": [
+        "problems/lc-maximum-subarray/lc-maximum-subarray.java",
+        "problems/lc-maximum-subarray/README.md"
       ]
     },
     {
@@ -9116,6 +9632,10 @@
         "lc-maximum-subarray::1813687231",
         "lc-maximum-subarray::1993471635",
         "lc-maximum-subarray::2150624078"
+      ],
+      "_committedPaths": [
+        "problems/lc-maximum-subarray/lc-maximum-subarray.java",
+        "problems/lc-maximum-subarray/README.md"
       ]
     },
     {
@@ -9246,6 +9766,10 @@
         "lc-maximum-subarray::1813687231",
         "lc-maximum-subarray::1993471635",
         "lc-maximum-subarray::2148270155"
+      ],
+      "_committedPaths": [
+        "problems/lc-maximum-subarray/lc-maximum-subarray.java",
+        "problems/lc-maximum-subarray/README.md"
       ]
     },
     {
@@ -9290,7 +9814,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-median-of-two-sorted-arrays/lc-median-of-two-sorted-arrays.py",
+        "problems/lc-median-of-two-sorted-arrays/README.md"
+      ]
     },
     {
       "id": "lc-merge-intervals::1994969693",
@@ -9448,6 +9976,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-merge-intervals::2128178071"
+      ],
+      "_committedPaths": [
+        "problems/merge-intervals/leetcode/lc-merge-intervals.java",
+        "problems/merge-intervals/leetcode/README.md"
       ]
     },
     {
@@ -9590,6 +10122,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-merge-intervals::1994969693"
+      ],
+      "_committedPaths": [
+        "problems/merge-intervals/leetcode/lc-merge-intervals.java",
+        "problems/merge-intervals/leetcode/README.md"
       ]
     },
     {
@@ -9667,6 +10203,10 @@
         "lc-merge-sorted-array::1995704533",
         "lc-merge-sorted-array::1995707128",
         "lc-merge-sorted-array::1998838221"
+      ],
+      "_committedPaths": [
+        "problems/lc-merge-sorted-array/lc-merge-sorted-array.py",
+        "problems/lc-merge-sorted-array/README.md"
       ]
     },
     {
@@ -9777,6 +10317,10 @@
         "lc-merge-sorted-array::1812944478",
         "lc-merge-sorted-array::1995707128",
         "lc-merge-sorted-array::1998838221"
+      ],
+      "_committedPaths": [
+        "problems/lc-merge-sorted-array/lc-merge-sorted-array.java",
+        "problems/lc-merge-sorted-array/README.md"
       ]
     },
     {
@@ -9856,6 +10400,10 @@
         "lc-merge-sorted-array::1812944478",
         "lc-merge-sorted-array::1995704533",
         "lc-merge-sorted-array::1998838221"
+      ],
+      "_committedPaths": [
+        "problems/lc-merge-sorted-array/lc-merge-sorted-array.java",
+        "problems/lc-merge-sorted-array/README.md"
       ]
     },
     {
@@ -9935,6 +10483,10 @@
         "lc-merge-sorted-array::1812944478",
         "lc-merge-sorted-array::1995704533",
         "lc-merge-sorted-array::1995707128"
+      ],
+      "_committedPaths": [
+        "problems/lc-merge-sorted-array/lc-merge-sorted-array.java",
+        "problems/lc-merge-sorted-array/README.md"
       ]
     },
     {
@@ -10026,6 +10578,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-merge-two-sorted-lists::2137082352"
+      ],
+      "_committedPaths": [
+        "problems/merge-two-sorted-lists/leetcode/lc-merge-two-sorted-lists.py",
+        "problems/merge-two-sorted-lists/leetcode/README.md"
       ]
     },
     {
@@ -10117,6 +10673,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-merge-two-sorted-lists::1817765172"
+      ],
+      "_committedPaths": [
+        "problems/merge-two-sorted-lists/leetcode/lc-merge-two-sorted-lists.java",
+        "problems/merge-two-sorted-lists/leetcode/README.md"
       ]
     },
     {
@@ -10176,6 +10736,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-middle-of-the-linked-list::2128707341"
+      ],
+      "_committedPaths": [
+        "problems/lc-middle-of-the-linked-list/lc-middle-of-the-linked-list.py",
+        "problems/lc-middle-of-the-linked-list/README.md"
       ]
     },
     {
@@ -10235,6 +10799,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-middle-of-the-linked-list::1818412310"
+      ],
+      "_committedPaths": [
+        "problems/lc-middle-of-the-linked-list/lc-middle-of-the-linked-list.java",
+        "problems/lc-middle-of-the-linked-list/README.md"
       ]
     },
     {
@@ -10311,6 +10879,10 @@
       "linkedSolutions": [
         "lc-min-stack::2131925513",
         "lc-min-stack::2131933293"
+      ],
+      "_committedPaths": [
+        "problems/min-stack/leetcode/lc-min-stack.py",
+        "problems/min-stack/leetcode/README.md"
       ]
     },
     {
@@ -10405,6 +10977,10 @@
       "linkedSolutions": [
         "lc-min-stack::1816183516",
         "lc-min-stack::2131933293"
+      ],
+      "_committedPaths": [
+        "problems/min-stack/leetcode/lc-min-stack.java",
+        "problems/min-stack/leetcode/README.md"
       ]
     },
     {
@@ -10483,6 +11059,10 @@
       "linkedSolutions": [
         "lc-min-stack::1816183516",
         "lc-min-stack::2131925513"
+      ],
+      "_committedPaths": [
+        "problems/min-stack/leetcode/lc-min-stack.java",
+        "problems/min-stack/leetcode/README.md"
       ]
     },
     {
@@ -10498,7 +11078,7 @@
         "Binary Search"
       ],
       "canonical": null,
-      "readmeContent": "# [1482] Minimum Number of Days to Make m Bouquets\n**Difficulty:** Medium  |  **Acceptance:** 57.3%  |  **Likes:** 6015 / **Dislikes:** 335\n**Tags:** `Array`, `Binary Search`\n## Problem\nYou are given an integer array bloomDay, an integer m and an integer k.\n\nYou want to make m bouquets. To make a bouquet, you need to use k adjacent flowers from the garden.\n\nThe garden consists of n flowers, the ith flower will bloom in the bloomDay[i] and then can be used in exactly one bouquet.\n\nReturn the minimum number of days you need to wait to be able to make m bouquets from the garden. If it is impossible to make m bouquets return -1.\n\n&nbsp;\nExample 1:\n\nInput: bloomDay = [1,10,3,10,2], m = 3, k = 1\nOutput: 3\nExplanation: Let us see what happened in the first three days. x means flower bloomed and _ means flower did not bloom in the garden.\nWe need 3 bouquets each should contain 1 flower.\nAfter day 1: [x, _, _, _, _]   // we can only make one bouquet.\nAfter day 2: [x, _, _, _, x]   // we can only make two bouquets.\nAfter day 3: [x, _, x, _, x]   // we can make 3 bouquets. The answer is 3.\n\nExample 2:\n\nInput: bloomDay = [1,10,3,10,2], m = 3, k = 2\nOutput: -1\nExplanation: We need 3 bouquets each has 2 flowers, that means we need 6 flowers. We only have 5 flowers so it is impossible to get the needed bouquets and we return -1.\n\nExample 3:\n\nInput: bloomDay = [7,7,7,7,12,7,7], m = 2, k = 3\nOutput: 12\nExplanation: We need 2 bouquets each should have 3 flowers.\nHere is the garden after the 7 and 12 days:\nAfter day 7: [x, x, x, x, _, x, x]\nWe can make one bouquet of the first three flowers that bloomed. We cannot make another bouquet from the last three flowers that bloomed because they are not adjacent.\nAfter day 12: [x, x, x, x, x, x, x]\nIt is obvious that we can make two bouquets in different ways.\n\n&nbsp;\nConstraints:\n\n\tbloomDay.length == n\n\t1 <= n <= 105\n\t1 <= bloomDay[i] <= 109\n\t1 <= m <= 106\n\t1 <= k <= n\n## My Submission\n\n- Runtime: 18 ms (beats 46.8%)\n- Memory: 82.6 MB (beats 47.3%)\n\n## Similar Problems\n\n- [Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam/) — Medium\n- [Earliest Possible Day of Full Bloom](https://leetcode.com/problems/earliest-possible-day-of-full-bloom/) — Hard\n",
+      "readmeContent": "# [1482] Minimum Number of Days to Make m Bouquets\n**Difficulty:** Medium  |  **Acceptance:** 57.3%  |  **Likes:** 6015 / **Dislikes:** 335\n**Tags:** `Array`, `Binary Search`\n## Problem\nYou are given an integer array bloomDay, an integer m and an integer k.\n\nYou want to make m bouquets. To make a bouquet, you need to use k adjacent flowers from the garden.\n\nThe garden consists of n flowers, the ith flower will bloom in the bloomDay[i] and then can be used in exactly one bouquet.\n\nReturn the minimum number of days you need to wait to be able to make m bouquets from the garden. If it is impossible to make m bouquets return -1.\n\n&nbsp;\nExample 1:\n\nInput: bloomDay = [1,10,3,10,2], m = 3, k = 1\nOutput: 3\nExplanation: Let us see what happened in the first three days. x means flower bloomed and _ means flower did not bloom in the garden.\nWe need 3 bouquets each should contain 1 flower.\nAfter day 1: [x, _, _, _, _]   // we can only make one bouquet.\nAfter day 2: [x, _, _, _, x]   // we can only make two bouquets.\nAfter day 3: [x, _, x, _, x]   // we can make 3 bouquets. The answer is 3.\n\nExample 2:\n\nInput: bloomDay = [1,10,3,10,2], m = 3, k = 2\nOutput: -1\nExplanation: We need 3 bouquets each has 2 flowers, that means we need 6 flowers. We only have 5 flowers so it is impossible to get the needed bouquets and we return -1.\n\nExample 3:\n\nInput: bloomDay = [7,7,7,7,12,7,7], m = 2, k = 3\nOutput: 12\nExplanation: We need 2 bouquets each should have 3 flowers.\nHere is the garden after the 7 and 12 days:\nAfter day 7: [x, x, x, x, _, x, x]\nWe can make one bouquet of the first three flowers that bloomed. We cannot make another bouquet from the last three flowers that bloomed because they are not adjacent.\nAfter day 12: [x, x, x, x, x, x, x]\nIt is obvious that we can make two bouquets in different ways.\n\n&nbsp;\nConstraints:\n\n\tbloomDay.length == n\n\t1 <= n <= 105\n\t1 <= bloomDay[i] <= 109\n\t1 <= m <= 106\n\t1 <= k <= n\n## My Submission\n\n- Runtime: 18 ms (beats 46.8%)\n- Memory: 82.6 MB (beats 47.2%)\n\n## Similar Problems\n\n- [Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam/) — Medium\n- [Earliest Possible Day of Full Bloom](https://leetcode.com/problems/earliest-possible-day-of-full-bloom/) — Hard\n",
       "code": "class Solution {\n    public int minDays(int[] bloomDay, int m, int k) {\n        if(m*k > bloomDay.length) return -1;\n        int l = Integer.MAX_VALUE, h = Integer.MIN_VALUE;\n        for(int bloom : bloomDay){\n            l = Math.min(l, bloom);\n            h = Math.max(h, bloom);\n        }\n        int ans = -1;\n        while(l <= h){\n            int mid = l + (h - l)/2;\n            if(helper(bloomDay, m, k, mid)){\n                ans = mid;\n                h = mid - 1;\n            }\n            else{\n                l = mid+1;\n            }\n        }\n        return ans;\n    }\n\n    public boolean helper(int[] bloomDay, int m, int k, int day){\n        int count = 0;\n        int b = 0;\n        for(int bloom : bloomDay){\n            if(bloom <= day){\n                count++;\n                if(count == k){\n                    b++;\n                    count = 0;\n                }\n            }\n            else{\n                count = 0;\n            }\n        }\n        return b >= m;\n    }\n}",
       "files": [
         {
@@ -10507,7 +11087,7 @@
         },
         {
           "path": "problems/lc-minimum-number-of-days-to-make-m-bouquets/README.md",
-          "content": "# [1482] Minimum Number of Days to Make m Bouquets\n**Difficulty:** Medium  |  **Acceptance:** 57.3%  |  **Likes:** 6015 / **Dislikes:** 335\n**Tags:** `Array`, `Binary Search`\n## Problem\nYou are given an integer array bloomDay, an integer m and an integer k.\n\nYou want to make m bouquets. To make a bouquet, you need to use k adjacent flowers from the garden.\n\nThe garden consists of n flowers, the ith flower will bloom in the bloomDay[i] and then can be used in exactly one bouquet.\n\nReturn the minimum number of days you need to wait to be able to make m bouquets from the garden. If it is impossible to make m bouquets return -1.\n\n&nbsp;\nExample 1:\n\nInput: bloomDay = [1,10,3,10,2], m = 3, k = 1\nOutput: 3\nExplanation: Let us see what happened in the first three days. x means flower bloomed and _ means flower did not bloom in the garden.\nWe need 3 bouquets each should contain 1 flower.\nAfter day 1: [x, _, _, _, _]   // we can only make one bouquet.\nAfter day 2: [x, _, _, _, x]   // we can only make two bouquets.\nAfter day 3: [x, _, x, _, x]   // we can make 3 bouquets. The answer is 3.\n\nExample 2:\n\nInput: bloomDay = [1,10,3,10,2], m = 3, k = 2\nOutput: -1\nExplanation: We need 3 bouquets each has 2 flowers, that means we need 6 flowers. We only have 5 flowers so it is impossible to get the needed bouquets and we return -1.\n\nExample 3:\n\nInput: bloomDay = [7,7,7,7,12,7,7], m = 2, k = 3\nOutput: 12\nExplanation: We need 2 bouquets each should have 3 flowers.\nHere is the garden after the 7 and 12 days:\nAfter day 7: [x, x, x, x, _, x, x]\nWe can make one bouquet of the first three flowers that bloomed. We cannot make another bouquet from the last three flowers that bloomed because they are not adjacent.\nAfter day 12: [x, x, x, x, x, x, x]\nIt is obvious that we can make two bouquets in different ways.\n\n&nbsp;\nConstraints:\n\n\tbloomDay.length == n\n\t1 <= n <= 105\n\t1 <= bloomDay[i] <= 109\n\t1 <= m <= 106\n\t1 <= k <= n\n## My Submission\n\n- Runtime: 18 ms (beats 46.8%)\n- Memory: 82.6 MB (beats 47.3%)\n\n## Similar Problems\n\n- [Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam/) — Medium\n- [Earliest Possible Day of Full Bloom](https://leetcode.com/problems/earliest-possible-day-of-full-bloom/) — Hard\n"
+          "content": "# [1482] Minimum Number of Days to Make m Bouquets\n**Difficulty:** Medium  |  **Acceptance:** 57.3%  |  **Likes:** 6015 / **Dislikes:** 335\n**Tags:** `Array`, `Binary Search`\n## Problem\nYou are given an integer array bloomDay, an integer m and an integer k.\n\nYou want to make m bouquets. To make a bouquet, you need to use k adjacent flowers from the garden.\n\nThe garden consists of n flowers, the ith flower will bloom in the bloomDay[i] and then can be used in exactly one bouquet.\n\nReturn the minimum number of days you need to wait to be able to make m bouquets from the garden. If it is impossible to make m bouquets return -1.\n\n&nbsp;\nExample 1:\n\nInput: bloomDay = [1,10,3,10,2], m = 3, k = 1\nOutput: 3\nExplanation: Let us see what happened in the first three days. x means flower bloomed and _ means flower did not bloom in the garden.\nWe need 3 bouquets each should contain 1 flower.\nAfter day 1: [x, _, _, _, _]   // we can only make one bouquet.\nAfter day 2: [x, _, _, _, x]   // we can only make two bouquets.\nAfter day 3: [x, _, x, _, x]   // we can make 3 bouquets. The answer is 3.\n\nExample 2:\n\nInput: bloomDay = [1,10,3,10,2], m = 3, k = 2\nOutput: -1\nExplanation: We need 3 bouquets each has 2 flowers, that means we need 6 flowers. We only have 5 flowers so it is impossible to get the needed bouquets and we return -1.\n\nExample 3:\n\nInput: bloomDay = [7,7,7,7,12,7,7], m = 2, k = 3\nOutput: 12\nExplanation: We need 2 bouquets each should have 3 flowers.\nHere is the garden after the 7 and 12 days:\nAfter day 7: [x, x, x, x, _, x, x]\nWe can make one bouquet of the first three flowers that bloomed. We cannot make another bouquet from the last three flowers that bloomed because they are not adjacent.\nAfter day 12: [x, x, x, x, x, x, x]\nIt is obvious that we can make two bouquets in different ways.\n\n&nbsp;\nConstraints:\n\n\tbloomDay.length == n\n\t1 <= n <= 105\n\t1 <= bloomDay[i] <= 109\n\t1 <= m <= 106\n\t1 <= k <= n\n## My Submission\n\n- Runtime: 18 ms (beats 46.8%)\n- Memory: 82.6 MB (beats 47.2%)\n\n## Similar Problems\n\n- [Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam/) — Medium\n- [Earliest Possible Day of Full Bloom](https://leetcode.com/problems/earliest-possible-day-of-full-bloom/) — Hard\n"
         }
       ],
       "lang": {
@@ -10517,10 +11097,10 @@
       },
       "runtime": "18 ms",
       "memory": "82.6 MB",
-      "runtimePct": 46.775999999999996,
-      "memoryPct": 47.28819999999992,
+      "runtimePct": 46.761799999999994,
+      "memoryPct": 47.18579999999998,
       "timestamp": 1791702767000,
-      "acRate": 57.2897947201936,
+      "acRate": 57.295082506792106,
       "likes": 6015,
       "dislikes": 335,
       "similar": [
@@ -10547,7 +11127,12 @@
       "duplicateOf": null,
       "platform": "leetcode",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-minimum-number-of-days-to-make-m-bouquets/lc-minimum-number-of-days-to-make-m-bouquets.java",
+        "problems/lc-minimum-number-of-days-to-make-m-bouquets/README.md"
+      ],
+      "_requestAIReview": true
     },
     {
       "id": "lc-minimum-speed-to-arrive-on-time::2166972610",
@@ -10624,7 +11209,11 @@
       "hasSimilar": true,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-minimum-speed-to-arrive-on-time/lc-minimum-speed-to-arrive-on-time.java",
+        "problems/lc-minimum-speed-to-arrive-on-time/README.md"
+      ]
     },
     {
       "id": "lc-minimum-swaps-to-move-zeros-to-end::2010861785",
@@ -10670,7 +11259,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-minimum-swaps-to-move-zeros-to-end/lc-minimum-swaps-to-move-zeros-to-end.java",
+        "problems/lc-minimum-swaps-to-move-zeros-to-end/README.md"
+      ]
     },
     {
       "id": "lc-monthly-transactions-i::1814104521",
@@ -10712,7 +11305,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-monthly-transactions-i/lc-monthly-transactions-i.sql",
+        "problems/lc-monthly-transactions-i/README.md"
+      ]
     },
     {
       "id": "lc-move-zeroes::1812907226",
@@ -10771,7 +11368,11 @@
       "hasSimilar": true,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-move-zeroes/lc-move-zeroes.py",
+        "problems/lc-move-zeroes/README.md"
+      ]
     },
     {
       "id": "lc-not-boring-movies::1807304689",
@@ -10813,7 +11414,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-not-boring-movies/lc-not-boring-movies.sql",
+        "problems/lc-not-boring-movies/README.md"
+      ]
     },
     {
       "id": "lc-number-of-unique-subjects-taught-by-each-teacher::1816190831",
@@ -10855,7 +11460,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-number-of-unique-subjects-taught-by-each-teacher/lc-number-of-unique-subjects-taught-by-each-teacher.sql",
+        "problems/lc-number-of-unique-subjects-taught-by-each-teacher/README.md"
+      ]
     },
     {
       "id": "lc-pascals-triangle::1979892566",
@@ -10911,7 +11520,11 @@
       "hasSimilar": true,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-pascals-triangle/lc-pascals-triangle.java",
+        "problems/lc-pascals-triangle/README.md"
+      ]
     },
     {
       "id": "lc-percentage-of-users-attended-a-contest::1812971092",
@@ -10960,7 +11573,11 @@
       "hasSimilar": true,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-percentage-of-users-attended-a-contest/lc-percentage-of-users-attended-a-contest.sql",
+        "problems/lc-percentage-of-users-attended-a-contest/README.md"
+      ]
     },
     {
       "id": "lc-permutation-in-string::2157785433",
@@ -11045,7 +11662,11 @@
       },
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/permutation-in-string/leetcode/lc-permutation-in-string.java",
+        "problems/permutation-in-string/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-product-of-array-except-self::2144981144",
@@ -11179,6 +11800,10 @@
       "linkedSolutions": [
         "lc-product-of-array-except-self::2144988279",
         "lc-product-of-array-except-self::2144990775"
+      ],
+      "_committedPaths": [
+        "problems/product-of-array-except-self/leetcode/lc-product-of-array-except-self.java",
+        "problems/product-of-array-except-self/leetcode/README.md"
       ]
     },
     {
@@ -11282,6 +11907,10 @@
       "linkedSolutions": [
         "lc-product-of-array-except-self::2144981144",
         "lc-product-of-array-except-self::2144990775"
+      ],
+      "_committedPaths": [
+        "problems/product-of-array-except-self/leetcode/lc-product-of-array-except-self.java",
+        "problems/product-of-array-except-self/leetcode/README.md"
       ]
     },
     {
@@ -11385,6 +12014,10 @@
       "linkedSolutions": [
         "lc-product-of-array-except-self::2144981144",
         "lc-product-of-array-except-self::2144988279"
+      ],
+      "_committedPaths": [
+        "problems/product-of-array-except-self/leetcode/lc-product-of-array-except-self.java",
+        "problems/product-of-array-except-self/leetcode/README.md"
       ]
     },
     {
@@ -11448,6 +12081,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-product-sales-analysis-i::1807326786"
+      ],
+      "_committedPaths": [
+        "problems/lc-product-sales-analysis-i/lc-product-sales-analysis-i.sql",
+        "problems/lc-product-sales-analysis-i/README.md"
       ]
     },
     {
@@ -11495,6 +12132,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-product-sales-analysis-i::1807325313"
+      ],
+      "_committedPaths": [
+        "problems/lc-product-sales-analysis-i/lc-product-sales-analysis-i.sql",
+        "problems/lc-product-sales-analysis-i/README.md"
       ]
     },
     {
@@ -11537,7 +12178,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-product-sales-analysis-iii/lc-product-sales-analysis-iii.sql",
+        "problems/lc-product-sales-analysis-iii/README.md"
+      ]
     },
     {
       "id": "lc-project-employees-i::1812959488",
@@ -11579,7 +12224,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-project-employees-i/lc-project-employees-i.sql",
+        "problems/lc-project-employees-i/README.md"
+      ]
     },
     {
       "id": "lc-queries-quality-and-percentage::1814086212",
@@ -11628,7 +12277,11 @@
       "hasSimilar": true,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-queries-quality-and-percentage/lc-queries-quality-and-percentage.sql",
+        "problems/lc-queries-quality-and-percentage/README.md"
+      ]
     },
     {
       "id": "lc-rearrange-array-elements-by-sign::1982825825",
@@ -11700,7 +12353,11 @@
       "hasSimilar": true,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-rearrange-array-elements-by-sign/lc-rearrange-array-elements-by-sign.java",
+        "problems/lc-rearrange-array-elements-by-sign/README.md"
+      ]
     },
     {
       "id": "lc-recyclable-and-low-fat-products::1985828694",
@@ -11742,7 +12399,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-recyclable-and-low-fat-products/lc-recyclable-and-low-fat-products.sql",
+        "problems/lc-recyclable-and-low-fat-products/README.md"
+      ]
     },
     {
       "id": "lc-remove-duplicates-from-sorted-array::1813681167",
@@ -11817,6 +12478,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-remove-duplicates-from-sorted-array::2009988830"
+      ],
+      "_committedPaths": [
+        "problems/lc-remove-duplicates-from-sorted-array/lc-remove-duplicates-from-sorted-array.py",
+        "problems/lc-remove-duplicates-from-sorted-array/README.md"
       ]
     },
     {
@@ -11892,6 +12557,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-remove-duplicates-from-sorted-array::1813681167"
+      ],
+      "_committedPaths": [
+        "problems/lc-remove-duplicates-from-sorted-array/lc-remove-duplicates-from-sorted-array.java",
+        "problems/lc-remove-duplicates-from-sorted-array/README.md"
       ]
     },
     {
@@ -11970,7 +12639,11 @@
       },
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/remove-nth-node-from-end-of-list/leetcode/lc-remove-nth-node-from-end-of-list.java",
+        "problems/remove-nth-node-from-end-of-list/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-remove-zeros-in-decimal-representation::1813666556",
@@ -12015,7 +12688,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-remove-zeros-in-decimal-representation/lc-remove-zeros-in-decimal-representation.py",
+        "problems/lc-remove-zeros-in-decimal-representation/README.md"
+      ]
     },
     {
       "id": "lc-replace-employee-id-with-the-unique-identifier::1807318172",
@@ -12057,7 +12734,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-replace-employee-id-with-the-unique-identifier/lc-replace-employee-id-with-the-unique-identifier.sql",
+        "problems/lc-replace-employee-id-with-the-unique-identifier/README.md"
+      ]
     },
     {
       "id": "lc-reverse-linked-list::1817021395",
@@ -12160,6 +12841,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-reverse-linked-list::2128620948"
+      ],
+      "_committedPaths": [
+        "problems/reverse-linked-list/leetcode/lc-reverse-linked-list.py",
+        "problems/reverse-linked-list/leetcode/README.md"
       ]
     },
     {
@@ -12263,6 +12948,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-reverse-linked-list::1817021395"
+      ],
+      "_committedPaths": [
+        "problems/reverse-linked-list/leetcode/lc-reverse-linked-list.java",
+        "problems/reverse-linked-list/leetcode/README.md"
       ]
     },
     {
@@ -12325,7 +13014,11 @@
       "hasSimilar": true,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-reverse-string-ii/lc-reverse-string-ii.py",
+        "problems/lc-reverse-string-ii/README.md"
+      ]
     },
     {
       "id": "lc-reverse-string::2150626722",
@@ -12383,7 +13076,11 @@
       "hasSimilar": true,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-reverse-string/lc-reverse-string.java",
+        "problems/lc-reverse-string/README.md"
+      ]
     },
     {
       "id": "lc-rising-temperature::1809625715",
@@ -12425,7 +13122,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-rising-temperature/lc-rising-temperature.sql",
+        "problems/lc-rising-temperature/README.md"
+      ]
     },
     {
       "id": "lc-roman-to-integer::1814750261",
@@ -12478,7 +13179,11 @@
       "hasSimilar": true,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-roman-to-integer/lc-roman-to-integer.py",
+        "problems/lc-roman-to-integer/README.md"
+      ]
     },
     {
       "id": "lc-rotate-array::2129851950",
@@ -12609,6 +13314,10 @@
         "lc-rotate-array::2129859494",
         "lc-rotate-array::2162694467",
         "lc-rotate-array::2164529732"
+      ],
+      "_committedPaths": [
+        "problems/lc-rotate-array/lc-rotate-array.java",
+        "problems/lc-rotate-array/README.md"
       ]
     },
     {
@@ -12679,6 +13388,10 @@
         "lc-rotate-array::2129859494",
         "lc-rotate-array::2162694467",
         "lc-rotate-array::2164529732"
+      ],
+      "_committedPaths": [
+        "problems/lc-rotate-array/lc-rotate-array.java",
+        "problems/lc-rotate-array/README.md"
       ]
     },
     {
@@ -12749,6 +13462,10 @@
         "lc-rotate-array::2129858873",
         "lc-rotate-array::2162694467",
         "lc-rotate-array::2164529732"
+      ],
+      "_committedPaths": [
+        "problems/lc-rotate-array/lc-rotate-array.java",
+        "problems/lc-rotate-array/README.md"
       ]
     },
     {
@@ -12819,6 +13536,10 @@
         "lc-rotate-array::2129858873",
         "lc-rotate-array::2129859494",
         "lc-rotate-array::2164529732"
+      ],
+      "_committedPaths": [
+        "problems/lc-rotate-array/lc-rotate-array.java",
+        "problems/lc-rotate-array/README.md"
       ]
     },
     {
@@ -12889,6 +13610,10 @@
         "lc-rotate-array::2129858873",
         "lc-rotate-array::2129859494",
         "lc-rotate-array::2162694467"
+      ],
+      "_committedPaths": [
+        "problems/lc-rotate-array/lc-rotate-array.java",
+        "problems/lc-rotate-array/README.md"
       ]
     },
     {
@@ -12933,7 +13658,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-score-validator/lc-score-validator.java",
+        "problems/lc-score-validator/README.md"
+      ]
     },
     {
       "id": "lc-search-in-rotated-sorted-array-ii::2016425874",
@@ -13004,6 +13733,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-search-in-rotated-sorted-array-ii::2016433387"
+      ],
+      "_committedPaths": [
+        "problems/lc-search-in-rotated-sorted-array-ii/lc-search-in-rotated-sorted-array-ii.java",
+        "problems/lc-search-in-rotated-sorted-array-ii/README.md"
       ]
     },
     {
@@ -13059,6 +13792,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-search-in-rotated-sorted-array-ii::2016425874"
+      ],
+      "_committedPaths": [
+        "problems/lc-search-in-rotated-sorted-array-ii/lc-search-in-rotated-sorted-array-ii.java",
+        "problems/lc-search-in-rotated-sorted-array-ii/README.md"
       ]
     },
     {
@@ -13188,6 +13925,10 @@
         "lc-search-in-rotated-sorted-array::2139153849",
         "lc-search-in-rotated-sorted-array::2159860171",
         "lc-search-in-rotated-sorted-array::2159868297"
+      ],
+      "_committedPaths": [
+        "problems/search-in-rotated-sorted-array/leetcode/lc-search-in-rotated-sorted-array.java",
+        "problems/search-in-rotated-sorted-array/leetcode/README.md"
       ]
     },
     {
@@ -13271,6 +14012,10 @@
         "lc-search-in-rotated-sorted-array::2010425869",
         "lc-search-in-rotated-sorted-array::2159860171",
         "lc-search-in-rotated-sorted-array::2159868297"
+      ],
+      "_committedPaths": [
+        "problems/search-in-rotated-sorted-array/leetcode/lc-search-in-rotated-sorted-array.java",
+        "problems/search-in-rotated-sorted-array/leetcode/README.md"
       ]
     },
     {
@@ -13354,6 +14099,10 @@
         "lc-search-in-rotated-sorted-array::2010425869",
         "lc-search-in-rotated-sorted-array::2139153849",
         "lc-search-in-rotated-sorted-array::2159868297"
+      ],
+      "_committedPaths": [
+        "problems/search-in-rotated-sorted-array/leetcode/lc-search-in-rotated-sorted-array.java",
+        "problems/search-in-rotated-sorted-array/leetcode/README.md"
       ]
     },
     {
@@ -13437,6 +14186,10 @@
         "lc-search-in-rotated-sorted-array::2010425869",
         "lc-search-in-rotated-sorted-array::2139153849",
         "lc-search-in-rotated-sorted-array::2159860171"
+      ],
+      "_committedPaths": [
+        "problems/search-in-rotated-sorted-array/leetcode/lc-search-in-rotated-sorted-array.java",
+        "problems/search-in-rotated-sorted-array/leetcode/README.md"
       ]
     },
     {
@@ -13530,6 +14283,10 @@
       "linkedSolutions": [
         "lc-search-insert-position::2138204331",
         "lc-search-insert-position::2159846993"
+      ],
+      "_committedPaths": [
+        "problems/lc-search-insert-position/lc-search-insert-position.java",
+        "problems/lc-search-insert-position/README.md"
       ]
     },
     {
@@ -13592,6 +14349,10 @@
       "linkedSolutions": [
         "lc-search-insert-position::2012882357",
         "lc-search-insert-position::2159846993"
+      ],
+      "_committedPaths": [
+        "problems/lc-search-insert-position/lc-search-insert-position.java",
+        "problems/lc-search-insert-position/README.md"
       ]
     },
     {
@@ -13654,6 +14415,10 @@
       "linkedSolutions": [
         "lc-search-insert-position::2012882357",
         "lc-search-insert-position::2138204331"
+      ],
+      "_committedPaths": [
+        "problems/lc-search-insert-position/lc-search-insert-position.java",
+        "problems/lc-search-insert-position/README.md"
       ]
     },
     {
@@ -13743,6 +14508,10 @@
       "linkedSolutions": [
         "lc-set-mismatch::1993497909",
         "lc-set-mismatch::1995725221"
+      ],
+      "_committedPaths": [
+        "problems/lc-set-mismatch/lc-set-mismatch.java",
+        "problems/lc-set-mismatch/README.md"
       ]
     },
     {
@@ -13801,6 +14570,10 @@
       "linkedSolutions": [
         "lc-set-mismatch::1993493098",
         "lc-set-mismatch::1995725221"
+      ],
+      "_committedPaths": [
+        "problems/lc-set-mismatch/lc-set-mismatch.java",
+        "problems/lc-set-mismatch/README.md"
       ]
     },
     {
@@ -13859,6 +14632,10 @@
       "linkedSolutions": [
         "lc-set-mismatch::1993493098",
         "lc-set-mismatch::1993497909"
+      ],
+      "_committedPaths": [
+        "problems/lc-set-mismatch/lc-set-mismatch.java",
+        "problems/lc-set-mismatch/README.md"
       ]
     },
     {
@@ -13922,7 +14699,11 @@
       "hasSimilar": true,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-sort-colors/lc-sort-colors.java",
+        "problems/lc-sort-colors/README.md"
+      ]
     },
     {
       "id": "lc-spiral-matrix::1978254878",
@@ -14009,7 +14790,11 @@
       },
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/spiral-matrix/leetcode/lc-spiral-matrix.java",
+        "problems/spiral-matrix/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-sqrtx::2158800022",
@@ -14069,7 +14854,11 @@
       "hasSimilar": true,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-sqrtx/lc-sqrtx.java",
+        "problems/lc-sqrtx/README.md"
+      ]
     },
     {
       "id": "lc-students-and-examinations::1809672835",
@@ -14111,7 +14900,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-students-and-examinations/lc-students-and-examinations.sql",
+        "problems/lc-students-and-examinations/README.md"
+      ]
     },
     {
       "id": "lc-subarray-sum-equals-k::1978320870",
@@ -14240,6 +15033,10 @@
       "linkedSolutions": [
         "lc-subarray-sum-equals-k::2004850568",
         "lc-subarray-sum-equals-k::2008352692"
+      ],
+      "_committedPaths": [
+        "problems/lc-subarray-sum-equals-k/lc-subarray-sum-equals-k.java",
+        "problems/lc-subarray-sum-equals-k/README.md"
       ]
     },
     {
@@ -14338,6 +15135,10 @@
       "linkedSolutions": [
         "lc-subarray-sum-equals-k::1978320870",
         "lc-subarray-sum-equals-k::2008352692"
+      ],
+      "_committedPaths": [
+        "problems/lc-subarray-sum-equals-k/lc-subarray-sum-equals-k.java",
+        "problems/lc-subarray-sum-equals-k/README.md"
       ]
     },
     {
@@ -14436,6 +15237,10 @@
       "linkedSolutions": [
         "lc-subarray-sum-equals-k::1978320870",
         "lc-subarray-sum-equals-k::2004850568"
+      ],
+      "_committedPaths": [
+        "problems/lc-subarray-sum-equals-k/lc-subarray-sum-equals-k.java",
+        "problems/lc-subarray-sum-equals-k/README.md"
       ]
     },
     {
@@ -14538,6 +15343,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-subarray-sums-divisible-by-k::2145369923"
+      ],
+      "_committedPaths": [
+        "problems/lc-subarray-sums-divisible-by-k/lc-subarray-sums-divisible-by-k.java",
+        "problems/lc-subarray-sums-divisible-by-k/README.md"
       ]
     },
     {
@@ -14624,6 +15433,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-subarray-sums-divisible-by-k::2009246149"
+      ],
+      "_committedPaths": [
+        "problems/lc-subarray-sums-divisible-by-k/lc-subarray-sums-divisible-by-k.java",
+        "problems/lc-subarray-sums-divisible-by-k/README.md"
       ]
     },
     {
@@ -14669,7 +15482,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-sum-of-primes-between-number-and-its-reverse/lc-sum-of-primes-between-number-and-its-reverse.java",
+        "problems/lc-sum-of-primes-between-number-and-its-reverse/README.md"
+      ]
     },
     {
       "id": "lc-two-sum::1807651380",
@@ -14856,7 +15673,11 @@
       },
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/two-sum/leetcode/lc-two-sum.py",
+        "problems/two-sum/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-user-activity-for-the-past-30-days-i::1816203887",
@@ -14898,7 +15719,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-user-activity-for-the-past-30-days-i/lc-user-activity-for-the-past-30-days-i.sql",
+        "problems/lc-user-activity-for-the-past-30-days-i/README.md"
+      ]
     },
     {
       "id": "lc-valid-anagram::1810433410",
@@ -14986,6 +15811,10 @@
       "linkedSolutions": [
         "lc-valid-anagram::2004782201",
         "lc-valid-anagram::2128155435"
+      ],
+      "_committedPaths": [
+        "problems/valid-anagram/leetcode/lc-valid-anagram.py",
+        "problems/valid-anagram/leetcode/README.md"
       ]
     },
     {
@@ -15092,6 +15921,10 @@
       "linkedSolutions": [
         "lc-valid-anagram::1810433410",
         "lc-valid-anagram::2128155435"
+      ],
+      "_committedPaths": [
+        "problems/valid-anagram/leetcode/lc-valid-anagram.java",
+        "problems/valid-anagram/leetcode/README.md"
       ]
     },
     {
@@ -15182,6 +16015,10 @@
       "linkedSolutions": [
         "lc-valid-anagram::1810433410",
         "lc-valid-anagram::2004782201"
+      ],
+      "_committedPaths": [
+        "problems/valid-anagram/leetcode/lc-valid-anagram.java",
+        "problems/valid-anagram/leetcode/README.md"
       ]
     },
     {
@@ -15226,7 +16063,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-valid-digit-number/lc-valid-digit-number.java",
+        "problems/lc-valid-digit-number/README.md"
+      ]
     },
     {
       "id": "lc-valid-palindrome-ii::2151760350",
@@ -15277,7 +16118,11 @@
       "hasSimilar": true,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-valid-palindrome-ii/lc-valid-palindrome-ii.java",
+        "problems/lc-valid-palindrome-ii/README.md"
+      ]
     },
     {
       "id": "lc-valid-palindrome::1812897923",
@@ -15374,6 +16219,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-valid-palindrome::2151733729"
+      ],
+      "_committedPaths": [
+        "problems/valid-palindrome/leetcode/lc-valid-palindrome.py",
+        "problems/valid-palindrome/leetcode/README.md"
       ]
     },
     {
@@ -15471,6 +16320,10 @@
       "manuallyEdited": false,
       "linkedSolutions": [
         "lc-valid-palindrome::1812897923"
+      ],
+      "_committedPaths": [
+        "problems/valid-palindrome/leetcode/lc-valid-palindrome.java",
+        "problems/valid-palindrome/leetcode/README.md"
       ]
     },
     {
@@ -15580,6 +16433,10 @@
       "linkedSolutions": [
         "lc-valid-parentheses::2128544360",
         "lc-valid-parentheses::2128547824"
+      ],
+      "_committedPaths": [
+        "problems/valid-parentheses/leetcode/lc-valid-parentheses.py",
+        "problems/valid-parentheses/leetcode/README.md"
       ]
     },
     {
@@ -15707,6 +16564,10 @@
       "linkedSolutions": [
         "lc-valid-parentheses::1815862601",
         "lc-valid-parentheses::2128547824"
+      ],
+      "_committedPaths": [
+        "problems/valid-parentheses/leetcode/lc-valid-parentheses.java",
+        "problems/valid-parentheses/leetcode/README.md"
       ]
     },
     {
@@ -15818,6 +16679,10 @@
       "linkedSolutions": [
         "lc-valid-parentheses::1815862601",
         "lc-valid-parentheses::2128544360"
+      ],
+      "_committedPaths": [
+        "problems/valid-parentheses/leetcode/lc-valid-parentheses.java",
+        "problems/valid-parentheses/leetcode/README.md"
       ]
     },
     {
@@ -15860,7 +16725,11 @@
       "hasSimilar": null,
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-zigzag-conversion/lc-zigzag-conversion.py",
+        "problems/lc-zigzag-conversion/README.md"
+      ]
     }
   ]
 }

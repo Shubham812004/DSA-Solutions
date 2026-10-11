@@ -41,23 +41,6 @@
 
 ---
 
-## Recent Solves
-
-| Problem | Difficulty | Language | Platform | Date |
-|---------|-----------|----------|----------|------|
-| [Minimum Days to Make m Bouquets](https://www.geeksforgeeks.org/problems/minimum-days-to-make-m-bouquets/1) | Medium | Java | geeksforgeeks | Oct 11 |
-| [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | Medium | Java | leetcode | Oct 11 |
-| [Minimum Speed to Arrive on Time](https://leetcode.com/problems/minimum-speed-to-arrive-on-time/) | Medium | Java | leetcode | Oct 9 |
-| [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) | Medium | Java | leetcode | Oct 8 |
-| [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | Medium | Java | leetcode | Oct 7 |
-| [Rotate Array](https://leetcode.com/problems/rotate-array/) | Medium | Java | leetcode | Oct 6 |
-| [Rotate Array](https://leetcode.com/problems/rotate-array/) | Medium | Java | leetcode | Oct 5 |
-| [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | Medium | Java | leetcode | Oct 5 |
-| [Find Peak Element](https://leetcode.com/problems/find-peak-element/) | Medium | Java | leetcode | Oct 4 |
-| [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Medium | Java | leetcode | Oct 3 |
-
----
-
 ## Repository Structure
 
 ```
@@ -97,6 +80,7 @@ Built with [CodeLedger](https://codeledger.vkrishna04.me) · [⭐ Star the exten
 </div>
 
 <!-- CODELEDGER_AUTO_GENERATED_END -->
+
 
 
 
