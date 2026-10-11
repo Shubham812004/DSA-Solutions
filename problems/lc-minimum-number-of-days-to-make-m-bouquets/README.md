@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-minimum-number-of-days-to-make-m-bouquets` |
 | Topics | Array, Binary Search |
-| Solved | 2026-06-11 |
-| Runtime | 16 ms (beats 90.12889999999999%) |
-| Memory | 82.6 MB (beats 66.61309999999992%) |
+| Solved | 2026-10-11 |
+| Runtime | 18 ms (beats 46.775999999999996%) |
+| Memory | 82.6 MB (beats 47.28819999999992%) |
 
 ## Problem Statement
 
@@ -68,42 +68,42 @@ It is obvious that we can make two bouquets in different ways.
 ```Java
 class Solution {
     public int minDays(int[] bloomDay, int m, int k) {
-        if(bloomDay.length < m*k) return -1;
-
-        int low = Integer.MAX_VALUE;
-        int high = Integer.MIN_VALUE;
-        for(int day : bloomDay){
-            low = Math.min(day, low);
-            high = Math.max(day, high);
+        if(m*k > bloomDay.length) return -1;
+        int l = Integer.MAX_VALUE, h = Integer.MIN_VALUE;
+        for(int bloom : bloomDay){
+            l = Math.min(l, bloom);
+            h = Math.max(h, bloom);
         }
         int ans = -1;
-        while(low <= high){
-            int mid = low + (high - low) / 2;
-            if(helper(bloomDay, mid, m, k)){
+        while(l <= h){
+            int mid = l + (h - l)/2;
+            if(helper(bloomDay, m, k, mid)){
                 ans = mid;
-                high = mid - 1;
+                h = mid - 1;
             }
             else{
-                low = mid + 1;
+                l = mid+1;
             }
         }
         return ans;
     }
 
-    boolean helper(int[] bloomDay, int day, int m, int k){
+    public boolean helper(int[] bloomDay, int m, int k, int day){
         int count = 0;
-        int noOfB = 0;
+        int b = 0;
         for(int bloom : bloomDay){
             if(bloom <= day){
                 count++;
+                if(count == k){
+                    b++;
+                    count = 0;
+                }
             }
             else{
-                noOfB += count / k;
                 count = 0;
             }
         }
-        noOfB += count/k;
-        return noOfB >= m;
+        return b >= m;
     }
 }
 ```

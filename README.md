@@ -10,11 +10,11 @@
 
 <!-- codeledger:gamification:start -->
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://shubham812004.github.io/DSA-Solutions/badges/card-light.svg?v=3935-0-228-2026-10-11">
-  <img src="https://shubham812004.github.io/DSA-Solutions/badges/card.svg?v=3935-0-228-2026-10-11" alt="Streak card" width="420">
+  <source media="(prefers-color-scheme: light)" srcset="https://shubham812004.github.io/DSA-Solutions/badges/card-light.svg?v=3935-1-228-2026-10-11">
+  <img src="https://shubham812004.github.io/DSA-Solutions/badges/card.svg?v=3935-1-228-2026-10-11" alt="Streak card" width="420">
 </picture>
 
-![Streak](https://shubham812004.github.io/DSA-Solutions/badges/streak.svg?v=3935-0-228-2026-10-11) ![Points](https://shubham812004.github.io/DSA-Solutions/badges/points.svg?v=3935-0-228-2026-10-11) ![Level](https://shubham812004.github.io/DSA-Solutions/badges/level.svg?v=3935-0-228-2026-10-11) ![Freezes](https://shubham812004.github.io/DSA-Solutions/badges/freezes.svg?v=3935-0-228-2026-10-11)
+![Streak](https://shubham812004.github.io/DSA-Solutions/badges/streak.svg?v=3935-1-228-2026-10-11) ![Points](https://shubham812004.github.io/DSA-Solutions/badges/points.svg?v=3935-1-228-2026-10-11) ![Level](https://shubham812004.github.io/DSA-Solutions/badges/level.svg?v=3935-1-228-2026-10-11) ![Freezes](https://shubham812004.github.io/DSA-Solutions/badges/freezes.svg?v=3935-1-228-2026-10-11)
 
 🩸 First Blood · 🔟 Ten Down · 💯 Century · 🎯 Well Rounded · ⚡ Double Day · ⭐ Engineer
 <!-- codeledger:gamification:end -->
@@ -37,7 +37,7 @@
 
 **Top Languages:** Java (113) · Unknown (51) · MySQL (35) · Python (29)
 
-**Top Topics:** Array (95) · Untagged (43) · Database (35) · String (19) · Linked List (11) · Dynamic Programming (6) · Stack (5) · Math (4) · Hash Table (3) · Two Pointers (3)
+**Top Topics:** Array (98) · Untagged (38) · Database (35) · String (19) · Linked List (11) · Dynamic Programming (6) · Math (5) · Stack (5) · Hash Table (3) · Two Pointers (3)
 
 ---
 
@@ -80,6 +80,7 @@ Built with [CodeLedger](https://codeledger.vkrishna04.me) · [⭐ Star the exten
 </div>
 
 <!-- CODELEDGER_AUTO_GENERATED_END -->
+
 
 
 

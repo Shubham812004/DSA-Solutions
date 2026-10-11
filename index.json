@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T05:52:13.555Z",
+  "updatedAt": "2026-10-11T07:12:51.288Z",
   "layoutVersion": 3,
   "stats": {
     "total": 228,
@@ -21,15 +21,16 @@
       "Matrix": 1,
       "Binary Search": 2,
       "String": 19,
-      "Array": 95,
+      "Array": 98,
       "Greedy": 1,
-      "Untagged": 43,
+      "Untagged": 38,
+      "Prefix Sum": 1,
+      "Math": 5,
       "Linked List": 11,
       "Database": 35,
       "Dynamic Programming": 6,
       "Hash Table": 3,
       "Stack": 5,
-      "Math": 4,
       "Two Pointers": 3
     }
   },
@@ -327,7 +328,10 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -336,7 +340,7 @@
       "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an array <strong>arr[]</strong>, check whether it is sorted in non-decreasing order. Return </span><span>true if it is sorted otherwise false.</span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input: </strong>arr[] = [10, 20, 30, 40, 50]\n<strong>Output:</strong> true\n<strong>Explanation:</strong> The given array is sorted.</span></pre><pre><span><strong>Input: </strong>arr[] = [90, 80, 100, 70, 40, 30]\n<strong>Output:</strong> false\n<strong>Explanation:</strong>&nbsp;The given array is not sorted.</span></pre>",
       "_importedFromProfile": true,
       "_needsCodeFetch": true,
       "notes": "",
@@ -358,7 +362,11 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array",
+        "Math",
+        "Two Pointers"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -367,7 +375,7 @@
       "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an array&nbsp;<strong>arr[]&nbsp;</strong>of non-negative integers, where each element <strong>arr[i]</strong>&nbsp;represents the height of the<strong> </strong>vertical lines,&nbsp;find the maximum amount of water that can be contained between any two lines, together with the x-axis.</span></p><p><span><strong>Note:</strong> In the case of a single vertical line it will not be able to hold water.</span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input: </strong>arr[] = [1, 5, 4, 3]\n<strong>Output: </strong>6<strong>\nExplanation: </strong>5 and 3 are 2 distance apart. So the size of the base is 2. Height of container = min(5, 3) = 3. So, total area to hold water = 3 * 2 = 6.</span></pre><pre><span><strong>Input: </strong>arr[] = [3, 1, 2, 4, 5]\n<strong>Output: </strong>12<strong>\nExplanation: </strong>5 and 3 are 4 distance apart. So the size of the base is 4. Height of container = min(5, 3) = 3. So, total area to hold water = 4 * 3 = 12.</span></pre><pre><span><strong>Input</strong>: arr[] = [2, 1, 8, 6, 4, 6, 5, 5]<br /><strong>Output</strong>: 25 <br /><strong>Explanation</strong>: 8 and 5 are 5 distance apart. So the size of the base is 5. Height of container = min(8, 5) = 5. So, the total area to hold water = 5 * 5 = 25.</span></pre><p><span><strong>Constraints:</strong><br />1 &le; arr.size() &le; 10<sup>5</sup><br />0 &le; arr[i] &le; 10<sup>4</sup></span></p>",
       "_importedFromProfile": true,
       "_needsCodeFetch": true,
       "notes": "",
@@ -419,7 +427,10 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array",
+        "Sliding Window"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -428,7 +439,7 @@
       "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an integer array <strong>arr[]</strong> of positive numbers, the task is to find the number of possible contiguous subarrays having product less than <strong>k</strong>. </span></p>\n<p><span><strong>Examples:</strong></span></p>\n<pre><span><span><strong>Input :</strong><span> k = 10, arr[] = [1, 2, 3, 4]\n</span><strong>Output : </strong><span>7\n</span><strong>Explanation:</strong><span>\nThe contiguous subarrays whose product is less than 10 are [1], [2], [3], [4], [1, 2], [2, 3], and [1, 2, 3]. Therefore, the total number of valid contiguous subarrays is 7.</span></span></span></pre>\n<pre><span><span><strong>Input:</strong> k = 100, arr[] = [1, 9, 2, 8, 6, 4, 3]\n<strong>Output: </strong>16<br /><strong>Explanation: </strong></span><span>There are 16 contiguous subarrays whose product of elements is strictly less than 100. </span></span></pre>\n<p><span><span><strong>Constraints:<br /></strong></span><span>1 &le; n &le; 10<sup>5</sup><br /></span><span>1 &le; k &le; 10<sup>5</sup><br /></span><span>1 &le; arr[i] &le; 10<sup>3</sup></span></span></p>",
       "_importedFromProfile": true,
       "_needsCodeFetch": true,
       "notes": "",
@@ -450,7 +461,10 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Prefix Sum",
+        "Array"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -459,7 +473,7 @@
       "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an array of integers<strong> arr[]</strong>,<strong> </strong>the task is to find the first equilibrium point&nbsp;in the array.</span></p>\n<p><span>The equilibrium point in an array is an index (0-based indexing) such that the sum of all elements before<strong>&nbsp;</strong>that index is the&nbsp;same&nbsp;as the&nbsp;sum<strong>&nbsp;</strong>of elements&nbsp;after<strong>&nbsp;</strong>it.&nbsp;</span><span>Return -1 if no such point exists.&nbsp;</span></p>\n<p><span><strong>Examples:</strong></span></p>\n<pre><span><strong>Input: </strong>arr[] = [1, 2, 0, 3]<br /><strong>Output: </strong>2<strong> \nExplanation: </strong></span><span>The sum of left of index 2 is 1 + 2 = 3 and sum on right of index 2 is 3.</span></pre>\n<pre><span><strong>Input: </strong>arr[] = [1, 1, 1, 1]<br /><strong>Output: </strong>-1<strong>\nExplanation: </strong>There is no equilibrium index in the array.<br /></span></pre>\n<pre><span><strong>Input: </strong>arr[] = [-7, 1, 5, 2, -4, 3, 0]</span><span><span><br /></span></span><span><strong>Output: </strong>3<strong>\nExplanation: </strong></span><span><span>The sum of left of index 3 is -7 + 1 + 5 = -1 and sum on right of index 3 is -4 + 3 + 0 = -1.</span></span></pre>",
       "_importedFromProfile": true,
       "_needsCodeFetch": true,
       "notes": "",
@@ -481,7 +495,10 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Math",
+        "Divide and Conquer"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -490,7 +507,7 @@
       "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an array <strong>arr[]</strong> of integers, calculate the median.</span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input: </strong>arr[] = [90, 100, 78, 89, 67]\n<strong>Output: </strong>89\n<strong>Explanation: </strong>After sorting the array middle element is the median \n</span></pre><pre><span><strong>Input: </strong>arr[] = [56, 67, 30, 79]\n<strong>Output: </strong>61.5\n<strong>Explanation: </strong>In case of even number of elements, average of two middle elements is the median.</span><span> <br /></span></pre><pre><span><strong>Input:&nbsp;</strong>arr[] = [1, 2]<br /><strong>Output:</strong> 1.5<br /><strong>Explanation:</strong> The average of both elements will result in 1.5.</span></pre>",
       "_importedFromProfile": true,
       "_needsCodeFetch": true,
       "notes": "",
@@ -10838,16 +10855,16 @@
         "Binary Search"
       ],
       "canonical": null,
-      "readmeContent": "# [1482] Minimum Number of Days to Make m Bouquets\n**Difficulty:** Medium  |  **Acceptance:** 57.3%  |  **Likes:** 6015 / **Dislikes:** 335\n**Tags:** `Array`, `Binary Search`\n## Problem\nYou are given an integer array bloomDay, an integer m and an integer k.\n\nYou want to make m bouquets. To make a bouquet, you need to use k adjacent flowers from the garden.\n\nThe garden consists of n flowers, the ith flower will bloom in the bloomDay[i] and then can be used in exactly one bouquet.\n\nReturn the minimum number of days you need to wait to be able to make m bouquets from the garden. If it is impossible to make m bouquets return -1.\n\n&nbsp;\nExample 1:\n\nInput: bloomDay = [1,10,3,10,2], m = 3, k = 1\nOutput: 3\nExplanation: Let us see what happened in the first three days. x means flower bloomed and _ means flower did not bloom in the garden.\nWe need 3 bouquets each should contain 1 flower.\nAfter day 1: [x, _, _, _, _]   // we can only make one bouquet.\nAfter day 2: [x, _, _, _, x]   // we can only make two bouquets.\nAfter day 3: [x, _, x, _, x]   // we can make 3 bouquets. The answer is 3.\n\nExample 2:\n\nInput: bloomDay = [1,10,3,10,2], m = 3, k = 2\nOutput: -1\nExplanation: We need 3 bouquets each has 2 flowers, that means we need 6 flowers. We only have 5 flowers so it is impossible to get the needed bouquets and we return -1.\n\nExample 3:\n\nInput: bloomDay = [7,7,7,7,12,7,7], m = 2, k = 3\nOutput: 12\nExplanation: We need 2 bouquets each should have 3 flowers.\nHere is the garden after the 7 and 12 days:\nAfter day 7: [x, x, x, x, _, x, x]\nWe can make one bouquet of the first three flowers that bloomed. We cannot make another bouquet from the last three flowers that bloomed because they are not adjacent.\nAfter day 12: [x, x, x, x, x, x, x]\nIt is obvious that we can make two bouquets in different ways.\n\n&nbsp;\nConstraints:\n\n\tbloomDay.length == n\n\t1 <= n <= 105\n\t1 <= bloomDay[i] <= 109\n\t1 <= m <= 106\n\t1 <= k <= n\n## My Submission\n\n- Runtime: 16 ms (beats 90.1%)\n- Memory: 82.6 MB (beats 66.6%)\n\n## Similar Problems\n\n- [Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam/) — Medium\n- [Earliest Possible Day of Full Bloom](https://leetcode.com/problems/earliest-possible-day-of-full-bloom/) — Hard\n",
-      "code": "class Solution {\n    public int minDays(int[] bloomDay, int m, int k) {\n        if(bloomDay.length < m*k) return -1;\n\n        int low = Integer.MAX_VALUE;\n        int high = Integer.MIN_VALUE;\n        for(int day : bloomDay){\n            low = Math.min(day, low);\n            high = Math.max(day, high);\n        }\n        int ans = -1;\n        while(low <= high){\n            int mid = low + (high - low) / 2;\n            if(helper(bloomDay, mid, m, k)){\n                ans = mid;\n                high = mid - 1;\n            }\n            else{\n                low = mid + 1;\n            }\n        }\n        return ans;\n    }\n\n    boolean helper(int[] bloomDay, int day, int m, int k){\n        int count = 0;\n        int noOfB = 0;\n        for(int bloom : bloomDay){\n            if(bloom <= day){\n                count++;\n            }\n            else{\n                noOfB += count / k;\n                count = 0;\n            }\n        }\n        noOfB += count/k;\n        return noOfB >= m;\n    }\n}",
+      "readmeContent": "# [1482] Minimum Number of Days to Make m Bouquets\n**Difficulty:** Medium  |  **Acceptance:** 57.3%  |  **Likes:** 6015 / **Dislikes:** 335\n**Tags:** `Array`, `Binary Search`\n## Problem\nYou are given an integer array bloomDay, an integer m and an integer k.\n\nYou want to make m bouquets. To make a bouquet, you need to use k adjacent flowers from the garden.\n\nThe garden consists of n flowers, the ith flower will bloom in the bloomDay[i] and then can be used in exactly one bouquet.\n\nReturn the minimum number of days you need to wait to be able to make m bouquets from the garden. If it is impossible to make m bouquets return -1.\n\n&nbsp;\nExample 1:\n\nInput: bloomDay = [1,10,3,10,2], m = 3, k = 1\nOutput: 3\nExplanation: Let us see what happened in the first three days. x means flower bloomed and _ means flower did not bloom in the garden.\nWe need 3 bouquets each should contain 1 flower.\nAfter day 1: [x, _, _, _, _]   // we can only make one bouquet.\nAfter day 2: [x, _, _, _, x]   // we can only make two bouquets.\nAfter day 3: [x, _, x, _, x]   // we can make 3 bouquets. The answer is 3.\n\nExample 2:\n\nInput: bloomDay = [1,10,3,10,2], m = 3, k = 2\nOutput: -1\nExplanation: We need 3 bouquets each has 2 flowers, that means we need 6 flowers. We only have 5 flowers so it is impossible to get the needed bouquets and we return -1.\n\nExample 3:\n\nInput: bloomDay = [7,7,7,7,12,7,7], m = 2, k = 3\nOutput: 12\nExplanation: We need 2 bouquets each should have 3 flowers.\nHere is the garden after the 7 and 12 days:\nAfter day 7: [x, x, x, x, _, x, x]\nWe can make one bouquet of the first three flowers that bloomed. We cannot make another bouquet from the last three flowers that bloomed because they are not adjacent.\nAfter day 12: [x, x, x, x, x, x, x]\nIt is obvious that we can make two bouquets in different ways.\n\n&nbsp;\nConstraints:\n\n\tbloomDay.length == n\n\t1 <= n <= 105\n\t1 <= bloomDay[i] <= 109\n\t1 <= m <= 106\n\t1 <= k <= n\n## My Submission\n\n- Runtime: 18 ms (beats 46.8%)\n- Memory: 82.6 MB (beats 47.3%)\n\n## Similar Problems\n\n- [Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam/) — Medium\n- [Earliest Possible Day of Full Bloom](https://leetcode.com/problems/earliest-possible-day-of-full-bloom/) — Hard\n",
+      "code": "class Solution {\n    public int minDays(int[] bloomDay, int m, int k) {\n        if(m*k > bloomDay.length) return -1;\n        int l = Integer.MAX_VALUE, h = Integer.MIN_VALUE;\n        for(int bloom : bloomDay){\n            l = Math.min(l, bloom);\n            h = Math.max(h, bloom);\n        }\n        int ans = -1;\n        while(l <= h){\n            int mid = l + (h - l)/2;\n            if(helper(bloomDay, m, k, mid)){\n                ans = mid;\n                h = mid - 1;\n            }\n            else{\n                l = mid+1;\n            }\n        }\n        return ans;\n    }\n\n    public boolean helper(int[] bloomDay, int m, int k, int day){\n        int count = 0;\n        int b = 0;\n        for(int bloom : bloomDay){\n            if(bloom <= day){\n                count++;\n                if(count == k){\n                    b++;\n                    count = 0;\n                }\n            }\n            else{\n                count = 0;\n            }\n        }\n        return b >= m;\n    }\n}",
       "files": [
         {
           "path": "problems/lc-minimum-number-of-days-to-make-m-bouquets/lc-minimum-number-of-days-to-make-m-bouquets.java",
-          "content": "class Solution {\n    public int minDays(int[] bloomDay, int m, int k) {\n        if(bloomDay.length < m*k) return -1;\n\n        int low = Integer.MAX_VALUE;\n        int high = Integer.MIN_VALUE;\n        for(int day : bloomDay){\n            low = Math.min(day, low);\n            high = Math.max(day, high);\n        }\n        int ans = -1;\n        while(low <= high){\n            int mid = low + (high - low) / 2;\n            if(helper(bloomDay, mid, m, k)){\n                ans = mid;\n                high = mid - 1;\n            }\n            else{\n                low = mid + 1;\n            }\n        }\n        return ans;\n    }\n\n    boolean helper(int[] bloomDay, int day, int m, int k){\n        int count = 0;\n        int noOfB = 0;\n        for(int bloom : bloomDay){\n            if(bloom <= day){\n                count++;\n            }\n            else{\n                noOfB += count / k;\n                count = 0;\n            }\n        }\n        noOfB += count/k;\n        return noOfB >= m;\n    }\n}"
+          "content": "class Solution {\n    public int minDays(int[] bloomDay, int m, int k) {\n        if(m*k > bloomDay.length) return -1;\n        int l = Integer.MAX_VALUE, h = Integer.MIN_VALUE;\n        for(int bloom : bloomDay){\n            l = Math.min(l, bloom);\n            h = Math.max(h, bloom);\n        }\n        int ans = -1;\n        while(l <= h){\n            int mid = l + (h - l)/2;\n            if(helper(bloomDay, m, k, mid)){\n                ans = mid;\n                h = mid - 1;\n            }\n            else{\n                l = mid+1;\n            }\n        }\n        return ans;\n    }\n\n    public boolean helper(int[] bloomDay, int m, int k, int day){\n        int count = 0;\n        int b = 0;\n        for(int bloom : bloomDay){\n            if(bloom <= day){\n                count++;\n                if(count == k){\n                    b++;\n                    count = 0;\n                }\n            }\n            else{\n                count = 0;\n            }\n        }\n        return b >= m;\n    }\n}"
         },
         {
           "path": "problems/lc-minimum-number-of-days-to-make-m-bouquets/README.md",
-          "content": "# [1482] Minimum Number of Days to Make m Bouquets\n**Difficulty:** Medium  |  **Acceptance:** 57.3%  |  **Likes:** 6015 / **Dislikes:** 335\n**Tags:** `Array`, `Binary Search`\n## Problem\nYou are given an integer array bloomDay, an integer m and an integer k.\n\nYou want to make m bouquets. To make a bouquet, you need to use k adjacent flowers from the garden.\n\nThe garden consists of n flowers, the ith flower will bloom in the bloomDay[i] and then can be used in exactly one bouquet.\n\nReturn the minimum number of days you need to wait to be able to make m bouquets from the garden. If it is impossible to make m bouquets return -1.\n\n&nbsp;\nExample 1:\n\nInput: bloomDay = [1,10,3,10,2], m = 3, k = 1\nOutput: 3\nExplanation: Let us see what happened in the first three days. x means flower bloomed and _ means flower did not bloom in the garden.\nWe need 3 bouquets each should contain 1 flower.\nAfter day 1: [x, _, _, _, _]   // we can only make one bouquet.\nAfter day 2: [x, _, _, _, x]   // we can only make two bouquets.\nAfter day 3: [x, _, x, _, x]   // we can make 3 bouquets. The answer is 3.\n\nExample 2:\n\nInput: bloomDay = [1,10,3,10,2], m = 3, k = 2\nOutput: -1\nExplanation: We need 3 bouquets each has 2 flowers, that means we need 6 flowers. We only have 5 flowers so it is impossible to get the needed bouquets and we return -1.\n\nExample 3:\n\nInput: bloomDay = [7,7,7,7,12,7,7], m = 2, k = 3\nOutput: 12\nExplanation: We need 2 bouquets each should have 3 flowers.\nHere is the garden after the 7 and 12 days:\nAfter day 7: [x, x, x, x, _, x, x]\nWe can make one bouquet of the first three flowers that bloomed. We cannot make another bouquet from the last three flowers that bloomed because they are not adjacent.\nAfter day 12: [x, x, x, x, x, x, x]\nIt is obvious that we can make two bouquets in different ways.\n\n&nbsp;\nConstraints:\n\n\tbloomDay.length == n\n\t1 <= n <= 105\n\t1 <= bloomDay[i] <= 109\n\t1 <= m <= 106\n\t1 <= k <= n\n## My Submission\n\n- Runtime: 16 ms (beats 90.1%)\n- Memory: 82.6 MB (beats 66.6%)\n\n## Similar Problems\n\n- [Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam/) — Medium\n- [Earliest Possible Day of Full Bloom](https://leetcode.com/problems/earliest-possible-day-of-full-bloom/) — Hard\n"
+          "content": "# [1482] Minimum Number of Days to Make m Bouquets\n**Difficulty:** Medium  |  **Acceptance:** 57.3%  |  **Likes:** 6015 / **Dislikes:** 335\n**Tags:** `Array`, `Binary Search`\n## Problem\nYou are given an integer array bloomDay, an integer m and an integer k.\n\nYou want to make m bouquets. To make a bouquet, you need to use k adjacent flowers from the garden.\n\nThe garden consists of n flowers, the ith flower will bloom in the bloomDay[i] and then can be used in exactly one bouquet.\n\nReturn the minimum number of days you need to wait to be able to make m bouquets from the garden. If it is impossible to make m bouquets return -1.\n\n&nbsp;\nExample 1:\n\nInput: bloomDay = [1,10,3,10,2], m = 3, k = 1\nOutput: 3\nExplanation: Let us see what happened in the first three days. x means flower bloomed and _ means flower did not bloom in the garden.\nWe need 3 bouquets each should contain 1 flower.\nAfter day 1: [x, _, _, _, _]   // we can only make one bouquet.\nAfter day 2: [x, _, _, _, x]   // we can only make two bouquets.\nAfter day 3: [x, _, x, _, x]   // we can make 3 bouquets. The answer is 3.\n\nExample 2:\n\nInput: bloomDay = [1,10,3,10,2], m = 3, k = 2\nOutput: -1\nExplanation: We need 3 bouquets each has 2 flowers, that means we need 6 flowers. We only have 5 flowers so it is impossible to get the needed bouquets and we return -1.\n\nExample 3:\n\nInput: bloomDay = [7,7,7,7,12,7,7], m = 2, k = 3\nOutput: 12\nExplanation: We need 2 bouquets each should have 3 flowers.\nHere is the garden after the 7 and 12 days:\nAfter day 7: [x, x, x, x, _, x, x]\nWe can make one bouquet of the first three flowers that bloomed. We cannot make another bouquet from the last three flowers that bloomed because they are not adjacent.\nAfter day 12: [x, x, x, x, x, x, x]\nIt is obvious that we can make two bouquets in different ways.\n\n&nbsp;\nConstraints:\n\n\tbloomDay.length == n\n\t1 <= n <= 105\n\t1 <= bloomDay[i] <= 109\n\t1 <= m <= 106\n\t1 <= k <= n\n## My Submission\n\n- Runtime: 18 ms (beats 46.8%)\n- Memory: 82.6 MB (beats 47.3%)\n\n## Similar Problems\n\n- [Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam/) — Medium\n- [Earliest Possible Day of Full Bloom](https://leetcode.com/problems/earliest-possible-day-of-full-bloom/) — Hard\n"
         }
       ],
       "lang": {
@@ -10855,12 +10872,12 @@
         "ext": "java",
         "slug": "java"
       },
-      "runtime": "16 ms",
+      "runtime": "18 ms",
       "memory": "82.6 MB",
-      "runtimePct": 90.12889999999999,
-      "memoryPct": 66.61309999999992,
-      "timestamp": 1781155132000,
-      "acRate": 57.28950260440189,
+      "runtimePct": 46.775999999999996,
+      "memoryPct": 47.28819999999992,
+      "timestamp": 1791702767000,
+      "acRate": 57.2897947201936,
       "likes": 6015,
       "dislikes": 335,
       "similar": [
@@ -10886,7 +10903,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/lc-minimum-number-of-days-to-make-m-bouquets/lc-minimum-number-of-days-to-make-m-bouquets.java",
+        "problems/lc-minimum-number-of-days-to-make-m-bouquets/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-minimum-speed-to-arrive-on-time::2166972610",
