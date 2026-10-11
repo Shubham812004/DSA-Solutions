@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "asOf": "2026-10-11",
+  "currentStreak": 0,
+  "longestStreak": 0,
+  "freezes": 0,
+  "totalPoints": 0,
+  "totalSolves": 0,
+  "totalRecalls": 0,
+  "byDifficulty": {},
+  "level": 1,
+  "levelName": "Initiate",
+  "activeDays": 0,
+  "dailyTargetPoints": 25,
+  "achievements": []
+}

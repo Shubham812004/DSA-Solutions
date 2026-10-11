@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "config": {
+    "utcOffsetMinutes": 330
+  },
+  "vacations": [],
+  "installDay": "2026-10-11",
+  "username": "Shubham812004",
+  "pagesUrl": "https://shubham812004.github.io/DSA-Solutions/",
+  "readme": true,
+  "badgeStyle": "svg",
+  "shieldsStyle": "flat",
+  "rawBase": "https://raw.githubusercontent.com/Shubham812004/DSA-Solutions/main",
+  "picks": null,
+  "achievementPicks": null
+}
