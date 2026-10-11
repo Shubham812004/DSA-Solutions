@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T05:39:59.450Z",
+  "updatedAt": "2026-10-11T05:49:59.952Z",
   "layoutVersion": 3,
   "stats": {
     "total": 227,
@@ -20,14 +20,15 @@
     "byTopic": {
       "Matrix": 1,
       "Binary Search": 1,
-      "Untagged": 49,
-      "Array": 91,
+      "String": 19,
+      "Array": 93,
+      "Greedy": 1,
+      "Untagged": 45,
       "Linked List": 11,
       "Database": 35,
       "Dynamic Programming": 6,
       "Hash Table": 3,
       "Stack": 5,
-      "String": 18,
       "Math": 4,
       "Two Pointers": 3
     }
@@ -117,7 +118,10 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "String",
+        "Sorting"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -126,7 +130,7 @@
       "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p data-start=\"96\" data-end=\"235\"><spanandale mono', monospace;\">Given two non-empty strings <strong>s1 </strong>and <strong>s2</strong>, consisting only of lowercase English letters, determine whether they are anagrams of each other or not.<br /></span><spanandale mono', monospace;\"> </span><spanandale mono', monospace;\">Two strings are considered anagrams if they contain the same characters with exactly the same frequencies, regardless of their order.</span></p><p><spanandale mono', monospace;\"><strong>Examples:</strong></span></p><pre><spanandale mono', monospace;\"><strong>Input:</strong> s1 = \"geeks\" s2 = \"kseeg\"<br /><strong>Output:</strong> true <br /><strong>Explanation:</strong> Both the string have same characters with same frequency. So, they are anagrams.</span></pre><pre><spanandale mono', monospace;\"><strong>Input:</strong> s1 = \"allergy\", s2 = \"allergyy\" <br /></span><spanandale mono', monospace;\"><strong>Output</strong>: false <br /><strong>Explanation:</strong> Although the characters are mostly the same, s2 contains an extra 'y' character. Since the frequency of characters differs, the strings are not anagrams. </span></pre><pre><spanandale mono', monospace;\"><strong>Input:</strong> s1 = \"listen\", s2 = \"lists\" <br /><strong>Output:</strong> false <br /><strong>Explanation:</strong> The characters in the two strings are not the same &mdash; some are missing or extra. So, they are not anagrams.</span></pre>",
       "_importedFromProfile": true,
       "_needsCodeFetch": true,
       "notes": "",
@@ -135,7 +139,8 @@
       "urlVerifiedAt": 1791696378873,
       "_committedPaths": [
         "problems/gfg-anagram-1587115620/README.md"
-      ]
+      ],
+      "_conflictResolvedAt": 1791697431839
     },
     {
       "id": "gfg-array-subset-of-another-array2317",
@@ -148,7 +153,11 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array",
+        "Searching",
+        "Hash Table"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -157,7 +166,7 @@
       "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given two arrays <strong>a[] </strong>and <strong>b[]</strong>, your task is to determine whether <strong>b[]</strong> is a subset of <strong>a[]</strong>.</span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input</strong>: a[] = [11, 7, 1, 13, 21, 3, 7, 3], b[] = [11, 3, 7, 1, 7]\n<strong>Output</strong>: true\n<strong>Explanation: </strong>b[] is a subset of a[]</span></pre><pre><span><strong>Input</strong>: a[] = [1, 2, 3, 4, 4, 5, 6], b[] = [1, 2, 4]\n<strong>Output</strong>: true\n<strong>Explanation: </strong>b[] is a subset of a[]</span></pre><pre><span><strong>Input</strong>: a[] = [10, 5, 2, 23, 19], b[] = [19, 5, 3]<strong>\nOutput</strong>: false<strong>\nExplanation: </strong>b[] is not a subset of a[]</span></pre>",
       "_importedFromProfile": true,
       "_needsCodeFetch": true,
       "notes": "",
@@ -166,7 +175,8 @@
       "urlVerifiedAt": 1791696379640,
       "_committedPaths": [
         "problems/gfg-array-subset-of-another-array2317/README.md"
-      ]
+      ],
+      "_conflictResolvedAt": 1791697431839
     },
     {
       "id": "gfg-binary-search-1587115620",
@@ -179,7 +189,11 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array",
+        "Searching",
+        "Divide and Conquer"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -188,7 +202,7 @@
       "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given a sorted array <strong>arr[]</strong> and an integer <strong>k</strong>, find the position(0-based indexing) at which k is present in the array using binary search. If k doesn't exist in arr[] return <strong>-1</strong>.&nbsp;</span></p>\n<p><span><strong>Note:</strong> If multiple occurrences are there, please return the smallest index.</span></p>\n<p><span><strong>Examples:</strong></span></p>\n<pre><span><strong>Input: </strong>arr[] = [1, 2, 3, 4, 5], k = 4\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> 4 appears at index 3.</span></pre>\n<pre><span><strong>Input: </strong>arr[] = [11, 22, 33, 44, 55], k = 445\n<strong>Output:</strong> -1\n<strong>Explanation:</strong> 445 is not present.<br /></span></pre>\n<pre><span><strong>Input: </strong>arr[] = [1, 1, 1, 1, 2], k = 1\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> 1 appears at index 0.</span></pre>\n<p><span><strong>Constraints:<br /></strong>1 &le; arr.size() &le; 10<sup>5<br /></sup>1 &le; arr[i] &le; 10<sup>6<br /></sup>1 &le; k &le; 10<sup>6</sup></span></p>\n<div id=\"highlighter--hover-tools\">\n<div id=\"highlighter--hover-tools--container\">\n<div title=\"Copy\">&nbsp;</div>\n<div title=\"Change Color\">&nbsp;</div>\n<div title=\"Delete\">&nbsp;</div>\n</div>\n</div>",
       "_importedFromProfile": true,
       "_needsCodeFetch": true,
       "notes": "",
@@ -210,7 +224,10 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Greedy",
+        "Array"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -219,7 +236,7 @@
       "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an array <strong>prices[]</strong> of non-negative integers, representing the prices of the stocks on different days. The task is to find the maximum profit possible by buying and selling the stocks on different days when <strong>at most one </strong>transaction is allowed. Here one transaction means 1 buy + 1 Sell. If it is not possible to make a profit then <strong>return 0</strong>.</span></p>\n<p><span>Note: Stock must be bought before being sold.</span></p>\n<p><span><strong>Examples:</strong></span></p>\n<pre><span><strong>Input: </strong><span>prices[] = [7, 10, 1, 3, 6, 9, 2]<br /></span><strong>Output:</strong><span> 8<br /></span><strong>Explanation:</strong><span> You can buy the stock on day 2 at price = 1 and sell it on day 5 at price = 9. Hence, the profit is 8.</span></span></pre>\n<pre><span><strong>Input: </strong><span>prices[] = [7, 6, 4, 3, 1]<br /></span><strong>Output:</strong><span> 0 <br /></span><span><strong>Explanation</strong></span><strong>:</strong><span> Here the prices are in decreasing order, hence if we buy any day then we cannot sell it at a greater price. Hence, the answer is 0.<br /></span></span></pre>\n<pre><span><strong>Input: </strong>prices[] = [1, 3, 6, 9, 11]</span><br /><span><strong>Output:</strong> 10 </span><br /><span><span><strong>Explanation</strong></span><strong>:</strong><span> Since the array is sorted in increasing order, we can make maximum profit by buying at price[0] and selling at price[n-1].</span></span></pre>\n<p><span><strong>Constraint:</strong><br />1&nbsp;</span><span>&le;</span><span> </span><span>&nbsp;prices.size()&nbsp;</span><span>&le;</span><span> </span><span>&nbsp;10</span><sup>5<br /></sup><span>0&nbsp;</span><span>&le;</span><span> </span><span>&nbsp;prices[i] </span><span>&le;</span><span> &nbsp;</span><span>10</span><sup>4</sup></p>",
       "_importedFromProfile": true,
       "_needsCodeFetch": true,
       "notes": "",
@@ -1724,7 +1741,14 @@
         ],
         "topic": "two-pointers",
         "voteCount": 98
-      }
+      },
+      "_committedPaths": [
+        "problems/3sum/leetcode/lc-3sum.py",
+        "problems/3sum/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-3sum::1980848301",
@@ -1844,7 +1868,14 @@
         ],
         "topic": "two-pointers",
         "voteCount": 98
-      }
+      },
+      "_committedPaths": [
+        "problems/3sum/leetcode/lc-3sum.java",
+        "problems/3sum/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-3sum::1990350392",
@@ -1948,7 +1979,14 @@
         ],
         "topic": "two-pointers",
         "voteCount": 98
-      }
+      },
+      "_committedPaths": [
+        "problems/3sum/leetcode/lc-3sum.java",
+        "problems/3sum/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-4sum::1981137064",
@@ -2032,7 +2070,14 @@
           "timestamp": 1777392256000,
           "submissionId": 1990357329
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-4sum/lc-4sum.java",
+        "problems/lc-4sum/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-4sum::1990357329",
@@ -2100,7 +2145,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-4sum::1981137064"
+      "duplicateOf": "lc-4sum::1981137064",
+      "_committedPaths": [
+        "problems/lc-4sum/lc-4sum.java",
+        "problems/lc-4sum/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-add-two-numbers::1807662365",
@@ -2222,7 +2274,14 @@
         ],
         "topic": "linked-list",
         "voteCount": 98
-      }
+      },
+      "_committedPaths": [
+        "problems/add-two-numbers/leetcode/lc-add-two-numbers.py",
+        "problems/add-two-numbers/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-add-two-numbers::1807676806",
@@ -2328,7 +2387,14 @@
         ],
         "topic": "linked-list",
         "voteCount": 98
-      }
+      },
+      "_committedPaths": [
+        "problems/add-two-numbers/leetcode/lc-add-two-numbers.py",
+        "problems/add-two-numbers/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-article-views-i::1805948372",
@@ -2385,7 +2451,14 @@
           "timestamp": 1776918053000,
           "submissionId": 1985838188
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-article-views-i/lc-article-views-i.sql",
+        "problems/lc-article-views-i/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-article-views-i::1985838188",
@@ -2426,7 +2499,14 @@
       "similar": null,
       "hasSimilar": null,
       "isDuplicate": true,
-      "duplicateOf": "lc-article-views-i::1805948372"
+      "duplicateOf": "lc-article-views-i::1805948372",
+      "_committedPaths": [
+        "problems/lc-article-views-i/lc-article-views-i.sql",
+        "problems/lc-article-views-i/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-assign-cookies::2005070197",
@@ -2469,7 +2549,14 @@
       "hints": null,
       "acRate": 55.59522204736653,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-assign-cookies/lc-assign-cookies.java",
+        "problems/lc-assign-cookies/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-average-selling-price::1807312858",
@@ -2508,7 +2595,14 @@
       "hints": null,
       "acRate": 38.00210032216806,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-average-selling-price/lc-average-selling-price.sql",
+        "problems/lc-average-selling-price/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-average-time-of-process-per-machine::1809639652",
@@ -2547,7 +2641,14 @@
       "hints": null,
       "acRate": 67.06475625396357,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-average-time-of-process-per-machine/lc-average-time-of-process-per-machine.sql",
+        "problems/lc-average-time-of-process-per-machine/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-best-time-to-buy-and-sell-stock::1809272618",
@@ -2656,7 +2757,14 @@
         ],
         "topic": "sliding-window",
         "voteCount": 98
-      }
+      },
+      "_committedPaths": [
+        "problems/best-time-to-buy-and-sell-stock/leetcode/lc-best-time-to-buy-and-sell-stock.py",
+        "problems/best-time-to-buy-and-sell-stock/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-best-time-to-buy-and-sell-stock::1981557158",
@@ -2765,7 +2873,14 @@
         ],
         "topic": "sliding-window",
         "voteCount": 98
-      }
+      },
+      "_committedPaths": [
+        "problems/best-time-to-buy-and-sell-stock/leetcode/lc-best-time-to-buy-and-sell-stock.java",
+        "problems/best-time-to-buy-and-sell-stock/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-big-countries::1985832654",
@@ -2804,7 +2919,14 @@
       "hints": null,
       "acRate": 68.95246584573425,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-big-countries/lc-big-countries.sql",
+        "problems/lc-big-countries/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-biggest-single-number::1818442089",
@@ -2843,7 +2965,14 @@
       "hints": null,
       "acRate": 72.40865083976034,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-biggest-single-number/lc-biggest-single-number.sql",
+        "problems/lc-biggest-single-number/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-binary-search::1819321741",
@@ -2910,7 +3039,14 @@
         ],
         "topic": "binary-search",
         "voteCount": 90
-      }
+      },
+      "_committedPaths": [
+        "problems/binary-search/leetcode/lc-binary-search.py",
+        "problems/binary-search/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-binary-search::1998238818",
@@ -3025,7 +3161,14 @@
         ],
         "topic": "binary-search",
         "voteCount": 90
-      }
+      },
+      "_committedPaths": [
+        "problems/binary-search/leetcode/lc-binary-search.java",
+        "problems/binary-search/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-binary-search::2010418254",
@@ -3094,7 +3237,14 @@
         ],
         "topic": "binary-search",
         "voteCount": 90
-      }
+      },
+      "_committedPaths": [
+        "problems/binary-search/leetcode/lc-binary-search.java",
+        "problems/binary-search/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-binary-search::2128575594",
@@ -3163,7 +3313,14 @@
         ],
         "topic": "binary-search",
         "voteCount": 90
-      }
+      },
+      "_committedPaths": [
+        "problems/binary-search/leetcode/lc-binary-search.java",
+        "problems/binary-search/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-binary-search::2158446952",
@@ -3232,7 +3389,14 @@
         ],
         "topic": "binary-search",
         "voteCount": 90
-      }
+      },
+      "_committedPaths": [
+        "problems/binary-search/leetcode/lc-binary-search.java",
+        "problems/binary-search/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-capacity-to-ship-packages-within-d-days::2165936526",
@@ -3299,7 +3463,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-capacity-to-ship-packages-within-d-days/lc-capacity-to-ship-packages-within-d-days.java",
+        "problems/lc-capacity-to-ship-packages-within-d-days/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-classes-with-at-least-5-students::1817041965",
@@ -3338,7 +3509,14 @@
       "hints": null,
       "acRate": 65.18454680726761,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-classes-with-at-least-5-students/lc-classes-with-at-least-5-students.sql",
+        "problems/lc-classes-with-at-least-5-students/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-climbing-stairs::2005175463",
@@ -3456,7 +3634,14 @@
         ],
         "topic": "dynamic-programming",
         "voteCount": 99
-      }
+      },
+      "_committedPaths": [
+        "problems/climbing-stairs/leetcode/lc-climbing-stairs.java",
+        "problems/climbing-stairs/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-concatenate-array-with-reverse::1999417070",
@@ -3498,7 +3683,14 @@
       ],
       "acRate": 90.81614289249319,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-concatenate-array-with-reverse/lc-concatenate-array-with-reverse.java",
+        "problems/lc-concatenate-array-with-reverse/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-confirmation-rate::1812955501",
@@ -3537,7 +3729,14 @@
       "hints": null,
       "acRate": 62.94564887920209,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-confirmation-rate/lc-confirmation-rate.sql",
+        "problems/lc-confirmation-rate/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-container-with-most-water::2004864095",
@@ -3621,7 +3820,14 @@
         ],
         "topic": "two-pointers",
         "voteCount": 94
-      }
+      },
+      "_committedPaths": [
+        "problems/container-with-most-water/leetcode/lc-container-with-most-water.java",
+        "problems/container-with-most-water/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-contains-duplicate::1810413432",
@@ -3708,7 +3914,14 @@
         ],
         "topic": "arrays",
         "voteCount": 95
-      }
+      },
+      "_committedPaths": [
+        "problems/contains-duplicate/leetcode/lc-contains-duplicate.py",
+        "problems/contains-duplicate/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-contains-duplicate::2129864960",
@@ -3795,7 +4008,14 @@
         ],
         "topic": "arrays",
         "voteCount": 95
-      }
+      },
+      "_committedPaths": [
+        "problems/contains-duplicate/leetcode/lc-contains-duplicate.java",
+        "problems/contains-duplicate/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-count-indices-with-opposite-parity::1993799059",
@@ -3836,7 +4056,14 @@
       ],
       "acRate": 80.61690579826966,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-count-indices-with-opposite-parity/lc-count-indices-with-opposite-parity.java",
+        "problems/lc-count-indices-with-opposite-parity/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-customer-who-visited-but-did-not-make-any-transactions::1807336473",
@@ -3893,7 +4120,14 @@
           "timestamp": 1761030154000,
           "submissionId": 1807338875
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-customer-who-visited-but-did-not-make-any-transactions/lc-customer-who-visited-but-did-not-make-any-transactions.sql",
+        "problems/lc-customer-who-visited-but-did-not-make-any-transactions/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-customer-who-visited-but-did-not-make-any-transactions::1807338875",
@@ -3934,7 +4168,14 @@
       "similar": null,
       "hasSimilar": null,
       "isDuplicate": true,
-      "duplicateOf": "lc-customer-who-visited-but-did-not-make-any-transactions::1807336473"
+      "duplicateOf": "lc-customer-who-visited-but-did-not-make-any-transactions::1807336473",
+      "_committedPaths": [
+        "problems/lc-customer-who-visited-but-did-not-make-any-transactions/lc-customer-who-visited-but-did-not-make-any-transactions.sql",
+        "problems/lc-customer-who-visited-but-did-not-make-any-transactions/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-customers-who-bought-all-products::1818461275",
@@ -3973,7 +4214,14 @@
       "hints": null,
       "acRate": 64.6927962967599,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-customers-who-bought-all-products/lc-customers-who-bought-all-products.sql",
+        "problems/lc-customers-who-bought-all-products/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-employee-bonus::1809653418",
@@ -4055,7 +4303,14 @@
           "timestamp": 1761239679000,
           "submissionId": 1809654586
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-employee-bonus/lc-employee-bonus.sql",
+        "problems/lc-employee-bonus/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-employee-bonus::1809654238",
@@ -4106,7 +4361,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-employee-bonus::1809653418"
+      "duplicateOf": "lc-employee-bonus::1809653418",
+      "_committedPaths": [
+        "problems/lc-employee-bonus/lc-employee-bonus.sql",
+        "problems/lc-employee-bonus/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-employee-bonus::1809654586",
@@ -4157,7 +4419,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-employee-bonus::1809653418"
+      "duplicateOf": "lc-employee-bonus::1809653418",
+      "_committedPaths": [
+        "problems/lc-employee-bonus/lc-employee-bonus.sql",
+        "problems/lc-employee-bonus/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-find-all-anagrams-in-a-string::2155641276",
@@ -4211,7 +4480,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-find-all-anagrams-in-a-string/lc-find-all-anagrams-in-a-string.java",
+        "problems/lc-find-all-anagrams-in-a-string/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-find-customer-referee::1985829899",
@@ -4252,7 +4528,14 @@
       ],
       "acRate": 73.67985134779276,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-find-customer-referee/lc-find-customer-referee.sql",
+        "problems/lc-find-customer-referee/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-find-first-and-last-position-of-element-in-sorted-array::2014814319",
@@ -4344,7 +4627,14 @@
           "timestamp": 1791172770000,
           "submissionId": 2162679219
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-find-first-and-last-position-of-element-in-sorted-array/lc-find-first-and-last-position-of-element-in-sorted-array.java",
+        "problems/lc-find-first-and-last-position-of-element-in-sorted-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-find-first-and-last-position-of-element-in-sorted-array::2138221866",
@@ -4405,7 +4695,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-find-first-and-last-position-of-element-in-sorted-array::2014814319"
+      "duplicateOf": "lc-find-first-and-last-position-of-element-in-sorted-array::2014814319",
+      "_committedPaths": [
+        "problems/lc-find-first-and-last-position-of-element-in-sorted-array/lc-find-first-and-last-position-of-element-in-sorted-array.java",
+        "problems/lc-find-first-and-last-position-of-element-in-sorted-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-find-first-and-last-position-of-element-in-sorted-array::2162679219",
@@ -4466,7 +4763,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-find-first-and-last-position-of-element-in-sorted-array::2014814319"
+      "duplicateOf": "lc-find-first-and-last-position-of-element-in-sorted-array::2014814319",
+      "_committedPaths": [
+        "problems/lc-find-first-and-last-position-of-element-in-sorted-array/lc-find-first-and-last-position-of-element-in-sorted-array.java",
+        "problems/lc-find-first-and-last-position-of-element-in-sorted-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-find-followers-count::1817791480",
@@ -4505,7 +4809,14 @@
       "hints": null,
       "acRate": 69.614767419279,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-find-followers-count/lc-find-followers-count.sql",
+        "problems/lc-find-followers-count/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-find-minimum-in-rotated-sorted-array::2016957001",
@@ -4600,7 +4911,14 @@
         ],
         "topic": "binary-search",
         "voteCount": 95
-      }
+      },
+      "_committedPaths": [
+        "problems/find-minimum-in-rotated-sorted-array/leetcode/lc-find-minimum-in-rotated-sorted-array.java",
+        "problems/find-minimum-in-rotated-sorted-array/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-find-minimum-in-rotated-sorted-array::2161251825",
@@ -4679,7 +4997,14 @@
         ],
         "topic": "binary-search",
         "voteCount": 95
-      }
+      },
+      "_committedPaths": [
+        "problems/find-minimum-in-rotated-sorted-array/leetcode/lc-find-minimum-in-rotated-sorted-array.java",
+        "problems/find-minimum-in-rotated-sorted-array/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-find-peak-element::2162319380",
@@ -4744,7 +5069,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-find-peak-element/lc-find-peak-element.java",
+        "problems/lc-find-peak-element/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-find-pivot-index::2146339391",
@@ -4831,7 +5163,14 @@
           "timestamp": 1789797596000,
           "submissionId": 2146344407
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-find-pivot-index/lc-find-pivot-index.java",
+        "problems/lc-find-pivot-index/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-find-pivot-index::2146344407",
@@ -4902,7 +5241,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-find-pivot-index::2146339391"
+      "duplicateOf": "lc-find-pivot-index::2146339391",
+      "_committedPaths": [
+        "problems/lc-find-pivot-index/lc-find-pivot-index.java",
+        "problems/lc-find-pivot-index/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-first-unique-character-in-a-string::2128455039",
@@ -4957,7 +5303,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-first-unique-character-in-a-string/lc-first-unique-character-in-a-string.java",
+        "problems/lc-first-unique-character-in-a-string/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-game-play-analysis-iv::1814143936",
@@ -4996,7 +5349,14 @@
       "hints": null,
       "acRate": 42.71176018691604,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-game-play-analysis-iv/lc-game-play-analysis-iv.sql",
+        "problems/lc-game-play-analysis-iv/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-group-anagrams::1810440257",
@@ -5078,7 +5438,14 @@
         ],
         "topic": "arrays",
         "voteCount": 94
-      }
+      },
+      "_committedPaths": [
+        "problems/group-anagrams/leetcode/lc-group-anagrams.py",
+        "problems/group-anagrams/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-house-robber-ii::2009648208",
@@ -5159,7 +5526,14 @@
         ],
         "topic": "dynamic-programming",
         "voteCount": 96
-      }
+      },
+      "_committedPaths": [
+        "problems/house-robber-ii/leetcode/lc-house-robber-ii.java",
+        "problems/house-robber-ii/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-house-robber::2009605889",
@@ -5334,7 +5708,14 @@
         ],
         "topic": "dynamic-programming",
         "voteCount": 98
-      }
+      },
+      "_committedPaths": [
+        "problems/house-robber/leetcode/lc-house-robber.java",
+        "problems/house-robber/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-house-robber::2009606176",
@@ -5463,7 +5844,14 @@
         ],
         "topic": "dynamic-programming",
         "voteCount": 98
-      }
+      },
+      "_committedPaths": [
+        "problems/house-robber/leetcode/lc-house-robber.java",
+        "problems/house-robber/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-house-robber::2009606438",
@@ -5592,7 +5980,14 @@
         ],
         "topic": "dynamic-programming",
         "voteCount": 98
-      }
+      },
+      "_committedPaths": [
+        "problems/house-robber/leetcode/lc-house-robber.java",
+        "problems/house-robber/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-house-robber::2013382897",
@@ -5721,7 +6116,14 @@
         ],
         "topic": "dynamic-programming",
         "voteCount": 98
-      }
+      },
+      "_committedPaths": [
+        "problems/house-robber/leetcode/lc-house-robber.java",
+        "problems/house-robber/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-immediate-food-delivery-ii::1814118251",
@@ -5760,7 +6162,14 @@
       "hints": null,
       "acRate": 57.23808184809418,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-immediate-food-delivery-ii/lc-immediate-food-delivery-ii.sql",
+        "problems/lc-immediate-food-delivery-ii/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-implement-queue-using-stacks::1817013688",
@@ -5808,7 +6217,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-implement-queue-using-stacks/lc-implement-queue-using-stacks.py",
+        "problems/lc-implement-queue-using-stacks/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-implement-queue-using-stacks::2134254408",
@@ -5856,7 +6272,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-implement-queue-using-stacks/lc-implement-queue-using-stacks.java",
+        "problems/lc-implement-queue-using-stacks/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-invalid-tweets::1805950930",
@@ -5913,7 +6336,14 @@
           "timestamp": 1776918201000,
           "submissionId": 1985839546
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-invalid-tweets/lc-invalid-tweets.sql",
+        "problems/lc-invalid-tweets/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-invalid-tweets::1985839546",
@@ -5954,7 +6384,14 @@
       "similar": null,
       "hasSimilar": null,
       "isDuplicate": true,
-      "duplicateOf": "lc-invalid-tweets::1805950930"
+      "duplicateOf": "lc-invalid-tweets::1805950930",
+      "_committedPaths": [
+        "problems/lc-invalid-tweets/lc-invalid-tweets.sql",
+        "problems/lc-invalid-tweets/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-koko-eating-bananas::2164977018",
@@ -6039,7 +6476,14 @@
         ],
         "topic": "binary-search",
         "voteCount": 94
-      }
+      },
+      "_committedPaths": [
+        "problems/koko-eating-bananas/leetcode/lc-koko-eating-bananas.java",
+        "problems/koko-eating-bananas/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-linked-list-cycle::1818419089",
@@ -6114,7 +6558,14 @@
         ],
         "topic": "linked-list",
         "voteCount": 96
-      }
+      },
+      "_committedPaths": [
+        "problems/linked-list-cycle/leetcode/lc-linked-list-cycle.py",
+        "problems/linked-list-cycle/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-linked-list-cycle::2128698923",
@@ -6189,7 +6640,14 @@
         ],
         "topic": "linked-list",
         "voteCount": 96
-      }
+      },
+      "_committedPaths": [
+        "problems/linked-list-cycle/leetcode/lc-linked-list-cycle.java",
+        "problems/linked-list-cycle/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-longest-common-prefix::1814758721",
@@ -6249,7 +6707,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-longest-common-prefix/lc-longest-common-prefix.py",
+        "problems/lc-longest-common-prefix/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-longest-palindromic-substring::1809241760",
@@ -6346,7 +6811,14 @@
         ],
         "topic": "dynamic-programming",
         "voteCount": 97
-      }
+      },
+      "_committedPaths": [
+        "problems/longest-palindromic-substring/leetcode/lc-longest-palindromic-substring.py",
+        "problems/longest-palindromic-substring/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-longest-palindromic-substring::2152761012",
@@ -6491,7 +6963,14 @@
         ],
         "topic": "dynamic-programming",
         "voteCount": 97
-      }
+      },
+      "_committedPaths": [
+        "problems/longest-palindromic-substring/leetcode/lc-longest-palindromic-substring.java",
+        "problems/longest-palindromic-substring/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-longest-palindromic-substring::2152790022",
@@ -6590,7 +7069,14 @@
         ],
         "topic": "dynamic-programming",
         "voteCount": 97
-      }
+      },
+      "_committedPaths": [
+        "problems/longest-palindromic-substring/leetcode/lc-longest-palindromic-substring.java",
+        "problems/longest-palindromic-substring/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-longest-palindromic-substring::2155197334",
@@ -6689,7 +7175,14 @@
         ],
         "topic": "dynamic-programming",
         "voteCount": 97
-      }
+      },
+      "_committedPaths": [
+        "problems/longest-palindromic-substring/leetcode/lc-longest-palindromic-substring.java",
+        "problems/longest-palindromic-substring/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-longest-palindromic-substring::2158261343",
@@ -6788,7 +7281,14 @@
         ],
         "topic": "dynamic-programming",
         "voteCount": 97
-      }
+      },
+      "_committedPaths": [
+        "problems/longest-palindromic-substring/leetcode/lc-longest-palindromic-substring.java",
+        "problems/longest-palindromic-substring/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-longest-substring-without-repeating-characters::1807691146",
@@ -6901,7 +7401,14 @@
         ],
         "topic": "sliding-window",
         "voteCount": 97
-      }
+      },
+      "_committedPaths": [
+        "problems/longest-substring-without-repeating-characters/leetcode/lc-longest-substring-without-repeating-characters.py",
+        "problems/longest-substring-without-repeating-characters/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-longest-substring-without-repeating-characters::2128482314",
@@ -7032,7 +7539,14 @@
         ],
         "topic": "sliding-window",
         "voteCount": 97
-      }
+      },
+      "_committedPaths": [
+        "problems/longest-substring-without-repeating-characters/leetcode/lc-longest-substring-without-repeating-characters.java",
+        "problems/longest-substring-without-repeating-characters/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-longest-substring-without-repeating-characters::2156217851",
@@ -7147,7 +7661,14 @@
         ],
         "topic": "sliding-window",
         "voteCount": 97
-      }
+      },
+      "_committedPaths": [
+        "problems/longest-substring-without-repeating-characters/leetcode/lc-longest-substring-without-repeating-characters.java",
+        "problems/longest-substring-without-repeating-characters/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-majority-element-ii::1980144296",
@@ -7240,7 +7761,14 @@
           "timestamp": 1777482949000,
           "submissionId": 1991205322
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-majority-element-ii/lc-majority-element-ii.java",
+        "problems/lc-majority-element-ii/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-majority-element-ii::1980156549",
@@ -7302,7 +7830,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-majority-element-ii::1980144296"
+      "duplicateOf": "lc-majority-element-ii::1980144296",
+      "_committedPaths": [
+        "problems/lc-majority-element-ii/lc-majority-element-ii.java",
+        "problems/lc-majority-element-ii/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-majority-element-ii::1991205322",
@@ -7364,7 +7899,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-majority-element-ii::1980144296"
+      "duplicateOf": "lc-majority-element-ii::1980144296",
+      "_committedPaths": [
+        "problems/lc-majority-element-ii/lc-majority-element-ii.java",
+        "problems/lc-majority-element-ii/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-majority-element::2004755105",
@@ -7445,7 +7987,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-majority-element/lc-majority-element.java",
+        "problems/lc-majority-element/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-managers-with-at-least-5-direct-reports::1812951325",
@@ -7489,7 +8038,14 @@
       ],
       "acRate": 49.71919115967368,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-managers-with-at-least-5-direct-reports/lc-managers-with-at-least-5-direct-reports.sql",
+        "problems/lc-managers-with-at-least-5-direct-reports/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-maximum-absolute-sum-of-any-subarray::2149344092",
@@ -7559,7 +8115,14 @@
           "timestamp": 1790056534000,
           "submissionId": 2149376359
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-maximum-absolute-sum-of-any-subarray/lc-maximum-absolute-sum-of-any-subarray.java",
+        "problems/lc-maximum-absolute-sum-of-any-subarray/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-maximum-absolute-sum-of-any-subarray::2149376359",
@@ -7613,7 +8176,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-maximum-absolute-sum-of-any-subarray::2149344092"
+      "duplicateOf": "lc-maximum-absolute-sum-of-any-subarray::2149344092",
+      "_committedPaths": [
+        "problems/lc-maximum-absolute-sum-of-any-subarray/lc-maximum-absolute-sum-of-any-subarray.java",
+        "problems/lc-maximum-absolute-sum-of-any-subarray/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-maximum-average-subarray-i::2130772251",
@@ -7660,7 +8230,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-maximum-average-subarray-i/lc-maximum-average-subarray-i.java",
+        "problems/lc-maximum-average-subarray-i/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-maximum-product-subarray::1995896290",
@@ -7844,7 +8421,14 @@
         ],
         "topic": "dynamic-programming",
         "voteCount": 97
-      }
+      },
+      "_committedPaths": [
+        "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
+        "problems/maximum-product-subarray/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-maximum-product-subarray::1995896911",
@@ -7937,7 +8521,14 @@
         ],
         "topic": "dynamic-programming",
         "voteCount": 97
-      }
+      },
+      "_committedPaths": [
+        "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
+        "problems/maximum-product-subarray/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-maximum-product-subarray::1996455574",
@@ -8030,7 +8621,14 @@
         ],
         "topic": "dynamic-programming",
         "voteCount": 97
-      }
+      },
+      "_committedPaths": [
+        "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
+        "problems/maximum-product-subarray/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-maximum-product-subarray::1996456582",
@@ -8123,7 +8721,14 @@
         ],
         "topic": "dynamic-programming",
         "voteCount": 97
-      }
+      },
+      "_committedPaths": [
+        "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
+        "problems/maximum-product-subarray/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-maximum-product-subarray::2002287041",
@@ -8216,7 +8821,14 @@
         ],
         "topic": "dynamic-programming",
         "voteCount": 97
-      }
+      },
+      "_committedPaths": [
+        "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
+        "problems/maximum-product-subarray/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-maximum-product-subarray::2148277376",
@@ -8309,7 +8921,14 @@
         ],
         "topic": "dynamic-programming",
         "voteCount": 97
-      }
+      },
+      "_committedPaths": [
+        "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
+        "problems/maximum-product-subarray/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-maximum-product-subarray::2148302061",
@@ -8402,7 +9021,14 @@
         ],
         "topic": "dynamic-programming",
         "voteCount": 97
-      }
+      },
+      "_committedPaths": [
+        "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
+        "problems/maximum-product-subarray/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-maximum-subarray::1813687231",
@@ -8522,7 +9148,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-maximum-subarray/lc-maximum-subarray.py",
+        "problems/lc-maximum-subarray/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-maximum-subarray::1993471635",
@@ -8675,7 +9308,14 @@
           "timestamp": 1790149598000,
           "submissionId": 2150624078
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-maximum-subarray/lc-maximum-subarray.java",
+        "problems/lc-maximum-subarray/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-maximum-subarray::2148270155",
@@ -8797,7 +9437,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-maximum-subarray::1993471635"
+      "duplicateOf": "lc-maximum-subarray::1993471635",
+      "_committedPaths": [
+        "problems/lc-maximum-subarray/lc-maximum-subarray.java",
+        "problems/lc-maximum-subarray/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-maximum-subarray::2150624078",
@@ -8919,7 +9566,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-maximum-subarray::1993471635"
+      "duplicateOf": "lc-maximum-subarray::1993471635",
+      "_committedPaths": [
+        "problems/lc-maximum-subarray/lc-maximum-subarray.java",
+        "problems/lc-maximum-subarray/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-median-of-two-sorted-arrays::1807697980",
@@ -8960,7 +9614,14 @@
       "hints": null,
       "acRate": 47.79574270451516,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-median-of-two-sorted-arrays/lc-median-of-two-sorted-arrays.py",
+        "problems/lc-median-of-two-sorted-arrays/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-merge-intervals::1994969693",
@@ -9112,7 +9773,14 @@
         ],
         "topic": "intervals",
         "voteCount": 99
-      }
+      },
+      "_committedPaths": [
+        "problems/merge-intervals/leetcode/lc-merge-intervals.java",
+        "problems/merge-intervals/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-merge-intervals::2128178071",
@@ -9248,7 +9916,14 @@
         ],
         "topic": "intervals",
         "voteCount": 99
-      }
+      },
+      "_committedPaths": [
+        "problems/merge-intervals/leetcode/lc-merge-intervals.java",
+        "problems/merge-intervals/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-merge-sorted-array::1812944478",
@@ -9317,7 +9992,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-merge-sorted-array/lc-merge-sorted-array.py",
+        "problems/lc-merge-sorted-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-merge-sorted-array::1995704533",
@@ -9419,7 +10101,14 @@
           "timestamp": 1778333437000,
           "submissionId": 1998838221
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-merge-sorted-array/lc-merge-sorted-array.java",
+        "problems/lc-merge-sorted-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-merge-sorted-array::1995707128",
@@ -9490,7 +10179,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-merge-sorted-array::1995704533"
+      "duplicateOf": "lc-merge-sorted-array::1995704533",
+      "_committedPaths": [
+        "problems/lc-merge-sorted-array/lc-merge-sorted-array.java",
+        "problems/lc-merge-sorted-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-merge-sorted-array::1998838221",
@@ -9561,7 +10257,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-merge-sorted-array::1995704533"
+      "duplicateOf": "lc-merge-sorted-array::1995704533",
+      "_committedPaths": [
+        "problems/lc-merge-sorted-array/lc-merge-sorted-array.java",
+        "problems/lc-merge-sorted-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-merge-two-sorted-lists::1817765172",
@@ -9646,7 +10349,14 @@
         ],
         "topic": "linked-list",
         "voteCount": 97
-      }
+      },
+      "_committedPaths": [
+        "problems/merge-two-sorted-lists/leetcode/lc-merge-two-sorted-lists.py",
+        "problems/merge-two-sorted-lists/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-merge-two-sorted-lists::2137082352",
@@ -9731,7 +10441,14 @@
         ],
         "topic": "linked-list",
         "voteCount": 97
-      }
+      },
+      "_committedPaths": [
+        "problems/merge-two-sorted-lists/leetcode/lc-merge-two-sorted-lists.java",
+        "problems/merge-two-sorted-lists/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-middle-of-the-linked-list::1818412310",
@@ -9784,7 +10501,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-middle-of-the-linked-list/lc-middle-of-the-linked-list.py",
+        "problems/lc-middle-of-the-linked-list/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-middle-of-the-linked-list::2128707341",
@@ -9837,7 +10561,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-middle-of-the-linked-list/lc-middle-of-the-linked-list.java",
+        "problems/lc-middle-of-the-linked-list/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-min-stack::1816183516",
@@ -9906,7 +10637,14 @@
         ],
         "topic": "stack",
         "voteCount": 94
-      }
+      },
+      "_committedPaths": [
+        "problems/min-stack/leetcode/lc-min-stack.py",
+        "problems/min-stack/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-min-stack::2131925513",
@@ -9993,7 +10731,14 @@
         ],
         "topic": "stack",
         "voteCount": 94
-      }
+      },
+      "_committedPaths": [
+        "problems/min-stack/leetcode/lc-min-stack.java",
+        "problems/min-stack/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-min-stack::2131933293",
@@ -10064,7 +10809,14 @@
         ],
         "topic": "stack",
         "voteCount": 94
-      }
+      },
+      "_committedPaths": [
+        "problems/min-stack/leetcode/lc-min-stack.java",
+        "problems/min-stack/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-minimum-speed-to-arrive-on-time::2166972610",
@@ -10138,7 +10890,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-minimum-speed-to-arrive-on-time/lc-minimum-speed-to-arrive-on-time.java",
+        "problems/lc-minimum-speed-to-arrive-on-time/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-minimum-swaps-to-move-zeros-to-end::2010861785",
@@ -10181,7 +10940,14 @@
       ],
       "acRate": 59.55119717532826,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-minimum-swaps-to-move-zeros-to-end/lc-minimum-swaps-to-move-zeros-to-end.java",
+        "problems/lc-minimum-swaps-to-move-zeros-to-end/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-monthly-transactions-i::1814104521",
@@ -10220,7 +10986,14 @@
       "hints": null,
       "acRate": 60.08384331993667,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-monthly-transactions-i/lc-monthly-transactions-i.sql",
+        "problems/lc-monthly-transactions-i/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-move-zeroes::1812907226",
@@ -10276,7 +11049,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-move-zeroes/lc-move-zeroes.py",
+        "problems/lc-move-zeroes/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-not-boring-movies::1807304689",
@@ -10315,7 +11095,14 @@
       "hints": null,
       "acRate": 75.25899648684131,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-not-boring-movies/lc-not-boring-movies.sql",
+        "problems/lc-not-boring-movies/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-number-of-unique-subjects-taught-by-each-teacher::1816190831",
@@ -10354,7 +11141,14 @@
       "hints": null,
       "acRate": 89.37970688877886,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-number-of-unique-subjects-taught-by-each-teacher/lc-number-of-unique-subjects-taught-by-each-teacher.sql",
+        "problems/lc-number-of-unique-subjects-taught-by-each-teacher/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-pascals-triangle::1979892566",
@@ -10407,7 +11201,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-pascals-triangle/lc-pascals-triangle.java",
+        "problems/lc-pascals-triangle/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-percentage-of-users-attended-a-contest::1812971092",
@@ -10453,7 +11254,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-percentage-of-users-attended-a-contest/lc-percentage-of-users-attended-a-contest.sql",
+        "problems/lc-percentage-of-users-attended-a-contest/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-permutation-in-string::2157785433",
@@ -10535,7 +11343,14 @@
         ],
         "topic": "sliding-window",
         "voteCount": 93
-      }
+      },
+      "_committedPaths": [
+        "problems/permutation-in-string/leetcode/lc-permutation-in-string.java",
+        "problems/permutation-in-string/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-product-of-array-except-self::2144981144",
@@ -10662,7 +11477,14 @@
         ],
         "topic": "arrays",
         "voteCount": 96
-      }
+      },
+      "_committedPaths": [
+        "problems/product-of-array-except-self/leetcode/lc-product-of-array-except-self.java",
+        "problems/product-of-array-except-self/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-product-of-array-except-self::2144988279",
@@ -10758,7 +11580,14 @@
         ],
         "topic": "arrays",
         "voteCount": 96
-      }
+      },
+      "_committedPaths": [
+        "problems/product-of-array-except-self/leetcode/lc-product-of-array-except-self.java",
+        "problems/product-of-array-except-self/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-product-of-array-except-self::2144990775",
@@ -10854,7 +11683,14 @@
         ],
         "topic": "arrays",
         "voteCount": 96
-      }
+      },
+      "_committedPaths": [
+        "problems/product-of-array-except-self/leetcode/lc-product-of-array-except-self.java",
+        "problems/product-of-array-except-self/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-product-sales-analysis-i::1807325313",
@@ -10911,7 +11747,14 @@
           "timestamp": 1761029240000,
           "submissionId": 1807326786
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-product-sales-analysis-i/lc-product-sales-analysis-i.sql",
+        "problems/lc-product-sales-analysis-i/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-product-sales-analysis-i::1807326786",
@@ -10952,7 +11795,14 @@
       "similar": null,
       "hasSimilar": null,
       "isDuplicate": true,
-      "duplicateOf": "lc-product-sales-analysis-i::1807325313"
+      "duplicateOf": "lc-product-sales-analysis-i::1807325313",
+      "_committedPaths": [
+        "problems/lc-product-sales-analysis-i/lc-product-sales-analysis-i.sql",
+        "problems/lc-product-sales-analysis-i/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-product-sales-analysis-iii::1817037392",
@@ -10991,7 +11841,14 @@
       "hints": null,
       "acRate": 46.76009591759465,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-product-sales-analysis-iii/lc-product-sales-analysis-iii.sql",
+        "problems/lc-product-sales-analysis-iii/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-project-employees-i::1812959488",
@@ -11030,7 +11887,14 @@
       "hints": null,
       "acRate": 67.49428232730233,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-project-employees-i/lc-project-employees-i.sql",
+        "problems/lc-project-employees-i/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-queries-quality-and-percentage::1814086212",
@@ -11076,7 +11940,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-queries-quality-and-percentage/lc-queries-quality-and-percentage.sql",
+        "problems/lc-queries-quality-and-percentage/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-rearrange-array-elements-by-sign::1982825825",
@@ -11145,7 +12016,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-rearrange-array-elements-by-sign/lc-rearrange-array-elements-by-sign.java",
+        "problems/lc-rearrange-array-elements-by-sign/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-recyclable-and-low-fat-products::1985828694",
@@ -11184,7 +12062,14 @@
       "hints": null,
       "acRate": 88.65395750434267,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-recyclable-and-low-fat-products/lc-recyclable-and-low-fat-products.sql",
+        "problems/lc-recyclable-and-low-fat-products/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-remove-duplicates-from-sorted-array::1813681167",
@@ -11253,7 +12138,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-remove-duplicates-from-sorted-array/lc-remove-duplicates-from-sorted-array.py",
+        "problems/lc-remove-duplicates-from-sorted-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-remove-duplicates-from-sorted-array::2009988830",
@@ -11322,7 +12214,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-remove-duplicates-from-sorted-array/lc-remove-duplicates-from-sorted-array.java",
+        "problems/lc-remove-duplicates-from-sorted-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-remove-nth-node-from-end-of-list::2134703262",
@@ -11397,7 +12296,14 @@
         ],
         "topic": "linked-list",
         "voteCount": 95
-      }
+      },
+      "_committedPaths": [
+        "problems/remove-nth-node-from-end-of-list/leetcode/lc-remove-nth-node-from-end-of-list.java",
+        "problems/remove-nth-node-from-end-of-list/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-remove-zeros-in-decimal-representation::1813666556",
@@ -11439,7 +12345,14 @@
       ],
       "acRate": 75.86837294332724,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-remove-zeros-in-decimal-representation/lc-remove-zeros-in-decimal-representation.py",
+        "problems/lc-remove-zeros-in-decimal-representation/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-replace-employee-id-with-the-unique-identifier::1807318172",
@@ -11478,7 +12391,14 @@
       "hints": null,
       "acRate": 83.90812002241354,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-replace-employee-id-with-the-unique-identifier/lc-replace-employee-id-with-the-unique-identifier.sql",
+        "problems/lc-replace-employee-id-with-the-unique-identifier/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-reverse-linked-list::1817021395",
@@ -11575,7 +12495,14 @@
         ],
         "topic": "linked-list",
         "voteCount": 99
-      }
+      },
+      "_committedPaths": [
+        "problems/reverse-linked-list/leetcode/lc-reverse-linked-list.py",
+        "problems/reverse-linked-list/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-reverse-linked-list::2128620948",
@@ -11672,7 +12599,14 @@
         ],
         "topic": "linked-list",
         "voteCount": 99
-      }
+      },
+      "_committedPaths": [
+        "problems/reverse-linked-list/leetcode/lc-reverse-linked-list.java",
+        "problems/reverse-linked-list/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-reverse-string-ii::1810448888",
@@ -11731,7 +12665,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-reverse-string-ii/lc-reverse-string-ii.py",
+        "problems/lc-reverse-string-ii/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-reverse-string::2150626722",
@@ -11786,7 +12727,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-reverse-string/lc-reverse-string.java",
+        "problems/lc-reverse-string/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-rising-temperature::1809625715",
@@ -11825,7 +12773,14 @@
       "hints": null,
       "acRate": 52.36776369142518,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-rising-temperature/lc-rising-temperature.sql",
+        "problems/lc-rising-temperature/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-roman-to-integer::1814750261",
@@ -11875,7 +12830,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-roman-to-integer/lc-roman-to-integer.py",
+        "problems/lc-roman-to-integer/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-rotate-array::2129851950",
@@ -11997,7 +12959,14 @@
           "timestamp": 1791307503000,
           "submissionId": 2164529732
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-rotate-array/lc-rotate-array.java",
+        "problems/lc-rotate-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-rotate-array::2129858873",
@@ -12058,7 +13027,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-rotate-array::2129851950"
+      "duplicateOf": "lc-rotate-array::2129851950",
+      "_committedPaths": [
+        "problems/lc-rotate-array/lc-rotate-array.java",
+        "problems/lc-rotate-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-rotate-array::2129859494",
@@ -12119,7 +13095,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-rotate-array::2129851950"
+      "duplicateOf": "lc-rotate-array::2129851950",
+      "_committedPaths": [
+        "problems/lc-rotate-array/lc-rotate-array.java",
+        "problems/lc-rotate-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-rotate-array::2162694467",
@@ -12180,7 +13163,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-rotate-array::2129851950"
+      "duplicateOf": "lc-rotate-array::2129851950",
+      "_committedPaths": [
+        "problems/lc-rotate-array/lc-rotate-array.java",
+        "problems/lc-rotate-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-rotate-array::2164529732",
@@ -12241,7 +13231,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-rotate-array::2129851950"
+      "duplicateOf": "lc-rotate-array::2129851950",
+      "_committedPaths": [
+        "problems/lc-rotate-array/lc-rotate-array.java",
+        "problems/lc-rotate-array/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-score-validator::1998911984",
@@ -12282,7 +13279,14 @@
       "hints": null,
       "acRate": 72.70986040001473,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-score-validator/lc-score-validator.java",
+        "problems/lc-score-validator/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-search-in-rotated-sorted-array-ii::2016425874",
@@ -12347,7 +13351,14 @@
           "timestamp": 1780059256000,
           "submissionId": 2016433387
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-search-in-rotated-sorted-array-ii/lc-search-in-rotated-sorted-array-ii.java",
+        "problems/lc-search-in-rotated-sorted-array-ii/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-search-in-rotated-sorted-array-ii::2016433387",
@@ -12396,7 +13407,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-search-in-rotated-sorted-array-ii::2016425874"
+      "duplicateOf": "lc-search-in-rotated-sorted-array-ii::2016425874",
+      "_committedPaths": [
+        "problems/lc-search-in-rotated-sorted-array-ii/lc-search-in-rotated-sorted-array-ii.java",
+        "problems/lc-search-in-rotated-sorted-array-ii/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-search-in-rotated-sorted-array::2010425869",
@@ -12517,7 +13535,14 @@
         ],
         "topic": "binary-search",
         "voteCount": 96
-      }
+      },
+      "_committedPaths": [
+        "problems/search-in-rotated-sorted-array/leetcode/lc-search-in-rotated-sorted-array.java",
+        "problems/search-in-rotated-sorted-array/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-search-in-rotated-sorted-array::2139153849",
@@ -12592,7 +13617,14 @@
         ],
         "topic": "binary-search",
         "voteCount": 96
-      }
+      },
+      "_committedPaths": [
+        "problems/search-in-rotated-sorted-array/leetcode/lc-search-in-rotated-sorted-array.java",
+        "problems/search-in-rotated-sorted-array/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-search-in-rotated-sorted-array::2159860171",
@@ -12667,7 +13699,14 @@
         ],
         "topic": "binary-search",
         "voteCount": 96
-      }
+      },
+      "_committedPaths": [
+        "problems/search-in-rotated-sorted-array/leetcode/lc-search-in-rotated-sorted-array.java",
+        "problems/search-in-rotated-sorted-array/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-search-in-rotated-sorted-array::2159868297",
@@ -12742,7 +13781,14 @@
         ],
         "topic": "binary-search",
         "voteCount": 96
-      }
+      },
+      "_committedPaths": [
+        "problems/search-in-rotated-sorted-array/leetcode/lc-search-in-rotated-sorted-array.java",
+        "problems/search-in-rotated-sorted-array/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-search-insert-position::2012882357",
@@ -12828,7 +13874,14 @@
           "timestamp": 1790921635000,
           "submissionId": 2159846993
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-search-insert-position/lc-search-insert-position.java",
+        "problems/lc-search-insert-position/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-search-insert-position::2138204331",
@@ -12883,7 +13936,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-search-insert-position::2012882357"
+      "duplicateOf": "lc-search-insert-position::2012882357",
+      "_committedPaths": [
+        "problems/lc-search-insert-position/lc-search-insert-position.java",
+        "problems/lc-search-insert-position/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-search-insert-position::2159846993",
@@ -12938,7 +13998,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-search-insert-position::2012882357"
+      "duplicateOf": "lc-search-insert-position::2012882357",
+      "_committedPaths": [
+        "problems/lc-search-insert-position/lc-search-insert-position.java",
+        "problems/lc-search-insert-position/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-set-mismatch::1993493098",
@@ -13020,7 +14087,14 @@
           "timestamp": 1777977096000,
           "submissionId": 1995725221
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-set-mismatch/lc-set-mismatch.java",
+        "problems/lc-set-mismatch/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-set-mismatch::1993497909",
@@ -13071,7 +14145,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-set-mismatch::1993493098"
+      "duplicateOf": "lc-set-mismatch::1993493098",
+      "_committedPaths": [
+        "problems/lc-set-mismatch/lc-set-mismatch.java",
+        "problems/lc-set-mismatch/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-set-mismatch::1995725221",
@@ -13122,7 +14203,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-set-mismatch::1993493098"
+      "duplicateOf": "lc-set-mismatch::1993493098",
+      "_committedPaths": [
+        "problems/lc-set-mismatch/lc-set-mismatch.java",
+        "problems/lc-set-mismatch/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-sort-colors::1979426739",
@@ -13182,7 +14270,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-sort-colors/lc-sort-colors.java",
+        "problems/lc-sort-colors/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-spiral-matrix::1978254878",
@@ -13266,7 +14361,14 @@
         ],
         "topic": "math",
         "voteCount": 96
-      }
+      },
+      "_committedPaths": [
+        "problems/spiral-matrix/leetcode/lc-spiral-matrix.java",
+        "problems/spiral-matrix/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-sqrtx::2158800022",
@@ -13323,7 +14425,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-sqrtx/lc-sqrtx.java",
+        "problems/lc-sqrtx/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-students-and-examinations::1809672835",
@@ -13362,7 +14471,14 @@
       "hints": null,
       "acRate": 62.17333207705551,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-students-and-examinations/lc-students-and-examinations.sql",
+        "problems/lc-students-and-examinations/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-subarray-sum-equals-k::1978320870",
@@ -13484,7 +14600,14 @@
           "timestamp": 1779296308000,
           "submissionId": 2008352692
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-subarray-sum-equals-k/lc-subarray-sum-equals-k.java",
+        "problems/lc-subarray-sum-equals-k/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-subarray-sum-equals-k::2004850568",
@@ -13575,7 +14698,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-subarray-sum-equals-k::1978320870"
+      "duplicateOf": "lc-subarray-sum-equals-k::1978320870",
+      "_committedPaths": [
+        "problems/lc-subarray-sum-equals-k/lc-subarray-sum-equals-k.java",
+        "problems/lc-subarray-sum-equals-k/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-subarray-sum-equals-k::2008352692",
@@ -13666,7 +14796,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-subarray-sum-equals-k::1978320870"
+      "duplicateOf": "lc-subarray-sum-equals-k::1978320870",
+      "_committedPaths": [
+        "problems/lc-subarray-sum-equals-k/lc-subarray-sum-equals-k.java",
+        "problems/lc-subarray-sum-equals-k/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-subarray-sums-divisible-by-k::2009246149",
@@ -13762,7 +14899,14 @@
           "timestamp": 1789707657000,
           "submissionId": 2145369923
         }
-      ]
+      ],
+      "_committedPaths": [
+        "problems/lc-subarray-sums-divisible-by-k/lc-subarray-sums-divisible-by-k.java",
+        "problems/lc-subarray-sums-divisible-by-k/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-subarray-sums-divisible-by-k::2145369923",
@@ -13842,7 +14986,14 @@
       ],
       "hasSimilar": true,
       "isDuplicate": true,
-      "duplicateOf": "lc-subarray-sums-divisible-by-k::2009246149"
+      "duplicateOf": "lc-subarray-sums-divisible-by-k::2009246149",
+      "_committedPaths": [
+        "problems/lc-subarray-sums-divisible-by-k/lc-subarray-sums-divisible-by-k.java",
+        "problems/lc-subarray-sums-divisible-by-k/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-sum-of-primes-between-number-and-its-reverse::1993828800",
@@ -13884,7 +15035,14 @@
       ],
       "acRate": 75.37713065695985,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-sum-of-primes-between-number-and-its-reverse/lc-sum-of-primes-between-number-and-its-reverse.java",
+        "problems/lc-sum-of-primes-between-number-and-its-reverse/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-two-sum::1807651380",
@@ -14068,7 +15226,14 @@
         ],
         "topic": "arrays",
         "voteCount": 100
-      }
+      },
+      "_committedPaths": [
+        "problems/two-sum/leetcode/lc-two-sum.py",
+        "problems/two-sum/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-user-activity-for-the-past-30-days-i::1816203887",
@@ -14107,7 +15272,14 @@
       "hints": null,
       "acRate": 51.82743650808372,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-user-activity-for-the-past-30-days-i/lc-user-activity-for-the-past-30-days-i.sql",
+        "problems/lc-user-activity-for-the-past-30-days-i/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-valid-anagram::1810433410",
@@ -14188,7 +15360,14 @@
         ],
         "topic": "arrays",
         "voteCount": 92
-      }
+      },
+      "_committedPaths": [
+        "problems/valid-anagram/leetcode/lc-valid-anagram.py",
+        "problems/valid-anagram/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-valid-anagram::2004782201",
@@ -14287,7 +15466,14 @@
         ],
         "topic": "arrays",
         "voteCount": 92
-      }
+      },
+      "_committedPaths": [
+        "problems/valid-anagram/leetcode/lc-valid-anagram.java",
+        "problems/valid-anagram/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-valid-anagram::2128155435",
@@ -14370,7 +15556,14 @@
         ],
         "topic": "arrays",
         "voteCount": 92
-      }
+      },
+      "_committedPaths": [
+        "problems/valid-anagram/leetcode/lc-valid-anagram.java",
+        "problems/valid-anagram/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-valid-digit-number::1987849699",
@@ -14411,7 +15604,14 @@
       ],
       "acRate": 69.51875798521043,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-valid-digit-number/lc-valid-digit-number.java",
+        "problems/lc-valid-digit-number/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-valid-palindrome-ii::2151760350",
@@ -14459,7 +15659,14 @@
           "isPaidOnly": false
         }
       ],
-      "hasSimilar": true
+      "hasSimilar": true,
+      "_committedPaths": [
+        "problems/lc-valid-palindrome-ii/lc-valid-palindrome-ii.java",
+        "problems/lc-valid-palindrome-ii/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-valid-palindrome::1812897923",
@@ -14550,7 +15757,14 @@
         ],
         "topic": "two-pointers",
         "voteCount": 91
-      }
+      },
+      "_committedPaths": [
+        "problems/valid-palindrome/leetcode/lc-valid-palindrome.py",
+        "problems/valid-palindrome/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-valid-palindrome::2151733729",
@@ -14641,7 +15855,14 @@
         ],
         "topic": "two-pointers",
         "voteCount": 91
-      }
+      },
+      "_committedPaths": [
+        "problems/valid-palindrome/leetcode/lc-valid-palindrome.java",
+        "problems/valid-palindrome/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-valid-parentheses::1815862601",
@@ -14743,7 +15964,14 @@
         ],
         "topic": "stack",
         "voteCount": 98
-      }
+      },
+      "_committedPaths": [
+        "problems/valid-parentheses/leetcode/lc-valid-parentheses.py",
+        "problems/valid-parentheses/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-valid-parentheses::2128544360",
@@ -14863,7 +16091,14 @@
         ],
         "topic": "stack",
         "voteCount": 98
-      }
+      },
+      "_committedPaths": [
+        "problems/valid-parentheses/leetcode/lc-valid-parentheses.java",
+        "problems/valid-parentheses/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-valid-parentheses::2128547824",
@@ -14967,7 +16202,14 @@
         ],
         "topic": "stack",
         "voteCount": 98
-      }
+      },
+      "_committedPaths": [
+        "problems/valid-parentheses/leetcode/lc-valid-parentheses.java",
+        "problems/valid-parentheses/leetcode/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-zigzag-conversion::1809255801",
@@ -15006,7 +16248,14 @@
       "hints": null,
       "acRate": 55.31883549535574,
       "similar": null,
-      "hasSimilar": null
+      "hasSimilar": null,
+      "_committedPaths": [
+        "problems/lc-zigzag-conversion/lc-zigzag-conversion.py",
+        "problems/lc-zigzag-conversion/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     }
   ]
 }
