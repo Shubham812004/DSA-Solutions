@@ -1,25 +1,25 @@
 {
-  "updatedAt": "2026-10-11T07:12:51.288Z",
+  "updatedAt": "2026-10-11T07:27:18.152Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 228,
+    "total": 229,
     "easy": 111,
-    "medium": 105,
+    "medium": 106,
     "hard": 2,
     "unknownDifficulty": 10,
     "byPlatform": {
-      "geeksforgeeks": 51,
+      "geeksforgeeks": 52,
       "leetcode": 177
     },
     "byLang": {
       "Unknown": 51,
+      "Java": 114,
       "Python": 29,
-      "Java": 113,
       "MySQL": 35
     },
     "byTopic": {
       "Matrix": 1,
-      "Binary Search": 2,
+      "Binary Search": 3,
       "String": 19,
       "Array": 98,
       "Greedy": 1,
@@ -920,6 +920,42 @@
       "_committedPaths": [
         "problems/gfg-mean0021/README.md"
       ]
+    },
+    {
+      "id": "gfg-minimum-days-to-make-m-bouquets",
+      "forceCommit": false,
+      "title": "Minimum Days to Make m Bouquets",
+      "titleSlug": "minimum-days-to-make-m-bouquets",
+      "difficulty": "Medium",
+      "topic": "Binary Search",
+      "tags": [
+        "Binary Search",
+        "Array"
+      ],
+      "canonical": null,
+      "readmeContent": "# Minimum Days to Make m Bouquets\n\n**Platform:** GeeksForGeeks  |  **Difficulty:** Medium\n\n**Tags:** `Binary Search`, `Arrays`\n\n## Problem\n\nIn a row of flowers, each flower blooms on a specific day. Given an integer array arr[], where arr[i] denotes the day on which the flower at position i blooms.\nTo make a bouquet, you need to collect k adjacent flowers that have already bloomed. Each flower can be used in at most one bouquet.\nFind the minimum number of days required to make m bouquets. If it is impossible to do so, return -1.\nExamples:\nInput: arr[] = [3, 4, 2, 7, 13, 8, 5], m = 3, k = 2\nOutput: 8\nExplanation: We need to make 3 bouquets, each consisting of 2 adjacent flowers.\n-> By day 8, all flowers have bloomed except the flower at position 5 (1-indexed).\n-> Form the 1st bouquet using the first 2 flowers.\n-> Form the 2nd bouquet using the next 2 flowers.\n-> Form the 3rd bouquet using the last 2 flowers.\nInput: arr[] = [5, 5, 5, 5, 10, 5, 5], m = 2, k = 3,\nOutput: 10\nExplanation: We need to make 2 bouquets, each consisting of 3 adjacent flowers.\n-> By day 5, all flowers have bloomed except the flower at position 5 (1-indexed).\n-> We can form the 1st bouquet using the first 3 bloomed flowers.\n-> It is not possible to form the 2nd bouquet now.\n-> By day 10, all the flowers have bloomed.\n-> We can then form 2 bouquets, each consisting of 3 adjacent flowers.\nInput: m = 3, k = 2, arr[] = [1, 10, 3, 10, 2]Output: -1Explanation: We need to make 3 bouquets, each consisting of 2 flowers.\n-> This requires a total of 6 flowers.\n-> There are only 5 flowers available.\n-> Therefore, it is impossible to make the required bouquets.\nConstraints:1 ≤ k ≤ arr.size() ≤ 1051 ≤ m ≤ 1051 ≤ arr[i] ≤ 109\n\n**Source:** https://www.geeksforgeeks.org/problems/minimum-days-to-make-m-bouquets/",
+      "code": "class Solution {\n    public int minDaysBloom(int[] arr, int k, int m) {\n        // code here\n        if(m*k > arr.length) return -1;\n        \n        int l = Integer.MAX_VALUE, h =Integer.MAX_VALUE;\n        for(int bloom : arr){\n            l = Math.min(l, bloom);\n            h = Math.max(h, bloom);\n        }\n        int ans = -1;\n        while(l <= h){\n            int mid = l + (h - l)/2;\n            if(helper(arr, k, m, mid)){\n                ans = mid;\n                h = mid-1;\n            }\n            else{\n                l = mid+1;\n            }\n        }\n        return ans;\n    }\n    \n    public boolean helper(int[] arr, int k, int m, int day){\n        int count = 0, b = 0;\n        for(int bloom : arr){\n            if(bloom <= day){\n                count++;\n                if(count == k){\n                    b++;\n                    count = 0;\n                }\n            }\n            else{\n                count = 0;\n            }\n        }\n        return b >= m;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/gfg-minimum-days-to-make-m-bouquets/gfg-minimum-days-to-make-m-bouquets.java",
+          "content": "class Solution {\n    public int minDaysBloom(int[] arr, int k, int m) {\n        // code here\n        if(m*k > arr.length) return -1;\n        \n        int l = Integer.MAX_VALUE, h =Integer.MAX_VALUE;\n        for(int bloom : arr){\n            l = Math.min(l, bloom);\n            h = Math.max(h, bloom);\n        }\n        int ans = -1;\n        while(l <= h){\n            int mid = l + (h - l)/2;\n            if(helper(arr, k, m, mid)){\n                ans = mid;\n                h = mid-1;\n            }\n            else{\n                l = mid+1;\n            }\n        }\n        return ans;\n    }\n    \n    public boolean helper(int[] arr, int k, int m, int day){\n        int count = 0, b = 0;\n        for(int bloom : arr){\n            if(bloom <= day){\n                count++;\n                if(count == k){\n                    b++;\n                    count = 0;\n                }\n            }\n            else{\n                count = 0;\n            }\n        }\n        return b >= m;\n    }\n}"
+        },
+        {
+          "path": "problems/gfg-minimum-days-to-make-m-bouquets/README.md",
+          "content": "# Minimum Days to Make m Bouquets\n\n**Platform:** GeeksForGeeks  |  **Difficulty:** Medium\n\n**Tags:** `Binary Search`, `Arrays`\n\n## Problem\n\nIn a row of flowers, each flower blooms on a specific day. Given an integer array arr[], where arr[i] denotes the day on which the flower at position i blooms.\nTo make a bouquet, you need to collect k adjacent flowers that have already bloomed. Each flower can be used in at most one bouquet.\nFind the minimum number of days required to make m bouquets. If it is impossible to do so, return -1.\nExamples:\nInput: arr[] = [3, 4, 2, 7, 13, 8, 5], m = 3, k = 2\nOutput: 8\nExplanation: We need to make 3 bouquets, each consisting of 2 adjacent flowers.\n-> By day 8, all flowers have bloomed except the flower at position 5 (1-indexed).\n-> Form the 1st bouquet using the first 2 flowers.\n-> Form the 2nd bouquet using the next 2 flowers.\n-> Form the 3rd bouquet using the last 2 flowers.\nInput: arr[] = [5, 5, 5, 5, 10, 5, 5], m = 2, k = 3,\nOutput: 10\nExplanation: We need to make 2 bouquets, each consisting of 3 adjacent flowers.\n-> By day 5, all flowers have bloomed except the flower at position 5 (1-indexed).\n-> We can form the 1st bouquet using the first 3 bloomed flowers.\n-> It is not possible to form the 2nd bouquet now.\n-> By day 10, all the flowers have bloomed.\n-> We can then form 2 bouquets, each consisting of 3 adjacent flowers.\nInput: m = 3, k = 2, arr[] = [1, 10, 3, 10, 2]Output: -1Explanation: We need to make 3 bouquets, each consisting of 2 flowers.\n-> This requires a total of 6 flowers.\n-> There are only 5 flowers available.\n-> Therefore, it is impossible to make the required bouquets.\nConstraints:1 ≤ k ≤ arr.size() ≤ 1051 ≤ m ≤ 1051 ≤ arr[i] ≤ 109\n\n**Source:** https://www.geeksforgeeks.org/problems/minimum-days-to-make-m-bouquets/"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": null,
+      "memory": null,
+      "timestamp": 1791703637704,
+      "elapsedSeconds": 97,
+      "_requestAIReview": true,
+      "platform": "geeksforgeeks"
     },
     {
       "id": "gfg-minimum-element-in-a-sorted-and-rotated-array3611",

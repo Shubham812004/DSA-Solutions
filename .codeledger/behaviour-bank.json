@@ -1,4 +1,21 @@
 {
+  "geeksforgeeks::minimum-days-to-make-m-bouquets": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "geeksforgeeks",
+    "slug": "minimum-days-to-make-m-bouquets",
+    "solves": [
+      {
+        "elapsedSeconds": 97,
+        "lang": "Java",
+        "ts": 1791703638023
+      }
+    ],
+    "tags": [
+      "Binary Search",
+      "Array"
+    ]
+  },
   "leetcode::minimum-number-of-days-to-make-m-bouquets": {
     "difficulty": "Medium",
     "lang": "Java",

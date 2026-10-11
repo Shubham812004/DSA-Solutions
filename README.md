@@ -6,15 +6,15 @@
 
 # Shubham812004's DSA Solutions
 
-[![Solutions](https://img.shields.io/badge/Solutions-228-06b6d4?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Easy](https://img.shields.io/badge/Easy-111-22c55e?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Medium](https://img.shields.io/badge/Medium-105-f59e0b?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Hard](https://img.shields.io/badge/Hard-2-ef4444?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Languages](https://img.shields.io/badge/Languages-4-14b8a6?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Platforms](https://img.shields.io/badge/Platforms-2-6366f1?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/)
+[![Solutions](https://img.shields.io/badge/Solutions-229-06b6d4?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Easy](https://img.shields.io/badge/Easy-111-22c55e?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Medium](https://img.shields.io/badge/Medium-106-f59e0b?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Hard](https://img.shields.io/badge/Hard-2-ef4444?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Languages](https://img.shields.io/badge/Languages-4-14b8a6?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/) [![Platforms](https://img.shields.io/badge/Platforms-2-6366f1?style=flat-square)](https://shubham812004.github.io/DSA-Solutions/)
 
 <!-- codeledger:gamification:start -->
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://shubham812004.github.io/DSA-Solutions/badges/card-light.svg?v=3935-1-228-2026-10-11">
-  <img src="https://shubham812004.github.io/DSA-Solutions/badges/card.svg?v=3935-1-228-2026-10-11" alt="Streak card" width="420">
+  <source media="(prefers-color-scheme: light)" srcset="https://shubham812004.github.io/DSA-Solutions/badges/card-light.svg?v=3960-1-229-2026-10-11">
+  <img src="https://shubham812004.github.io/DSA-Solutions/badges/card.svg?v=3960-1-229-2026-10-11" alt="Streak card" width="420">
 </picture>
 
-![Streak](https://shubham812004.github.io/DSA-Solutions/badges/streak.svg?v=3935-1-228-2026-10-11) ![Points](https://shubham812004.github.io/DSA-Solutions/badges/points.svg?v=3935-1-228-2026-10-11) ![Level](https://shubham812004.github.io/DSA-Solutions/badges/level.svg?v=3935-1-228-2026-10-11) ![Freezes](https://shubham812004.github.io/DSA-Solutions/badges/freezes.svg?v=3935-1-228-2026-10-11)
+![Streak](https://shubham812004.github.io/DSA-Solutions/badges/streak.svg?v=3960-1-229-2026-10-11) ![Points](https://shubham812004.github.io/DSA-Solutions/badges/points.svg?v=3960-1-229-2026-10-11) ![Level](https://shubham812004.github.io/DSA-Solutions/badges/level.svg?v=3960-1-229-2026-10-11) ![Freezes](https://shubham812004.github.io/DSA-Solutions/badges/freezes.svg?v=3960-1-229-2026-10-11)
 
 🩸 First Blood · 🔟 Ten Down · 💯 Century · 🎯 Well Rounded · ⚡ Double Day · ⭐ Engineer
 <!-- codeledger:gamification:end -->
@@ -33,11 +33,11 @@
 
 ## Stats
 
-**By Platform:** leetcode (177) · geeksforgeeks (51)
+**By Platform:** leetcode (177) · geeksforgeeks (52)
 
-**Top Languages:** Java (113) · Unknown (51) · MySQL (35) · Python (29)
+**Top Languages:** Java (114) · Unknown (51) · MySQL (35) · Python (29)
 
-**Top Topics:** Array (98) · Untagged (38) · Database (35) · String (19) · Linked List (11) · Dynamic Programming (6) · Math (5) · Stack (5) · Hash Table (3) · Two Pointers (3)
+**Top Topics:** Array (98) · Untagged (38) · Database (35) · String (19) · Linked List (11) · Dynamic Programming (6) · Math (5) · Stack (5) · Binary Search (3) · Hash Table (3)
 
 ---
 
@@ -80,6 +80,7 @@ Built with [CodeLedger](https://codeledger.vkrishna04.me) · [⭐ Star the exten
 </div>
 
 <!-- CODELEDGER_AUTO_GENERATED_END -->
+
 
 
 
