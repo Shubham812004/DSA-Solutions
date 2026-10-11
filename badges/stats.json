@@ -4,13 +4,21 @@
   "currentStreak": 0,
   "longestStreak": 0,
   "freezes": 0,
-  "totalPoints": 0,
-  "totalSolves": 0,
+  "totalPoints": 820,
+  "totalSolves": 51,
   "totalRecalls": 0,
-  "byDifficulty": {},
-  "level": 1,
-  "levelName": "Initiate",
+  "byDifficulty": {
+    "Unknown": 10,
+    "Medium": 18,
+    "Easy": 22,
+    "Hard": 1
+  },
+  "level": 4,
+  "levelName": "Analyst",
   "activeDays": 0,
   "dailyTargetPoints": 25,
-  "achievements": []
+  "achievements": [
+    "first-blood",
+    "ten-down"
+  ]
 }
