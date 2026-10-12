@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T07:27:18.152Z",
+  "updatedAt": "2026-10-12T04:40:17.904Z",
   "layoutVersion": 3,
   "stats": {
     "total": 229,
@@ -59,20 +59,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": "<p><span>You are given two square matrices, a[][] and b[][], each of size n x n. Your task is to compute the sum of these two matrices and store the result in the matrix a[][] itself.</span></p>\n<p><span><strong>Examples:</strong></span></p>\n<pre><span><strong>Input: </strong>a[][] = [[1, 2], [3, 4]],\n       b[][] = [[4, 3], [2, 1]]\n<strong>Output: </strong>[[5, 5], [5, 5]]<br /><strong>Explanation:</strong> The will be: [[5, 5], [5, 5]] on adding the corresponding elements of both matrices.</span>\n</pre>\n<pre><span><strong>Input: </strong>a[][] = [[7, 8], [9, 10]],\n       b[][] = [[1, 2], [3, 4]]\n<strong>Output: </strong></span><span>[[8, 10], [12, 14]]<br /><strong>Explanation:</strong> The result will be </span><span>[[8, 10], [12, 14]] after adding the corresponding elements of both matrices</span><spanSegoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">.</span>&nbsp;</pre>\n<p><span><strong>Constraints:</strong><br />1 &lt;= n &lt;= 100</span></p>",
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696377618,
-      "_committedPaths": [
-        "problems/gfg-addition-of-two-square-matrices4916/README.md"
-      ],
-      "_conflictResolvedAt": 1791697197834
+      "urlVerifiedAt": 1791696377618
     },
     {
       "id": "gfg-aggressive-cows",
@@ -93,20 +86,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375464,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": "<p><span>Given an integer array <strong>arr[]</strong>, which denotes the positions of stalls. All the positions are distinct. There are<strong> k</strong> aggressive cows.</span></p><p><span>Assign the cows to the stalls such that the<strong> minimum</strong> distance between any two cows is <strong>maximized.</strong></span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input: </strong><span>arr[] = [1, 2, 4, 8, 9], k = 3\n</span><strong>Output: </strong><span>3\n</span><span><strong>Explanation: </strong>The first cow can be placed at arr[0], the second at arr[2], and the third at arr[3]. The minimum distance between any two cows is 3 (between arr[0] and arr[2]), which is the maximum possible among all valid arrangements.</span></span></pre><pre><span><strong>Input: </strong>arr[] = [10, 1, 2, 7, 5], k = 3\n<strong>Output: </strong>4\n<strong>Explanation: </strong>The first cow can be placed at arr[0], the second at arr[1], and the third at arr[4]. In this arrangement, the minimum distance between any two cows is 4 (between arr[1] and arr[4]), which is the maximum possible among all valid arrangements.</span></pre>",
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696378219,
-      "_committedPaths": [
-        "problems/gfg-aggressive-cows/README.md"
-      ],
-      "_conflictResolvedAt": 1791697197834
+      "urlVerifiedAt": 1791696378219
     },
     {
       "id": "gfg-anagram-1587115620",
@@ -128,20 +114,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": "<p data-start=\"96\" data-end=\"235\"><spanandale mono', monospace;\">Given two non-empty strings <strong>s1 </strong>and <strong>s2</strong>, consisting only of lowercase English letters, determine whether they are anagrams of each other or not.<br /></span><spanandale mono', monospace;\"> </span><spanandale mono', monospace;\">Two strings are considered anagrams if they contain the same characters with exactly the same frequencies, regardless of their order.</span></p><p><spanandale mono', monospace;\"><strong>Examples:</strong></span></p><pre><spanandale mono', monospace;\"><strong>Input:</strong> s1 = \"geeks\" s2 = \"kseeg\"<br /><strong>Output:</strong> true <br /><strong>Explanation:</strong> Both the string have same characters with same frequency. So, they are anagrams.</span></pre><pre><spanandale mono', monospace;\"><strong>Input:</strong> s1 = \"allergy\", s2 = \"allergyy\" <br /></span><spanandale mono', monospace;\"><strong>Output</strong>: false <br /><strong>Explanation:</strong> Although the characters are mostly the same, s2 contains an extra 'y' character. Since the frequency of characters differs, the strings are not anagrams. </span></pre><pre><spanandale mono', monospace;\"><strong>Input:</strong> s1 = \"listen\", s2 = \"lists\" <br /><strong>Output:</strong> false <br /><strong>Explanation:</strong> The characters in the two strings are not the same &mdash; some are missing or extra. So, they are not anagrams.</span></pre>",
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696378873,
-      "_committedPaths": [
-        "problems/gfg-anagram-1587115620/README.md"
-      ],
-      "_conflictResolvedAt": 1791697431839
+      "urlVerifiedAt": 1791696378873
     },
     {
       "id": "gfg-array-subset-of-another-array2317",
@@ -164,20 +143,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": "<p><span>Given two arrays <strong>a[] </strong>and <strong>b[]</strong>, your task is to determine whether <strong>b[]</strong> is a subset of <strong>a[]</strong>.</span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input</strong>: a[] = [11, 7, 1, 13, 21, 3, 7, 3], b[] = [11, 3, 7, 1, 7]\n<strong>Output</strong>: true\n<strong>Explanation: </strong>b[] is a subset of a[]</span></pre><pre><span><strong>Input</strong>: a[] = [1, 2, 3, 4, 4, 5, 6], b[] = [1, 2, 4]\n<strong>Output</strong>: true\n<strong>Explanation: </strong>b[] is a subset of a[]</span></pre><pre><span><strong>Input</strong>: a[] = [10, 5, 2, 23, 19], b[] = [19, 5, 3]<strong>\nOutput</strong>: false<strong>\nExplanation: </strong>b[] is not a subset of a[]</span></pre>",
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696379640,
-      "_committedPaths": [
-        "problems/gfg-array-subset-of-another-array2317/README.md"
-      ],
-      "_conflictResolvedAt": 1791697431839
+      "urlVerifiedAt": 1791696379640
     },
     {
       "id": "gfg-binary-search-1587115620",
@@ -200,19 +172,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": "<p><span>Given a sorted array <strong>arr[]</strong> and an integer <strong>k</strong>, find the position(0-based indexing) at which k is present in the array using binary search. If k doesn't exist in arr[] return <strong>-1</strong>.&nbsp;</span></p>\n<p><span><strong>Note:</strong> If multiple occurrences are there, please return the smallest index.</span></p>\n<p><span><strong>Examples:</strong></span></p>\n<pre><span><strong>Input: </strong>arr[] = [1, 2, 3, 4, 5], k = 4\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> 4 appears at index 3.</span></pre>\n<pre><span><strong>Input: </strong>arr[] = [11, 22, 33, 44, 55], k = 445\n<strong>Output:</strong> -1\n<strong>Explanation:</strong> 445 is not present.<br /></span></pre>\n<pre><span><strong>Input: </strong>arr[] = [1, 1, 1, 1, 2], k = 1\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> 1 appears at index 0.</span></pre>\n<p><span><strong>Constraints:<br /></strong>1 &le; arr.size() &le; 10<sup>5<br /></sup>1 &le; arr[i] &le; 10<sup>6<br /></sup>1 &le; k &le; 10<sup>6</sup></span></p>\n<div id=\"highlighter--hover-tools\">\n<div id=\"highlighter--hover-tools--container\">\n<div title=\"Copy\">&nbsp;</div>\n<div title=\"Change Color\">&nbsp;</div>\n<div title=\"Delete\">&nbsp;</div>\n</div>\n</div>",
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696380278,
-      "_committedPaths": [
-        "problems/gfg-binary-search-1587115620/README.md"
-      ]
+      "urlVerifiedAt": 1791696380278
     },
     {
       "id": "gfg-buy-stock-2",
@@ -234,19 +200,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": "<p><span>Given an array <strong>prices[]</strong> of non-negative integers, representing the prices of the stocks on different days. The task is to find the maximum profit possible by buying and selling the stocks on different days when <strong>at most one </strong>transaction is allowed. Here one transaction means 1 buy + 1 Sell. If it is not possible to make a profit then <strong>return 0</strong>.</span></p>\n<p><span>Note: Stock must be bought before being sold.</span></p>\n<p><span><strong>Examples:</strong></span></p>\n<pre><span><strong>Input: </strong><span>prices[] = [7, 10, 1, 3, 6, 9, 2]<br /></span><strong>Output:</strong><span> 8<br /></span><strong>Explanation:</strong><span> You can buy the stock on day 2 at price = 1 and sell it on day 5 at price = 9. Hence, the profit is 8.</span></span></pre>\n<pre><span><strong>Input: </strong><span>prices[] = [7, 6, 4, 3, 1]<br /></span><strong>Output:</strong><span> 0 <br /></span><span><strong>Explanation</strong></span><strong>:</strong><span> Here the prices are in decreasing order, hence if we buy any day then we cannot sell it at a greater price. Hence, the answer is 0.<br /></span></span></pre>\n<pre><span><strong>Input: </strong>prices[] = [1, 3, 6, 9, 11]</span><br /><span><strong>Output:</strong> 10 </span><br /><span><span><strong>Explanation</strong></span><strong>:</strong><span> Since the array is sorted in increasing order, we can make maximum profit by buying at price[0] and selling at price[n-1].</span></span></pre>\n<p><span><strong>Constraint:</strong><br />1&nbsp;</span><span>&le;</span><span> </span><span>&nbsp;prices.size()&nbsp;</span><span>&le;</span><span> </span><span>&nbsp;10</span><sup>5<br /></sup><span>0&nbsp;</span><span>&le;</span><span> </span><span>&nbsp;prices[i] </span><span>&le;</span><span> &nbsp;</span><span>10</span><sup>4</sup></p>",
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696380890,
-      "_committedPaths": [
-        "problems/gfg-buy-stock-2/README.md"
-      ]
+      "urlVerifiedAt": 1791696380890
     },
     {
       "id": "gfg-capacity-to-ship-packages-within-d-days",
@@ -268,19 +228,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375464,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": "<p><span>Given <strong>arr[]</strong> of weights, find the minimum boat capacity to ship all weights within <strong>d</strong> days.</span></p>\n<ul>\n<li><span>The items are loaded in the same order as their appearance.</span></li>\n<li><span>The total weight should not exceed the computed capacity on any day.</span></li>\n</ul>\n<p><span><strong>Examples:</strong></span></p>\n<pre><span><strong>Input: </strong>arr[] = [1, 2, 1], d = 2\n<strong>Output: </strong>3\n<strong>Explanation: </strong>We can ship with boat capacity 3 in 2 days.\nDay 1- 1, 2\nDay 2- 1</span>\n</pre>\n<pre><span><strong>Input:</strong> arr[] = [9, 8, 10], d = 3\n<strong>Output: </strong>10</span>\n<span><strong>Explanation: </strong>We can ship with boat capacity 10 in 3 days.\nDay 1- 9\nDay 2- 8\nDay 3- 10</span></pre>",
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696381549,
-      "_committedPaths": [
-        "problems/gfg-capacity-to-ship-packages-within-d-days/README.md"
-      ]
+      "urlVerifiedAt": 1791696381549
     },
     {
       "id": "gfg-ceil-in-a-sorted-array",
@@ -303,19 +257,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375464,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": "<p><span>Given a sorted array&nbsp;<strong>arr[]&nbsp;</strong>and an integer&nbsp;<strong>x</strong>, find the index (0-based) of the smallest element in arr[] that is greater than or equal to x. This element is called the&nbsp;<strong>ceil</strong> of x. If such an element does not exist, return -1.</span></p><p><span><strong>Note:</strong>&nbsp;In case of multiple occurrences of ceil of x, return the index of the first occurrence.</span></p><p><strong>Examples</strong></p><pre><span><strong>Input: </strong>arr[] = [1, 2, 8, 10, 11, 12, 19], x = 5\n<strong>Output: </strong>2<strong>\nExplanation: </strong>Smallest number greater than 5 is 8, whose index is 2.</span></pre><pre><span><strong>Input: </strong>arr[] = [1, 2, 8, 10, 11, 12, 19], x = 20\n<strong>Output: </strong>-1<strong>\nExplanation: </strong></span><span>No element greater than 20 is found. So output is -1.</span></pre><pre><span><strong>Input: </strong>arr[] = [1, 1, 2, 8, 10, 11, 12, 19], x = 0\n<strong>Output: </strong>0<strong>\nExplanation: </strong>Smallest number greater than 0 is 1, whose indices are 0 and 1. The index of the first occurrence is 0.</span></pre>",
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696382130,
-      "_committedPaths": [
-        "problems/gfg-ceil-in-a-sorted-array/README.md"
-      ]
+      "urlVerifiedAt": 1791696382130
     },
     {
       "id": "gfg-check-if-an-array-is-sorted0701",
@@ -337,19 +285,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": "<p><span>Given an array <strong>arr[]</strong>, check whether it is sorted in non-decreasing order. Return </span><span>true if it is sorted otherwise false.</span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input: </strong>arr[] = [10, 20, 30, 40, 50]\n<strong>Output:</strong> true\n<strong>Explanation:</strong> The given array is sorted.</span></pre><pre><span><strong>Input: </strong>arr[] = [90, 80, 100, 70, 40, 30]\n<strong>Output:</strong> false\n<strong>Explanation:</strong>&nbsp;The given array is not sorted.</span></pre>",
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696382676,
-      "_committedPaths": [
-        "problems/gfg-check-if-an-array-is-sorted0701/README.md"
-      ]
+      "urlVerifiedAt": 1791696382676
     },
     {
       "id": "gfg-container-with-most-water0535",
@@ -372,19 +314,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": "<p><span>Given an array&nbsp;<strong>arr[]&nbsp;</strong>of non-negative integers, where each element <strong>arr[i]</strong>&nbsp;represents the height of the<strong> </strong>vertical lines,&nbsp;find the maximum amount of water that can be contained between any two lines, together with the x-axis.</span></p><p><span><strong>Note:</strong> In the case of a single vertical line it will not be able to hold water.</span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input: </strong>arr[] = [1, 5, 4, 3]\n<strong>Output: </strong>6<strong>\nExplanation: </strong>5 and 3 are 2 distance apart. So the size of the base is 2. Height of container = min(5, 3) = 3. So, total area to hold water = 3 * 2 = 6.</span></pre><pre><span><strong>Input: </strong>arr[] = [3, 1, 2, 4, 5]\n<strong>Output: </strong>12<strong>\nExplanation: </strong>5 and 3 are 4 distance apart. So the size of the base is 4. Height of container = min(5, 3) = 3. So, total area to hold water = 4 * 3 = 12.</span></pre><pre><span><strong>Input</strong>: arr[] = [2, 1, 8, 6, 4, 6, 5, 5]<br /><strong>Output</strong>: 25 <br /><strong>Explanation</strong>: 8 and 5 are 5 distance apart. So the size of the base is 5. Height of container = min(8, 5) = 5. So, the total area to hold water = 5 * 5 = 25.</span></pre><p><span><strong>Constraints:</strong><br />1 &le; arr.size() &le; 10<sup>5</sup><br />0 &le; arr[i] &le; 10<sup>4</sup></span></p>",
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696383269,
-      "_committedPaths": [
-        "problems/gfg-container-with-most-water0535/README.md"
-      ]
+      "urlVerifiedAt": 1791696383269
     },
     {
       "id": "gfg-count-alphabets3649",
@@ -403,15 +339,9 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
-      "_committedPaths": [
-        "problems/gfg-count-alphabets3649/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -436,19 +366,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": "<p><span>Given an integer array <strong>arr[]</strong> of positive numbers, the task is to find the number of possible contiguous subarrays having product less than <strong>k</strong>. </span></p>\n<p><span><strong>Examples:</strong></span></p>\n<pre><span><span><strong>Input :</strong><span> k = 10, arr[] = [1, 2, 3, 4]\n</span><strong>Output : </strong><span>7\n</span><strong>Explanation:</strong><span>\nThe contiguous subarrays whose product is less than 10 are [1], [2], [3], [4], [1, 2], [2, 3], and [1, 2, 3]. Therefore, the total number of valid contiguous subarrays is 7.</span></span></span></pre>\n<pre><span><span><strong>Input:</strong> k = 100, arr[] = [1, 9, 2, 8, 6, 4, 3]\n<strong>Output: </strong>16<br /><strong>Explanation: </strong></span><span>There are 16 contiguous subarrays whose product of elements is strictly less than 100. </span></span></pre>\n<p><span><span><strong>Constraints:<br /></strong></span><span>1 &le; n &le; 10<sup>5</sup><br /></span><span>1 &le; k &le; 10<sup>5</sup><br /></span><span>1 &le; arr[i] &le; 10<sup>3</sup></span></span></p>",
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696385233,
-      "_committedPaths": [
-        "problems/gfg-count-the-subarrays-having-product-less-than-k1708/README.md"
-      ]
+      "urlVerifiedAt": 1791696385233
     },
     {
       "id": "gfg-equilibrium-point-1587115620",
@@ -470,19 +394,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": "<p><span>Given an array of integers<strong> arr[]</strong>,<strong> </strong>the task is to find the first equilibrium point&nbsp;in the array.</span></p>\n<p><span>The equilibrium point in an array is an index (0-based indexing) such that the sum of all elements before<strong>&nbsp;</strong>that index is the&nbsp;same&nbsp;as the&nbsp;sum<strong>&nbsp;</strong>of elements&nbsp;after<strong>&nbsp;</strong>it.&nbsp;</span><span>Return -1 if no such point exists.&nbsp;</span></p>\n<p><span><strong>Examples:</strong></span></p>\n<pre><span><strong>Input: </strong>arr[] = [1, 2, 0, 3]<br /><strong>Output: </strong>2<strong> \nExplanation: </strong></span><span>The sum of left of index 2 is 1 + 2 = 3 and sum on right of index 2 is 3.</span></pre>\n<pre><span><strong>Input: </strong>arr[] = [1, 1, 1, 1]<br /><strong>Output: </strong>-1<strong>\nExplanation: </strong>There is no equilibrium index in the array.<br /></span></pre>\n<pre><span><strong>Input: </strong>arr[] = [-7, 1, 5, 2, -4, 3, 0]</span><span><span><br /></span></span><span><strong>Output: </strong>3<strong>\nExplanation: </strong></span><span><span>The sum of left of index 3 is -7 + 1 + 5 = -1 and sum on right of index 3 is -4 + 3 + 0 = -1.</span></span></pre>",
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696385864,
-      "_committedPaths": [
-        "problems/gfg-equilibrium-point-1587115620/README.md"
-      ]
+      "urlVerifiedAt": 1791696385864
     },
     {
       "id": "gfg-find-the-median0527",
@@ -504,19 +422,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": "<p><span>Given an array <strong>arr[]</strong> of integers, calculate the median.</span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input: </strong>arr[] = [90, 100, 78, 89, 67]\n<strong>Output: </strong>89\n<strong>Explanation: </strong>After sorting the array middle element is the median \n</span></pre><pre><span><strong>Input: </strong>arr[] = [56, 67, 30, 79]\n<strong>Output: </strong>61.5\n<strong>Explanation: </strong>In case of even number of elements, average of two middle elements is the median.</span><span> <br /></span></pre><pre><span><strong>Input:&nbsp;</strong>arr[] = [1, 2]<br /><strong>Output:</strong> 1.5<br /><strong>Explanation:</strong> The average of both elements will result in 1.5.</span></pre>",
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696386513,
-      "_committedPaths": [
-        "problems/gfg-find-the-median0527/README.md"
-      ]
+      "urlVerifiedAt": 1791696386513
     },
     {
       "id": "gfg-find-the-smallest-and-second-smallest-element-in-an-array3226",
@@ -535,19 +447,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696387412,
-      "_committedPaths": [
-        "problems/gfg-find-the-smallest-and-second-smallest-element-in-an-array3226/README.md"
-      ]
+      "urlVerifiedAt": 1791696387412
     },
     {
       "id": "gfg-first-and-last-occurrences-of-x3116",
@@ -566,19 +472,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375464,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696388105,
-      "_committedPaths": [
-        "problems/gfg-first-and-last-occurrences-of-x3116/README.md"
-      ]
+      "urlVerifiedAt": 1791696388105
     },
     {
       "id": "gfg-floor-in-a-sorted-array-1587115620",
@@ -597,19 +497,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375464,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696388754,
-      "_committedPaths": [
-        "problems/gfg-floor-in-a-sorted-array-1587115620/README.md"
-      ]
+      "urlVerifiedAt": 1791696388754
     },
     {
       "id": "gfg-kadanes-algorithm-1587115620",
@@ -628,19 +522,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696389559,
-      "_committedPaths": [
-        "problems/gfg-kadanes-algorithm-1587115620/README.md"
-      ]
+      "urlVerifiedAt": 1791696389559
     },
     {
       "id": "gfg-koko-eating-bananas",
@@ -659,19 +547,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375464,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696390189,
-      "_committedPaths": [
-        "problems/gfg-koko-eating-bananas/README.md"
-      ]
+      "urlVerifiedAt": 1791696390189
     },
     {
       "id": "gfg-largest-element-in-array4009",
@@ -690,19 +572,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696390833,
-      "_committedPaths": [
-        "problems/gfg-largest-element-in-array4009/README.md"
-      ]
+      "urlVerifiedAt": 1791696390833
     },
     {
       "id": "gfg-longest-distinct-characters-in-string5848",
@@ -721,19 +597,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696391474,
-      "_committedPaths": [
-        "problems/gfg-longest-distinct-characters-in-string5848/README.md"
-      ]
+      "urlVerifiedAt": 1791696391474
     },
     {
       "id": "gfg-longest-k-unique-characters-substring0853",
@@ -752,19 +622,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696392037,
-      "_committedPaths": [
-        "problems/gfg-longest-k-unique-characters-substring0853/README.md"
-      ]
+      "urlVerifiedAt": 1791696392037
     },
     {
       "id": "gfg-max-consecutive-one",
@@ -783,19 +647,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696392709,
-      "_committedPaths": [
-        "problems/gfg-max-consecutive-one/README.md"
-      ]
+      "urlVerifiedAt": 1791696392709
     },
     {
       "id": "gfg-max-sum-subarray-of-size-k5313",
@@ -814,19 +672,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696393485,
-      "_committedPaths": [
-        "problems/gfg-max-sum-subarray-of-size-k5313/README.md"
-      ]
+      "urlVerifiedAt": 1791696393485
     },
     {
       "id": "gfg-maximize-number-of-1s0905",
@@ -845,19 +697,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696394183,
-      "_committedPaths": [
-        "problems/gfg-maximize-number-of-1s0905/README.md"
-      ]
+      "urlVerifiedAt": 1791696394183
     },
     {
       "id": "gfg-maximum-product-subarray3604",
@@ -876,19 +722,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696394823,
-      "_committedPaths": [
-        "problems/gfg-maximum-product-subarray3604/README.md"
-      ]
+      "urlVerifiedAt": 1791696394823
     },
     {
       "id": "gfg-mean0021",
@@ -907,19 +747,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696395474,
-      "_committedPaths": [
-        "problems/gfg-mean0021/README.md"
-      ]
+      "urlVerifiedAt": 1791696395474
     },
     {
       "id": "gfg-minimum-days-to-make-m-bouquets",
@@ -954,7 +788,6 @@
       "memory": null,
       "timestamp": 1791703637704,
       "elapsedSeconds": 97,
-      "_requestAIReview": true,
       "platform": "geeksforgeeks"
     },
     {
@@ -974,19 +807,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696396119,
-      "_committedPaths": [
-        "problems/gfg-minimum-element-in-a-sorted-and-rotated-array3611/README.md"
-      ]
+      "urlVerifiedAt": 1791696396119
     },
     {
       "id": "gfg-move-all-zeroes-to-end-of-array0751",
@@ -1005,19 +832,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696396751,
-      "_committedPaths": [
-        "problems/gfg-move-all-zeroes-to-end-of-array0751/README.md"
-      ]
+      "urlVerifiedAt": 1791696396751
     },
     {
       "id": "gfg-non-repeating-element3958",
@@ -1036,19 +857,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696397400,
-      "_committedPaths": [
-        "problems/gfg-non-repeating-element3958/README.md"
-      ]
+      "urlVerifiedAt": 1791696397400
     },
     {
       "id": "gfg-number-of-occurrence2259",
@@ -1067,19 +882,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375464,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696398034,
-      "_committedPaths": [
-        "problems/gfg-number-of-occurrence2259/README.md"
-      ]
+      "urlVerifiedAt": 1791696398034
     },
     {
       "id": "gfg-palindrome-string0817",
@@ -1098,19 +907,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696398853,
-      "_committedPaths": [
-        "problems/gfg-palindrome-string0817/README.md"
-      ]
+      "urlVerifiedAt": 1791696398853
     },
     {
       "id": "gfg-peak-element",
@@ -1129,19 +932,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375464,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696399475,
-      "_committedPaths": [
-        "problems/gfg-peak-element/README.md"
-      ]
+      "urlVerifiedAt": 1791696399475
     },
     {
       "id": "gfg-remove-duplicate-elements-from-sorted-array",
@@ -1160,19 +957,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696400105,
-      "_committedPaths": [
-        "problems/gfg-remove-duplicate-elements-from-sorted-array/README.md"
-      ]
+      "urlVerifiedAt": 1791696400105
     },
     {
       "id": "gfg-remove-duplicates-from-unsorted-array4141",
@@ -1191,19 +982,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696400755,
-      "_committedPaths": [
-        "problems/gfg-remove-duplicates-from-unsorted-array4141/README.md"
-      ]
+      "urlVerifiedAt": 1791696400755
     },
     {
       "id": "gfg-reverse-a-string",
@@ -1222,19 +1007,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696401369,
-      "_committedPaths": [
-        "problems/gfg-reverse-a-string/README.md"
-      ]
+      "urlVerifiedAt": 1791696401369
     },
     {
       "id": "gfg-reverse-an-array",
@@ -1253,19 +1032,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696402039,
-      "_committedPaths": [
-        "problems/gfg-reverse-an-array/README.md"
-      ]
+      "urlVerifiedAt": 1791696402039
     },
     {
       "id": "gfg-rotate-array-by-n-elements-1587115621",
@@ -1284,19 +1057,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696402674,
-      "_committedPaths": [
-        "problems/gfg-rotate-array-by-n-elements-1587115621/README.md"
-      ]
+      "urlVerifiedAt": 1791696402674
     },
     {
       "id": "gfg-rotation4723",
@@ -1315,19 +1082,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375464,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696403542,
-      "_committedPaths": [
-        "problems/gfg-rotation4723/README.md"
-      ]
+      "urlVerifiedAt": 1791696403542
     },
     {
       "id": "gfg-search-in-a-rotated-array4618",
@@ -1346,19 +1107,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696404281,
-      "_committedPaths": [
-        "problems/gfg-search-in-a-rotated-array4618/README.md"
-      ]
+      "urlVerifiedAt": 1791696404281
     },
     {
       "id": "gfg-search-insert-position-of-k-in-a-sorted-array",
@@ -1377,19 +1132,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696404916,
-      "_committedPaths": [
-        "problems/gfg-search-insert-position-of-k-in-a-sorted-array/README.md"
-      ]
+      "urlVerifiedAt": 1791696404916
     },
     {
       "id": "gfg-second-largest3735",
@@ -1408,19 +1157,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696405713,
-      "_committedPaths": [
-        "problems/gfg-second-largest3735/README.md"
-      ]
+      "urlVerifiedAt": 1791696405713
     },
     {
       "id": "gfg-smallest-subarray-with-sum-greater-than-x5651",
@@ -1439,19 +1182,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696406394,
-      "_committedPaths": [
-        "problems/gfg-smallest-subarray-with-sum-greater-than-x5651/README.md"
-      ]
+      "urlVerifiedAt": 1791696406394
     },
     {
       "id": "gfg-sort-a-string2943",
@@ -1470,19 +1207,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696406989,
-      "_committedPaths": [
-        "problems/gfg-sort-a-string2943/README.md"
-      ]
+      "urlVerifiedAt": 1791696406989
     },
     {
       "id": "gfg-sort-an-array-of-0s-1s-and-2s4231",
@@ -1501,19 +1232,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696407581,
-      "_committedPaths": [
-        "problems/gfg-sort-an-array-of-0s-1s-and-2s4231/README.md"
-      ]
+      "urlVerifiedAt": 1791696407581
     },
     {
       "id": "gfg-square-root",
@@ -1532,19 +1257,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696408194,
-      "_committedPaths": [
-        "problems/gfg-square-root/README.md"
-      ]
+      "urlVerifiedAt": 1791696408194
     },
     {
       "id": "gfg-string-palindromic-ignoring-spaces4723",
@@ -1563,19 +1282,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696408916,
-      "_committedPaths": [
-        "problems/gfg-string-palindromic-ignoring-spaces4723/README.md"
-      ]
+      "urlVerifiedAt": 1791696408916
     },
     {
       "id": "gfg-subarrays-with-sum-k",
@@ -1594,19 +1307,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696409544,
-      "_committedPaths": [
-        "problems/gfg-subarrays-with-sum-k/README.md"
-      ]
+      "urlVerifiedAt": 1791696409544
     },
     {
       "id": "gfg-sum-all-array-elements",
@@ -1625,19 +1332,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696410114,
-      "_committedPaths": [
-        "problems/gfg-sum-all-array-elements/README.md"
-      ]
+      "urlVerifiedAt": 1791696410114
     },
     {
       "id": "gfg-trapping-rain-water-1587115621",
@@ -1656,19 +1357,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696410852,
-      "_committedPaths": [
-        "problems/gfg-trapping-rain-water-1587115621/README.md"
-      ]
+      "urlVerifiedAt": 1791696410852
     },
     {
       "id": "gfg-triplet-sum-in-array-1587115621",
@@ -1687,19 +1382,13 @@
       "files": [],
       "timestamp": null,
       "importedAt": 1791696375465,
-      "_solveDateUnknown": true,
       "runtime": null,
       "memory": null,
       "problemStatement": null,
-      "_importedFromProfile": true,
-      "_needsCodeFetch": true,
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
-      "urlVerifiedAt": 1791696411633,
-      "_committedPaths": [
-        "problems/gfg-triplet-sum-in-array-1587115621/README.md"
-      ]
+      "urlVerifiedAt": 1791696411633
     },
     {
       "id": "lc-3sum::1812933130",
@@ -1802,13 +1491,13 @@
         "topic": "two-pointers",
         "voteCount": 98
       },
-      "_committedPaths": [
-        "problems/3sum/leetcode/lc-3sum.py",
-        "problems/3sum/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-3sum::1980848301",
+        "lc-3sum::1990350392"
+      ]
     },
     {
       "id": "lc-3sum::1980848301",
@@ -1929,13 +1618,13 @@
         "topic": "two-pointers",
         "voteCount": 98
       },
-      "_committedPaths": [
-        "problems/3sum/leetcode/lc-3sum.java",
-        "problems/3sum/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-3sum::1812933130",
+        "lc-3sum::1990350392"
+      ]
     },
     {
       "id": "lc-3sum::1990350392",
@@ -2040,13 +1729,13 @@
         "topic": "two-pointers",
         "voteCount": 98
       },
-      "_committedPaths": [
-        "problems/3sum/leetcode/lc-3sum.java",
-        "problems/3sum/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-3sum::1812933130",
+        "lc-3sum::1980848301"
+      ]
     },
     {
       "id": "lc-4sum::1981137064",
@@ -2131,13 +1820,12 @@
           "submissionId": 1990357329
         }
       ],
-      "_committedPaths": [
-        "problems/lc-4sum/lc-4sum.java",
-        "problems/lc-4sum/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-4sum::1990357329"
+      ]
     },
     {
       "id": "lc-4sum::1990357329",
@@ -2206,13 +1894,12 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-4sum::1981137064",
-      "_committedPaths": [
-        "problems/lc-4sum/lc-4sum.java",
-        "problems/lc-4sum/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-4sum::1981137064"
+      ]
     },
     {
       "id": "lc-add-two-numbers::1807662365",
@@ -2335,13 +2022,12 @@
         "topic": "linked-list",
         "voteCount": 98
       },
-      "_committedPaths": [
-        "problems/add-two-numbers/leetcode/lc-add-two-numbers.py",
-        "problems/add-two-numbers/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-add-two-numbers::1807676806"
+      ]
     },
     {
       "id": "lc-add-two-numbers::1807676806",
@@ -2448,13 +2134,12 @@
         "topic": "linked-list",
         "voteCount": 98
       },
-      "_committedPaths": [
-        "problems/add-two-numbers/leetcode/lc-add-two-numbers.py",
-        "problems/add-two-numbers/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-add-two-numbers::1807662365"
+      ]
     },
     {
       "id": "lc-article-views-i::1805948372",
@@ -2512,13 +2197,12 @@
           "submissionId": 1985838188
         }
       ],
-      "_committedPaths": [
-        "problems/lc-article-views-i/lc-article-views-i.sql",
-        "problems/lc-article-views-i/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-article-views-i::1985838188"
+      ]
     },
     {
       "id": "lc-article-views-i::1985838188",
@@ -2560,13 +2244,12 @@
       "hasSimilar": null,
       "isDuplicate": true,
       "duplicateOf": "lc-article-views-i::1805948372",
-      "_committedPaths": [
-        "problems/lc-article-views-i/lc-article-views-i.sql",
-        "problems/lc-article-views-i/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-article-views-i::1805948372"
+      ]
     },
     {
       "id": "lc-assign-cookies::2005070197",
@@ -2610,10 +2293,6 @@
       "acRate": 55.59522204736653,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-assign-cookies/lc-assign-cookies.java",
-        "problems/lc-assign-cookies/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -2656,10 +2335,6 @@
       "acRate": 38.00210032216806,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-average-selling-price/lc-average-selling-price.sql",
-        "problems/lc-average-selling-price/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -2702,10 +2377,6 @@
       "acRate": 67.06475625396357,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-average-time-of-process-per-machine/lc-average-time-of-process-per-machine.sql",
-        "problems/lc-average-time-of-process-per-machine/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -2818,13 +2489,12 @@
         "topic": "sliding-window",
         "voteCount": 98
       },
-      "_committedPaths": [
-        "problems/best-time-to-buy-and-sell-stock/leetcode/lc-best-time-to-buy-and-sell-stock.py",
-        "problems/best-time-to-buy-and-sell-stock/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-best-time-to-buy-and-sell-stock::1981557158"
+      ]
     },
     {
       "id": "lc-best-time-to-buy-and-sell-stock::1981557158",
@@ -2934,13 +2604,12 @@
         "topic": "sliding-window",
         "voteCount": 98
       },
-      "_committedPaths": [
-        "problems/best-time-to-buy-and-sell-stock/leetcode/lc-best-time-to-buy-and-sell-stock.java",
-        "problems/best-time-to-buy-and-sell-stock/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-best-time-to-buy-and-sell-stock::1809272618"
+      ]
     },
     {
       "id": "lc-big-countries::1985832654",
@@ -2980,10 +2649,6 @@
       "acRate": 68.95246584573425,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-big-countries/lc-big-countries.sql",
-        "problems/lc-big-countries/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -3026,10 +2691,6 @@
       "acRate": 72.40865083976034,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-biggest-single-number/lc-biggest-single-number.sql",
-        "problems/lc-biggest-single-number/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -3100,13 +2761,15 @@
         "topic": "binary-search",
         "voteCount": 90
       },
-      "_committedPaths": [
-        "problems/binary-search/leetcode/lc-binary-search.py",
-        "problems/binary-search/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-binary-search::1998238818",
+        "lc-binary-search::2010418254",
+        "lc-binary-search::2128575594",
+        "lc-binary-search::2158446952"
+      ]
     },
     {
       "id": "lc-binary-search::1998238818",
@@ -3222,13 +2885,15 @@
         "topic": "binary-search",
         "voteCount": 90
       },
-      "_committedPaths": [
-        "problems/binary-search/leetcode/lc-binary-search.java",
-        "problems/binary-search/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-binary-search::1819321741",
+        "lc-binary-search::2010418254",
+        "lc-binary-search::2128575594",
+        "lc-binary-search::2158446952"
+      ]
     },
     {
       "id": "lc-binary-search::2010418254",
@@ -3298,13 +2963,15 @@
         "topic": "binary-search",
         "voteCount": 90
       },
-      "_committedPaths": [
-        "problems/binary-search/leetcode/lc-binary-search.java",
-        "problems/binary-search/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-binary-search::1819321741",
+        "lc-binary-search::1998238818",
+        "lc-binary-search::2128575594",
+        "lc-binary-search::2158446952"
+      ]
     },
     {
       "id": "lc-binary-search::2128575594",
@@ -3374,13 +3041,15 @@
         "topic": "binary-search",
         "voteCount": 90
       },
-      "_committedPaths": [
-        "problems/binary-search/leetcode/lc-binary-search.java",
-        "problems/binary-search/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-binary-search::1819321741",
+        "lc-binary-search::1998238818",
+        "lc-binary-search::2010418254",
+        "lc-binary-search::2158446952"
+      ]
     },
     {
       "id": "lc-binary-search::2158446952",
@@ -3450,13 +3119,15 @@
         "topic": "binary-search",
         "voteCount": 90
       },
-      "_committedPaths": [
-        "problems/binary-search/leetcode/lc-binary-search.java",
-        "problems/binary-search/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-binary-search::1819321741",
+        "lc-binary-search::1998238818",
+        "lc-binary-search::2010418254",
+        "lc-binary-search::2128575594"
+      ]
     },
     {
       "id": "lc-capacity-to-ship-packages-within-d-days::2165936526",
@@ -3524,10 +3195,6 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-capacity-to-ship-packages-within-d-days/lc-capacity-to-ship-packages-within-d-days.java",
-        "problems/lc-capacity-to-ship-packages-within-d-days/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -3570,10 +3237,6 @@
       "acRate": 65.18454680726761,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-classes-with-at-least-5-students/lc-classes-with-at-least-5-students.sql",
-        "problems/lc-classes-with-at-least-5-students/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -3695,10 +3358,6 @@
         "topic": "dynamic-programming",
         "voteCount": 99
       },
-      "_committedPaths": [
-        "problems/climbing-stairs/leetcode/lc-climbing-stairs.java",
-        "problems/climbing-stairs/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -3744,10 +3403,6 @@
       "acRate": 90.81614289249319,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-concatenate-array-with-reverse/lc-concatenate-array-with-reverse.java",
-        "problems/lc-concatenate-array-with-reverse/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -3790,10 +3445,6 @@
       "acRate": 62.94564887920209,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-confirmation-rate/lc-confirmation-rate.sql",
-        "problems/lc-confirmation-rate/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -3881,10 +3532,6 @@
         "topic": "two-pointers",
         "voteCount": 94
       },
-      "_committedPaths": [
-        "problems/container-with-most-water/leetcode/lc-container-with-most-water.java",
-        "problems/container-with-most-water/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -3975,13 +3622,12 @@
         "topic": "arrays",
         "voteCount": 95
       },
-      "_committedPaths": [
-        "problems/contains-duplicate/leetcode/lc-contains-duplicate.py",
-        "problems/contains-duplicate/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-contains-duplicate::2129864960"
+      ]
     },
     {
       "id": "lc-contains-duplicate::2129864960",
@@ -4069,13 +3715,12 @@
         "topic": "arrays",
         "voteCount": 95
       },
-      "_committedPaths": [
-        "problems/contains-duplicate/leetcode/lc-contains-duplicate.java",
-        "problems/contains-duplicate/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-contains-duplicate::1810413432"
+      ]
     },
     {
       "id": "lc-count-indices-with-opposite-parity::1993799059",
@@ -4117,10 +3762,6 @@
       "acRate": 80.61690579826966,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-count-indices-with-opposite-parity/lc-count-indices-with-opposite-parity.java",
-        "problems/lc-count-indices-with-opposite-parity/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -4181,13 +3822,12 @@
           "submissionId": 1807338875
         }
       ],
-      "_committedPaths": [
-        "problems/lc-customer-who-visited-but-did-not-make-any-transactions/lc-customer-who-visited-but-did-not-make-any-transactions.sql",
-        "problems/lc-customer-who-visited-but-did-not-make-any-transactions/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-customer-who-visited-but-did-not-make-any-transactions::1807338875"
+      ]
     },
     {
       "id": "lc-customer-who-visited-but-did-not-make-any-transactions::1807338875",
@@ -4229,13 +3869,12 @@
       "hasSimilar": null,
       "isDuplicate": true,
       "duplicateOf": "lc-customer-who-visited-but-did-not-make-any-transactions::1807336473",
-      "_committedPaths": [
-        "problems/lc-customer-who-visited-but-did-not-make-any-transactions/lc-customer-who-visited-but-did-not-make-any-transactions.sql",
-        "problems/lc-customer-who-visited-but-did-not-make-any-transactions/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-customer-who-visited-but-did-not-make-any-transactions::1807336473"
+      ]
     },
     {
       "id": "lc-customers-who-bought-all-products::1818461275",
@@ -4275,10 +3914,6 @@
       "acRate": 64.6927962967599,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-customers-who-bought-all-products/lc-customers-who-bought-all-products.sql",
-        "problems/lc-customers-who-bought-all-products/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -4364,13 +3999,13 @@
           "submissionId": 1809654586
         }
       ],
-      "_committedPaths": [
-        "problems/lc-employee-bonus/lc-employee-bonus.sql",
-        "problems/lc-employee-bonus/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-employee-bonus::1809654238",
+        "lc-employee-bonus::1809654586"
+      ]
     },
     {
       "id": "lc-employee-bonus::1809654238",
@@ -4422,13 +4057,13 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-employee-bonus::1809653418",
-      "_committedPaths": [
-        "problems/lc-employee-bonus/lc-employee-bonus.sql",
-        "problems/lc-employee-bonus/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-employee-bonus::1809653418",
+        "lc-employee-bonus::1809654586"
+      ]
     },
     {
       "id": "lc-employee-bonus::1809654586",
@@ -4480,13 +4115,13 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-employee-bonus::1809653418",
-      "_committedPaths": [
-        "problems/lc-employee-bonus/lc-employee-bonus.sql",
-        "problems/lc-employee-bonus/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-employee-bonus::1809653418",
+        "lc-employee-bonus::1809654238"
+      ]
     },
     {
       "id": "lc-find-all-anagrams-in-a-string::2155641276",
@@ -4541,10 +4176,6 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-find-all-anagrams-in-a-string/lc-find-all-anagrams-in-a-string.java",
-        "problems/lc-find-all-anagrams-in-a-string/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -4589,10 +4220,6 @@
       "acRate": 73.67985134779276,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-find-customer-referee/lc-find-customer-referee.sql",
-        "problems/lc-find-customer-referee/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -4688,13 +4315,13 @@
           "submissionId": 2162679219
         }
       ],
-      "_committedPaths": [
-        "problems/lc-find-first-and-last-position-of-element-in-sorted-array/lc-find-first-and-last-position-of-element-in-sorted-array.java",
-        "problems/lc-find-first-and-last-position-of-element-in-sorted-array/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-find-first-and-last-position-of-element-in-sorted-array::2138221866",
+        "lc-find-first-and-last-position-of-element-in-sorted-array::2162679219"
+      ]
     },
     {
       "id": "lc-find-first-and-last-position-of-element-in-sorted-array::2138221866",
@@ -4756,13 +4383,13 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-find-first-and-last-position-of-element-in-sorted-array::2014814319",
-      "_committedPaths": [
-        "problems/lc-find-first-and-last-position-of-element-in-sorted-array/lc-find-first-and-last-position-of-element-in-sorted-array.java",
-        "problems/lc-find-first-and-last-position-of-element-in-sorted-array/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-find-first-and-last-position-of-element-in-sorted-array::2014814319",
+        "lc-find-first-and-last-position-of-element-in-sorted-array::2162679219"
+      ]
     },
     {
       "id": "lc-find-first-and-last-position-of-element-in-sorted-array::2162679219",
@@ -4824,13 +4451,13 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-find-first-and-last-position-of-element-in-sorted-array::2014814319",
-      "_committedPaths": [
-        "problems/lc-find-first-and-last-position-of-element-in-sorted-array/lc-find-first-and-last-position-of-element-in-sorted-array.java",
-        "problems/lc-find-first-and-last-position-of-element-in-sorted-array/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-find-first-and-last-position-of-element-in-sorted-array::2014814319",
+        "lc-find-first-and-last-position-of-element-in-sorted-array::2138221866"
+      ]
     },
     {
       "id": "lc-find-followers-count::1817791480",
@@ -4870,10 +4497,6 @@
       "acRate": 69.614767419279,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-find-followers-count/lc-find-followers-count.sql",
-        "problems/lc-find-followers-count/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -4972,13 +4595,12 @@
         "topic": "binary-search",
         "voteCount": 95
       },
-      "_committedPaths": [
-        "problems/find-minimum-in-rotated-sorted-array/leetcode/lc-find-minimum-in-rotated-sorted-array.java",
-        "problems/find-minimum-in-rotated-sorted-array/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-find-minimum-in-rotated-sorted-array::2161251825"
+      ]
     },
     {
       "id": "lc-find-minimum-in-rotated-sorted-array::2161251825",
@@ -5058,13 +4680,12 @@
         "topic": "binary-search",
         "voteCount": 95
       },
-      "_committedPaths": [
-        "problems/find-minimum-in-rotated-sorted-array/leetcode/lc-find-minimum-in-rotated-sorted-array.java",
-        "problems/find-minimum-in-rotated-sorted-array/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-find-minimum-in-rotated-sorted-array::2016957001"
+      ]
     },
     {
       "id": "lc-find-peak-element::2162319380",
@@ -5130,10 +4751,6 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-find-peak-element/lc-find-peak-element.java",
-        "problems/lc-find-peak-element/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -5224,13 +4841,12 @@
           "submissionId": 2146344407
         }
       ],
-      "_committedPaths": [
-        "problems/lc-find-pivot-index/lc-find-pivot-index.java",
-        "problems/lc-find-pivot-index/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-find-pivot-index::2146344407"
+      ]
     },
     {
       "id": "lc-find-pivot-index::2146344407",
@@ -5302,13 +4918,12 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-find-pivot-index::2146339391",
-      "_committedPaths": [
-        "problems/lc-find-pivot-index/lc-find-pivot-index.java",
-        "problems/lc-find-pivot-index/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-find-pivot-index::2146339391"
+      ]
     },
     {
       "id": "lc-first-unique-character-in-a-string::2128455039",
@@ -5364,10 +4979,6 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-first-unique-character-in-a-string/lc-first-unique-character-in-a-string.java",
-        "problems/lc-first-unique-character-in-a-string/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -5410,10 +5021,6 @@
       "acRate": 42.71176018691604,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-game-play-analysis-iv/lc-game-play-analysis-iv.sql",
-        "problems/lc-game-play-analysis-iv/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -5499,10 +5106,6 @@
         "topic": "arrays",
         "voteCount": 94
       },
-      "_committedPaths": [
-        "problems/group-anagrams/leetcode/lc-group-anagrams.py",
-        "problems/group-anagrams/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -5587,10 +5190,6 @@
         "topic": "dynamic-programming",
         "voteCount": 96
       },
-      "_committedPaths": [
-        "problems/house-robber-ii/leetcode/lc-house-robber-ii.java",
-        "problems/house-robber-ii/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -5769,13 +5368,14 @@
         "topic": "dynamic-programming",
         "voteCount": 98
       },
-      "_committedPaths": [
-        "problems/house-robber/leetcode/lc-house-robber.java",
-        "problems/house-robber/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-house-robber::2009606176",
+        "lc-house-robber::2009606438",
+        "lc-house-robber::2013382897"
+      ]
     },
     {
       "id": "lc-house-robber::2009606176",
@@ -5905,13 +5505,14 @@
         "topic": "dynamic-programming",
         "voteCount": 98
       },
-      "_committedPaths": [
-        "problems/house-robber/leetcode/lc-house-robber.java",
-        "problems/house-robber/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-house-robber::2009605889",
+        "lc-house-robber::2009606438",
+        "lc-house-robber::2013382897"
+      ]
     },
     {
       "id": "lc-house-robber::2009606438",
@@ -6041,13 +5642,14 @@
         "topic": "dynamic-programming",
         "voteCount": 98
       },
-      "_committedPaths": [
-        "problems/house-robber/leetcode/lc-house-robber.java",
-        "problems/house-robber/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-house-robber::2009605889",
+        "lc-house-robber::2009606176",
+        "lc-house-robber::2013382897"
+      ]
     },
     {
       "id": "lc-house-robber::2013382897",
@@ -6177,13 +5779,14 @@
         "topic": "dynamic-programming",
         "voteCount": 98
       },
-      "_committedPaths": [
-        "problems/house-robber/leetcode/lc-house-robber.java",
-        "problems/house-robber/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-house-robber::2009605889",
+        "lc-house-robber::2009606176",
+        "lc-house-robber::2009606438"
+      ]
     },
     {
       "id": "lc-immediate-food-delivery-ii::1814118251",
@@ -6223,10 +5826,6 @@
       "acRate": 57.23808184809418,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-immediate-food-delivery-ii/lc-immediate-food-delivery-ii.sql",
-        "problems/lc-immediate-food-delivery-ii/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -6278,13 +5877,12 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-implement-queue-using-stacks/lc-implement-queue-using-stacks.py",
-        "problems/lc-implement-queue-using-stacks/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-implement-queue-using-stacks::2134254408"
+      ]
     },
     {
       "id": "lc-implement-queue-using-stacks::2134254408",
@@ -6333,13 +5931,12 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-implement-queue-using-stacks/lc-implement-queue-using-stacks.java",
-        "problems/lc-implement-queue-using-stacks/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-implement-queue-using-stacks::1817013688"
+      ]
     },
     {
       "id": "lc-invalid-tweets::1805950930",
@@ -6397,13 +5994,12 @@
           "submissionId": 1985839546
         }
       ],
-      "_committedPaths": [
-        "problems/lc-invalid-tweets/lc-invalid-tweets.sql",
-        "problems/lc-invalid-tweets/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-invalid-tweets::1985839546"
+      ]
     },
     {
       "id": "lc-invalid-tweets::1985839546",
@@ -6445,13 +6041,12 @@
       "hasSimilar": null,
       "isDuplicate": true,
       "duplicateOf": "lc-invalid-tweets::1805950930",
-      "_committedPaths": [
-        "problems/lc-invalid-tweets/lc-invalid-tweets.sql",
-        "problems/lc-invalid-tweets/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-invalid-tweets::1805950930"
+      ]
     },
     {
       "id": "lc-koko-eating-bananas::2164977018",
@@ -6537,10 +6132,6 @@
         "topic": "binary-search",
         "voteCount": 94
       },
-      "_committedPaths": [
-        "problems/koko-eating-bananas/leetcode/lc-koko-eating-bananas.java",
-        "problems/koko-eating-bananas/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -6619,13 +6210,12 @@
         "topic": "linked-list",
         "voteCount": 96
       },
-      "_committedPaths": [
-        "problems/linked-list-cycle/leetcode/lc-linked-list-cycle.py",
-        "problems/linked-list-cycle/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-linked-list-cycle::2128698923"
+      ]
     },
     {
       "id": "lc-linked-list-cycle::2128698923",
@@ -6701,13 +6291,12 @@
         "topic": "linked-list",
         "voteCount": 96
       },
-      "_committedPaths": [
-        "problems/linked-list-cycle/leetcode/lc-linked-list-cycle.java",
-        "problems/linked-list-cycle/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-linked-list-cycle::1818419089"
+      ]
     },
     {
       "id": "lc-longest-common-prefix::1814758721",
@@ -6768,10 +6357,6 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-longest-common-prefix/lc-longest-common-prefix.py",
-        "problems/lc-longest-common-prefix/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -6872,13 +6457,15 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "_committedPaths": [
-        "problems/longest-palindromic-substring/leetcode/lc-longest-palindromic-substring.py",
-        "problems/longest-palindromic-substring/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-longest-palindromic-substring::2152761012",
+        "lc-longest-palindromic-substring::2152790022",
+        "lc-longest-palindromic-substring::2155197334",
+        "lc-longest-palindromic-substring::2158261343"
+      ]
     },
     {
       "id": "lc-longest-palindromic-substring::2152761012",
@@ -7024,13 +6611,15 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "_committedPaths": [
-        "problems/longest-palindromic-substring/leetcode/lc-longest-palindromic-substring.java",
-        "problems/longest-palindromic-substring/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-longest-palindromic-substring::1809241760",
+        "lc-longest-palindromic-substring::2152790022",
+        "lc-longest-palindromic-substring::2155197334",
+        "lc-longest-palindromic-substring::2158261343"
+      ]
     },
     {
       "id": "lc-longest-palindromic-substring::2152790022",
@@ -7130,13 +6719,15 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "_committedPaths": [
-        "problems/longest-palindromic-substring/leetcode/lc-longest-palindromic-substring.java",
-        "problems/longest-palindromic-substring/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-longest-palindromic-substring::1809241760",
+        "lc-longest-palindromic-substring::2152761012",
+        "lc-longest-palindromic-substring::2155197334",
+        "lc-longest-palindromic-substring::2158261343"
+      ]
     },
     {
       "id": "lc-longest-palindromic-substring::2155197334",
@@ -7236,13 +6827,15 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "_committedPaths": [
-        "problems/longest-palindromic-substring/leetcode/lc-longest-palindromic-substring.java",
-        "problems/longest-palindromic-substring/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-longest-palindromic-substring::1809241760",
+        "lc-longest-palindromic-substring::2152761012",
+        "lc-longest-palindromic-substring::2152790022",
+        "lc-longest-palindromic-substring::2158261343"
+      ]
     },
     {
       "id": "lc-longest-palindromic-substring::2158261343",
@@ -7342,13 +6935,15 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "_committedPaths": [
-        "problems/longest-palindromic-substring/leetcode/lc-longest-palindromic-substring.java",
-        "problems/longest-palindromic-substring/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-longest-palindromic-substring::1809241760",
+        "lc-longest-palindromic-substring::2152761012",
+        "lc-longest-palindromic-substring::2152790022",
+        "lc-longest-palindromic-substring::2155197334"
+      ]
     },
     {
       "id": "lc-longest-substring-without-repeating-characters::1807691146",
@@ -7462,13 +7057,13 @@
         "topic": "sliding-window",
         "voteCount": 97
       },
-      "_committedPaths": [
-        "problems/longest-substring-without-repeating-characters/leetcode/lc-longest-substring-without-repeating-characters.py",
-        "problems/longest-substring-without-repeating-characters/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-longest-substring-without-repeating-characters::2128482314",
+        "lc-longest-substring-without-repeating-characters::2156217851"
+      ]
     },
     {
       "id": "lc-longest-substring-without-repeating-characters::2128482314",
@@ -7600,13 +7195,13 @@
         "topic": "sliding-window",
         "voteCount": 97
       },
-      "_committedPaths": [
-        "problems/longest-substring-without-repeating-characters/leetcode/lc-longest-substring-without-repeating-characters.java",
-        "problems/longest-substring-without-repeating-characters/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-longest-substring-without-repeating-characters::1807691146",
+        "lc-longest-substring-without-repeating-characters::2156217851"
+      ]
     },
     {
       "id": "lc-longest-substring-without-repeating-characters::2156217851",
@@ -7722,13 +7317,13 @@
         "topic": "sliding-window",
         "voteCount": 97
       },
-      "_committedPaths": [
-        "problems/longest-substring-without-repeating-characters/leetcode/lc-longest-substring-without-repeating-characters.java",
-        "problems/longest-substring-without-repeating-characters/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-longest-substring-without-repeating-characters::1807691146",
+        "lc-longest-substring-without-repeating-characters::2128482314"
+      ]
     },
     {
       "id": "lc-majority-element-ii::1980144296",
@@ -7822,13 +7417,13 @@
           "submissionId": 1991205322
         }
       ],
-      "_committedPaths": [
-        "problems/lc-majority-element-ii/lc-majority-element-ii.java",
-        "problems/lc-majority-element-ii/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-majority-element-ii::1980156549",
+        "lc-majority-element-ii::1991205322"
+      ]
     },
     {
       "id": "lc-majority-element-ii::1980156549",
@@ -7891,13 +7486,13 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-majority-element-ii::1980144296",
-      "_committedPaths": [
-        "problems/lc-majority-element-ii/lc-majority-element-ii.java",
-        "problems/lc-majority-element-ii/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-majority-element-ii::1980144296",
+        "lc-majority-element-ii::1991205322"
+      ]
     },
     {
       "id": "lc-majority-element-ii::1991205322",
@@ -7960,13 +7555,13 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-majority-element-ii::1980144296",
-      "_committedPaths": [
-        "problems/lc-majority-element-ii/lc-majority-element-ii.java",
-        "problems/lc-majority-element-ii/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-majority-element-ii::1980144296",
+        "lc-majority-element-ii::1980156549"
+      ]
     },
     {
       "id": "lc-majority-element::2004755105",
@@ -8048,10 +7643,6 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-majority-element/lc-majority-element.java",
-        "problems/lc-majority-element/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -8099,10 +7690,6 @@
       "acRate": 49.71919115967368,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-managers-with-at-least-5-direct-reports/lc-managers-with-at-least-5-direct-reports.sql",
-        "problems/lc-managers-with-at-least-5-direct-reports/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -8176,13 +7763,12 @@
           "submissionId": 2149376359
         }
       ],
-      "_committedPaths": [
-        "problems/lc-maximum-absolute-sum-of-any-subarray/lc-maximum-absolute-sum-of-any-subarray.java",
-        "problems/lc-maximum-absolute-sum-of-any-subarray/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-maximum-absolute-sum-of-any-subarray::2149376359"
+      ]
     },
     {
       "id": "lc-maximum-absolute-sum-of-any-subarray::2149376359",
@@ -8237,13 +7823,12 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-maximum-absolute-sum-of-any-subarray::2149344092",
-      "_committedPaths": [
-        "problems/lc-maximum-absolute-sum-of-any-subarray/lc-maximum-absolute-sum-of-any-subarray.java",
-        "problems/lc-maximum-absolute-sum-of-any-subarray/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-maximum-absolute-sum-of-any-subarray::2149344092"
+      ]
     },
     {
       "id": "lc-maximum-average-subarray-i::2130772251",
@@ -8291,10 +7876,6 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-maximum-average-subarray-i/lc-maximum-average-subarray-i.java",
-        "problems/lc-maximum-average-subarray-i/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -8482,13 +8063,17 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "_committedPaths": [
-        "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
-        "problems/maximum-product-subarray/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-maximum-product-subarray::1995896911",
+        "lc-maximum-product-subarray::1996455574",
+        "lc-maximum-product-subarray::1996456582",
+        "lc-maximum-product-subarray::2002287041",
+        "lc-maximum-product-subarray::2148277376",
+        "lc-maximum-product-subarray::2148302061"
+      ]
     },
     {
       "id": "lc-maximum-product-subarray::1995896911",
@@ -8582,13 +8167,17 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "_committedPaths": [
-        "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
-        "problems/maximum-product-subarray/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-maximum-product-subarray::1995896290",
+        "lc-maximum-product-subarray::1996455574",
+        "lc-maximum-product-subarray::1996456582",
+        "lc-maximum-product-subarray::2002287041",
+        "lc-maximum-product-subarray::2148277376",
+        "lc-maximum-product-subarray::2148302061"
+      ]
     },
     {
       "id": "lc-maximum-product-subarray::1996455574",
@@ -8682,13 +8271,17 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "_committedPaths": [
-        "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
-        "problems/maximum-product-subarray/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-maximum-product-subarray::1995896290",
+        "lc-maximum-product-subarray::1995896911",
+        "lc-maximum-product-subarray::1996456582",
+        "lc-maximum-product-subarray::2002287041",
+        "lc-maximum-product-subarray::2148277376",
+        "lc-maximum-product-subarray::2148302061"
+      ]
     },
     {
       "id": "lc-maximum-product-subarray::1996456582",
@@ -8782,13 +8375,17 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "_committedPaths": [
-        "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
-        "problems/maximum-product-subarray/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-maximum-product-subarray::1995896290",
+        "lc-maximum-product-subarray::1995896911",
+        "lc-maximum-product-subarray::1996455574",
+        "lc-maximum-product-subarray::2002287041",
+        "lc-maximum-product-subarray::2148277376",
+        "lc-maximum-product-subarray::2148302061"
+      ]
     },
     {
       "id": "lc-maximum-product-subarray::2002287041",
@@ -8882,13 +8479,17 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "_committedPaths": [
-        "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
-        "problems/maximum-product-subarray/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-maximum-product-subarray::1995896290",
+        "lc-maximum-product-subarray::1995896911",
+        "lc-maximum-product-subarray::1996455574",
+        "lc-maximum-product-subarray::1996456582",
+        "lc-maximum-product-subarray::2148277376",
+        "lc-maximum-product-subarray::2148302061"
+      ]
     },
     {
       "id": "lc-maximum-product-subarray::2148277376",
@@ -8982,13 +8583,17 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "_committedPaths": [
-        "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
-        "problems/maximum-product-subarray/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-maximum-product-subarray::1995896290",
+        "lc-maximum-product-subarray::1995896911",
+        "lc-maximum-product-subarray::1996455574",
+        "lc-maximum-product-subarray::1996456582",
+        "lc-maximum-product-subarray::2002287041",
+        "lc-maximum-product-subarray::2148302061"
+      ]
     },
     {
       "id": "lc-maximum-product-subarray::2148302061",
@@ -9082,13 +8687,17 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "_committedPaths": [
-        "problems/maximum-product-subarray/leetcode/lc-maximum-product-subarray.java",
-        "problems/maximum-product-subarray/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-maximum-product-subarray::1995896290",
+        "lc-maximum-product-subarray::1995896911",
+        "lc-maximum-product-subarray::1996455574",
+        "lc-maximum-product-subarray::1996456582",
+        "lc-maximum-product-subarray::2002287041",
+        "lc-maximum-product-subarray::2148277376"
+      ]
     },
     {
       "id": "lc-maximum-subarray::1813687231",
@@ -9209,13 +8818,14 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-maximum-subarray/lc-maximum-subarray.py",
-        "problems/lc-maximum-subarray/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-maximum-subarray::1993471635",
+        "lc-maximum-subarray::2148270155",
+        "lc-maximum-subarray::2150624078"
+      ]
     },
     {
       "id": "lc-maximum-subarray::1993471635",
@@ -9369,13 +8979,14 @@
           "submissionId": 2150624078
         }
       ],
-      "_committedPaths": [
-        "problems/lc-maximum-subarray/lc-maximum-subarray.java",
-        "problems/lc-maximum-subarray/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-maximum-subarray::1813687231",
+        "lc-maximum-subarray::2148270155",
+        "lc-maximum-subarray::2150624078"
+      ]
     },
     {
       "id": "lc-maximum-subarray::2148270155",
@@ -9498,13 +9109,14 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-maximum-subarray::1993471635",
-      "_committedPaths": [
-        "problems/lc-maximum-subarray/lc-maximum-subarray.java",
-        "problems/lc-maximum-subarray/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-maximum-subarray::1813687231",
+        "lc-maximum-subarray::1993471635",
+        "lc-maximum-subarray::2150624078"
+      ]
     },
     {
       "id": "lc-maximum-subarray::2150624078",
@@ -9627,13 +9239,14 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-maximum-subarray::1993471635",
-      "_committedPaths": [
-        "problems/lc-maximum-subarray/lc-maximum-subarray.java",
-        "problems/lc-maximum-subarray/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-maximum-subarray::1813687231",
+        "lc-maximum-subarray::1993471635",
+        "lc-maximum-subarray::2148270155"
+      ]
     },
     {
       "id": "lc-median-of-two-sorted-arrays::1807697980",
@@ -9675,10 +9288,6 @@
       "acRate": 47.79574270451516,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-median-of-two-sorted-arrays/lc-median-of-two-sorted-arrays.py",
-        "problems/lc-median-of-two-sorted-arrays/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -9834,13 +9443,12 @@
         "topic": "intervals",
         "voteCount": 99
       },
-      "_committedPaths": [
-        "problems/merge-intervals/leetcode/lc-merge-intervals.java",
-        "problems/merge-intervals/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-merge-intervals::2128178071"
+      ]
     },
     {
       "id": "lc-merge-intervals::2128178071",
@@ -9977,13 +9585,12 @@
         "topic": "intervals",
         "voteCount": 99
       },
-      "_committedPaths": [
-        "problems/merge-intervals/leetcode/lc-merge-intervals.java",
-        "problems/merge-intervals/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-merge-intervals::1994969693"
+      ]
     },
     {
       "id": "lc-merge-sorted-array::1812944478",
@@ -10053,13 +9660,14 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-merge-sorted-array/lc-merge-sorted-array.py",
-        "problems/lc-merge-sorted-array/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-merge-sorted-array::1995704533",
+        "lc-merge-sorted-array::1995707128",
+        "lc-merge-sorted-array::1998838221"
+      ]
     },
     {
       "id": "lc-merge-sorted-array::1995704533",
@@ -10162,13 +9770,14 @@
           "submissionId": 1998838221
         }
       ],
-      "_committedPaths": [
-        "problems/lc-merge-sorted-array/lc-merge-sorted-array.java",
-        "problems/lc-merge-sorted-array/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-merge-sorted-array::1812944478",
+        "lc-merge-sorted-array::1995707128",
+        "lc-merge-sorted-array::1998838221"
+      ]
     },
     {
       "id": "lc-merge-sorted-array::1995707128",
@@ -10240,13 +9849,14 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-merge-sorted-array::1995704533",
-      "_committedPaths": [
-        "problems/lc-merge-sorted-array/lc-merge-sorted-array.java",
-        "problems/lc-merge-sorted-array/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-merge-sorted-array::1812944478",
+        "lc-merge-sorted-array::1995704533",
+        "lc-merge-sorted-array::1998838221"
+      ]
     },
     {
       "id": "lc-merge-sorted-array::1998838221",
@@ -10318,13 +9928,14 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-merge-sorted-array::1995704533",
-      "_committedPaths": [
-        "problems/lc-merge-sorted-array/lc-merge-sorted-array.java",
-        "problems/lc-merge-sorted-array/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-merge-sorted-array::1812944478",
+        "lc-merge-sorted-array::1995704533",
+        "lc-merge-sorted-array::1995707128"
+      ]
     },
     {
       "id": "lc-merge-two-sorted-lists::1817765172",
@@ -10410,13 +10021,12 @@
         "topic": "linked-list",
         "voteCount": 97
       },
-      "_committedPaths": [
-        "problems/merge-two-sorted-lists/leetcode/lc-merge-two-sorted-lists.py",
-        "problems/merge-two-sorted-lists/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-merge-two-sorted-lists::2137082352"
+      ]
     },
     {
       "id": "lc-merge-two-sorted-lists::2137082352",
@@ -10502,13 +10112,12 @@
         "topic": "linked-list",
         "voteCount": 97
       },
-      "_committedPaths": [
-        "problems/merge-two-sorted-lists/leetcode/lc-merge-two-sorted-lists.java",
-        "problems/merge-two-sorted-lists/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-merge-two-sorted-lists::1817765172"
+      ]
     },
     {
       "id": "lc-middle-of-the-linked-list::1818412310",
@@ -10562,13 +10171,12 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-middle-of-the-linked-list/lc-middle-of-the-linked-list.py",
-        "problems/lc-middle-of-the-linked-list/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-middle-of-the-linked-list::2128707341"
+      ]
     },
     {
       "id": "lc-middle-of-the-linked-list::2128707341",
@@ -10622,13 +10230,12 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-middle-of-the-linked-list/lc-middle-of-the-linked-list.java",
-        "problems/lc-middle-of-the-linked-list/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-middle-of-the-linked-list::1818412310"
+      ]
     },
     {
       "id": "lc-min-stack::1816183516",
@@ -10698,13 +10305,13 @@
         "topic": "stack",
         "voteCount": 94
       },
-      "_committedPaths": [
-        "problems/min-stack/leetcode/lc-min-stack.py",
-        "problems/min-stack/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-min-stack::2131925513",
+        "lc-min-stack::2131933293"
+      ]
     },
     {
       "id": "lc-min-stack::2131925513",
@@ -10792,13 +10399,13 @@
         "topic": "stack",
         "voteCount": 94
       },
-      "_committedPaths": [
-        "problems/min-stack/leetcode/lc-min-stack.java",
-        "problems/min-stack/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-min-stack::1816183516",
+        "lc-min-stack::2131933293"
+      ]
     },
     {
       "id": "lc-min-stack::2131933293",
@@ -10870,13 +10477,13 @@
         "topic": "stack",
         "voteCount": 94
       },
-      "_committedPaths": [
-        "problems/min-stack/leetcode/lc-min-stack.java",
-        "problems/min-stack/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-min-stack::1816183516",
+        "lc-min-stack::2131925513"
+      ]
     },
     {
       "id": "lc-minimum-number-of-days-to-make-m-bouquets",
@@ -10938,12 +10545,7 @@
       "methodTitle": "",
       "isDuplicate": false,
       "duplicateOf": null,
-      "_requestAIReview": true,
       "platform": "leetcode",
-      "_committedPaths": [
-        "problems/lc-minimum-number-of-days-to-make-m-bouquets/lc-minimum-number-of-days-to-make-m-bouquets.java",
-        "problems/lc-minimum-number-of-days-to-make-m-bouquets/README.md"
-      ],
       "methods": [],
       "manuallyEdited": false
     },
@@ -11020,10 +10622,6 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-minimum-speed-to-arrive-on-time/lc-minimum-speed-to-arrive-on-time.java",
-        "problems/lc-minimum-speed-to-arrive-on-time/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -11070,10 +10668,6 @@
       "acRate": 59.55119717532826,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-minimum-swaps-to-move-zeros-to-end/lc-minimum-swaps-to-move-zeros-to-end.java",
-        "problems/lc-minimum-swaps-to-move-zeros-to-end/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -11116,10 +10710,6 @@
       "acRate": 60.08384331993667,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-monthly-transactions-i/lc-monthly-transactions-i.sql",
-        "problems/lc-monthly-transactions-i/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -11179,10 +10769,6 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-move-zeroes/lc-move-zeroes.py",
-        "problems/lc-move-zeroes/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -11225,10 +10811,6 @@
       "acRate": 75.25899648684131,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-not-boring-movies/lc-not-boring-movies.sql",
-        "problems/lc-not-boring-movies/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -11271,10 +10853,6 @@
       "acRate": 89.37970688877886,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-number-of-unique-subjects-taught-by-each-teacher/lc-number-of-unique-subjects-taught-by-each-teacher.sql",
-        "problems/lc-number-of-unique-subjects-taught-by-each-teacher/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -11331,10 +10909,6 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-pascals-triangle/lc-pascals-triangle.java",
-        "problems/lc-pascals-triangle/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -11384,10 +10958,6 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-percentage-of-users-attended-a-contest/lc-percentage-of-users-attended-a-contest.sql",
-        "problems/lc-percentage-of-users-attended-a-contest/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -11473,10 +11043,6 @@
         "topic": "sliding-window",
         "voteCount": 93
       },
-      "_committedPaths": [
-        "problems/permutation-in-string/leetcode/lc-permutation-in-string.java",
-        "problems/permutation-in-string/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -11607,13 +11173,13 @@
         "topic": "arrays",
         "voteCount": 96
       },
-      "_committedPaths": [
-        "problems/product-of-array-except-self/leetcode/lc-product-of-array-except-self.java",
-        "problems/product-of-array-except-self/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-product-of-array-except-self::2144988279",
+        "lc-product-of-array-except-self::2144990775"
+      ]
     },
     {
       "id": "lc-product-of-array-except-self::2144988279",
@@ -11710,13 +11276,13 @@
         "topic": "arrays",
         "voteCount": 96
       },
-      "_committedPaths": [
-        "problems/product-of-array-except-self/leetcode/lc-product-of-array-except-self.java",
-        "problems/product-of-array-except-self/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-product-of-array-except-self::2144981144",
+        "lc-product-of-array-except-self::2144990775"
+      ]
     },
     {
       "id": "lc-product-of-array-except-self::2144990775",
@@ -11813,13 +11379,13 @@
         "topic": "arrays",
         "voteCount": 96
       },
-      "_committedPaths": [
-        "problems/product-of-array-except-self/leetcode/lc-product-of-array-except-self.java",
-        "problems/product-of-array-except-self/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-product-of-array-except-self::2144981144",
+        "lc-product-of-array-except-self::2144988279"
+      ]
     },
     {
       "id": "lc-product-sales-analysis-i::1807325313",
@@ -11877,13 +11443,12 @@
           "submissionId": 1807326786
         }
       ],
-      "_committedPaths": [
-        "problems/lc-product-sales-analysis-i/lc-product-sales-analysis-i.sql",
-        "problems/lc-product-sales-analysis-i/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-product-sales-analysis-i::1807326786"
+      ]
     },
     {
       "id": "lc-product-sales-analysis-i::1807326786",
@@ -11925,13 +11490,12 @@
       "hasSimilar": null,
       "isDuplicate": true,
       "duplicateOf": "lc-product-sales-analysis-i::1807325313",
-      "_committedPaths": [
-        "problems/lc-product-sales-analysis-i/lc-product-sales-analysis-i.sql",
-        "problems/lc-product-sales-analysis-i/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-product-sales-analysis-i::1807325313"
+      ]
     },
     {
       "id": "lc-product-sales-analysis-iii::1817037392",
@@ -11971,10 +11535,6 @@
       "acRate": 46.76009591759465,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-product-sales-analysis-iii/lc-product-sales-analysis-iii.sql",
-        "problems/lc-product-sales-analysis-iii/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -12017,10 +11577,6 @@
       "acRate": 67.49428232730233,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-project-employees-i/lc-project-employees-i.sql",
-        "problems/lc-project-employees-i/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -12070,10 +11626,6 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-queries-quality-and-percentage/lc-queries-quality-and-percentage.sql",
-        "problems/lc-queries-quality-and-percentage/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -12146,10 +11698,6 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-rearrange-array-elements-by-sign/lc-rearrange-array-elements-by-sign.java",
-        "problems/lc-rearrange-array-elements-by-sign/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -12192,10 +11740,6 @@
       "acRate": 88.65395750434267,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-recyclable-and-low-fat-products/lc-recyclable-and-low-fat-products.sql",
-        "problems/lc-recyclable-and-low-fat-products/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -12268,13 +11812,12 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-remove-duplicates-from-sorted-array/lc-remove-duplicates-from-sorted-array.py",
-        "problems/lc-remove-duplicates-from-sorted-array/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-remove-duplicates-from-sorted-array::2009988830"
+      ]
     },
     {
       "id": "lc-remove-duplicates-from-sorted-array::2009988830",
@@ -12344,13 +11887,12 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-remove-duplicates-from-sorted-array/lc-remove-duplicates-from-sorted-array.java",
-        "problems/lc-remove-duplicates-from-sorted-array/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-remove-duplicates-from-sorted-array::1813681167"
+      ]
     },
     {
       "id": "lc-remove-nth-node-from-end-of-list::2134703262",
@@ -12426,10 +11968,6 @@
         "topic": "linked-list",
         "voteCount": 95
       },
-      "_committedPaths": [
-        "problems/remove-nth-node-from-end-of-list/leetcode/lc-remove-nth-node-from-end-of-list.java",
-        "problems/remove-nth-node-from-end-of-list/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -12475,10 +12013,6 @@
       "acRate": 75.86837294332724,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-remove-zeros-in-decimal-representation/lc-remove-zeros-in-decimal-representation.py",
-        "problems/lc-remove-zeros-in-decimal-representation/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -12521,10 +12055,6 @@
       "acRate": 83.90812002241354,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-replace-employee-id-with-the-unique-identifier/lc-replace-employee-id-with-the-unique-identifier.sql",
-        "problems/lc-replace-employee-id-with-the-unique-identifier/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -12625,13 +12155,12 @@
         "topic": "linked-list",
         "voteCount": 99
       },
-      "_committedPaths": [
-        "problems/reverse-linked-list/leetcode/lc-reverse-linked-list.py",
-        "problems/reverse-linked-list/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-reverse-linked-list::2128620948"
+      ]
     },
     {
       "id": "lc-reverse-linked-list::2128620948",
@@ -12729,13 +12258,12 @@
         "topic": "linked-list",
         "voteCount": 99
       },
-      "_committedPaths": [
-        "problems/reverse-linked-list/leetcode/lc-reverse-linked-list.java",
-        "problems/reverse-linked-list/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-reverse-linked-list::1817021395"
+      ]
     },
     {
       "id": "lc-reverse-string-ii::1810448888",
@@ -12795,10 +12323,6 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-reverse-string-ii/lc-reverse-string-ii.py",
-        "problems/lc-reverse-string-ii/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -12857,10 +12381,6 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-reverse-string/lc-reverse-string.java",
-        "problems/lc-reverse-string/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -12903,10 +12423,6 @@
       "acRate": 52.36776369142518,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-rising-temperature/lc-rising-temperature.sql",
-        "problems/lc-rising-temperature/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -12960,10 +12476,6 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-roman-to-integer/lc-roman-to-integer.py",
-        "problems/lc-roman-to-integer/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -13089,13 +12601,15 @@
           "submissionId": 2164529732
         }
       ],
-      "_committedPaths": [
-        "problems/lc-rotate-array/lc-rotate-array.java",
-        "problems/lc-rotate-array/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-rotate-array::2129858873",
+        "lc-rotate-array::2129859494",
+        "lc-rotate-array::2162694467",
+        "lc-rotate-array::2164529732"
+      ]
     },
     {
       "id": "lc-rotate-array::2129858873",
@@ -13157,13 +12671,15 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-rotate-array::2129851950",
-      "_committedPaths": [
-        "problems/lc-rotate-array/lc-rotate-array.java",
-        "problems/lc-rotate-array/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-rotate-array::2129851950",
+        "lc-rotate-array::2129859494",
+        "lc-rotate-array::2162694467",
+        "lc-rotate-array::2164529732"
+      ]
     },
     {
       "id": "lc-rotate-array::2129859494",
@@ -13225,13 +12741,15 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-rotate-array::2129851950",
-      "_committedPaths": [
-        "problems/lc-rotate-array/lc-rotate-array.java",
-        "problems/lc-rotate-array/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-rotate-array::2129851950",
+        "lc-rotate-array::2129858873",
+        "lc-rotate-array::2162694467",
+        "lc-rotate-array::2164529732"
+      ]
     },
     {
       "id": "lc-rotate-array::2162694467",
@@ -13293,13 +12811,15 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-rotate-array::2129851950",
-      "_committedPaths": [
-        "problems/lc-rotate-array/lc-rotate-array.java",
-        "problems/lc-rotate-array/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-rotate-array::2129851950",
+        "lc-rotate-array::2129858873",
+        "lc-rotate-array::2129859494",
+        "lc-rotate-array::2164529732"
+      ]
     },
     {
       "id": "lc-rotate-array::2164529732",
@@ -13361,13 +12881,15 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-rotate-array::2129851950",
-      "_committedPaths": [
-        "problems/lc-rotate-array/lc-rotate-array.java",
-        "problems/lc-rotate-array/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-rotate-array::2129851950",
+        "lc-rotate-array::2129858873",
+        "lc-rotate-array::2129859494",
+        "lc-rotate-array::2162694467"
+      ]
     },
     {
       "id": "lc-score-validator::1998911984",
@@ -13409,10 +12931,6 @@
       "acRate": 72.70986040001473,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-score-validator/lc-score-validator.java",
-        "problems/lc-score-validator/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -13481,13 +12999,12 @@
           "submissionId": 2016433387
         }
       ],
-      "_committedPaths": [
-        "problems/lc-search-in-rotated-sorted-array-ii/lc-search-in-rotated-sorted-array-ii.java",
-        "problems/lc-search-in-rotated-sorted-array-ii/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-search-in-rotated-sorted-array-ii::2016433387"
+      ]
     },
     {
       "id": "lc-search-in-rotated-sorted-array-ii::2016433387",
@@ -13537,13 +13054,12 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-search-in-rotated-sorted-array-ii::2016425874",
-      "_committedPaths": [
-        "problems/lc-search-in-rotated-sorted-array-ii/lc-search-in-rotated-sorted-array-ii.java",
-        "problems/lc-search-in-rotated-sorted-array-ii/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-search-in-rotated-sorted-array-ii::2016425874"
+      ]
     },
     {
       "id": "lc-search-in-rotated-sorted-array::2010425869",
@@ -13665,13 +13181,14 @@
         "topic": "binary-search",
         "voteCount": 96
       },
-      "_committedPaths": [
-        "problems/search-in-rotated-sorted-array/leetcode/lc-search-in-rotated-sorted-array.java",
-        "problems/search-in-rotated-sorted-array/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-search-in-rotated-sorted-array::2139153849",
+        "lc-search-in-rotated-sorted-array::2159860171",
+        "lc-search-in-rotated-sorted-array::2159868297"
+      ]
     },
     {
       "id": "lc-search-in-rotated-sorted-array::2139153849",
@@ -13747,13 +13264,14 @@
         "topic": "binary-search",
         "voteCount": 96
       },
-      "_committedPaths": [
-        "problems/search-in-rotated-sorted-array/leetcode/lc-search-in-rotated-sorted-array.java",
-        "problems/search-in-rotated-sorted-array/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-search-in-rotated-sorted-array::2010425869",
+        "lc-search-in-rotated-sorted-array::2159860171",
+        "lc-search-in-rotated-sorted-array::2159868297"
+      ]
     },
     {
       "id": "lc-search-in-rotated-sorted-array::2159860171",
@@ -13829,13 +13347,14 @@
         "topic": "binary-search",
         "voteCount": 96
       },
-      "_committedPaths": [
-        "problems/search-in-rotated-sorted-array/leetcode/lc-search-in-rotated-sorted-array.java",
-        "problems/search-in-rotated-sorted-array/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-search-in-rotated-sorted-array::2010425869",
+        "lc-search-in-rotated-sorted-array::2139153849",
+        "lc-search-in-rotated-sorted-array::2159868297"
+      ]
     },
     {
       "id": "lc-search-in-rotated-sorted-array::2159868297",
@@ -13911,13 +13430,14 @@
         "topic": "binary-search",
         "voteCount": 96
       },
-      "_committedPaths": [
-        "problems/search-in-rotated-sorted-array/leetcode/lc-search-in-rotated-sorted-array.java",
-        "problems/search-in-rotated-sorted-array/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-search-in-rotated-sorted-array::2010425869",
+        "lc-search-in-rotated-sorted-array::2139153849",
+        "lc-search-in-rotated-sorted-array::2159860171"
+      ]
     },
     {
       "id": "lc-search-insert-position::2012882357",
@@ -14004,13 +13524,13 @@
           "submissionId": 2159846993
         }
       ],
-      "_committedPaths": [
-        "problems/lc-search-insert-position/lc-search-insert-position.java",
-        "problems/lc-search-insert-position/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-search-insert-position::2138204331",
+        "lc-search-insert-position::2159846993"
+      ]
     },
     {
       "id": "lc-search-insert-position::2138204331",
@@ -14066,13 +13586,13 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-search-insert-position::2012882357",
-      "_committedPaths": [
-        "problems/lc-search-insert-position/lc-search-insert-position.java",
-        "problems/lc-search-insert-position/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-search-insert-position::2012882357",
+        "lc-search-insert-position::2159846993"
+      ]
     },
     {
       "id": "lc-search-insert-position::2159846993",
@@ -14128,13 +13648,13 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-search-insert-position::2012882357",
-      "_committedPaths": [
-        "problems/lc-search-insert-position/lc-search-insert-position.java",
-        "problems/lc-search-insert-position/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-search-insert-position::2012882357",
+        "lc-search-insert-position::2138204331"
+      ]
     },
     {
       "id": "lc-set-mismatch::1993493098",
@@ -14217,13 +13737,13 @@
           "submissionId": 1995725221
         }
       ],
-      "_committedPaths": [
-        "problems/lc-set-mismatch/lc-set-mismatch.java",
-        "problems/lc-set-mismatch/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-set-mismatch::1993497909",
+        "lc-set-mismatch::1995725221"
+      ]
     },
     {
       "id": "lc-set-mismatch::1993497909",
@@ -14275,13 +13795,13 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-set-mismatch::1993493098",
-      "_committedPaths": [
-        "problems/lc-set-mismatch/lc-set-mismatch.java",
-        "problems/lc-set-mismatch/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-set-mismatch::1993493098",
+        "lc-set-mismatch::1995725221"
+      ]
     },
     {
       "id": "lc-set-mismatch::1995725221",
@@ -14333,13 +13853,13 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-set-mismatch::1993493098",
-      "_committedPaths": [
-        "problems/lc-set-mismatch/lc-set-mismatch.java",
-        "problems/lc-set-mismatch/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-set-mismatch::1993493098",
+        "lc-set-mismatch::1993497909"
+      ]
     },
     {
       "id": "lc-sort-colors::1979426739",
@@ -14400,10 +13920,6 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-sort-colors/lc-sort-colors.java",
-        "problems/lc-sort-colors/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -14491,10 +14007,6 @@
         "topic": "math",
         "voteCount": 96
       },
-      "_committedPaths": [
-        "problems/spiral-matrix/leetcode/lc-spiral-matrix.java",
-        "problems/spiral-matrix/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -14555,10 +14067,6 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-sqrtx/lc-sqrtx.java",
-        "problems/lc-sqrtx/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -14601,10 +14109,6 @@
       "acRate": 62.17333207705551,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-students-and-examinations/lc-students-and-examinations.sql",
-        "problems/lc-students-and-examinations/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -14730,13 +14234,13 @@
           "submissionId": 2008352692
         }
       ],
-      "_committedPaths": [
-        "problems/lc-subarray-sum-equals-k/lc-subarray-sum-equals-k.java",
-        "problems/lc-subarray-sum-equals-k/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-subarray-sum-equals-k::2004850568",
+        "lc-subarray-sum-equals-k::2008352692"
+      ]
     },
     {
       "id": "lc-subarray-sum-equals-k::2004850568",
@@ -14828,13 +14332,13 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-subarray-sum-equals-k::1978320870",
-      "_committedPaths": [
-        "problems/lc-subarray-sum-equals-k/lc-subarray-sum-equals-k.java",
-        "problems/lc-subarray-sum-equals-k/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-subarray-sum-equals-k::1978320870",
+        "lc-subarray-sum-equals-k::2008352692"
+      ]
     },
     {
       "id": "lc-subarray-sum-equals-k::2008352692",
@@ -14926,13 +14430,13 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-subarray-sum-equals-k::1978320870",
-      "_committedPaths": [
-        "problems/lc-subarray-sum-equals-k/lc-subarray-sum-equals-k.java",
-        "problems/lc-subarray-sum-equals-k/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-subarray-sum-equals-k::1978320870",
+        "lc-subarray-sum-equals-k::2004850568"
+      ]
     },
     {
       "id": "lc-subarray-sums-divisible-by-k::2009246149",
@@ -15029,13 +14533,12 @@
           "submissionId": 2145369923
         }
       ],
-      "_committedPaths": [
-        "problems/lc-subarray-sums-divisible-by-k/lc-subarray-sums-divisible-by-k.java",
-        "problems/lc-subarray-sums-divisible-by-k/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-subarray-sums-divisible-by-k::2145369923"
+      ]
     },
     {
       "id": "lc-subarray-sums-divisible-by-k::2145369923",
@@ -15116,13 +14619,12 @@
       "hasSimilar": true,
       "isDuplicate": true,
       "duplicateOf": "lc-subarray-sums-divisible-by-k::2009246149",
-      "_committedPaths": [
-        "problems/lc-subarray-sums-divisible-by-k/lc-subarray-sums-divisible-by-k.java",
-        "problems/lc-subarray-sums-divisible-by-k/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-subarray-sums-divisible-by-k::2009246149"
+      ]
     },
     {
       "id": "lc-sum-of-primes-between-number-and-its-reverse::1993828800",
@@ -15165,10 +14667,6 @@
       "acRate": 75.37713065695985,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-sum-of-primes-between-number-and-its-reverse/lc-sum-of-primes-between-number-and-its-reverse.java",
-        "problems/lc-sum-of-primes-between-number-and-its-reverse/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -15356,10 +14854,6 @@
         "topic": "arrays",
         "voteCount": 100
       },
-      "_committedPaths": [
-        "problems/two-sum/leetcode/lc-two-sum.py",
-        "problems/two-sum/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -15402,10 +14896,6 @@
       "acRate": 51.82743650808372,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-user-activity-for-the-past-30-days-i/lc-user-activity-for-the-past-30-days-i.sql",
-        "problems/lc-user-activity-for-the-past-30-days-i/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -15490,13 +14980,13 @@
         "topic": "arrays",
         "voteCount": 92
       },
-      "_committedPaths": [
-        "problems/valid-anagram/leetcode/lc-valid-anagram.py",
-        "problems/valid-anagram/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-valid-anagram::2004782201",
+        "lc-valid-anagram::2128155435"
+      ]
     },
     {
       "id": "lc-valid-anagram::2004782201",
@@ -15596,13 +15086,13 @@
         "topic": "arrays",
         "voteCount": 92
       },
-      "_committedPaths": [
-        "problems/valid-anagram/leetcode/lc-valid-anagram.java",
-        "problems/valid-anagram/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-valid-anagram::1810433410",
+        "lc-valid-anagram::2128155435"
+      ]
     },
     {
       "id": "lc-valid-anagram::2128155435",
@@ -15686,13 +15176,13 @@
         "topic": "arrays",
         "voteCount": 92
       },
-      "_committedPaths": [
-        "problems/valid-anagram/leetcode/lc-valid-anagram.java",
-        "problems/valid-anagram/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-valid-anagram::1810433410",
+        "lc-valid-anagram::2004782201"
+      ]
     },
     {
       "id": "lc-valid-digit-number::1987849699",
@@ -15734,10 +15224,6 @@
       "acRate": 69.51875798521043,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-valid-digit-number/lc-valid-digit-number.java",
-        "problems/lc-valid-digit-number/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -15789,10 +15275,6 @@
         }
       ],
       "hasSimilar": true,
-      "_committedPaths": [
-        "problems/lc-valid-palindrome-ii/lc-valid-palindrome-ii.java",
-        "problems/lc-valid-palindrome-ii/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false
@@ -15887,13 +15369,12 @@
         "topic": "two-pointers",
         "voteCount": 91
       },
-      "_committedPaths": [
-        "problems/valid-palindrome/leetcode/lc-valid-palindrome.py",
-        "problems/valid-palindrome/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-valid-palindrome::2151733729"
+      ]
     },
     {
       "id": "lc-valid-palindrome::2151733729",
@@ -15985,13 +15466,12 @@
         "topic": "two-pointers",
         "voteCount": 91
       },
-      "_committedPaths": [
-        "problems/valid-palindrome/leetcode/lc-valid-palindrome.java",
-        "problems/valid-palindrome/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-valid-palindrome::1812897923"
+      ]
     },
     {
       "id": "lc-valid-parentheses::1815862601",
@@ -16094,13 +15574,13 @@
         "topic": "stack",
         "voteCount": 98
       },
-      "_committedPaths": [
-        "problems/valid-parentheses/leetcode/lc-valid-parentheses.py",
-        "problems/valid-parentheses/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-valid-parentheses::2128544360",
+        "lc-valid-parentheses::2128547824"
+      ]
     },
     {
       "id": "lc-valid-parentheses::2128544360",
@@ -16221,13 +15701,13 @@
         "topic": "stack",
         "voteCount": 98
       },
-      "_committedPaths": [
-        "problems/valid-parentheses/leetcode/lc-valid-parentheses.java",
-        "problems/valid-parentheses/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-valid-parentheses::1815862601",
+        "lc-valid-parentheses::2128547824"
+      ]
     },
     {
       "id": "lc-valid-parentheses::2128547824",
@@ -16332,13 +15812,13 @@
         "topic": "stack",
         "voteCount": 98
       },
-      "_committedPaths": [
-        "problems/valid-parentheses/leetcode/lc-valid-parentheses.java",
-        "problems/valid-parentheses/leetcode/README.md"
-      ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "linkedSolutions": [
+        "lc-valid-parentheses::1815862601",
+        "lc-valid-parentheses::2128544360"
+      ]
     },
     {
       "id": "lc-zigzag-conversion::1809255801",
@@ -16378,10 +15858,6 @@
       "acRate": 55.31883549535574,
       "similar": null,
       "hasSimilar": null,
-      "_committedPaths": [
-        "problems/lc-zigzag-conversion/lc-zigzag-conversion.py",
-        "problems/lc-zigzag-conversion/README.md"
-      ],
       "notes": "",
       "methods": [],
       "manuallyEdited": false

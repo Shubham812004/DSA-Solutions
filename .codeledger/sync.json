@@ -6,11 +6,10 @@
   "gemini_enabled": false,
   "gitProvider": "github",
   "github_owner": "",
-  "github_pages_url": "https://shubham812004.github.io/DSA-Solutions/",
   "github_repo": "DSA-Solutions",
   "manual_enabled": false,
   "ollama_enabled": false,
   "openai_enabled": false,
   "openrouter_enabled": false,
-  "__syncedAt": "2026-10-11T07:27:18.181Z"
+  "__syncedAt": "2026-10-12T04:40:17.924Z"
 }
