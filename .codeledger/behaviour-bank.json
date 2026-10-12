@@ -1,4 +1,22 @@
 {
+  "leetcode::magnetic-force-between-two-balls": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "magnetic-force-between-two-balls",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1791783800252
+      }
+    ],
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Sorting"
+    ]
+  },
   "leetcode::minimum-number-of-days-to-make-m-bouquets": {
     "difficulty": "Medium",
     "lang": "Java",

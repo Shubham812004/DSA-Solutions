@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-10-12T05:02:08.362Z",
+  "updatedAt": "2026-10-12T05:43:20.382Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 229,
+    "total": 230,
     "easy": 111,
-    "medium": 106,
+    "medium": 107,
     "hard": 2,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 52,
-      "leetcode": 177
+      "leetcode": 178
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 114,
+      "Java": 115,
       "Python": 29,
       "MySQL": 35
     },
@@ -21,11 +21,12 @@
       "Matrix": 1,
       "Binary Search": 3,
       "String": 19,
-      "Array": 98,
+      "Array": 101,
       "Greedy": 1,
-      "Untagged": 38,
+      "Untagged": 35,
       "Prefix Sum": 1,
       "Math": 5,
+      "Searching": 1,
       "Linked List": 11,
       "Database": 35,
       "Dynamic Programming": 6,
@@ -483,7 +484,9 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -491,7 +494,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an array, <strong>arr[]</strong> of integers, your task is to return the <strong>smallest</strong> and <strong>second smallest</strong> element in the array. If the smallest and second smallest do not exist, return <strongSegoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">-1.</strong></span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input: </strong>arr[] = [2, 4, 3, 5, 6]\n<strong>Output: </strong>[2, 3] \n<strong>Explanation:</strong> 2 and 3 are respectively the smallest and second smallest elements in the array.</span></pre><pre><span><strong>Input: </strong>arr[] = [1, 1, 1]\n<strong>Output: </strong>[-1]\n<strong>Explanation: </strong>Only element is 1 which is smallest, so there is no second smallest element.</span></pre>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -511,7 +514,10 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -519,7 +525,7 @@
       "importedAt": 1791696375464,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given a sorted array <strong>arr[]</strong> with possibly some duplicates, find the first and last occurrences of an element <strong>x</strong> in the given array.<br /><strong>Note:</strong>&nbsp;If the number&nbsp;<strong>x</strong> is not found in the array then return both the indices as -1.<br /></span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input: </strong>arr[] = [1, 3, 5, 5, 5, 5, 67, 123, 125], x = 5\n<strong>Output: </strong>[2, 5]\n<strong>Explanation</strong>: First occurrence of 5 is at index 2 and last occurrence of 5 is at index 5\n</span></pre><pre><span><strong>Input: </strong>arr[] = [1, 3, 5, 5, 5, 5, 7, 123, 125], x = 7\n<strong>Output:</strong> [6, 6]<br /><strong>Explanation:</strong> First and last occurrence of 7 is at index 6<br /></span></pre><pre><span><strong>Input: </strong>arr[] = [1, 2, 3], x = 4\n<strong>Output:</strong> [-1, -1]\n<strong>Explanation</strong>: No occurrence of 4 in the array, so, output is [-1, -1]</span></pre>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -539,7 +545,10 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Searching",
+        "Sorting"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -547,7 +556,7 @@
       "importedAt": 1791696375464,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given a sorted array <strong>arr[] </strong>and an integer <strong>x</strong>, find the index (0-based) of the largest element in arr[] that is less than or equal to x. This element is called the <strong>floor</strong> of x. If such an element does not exist, return -1.</span></p><p><span><strong>Note:</strong> In case of multiple occurrences of floor of x, return the index of the last occurrence.</span></p><p><strong>Examples</strong></p><pre><span><strong>Input: </strong>arr[] = [1, 2, 8, 10, 10, 12, 19], x = 5\n<strong>Output: </strong>1<strong>\nExplanation: </strong>Largest number less than or equal to 5 is 2, whose index is 1.</span></pre><pre><span><strong>Input: </strong>arr[] = [1, 2, 8, 10, 10, 12, 19], x = 11\n<strong>Output: </strong>4<strong>\nExplanation: </strong>Largest Number less than or equal to 11 is 10, whose indices are 3 and 4. The index of last occurrence is 4.<br /></span></pre><pre><span><strong>Input: </strong>arr[] = [1, 2, 8, 10, 10, 12, 19], x = 0<br /><strong>Output: </strong>-1<strong>\nExplanation: </strong>No element less than or equal to 0 is found. So, output is -1.</span></pre><p><span><strong>Constraints:</strong><br />1 &le; arr.size() &le; 10<sup>6</sup><br />1 &le; arr[i] &le; 10<sup>6</sup><br />0 &le; x &le;<sup> </sup>arr[n-1]</span></p>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -7772,6 +7781,64 @@
         "problems/longest-substring-without-repeating-characters/leetcode/lc-longest-substring-without-repeating-characters.java",
         "problems/longest-substring-without-repeating-characters/leetcode/README.md"
       ]
+    },
+    {
+      "id": "lc-magnetic-force-between-two-balls",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Magnetic Force Between Two Balls",
+      "titleSlug": "magnetic-force-between-two-balls",
+      "difficulty": "Medium",
+      "topic": "Binary Search",
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Sorting"
+      ],
+      "canonical": null,
+      "readmeContent": "# [1552] Magnetic Force Between Two Balls\n**Difficulty:** Medium  |  **Acceptance:** 72.8%  |  **Likes:** 3335 / **Dislikes:** 277\n**Tags:** `Array`, `Binary Search`, `Sorting`\n## Problem\nIn the universe Earth C-137, Rick discovered a special form of magnetic force between two balls if they are put in his new invented basket. Rick has n empty baskets, the ith basket is at position[i], Morty has m balls and needs to distribute the balls into the baskets such that the minimum magnetic force between any two balls is maximum.\n\nRick stated that magnetic force between two different balls at positions x and y is |x - y|.\n\nGiven the integer array position and the integer m. Return the required force.\n\n&nbsp;\nExample 1:\n\nInput: position = [1,2,3,4,7], m = 3\nOutput: 3\nExplanation: Distributing the 3 balls into baskets 1, 4 and 7 will make the magnetic force between ball pairs [3, 3, 6]. The minimum magnetic force is 3. We cannot achieve a larger minimum magnetic force than 3.\n\nExample 2:\n\nInput: position = [5,4,3,2,1,1000000000], m = 2\nOutput: 999999999\nExplanation: We can use baskets 1 and 1000000000.\n\n&nbsp;\nConstraints:\n\n\tn == position.length\n\t2 <= n <= 105\n\t1 <= position[i] <= 109\n\tAll integers in position are distinct.\n\t2 <= m <= position.length\n## My Submission\n\n- Runtime: 52 ms (beats 6.9%)\n- Memory: 79.1 MB (beats 64.4%)\n\n## Similar Problems\n\n- [Minimized Maximum of Products Distributed to Any Store](https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/) — Medium\n",
+      "code": "class Solution {\n    public int maxDistance(int[] position, int m) {\n        Arrays.sort(position);\n        int l = 1;\n        int h = Arrays.stream(position).max().getAsInt();\n        int ans = -1;\n        while(l <= h){\n            int mid = l + (h - l)/2;\n            if(helper(position, m, mid)){\n                ans = mid;\n                l = mid+1;\n            }\n            else{\n                h = mid-1;\n            }\n        }\n        return ans;\n    }\n\n    public boolean helper(int[] position, int m, int gap){\n        int count = 1;\n        int last = position[0];\n        for(int i=1; i<position.length; i++){\n            if(position[i] - last >= gap){\n                count++;\n                last = position[i];\n            }\n        }\n        return count >= m;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/lc-magnetic-force-between-two-balls/lc-magnetic-force-between-two-balls.java",
+          "content": "class Solution {\n    public int maxDistance(int[] position, int m) {\n        Arrays.sort(position);\n        int l = 1;\n        int h = Arrays.stream(position).max().getAsInt();\n        int ans = -1;\n        while(l <= h){\n            int mid = l + (h - l)/2;\n            if(helper(position, m, mid)){\n                ans = mid;\n                l = mid+1;\n            }\n            else{\n                h = mid-1;\n            }\n        }\n        return ans;\n    }\n\n    public boolean helper(int[] position, int m, int gap){\n        int count = 1;\n        int last = position[0];\n        for(int i=1; i<position.length; i++){\n            if(position[i] - last >= gap){\n                count++;\n                last = position[i];\n            }\n        }\n        return count >= m;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-magnetic-force-between-two-balls/README.md",
+          "content": "# [1552] Magnetic Force Between Two Balls\n**Difficulty:** Medium  |  **Acceptance:** 72.8%  |  **Likes:** 3335 / **Dislikes:** 277\n**Tags:** `Array`, `Binary Search`, `Sorting`\n## Problem\nIn the universe Earth C-137, Rick discovered a special form of magnetic force between two balls if they are put in his new invented basket. Rick has n empty baskets, the ith basket is at position[i], Morty has m balls and needs to distribute the balls into the baskets such that the minimum magnetic force between any two balls is maximum.\n\nRick stated that magnetic force between two different balls at positions x and y is |x - y|.\n\nGiven the integer array position and the integer m. Return the required force.\n\n&nbsp;\nExample 1:\n\nInput: position = [1,2,3,4,7], m = 3\nOutput: 3\nExplanation: Distributing the 3 balls into baskets 1, 4 and 7 will make the magnetic force between ball pairs [3, 3, 6]. The minimum magnetic force is 3. We cannot achieve a larger minimum magnetic force than 3.\n\nExample 2:\n\nInput: position = [5,4,3,2,1,1000000000], m = 2\nOutput: 999999999\nExplanation: We can use baskets 1 and 1000000000.\n\n&nbsp;\nConstraints:\n\n\tn == position.length\n\t2 <= n <= 105\n\t1 <= position[i] <= 109\n\tAll integers in position are distinct.\n\t2 <= m <= position.length\n## My Submission\n\n- Runtime: 52 ms (beats 6.9%)\n- Memory: 79.1 MB (beats 64.4%)\n\n## Similar Problems\n\n- [Minimized Maximum of Products Distributed to Any Store](https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "52 ms",
+      "memory": "79.1 MB",
+      "runtimePct": 6.893000000000019,
+      "memoryPct": 64.38509999999988,
+      "timestamp": 1791783794000,
+      "acRate": 72.75195423343571,
+      "likes": 3335,
+      "dislikes": 277,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "minimized-maximum-of-products-distributed-to-any-store",
+          "title": "Minimized Maximum of Products Distributed to Any Store",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>In the universe Earth C-137, Rick discovered a special form of magnetic force between two balls if they are put in his new invented basket. Rick has <code>n</code> empty baskets, the <code>i<sup>th</sup></code> basket is at <code>position[i]</code>, Morty has <code>m</code> balls and needs to distribute the balls into the baskets such that the <strong>minimum magnetic force</strong> between any two balls is <strong>maximum</strong>.</p>\n\n<p>Rick stated that magnetic force between two different balls at positions <code>x</code> and <code>y</code> is <code>|x - y|</code>.</p>\n\n<p>Given the integer array <code>position</code> and the integer <code>m</code>. Return <em>the required force</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/08/11/q3v1.jpg\" style=\"width: 562px; height: 195px;\" />\n<pre>\n<strong>Input:</strong> position = [1,2,3,4,7], m = 3\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> Distributing the 3 balls into baskets 1, 4 and 7 will make the magnetic force between ball pairs [3, 3, 6]. The minimum magnetic force is 3. We cannot achieve a larger minimum magnetic force than 3.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> position = [5,4,3,2,1,1000000000], m = 2\n<strong>Output:</strong> 999999999\n<strong>Explanation:</strong> We can use baskets 1 and 1000000000.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == position.length</code></li>\n\t<li><code>2 &lt;= n &lt;= 10<sup>5</sup></code></li>\n\t<li><code>1 &lt;= position[i] &lt;= 10<sup>9</sup></code></li>\n\t<li>All integers in <code>position</code> are <strong>distinct</strong>.</li>\n\t<li><code>2 &lt;= m &lt;= position.length</code></li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/magnetic-force-between-two-balls/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
     },
     {
       "id": "lc-majority-element-ii::1980144296",
