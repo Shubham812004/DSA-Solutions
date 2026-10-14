@@ -1,4 +1,21 @@
 {
+  "geeksforgeeks::allocate-minimum-number-of-pages0937": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "geeksforgeeks",
+    "slug": "allocate-minimum-number-of-pages0937",
+    "solves": [
+      {
+        "elapsedSeconds": 1885,
+        "lang": "Java",
+        "ts": 1791955517277
+      }
+    ],
+    "tags": [
+      "Searching",
+      "Divide and Conquer"
+    ]
+  },
   "leetcode::longest-palindromic-substring": {
     "difficulty": "Medium",
     "lang": "Java",
@@ -9,6 +26,11 @@
         "elapsedSeconds": 0,
         "lang": "Java",
         "ts": 1791951979212
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1791954811693
       }
     ],
     "tags": [

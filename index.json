@@ -1,32 +1,32 @@
 {
-  "updatedAt": "2026-10-14T05:11:32.467Z",
+  "updatedAt": "2026-10-14T05:25:17.353Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 232,
+    "total": 233,
     "easy": 111,
-    "medium": 108,
+    "medium": 109,
     "hard": 3,
     "unknownDifficulty": 10,
     "byPlatform": {
-      "geeksforgeeks": 52,
+      "geeksforgeeks": 53,
       "leetcode": 180
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 117,
+      "Java": 118,
       "Python": 29,
       "MySQL": 35
     },
     "byTopic": {
       "Matrix": 1,
       "Binary Search": 4,
+      "Searching": 2,
       "String": 22,
       "Array": 109,
       "Greedy": 1,
       "Untagged": 21,
       "Prefix Sum": 2,
       "Math": 6,
-      "Searching": 1,
       "Two Pointers": 5,
       "Linked List": 11,
       "Database": 35,
@@ -100,6 +100,42 @@
       "_committedPaths": [
         "problems/gfg-aggressive-cows/README.md"
       ]
+    },
+    {
+      "id": "gfg-allocate-minimum-number-of-pages0937",
+      "forceCommit": false,
+      "title": "Allocate Minimum Pages",
+      "titleSlug": "allocate-minimum-number-of-pages0937",
+      "difficulty": "Medium",
+      "topic": "Divide and Conquer",
+      "tags": [
+        "Searching",
+        "Divide and Conquer"
+      ],
+      "canonical": null,
+      "readmeContent": "# Allocate Minimum Pages\n\n**Platform:** GeeksForGeeks  |  **Difficulty:** Medium\n\n**Tags:** `Searching`, `Divide and Conquer`\n\n## Problem\n\nProblem Solved SuccessfullySuggest Feedback Sync to LedgerTest Cases Passed1112 / 1112Attempts : Correct / Total1 / 7Accuracy : 14%Points Scored 4 / 4Your Total Score:145 Time Taken0.36\n\n**Source:** https://www.geeksforgeeks.org/problems/allocate-minimum-number-of-pages0937/",
+      "code": "class Solution {\n    public int findPages(int[] arr, int k) {\n        // code here\n        if(k > arr.length) return -1;\n        long l = Arrays.stream(arr).max().getAsInt();\n        long h = 0;\n        for(int num : arr){\n            h += num;\n        }\n        long ans = -1;\n        while(l <= h){\n            long m = l + (h - l)/2;\n            if(helper(arr, k, m)){\n                ans = m;\n                h = m-1;\n            }\n            else{\n                l = m+1;\n            }\n        }\n        return (int)ans;\n    }\n    \n    public boolean helper(int[] arr, int k, long m){\n        int count = 1;\n        long sum = 0;\n        for(int pages : arr){\n            if(sum + pages <= m){\n                sum += pages;\n            }else{\n                count++;\n                sum = pages;\n            }\n        }\n        return count <= k;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/gfg-allocate-minimum-number-of-pages0937/gfg-allocate-minimum-number-of-pages0937.java",
+          "content": "class Solution {\n    public int findPages(int[] arr, int k) {\n        // code here\n        if(k > arr.length) return -1;\n        long l = Arrays.stream(arr).max().getAsInt();\n        long h = 0;\n        for(int num : arr){\n            h += num;\n        }\n        long ans = -1;\n        while(l <= h){\n            long m = l + (h - l)/2;\n            if(helper(arr, k, m)){\n                ans = m;\n                h = m-1;\n            }\n            else{\n                l = m+1;\n            }\n        }\n        return (int)ans;\n    }\n    \n    public boolean helper(int[] arr, int k, long m){\n        int count = 1;\n        long sum = 0;\n        for(int pages : arr){\n            if(sum + pages <= m){\n                sum += pages;\n            }else{\n                count++;\n                sum = pages;\n            }\n        }\n        return count <= k;\n    }\n}"
+        },
+        {
+          "path": "problems/gfg-allocate-minimum-number-of-pages0937/README.md",
+          "content": "# Allocate Minimum Pages\n\n**Platform:** GeeksForGeeks  |  **Difficulty:** Medium\n\n**Tags:** `Searching`, `Divide and Conquer`\n\n## Problem\n\nProblem Solved SuccessfullySuggest Feedback Sync to LedgerTest Cases Passed1112 / 1112Attempts : Correct / Total1 / 7Accuracy : 14%Points Scored 4 / 4Your Total Score:145 Time Taken0.36\n\n**Source:** https://www.geeksforgeeks.org/problems/allocate-minimum-number-of-pages0937/"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": null,
+      "memory": null,
+      "timestamp": 1791955517264,
+      "elapsedSeconds": 1885,
+      "_requestAIReview": true,
+      "platform": "geeksforgeeks"
     },
     {
       "id": "gfg-anagram-1587115620",
@@ -6885,7 +6921,7 @@
       "runtimePct": 93.20119999999999,
       "memoryPct": 80.49239999999999,
       "timestamp": 1790779293000,
-      "acRate": 38.83913665991884,
+      "acRate": 38.839345704612064,
       "likes": 33303,
       "dislikes": 2043,
       "similar": [
@@ -15116,7 +15152,11 @@
       "_requestAIReview": true,
       "platform": "leetcode",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-split-array-largest-sum/lc-split-array-largest-sum.java",
+        "problems/lc-split-array-largest-sum/README.md"
+      ]
     },
     {
       "id": "lc-sqrtx::2158800022",
