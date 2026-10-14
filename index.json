@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-10-14T05:30:38.892Z",
+  "updatedAt": "2026-10-14T05:32:37.697Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 233,
+    "total": 234,
     "easy": 111,
     "medium": 109,
-    "hard": 3,
+    "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
-      "geeksforgeeks": 53,
+      "geeksforgeeks": 54,
       "leetcode": 180
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 118,
+      "Java": 119,
       "Python": 29,
       "MySQL": 35
     },
@@ -22,7 +22,7 @@
       "Binary Search": 4,
       "Searching": 2,
       "String": 22,
-      "Array": 109,
+      "Array": 110,
       "Greedy": 1,
       "Untagged": 21,
       "Prefix Sum": 2,
@@ -1476,6 +1476,42 @@
       "_committedPaths": [
         "problems/gfg-sort-an-array-of-0s-1s-and-2s4231/README.md"
       ]
+    },
+    {
+      "id": "gfg-split-array-largest-sum--141634",
+      "forceCommit": false,
+      "title": "Split Array Largest Sum",
+      "titleSlug": "split-array-largest-sum--141634",
+      "difficulty": "Hard",
+      "topic": "Binary Search",
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "canonical": null,
+      "readmeContent": "# Split Array Largest Sum\n\n**Platform:** GeeksForGeeks  |  **Difficulty:** Hard\n\n**Tags:** `Arrays`, `Binary Search`\n\n## Problem\n\nGiven an array arr[] and an integer k, divide the array into k contiguous subarrays such that the maximum sum among these subarrays is minimized. Find this minimum possible maximum sum.\nExamples:\nInput: arr[] = [1, 2, 3, 4], k = 3Output: 4Explanation: Optimal Split is [1, 2], [3], [4]. Maximum sum of all subarrays is 4, which is minimum possible for 3 splits.\nInput: arr[] = [1, 1, 2], k = 2Output: 2Explanation: Splitting the array as [1, 1] and [2] is optimal. This results in a maximum sum subarray of 2.\nConstraints:1 ≤ k&nbsp;≤ arr.size() ≤ 1051 ≤ arr[i] ≤ 104\n\n**Source:** https://www.geeksforgeeks.org/problems/split-array-largest-sum--141634/",
+      "code": "class Solution {\n\tpublic int splitArray(int[] arr, int k) {\n\t\t// code here\n\t\tif (k > arr.length)\n\t\t\treturn - 1;\n\t\tint l = Arrays.stream(arr).max().getAsInt();\n\t\tint h = 0;\n\t\tfor (int num : arr) {\n\t\t\th += num;\n\t\t}\n\t\tint ans = -1;\n\t\twhile (l <= h) {\n\t\t\tint m = l + (h - l)/2;\n\t\t\tif (helper(arr, k, m)) {\n\t\t\t\tans = m;\n\t\t\t\th = m - 1;\n\t\t\t}\n\t\t\telse {\n\t\t\t\tl = m + 1;\n\t\t\t}\n\t\t}\n\t\treturn ans;\n\t}\n\t\n\tpublic boolean helper(int[] arr, int k, int m){\n         int count = 1;\n         int sum = 0;\n         for(int num : arr){\n             if(sum + num <= m){\n                 sum += num;\n             }\n             else{\n                 count++;\n                 sum = num;\n             }\n         }\n         return count <= k;\n     }\n}\n",
+      "files": [
+        {
+          "path": "problems/gfg-split-array-largest-sum-141634/gfg-split-array-largest-sum-141634.java",
+          "content": "class Solution {\n\tpublic int splitArray(int[] arr, int k) {\n\t\t// code here\n\t\tif (k > arr.length)\n\t\t\treturn - 1;\n\t\tint l = Arrays.stream(arr).max().getAsInt();\n\t\tint h = 0;\n\t\tfor (int num : arr) {\n\t\t\th += num;\n\t\t}\n\t\tint ans = -1;\n\t\twhile (l <= h) {\n\t\t\tint m = l + (h - l)/2;\n\t\t\tif (helper(arr, k, m)) {\n\t\t\t\tans = m;\n\t\t\t\th = m - 1;\n\t\t\t}\n\t\t\telse {\n\t\t\t\tl = m + 1;\n\t\t\t}\n\t\t}\n\t\treturn ans;\n\t}\n\t\n\tpublic boolean helper(int[] arr, int k, int m){\n         int count = 1;\n         int sum = 0;\n         for(int num : arr){\n             if(sum + num <= m){\n                 sum += num;\n             }\n             else{\n                 count++;\n                 sum = num;\n             }\n         }\n         return count <= k;\n     }\n}\n"
+        },
+        {
+          "path": "problems/gfg-split-array-largest-sum-141634/README.md",
+          "content": "# Split Array Largest Sum\n\n**Platform:** GeeksForGeeks  |  **Difficulty:** Hard\n\n**Tags:** `Arrays`, `Binary Search`\n\n## Problem\n\nGiven an array arr[] and an integer k, divide the array into k contiguous subarrays such that the maximum sum among these subarrays is minimized. Find this minimum possible maximum sum.\nExamples:\nInput: arr[] = [1, 2, 3, 4], k = 3Output: 4Explanation: Optimal Split is [1, 2], [3], [4]. Maximum sum of all subarrays is 4, which is minimum possible for 3 splits.\nInput: arr[] = [1, 1, 2], k = 2Output: 2Explanation: Splitting the array as [1, 1] and [2] is optimal. This results in a maximum sum subarray of 2.\nConstraints:1 ≤ k&nbsp;≤ arr.size() ≤ 1051 ≤ arr[i] ≤ 104\n\n**Source:** https://www.geeksforgeeks.org/problems/split-array-largest-sum--141634/"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": null,
+      "memory": null,
+      "timestamp": 1791955957336,
+      "elapsedSeconds": 91,
+      "_requestAIReview": true,
+      "platform": "geeksforgeeks"
     },
     {
       "id": "gfg-square-root",
