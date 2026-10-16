@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T04:48:59.639Z",
+  "updatedAt": "2026-10-16T04:58:15.181Z",
   "layoutVersion": 3,
   "stats": {
     "total": 236,
@@ -14085,16 +14085,16 @@
         "topic": "binary-search",
         "voteCount": 89
       },
-      "readmeContent": "# [74] Search a 2D Matrix\n**Difficulty:** Medium  |  **Acceptance:** 54.3%  |  **Likes:** 18354 / **Dislikes:** 502\n**Tags:** `Array`, `Binary Search`, `Matrix`\n## Problem\nYou are given an m x n integer matrix matrix with the following two properties:\n\n\tEach row is sorted in non-decreasing order.\n\tThe first integer of each row is greater than the last integer of the previous row.\n\nGiven an integer target, return true if target is in matrix or false otherwise.\n\nYou must write a solution in O(log(m * n)) time complexity.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3\nOutput: true\n\nExample 2:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13\nOutput: false\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 100\n\t-104 <= matrix[i][j], target <= 104\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 44 MB (beats 24.0%)\n\n## Similar Problems\n\n- [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) — Medium\n- [Split Message Based on Limit](https://leetcode.com/problems/split-message-based-on-limit/) — Hard\n",
-      "code": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        int n = matrix[0].length;\n        int m = matrix.length;\n        int low = 0;\n        int high = m*n-1;\n        while(low <= high){\n            int mid = low + (high - low) / 2;\n            int row = mid/n;\n            int col = mid%n;\n            if(matrix[row][col] == target){\n                return true;\n            }\n            else if(matrix[row][col] > target){\n                high = mid - 1;\n            }\n            else{\n                low = mid + 1;\n            }\n        }\n        return false;\n    }\n}",
+      "readmeContent": "# [74] Search a 2D Matrix\n**Difficulty:** Medium  |  **Acceptance:** 54.3%  |  **Likes:** 18354 / **Dislikes:** 502\n**Tags:** `Array`, `Binary Search`, `Matrix`\n## Problem\nYou are given an m x n integer matrix matrix with the following two properties:\n\n\tEach row is sorted in non-decreasing order.\n\tThe first integer of each row is greater than the last integer of the previous row.\n\nGiven an integer target, return true if target is in matrix or false otherwise.\n\nYou must write a solution in O(log(m * n)) time complexity.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3\nOutput: true\n\nExample 2:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13\nOutput: false\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 100\n\t-104 <= matrix[i][j], target <= 104\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 43.4 MB (beats 97.0%)\n\n## Similar Problems\n\n- [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) — Medium\n- [Split Message Based on Limit](https://leetcode.com/problems/split-message-based-on-limit/) — Hard\n",
+      "code": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        int n = matrix.length;\n        int m = matrix[0].length;\n        int l = 0;\n        int h = m*n-1;\n        while(l <= h){\n            int mid = l + (h - l)/2;\n            int row = mid/m;\n            int col = mid%m;\n            if(matrix[row][col] == target){\n                return true;\n            }\n            else if(matrix[row][col] < target){\n                l = mid+1;\n            }\n            else{\n                h = mid-1;\n            }\n        }\n        return false;\n    }\n}",
       "files": [
         {
           "path": "problems/search-a-2d-matrix/leetcode/lc-search-a-2d-matrix.java",
-          "content": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        int n = matrix[0].length;\n        int m = matrix.length;\n        int low = 0;\n        int high = m*n-1;\n        while(low <= high){\n            int mid = low + (high - low) / 2;\n            int row = mid/n;\n            int col = mid%n;\n            if(matrix[row][col] == target){\n                return true;\n            }\n            else if(matrix[row][col] > target){\n                high = mid - 1;\n            }\n            else{\n                low = mid + 1;\n            }\n        }\n        return false;\n    }\n}"
+          "content": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        int n = matrix.length;\n        int m = matrix[0].length;\n        int l = 0;\n        int h = m*n-1;\n        while(l <= h){\n            int mid = l + (h - l)/2;\n            int row = mid/m;\n            int col = mid%m;\n            if(matrix[row][col] == target){\n                return true;\n            }\n            else if(matrix[row][col] < target){\n                l = mid+1;\n            }\n            else{\n                h = mid-1;\n            }\n        }\n        return false;\n    }\n}"
         },
         {
           "path": "problems/search-a-2d-matrix/README.md",
-          "content": "# [74] Search a 2D Matrix\n**Difficulty:** Medium  |  **Acceptance:** 54.3%  |  **Likes:** 18354 / **Dislikes:** 502\n**Tags:** `Array`, `Binary Search`, `Matrix`\n## Problem\nYou are given an m x n integer matrix matrix with the following two properties:\n\n\tEach row is sorted in non-decreasing order.\n\tThe first integer of each row is greater than the last integer of the previous row.\n\nGiven an integer target, return true if target is in matrix or false otherwise.\n\nYou must write a solution in O(log(m * n)) time complexity.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3\nOutput: true\n\nExample 2:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13\nOutput: false\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 100\n\t-104 <= matrix[i][j], target <= 104\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 44 MB (beats 24.0%)\n\n## Similar Problems\n\n- [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) — Medium\n- [Split Message Based on Limit](https://leetcode.com/problems/split-message-based-on-limit/) — Hard\n"
+          "content": "# [74] Search a 2D Matrix\n**Difficulty:** Medium  |  **Acceptance:** 54.3%  |  **Likes:** 18354 / **Dislikes:** 502\n**Tags:** `Array`, `Binary Search`, `Matrix`\n## Problem\nYou are given an m x n integer matrix matrix with the following two properties:\n\n\tEach row is sorted in non-decreasing order.\n\tThe first integer of each row is greater than the last integer of the previous row.\n\nGiven an integer target, return true if target is in matrix or false otherwise.\n\nYou must write a solution in O(log(m * n)) time complexity.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3\nOutput: true\n\nExample 2:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13\nOutput: false\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 100\n\t-104 <= matrix[i][j], target <= 104\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 43.4 MB (beats 97.0%)\n\n## Similar Problems\n\n- [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) — Medium\n- [Split Message Based on Limit](https://leetcode.com/problems/split-message-based-on-limit/) — Hard\n"
         }
       ],
       "lang": {
@@ -14103,11 +14103,11 @@
         "slug": "java"
       },
       "runtime": "0 ms",
-      "memory": "44 MB",
+      "memory": "43.4 MB",
       "runtimePct": 100,
-      "memoryPct": 23.995100000000022,
-      "timestamp": 1783403020000,
-      "acRate": 54.3428130088161,
+      "memoryPct": 97.01230000000002,
+      "timestamp": 1792126690000,
+      "acRate": 54.34276361050146,
       "likes": 18354,
       "dislikes": 502,
       "similar": [
@@ -14133,7 +14133,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/search-a-2d-matrix/leetcode/lc-search-a-2d-matrix.java",
+        "problems/search-a-2d-matrix/leetcode/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-search-in-rotated-sorted-array-ii::2016425874",

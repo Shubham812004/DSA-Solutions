@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-search-a-2d-matrix` |
 | Topics | Array, Binary Search, Matrix |
-| Solved | 2026-07-07 |
+| Solved | 2026-10-16 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 44 MB (beats 23.995100000000022%) |
+| Memory | 43.4 MB (beats 97.01230000000002%) |
 
 ## Problem Statement
 
@@ -51,22 +51,22 @@ You must write a solution in `O(log(m * n))` time complexity.
 ```Java
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
-        int n = matrix[0].length;
-        int m = matrix.length;
-        int low = 0;
-        int high = m*n-1;
-        while(low <= high){
-            int mid = low + (high - low) / 2;
-            int row = mid/n;
-            int col = mid%n;
+        int n = matrix.length;
+        int m = matrix[0].length;
+        int l = 0;
+        int h = m*n-1;
+        while(l <= h){
+            int mid = l + (h - l)/2;
+            int row = mid/m;
+            int col = mid%m;
             if(matrix[row][col] == target){
                 return true;
             }
-            else if(matrix[row][col] > target){
-                high = mid - 1;
+            else if(matrix[row][col] < target){
+                l = mid+1;
             }
             else{
-                low = mid + 1;
+                h = mid-1;
             }
         }
         return false;
