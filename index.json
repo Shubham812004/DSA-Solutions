@@ -1,26 +1,26 @@
 {
-  "updatedAt": "2026-10-16T04:58:15.181Z",
+  "updatedAt": "2026-10-16T05:14:28.130Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 236,
-    "easy": 112,
+    "total": 237,
+    "easy": 113,
     "medium": 110,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
-      "geeksforgeeks": 54,
+      "geeksforgeeks": 55,
       "leetcode": 182
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 121,
+      "Java": 122,
       "Python": 29,
       "MySQL": 35
     },
     "byTopic": {
       "Matrix": 1,
       "Binary Search": 4,
-      "Searching": 2,
+      "Searching": 3,
       "String": 23,
       "Array": 115,
       "Greedy": 1,
@@ -1317,6 +1317,42 @@
       "_committedPaths": [
         "problems/gfg-rotation4723/README.md"
       ]
+    },
+    {
+      "id": "gfg-search-in-a-matrix17201720",
+      "forceCommit": false,
+      "title": "Search in a Row-Column Sorted",
+      "titleSlug": "search-in-a-matrix17201720",
+      "difficulty": "Easy",
+      "topic": "Matrix",
+      "tags": [
+        "Searching",
+        "Matrix"
+      ],
+      "canonical": null,
+      "readmeContent": "# Search in a Row-Column Sorted\n\n**Platform:** GeeksForGeeks  |  **Difficulty:** Easy\n\n**Tags:** `Searching`, `Matrix`\n\n## Problem\n\nProblem Solved SuccessfullySuggest Feedback Sync to LedgerTest Cases Passed1111 / 1111Attempts : Correct / Total1 / 2Accuracy : 50%Points Scored 2 / 2Your Total Score:155 Time Taken1.45\n\n**Source:** https://www.geeksforgeeks.org/problems/search-in-a-matrix17201720/",
+      "code": "class Solution {\n    public static boolean matSearch(int mat[][], int x) {\n        // code here\n        int n = mat.length;\n        int m = mat[0].length;\n        int r = 0;\n        int c = m-1;\n        while(r < n && c >= 0){\n            if(mat[r][c] == x){\n                return true;\n            }\n            else if(mat[r][c] < x){\n                r++;\n            }\n            else{\n                c--;\n            }\n        }\n        return false;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/gfg-search-in-a-matrix17201720/gfg-search-in-a-matrix17201720.java",
+          "content": "class Solution {\n    public static boolean matSearch(int mat[][], int x) {\n        // code here\n        int n = mat.length;\n        int m = mat[0].length;\n        int r = 0;\n        int c = m-1;\n        while(r < n && c >= 0){\n            if(mat[r][c] == x){\n                return true;\n            }\n            else if(mat[r][c] < x){\n                r++;\n            }\n            else{\n                c--;\n            }\n        }\n        return false;\n    }\n}"
+        },
+        {
+          "path": "problems/gfg-search-in-a-matrix17201720/README.md",
+          "content": "# Search in a Row-Column Sorted\n\n**Platform:** GeeksForGeeks  |  **Difficulty:** Easy\n\n**Tags:** `Searching`, `Matrix`\n\n## Problem\n\nProblem Solved SuccessfullySuggest Feedback Sync to LedgerTest Cases Passed1111 / 1111Attempts : Correct / Total1 / 2Accuracy : 50%Points Scored 2 / 2Your Total Score:155 Time Taken1.45\n\n**Source:** https://www.geeksforgeeks.org/problems/search-in-a-matrix17201720/"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": null,
+      "memory": null,
+      "timestamp": 1792127667719,
+      "elapsedSeconds": 164,
+      "_requestAIReview": true,
+      "platform": "geeksforgeeks"
     },
     {
       "id": "gfg-search-in-a-rotated-array4618",
