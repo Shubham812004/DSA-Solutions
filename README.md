@@ -10,13 +10,13 @@
 
 <!-- codeledger:gamification:start -->
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://shubham812004.github.io/DSA-Solutions/badges/card-light.svg?v=3385-1-187-2026-10-21">
-  <img src="https://shubham812004.github.io/DSA-Solutions/badges/card.svg?v=3385-1-187-2026-10-21" alt="Streak card" width="420">
+  <source media="(prefers-color-scheme: light)" srcset="https://shubham812004.github.io/DSA-Solutions/badges/card-light.svg?v=3385-2-187-2026-10-21">
+  <img src="https://shubham812004.github.io/DSA-Solutions/badges/card.svg?v=3385-2-187-2026-10-21" alt="Streak card" width="420">
 </picture>
 
-![Streak](https://shubham812004.github.io/DSA-Solutions/badges/streak.svg?v=3385-1-187-2026-10-21) ![Points](https://shubham812004.github.io/DSA-Solutions/badges/points.svg?v=3385-1-187-2026-10-21) ![Level](https://shubham812004.github.io/DSA-Solutions/badges/level.svg?v=3385-1-187-2026-10-21) ![Freezes](https://shubham812004.github.io/DSA-Solutions/badges/freezes.svg?v=3385-1-187-2026-10-21)
+![Streak](https://shubham812004.github.io/DSA-Solutions/badges/streak.svg?v=3385-2-187-2026-10-21) ![Points](https://shubham812004.github.io/DSA-Solutions/badges/points.svg?v=3385-2-187-2026-10-21) ![Level](https://shubham812004.github.io/DSA-Solutions/badges/level.svg?v=3385-2-187-2026-10-21) ![Freezes](https://shubham812004.github.io/DSA-Solutions/badges/freezes.svg?v=3385-2-187-2026-10-21)
 
-🩸 First Blood · 🔟 Ten Down · 💯 Century · 🔥 Week On Fire · 🎯 Well Rounded · ⚡ Double Day · 🪃 Comeback · ⭐ Engineer
+🩸 First Blood · 🔟 Ten Down · 💯 Century · 🎯 Well Rounded · ⚡ Double Day · 🪃 Comeback · ⭐ Engineer
 <!-- codeledger:gamification:end -->
 
 > Automatically tracked by [CodeLedger](https://codeledger.vkrishna04.me) — every problem solved, committed to Git.
@@ -37,7 +37,7 @@
 
 **Top Languages:** Java (123) · Unknown (51) · MySQL (35) · Python (29)
 
-**Top Topics:** Array (119) · Database (35) · String (24) · Untagged (11) · Linked List (11) · Math (6) · Dynamic Programming (6) · Searching (5) · Two Pointers (5) · Stack (5)
+**Top Topics:** Array (119) · Database (35) · String (24) · Linked List (11) · Untagged (9) · Searching (6) · Math (6) · Two Pointers (6) · Dynamic Programming (6) · Stack (5)
 
 ---
 
@@ -88,6 +88,7 @@ Built with [CodeLedger](https://codeledger.vkrishna04.me) · [⭐ Star the exten
 </div>
 
 <!-- CODELEDGER_AUTO_GENERATED_END -->
+
 
 
 

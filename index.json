@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T05:06:02.569Z",
+  "updatedAt": "2026-10-21T05:10:59.238Z",
   "layoutVersion": 3,
   "stats": {
     "total": 238,
@@ -20,14 +20,14 @@
     "byTopic": {
       "Matrix": 1,
       "Binary Search": 4,
-      "Searching": 5,
+      "Searching": 6,
       "String": 24,
       "Array": 119,
       "Greedy": 1,
-      "Untagged": 11,
+      "Untagged": 9,
       "Prefix Sum": 2,
       "Math": 6,
-      "Two Pointers": 5,
+      "Two Pointers": 6,
       "Linked List": 11,
       "Database": 35,
       "Dynamic Programming": 6,
@@ -1600,7 +1600,11 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Searching",
+        "Math",
+        "Binary Search"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -1608,7 +1612,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given a positive integer <strong>n,</strong> find the<strong> </strong><a href=\"https://www.geeksforgeeks.org/maths/square-roots/\">square root</a> of n. If n is not a perfect square, then return the floor value.</span></p><p><span>Floor value of any number is the greatest Integer which is less than or equal to that number.</span></p><p><span><strong>Examples:</strong></span><span> </span></p><pre><span><strong>Input: </strong>n = 4\n<strong>Output: </strong>2<strong>\nExplanation: </strong>Since, 4 is a perfect square, so its square root is 2.<br /></span></pre><pre><span><strong>Input: </strong>n = 11\n<strong>Output: </strong>3<strong>\nExplanation: </strong>Since, 11 is not a perfect square, floor of square root of 11 is 3.</span></pre><pre><span><strong>Input: </strong>n = 1\n<strong>Output: </strong>1<br /><strong>Explanation: </strong>1 is a perfect square, so its square root is 1.</span></pre>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -1628,7 +1632,11 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Two Pointers",
+        "String",
+        "Palindrome"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -1636,7 +1644,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given a single string&nbsp;<strong>s</strong>, the task is to check if it is a <strong>palindrome sentence</strong> or not.<br />A palindrome sentence is a sequence of characters, such as word, phrase, or series of symbols that reads the <strong>same</strong> backward as forward after converting all <strong>uppercase </strong>letters to<strong> lowercase </strong>and <strong>removing</strong> all <strong>non-alphanumeric</strong> characters (including spaces and punctuation).</span></p>\n<p><span><strong>Examples:</strong></span></p>\n<pre><span><strong>Input: </strong>s = \"Too hot to hoot\"\n<strong>Output:</strong> true\n<strong>Explanation:</strong> </span><span>If we remove all non-alphanumeric characters and convert all uppercase letters to lowercase, string s will become <code>\"toohottohoot\"</code> which is a palindrome.</span></pre>\n<pre><span><strong>Input: </strong>s = \"Abc 012..## 10cbA\"\n<strong>Output:</strong> true\n<strong>Explanation:</strong> </span><span>If we remove all non-alphanumeric characters and convert all uppercase letters to lowercase, string s will become <code>\"abc01210cba\"</code> which is a palindrome.</span></pre>\n<pre><span><strong>Input: </strong>s = \"ABC $. def01ASDF\"<br /><strong>Output:</strong> false<br /><strong>Explanation:</strong> The processed string becomes <code>\"abcdef01asdf\"</code><spanSegoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">, which is not a palindrome.</span></span></pre>\n<p><span><strong>Constraints:</strong><br />1 &le; s.length() &le; 10<sup>6</sup></span></p>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -14145,7 +14153,7 @@
         "topic": "binary-search",
         "voteCount": 89
       },
-      "readmeContent": "# [74] Search a 2D Matrix\n**Difficulty:** Medium  |  **Acceptance:** 54.3%  |  **Likes:** 18354 / **Dislikes:** 502\n**Tags:** `Array`, `Binary Search`, `Matrix`\n## Problem\nYou are given an m x n integer matrix matrix with the following two properties:\n\n\tEach row is sorted in non-decreasing order.\n\tThe first integer of each row is greater than the last integer of the previous row.\n\nGiven an integer target, return true if target is in matrix or false otherwise.\n\nYou must write a solution in O(log(m * n)) time complexity.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3\nOutput: true\n\nExample 2:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13\nOutput: false\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 100\n\t-104 <= matrix[i][j], target <= 104\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 43.4 MB (beats 97.0%)\n\n## Similar Problems\n\n- [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) — Medium\n- [Split Message Based on Limit](https://leetcode.com/problems/split-message-based-on-limit/) — Hard\n",
+      "readmeContent": "# [74] Search a 2D Matrix\n**Difficulty:** Medium  |  **Acceptance:** 54.3%  |  **Likes:** 18363 / **Dislikes:** 502\n**Tags:** `Array`, `Binary Search`, `Matrix`\n## Problem\nYou are given an m x n integer matrix matrix with the following two properties:\n\n\tEach row is sorted in non-decreasing order.\n\tThe first integer of each row is greater than the last integer of the previous row.\n\nGiven an integer target, return true if target is in matrix or false otherwise.\n\nYou must write a solution in O(log(m * n)) time complexity.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3\nOutput: true\n\nExample 2:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13\nOutput: false\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 100\n\t-104 <= matrix[i][j], target <= 104\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 43.6 MB (beats 90.8%)\n\n## Similar Problems\n\n- [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) — Medium\n- [Split Message Based on Limit](https://leetcode.com/problems/split-message-based-on-limit/) — Hard\n",
       "code": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        int n = matrix.length;\n        int m = matrix[0].length;\n        int l = 0;\n        int h = m*n-1;\n        while(l <= h){\n            int mid = l + (h - l)/2;\n            int row = mid/m;\n            int col = mid%m;\n            if(matrix[row][col] == target){\n                return true;\n            }\n            else if(matrix[row][col] < target){\n                l = mid+1;\n            }\n            else{\n                h = mid-1;\n            }\n        }\n        return false;\n    }\n}",
       "files": [
         {
@@ -14154,7 +14162,7 @@
         },
         {
           "path": "problems/search-a-2d-matrix/README.md",
-          "content": "# [74] Search a 2D Matrix\n**Difficulty:** Medium  |  **Acceptance:** 54.3%  |  **Likes:** 18354 / **Dislikes:** 502\n**Tags:** `Array`, `Binary Search`, `Matrix`\n## Problem\nYou are given an m x n integer matrix matrix with the following two properties:\n\n\tEach row is sorted in non-decreasing order.\n\tThe first integer of each row is greater than the last integer of the previous row.\n\nGiven an integer target, return true if target is in matrix or false otherwise.\n\nYou must write a solution in O(log(m * n)) time complexity.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3\nOutput: true\n\nExample 2:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13\nOutput: false\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 100\n\t-104 <= matrix[i][j], target <= 104\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 43.4 MB (beats 97.0%)\n\n## Similar Problems\n\n- [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) — Medium\n- [Split Message Based on Limit](https://leetcode.com/problems/split-message-based-on-limit/) — Hard\n"
+          "content": "# [74] Search a 2D Matrix\n**Difficulty:** Medium  |  **Acceptance:** 54.3%  |  **Likes:** 18363 / **Dislikes:** 502\n**Tags:** `Array`, `Binary Search`, `Matrix`\n## Problem\nYou are given an m x n integer matrix matrix with the following two properties:\n\n\tEach row is sorted in non-decreasing order.\n\tThe first integer of each row is greater than the last integer of the previous row.\n\nGiven an integer target, return true if target is in matrix or false otherwise.\n\nYou must write a solution in O(log(m * n)) time complexity.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3\nOutput: true\n\nExample 2:\n\nInput: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13\nOutput: false\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 100\n\t-104 <= matrix[i][j], target <= 104\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 43.6 MB (beats 90.8%)\n\n## Similar Problems\n\n- [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) — Medium\n- [Split Message Based on Limit](https://leetcode.com/problems/split-message-based-on-limit/) — Hard\n"
         }
       ],
       "lang": {
@@ -14163,12 +14171,12 @@
         "slug": "java"
       },
       "runtime": "0 ms",
-      "memory": "43.4 MB",
+      "memory": "43.6 MB",
       "runtimePct": 100,
-      "memoryPct": 97.01230000000002,
-      "timestamp": 1792126690000,
-      "acRate": 54.34276361050146,
-      "likes": 18354,
+      "memoryPct": 90.79539999999999,
+      "timestamp": 1792559452000,
+      "acRate": 54.34073341034452,
+      "likes": 18363,
       "dislikes": 502,
       "similar": [
         {
@@ -14238,7 +14246,7 @@
       "runtimePct": 20.819999999999993,
       "memoryPct": 91.87399999999997,
       "timestamp": 1792559155000,
-      "acRate": 58.28754435475303,
+      "acRate": 58.28756046924365,
       "likes": 13418,
       "dislikes": 239,
       "similar": [

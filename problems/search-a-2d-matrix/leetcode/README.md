@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-search-a-2d-matrix` |
 | Topics | Array, Binary Search, Matrix |
-| Solved | 2026-10-16 |
+| Solved | 2026-10-21 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 43.4 MB (beats 97.01230000000002%) |
+| Memory | 43.6 MB (beats 90.79539999999999%) |
 
 ## Problem Statement
 
