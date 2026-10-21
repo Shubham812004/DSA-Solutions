@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T05:10:59.238Z",
+  "updatedAt": "2026-10-21T05:11:43.615Z",
   "layoutVersion": 3,
   "stats": {
     "total": 238,
@@ -14224,7 +14224,7 @@
         "Matrix"
       ],
       "canonical": null,
-      "readmeContent": "# [240] Search a 2D Matrix II\n**Difficulty:** Medium  |  **Acceptance:** 58.3%  |  **Likes:** 13418 / **Dislikes:** 239\n**Tags:** `Array`, `Binary Search`, `Divide and Conquer`, `Matrix`\n## Problem\nWrite an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:\n\n\tIntegers in each row are sorted in ascending from left to right.\n\tIntegers in each column are sorted in ascending from top to bottom.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5\nOutput: true\n\nExample 2:\n\nInput: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 20\nOutput: false\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= n, m <= 300\n\t-109 <= matrix[i][j] <= 109\n\tAll the integers in each row are sorted in ascending order.\n\tAll the integers in each column are sorted in ascending order.\n\t-109 <= target <= 109\n## My Submission\n\n- Runtime: 4 ms (beats 20.8%)\n- Memory: 47.8 MB (beats 91.9%)\n\n## Similar Problems\n\n- [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) — Medium\n",
+      "readmeContent": "# [240] Search a 2D Matrix II\n**Difficulty:** Medium  |  **Acceptance:** 58.3%  |  **Likes:** 13418 / **Dislikes:** 239\n**Tags:** `Array`, `Binary Search`, `Divide and Conquer`, `Matrix`\n## Problem\nWrite an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:\n\n\tIntegers in each row are sorted in ascending from left to right.\n\tIntegers in each column are sorted in ascending from top to bottom.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5\nOutput: true\n\nExample 2:\n\nInput: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 20\nOutput: false\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= n, m <= 300\n\t-109 <= matrix[i][j] <= 109\n\tAll the integers in each row are sorted in ascending order.\n\tAll the integers in each column are sorted in ascending order.\n\t-109 <= target <= 109\n## My Submission\n\n- Runtime: 4 ms (beats 20.8%)\n- Memory: 47.8 MB (beats 94.9%)\n\n## Similar Problems\n\n- [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) — Medium\n",
       "code": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        int row = matrix.length-1;\n        int col = 0;\n        while(col < matrix[0].length && row >= 0){\n            if(matrix[row][col] == target){\n                return true;\n            }\n            else if(matrix[row][col] < target){\n                col++;\n            }\n            else{\n                row--;\n            }\n        }\n        return false;\n    }\n}",
       "files": [
         {
@@ -14233,7 +14233,7 @@
         },
         {
           "path": "problems/lc-search-a-2d-matrix-ii/README.md",
-          "content": "# [240] Search a 2D Matrix II\n**Difficulty:** Medium  |  **Acceptance:** 58.3%  |  **Likes:** 13418 / **Dislikes:** 239\n**Tags:** `Array`, `Binary Search`, `Divide and Conquer`, `Matrix`\n## Problem\nWrite an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:\n\n\tIntegers in each row are sorted in ascending from left to right.\n\tIntegers in each column are sorted in ascending from top to bottom.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5\nOutput: true\n\nExample 2:\n\nInput: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 20\nOutput: false\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= n, m <= 300\n\t-109 <= matrix[i][j] <= 109\n\tAll the integers in each row are sorted in ascending order.\n\tAll the integers in each column are sorted in ascending order.\n\t-109 <= target <= 109\n## My Submission\n\n- Runtime: 4 ms (beats 20.8%)\n- Memory: 47.8 MB (beats 91.9%)\n\n## Similar Problems\n\n- [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) — Medium\n"
+          "content": "# [240] Search a 2D Matrix II\n**Difficulty:** Medium  |  **Acceptance:** 58.3%  |  **Likes:** 13418 / **Dislikes:** 239\n**Tags:** `Array`, `Binary Search`, `Divide and Conquer`, `Matrix`\n## Problem\nWrite an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:\n\n\tIntegers in each row are sorted in ascending from left to right.\n\tIntegers in each column are sorted in ascending from top to bottom.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5\nOutput: true\n\nExample 2:\n\nInput: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 20\nOutput: false\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= n, m <= 300\n\t-109 <= matrix[i][j] <= 109\n\tAll the integers in each row are sorted in ascending order.\n\tAll the integers in each column are sorted in ascending order.\n\t-109 <= target <= 109\n## My Submission\n\n- Runtime: 4 ms (beats 20.8%)\n- Memory: 47.8 MB (beats 94.9%)\n\n## Similar Problems\n\n- [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) — Medium\n"
         }
       ],
       "lang": {
@@ -14244,9 +14244,9 @@
       "runtime": "4 ms",
       "memory": "47.8 MB",
       "runtimePct": 20.819999999999993,
-      "memoryPct": 91.87399999999997,
-      "timestamp": 1792559155000,
-      "acRate": 58.28756046924365,
+      "memoryPct": 94.88259999999997,
+      "timestamp": 1792559498000,
+      "acRate": 58.28758629481825,
       "likes": 13418,
       "dislikes": 239,
       "similar": [

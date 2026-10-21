@@ -8,7 +8,7 @@
 | Topics | Array, Binary Search, Divide and Conquer, Matrix |
 | Solved | 2026-10-21 |
 | Runtime | 4 ms (beats 20.819999999999993%) |
-| Memory | 47.8 MB (beats 91.87399999999997%) |
+| Memory | 47.8 MB (beats 94.88259999999997%) |
 
 ## Problem Statement
 
