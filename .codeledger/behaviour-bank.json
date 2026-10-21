@@ -16,6 +16,23 @@
       "Divide and Conquer"
     ]
   },
+  "geeksforgeeks::search-in-a-matrix-1587115621": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "geeksforgeeks",
+    "slug": "search-in-a-matrix-1587115621",
+    "solves": [
+      {
+        "elapsedSeconds": 437,
+        "lang": "Java",
+        "ts": 1792559626760
+      }
+    ],
+    "tags": [
+      "Searching",
+      "Matrix"
+    ]
+  },
   "geeksforgeeks::search-in-a-matrix17201720": {
     "difficulty": "Easy",
     "lang": "Java",

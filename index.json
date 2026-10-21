@@ -1,26 +1,26 @@
 {
-  "updatedAt": "2026-10-21T05:11:43.615Z",
+  "updatedAt": "2026-10-21T05:13:46.926Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 238,
+    "total": 239,
     "easy": 113,
-    "medium": 111,
+    "medium": 112,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
-      "geeksforgeeks": 55,
+      "geeksforgeeks": 56,
       "leetcode": 183
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 123,
+      "Java": 124,
       "Python": 29,
       "MySQL": 35
     },
     "byTopic": {
       "Matrix": 1,
       "Binary Search": 4,
-      "Searching": 6,
+      "Searching": 7,
       "String": 24,
       "Array": 119,
       "Greedy": 1,
@@ -1317,6 +1317,42 @@
       "_committedPaths": [
         "problems/gfg-rotation4723/README.md"
       ]
+    },
+    {
+      "id": "gfg-search-in-a-matrix-1587115621",
+      "forceCommit": false,
+      "title": "Search in Sorted Matrix",
+      "titleSlug": "search-in-a-matrix-1587115621",
+      "difficulty": "Medium",
+      "topic": "Matrix",
+      "tags": [
+        "Searching",
+        "Matrix"
+      ],
+      "canonical": null,
+      "readmeContent": "# Search in Sorted Matrix\n\n**Platform:** GeeksForGeeks  |  **Difficulty:** Medium\n\n**Tags:** `Searching`, `Matrix`\n\n## Problem\n\nGiven a strictly sorted 2D matrix mat[][] of size n x m&nbsp;and&nbsp;a number&nbsp;x. Find whether the number x is present in the matrix or not.Note: In a strictly sorted matrix, each row is sorted in strictly increasing order, and&nbsp;the first element of the ith&nbsp;row (i!=0) is greater than the last element of the (i-1)th&nbsp;row.Examples:Input: mat[][] = [[1, 5, 9], [14, 20, 21], [30, 34, 43]], x = 14\nOutput: true\nExplanation: 14 is present in the matrix, so output is true.\nInput: mat[][] = [[1, 5, 9, 11], [14, 20, 21, 26], [30, 34, 43, 50]], x = 42Output: false\nExplanation: 42 is not present in the matrix.Input: mat[][] = [[87, 96, 99], [101, 103, 111]], x = 101Output: true\nExplanation: 101 is present in the matrix.Constraints:1 ≤ n, m ≤ 10001 ≤ mat[i][j] ≤ 1091 ≤ x ≤ 109\n\n**Source:** https://www.geeksforgeeks.org/problems/search-in-a-matrix-1587115621/",
+      "code": "class Solution {\n    public boolean searchMatrix(int[][] mat, int x) {\n        // code here\n        int row = mat.length-1;\n        int col = 0;\n        while(row >= 0 && col < mat[0].length){\n            if(mat[row][col] == x){\n                return true;\n            }\n            else if(mat[row][col] < x){\n                col++;\n            }\n            else{\n                row--;\n            }\n        }\n        return false;\n    }\n}\n",
+      "files": [
+        {
+          "path": "problems/gfg-search-in-a-matrix-1587115621/gfg-search-in-a-matrix-1587115621.java",
+          "content": "class Solution {\n    public boolean searchMatrix(int[][] mat, int x) {\n        // code here\n        int row = mat.length-1;\n        int col = 0;\n        while(row >= 0 && col < mat[0].length){\n            if(mat[row][col] == x){\n                return true;\n            }\n            else if(mat[row][col] < x){\n                col++;\n            }\n            else{\n                row--;\n            }\n        }\n        return false;\n    }\n}\n"
+        },
+        {
+          "path": "problems/gfg-search-in-a-matrix-1587115621/README.md",
+          "content": "# Search in Sorted Matrix\n\n**Platform:** GeeksForGeeks  |  **Difficulty:** Medium\n\n**Tags:** `Searching`, `Matrix`\n\n## Problem\n\nGiven a strictly sorted 2D matrix mat[][] of size n x m&nbsp;and&nbsp;a number&nbsp;x. Find whether the number x is present in the matrix or not.Note: In a strictly sorted matrix, each row is sorted in strictly increasing order, and&nbsp;the first element of the ith&nbsp;row (i!=0) is greater than the last element of the (i-1)th&nbsp;row.Examples:Input: mat[][] = [[1, 5, 9], [14, 20, 21], [30, 34, 43]], x = 14\nOutput: true\nExplanation: 14 is present in the matrix, so output is true.\nInput: mat[][] = [[1, 5, 9, 11], [14, 20, 21, 26], [30, 34, 43, 50]], x = 42Output: false\nExplanation: 42 is not present in the matrix.Input: mat[][] = [[87, 96, 99], [101, 103, 111]], x = 101Output: true\nExplanation: 101 is present in the matrix.Constraints:1 ≤ n, m ≤ 10001 ≤ mat[i][j] ≤ 1091 ≤ x ≤ 109\n\n**Source:** https://www.geeksforgeeks.org/problems/search-in-a-matrix-1587115621/"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": null,
+      "memory": null,
+      "timestamp": 1792559626479,
+      "elapsedSeconds": 437,
+      "_requestAIReview": true,
+      "platform": "geeksforgeeks"
     },
     {
       "id": "gfg-search-in-a-matrix17201720",
