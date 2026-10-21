@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-search-a-2d-matrix-ii` |
 | Topics | Array, Binary Search, Divide and Conquer, Matrix |
-| Solved | 2026-07-09 |
-| Runtime | 3 ms (beats 86.0419%) |
-| Memory | 48.1 MB (beats 60.65329999999997%) |
+| Solved | 2026-10-21 |
+| Runtime | 4 ms (beats 20.819999999999993%) |
+| Memory | 47.8 MB (beats 91.87399999999997%) |
 
 ## Problem Statement
 
@@ -53,17 +53,17 @@ Write an efficient algorithm that searches for a value `target` in an `m x n` in
 ```Java
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
-        int i = matrix.length-1;
-        int j = 0;
-        while(i >= 0 && j < matrix[0].length){
-            if(matrix[i][j] == target){
+        int row = matrix.length-1;
+        int col = 0;
+        while(col < matrix[0].length && row >= 0){
+            if(matrix[row][col] == target){
                 return true;
             }
-            if(target < matrix[i][j]){
-                i--;
+            else if(matrix[row][col] < target){
+                col++;
             }
             else{
-                j++;
+                row--;
             }
         }
         return false;

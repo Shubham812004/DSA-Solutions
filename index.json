@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T04:51:34.423Z",
+  "updatedAt": "2026-10-21T05:06:02.569Z",
   "layoutVersion": 3,
   "stats": {
     "total": 238,
@@ -7018,7 +7018,7 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.8%  |  **Likes:** 33305 / **Dislikes:** 2044\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.2%)\n- Memory: 43.4 MB (beats 80.2%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
+      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33322 / **Dislikes:** 2045\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.3%)\n- Memory: 43.4 MB (beats 78.1%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
       "code": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = palindrome(s, i, i);\n            int even = palindrome(s, i, i+1);\n            int max = Math.max(odd, even);\n            if(max > (end - start)){\n                start = i - (max-1)/2;\n                end = i + max/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int palindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        }\n        return r-l-1;\n    }\n}",
       "files": [
         {
@@ -7027,7 +7027,7 @@
         },
         {
           "path": "problems/longest-palindromic-substring/README.md",
-          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.8%  |  **Likes:** 33305 / **Dislikes:** 2044\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.2%)\n- Memory: 43.4 MB (beats 80.2%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
+          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33322 / **Dislikes:** 2045\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.3%)\n- Memory: 43.4 MB (beats 78.1%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
         }
       ],
       "lang": {
@@ -7037,12 +7037,12 @@
       },
       "runtime": "14 ms",
       "memory": "43.4 MB",
-      "runtimePct": 93.21589999999999,
-      "memoryPct": 80.17589999999998,
+      "runtimePct": 93.34519999999998,
+      "memoryPct": 78.13889999999998,
       "timestamp": 1790779293000,
-      "acRate": 38.84827102370022,
-      "likes": 33305,
-      "dislikes": 2044,
+      "acRate": 38.86732253178216,
+      "likes": 33322,
+      "dislikes": 2045,
       "similar": [
         {
           "difficulty": "Hard",
@@ -14216,16 +14216,16 @@
         "Matrix"
       ],
       "canonical": null,
-      "readmeContent": "# [240] Search a 2D Matrix II\n**Difficulty:** Medium  |  **Acceptance:** 58.3%  |  **Likes:** 13418 / **Dislikes:** 239\n**Tags:** `Array`, `Binary Search`, `Divide and Conquer`, `Matrix`\n## Problem\nWrite an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:\n\n\tIntegers in each row are sorted in ascending from left to right.\n\tIntegers in each column are sorted in ascending from top to bottom.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5\nOutput: true\n\nExample 2:\n\nInput: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 20\nOutput: false\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= n, m <= 300\n\t-109 <= matrix[i][j] <= 109\n\tAll the integers in each row are sorted in ascending order.\n\tAll the integers in each column are sorted in ascending order.\n\t-109 <= target <= 109\n## My Submission\n\n- Runtime: 3 ms (beats 86.0%)\n- Memory: 48.1 MB (beats 60.7%)\n\n## Similar Problems\n\n- [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) — Medium\n",
-      "code": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        int i = matrix.length-1;\n        int j = 0;\n        while(i >= 0 && j < matrix[0].length){\n            if(matrix[i][j] == target){\n                return true;\n            }\n            if(target < matrix[i][j]){\n                i--;\n            }\n            else{\n                j++;\n            }\n        }\n        return false;\n    }\n}",
+      "readmeContent": "# [240] Search a 2D Matrix II\n**Difficulty:** Medium  |  **Acceptance:** 58.3%  |  **Likes:** 13418 / **Dislikes:** 239\n**Tags:** `Array`, `Binary Search`, `Divide and Conquer`, `Matrix`\n## Problem\nWrite an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:\n\n\tIntegers in each row are sorted in ascending from left to right.\n\tIntegers in each column are sorted in ascending from top to bottom.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5\nOutput: true\n\nExample 2:\n\nInput: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 20\nOutput: false\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= n, m <= 300\n\t-109 <= matrix[i][j] <= 109\n\tAll the integers in each row are sorted in ascending order.\n\tAll the integers in each column are sorted in ascending order.\n\t-109 <= target <= 109\n## My Submission\n\n- Runtime: 4 ms (beats 20.8%)\n- Memory: 47.8 MB (beats 91.9%)\n\n## Similar Problems\n\n- [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) — Medium\n",
+      "code": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        int row = matrix.length-1;\n        int col = 0;\n        while(col < matrix[0].length && row >= 0){\n            if(matrix[row][col] == target){\n                return true;\n            }\n            else if(matrix[row][col] < target){\n                col++;\n            }\n            else{\n                row--;\n            }\n        }\n        return false;\n    }\n}",
       "files": [
         {
           "path": "problems/lc-search-a-2d-matrix-ii/lc-search-a-2d-matrix-ii.java",
-          "content": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        int i = matrix.length-1;\n        int j = 0;\n        while(i >= 0 && j < matrix[0].length){\n            if(matrix[i][j] == target){\n                return true;\n            }\n            if(target < matrix[i][j]){\n                i--;\n            }\n            else{\n                j++;\n            }\n        }\n        return false;\n    }\n}"
+          "content": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        int row = matrix.length-1;\n        int col = 0;\n        while(col < matrix[0].length && row >= 0){\n            if(matrix[row][col] == target){\n                return true;\n            }\n            else if(matrix[row][col] < target){\n                col++;\n            }\n            else{\n                row--;\n            }\n        }\n        return false;\n    }\n}"
         },
         {
           "path": "problems/lc-search-a-2d-matrix-ii/README.md",
-          "content": "# [240] Search a 2D Matrix II\n**Difficulty:** Medium  |  **Acceptance:** 58.3%  |  **Likes:** 13418 / **Dislikes:** 239\n**Tags:** `Array`, `Binary Search`, `Divide and Conquer`, `Matrix`\n## Problem\nWrite an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:\n\n\tIntegers in each row are sorted in ascending from left to right.\n\tIntegers in each column are sorted in ascending from top to bottom.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5\nOutput: true\n\nExample 2:\n\nInput: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 20\nOutput: false\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= n, m <= 300\n\t-109 <= matrix[i][j] <= 109\n\tAll the integers in each row are sorted in ascending order.\n\tAll the integers in each column are sorted in ascending order.\n\t-109 <= target <= 109\n## My Submission\n\n- Runtime: 3 ms (beats 86.0%)\n- Memory: 48.1 MB (beats 60.7%)\n\n## Similar Problems\n\n- [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) — Medium\n"
+          "content": "# [240] Search a 2D Matrix II\n**Difficulty:** Medium  |  **Acceptance:** 58.3%  |  **Likes:** 13418 / **Dislikes:** 239\n**Tags:** `Array`, `Binary Search`, `Divide and Conquer`, `Matrix`\n## Problem\nWrite an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:\n\n\tIntegers in each row are sorted in ascending from left to right.\n\tIntegers in each column are sorted in ascending from top to bottom.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5\nOutput: true\n\nExample 2:\n\nInput: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 20\nOutput: false\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= n, m <= 300\n\t-109 <= matrix[i][j] <= 109\n\tAll the integers in each row are sorted in ascending order.\n\tAll the integers in each column are sorted in ascending order.\n\t-109 <= target <= 109\n## My Submission\n\n- Runtime: 4 ms (beats 20.8%)\n- Memory: 47.8 MB (beats 91.9%)\n\n## Similar Problems\n\n- [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) — Medium\n"
         }
       ],
       "lang": {
@@ -14233,12 +14233,12 @@
         "ext": "java",
         "slug": "java"
       },
-      "runtime": "3 ms",
-      "memory": "48.1 MB",
-      "runtimePct": 86.0419,
-      "memoryPct": 60.65329999999997,
-      "timestamp": 1783577528000,
-      "acRate": 58.28754723803799,
+      "runtime": "4 ms",
+      "memory": "47.8 MB",
+      "runtimePct": 20.819999999999993,
+      "memoryPct": 91.87399999999997,
+      "timestamp": 1792559155000,
+      "acRate": 58.28754435475303,
       "likes": 13418,
       "dislikes": 239,
       "similar": [
@@ -14258,7 +14258,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/lc-search-a-2d-matrix-ii/lc-search-a-2d-matrix-ii.java",
+        "problems/lc-search-a-2d-matrix-ii/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-search-in-rotated-sorted-array-ii::2016425874",
