@@ -16,6 +16,22 @@
       "Divide and Conquer"
     ]
   },
+  "geeksforgeeks::next-larger-element-1587115620": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "geeksforgeeks",
+    "slug": "next-larger-element-1587115620",
+    "solves": [
+      {
+        "elapsedSeconds": 1409,
+        "lang": "Java",
+        "ts": 1792991490115
+      }
+    ],
+    "tags": [
+      "Stack"
+    ]
+  },
   "geeksforgeeks::search-in-a-matrix-1587115621": {
     "difficulty": "Medium",
     "lang": "Java",
@@ -107,6 +123,11 @@
         "elapsedSeconds": 0,
         "lang": "Java",
         "ts": 1792558307699
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1792989172363
       }
     ],
     "tags": [

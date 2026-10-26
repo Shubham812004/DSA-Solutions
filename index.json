@@ -1,38 +1,38 @@
 {
-  "updatedAt": "2026-10-21T05:13:46.926Z",
+  "updatedAt": "2026-10-26T05:11:30.249Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 239,
+    "total": 240,
     "easy": 113,
-    "medium": 112,
+    "medium": 113,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
-      "geeksforgeeks": 56,
+      "geeksforgeeks": 57,
       "leetcode": 183
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 124,
+      "Java": 125,
       "Python": 29,
       "MySQL": 35
     },
     "byTopic": {
       "Matrix": 1,
       "Binary Search": 4,
-      "Searching": 7,
+      "Searching": 8,
       "String": 24,
-      "Array": 119,
+      "Array": 120,
       "Greedy": 1,
-      "Untagged": 9,
+      "Untagged": 6,
       "Prefix Sum": 2,
       "Math": 6,
-      "Two Pointers": 6,
+      "Two Pointers": 7,
+      "Stack": 6,
       "Linked List": 11,
       "Database": 35,
       "Dynamic Programming": 6,
-      "Hash Table": 3,
-      "Stack": 5
+      "Hash Table": 3
     }
   },
   "meta": {
@@ -972,7 +972,9 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Searching"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -980,7 +982,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>A sorted array<strong>&nbsp;</strong></span><span>of distinct elements </span><strong>arr[]</strong><span>&nbsp;is rotated at some unknown point, the task is to find the minimum element in it.&nbsp;</span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input: </strong>arr[] = [5, 6, 1, 2, 3, 4]\n<strong>Output: </strong>1\n<strong>Explanation:</strong> 1 is the minimum element in the array.</span></pre><pre><span><strong>Input: </strong>arr[] = [3, 1, 2]\n<strong>Output: </strong>1\n<strong>Explanation:</strong> Here 1 is the minimum element.<br /></span></pre><pre><span><strong>Input: </strong>arr[] = [4, 2, 3]\n<strong>Output: </strong>2\n<strong>Explanation:</strong> Here 2 is the minimum element.</span></pre>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -1016,6 +1018,41 @@
       "_committedPaths": [
         "problems/gfg-move-all-zeroes-to-end-of-array0751/README.md"
       ]
+    },
+    {
+      "id": "gfg-next-larger-element-1587115620",
+      "forceCommit": false,
+      "title": "Next Greater Element",
+      "titleSlug": "next-larger-element-1587115620",
+      "difficulty": "Medium",
+      "topic": "Stack",
+      "tags": [
+        "Stack"
+      ],
+      "canonical": null,
+      "readmeContent": "# Next Greater Element\n\n**Platform:** GeeksForGeeks  |  **Difficulty:** Medium\n\n**Tags:** `Stack`\n\n## Problem\n\nYou are given an array arr[] of integers, the task is to find the next greater for each element of the array in order of their appearance in the array. Next greater element of an element in the array is the nearest element on the right which is greater than the current element.If there does not exist next greater of current element, then next greater element for current element is -1.ExamplesInput: arr[] = [1, 3, 2, 4]\nOutput: [3, 4, 4, -1]\nExplanation: The next larger element to 1 is 3, 3 is 4, 2 is 4 and for 4, since it doesn't exist, it is -1.\nInput: arr[] = [6, 8, 0, 1, 3]\nOutput: [8, -1, 1, 3, -1]\nExplanation: The next larger element to 6 is 8, for 8 there is no larger elements hence it is -1, for 0 it is 1, for 1 it is 3 and then for 3 there is no larger element on right and hence -1.Input: arr[] = [1, 2, 3, 5]\nOutput: [2, 3, 5, -1]\nExplanation: For a sorted array, the next element is next greater element also except for the last element.Input: arr[] = [5, 4, 3, 1]\nOutput: [-1, -1, -1, -1]\nExplanation: There is no next greater element for any of the elements in the array, so all are -1.\n\n**Source:** https://www.geeksforgeeks.org/problems/next-larger-element-1587115620/",
+      "code": "class Solution {\n    public ArrayList<Integer> nextLargerElement(int[] arr) {\n        // code here\n        int n = arr.length;\n        ArrayList<Integer> res = new ArrayList<>();\n        for(int i=0; i<n; i++){\n            res.add(-1);\n        }\n        Stack<Integer> stack = new Stack<>();\n        for(int i=n-1; i>=0; i--){\n            while(!stack.isEmpty() && stack.peek() <= arr[i]){\n                stack.pop();\n            }\n            if(!stack.isEmpty()){\n                res.set(i, stack.peek());\n            }\n            stack.push(arr[i]);\n        }\n        return res;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/gfg-next-larger-element-1587115620/gfg-next-larger-element-1587115620.java",
+          "content": "class Solution {\n    public ArrayList<Integer> nextLargerElement(int[] arr) {\n        // code here\n        int n = arr.length;\n        ArrayList<Integer> res = new ArrayList<>();\n        for(int i=0; i<n; i++){\n            res.add(-1);\n        }\n        Stack<Integer> stack = new Stack<>();\n        for(int i=n-1; i>=0; i--){\n            while(!stack.isEmpty() && stack.peek() <= arr[i]){\n                stack.pop();\n            }\n            if(!stack.isEmpty()){\n                res.set(i, stack.peek());\n            }\n            stack.push(arr[i]);\n        }\n        return res;\n    }\n}"
+        },
+        {
+          "path": "problems/gfg-next-larger-element-1587115620/README.md",
+          "content": "# Next Greater Element\n\n**Platform:** GeeksForGeeks  |  **Difficulty:** Medium\n\n**Tags:** `Stack`\n\n## Problem\n\nYou are given an array arr[] of integers, the task is to find the next greater for each element of the array in order of their appearance in the array. Next greater element of an element in the array is the nearest element on the right which is greater than the current element.If there does not exist next greater of current element, then next greater element for current element is -1.ExamplesInput: arr[] = [1, 3, 2, 4]\nOutput: [3, 4, 4, -1]\nExplanation: The next larger element to 1 is 3, 3 is 4, 2 is 4 and for 4, since it doesn't exist, it is -1.\nInput: arr[] = [6, 8, 0, 1, 3]\nOutput: [8, -1, 1, 3, -1]\nExplanation: The next larger element to 6 is 8, for 8 there is no larger elements hence it is -1, for 0 it is 1, for 1 it is 3 and then for 3 there is no larger element on right and hence -1.Input: arr[] = [1, 2, 3, 5]\nOutput: [2, 3, 5, -1]\nExplanation: For a sorted array, the next element is next greater element also except for the last element.Input: arr[] = [5, 4, 3, 1]\nOutput: [-1, -1, -1, -1]\nExplanation: There is no next greater element for any of the elements in the array, so all are -1.\n\n**Source:** https://www.geeksforgeeks.org/problems/next-larger-element-1587115620/"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": null,
+      "memory": null,
+      "timestamp": 1792991489579,
+      "elapsedSeconds": 1409,
+      "_requestAIReview": true,
+      "platform": "geeksforgeeks"
     },
     {
       "id": "gfg-non-repeating-element3958",
@@ -1352,7 +1389,14 @@
       "timestamp": 1792559626479,
       "elapsedSeconds": 437,
       "_requestAIReview": true,
-      "platform": "geeksforgeeks"
+      "platform": "geeksforgeeks",
+      "_committedPaths": [
+        "problems/gfg-search-in-a-matrix-1587115621/gfg-search-in-a-matrix-1587115621.java",
+        "problems/gfg-search-in-a-matrix-1587115621/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "gfg-search-in-a-matrix17201720",
@@ -1756,7 +1800,11 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array",
+        "Stack",
+        "Two Pointers"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -1764,7 +1812,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an array <strong>arr[] </strong>with non-negative integers representing the height of blocks. If the width of each block is 1, compute how much water can be trapped between the blocks during the rainy season.&nbsp;</span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input: </strong>arr[] = [3, 0, 1, 0, 4, 0, 2]\n<strong>Output: </strong>10<strong>\nExplanation: </strong>Total water trapped = 0 + 3 + 2 + 3 + 0 + 2 + 0 = 10 units.<br /></span><img src=\"https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/701211/Web/Other/blobid0_1741784862.png\" alt=\"\" /></pre><pre><span><strong>Input: </strong>arr[] = [3, 0, 2, 0, 4]\n<strong>Output: </strong>7<strong>\nExplanation: </strong>Total water trapped = 0 + 3 + 1 + 3 + 0 = 7 units.</span>\n</pre><pre><span><strong>Input: </strong>arr[] = [1, 2, 3, 4]\n<strong>Output: </strong>0<strong>\nExplanation: </strong>We cannot trap water as there is no height bound on both sides.</span></pre><pre><span><strong>Input: </strong>arr[] = [2, 1, 5, 3, 1, 0, 4]\n<strong>Output: </strong>9<strong>\nExplanation: </strong>Total water trapped = 0 + 1 + 0 + 1 + 3 + 4 + 0 = 9 units.</span></pre>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -1784,7 +1832,12 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Two Pointers",
+        "Array",
+        "Hash Table",
+        "Sorting"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -1792,7 +1845,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an array <strong>arr[]</strong> and an integer <strong>target</strong>, determine if there exists a triplet in the array whose sum equals the given <strong>target</strong>.</span></p><p><span>Return <strong>true</strong>&nbsp;if such a triplet exists, otherwise, return <strong>false</strong>.</span></p><p><span><strong>Examples:&nbsp;<br /></strong></span></p><pre><span><strong>Input</strong>: arr[] = [1, 4, 45, 6, 10, 8], target = 13<br /><strong>Output</strong>: true <br /><strong>Explanation</strong>: The triplet {1, 4, 8} sums up to 13.</span></pre><pre><span><strong>Input</strong>: arr[] = [1, 2, 4, 3, 6, 7], target = 10<br /><strong>Output</strong>: true <br /><strong>Explanation</strong>: The triplets {1, 3, 6} and {1, 2, 7} both sum to 10. </span></pre><pre><span><strong>Input</strong>: arr[] = [40, 20, 10, 3, 6, 7], target = 24<br /><strong>Output</strong>: false <br /><strong>Explanation</strong>: No triplet in the array sums to 24.</span></pre>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -7062,7 +7115,7 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33322 / **Dislikes:** 2045\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.3%)\n- Memory: 43.4 MB (beats 78.1%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
+      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33336 / **Dislikes:** 2046\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.4%)\n- Memory: 43.4 MB (beats 75.9%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
       "code": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = palindrome(s, i, i);\n            int even = palindrome(s, i, i+1);\n            int max = Math.max(odd, even);\n            if(max > (end - start)){\n                start = i - (max-1)/2;\n                end = i + max/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int palindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        }\n        return r-l-1;\n    }\n}",
       "files": [
         {
@@ -7071,7 +7124,7 @@
         },
         {
           "path": "problems/longest-palindromic-substring/README.md",
-          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33322 / **Dislikes:** 2045\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.3%)\n- Memory: 43.4 MB (beats 78.1%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
+          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33336 / **Dislikes:** 2046\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.4%)\n- Memory: 43.4 MB (beats 75.9%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
         }
       ],
       "lang": {
@@ -7081,12 +7134,12 @@
       },
       "runtime": "14 ms",
       "memory": "43.4 MB",
-      "runtimePct": 93.34519999999998,
-      "memoryPct": 78.13889999999998,
+      "runtimePct": 93.36379999999998,
+      "memoryPct": 75.86039999999998,
       "timestamp": 1790779293000,
-      "acRate": 38.86732253178216,
-      "likes": 33322,
-      "dislikes": 2045,
+      "acRate": 38.88741044902326,
+      "likes": 33336,
+      "dislikes": 2046,
       "similar": [
         {
           "difficulty": "Hard",
