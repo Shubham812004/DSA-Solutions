@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-10-26T05:11:30.249Z",
+  "updatedAt": "2026-11-02T05:16:43.480Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 240,
+    "total": 241,
     "easy": 113,
-    "medium": 113,
+    "medium": 114,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 57,
-      "leetcode": 183
+      "leetcode": 184
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 125,
+      "Java": 126,
       "Python": 29,
       "MySQL": 35
     },
@@ -22,17 +22,17 @@
       "Binary Search": 4,
       "Searching": 8,
       "String": 24,
-      "Array": 120,
+      "Array": 125,
       "Greedy": 1,
-      "Untagged": 6,
+      "Untagged": 1,
       "Prefix Sum": 2,
       "Math": 6,
       "Two Pointers": 7,
       "Stack": 6,
+      "Hash Table": 4,
       "Linked List": 11,
       "Database": 35,
-      "Dynamic Programming": 6,
-      "Hash Table": 3
+      "Dynamic Programming": 6
     }
   },
   "meta": {
@@ -142,7 +142,8 @@
       ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "problemStatement": "<p><span>Given an array <strong>arr[] </strong>of integers, where each element <strong>arr[i]</strong> represents the number of pages in the i-th book. You also have an integer <strong>k</strong> representing the number of students. The task is to allocate books to each student such that:</span></p>\n<ul>\n<li><span>Each student receives atleast one book.</span></li>\n<li><span>Each student is assigned a contiguous sequence of books.</span></li>\n<li><span>No book is assigned to more than one student.</span></li>\n<li><span>All books must be allocated.</span></li>\n</ul>\n<p><span>The objective is to minimize the maximum number of pages<strong> </strong>assigned to any student. In other words, out of all possible allocations, find the arrangement where the student who receives the most pages still has the smallest possible maximum. If it is not possible to allocate books to all students, return <strong>-1</strong>;</span></p>\n<p><span><strong>Examples:</strong></span></p>\n<pre><span><strong>Input: </strong>arr[] = [12, 34, 67, 90], k = 2\n<strong>Output: </strong>113\n<strong>Explanation: </strong>Allocation can be done in following ways:<br />=&gt; [12] and [34, 67, 90] Maximum Pages = 191<br />=&gt; [12, 34] and [67, 90] Maximum Pages = 157<br />=&gt; [12, 34, 67] and [90] Maximum Pages = 113.<br />The third combination has the minimum pages assigned to a student which is 113.</span></pre>\n<pre><span><span><strong>Input:</strong> arr[] = [15, 17, 20], k = 5<br /></span><span><strong>Output: </strong>-1<br /></span><span><strong>Explanation: </strong></span>Since there are more students than total books, it's impossible to allocate a book to each student.</span></pre>"
     },
     {
       "id": "gfg-anagram-1587115620",
@@ -1002,7 +1003,9 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -1010,7 +1013,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an array<strong> arr[] </strong>of non-negative integers, move all the zeros to the end of the array while maintaining the relative order of the non-zero elements. Perform the operation in place, without using an extra array.</span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input: </strong>arr[] = [1, 2, 0, 4, 3, 0, 5, 0]\n<strong>Output:</strong> [1, 2, 4, 3, 5, 0, 0, 0]\n<strong>Explanation:</strong> The three zeros are moved to the end while the order of the non-zero elements remains unchanged.\n</span></pre><pre><span><strong>Input: </strong>arr[] = [10, 20, 30]\n<strong>Output:</strong> [10, 20, 30]\n<strong>Explanation:</strong> No change in array as there are no 0s.\n</span></pre><pre><span><strong>Input: </strong>arr[] = [0, 0]\n<strong>Output:</strong> [0, 0]\n<strong>Explanation:</strong> No change in array as there are all 0s.</span></pre><div id=\"professor_prebid-root\"></div>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -1052,7 +1055,14 @@
       "timestamp": 1792991489579,
       "elapsedSeconds": 1409,
       "_requestAIReview": true,
-      "platform": "geeksforgeeks"
+      "platform": "geeksforgeeks",
+      "_committedPaths": [
+        "problems/gfg-next-larger-element-1587115620/gfg-next-larger-element-1587115620.java",
+        "problems/gfg-next-larger-element-1587115620/README.md"
+      ],
+      "notes": "",
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "gfg-non-repeating-element3958",
@@ -1065,7 +1075,10 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -1073,7 +1086,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Find the first non-repeating element in a given array<strong> arr</strong> of integers and if there is not present any non-repeating element then return <strong>0</strong></span></p>\n<p><span><strong>Note:</strong> The array consists of only positive and negative integers and <strong>not zero</strong>.</span></p>\n<p><span><strong>Examples:</strong></span></p>\n<pre><span><strong>Input: </strong>arr[] = [-1, 2, -1, 3, 2]\n<strong>Output: </strong>3\n<strong>Explanation: </strong>-1 and 2 are repeating whereas 3 is the only number occuring once. Hence, the output is 3. </span></pre>\n<pre><span><strong>Input:</strong> arr[] = [1, 1, 1]\n<strong>Output:</strong> 0<br /><strongSegoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">Explanation: </strong><spanSegoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">T</span></span><span>here is not present any non-repeating element so answer should be 0.</span></pre>\n<p><span><strong>Constraints:</strong><br />1 &lt;= arr.size &lt;= 10<sup>6</sup><br />-10<sup>9</sup> &lt;= arr[i]<sup>&nbsp;</sup>&lt;= 10<sup>9</sup><br />arr[i] != 0&nbsp;</span></p>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -1093,7 +1106,10 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array",
+        "Searching"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -1101,7 +1117,7 @@
       "importedAt": 1791696375464,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given a&nbsp;sorted<strong>&nbsp;</strong>array <strong>arr[] </strong>and a number&nbsp;<strong>target</strong>, find the number of occurrences of&nbsp;target in given array.&nbsp;</span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input: </strong>arr[] = [1, 1, 2, 2, 2, 2, 3], target = 2\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> target = 2 occurs 4 times in the given array so the output is 4.</span></pre><pre><span><strong>Input:</strong> arr[] = [1, 1, 2, 2, 2, 2, 3], target = 4\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> target = 4 is not present in the given array so the output is 0.<br /></span></pre><pre><span><strong>Input:</strong> arr[] = [8, 9, 10, 12, 12, 12], target = 12\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> target = 12 occurs 3 times in the given array so the output is 3.</span></pre>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -1744,7 +1760,9 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Hash Table"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -1752,7 +1770,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an unsorted array <strong>arr[]</strong> of integers, find the number of subarrays whose sum exactly equal to a given number k.</span></p>\n<p><span><strong>Examples:</strong></span></p>\n<pre><span><strong>Input:</strong><strong> </strong>arr[] = [10, 2, -2, -20, 10], k = -10\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> Subarrays: arr[0...3], arr[1...4], arr[3...4] have sum exactly equal to -10.</span></pre>\n<pre><span><strong>Input:</strong> arr[] = [9, 4, 20, 3, 10, 5], k = 33\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> Subarrays: arr[0...2], arr[2...4] have sum exactly equal to 33.<br /></span></pre>\n<pre><span><strong>Input: </strong>arr[] = [1, 3, 5], k = 0<br /></span><span><strong>Output:</strong> 0\n<strong>Explanation: </strong>No subarray with 0 sum.</span></pre>\n<p><strongSegoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">Constraints:<br /></strong><span>1 &le; arr.size() &le; 10<sup>5<br /></sup></span><span>-10<sup>3</sup> &le; arr[i] &le; 10<sup>3<br /></sup></span><span>-10<sup>5</sup> &le; k &le;&nbsp;</span><span>10</span><sup>5</sup></p>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -1772,7 +1790,9 @@
         "ext": "txt",
         "slug": "unknown"
       },
-      "tags": [],
+      "tags": [
+        "Array"
+      ],
       "topic": "Untagged",
       "code": "",
       "files": [],
@@ -1780,7 +1800,7 @@
       "importedAt": 1791696375465,
       "runtime": null,
       "memory": null,
-      "problemStatement": null,
+      "problemStatement": "<p><span>Given an integer array <strong>arr[]</strong>, return the sum<strong> </strong>of all elements of arr.</span></p><p><span><strong>Examples:</strong></span></p><pre><span><strong>Input: </strong>arr[] = [1, 2, 3, 4]\n<strong>Output:</strong> 10\n<strong>Explanation:</strong> 1 + 2 + 3 + 4 = 10.\n</span></pre><pre><span><strong>Input: </strong>arr[] = [1, 3, 3]\n<strong>Output:</strong> 7\n<strong>Explanation:</strong>&nbsp;1 + 3 + 3 = 7.\n</span></pre>",
       "notes": "",
       "methods": [],
       "manuallyEdited": false,
@@ -7115,7 +7135,7 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33336 / **Dislikes:** 2046\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.4%)\n- Memory: 43.4 MB (beats 75.9%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
+      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33357 / **Dislikes:** 2048\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.4%)\n- Memory: 43.4 MB (beats 71.9%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
       "code": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = palindrome(s, i, i);\n            int even = palindrome(s, i, i+1);\n            int max = Math.max(odd, even);\n            if(max > (end - start)){\n                start = i - (max-1)/2;\n                end = i + max/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int palindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        }\n        return r-l-1;\n    }\n}",
       "files": [
         {
@@ -7124,7 +7144,7 @@
         },
         {
           "path": "problems/longest-palindromic-substring/README.md",
-          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33336 / **Dislikes:** 2046\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.4%)\n- Memory: 43.4 MB (beats 75.9%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
+          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33357 / **Dislikes:** 2048\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.4%)\n- Memory: 43.4 MB (beats 71.9%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
         }
       ],
       "lang": {
@@ -7134,12 +7154,12 @@
       },
       "runtime": "14 ms",
       "memory": "43.4 MB",
-      "runtimePct": 93.36379999999998,
-      "memoryPct": 75.86039999999998,
+      "runtimePct": 93.40060000000001,
+      "memoryPct": 71.90960000000001,
       "timestamp": 1790779293000,
-      "acRate": 38.88741044902326,
-      "likes": 33336,
-      "dislikes": 2046,
+      "acRate": 38.91905341499544,
+      "likes": 33357,
+      "dislikes": 2048,
       "similar": [
         {
           "difficulty": "Hard",
@@ -11918,6 +11938,76 @@
         "problems/lc-move-zeroes/lc-move-zeroes.py",
         "problems/lc-move-zeroes/README.md"
       ]
+    },
+    {
+      "id": "lc-next-greater-element-ii",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Next Greater Element II",
+      "titleSlug": "next-greater-element-ii",
+      "difficulty": "Medium",
+      "topic": "Stack",
+      "tags": [
+        "Array",
+        "Stack",
+        "Monotonic Stack"
+      ],
+      "canonical": null,
+      "readmeContent": "# [503] Next Greater Element II\n**Difficulty:** Medium  |  **Acceptance:** 69.4%  |  **Likes:** 9518 / **Dislikes:** 255\n**Tags:** `Array`, `Stack`, `Monotonic Stack`\n## Problem\nGiven a circular integer array nums (i.e., the next element of nums[nums.length - 1] is nums[0]), return the next greater number for every element in nums.\n\nThe next greater number of a number x is the first greater number to its traversing-order next in the array, which means you could search circularly to find its next greater number. If it doesn't exist, return -1 for this number.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,2,1]\nOutput: [2,-1,2]\nExplanation: The first 1's next greater number is 2; \nThe number 2 can't find next greater number. \nThe second 1's next greater number needs to search circularly, which is also 2.\n\nExample 2:\n\nInput: nums = [1,2,3,4,3]\nOutput: [2,3,4,-1,4]\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 104\n\t-109 <= nums[i] <= 109\n## My Submission\n\n- Runtime: 14 ms (beats 60.9%)\n- Memory: 48.1 MB (beats 74.7%)\n\n## Similar Problems\n\n- [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) — Easy\n- [Next Greater Element III](https://leetcode.com/problems/next-greater-element-iii/) — Medium\n- [Maximum and Minimum Sums of at Most Size K Subarrays](https://leetcode.com/problems/maximum-and-minimum-sums-of-at-most-size-k-subarrays/) — Hard\n",
+      "code": "class Solution {\n    public int[] nextGreaterElements(int[] nums) {\n        int n = nums.length;\n        int[] res = new int[n];\n        Arrays.fill(res, -1);\n        Stack<Integer> stack = new Stack<>();\n        for(int i=2*n-1; i>=0; i--){\n            int num = nums[i%n];\n            while(!stack.isEmpty() && stack.peek() <= num){\n                stack.pop();\n            }\n            if(i < n && !stack.isEmpty()){\n                res[i] = stack.peek();\n            }\n            stack.push(num);\n        }\n        return res;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/lc-next-greater-element-ii/lc-next-greater-element-ii.java",
+          "content": "class Solution {\n    public int[] nextGreaterElements(int[] nums) {\n        int n = nums.length;\n        int[] res = new int[n];\n        Arrays.fill(res, -1);\n        Stack<Integer> stack = new Stack<>();\n        for(int i=2*n-1; i>=0; i--){\n            int num = nums[i%n];\n            while(!stack.isEmpty() && stack.peek() <= num){\n                stack.pop();\n            }\n            if(i < n && !stack.isEmpty()){\n                res[i] = stack.peek();\n            }\n            stack.push(num);\n        }\n        return res;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-next-greater-element-ii/README.md",
+          "content": "# [503] Next Greater Element II\n**Difficulty:** Medium  |  **Acceptance:** 69.4%  |  **Likes:** 9518 / **Dislikes:** 255\n**Tags:** `Array`, `Stack`, `Monotonic Stack`\n## Problem\nGiven a circular integer array nums (i.e., the next element of nums[nums.length - 1] is nums[0]), return the next greater number for every element in nums.\n\nThe next greater number of a number x is the first greater number to its traversing-order next in the array, which means you could search circularly to find its next greater number. If it doesn't exist, return -1 for this number.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,2,1]\nOutput: [2,-1,2]\nExplanation: The first 1's next greater number is 2; \nThe number 2 can't find next greater number. \nThe second 1's next greater number needs to search circularly, which is also 2.\n\nExample 2:\n\nInput: nums = [1,2,3,4,3]\nOutput: [2,3,4,-1,4]\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 104\n\t-109 <= nums[i] <= 109\n## My Submission\n\n- Runtime: 14 ms (beats 60.9%)\n- Memory: 48.1 MB (beats 74.7%)\n\n## Similar Problems\n\n- [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) — Easy\n- [Next Greater Element III](https://leetcode.com/problems/next-greater-element-iii/) — Medium\n- [Maximum and Minimum Sums of at Most Size K Subarrays](https://leetcode.com/problems/maximum-and-minimum-sums-of-at-most-size-k-subarrays/) — Hard\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "14 ms",
+      "memory": "48.1 MB",
+      "runtimePct": 60.89859999999998,
+      "memoryPct": 74.66790000000003,
+      "timestamp": 1793596597000,
+      "acRate": 69.38351667105366,
+      "likes": 9518,
+      "dislikes": 255,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "next-greater-element-i",
+          "title": "Next Greater Element I",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "next-greater-element-iii",
+          "title": "Next Greater Element III",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "maximum-and-minimum-sums-of-at-most-size-k-subarrays",
+          "title": "Maximum and Minimum Sums of at Most Size K Subarrays",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given a circular integer array <code>nums</code> (i.e., the next element of <code>nums[nums.length - 1]</code> is <code>nums[0]</code>), return <em>the <strong>next greater number</strong> for every element in</em> <code>nums</code>.</p>\n\n<p>The <strong>next greater number</strong> of a number <code>x</code> is the first greater number to its traversing-order next in the array, which means you could search circularly to find its next greater number. If it doesn&#39;t exist, return <code>-1</code> for this number.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,1]\n<strong>Output:</strong> [2,-1,2]\nExplanation: The first 1&#39;s next greater number is 2; \nThe number 2 can&#39;t find next greater number. \nThe second 1&#39;s next greater number needs to search circularly, which is also 2.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,4,3]\n<strong>Output:</strong> [2,3,4,-1,4]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/next-greater-element-ii/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
     },
     {
       "id": "lc-not-boring-movies::1807304689",
