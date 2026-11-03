@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-11-02T05:16:43.480Z",
+  "updatedAt": "2026-11-03T05:16:04.080Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 241,
+    "total": 242,
     "easy": 113,
-    "medium": 114,
+    "medium": 115,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 57,
-      "leetcode": 184
+      "leetcode": 185
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 126,
+      "Java": 127,
       "Python": 29,
       "MySQL": 35
     },
@@ -22,7 +22,7 @@
       "Binary Search": 4,
       "Searching": 8,
       "String": 24,
-      "Array": 125,
+      "Array": 126,
       "Greedy": 1,
       "Untagged": 1,
       "Prefix Sum": 2,
@@ -960,7 +960,8 @@
       ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "problemStatement": "<p><span>In a row of flowers, each flower blooms on a specific day. Given an integer array <strong>arr[]</strong>, where <strong>arr[i]</strong> denotes the day on which the flower at position<strong> i</strong> blooms.</span></p><p><span>To make a bouquet, you need to collect <strong>k</strong> adjacent flowers that have already bloomed. Each flower can be used in at most one bouquet.</span></p><p><span>Find the <strong>minimum</strong> number of days required to make <strong>m</strong> bouquets. If it is impossible to do so, return <strong>-1</strong>.</span></p><h4><span><strong>Examples</strong>:</span></h4><pre><span><strong>Input</strong>: arr[] = [3, 4, 2, 7, 13, 8, 5], m = 3, k = 2\n<strong>Output</strong>: 8\n<strong>Explanation</strong>: </span><span>We need to make 3 bouquets, each consisting of 2 adjacent flowers.\n-&gt; By day 8, all flowers have bloomed except the flower at position 5 (1-indexed).\n-&gt; Form the 1st bouquet using the first 2 flowers.\n-&gt; Form the 2nd bouquet using the next 2 flowers.\n-&gt; Form the 3rd bouquet using the last 2 flowers.</span></pre><pre><span><strong>Input</strong>: </span><span>arr[] = [5, 5, 5, 5, 10, 5, 5], m = 2, k = 3,</span>\n<span><strong>Output</strong>: 10</span>\n<span><strong>Explanation</strong>: We need to make 2 bouquets, each consisting of 3 adjacent flowers.\n-&gt; By day 5, all flowers have bloomed except the flower at position 5 (1-indexed).\n-&gt; We can form the 1st bouquet using the first 3 bloomed flowers.\n-&gt; It is not possible to form the 2nd bouquet now.\n-&gt; By day 10, all the flowers have bloomed.\n-&gt; We can then form 2 bouquets, each consisting of 3 adjacent flowers.</span></pre><pre><span><strong>Input: </strong>m = 3, k = 2, arr[] = [1, 10, 3, 10, 2]<br /><strong>Output: </strong></span><span>-1</span><br /><span><strong>Explanation:</strong> We need to make 3 bouquets, each consisting of 2 flowers.\n-&gt; This requires a total of 6 flowers.\n-&gt; There are only 5 flowers available.\n-&gt; Therefore, it is impossible to make the required bouquets.<br /></span></pre><p><span><strong>Constraints:<br /></strong>1 &le; k &le; arr.size() &le; 10<sup>5</sup><strong><br /></strong></span><span>1 &le; m &le; 10<sup>5</sup><br />1 &le; arr[i] &le; 10<sup>9</sup></span></p>"
     },
     {
       "id": "gfg-minimum-element-in-a-sorted-and-rotated-array3611",
@@ -1062,7 +1063,8 @@
       ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "problemStatement": "<p><span>You are given an array <strong>arr[]</strong> of integers, the task is to find the next greater for each element of the array in order of their appearance in the array. Next greater element of an element in the array is the nearest element on the right<strong> </strong>which is greater than the current element.<br />If there does not exist next greater of current element, then next greater element for current element is <strong>-1</strong>.</span></p><p><span><strong>Examples<br /></strong></span></p><pre><span><strong>Input:</strong> arr[] = [1, 3, 2, 4]\n<strong>Output:</strong> [3, 4, 4, -1]\n<strong>Explanation:</strong> The next larger element to 1 is 3, 3 is 4, 2 is 4 and for 4, since it doesn't exist, it is -1.\n</span></pre><pre><span><strong>Input</strong>: arr[] = [6, 8, 0, 1, 3]\n<strong>Output</strong>: [8, -1, 1, 3, -1]\n<strong>Explanation</strong>: The next larger element to 6 is 8, for 8 there is no larger elements hence it is -1, for 0 it is 1, for 1 it is 3 and then for 3 there is no larger element on right and hence -1.</span></pre><pre><span><strong>Input</strong>: arr[] = [1, 2, 3, 5]\n<strong>Output</strong>: [2, 3, 5, -1]\n<strong>Explanation</strong>: For a sorted array, the next element is next greater element also except for the last element.</span></pre><pre><span><strong>Input</strong><span>: arr[] = [5, 4, 3, 1]\n</span><strong>Output</strong><span>: [-1, -1, -1, -1]\n</span><strong>Explanation</strong><span>: There is no next greater element for any of the elements in the array, so all are -1.</span></span></pre>"
     },
     {
       "id": "gfg-non-repeating-element3958",
@@ -1683,7 +1685,8 @@
       ],
       "notes": "",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "problemStatement": "<p><span>Given an array <strong>arr[]</strong> and an integer <strong>k</strong>, divide the array into <strong>k</strong> contiguous subarrays such that the <strong>maximum </strong>sum among these subarrays is <strong>minimized</strong>. Find this minimum possible <strong>maximum sum</strong>.<br /></span></p><p><strong><span>Examples:</span></strong></p><pre><strong><span>Input: </span></strong><span>arr[] = [1, 2, 3, 4], k = 3</span><strong><span><br />Output: </span></strong><span>4</span><strong><span><br />Explanation: </span></strong><span>Optimal Split is [1, 2], [3], [4]. Maximum sum of all subarrays is 4, which is minimum possible for 3 splits.<br /></span></pre><pre><strong><span>Input: </span></strong><span>arr[] = [1, 1, 2], k = 2<br /></span><strong><span>Output: </span></strong><span>2<br /></span><strong><span>Explanation: </span></strong><span>Splitting the array as [1, 1] and [2] is optimal. This results in a maximum sum subarray of 2.</span></pre><pSegoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; white-space: normal;\"><span><strong>Constraints:<br /></strong>1 &le;</span><span> k</span><span>&nbsp;&le;</span><span> arr.size() </span><span>&le; 10</span><sup>5<br /></sup><span>1 &le; arr[i] &le; 10<sup>4</sup></span></p>"
     },
     {
       "id": "gfg-square-root",
@@ -4535,6 +4538,89 @@
       ]
     },
     {
+      "id": "lc-daily-temperatures",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Daily Temperatures",
+      "titleSlug": "daily-temperatures",
+      "difficulty": "Medium",
+      "topic": "Stack",
+      "tags": [
+        "Array",
+        "Stack",
+        "Monotonic Stack"
+      ],
+      "canonical": {
+        "addedAt": "2025-04-24",
+        "aliases": [
+          {
+            "id": 739,
+            "platform": "leetcode",
+            "slug": "daily-temperatures"
+          }
+        ],
+        "canonicalId": "daily-temperatures",
+        "canonicalTitle": "Daily Temperatures",
+        "confirmedBy": "system-init",
+        "difficulty": "medium",
+        "pattern": "monotonic-stack",
+        "tags": [
+          "array"
+        ],
+        "topic": "stack",
+        "voteCount": 96
+      },
+      "readmeContent": "# [739] Daily Temperatures\n**Difficulty:** Medium  |  **Acceptance:** 69.3%  |  **Likes:** 15138 / **Dislikes:** 388\n**Tags:** `Array`, `Stack`, `Monotonic Stack`\n## Problem\nGiven an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.\n\n&nbsp;\nExample 1:\nInput: temperatures = [73,74,75,71,69,72,76,73]\nOutput: [1,1,4,2,1,1,0,0]\nExample 2:\nInput: temperatures = [30,40,50,60]\nOutput: [1,1,1,0]\nExample 3:\nInput: temperatures = [30,60,90]\nOutput: [1,1,0]\n\n&nbsp;\nConstraints:\n\n\t1 <=&nbsp;temperatures.length <= 105\n\t30 <=&nbsp;temperatures[i] <= 100\n## My Submission\n\n- Runtime: 92 ms (beats 5.5%)\n- Memory: 105.9 MB (beats 76.8%)\n\n## Similar Problems\n\n- [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) — Easy\n- [Online Stock Span](https://leetcode.com/problems/online-stock-span/) — Medium\n",
+      "code": "class Solution {\n    public int[] dailyTemperatures(int[] temperatures) {\n        int n = temperatures.length;\n        int[] res = new int[n];\n        Arrays.fill(res, 0);\n        HashMap<Integer, Integer> map = new HashMap<>();\n        Stack<Integer> stack = new Stack<>();\n        for(int i=n-1; i>=0; i--){\n            while(!stack.isEmpty() && stack.peek() <= temperatures[i]){\n                stack.pop();\n            }\n            if(!stack.isEmpty()){\n                res[i] = map.get(stack.peek()) - i;\n            }\n            stack.push(temperatures[i]);\n            map.put(temperatures[i], i);\n        }\n        return res;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/daily-temperatures/leetcode/lc-daily-temperatures.java",
+          "content": "class Solution {\n    public int[] dailyTemperatures(int[] temperatures) {\n        int n = temperatures.length;\n        int[] res = new int[n];\n        Arrays.fill(res, 0);\n        HashMap<Integer, Integer> map = new HashMap<>();\n        Stack<Integer> stack = new Stack<>();\n        for(int i=n-1; i>=0; i--){\n            while(!stack.isEmpty() && stack.peek() <= temperatures[i]){\n                stack.pop();\n            }\n            if(!stack.isEmpty()){\n                res[i] = map.get(stack.peek()) - i;\n            }\n            stack.push(temperatures[i]);\n            map.put(temperatures[i], i);\n        }\n        return res;\n    }\n}"
+        },
+        {
+          "path": "problems/daily-temperatures/README.md",
+          "content": "# [739] Daily Temperatures\n**Difficulty:** Medium  |  **Acceptance:** 69.3%  |  **Likes:** 15138 / **Dislikes:** 388\n**Tags:** `Array`, `Stack`, `Monotonic Stack`\n## Problem\nGiven an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.\n\n&nbsp;\nExample 1:\nInput: temperatures = [73,74,75,71,69,72,76,73]\nOutput: [1,1,4,2,1,1,0,0]\nExample 2:\nInput: temperatures = [30,40,50,60]\nOutput: [1,1,1,0]\nExample 3:\nInput: temperatures = [30,60,90]\nOutput: [1,1,0]\n\n&nbsp;\nConstraints:\n\n\t1 <=&nbsp;temperatures.length <= 105\n\t30 <=&nbsp;temperatures[i] <= 100\n## My Submission\n\n- Runtime: 92 ms (beats 5.5%)\n- Memory: 105.9 MB (beats 76.8%)\n\n## Similar Problems\n\n- [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) — Easy\n- [Online Stock Span](https://leetcode.com/problems/online-stock-span/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "92 ms",
+      "memory": "105.9 MB",
+      "runtimePct": 5.456300000000013,
+      "memoryPct": 76.79609999999992,
+      "timestamp": 1793682960000,
+      "acRate": 69.3040949053346,
+      "likes": 15138,
+      "dislikes": 388,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "next-greater-element-i",
+          "title": "Next Greater Element I",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "online-stock-span",
+          "title": "Online Stock Span",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given an array of integers <code>temperatures</code> represents the daily temperatures, return <em>an array</em> <code>answer</code> <em>such that</em> <code>answer[i]</code> <em>is the number of days you have to wait after the</em> <code>i<sup>th</sup></code> <em>day to get a warmer temperature</em>. If there is no future day for which this is possible, keep <code>answer[i] == 0</code> instead.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> temperatures = [73,74,75,71,69,72,76,73]\n<strong>Output:</strong> [1,1,4,2,1,1,0,0]\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> temperatures = [30,40,50,60]\n<strong>Output:</strong> [1,1,1,0]\n</pre><p><strong class=\"example\">Example 3:</strong></p>\n<pre><strong>Input:</strong> temperatures = [30,60,90]\n<strong>Output:</strong> [1,1,0]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;=&nbsp;temperatures.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>30 &lt;=&nbsp;temperatures[i] &lt;= 100</code></li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/daily-temperatures/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
+    },
+    {
       "id": "lc-employee-bonus::1809653418",
       "submissionId": 1809653418,
       "platform": "leetcode",
@@ -7135,7 +7221,7 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33357 / **Dislikes:** 2048\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.4%)\n- Memory: 43.4 MB (beats 71.9%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
+      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33359 / **Dislikes:** 2048\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.4%)\n- Memory: 43.4 MB (beats 71.4%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
       "code": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = palindrome(s, i, i);\n            int even = palindrome(s, i, i+1);\n            int max = Math.max(odd, even);\n            if(max > (end - start)){\n                start = i - (max-1)/2;\n                end = i + max/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int palindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        }\n        return r-l-1;\n    }\n}",
       "files": [
         {
@@ -7144,7 +7230,7 @@
         },
         {
           "path": "problems/longest-palindromic-substring/README.md",
-          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33357 / **Dislikes:** 2048\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.4%)\n- Memory: 43.4 MB (beats 71.9%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
+          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33359 / **Dislikes:** 2048\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.4%)\n- Memory: 43.4 MB (beats 71.4%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
         }
       ],
       "lang": {
@@ -7154,11 +7240,11 @@
       },
       "runtime": "14 ms",
       "memory": "43.4 MB",
-      "runtimePct": 93.40060000000001,
-      "memoryPct": 71.90960000000001,
+      "runtimePct": 93.38229999999999,
+      "memoryPct": 71.43969999999999,
       "timestamp": 1790779293000,
-      "acRate": 38.91905341499544,
-      "likes": 33357,
+      "acRate": 38.92330109936445,
+      "likes": 33359,
       "dislikes": 2048,
       "similar": [
         {
@@ -12007,7 +12093,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/lc-next-greater-element-ii/lc-next-greater-element-ii.java",
+        "problems/lc-next-greater-element-ii/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-not-boring-movies::1807304689",

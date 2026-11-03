@@ -83,17 +83,30 @@
       "Binary Search"
     ]
   },
+  "leetcode::daily-temperatures": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "daily-temperatures",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1793682963963
+      }
+    ],
+    "tags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ]
+  },
   "leetcode::longest-palindromic-substring": {
     "difficulty": "Medium",
     "lang": "Java",
     "platform": "leetcode",
     "slug": "longest-palindromic-substring",
     "solves": [
-      {
-        "elapsedSeconds": 0,
-        "lang": "Java",
-        "ts": 1791951979212
-      },
       {
         "elapsedSeconds": 0,
         "lang": "Java",
@@ -138,6 +151,11 @@
         "elapsedSeconds": 0,
         "lang": "Java",
         "ts": 1793595159245
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1793681813424
       }
     ],
     "tags": [
