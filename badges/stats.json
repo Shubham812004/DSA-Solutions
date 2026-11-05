@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "asOf": "2026-11-05",
-  "currentStreak": 1,
+  "currentStreak": 4,
   "longestStreak": 6,
-  "freezes": 0,
+  "freezes": 1,
   "totalPoints": 3535,
   "totalSolves": 193,
   "totalRecalls": 0,
@@ -14,7 +14,7 @@
   },
   "level": 6,
   "levelName": "Architect",
-  "activeDays": 82,
+  "activeDays": 81,
   "dailyTargetPoints": 25,
   "achievements": [
     "first-blood",

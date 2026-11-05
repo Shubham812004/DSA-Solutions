@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T17:08:30.377Z",
+  "updatedAt": "2026-11-05T17:11:56.130Z",
   "layoutVersion": 3,
   "stats": {
     "total": 244,
@@ -16047,16 +16047,16 @@
         "Prefix Sum"
       ],
       "canonical": null,
-      "readmeContent": "# [560] Subarray Sum Equals K\n**Difficulty:** Medium  |  **Acceptance:** 48.4%  |  **Likes:** 26060 / **Dislikes:** 881\n**Tags:** `Array`, `Hash Table`, `Prefix Sum`\n## Problem\nGiven an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.\n\nA subarray is a contiguous non-empty sequence of elements within an array.\n\n&nbsp;\nExample 1:\nInput: nums = [1,1,1], k = 2\nOutput: 2\nExample 2:\nInput: nums = [1,2,3], k = 3\nOutput: 2\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 2 * 104\n\t-1000 <= nums[i] <= 1000\n\t-107 <= k <= 107\n## My Submission\n\n- Runtime: 24 ms (beats 79.5%)\n- Memory: 48.7 MB (beats 46.1%)\n\n## Similar Problems\n\n- [Two Sum](https://leetcode.com/problems/two-sum/) — Easy\n- [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/) — Medium\n- [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) — Medium\n- [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) — Easy\n- [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/) — Medium\n",
-      "code": "class Solution {\n    public int subarraySum(int[] nums, int k) {\n        HashMap<Integer, Integer> map = new HashMap<>();\n        map.put(0, 1);\n        int count =0;\n        int sum = 0;\n        for(int num : nums){\n            sum += num;\n            if(map.containsKey(sum - k)) count += map.get(sum - k);\n            map.put(sum, map.getOrDefault(sum, 0)+1);\n        }\n        return count;\n    }\n}",
+      "readmeContent": "# [560] Subarray Sum Equals K\n**Difficulty:** Medium  |  **Acceptance:** 48.4%  |  **Likes:** 26060 / **Dislikes:** 881\n**Tags:** `Array`, `Hash Table`, `Prefix Sum`\n## Problem\nGiven an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.\n\nA subarray is a contiguous non-empty sequence of elements within an array.\n\n&nbsp;\nExample 1:\nInput: nums = [1,1,1], k = 2\nOutput: 2\nExample 2:\nInput: nums = [1,2,3], k = 3\nOutput: 2\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 2 * 104\n\t-1000 <= nums[i] <= 1000\n\t-107 <= k <= 107\n## My Submission\n\n- Runtime: 24 ms (beats 79.5%)\n- Memory: 48.5 MB (beats 63.9%)\n\n## Similar Problems\n\n- [Two Sum](https://leetcode.com/problems/two-sum/) — Easy\n- [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/) — Medium\n- [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) — Medium\n- [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) — Easy\n- [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/) — Medium\n",
+      "code": "class Solution {\n    public int subarraySum(int[] nums, int k) {\n        HashMap<Integer, Integer> map = new HashMap<>();\n        map.put(0, 1);\n        int sum = 0;\n        int count = 0;\n        for(int num : nums){\n            sum += num;\n            if(map.containsKey(sum - k)) count += map.get(sum - k);\n            map.put(sum, map.getOrDefault(sum, 0) + 1);\n        }\n        return count;\n    }\n}",
       "files": [
         {
           "path": "problems/lc-subarray-sum-equals-k/lc-subarray-sum-equals-k.java",
-          "content": "class Solution {\n    public int subarraySum(int[] nums, int k) {\n        HashMap<Integer, Integer> map = new HashMap<>();\n        map.put(0, 1);\n        int count =0;\n        int sum = 0;\n        for(int num : nums){\n            sum += num;\n            if(map.containsKey(sum - k)) count += map.get(sum - k);\n            map.put(sum, map.getOrDefault(sum, 0)+1);\n        }\n        return count;\n    }\n}"
+          "content": "class Solution {\n    public int subarraySum(int[] nums, int k) {\n        HashMap<Integer, Integer> map = new HashMap<>();\n        map.put(0, 1);\n        int sum = 0;\n        int count = 0;\n        for(int num : nums){\n            sum += num;\n            if(map.containsKey(sum - k)) count += map.get(sum - k);\n            map.put(sum, map.getOrDefault(sum, 0) + 1);\n        }\n        return count;\n    }\n}"
         },
         {
           "path": "problems/lc-subarray-sum-equals-k/README.md",
-          "content": "# [560] Subarray Sum Equals K\n**Difficulty:** Medium  |  **Acceptance:** 48.4%  |  **Likes:** 26060 / **Dislikes:** 881\n**Tags:** `Array`, `Hash Table`, `Prefix Sum`\n## Problem\nGiven an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.\n\nA subarray is a contiguous non-empty sequence of elements within an array.\n\n&nbsp;\nExample 1:\nInput: nums = [1,1,1], k = 2\nOutput: 2\nExample 2:\nInput: nums = [1,2,3], k = 3\nOutput: 2\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 2 * 104\n\t-1000 <= nums[i] <= 1000\n\t-107 <= k <= 107\n## My Submission\n\n- Runtime: 24 ms (beats 79.5%)\n- Memory: 48.7 MB (beats 46.1%)\n\n## Similar Problems\n\n- [Two Sum](https://leetcode.com/problems/two-sum/) — Easy\n- [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/) — Medium\n- [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) — Medium\n- [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) — Easy\n- [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/) — Medium\n"
+          "content": "# [560] Subarray Sum Equals K\n**Difficulty:** Medium  |  **Acceptance:** 48.4%  |  **Likes:** 26060 / **Dislikes:** 881\n**Tags:** `Array`, `Hash Table`, `Prefix Sum`\n## Problem\nGiven an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.\n\nA subarray is a contiguous non-empty sequence of elements within an array.\n\n&nbsp;\nExample 1:\nInput: nums = [1,1,1], k = 2\nOutput: 2\nExample 2:\nInput: nums = [1,2,3], k = 3\nOutput: 2\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 2 * 104\n\t-1000 <= nums[i] <= 1000\n\t-107 <= k <= 107\n## My Submission\n\n- Runtime: 24 ms (beats 79.5%)\n- Memory: 48.5 MB (beats 63.9%)\n\n## Similar Problems\n\n- [Two Sum](https://leetcode.com/problems/two-sum/) — Easy\n- [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/) — Medium\n- [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) — Medium\n- [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) — Easy\n- [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/) — Medium\n"
         }
       ],
       "lang": {
@@ -16065,11 +16065,11 @@
         "slug": "java"
       },
       "runtime": "24 ms",
-      "memory": "48.7 MB",
+      "memory": "48.5 MB",
       "runtimePct": 79.46730000000001,
-      "memoryPct": 46.14580000000004,
-      "timestamp": 1788156104000,
-      "acRate": 48.4087067156549,
+      "memoryPct": 63.94520000000004,
+      "timestamp": 1793898710000,
+      "acRate": 48.408684194065124,
       "likes": 26060,
       "dislikes": 881,
       "similar": [
@@ -16125,7 +16125,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/lc-subarray-sum-equals-k/lc-subarray-sum-equals-k.java",
+        "problems/lc-subarray-sum-equals-k/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-subarray-sum-equals-k::1978320870",

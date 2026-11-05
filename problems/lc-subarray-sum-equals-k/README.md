@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-subarray-sum-equals-k` |
 | Topics | Array, Hash Table, Prefix Sum |
-| Solved | 2026-08-31 |
+| Solved | 2026-11-05 |
 | Runtime | 24 ms (beats 79.46730000000001%) |
-| Memory | 48.7 MB (beats 46.14580000000004%) |
+| Memory | 48.5 MB (beats 63.94520000000004%) |
 
 ## Problem Statement
 
@@ -44,12 +44,12 @@ class Solution {
     public int subarraySum(int[] nums, int k) {
         HashMap<Integer, Integer> map = new HashMap<>();
         map.put(0, 1);
-        int count =0;
         int sum = 0;
+        int count = 0;
         for(int num : nums){
             sum += num;
             if(map.containsKey(sum - k)) count += map.get(sum - k);
-            map.put(sum, map.getOrDefault(sum, 0)+1);
+            map.put(sum, map.getOrDefault(sum, 0) + 1);
         }
         return count;
     }
