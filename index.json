@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T17:27:14.614Z",
+  "updatedAt": "2026-11-05T17:43:59.073Z",
   "layoutVersion": 3,
   "stats": {
     "total": 245,
@@ -12571,16 +12571,16 @@
         "topic": "arrays",
         "voteCount": 96
       },
-      "readmeContent": "# [238] Product of Array Except Self\n**Difficulty:** Medium  |  **Acceptance:** 69.4%  |  **Likes:** 26657 / **Dislikes:** 1736\n**Tags:** `Array`, `Prefix Sum`\n## Problem\nGiven an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].\n\nThe product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.\n\nYou must write an algorithm that runs in&nbsp;O(n)&nbsp;time and without using the division operation.\n\n&nbsp;\nExample 1:\nInput: nums = [1,2,3,4]\nOutput: [24,12,8,6]\nExample 2:\nInput: nums = [-1,1,0,-3,3]\nOutput: [0,0,9,0,0]\n\n&nbsp;\nConstraints:\n\n\t2 <= nums.length <= 105\n\t-30 <= nums[i] <= 30\n\tThe input is generated such that answer[i] is guaranteed to fit in a 32-bit integer.\n\n&nbsp;\nFollow up:&nbsp;Can you solve the problem in O(1)&nbsp;extra&nbsp;space complexity? (The output array does not count as extra space for space complexity analysis.)\n## My Submission\n\n- Runtime: 2 ms (beats 92.5%)\n- Memory: 72.1 MB (beats 33.7%)\n\n## Similar Problems\n\n- [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) — Hard\n- [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) — Medium\n- [Minimum Difference in Sums After Removal of Elements](https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements/) — Hard\n- [Construct Product Matrix](https://leetcode.com/problems/construct-product-matrix/) — Medium\n- [Find Sum of Array Product of Magical Sequences](https://leetcode.com/problems/find-sum-of-array-product-of-magical-sequences/) — Hard\n",
-      "code": "class Solution {\n    public int[] productExceptSelf(int[] nums) {\n        int n = nums.length;\n        int[] res = new int[n];\n        \n        int preProd = 1;\n        for(int i=0; i<n; i++){\n            res[i] = preProd;\n            preProd *= nums[i];\n        }\n        int sufProd = 1;\n        for(int i=n-1; i>=0; i--){\n            res[i] *= sufProd;\n            sufProd *= nums[i];\n        }\n        return res;\n    }\n}",
+      "readmeContent": "# [238] Product of Array Except Self\n**Difficulty:** Medium  |  **Acceptance:** 69.4%  |  **Likes:** 26658 / **Dislikes:** 1736\n**Tags:** `Array`, `Prefix Sum`\n## Problem\nGiven an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].\n\nThe product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.\n\nYou must write an algorithm that runs in&nbsp;O(n)&nbsp;time and without using the division operation.\n\n&nbsp;\nExample 1:\nInput: nums = [1,2,3,4]\nOutput: [24,12,8,6]\nExample 2:\nInput: nums = [-1,1,0,-3,3]\nOutput: [0,0,9,0,0]\n\n&nbsp;\nConstraints:\n\n\t2 <= nums.length <= 105\n\t-30 <= nums[i] <= 30\n\tThe input is generated such that answer[i] is guaranteed to fit in a 32-bit integer.\n\n&nbsp;\nFollow up:&nbsp;Can you solve the problem in O(1)&nbsp;extra&nbsp;space complexity? (The output array does not count as extra space for space complexity analysis.)\n## My Submission\n\n- Runtime: 2 ms (beats 92.5%)\n- Memory: 71.5 MB (beats 65.1%)\n\n## Similar Problems\n\n- [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) — Hard\n- [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) — Medium\n- [Minimum Difference in Sums After Removal of Elements](https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements/) — Hard\n- [Construct Product Matrix](https://leetcode.com/problems/construct-product-matrix/) — Medium\n- [Find Sum of Array Product of Magical Sequences](https://leetcode.com/problems/find-sum-of-array-product-of-magical-sequences/) — Hard\n",
+      "code": "class Solution {\n    public int[] productExceptSelf(int[] nums) {\n        int n = nums.length;\n        int[] res = new int[n];\n        int preProd = 1;\n        for(int i=0; i<n; i++){\n            res[i] = preProd;\n            preProd *= nums[i];\n        }\n        int sufProd = 1;\n        for(int i=n-1; i>=0; i--){\n            res[i] *= sufProd;\n            sufProd *= nums[i];\n        }\n        return res;\n    }\n}",
       "files": [
         {
           "path": "problems/product-of-array-except-self/leetcode/lc-product-of-array-except-self.java",
-          "content": "class Solution {\n    public int[] productExceptSelf(int[] nums) {\n        int n = nums.length;\n        int[] res = new int[n];\n        \n        int preProd = 1;\n        for(int i=0; i<n; i++){\n            res[i] = preProd;\n            preProd *= nums[i];\n        }\n        int sufProd = 1;\n        for(int i=n-1; i>=0; i--){\n            res[i] *= sufProd;\n            sufProd *= nums[i];\n        }\n        return res;\n    }\n}"
+          "content": "class Solution {\n    public int[] productExceptSelf(int[] nums) {\n        int n = nums.length;\n        int[] res = new int[n];\n        int preProd = 1;\n        for(int i=0; i<n; i++){\n            res[i] = preProd;\n            preProd *= nums[i];\n        }\n        int sufProd = 1;\n        for(int i=n-1; i>=0; i--){\n            res[i] *= sufProd;\n            sufProd *= nums[i];\n        }\n        return res;\n    }\n}"
         },
         {
           "path": "problems/product-of-array-except-self/README.md",
-          "content": "# [238] Product of Array Except Self\n**Difficulty:** Medium  |  **Acceptance:** 69.4%  |  **Likes:** 26657 / **Dislikes:** 1736\n**Tags:** `Array`, `Prefix Sum`\n## Problem\nGiven an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].\n\nThe product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.\n\nYou must write an algorithm that runs in&nbsp;O(n)&nbsp;time and without using the division operation.\n\n&nbsp;\nExample 1:\nInput: nums = [1,2,3,4]\nOutput: [24,12,8,6]\nExample 2:\nInput: nums = [-1,1,0,-3,3]\nOutput: [0,0,9,0,0]\n\n&nbsp;\nConstraints:\n\n\t2 <= nums.length <= 105\n\t-30 <= nums[i] <= 30\n\tThe input is generated such that answer[i] is guaranteed to fit in a 32-bit integer.\n\n&nbsp;\nFollow up:&nbsp;Can you solve the problem in O(1)&nbsp;extra&nbsp;space complexity? (The output array does not count as extra space for space complexity analysis.)\n## My Submission\n\n- Runtime: 2 ms (beats 92.5%)\n- Memory: 72.1 MB (beats 33.7%)\n\n## Similar Problems\n\n- [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) — Hard\n- [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) — Medium\n- [Minimum Difference in Sums After Removal of Elements](https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements/) — Hard\n- [Construct Product Matrix](https://leetcode.com/problems/construct-product-matrix/) — Medium\n- [Find Sum of Array Product of Magical Sequences](https://leetcode.com/problems/find-sum-of-array-product-of-magical-sequences/) — Hard\n"
+          "content": "# [238] Product of Array Except Self\n**Difficulty:** Medium  |  **Acceptance:** 69.4%  |  **Likes:** 26658 / **Dislikes:** 1736\n**Tags:** `Array`, `Prefix Sum`\n## Problem\nGiven an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].\n\nThe product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.\n\nYou must write an algorithm that runs in&nbsp;O(n)&nbsp;time and without using the division operation.\n\n&nbsp;\nExample 1:\nInput: nums = [1,2,3,4]\nOutput: [24,12,8,6]\nExample 2:\nInput: nums = [-1,1,0,-3,3]\nOutput: [0,0,9,0,0]\n\n&nbsp;\nConstraints:\n\n\t2 <= nums.length <= 105\n\t-30 <= nums[i] <= 30\n\tThe input is generated such that answer[i] is guaranteed to fit in a 32-bit integer.\n\n&nbsp;\nFollow up:&nbsp;Can you solve the problem in O(1)&nbsp;extra&nbsp;space complexity? (The output array does not count as extra space for space complexity analysis.)\n## My Submission\n\n- Runtime: 2 ms (beats 92.5%)\n- Memory: 71.5 MB (beats 65.1%)\n\n## Similar Problems\n\n- [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) — Hard\n- [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) — Medium\n- [Minimum Difference in Sums After Removal of Elements](https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements/) — Hard\n- [Construct Product Matrix](https://leetcode.com/problems/construct-product-matrix/) — Medium\n- [Find Sum of Array Product of Magical Sequences](https://leetcode.com/problems/find-sum-of-array-product-of-magical-sequences/) — Hard\n"
         }
       ],
       "lang": {
@@ -12589,12 +12589,12 @@
         "slug": "java"
       },
       "runtime": "2 ms",
-      "memory": "72.1 MB",
+      "memory": "71.5 MB",
       "runtimePct": 92.5184,
-      "memoryPct": 33.67500000000012,
-      "timestamp": 1789665735000,
-      "acRate": 69.41957189621466,
-      "likes": 26657,
+      "memoryPct": 65.05570000000012,
+      "timestamp": 1793900633000,
+      "acRate": 69.41960442404603,
+      "likes": 26658,
       "dislikes": 1736,
       "similar": [
         {
@@ -12639,7 +12639,11 @@
       "_requestAIReview": true,
       "platform": "leetcode",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/product-of-array-except-self/leetcode/lc-product-of-array-except-self.java",
+        "problems/product-of-array-except-self/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-product-of-array-except-self::2144981144",
