@@ -7,8 +7,8 @@
 | Problem ID | `lc-set-matrix-zeroes` |
 | Topics | Array, Hash Table, Matrix |
 | Solved | 2026-11-11 |
-| Runtime | 1 ms (beats 97.245%) |
-| Memory | 47.3 MB (beats 68.00999999999996%) |
+| Runtime | 1 ms (beats 98.3436%) |
+| Memory | 47.3 MB (beats 59.5191%) |
 
 ## Problem Statement
 
