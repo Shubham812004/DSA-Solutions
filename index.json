@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T05:17:35.234Z",
+  "updatedAt": "2026-11-06T05:26:35.033Z",
   "layoutVersion": 3,
   "stats": {
     "total": 246,
@@ -7229,7 +7229,7 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33368 / **Dislikes:** 2049\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.4%)\n- Memory: 43.4 MB (beats 70.3%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
+      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33369 / **Dislikes:** 2049\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.5%)\n- Memory: 43.4 MB (beats 69.7%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
       "code": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = palindrome(s, i, i);\n            int even = palindrome(s, i, i+1);\n            int max = Math.max(odd, even);\n            if(max > (end - start)){\n                start = i - (max-1)/2;\n                end = i + max/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int palindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        }\n        return r-l-1;\n    }\n}",
       "files": [
         {
@@ -7238,7 +7238,7 @@
         },
         {
           "path": "problems/longest-palindromic-substring/README.md",
-          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33368 / **Dislikes:** 2049\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.4%)\n- Memory: 43.4 MB (beats 70.3%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
+          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33369 / **Dislikes:** 2049\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.5%)\n- Memory: 43.4 MB (beats 69.7%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
         }
       ],
       "lang": {
@@ -7248,11 +7248,11 @@
       },
       "runtime": "14 ms",
       "memory": "43.4 MB",
-      "runtimePct": 93.44890000000001,
-      "memoryPct": 70.29129999999999,
+      "runtimePct": 93.50030000000002,
+      "memoryPct": 69.6797,
       "timestamp": 1790779293000,
-      "acRate": 38.934375180838224,
-      "likes": 33368,
+      "acRate": 38.93577370968644,
+      "likes": 33369,
       "dislikes": 2049,
       "similar": [
         {
@@ -15585,16 +15585,16 @@
         "topic": "math",
         "voteCount": 95
       },
-      "readmeContent": "# [73] Set Matrix Zeroes\n**Difficulty:** Medium  |  **Acceptance:** 63.8%  |  **Likes:** 17607 / **Dislikes:** 877\n**Tags:** `Array`, `Hash Table`, `Matrix`\n## Problem\nGiven an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.\n\nYou must do it in place.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,1,1],[1,0,1],[1,1,1]]\nOutput: [[1,0,1],[0,0,0],[1,0,1]]\n\nExample 2:\n\nInput: matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]\nOutput: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[0].length\n\t1 <= m, n <= 200\n\t-231 <= matrix[i][j] <= 231 - 1\n\n&nbsp;\nFollow up:\n\n\tA straightforward solution using O(mn) space is probably a bad idea.\n\tA simple improvement uses O(m + n) space, but still not the best solution.\n\tCould you devise a constant space solution?\n## My Submission\n\n- Runtime: 1 ms (beats 96.5%)\n- Memory: 47.5 MB (beats 63.0%)\n\n## Similar Problems\n\n- [Game of Life](https://leetcode.com/problems/game-of-life/) — Medium\n- [Number of Laser Beams in a Bank](https://leetcode.com/problems/number-of-laser-beams-in-a-bank/) — Medium\n",
-      "code": "class Solution {\n    public void setZeroes(int[][] matrix) {\n        int n = matrix.length;\n        int m = matrix[0].length;\n\n        int[] col = new int[m];\n        int[] row = new int[n];\n\n        for(int i=0; i<n; i++){\n            for(int j=0; j<m; j++){\n                if(matrix[i][j] == 0){\n                    row[i] = 1;\n                    col[j] = 1;\n                }\n            }\n        }\n        for(int i=0; i<n; i++){\n            for(int j=0; j<m; j++){\n                if(row[i] == 1 || col[j] == 1){\n                    matrix[i][j] = 0;\n                }\n            }\n        }\n    }\n}",
+      "readmeContent": "# [73] Set Matrix Zeroes\n**Difficulty:** Medium  |  **Acceptance:** 63.8%  |  **Likes:** 17607 / **Dislikes:** 877\n**Tags:** `Array`, `Hash Table`, `Matrix`\n## Problem\nGiven an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.\n\nYou must do it in place.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,1,1],[1,0,1],[1,1,1]]\nOutput: [[1,0,1],[0,0,0],[1,0,1]]\n\nExample 2:\n\nInput: matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]\nOutput: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[0].length\n\t1 <= m, n <= 200\n\t-231 <= matrix[i][j] <= 231 - 1\n\n&nbsp;\nFollow up:\n\n\tA straightforward solution using O(mn) space is probably a bad idea.\n\tA simple improvement uses O(m + n) space, but still not the best solution.\n\tCould you devise a constant space solution?\n## My Submission\n\n- Runtime: 1 ms (beats 96.5%)\n- Memory: 47.2 MB (beats 84.5%)\n\n## Similar Problems\n\n- [Game of Life](https://leetcode.com/problems/game-of-life/) — Medium\n- [Number of Laser Beams in a Bank](https://leetcode.com/problems/number-of-laser-beams-in-a-bank/) — Medium\n",
+      "code": "class Solution {\n    public void setZeroes(int[][] matrix) {\n        int n = matrix.length;\n        int m = matrix[0].length;\n\n        int[] rows = new int[n];\n        int[] cols = new int[m];\n\n        for(int i=0; i<n; i++){\n            for(int j=0; j<m; j++){\n                if(matrix[i][j] == 0){\n                    rows[i] = 1;\n                    cols[j] = 1;\n                }\n            }\n        }\n        for(int i=0; i<n; i++){\n            for(int j=0; j<m; j++){\n                if(rows[i] == 1 || cols[j] == 1){\n                    matrix[i][j] = 0;\n                }\n            }\n        }\n    }\n}",
       "files": [
         {
           "path": "problems/set-matrix-zeroes/leetcode/lc-set-matrix-zeroes.java",
-          "content": "class Solution {\n    public void setZeroes(int[][] matrix) {\n        int n = matrix.length;\n        int m = matrix[0].length;\n\n        int[] col = new int[m];\n        int[] row = new int[n];\n\n        for(int i=0; i<n; i++){\n            for(int j=0; j<m; j++){\n                if(matrix[i][j] == 0){\n                    row[i] = 1;\n                    col[j] = 1;\n                }\n            }\n        }\n        for(int i=0; i<n; i++){\n            for(int j=0; j<m; j++){\n                if(row[i] == 1 || col[j] == 1){\n                    matrix[i][j] = 0;\n                }\n            }\n        }\n    }\n}"
+          "content": "class Solution {\n    public void setZeroes(int[][] matrix) {\n        int n = matrix.length;\n        int m = matrix[0].length;\n\n        int[] rows = new int[n];\n        int[] cols = new int[m];\n\n        for(int i=0; i<n; i++){\n            for(int j=0; j<m; j++){\n                if(matrix[i][j] == 0){\n                    rows[i] = 1;\n                    cols[j] = 1;\n                }\n            }\n        }\n        for(int i=0; i<n; i++){\n            for(int j=0; j<m; j++){\n                if(rows[i] == 1 || cols[j] == 1){\n                    matrix[i][j] = 0;\n                }\n            }\n        }\n    }\n}"
         },
         {
           "path": "problems/set-matrix-zeroes/README.md",
-          "content": "# [73] Set Matrix Zeroes\n**Difficulty:** Medium  |  **Acceptance:** 63.8%  |  **Likes:** 17607 / **Dislikes:** 877\n**Tags:** `Array`, `Hash Table`, `Matrix`\n## Problem\nGiven an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.\n\nYou must do it in place.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,1,1],[1,0,1],[1,1,1]]\nOutput: [[1,0,1],[0,0,0],[1,0,1]]\n\nExample 2:\n\nInput: matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]\nOutput: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[0].length\n\t1 <= m, n <= 200\n\t-231 <= matrix[i][j] <= 231 - 1\n\n&nbsp;\nFollow up:\n\n\tA straightforward solution using O(mn) space is probably a bad idea.\n\tA simple improvement uses O(m + n) space, but still not the best solution.\n\tCould you devise a constant space solution?\n## My Submission\n\n- Runtime: 1 ms (beats 96.5%)\n- Memory: 47.5 MB (beats 63.0%)\n\n## Similar Problems\n\n- [Game of Life](https://leetcode.com/problems/game-of-life/) — Medium\n- [Number of Laser Beams in a Bank](https://leetcode.com/problems/number-of-laser-beams-in-a-bank/) — Medium\n"
+          "content": "# [73] Set Matrix Zeroes\n**Difficulty:** Medium  |  **Acceptance:** 63.8%  |  **Likes:** 17607 / **Dislikes:** 877\n**Tags:** `Array`, `Hash Table`, `Matrix`\n## Problem\nGiven an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.\n\nYou must do it in place.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,1,1],[1,0,1],[1,1,1]]\nOutput: [[1,0,1],[0,0,0],[1,0,1]]\n\nExample 2:\n\nInput: matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]\nOutput: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[0].length\n\t1 <= m, n <= 200\n\t-231 <= matrix[i][j] <= 231 - 1\n\n&nbsp;\nFollow up:\n\n\tA straightforward solution using O(mn) space is probably a bad idea.\n\tA simple improvement uses O(m + n) space, but still not the best solution.\n\tCould you devise a constant space solution?\n## My Submission\n\n- Runtime: 1 ms (beats 96.5%)\n- Memory: 47.2 MB (beats 84.5%)\n\n## Similar Problems\n\n- [Game of Life](https://leetcode.com/problems/game-of-life/) — Medium\n- [Number of Laser Beams in a Bank](https://leetcode.com/problems/number-of-laser-beams-in-a-bank/) — Medium\n"
         }
       ],
       "lang": {
@@ -15603,11 +15603,11 @@
         "slug": "java"
       },
       "runtime": "1 ms",
-      "memory": "47.5 MB",
+      "memory": "47.2 MB",
       "runtimePct": 96.5468,
-      "memoryPct": 63.0305,
-      "timestamp": 1776000147000,
-      "acRate": 63.849605681047706,
+      "memoryPct": 84.52050000000001,
+      "timestamp": 1793942789000,
+      "acRate": 63.84961374370746,
       "likes": 17607,
       "dislikes": 877,
       "similar": [
@@ -15633,7 +15633,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/set-matrix-zeroes/leetcode/lc-set-matrix-zeroes.java",
+        "problems/set-matrix-zeroes/leetcode/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-set-mismatch::1993493098",
