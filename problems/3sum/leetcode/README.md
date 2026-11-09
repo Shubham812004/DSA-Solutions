@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-3sum` |
 | Topics | Array, Two Pointers, Sorting |
-| Solved | 2026-04-28 |
-| Runtime | 34 ms (beats 56.37319999999997%) |
-| Memory | 59 MB (beats 74.30309999999986%) |
+| Solved | 2026-11-09 |
+| Runtime | 33 ms (beats 70.54900000000002%) |
+| Memory | 58.7 MB (beats 77.71250000000003%) |
 
 ## Problem Statement
 
@@ -49,29 +49,6 @@ Notice that the order of the output and the order of the triplets does not matte
 
 	- `-105 <= nums[i] <= 105`
 
-## Hints
-
-<details>
-<summary>Hint 1</summary>
-
-So, we essentially need to find three numbers x, y, and z such that they add up to the given value. If we fix one of the numbers say x, we are left with the two-sum problem at hand!
-
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-For the two-sum problem, if we fix one of the numbers, say x, we have to scan the entire array to find the next number y, which is value - x where value is the input parameter. Can we change our array somehow so that this search becomes faster?
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-The second train of thought for two-sum is, without changing the array, can we use additional space somehow? Like maybe a hash map to speed up the search?
-
-</details>
-
 ## Solutions
 
 ```Java
@@ -80,27 +57,27 @@ class Solution {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(nums);
         for(int i=0; i<nums.length; i++){
-            if(i>0 && nums[i] == nums[i-1]) continue;
-            int left = i+1;
-            int right = nums.length-1;
-            while(left < right){
-                int sum = nums[i] + nums[left] + nums[right];
+            if(i > 0 && nums[i] == nums[i-1]) continue;
+            int l = i+1;
+            int r = nums.length-1;
+            while(l < r){
+                int sum = nums[i] + nums[l] + nums[r];
                 if(sum == 0){
-                    res.add(Arrays.asList(nums[i], nums[left], nums[right]));
-                    left++;
-                    right--;
-                    while(left < right && nums[left] == nums[left - 1]){
-                        left++;
+                    res.add(Arrays.asList(nums[i], nums[l], nums[r]));
+                    l++;
+                    r--;
+                    while(l < r && nums[l] == nums[l-1]){
+                        l++;
                     }
-                    while(left < right && nums[right] == nums[right + 1]){
-                        right--;
+                    while(l < r && nums[r] == nums[r+1]){
+                        r--;
                     }
                 }
                 else if(sum < 0){
-                    left++;
+                    l++;
                 }
                 else{
-                    right--;
+                    r--;
                 }
             }
         }

@@ -83,6 +83,29 @@
       "Binary Search"
     ]
   },
+  "leetcode::3sum": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "3sum",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794241006554
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794241696610
+      }
+    ],
+    "tags": [
+      "Array",
+      "Two Pointers",
+      "Sorting"
+    ]
+  },
   "leetcode::daily-temperatures": {
     "difficulty": "Medium",
     "lang": "Java",
@@ -632,6 +655,11 @@
         "elapsedSeconds": 0,
         "lang": "Java",
         "ts": 1794240981092
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794240985212
       }
     ],
     "tags": [
