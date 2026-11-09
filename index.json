@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T05:12:52.688Z",
+  "updatedAt": "2026-11-09T05:20:28.041Z",
   "layoutVersion": 3,
   "stats": {
     "total": 248,
@@ -7229,7 +7229,7 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33369 / **Dislikes:** 2049\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.5%)\n- Memory: 43.4 MB (beats 69.7%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
+      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33375 / **Dislikes:** 2050\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.5%)\n- Memory: 43.4 MB (beats 68.0%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
       "code": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = palindrome(s, i, i);\n            int even = palindrome(s, i, i+1);\n            int max = Math.max(odd, even);\n            if(max > (end - start)){\n                start = i - (max-1)/2;\n                end = i + max/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int palindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        }\n        return r-l-1;\n    }\n}",
       "files": [
         {
@@ -7238,7 +7238,7 @@
         },
         {
           "path": "problems/longest-palindromic-substring/README.md",
-          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33369 / **Dislikes:** 2049\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.5%)\n- Memory: 43.4 MB (beats 69.7%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
+          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33375 / **Dislikes:** 2050\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.5%)\n- Memory: 43.4 MB (beats 68.0%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
         }
       ],
       "lang": {
@@ -7248,12 +7248,12 @@
       },
       "runtime": "14 ms",
       "memory": "43.4 MB",
-      "runtimePct": 93.50030000000002,
-      "memoryPct": 69.6797,
+      "runtimePct": 93.53219999999999,
+      "memoryPct": 67.98,
       "timestamp": 1790779293000,
-      "acRate": 38.93577370968644,
-      "likes": 33369,
-      "dislikes": 2049,
+      "acRate": 38.944525323300624,
+      "likes": 33375,
+      "dislikes": 2050,
       "similar": [
         {
           "difficulty": "Hard",
@@ -14668,7 +14668,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/rotate-image/leetcode/lc-rotate-image.java",
+        "problems/rotate-image/leetcode/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-score-validator::1998911984",
@@ -17258,16 +17264,16 @@
         "topic": "arrays",
         "voteCount": 92
       },
-      "readmeContent": "# [242] Valid Anagram\n**Difficulty:** Easy  |  **Acceptance:** 68.8%  |  **Likes:** 14916 / **Dislikes:** 495\n**Tags:** `Hash Table`, `String`, `Sorting`\n## Problem\nGiven two strings s and t, return true if t is an anagram of s, and false otherwise.\n\n&nbsp;\nExample 1:\n\nInput: s = \"anagram\", t = \"nagaram\"\n\nOutput: true\n\nExample 2:\n\nInput: s = \"rat\", t = \"car\"\n\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length, t.length <= 5 * 104\n\ts and t consist of lowercase English letters.\n\n&nbsp;\nFollow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?\n## My Submission\n\n- Runtime: 6 ms (beats 49.3%)\n- Memory: 44.5 MB (beats 60.7%)\n\n## Similar Problems\n\n- [Group Anagrams](https://leetcode.com/problems/group-anagrams/) — Medium\n- [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) — Medium\n- [Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/) — Easy\n",
-      "code": "class Solution {\n    public boolean isAnagram(String s, String t) {\n        if(s.length() != t.length()) return false;\n        int[] count = new int[26];\n        for(int i=0; i<s.length(); i++){\n            count[s.charAt(i) - 'a']++;\n            count[t.charAt(i) - 'a']--;\n        }\n        for(int num : count){\n            if(num != 0){\n                return false;\n            }\n        }\n        return true;\n    }\n}",
+      "readmeContent": "# [242] Valid Anagram\n**Difficulty:** Easy  |  **Acceptance:** 68.8%  |  **Likes:** 14916 / **Dislikes:** 495\n**Tags:** `Hash Table`, `String`, `Sorting`\n## Problem\nGiven two strings s and t, return true if t is an anagram of s, and false otherwise.\n\n&nbsp;\nExample 1:\n\nInput: s = \"anagram\", t = \"nagaram\"\n\nOutput: true\n\nExample 2:\n\nInput: s = \"rat\", t = \"car\"\n\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length, t.length <= 5 * 104\n\ts and t consist of lowercase English letters.\n\n&nbsp;\nFollow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?\n## My Submission\n\n- Runtime: 16 ms (beats 23.1%)\n- Memory: 45.9 MB (beats 46.1%)\n\n## Similar Problems\n\n- [Group Anagrams](https://leetcode.com/problems/group-anagrams/) — Medium\n- [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) — Medium\n- [Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/) — Easy\n",
+      "code": "class Solution {\n    public boolean isAnagram(String s, String t) {\n        if(s.length() != t.length()){\n            return false;\n        }\n        HashMap<Character, Integer> map1 = new HashMap<>();\n        for(int i=0; i<s.length(); i++){\n            char ch = s.charAt(i);\n            map1.put(ch, map1.getOrDefault(ch, 0)+1);\n        }\n\n        HashMap<Character, Integer> map2 = new HashMap<>();\n        for(int i=0; i<t.length(); i++){\n            char ch = t.charAt(i);\n            map2.put(ch, map2.getOrDefault(ch, 0)+1);\n        }\n        return map1.equals(map2);\n    }\n}",
       "files": [
         {
           "path": "problems/valid-anagram/leetcode/lc-valid-anagram.java",
-          "content": "class Solution {\n    public boolean isAnagram(String s, String t) {\n        if(s.length() != t.length()) return false;\n        int[] count = new int[26];\n        for(int i=0; i<s.length(); i++){\n            count[s.charAt(i) - 'a']++;\n            count[t.charAt(i) - 'a']--;\n        }\n        for(int num : count){\n            if(num != 0){\n                return false;\n            }\n        }\n        return true;\n    }\n}"
+          "content": "class Solution {\n    public boolean isAnagram(String s, String t) {\n        if(s.length() != t.length()){\n            return false;\n        }\n        HashMap<Character, Integer> map1 = new HashMap<>();\n        for(int i=0; i<s.length(); i++){\n            char ch = s.charAt(i);\n            map1.put(ch, map1.getOrDefault(ch, 0)+1);\n        }\n\n        HashMap<Character, Integer> map2 = new HashMap<>();\n        for(int i=0; i<t.length(); i++){\n            char ch = t.charAt(i);\n            map2.put(ch, map2.getOrDefault(ch, 0)+1);\n        }\n        return map1.equals(map2);\n    }\n}"
         },
         {
           "path": "problems/valid-anagram/README.md",
-          "content": "# [242] Valid Anagram\n**Difficulty:** Easy  |  **Acceptance:** 68.8%  |  **Likes:** 14916 / **Dislikes:** 495\n**Tags:** `Hash Table`, `String`, `Sorting`\n## Problem\nGiven two strings s and t, return true if t is an anagram of s, and false otherwise.\n\n&nbsp;\nExample 1:\n\nInput: s = \"anagram\", t = \"nagaram\"\n\nOutput: true\n\nExample 2:\n\nInput: s = \"rat\", t = \"car\"\n\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length, t.length <= 5 * 104\n\ts and t consist of lowercase English letters.\n\n&nbsp;\nFollow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?\n## My Submission\n\n- Runtime: 6 ms (beats 49.3%)\n- Memory: 44.5 MB (beats 60.7%)\n\n## Similar Problems\n\n- [Group Anagrams](https://leetcode.com/problems/group-anagrams/) — Medium\n- [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) — Medium\n- [Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/) — Easy\n"
+          "content": "# [242] Valid Anagram\n**Difficulty:** Easy  |  **Acceptance:** 68.8%  |  **Likes:** 14916 / **Dislikes:** 495\n**Tags:** `Hash Table`, `String`, `Sorting`\n## Problem\nGiven two strings s and t, return true if t is an anagram of s, and false otherwise.\n\n&nbsp;\nExample 1:\n\nInput: s = \"anagram\", t = \"nagaram\"\n\nOutput: true\n\nExample 2:\n\nInput: s = \"rat\", t = \"car\"\n\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length, t.length <= 5 * 104\n\ts and t consist of lowercase English letters.\n\n&nbsp;\nFollow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?\n## My Submission\n\n- Runtime: 16 ms (beats 23.1%)\n- Memory: 45.9 MB (beats 46.1%)\n\n## Similar Problems\n\n- [Group Anagrams](https://leetcode.com/problems/group-anagrams/) — Medium\n- [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) — Medium\n- [Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/) — Easy\n"
         }
       ],
       "lang": {
@@ -17275,12 +17281,12 @@
         "ext": "java",
         "slug": "java"
       },
-      "runtime": "6 ms",
-      "memory": "44.5 MB",
-      "runtimePct": 49.26620000000001,
-      "memoryPct": 60.69989999999998,
-      "timestamp": 1788334486000,
-      "acRate": 68.80710362898706,
+      "runtime": "16 ms",
+      "memory": "45.9 MB",
+      "runtimePct": 23.132900000000006,
+      "memoryPct": 46.07219999999998,
+      "timestamp": 1794201623000,
+      "acRate": 68.8071202083212,
       "likes": 14916,
       "dislikes": 495,
       "similar": [
@@ -17309,12 +17315,16 @@
       "submissionsUrl": "https://leetcode.com/problems/valid-anagram/submissions/",
       "notes": "",
       "methodTitle": "",
-      "isDuplicate": true,
-      "duplicateOf": "lc-valid-anagram::2128155435",
+      "isDuplicate": false,
+      "duplicateOf": null,
       "_requestAIReview": true,
       "platform": "leetcode",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/valid-anagram/leetcode/lc-valid-anagram.java",
+        "problems/valid-anagram/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-valid-anagram::1810433410",

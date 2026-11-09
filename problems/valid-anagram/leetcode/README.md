@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-valid-anagram` |
 | Topics | String, Hash Table, Sorting |
-| Solved | 2026-09-02 |
-| Runtime | 6 ms (beats 49.26620000000001%) |
-| Memory | 44.5 MB (beats 60.69989999999998%) |
+| Solved | 2026-11-09 |
+| Runtime | 16 ms (beats 23.132900000000006%) |
+| Memory | 45.9 MB (beats 46.07219999999998%) |
 
 ## Problem Statement
 
@@ -45,18 +45,21 @@ Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `f
 ```Java
 class Solution {
     public boolean isAnagram(String s, String t) {
-        if(s.length() != t.length()) return false;
-        int[] count = new int[26];
+        if(s.length() != t.length()){
+            return false;
+        }
+        HashMap<Character, Integer> map1 = new HashMap<>();
         for(int i=0; i<s.length(); i++){
-            count[s.charAt(i) - 'a']++;
-            count[t.charAt(i) - 'a']--;
+            char ch = s.charAt(i);
+            map1.put(ch, map1.getOrDefault(ch, 0)+1);
         }
-        for(int num : count){
-            if(num != 0){
-                return false;
-            }
+
+        HashMap<Character, Integer> map2 = new HashMap<>();
+        for(int i=0; i<t.length(); i++){
+            char ch = t.charAt(i);
+            map2.put(ch, map2.getOrDefault(ch, 0)+1);
         }
-        return true;
+        return map1.equals(map2);
     }
 }
 ```

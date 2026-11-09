@@ -7,8 +7,8 @@
 | Problem ID | `lc-longest-palindromic-substring` |
 | Topics | String, Two Pointers, Dynamic Programming, Manacher |
 | Solved | 2026-09-30 |
-| Runtime | 14 ms (beats 93.50030000000002%) |
-| Memory | 43.4 MB (beats 69.6797%) |
+| Runtime | 14 ms (beats 93.53219999999999%) |
+| Memory | 43.4 MB (beats 67.98%) |
 
 ## Problem Statement
 
