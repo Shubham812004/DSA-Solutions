@@ -184,6 +184,29 @@
       "Manacher"
     ]
   },
+  "leetcode::longest-substring-without-repeating-characters": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "longest-substring-without-repeating-characters",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794202990342
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1794203398384
+      }
+    ],
+    "tags": [
+      "String",
+      "Hash Table",
+      "Sliding Window"
+    ]
+  },
   "leetcode::magnetic-force-between-two-balls": {
     "difficulty": "Medium",
     "lang": "Java",
