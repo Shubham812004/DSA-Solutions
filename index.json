@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T05:43:16.630Z",
+  "updatedAt": "2026-11-13T07:00:13.316Z",
   "layoutVersion": 3,
   "stats": {
     "total": 258,
@@ -1912,7 +1912,7 @@
         "topic": "two-pointers",
         "voteCount": 98
       },
-      "readmeContent": "# [15] 3Sum\n**Difficulty:** Medium  |  **Acceptance:** 40.1%  |  **Likes:** 36679 / **Dislikes:** 3347\n**Tags:** `Array`, `Two Pointers`, `Sorting`\n## Problem\nGiven an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.\n\nNotice that the solution set must not contain duplicate triplets.\n\n&nbsp;\nExample 1:\n\nInput: nums = [-1,0,1,2,-1,-4]\nOutput: [[-1,-1,2],[-1,0,1]]\nExplanation: \nnums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.\nnums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.\nnums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.\nThe distinct triplets are [-1,0,1] and [-1,-1,2].\nNotice that the order of the output and the order of the triplets does not matter.\n\nExample 2:\n\nInput: nums = [0,1,1]\nOutput: []\nExplanation: The only possible triplet does not sum up to 0.\n\nExample 3:\n\nInput: nums = [0,0,0]\nOutput: [[0,0,0]]\nExplanation: The only possible triplet sums up to 0.\n\n&nbsp;\nConstraints:\n\n\t3 <= nums.length <= 3000\n\t-105 <= nums[i] <= 105\n## My Submission\n\n- Runtime: 33 ms (beats 70.5%)\n- Memory: 58.7 MB (beats 77.7%)\n\n## Similar Problems\n\n- [Two Sum](https://leetcode.com/problems/two-sum/) — Easy\n- [3Sum Closest](https://leetcode.com/problems/3sum-closest/) — Medium\n- [4Sum](https://leetcode.com/problems/4sum/) — Medium\n- [Number of Arithmetic Triplets](https://leetcode.com/problems/number-of-arithmetic-triplets/) — Easy\n- [Minimum Sum of Mountain Triplets I](https://leetcode.com/problems/minimum-sum-of-mountain-triplets-i/) — Easy\n",
+      "readmeContent": "# [15] 3Sum\n**Difficulty:** Medium  |  **Acceptance:** 40.2%  |  **Likes:** 36691 / **Dislikes:** 3347\n**Tags:** `Array`, `Two Pointers`, `Sorting`\n## Problem\nGiven an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.\n\nNotice that the solution set must not contain duplicate triplets.\n\n&nbsp;\nExample 1:\n\nInput: nums = [-1,0,1,2,-1,-4]\nOutput: [[-1,-1,2],[-1,0,1]]\nExplanation: \nnums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.\nnums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.\nnums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.\nThe distinct triplets are [-1,0,1] and [-1,-1,2].\nNotice that the order of the output and the order of the triplets does not matter.\n\nExample 2:\n\nInput: nums = [0,1,1]\nOutput: []\nExplanation: The only possible triplet does not sum up to 0.\n\nExample 3:\n\nInput: nums = [0,0,0]\nOutput: [[0,0,0]]\nExplanation: The only possible triplet sums up to 0.\n\n&nbsp;\nConstraints:\n\n\t3 <= nums.length <= 3000\n\t-105 <= nums[i] <= 105\n## My Submission\n\n- Runtime: 33 ms (beats 71.0%)\n- Memory: 58.7 MB (beats 75.0%)\n\n## Similar Problems\n\n- [Two Sum](https://leetcode.com/problems/two-sum/) — Easy\n- [3Sum Closest](https://leetcode.com/problems/3sum-closest/) — Medium\n- [4Sum](https://leetcode.com/problems/4sum/) — Medium\n- [Number of Arithmetic Triplets](https://leetcode.com/problems/number-of-arithmetic-triplets/) — Easy\n- [Minimum Sum of Mountain Triplets I](https://leetcode.com/problems/minimum-sum-of-mountain-triplets-i/) — Easy\n",
       "code": "class Solution {\n    public List<List<Integer>> threeSum(int[] nums) {\n        List<List<Integer>> res = new ArrayList<>();\n        Arrays.sort(nums);\n        for(int i=0; i<nums.length; i++){\n            if(i > 0 && nums[i] == nums[i-1]) continue;\n            int l = i+1;\n            int r = nums.length-1;\n            while(l < r){\n                int sum = nums[i] + nums[l] + nums[r];\n                if(sum == 0){\n                    res.add(Arrays.asList(nums[i], nums[l], nums[r]));\n                    l++;\n                    r--;\n                    while(l < r && nums[l] == nums[l-1]){\n                        l++;\n                    }\n                    while(l < r && nums[r] == nums[r+1]){\n                        r--;\n                    }\n                }\n                else if(sum < 0){\n                    l++;\n                }\n                else{\n                    r--;\n                }\n            }\n        }\n        return res;\n    }\n}",
       "files": [
         {
@@ -1921,7 +1921,7 @@
         },
         {
           "path": "problems/3sum/README.md",
-          "content": "# [15] 3Sum\n**Difficulty:** Medium  |  **Acceptance:** 40.1%  |  **Likes:** 36679 / **Dislikes:** 3347\n**Tags:** `Array`, `Two Pointers`, `Sorting`\n## Problem\nGiven an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.\n\nNotice that the solution set must not contain duplicate triplets.\n\n&nbsp;\nExample 1:\n\nInput: nums = [-1,0,1,2,-1,-4]\nOutput: [[-1,-1,2],[-1,0,1]]\nExplanation: \nnums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.\nnums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.\nnums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.\nThe distinct triplets are [-1,0,1] and [-1,-1,2].\nNotice that the order of the output and the order of the triplets does not matter.\n\nExample 2:\n\nInput: nums = [0,1,1]\nOutput: []\nExplanation: The only possible triplet does not sum up to 0.\n\nExample 3:\n\nInput: nums = [0,0,0]\nOutput: [[0,0,0]]\nExplanation: The only possible triplet sums up to 0.\n\n&nbsp;\nConstraints:\n\n\t3 <= nums.length <= 3000\n\t-105 <= nums[i] <= 105\n## My Submission\n\n- Runtime: 33 ms (beats 70.5%)\n- Memory: 58.7 MB (beats 77.7%)\n\n## Similar Problems\n\n- [Two Sum](https://leetcode.com/problems/two-sum/) — Easy\n- [3Sum Closest](https://leetcode.com/problems/3sum-closest/) — Medium\n- [4Sum](https://leetcode.com/problems/4sum/) — Medium\n- [Number of Arithmetic Triplets](https://leetcode.com/problems/number-of-arithmetic-triplets/) — Easy\n- [Minimum Sum of Mountain Triplets I](https://leetcode.com/problems/minimum-sum-of-mountain-triplets-i/) — Easy\n"
+          "content": "# [15] 3Sum\n**Difficulty:** Medium  |  **Acceptance:** 40.2%  |  **Likes:** 36691 / **Dislikes:** 3347\n**Tags:** `Array`, `Two Pointers`, `Sorting`\n## Problem\nGiven an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.\n\nNotice that the solution set must not contain duplicate triplets.\n\n&nbsp;\nExample 1:\n\nInput: nums = [-1,0,1,2,-1,-4]\nOutput: [[-1,-1,2],[-1,0,1]]\nExplanation: \nnums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.\nnums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.\nnums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.\nThe distinct triplets are [-1,0,1] and [-1,-1,2].\nNotice that the order of the output and the order of the triplets does not matter.\n\nExample 2:\n\nInput: nums = [0,1,1]\nOutput: []\nExplanation: The only possible triplet does not sum up to 0.\n\nExample 3:\n\nInput: nums = [0,0,0]\nOutput: [[0,0,0]]\nExplanation: The only possible triplet sums up to 0.\n\n&nbsp;\nConstraints:\n\n\t3 <= nums.length <= 3000\n\t-105 <= nums[i] <= 105\n## My Submission\n\n- Runtime: 33 ms (beats 71.0%)\n- Memory: 58.7 MB (beats 75.0%)\n\n## Similar Problems\n\n- [Two Sum](https://leetcode.com/problems/two-sum/) — Easy\n- [3Sum Closest](https://leetcode.com/problems/3sum-closest/) — Medium\n- [4Sum](https://leetcode.com/problems/4sum/) — Medium\n- [Number of Arithmetic Triplets](https://leetcode.com/problems/number-of-arithmetic-triplets/) — Easy\n- [Minimum Sum of Mountain Triplets I](https://leetcode.com/problems/minimum-sum-of-mountain-triplets-i/) — Easy\n"
         }
       ],
       "lang": {
@@ -1931,11 +1931,11 @@
       },
       "runtime": "33 ms",
       "memory": "58.7 MB",
-      "runtimePct": 70.54900000000002,
-      "memoryPct": 77.71250000000003,
+      "runtimePct": 70.96690000000005,
+      "memoryPct": 74.97060000000003,
       "timestamp": 1794241691000,
-      "acRate": 40.149647061762,
-      "likes": 36679,
+      "acRate": 40.1603527874076,
+      "likes": 36691,
       "dislikes": 3347,
       "similar": [
         {
@@ -4188,7 +4188,7 @@
         "topic": "two-pointers",
         "voteCount": 94
       },
-      "readmeContent": "# [11] Container With Most Water\n**Difficulty:** Medium  |  **Acceptance:** 61.1%  |  **Likes:** 35353 / **Dislikes:** 2289\n**Tags:** `Array`, `Two Pointers`, `Greedy`\n## Problem\nYou are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).\n\nFind two lines that together with the x-axis form a container, such that the container contains the most water.\n\nReturn the maximum amount of water a container can store.\n\nNotice that you may not slant the container.\n\n&nbsp;\nExample 1:\n\nInput: height = [1,8,6,2,5,4,8,3,7]\nOutput: 49\nExplanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.\n\nExample 2:\n\nInput: height = [1,1]\nOutput: 1\n\n&nbsp;\nConstraints:\n\n\tn == height.length\n\t2 <= n <= 105\n\t0 <= height[i] <= 104\n## My Submission\n\n- Runtime: 5 ms (beats 83.2%)\n- Memory: 77 MB (beats 74.9%)\n\n## Similar Problems\n\n- [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) — Hard\n- [Maximum Tastiness of Candy Basket](https://leetcode.com/problems/maximum-tastiness-of-candy-basket/) — Medium\n- [House Robber IV](https://leetcode.com/problems/house-robber-iv/) — Medium\n",
+      "readmeContent": "# [11] Container With Most Water\n**Difficulty:** Medium  |  **Acceptance:** 61.1%  |  **Likes:** 35359 / **Dislikes:** 2291\n**Tags:** `Array`, `Two Pointers`, `Greedy`\n## Problem\nYou are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).\n\nFind two lines that together with the x-axis form a container, such that the container contains the most water.\n\nReturn the maximum amount of water a container can store.\n\nNotice that you may not slant the container.\n\n&nbsp;\nExample 1:\n\nInput: height = [1,8,6,2,5,4,8,3,7]\nOutput: 49\nExplanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.\n\nExample 2:\n\nInput: height = [1,1]\nOutput: 1\n\n&nbsp;\nConstraints:\n\n\tn == height.length\n\t2 <= n <= 105\n\t0 <= height[i] <= 104\n## My Submission\n\n- Runtime: 5 ms (beats 83.2%)\n- Memory: 77 MB (beats 71.2%)\n\n## Similar Problems\n\n- [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) — Hard\n- [Maximum Tastiness of Candy Basket](https://leetcode.com/problems/maximum-tastiness-of-candy-basket/) — Medium\n- [House Robber IV](https://leetcode.com/problems/house-robber-iv/) — Medium\n",
       "code": "class Solution {\n    public int maxArea(int[] height) {\n        int l = 0;\n        int r = height.length-1;\n        int maxArea = 0;\n        while(l < r){\n            int h = Math.min(height[l], height[r]);\n            int w = r-l;\n            int area = h*w;\n            maxArea = Math.max(maxArea, area);\n            if(height[l] < height[r]){\n                l++;\n            }\n            else{\n                r--;\n            }\n        }\n        return maxArea;\n    }\n}",
       "files": [
         {
@@ -4197,7 +4197,7 @@
         },
         {
           "path": "problems/container-with-most-water/README.md",
-          "content": "# [11] Container With Most Water\n**Difficulty:** Medium  |  **Acceptance:** 61.1%  |  **Likes:** 35353 / **Dislikes:** 2289\n**Tags:** `Array`, `Two Pointers`, `Greedy`\n## Problem\nYou are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).\n\nFind two lines that together with the x-axis form a container, such that the container contains the most water.\n\nReturn the maximum amount of water a container can store.\n\nNotice that you may not slant the container.\n\n&nbsp;\nExample 1:\n\nInput: height = [1,8,6,2,5,4,8,3,7]\nOutput: 49\nExplanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.\n\nExample 2:\n\nInput: height = [1,1]\nOutput: 1\n\n&nbsp;\nConstraints:\n\n\tn == height.length\n\t2 <= n <= 105\n\t0 <= height[i] <= 104\n## My Submission\n\n- Runtime: 5 ms (beats 83.2%)\n- Memory: 77 MB (beats 74.9%)\n\n## Similar Problems\n\n- [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) — Hard\n- [Maximum Tastiness of Candy Basket](https://leetcode.com/problems/maximum-tastiness-of-candy-basket/) — Medium\n- [House Robber IV](https://leetcode.com/problems/house-robber-iv/) — Medium\n"
+          "content": "# [11] Container With Most Water\n**Difficulty:** Medium  |  **Acceptance:** 61.1%  |  **Likes:** 35359 / **Dislikes:** 2291\n**Tags:** `Array`, `Two Pointers`, `Greedy`\n## Problem\nYou are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).\n\nFind two lines that together with the x-axis form a container, such that the container contains the most water.\n\nReturn the maximum amount of water a container can store.\n\nNotice that you may not slant the container.\n\n&nbsp;\nExample 1:\n\nInput: height = [1,8,6,2,5,4,8,3,7]\nOutput: 49\nExplanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.\n\nExample 2:\n\nInput: height = [1,1]\nOutput: 1\n\n&nbsp;\nConstraints:\n\n\tn == height.length\n\t2 <= n <= 105\n\t0 <= height[i] <= 104\n## My Submission\n\n- Runtime: 5 ms (beats 83.2%)\n- Memory: 77 MB (beats 71.2%)\n\n## Similar Problems\n\n- [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) — Hard\n- [Maximum Tastiness of Candy Basket](https://leetcode.com/problems/maximum-tastiness-of-candy-basket/) — Medium\n- [House Robber IV](https://leetcode.com/problems/house-robber-iv/) — Medium\n"
         }
       ],
       "lang": {
@@ -4207,12 +4207,12 @@
       },
       "runtime": "5 ms",
       "memory": "77 MB",
-      "runtimePct": 83.18379999999999,
-      "memoryPct": 74.90870000000007,
+      "runtimePct": 83.24940000000001,
+      "memoryPct": 71.17799999999987,
       "timestamp": 1794243110000,
-      "acRate": 61.11546855611747,
-      "likes": 35353,
-      "dislikes": 2289,
+      "acRate": 61.126919388378056,
+      "likes": 35359,
+      "dislikes": 2291,
       "similar": [
         {
           "difficulty": "Hard",

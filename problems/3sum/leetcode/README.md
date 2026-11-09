@@ -7,8 +7,8 @@
 | Problem ID | `lc-3sum` |
 | Topics | Array, Two Pointers, Sorting |
 | Solved | 2026-11-09 |
-| Runtime | 33 ms (beats 70.54900000000002%) |
-| Memory | 58.7 MB (beats 77.71250000000003%) |
+| Runtime | 33 ms (beats 70.96690000000005%) |
+| Memory | 58.7 MB (beats 74.97060000000003%) |
 
 ## Problem Statement
 
