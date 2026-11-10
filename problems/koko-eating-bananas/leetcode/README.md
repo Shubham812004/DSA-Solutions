@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-koko-eating-bananas` |
 | Topics | Array, Binary Search |
-| Solved | 2026-10-10 |
-| Runtime | 8 ms (beats 74.25779999999999%) |
-| Memory | 48 MB (beats 21.044099999999993%) |
+| Solved | 2026-11-10 |
+| Runtime | 9 ms (beats 60.58909999999999%) |
+| Memory | 47.2 MB (beats 93.54099999999998%) |
 
 ## Problem Statement
 
@@ -57,24 +57,22 @@ class Solution {
         int ans = -1;
         while(l <= r){
             int m = l + (r - l)/2;
-            long minHour = timeTaken(piles, m);
-            if(minHour <= h){
+            if(helper(piles, h, m)){
                 ans = m;
                 r = m-1;
             }
             else{
-                l = m+1;
+                l = m + 1;
             }
         }
         return ans;
     }
-
-    public long timeTaken(int[] piles, int m){
+    boolean helper(int[] piles, int h, int m){
         long total = 0;
-        for(int num : piles){
-            total += (num + m -1)/m;
+        for(int pile : piles){
+            total += (pile + m -1)/m;
         }
-        return total;
+        return total <= h;
     }
 }
 ```

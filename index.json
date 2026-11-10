@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T05:54:02.672Z",
+  "updatedAt": "2026-11-10T06:10:13.792Z",
   "layoutVersion": 3,
   "stats": {
     "total": 258,
@@ -7273,16 +7273,16 @@
         "topic": "binary-search",
         "voteCount": 94
       },
-      "readmeContent": "# [875] Koko Eating Bananas\n**Difficulty:** Medium  |  **Acceptance:** 50.8%  |  **Likes:** 14509 / **Dislikes:** 955\n**Tags:** `Array`, `Binary Search`\n## Problem\nKoko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas. The guards have gone and will come back in h hours.\n\nKoko can decide her bananas-per-hour eating speed of k. Each hour, she chooses some pile of bananas and eats k bananas from that pile. If the pile has less than k bananas, she eats all of them instead and will not eat any more bananas during this hour.\n\nKoko likes to eat slowly but still wants to finish eating all the bananas before the guards return.\n\nReturn the minimum integer k such that she can eat all the bananas within h hours.\n\n&nbsp;\nExample 1:\n\nInput: piles = [3,6,7,11], h = 8\nOutput: 4\n\nExample 2:\n\nInput: piles = [30,11,23,4,20], h = 5\nOutput: 30\n\nExample 3:\n\nInput: piles = [30,11,23,4,20], h = 6\nOutput: 23\n\n&nbsp;\nConstraints:\n\n\t1 <= piles.length <= 104\n\tpiles.length <= h <= 109\n\t1 <= piles[i] <= 109\n## My Submission\n\n- Runtime: 8 ms (beats 74.3%)\n- Memory: 48 MB (beats 21.0%)\n\n## Similar Problems\n\n- [Maximum Candies Allocated to K Children](https://leetcode.com/problems/maximum-candies-allocated-to-k-children/) — Medium\n- [Minimized Maximum of Products Distributed to Any Store](https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/) — Medium\n- [Frog Jump II](https://leetcode.com/problems/frog-jump-ii/) — Medium\n- [Minimum Time to Repair Cars](https://leetcode.com/problems/minimum-time-to-repair-cars/) — Medium\n",
-      "code": "class Solution {\n    public int minEatingSpeed(int[] piles, int h) {\n        int l = 1;\n        int r = Arrays.stream(piles).max().getAsInt();\n        int ans = -1;\n        while(l <= r){\n            int m = l + (r - l)/2;\n            long minHour = timeTaken(piles, m);\n            if(minHour <= h){\n                ans = m;\n                r = m-1;\n            }\n            else{\n                l = m+1;\n            }\n        }\n        return ans;\n    }\n\n    public long timeTaken(int[] piles, int m){\n        long total = 0;\n        for(int num : piles){\n            total += (num + m -1)/m;\n        }\n        return total;\n    }\n}",
+      "readmeContent": "# [875] Koko Eating Bananas\n**Difficulty:** Medium  |  **Acceptance:** 50.8%  |  **Likes:** 14509 / **Dislikes:** 955\n**Tags:** `Array`, `Binary Search`\n## Problem\nKoko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas. The guards have gone and will come back in h hours.\n\nKoko can decide her bananas-per-hour eating speed of k. Each hour, she chooses some pile of bananas and eats k bananas from that pile. If the pile has less than k bananas, she eats all of them instead and will not eat any more bananas during this hour.\n\nKoko likes to eat slowly but still wants to finish eating all the bananas before the guards return.\n\nReturn the minimum integer k such that she can eat all the bananas within h hours.\n\n&nbsp;\nExample 1:\n\nInput: piles = [3,6,7,11], h = 8\nOutput: 4\n\nExample 2:\n\nInput: piles = [30,11,23,4,20], h = 5\nOutput: 30\n\nExample 3:\n\nInput: piles = [30,11,23,4,20], h = 6\nOutput: 23\n\n&nbsp;\nConstraints:\n\n\t1 <= piles.length <= 104\n\tpiles.length <= h <= 109\n\t1 <= piles[i] <= 109\n## My Submission\n\n- Runtime: 9 ms (beats 60.6%)\n- Memory: 47.2 MB (beats 93.5%)\n\n## Similar Problems\n\n- [Maximum Candies Allocated to K Children](https://leetcode.com/problems/maximum-candies-allocated-to-k-children/) — Medium\n- [Minimized Maximum of Products Distributed to Any Store](https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/) — Medium\n- [Frog Jump II](https://leetcode.com/problems/frog-jump-ii/) — Medium\n- [Minimum Time to Repair Cars](https://leetcode.com/problems/minimum-time-to-repair-cars/) — Medium\n",
+      "code": "class Solution {\n    public int minEatingSpeed(int[] piles, int h) {\n        int l = 1;\n        int r = Arrays.stream(piles).max().getAsInt();\n        int ans = -1;\n        while(l <= r){\n            int m = l + (r - l)/2;\n            if(helper(piles, h, m)){\n                ans = m;\n                r = m-1;\n            }\n            else{\n                l = m + 1;\n            }\n        }\n        return ans;\n    }\n    boolean helper(int[] piles, int h, int m){\n        long total = 0;\n        for(int pile : piles){\n            total += (pile + m -1)/m;\n        }\n        return total <= h;\n    }\n}",
       "files": [
         {
           "path": "problems/koko-eating-bananas/leetcode/lc-koko-eating-bananas.java",
-          "content": "class Solution {\n    public int minEatingSpeed(int[] piles, int h) {\n        int l = 1;\n        int r = Arrays.stream(piles).max().getAsInt();\n        int ans = -1;\n        while(l <= r){\n            int m = l + (r - l)/2;\n            long minHour = timeTaken(piles, m);\n            if(minHour <= h){\n                ans = m;\n                r = m-1;\n            }\n            else{\n                l = m+1;\n            }\n        }\n        return ans;\n    }\n\n    public long timeTaken(int[] piles, int m){\n        long total = 0;\n        for(int num : piles){\n            total += (num + m -1)/m;\n        }\n        return total;\n    }\n}"
+          "content": "class Solution {\n    public int minEatingSpeed(int[] piles, int h) {\n        int l = 1;\n        int r = Arrays.stream(piles).max().getAsInt();\n        int ans = -1;\n        while(l <= r){\n            int m = l + (r - l)/2;\n            if(helper(piles, h, m)){\n                ans = m;\n                r = m-1;\n            }\n            else{\n                l = m + 1;\n            }\n        }\n        return ans;\n    }\n    boolean helper(int[] piles, int h, int m){\n        long total = 0;\n        for(int pile : piles){\n            total += (pile + m -1)/m;\n        }\n        return total <= h;\n    }\n}"
         },
         {
           "path": "problems/koko-eating-bananas/README.md",
-          "content": "# [875] Koko Eating Bananas\n**Difficulty:** Medium  |  **Acceptance:** 50.8%  |  **Likes:** 14509 / **Dislikes:** 955\n**Tags:** `Array`, `Binary Search`\n## Problem\nKoko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas. The guards have gone and will come back in h hours.\n\nKoko can decide her bananas-per-hour eating speed of k. Each hour, she chooses some pile of bananas and eats k bananas from that pile. If the pile has less than k bananas, she eats all of them instead and will not eat any more bananas during this hour.\n\nKoko likes to eat slowly but still wants to finish eating all the bananas before the guards return.\n\nReturn the minimum integer k such that she can eat all the bananas within h hours.\n\n&nbsp;\nExample 1:\n\nInput: piles = [3,6,7,11], h = 8\nOutput: 4\n\nExample 2:\n\nInput: piles = [30,11,23,4,20], h = 5\nOutput: 30\n\nExample 3:\n\nInput: piles = [30,11,23,4,20], h = 6\nOutput: 23\n\n&nbsp;\nConstraints:\n\n\t1 <= piles.length <= 104\n\tpiles.length <= h <= 109\n\t1 <= piles[i] <= 109\n## My Submission\n\n- Runtime: 8 ms (beats 74.3%)\n- Memory: 48 MB (beats 21.0%)\n\n## Similar Problems\n\n- [Maximum Candies Allocated to K Children](https://leetcode.com/problems/maximum-candies-allocated-to-k-children/) — Medium\n- [Minimized Maximum of Products Distributed to Any Store](https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/) — Medium\n- [Frog Jump II](https://leetcode.com/problems/frog-jump-ii/) — Medium\n- [Minimum Time to Repair Cars](https://leetcode.com/problems/minimum-time-to-repair-cars/) — Medium\n"
+          "content": "# [875] Koko Eating Bananas\n**Difficulty:** Medium  |  **Acceptance:** 50.8%  |  **Likes:** 14509 / **Dislikes:** 955\n**Tags:** `Array`, `Binary Search`\n## Problem\nKoko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas. The guards have gone and will come back in h hours.\n\nKoko can decide her bananas-per-hour eating speed of k. Each hour, she chooses some pile of bananas and eats k bananas from that pile. If the pile has less than k bananas, she eats all of them instead and will not eat any more bananas during this hour.\n\nKoko likes to eat slowly but still wants to finish eating all the bananas before the guards return.\n\nReturn the minimum integer k such that she can eat all the bananas within h hours.\n\n&nbsp;\nExample 1:\n\nInput: piles = [3,6,7,11], h = 8\nOutput: 4\n\nExample 2:\n\nInput: piles = [30,11,23,4,20], h = 5\nOutput: 30\n\nExample 3:\n\nInput: piles = [30,11,23,4,20], h = 6\nOutput: 23\n\n&nbsp;\nConstraints:\n\n\t1 <= piles.length <= 104\n\tpiles.length <= h <= 109\n\t1 <= piles[i] <= 109\n## My Submission\n\n- Runtime: 9 ms (beats 60.6%)\n- Memory: 47.2 MB (beats 93.5%)\n\n## Similar Problems\n\n- [Maximum Candies Allocated to K Children](https://leetcode.com/problems/maximum-candies-allocated-to-k-children/) — Medium\n- [Minimized Maximum of Products Distributed to Any Store](https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/) — Medium\n- [Frog Jump II](https://leetcode.com/problems/frog-jump-ii/) — Medium\n- [Minimum Time to Repair Cars](https://leetcode.com/problems/minimum-time-to-repair-cars/) — Medium\n"
         }
       ],
       "lang": {
@@ -7290,12 +7290,12 @@
         "ext": "java",
         "slug": "java"
       },
-      "runtime": "8 ms",
-      "memory": "48 MB",
-      "runtimePct": 74.25779999999999,
-      "memoryPct": 21.044099999999993,
-      "timestamp": 1791614569000,
-      "acRate": 50.79958031320436,
+      "runtime": "9 ms",
+      "memory": "47.2 MB",
+      "runtimePct": 60.58909999999999,
+      "memoryPct": 93.54099999999998,
+      "timestamp": 1794291009000,
+      "acRate": 50.79965664098244,
       "likes": 14509,
       "dislikes": 955,
       "similar": [
@@ -7330,12 +7330,16 @@
       "submissionsUrl": "https://leetcode.com/problems/koko-eating-bananas/submissions/",
       "notes": "",
       "methodTitle": "",
-      "isDuplicate": true,
-      "duplicateOf": "lc-koko-eating-bananas::2164977018",
+      "isDuplicate": false,
+      "duplicateOf": null,
       "_requestAIReview": true,
       "platform": "leetcode",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/koko-eating-bananas/leetcode/lc-koko-eating-bananas.java",
+        "problems/koko-eating-bananas/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-koko-eating-bananas::2164977018",
