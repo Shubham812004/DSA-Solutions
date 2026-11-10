@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-search-in-rotated-sorted-array` |
 | Topics | Array, Binary Search |
-| Solved | 2026-10-02 |
+| Solved | 2026-11-10 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 43.9 MB (beats 19.508899999999986%) |
+| Memory | 43 MB (beats 96.6533%) |
 
 ## Problem Statement
 
@@ -57,21 +57,21 @@ class Solution {
         int l = 0;
         int r = nums.length-1;
         while(l <= r){
-            int m = l+(r-l)/2;
-            if(nums[m] == target) return m;
-            else if(nums[l] <= nums[m]){
+            int m = l + (r - l) / 2;
+            if(nums[m] == target){
+                return m;
+            }
+            if(nums[l] <= nums[m]){
                 if(nums[l] <= target && target <= nums[m]){
                     r = m-1;
-                }
-                else{
+                }else{
                     l = m+1;
                 }
             }
             else{
                 if(nums[m] <= target && target <= nums[r]){
                     l = m+1;
-                }
-                else{
+                }else{
                     r = m-1;
                 }
             }
