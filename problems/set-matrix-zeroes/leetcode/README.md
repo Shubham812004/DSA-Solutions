@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-set-matrix-zeroes` |
 | Topics | Array, Hash Table, Matrix |
-| Solved | 2026-11-06 |
-| Runtime | 1 ms (beats 96.5468%) |
-| Memory | 47.2 MB (beats 84.52050000000001%) |
+| Solved | 2026-11-11 |
+| Runtime | 1 ms (beats 97.245%) |
+| Memory | 47.3 MB (beats 68.00999999999996%) |
 
 ## Problem Statement
 
@@ -60,7 +60,6 @@ class Solution {
 
         int[] rows = new int[n];
         int[] cols = new int[m];
-
         for(int i=0; i<n; i++){
             for(int j=0; j<m; j++){
                 if(matrix[i][j] == 0){
@@ -69,11 +68,11 @@ class Solution {
                 }
             }
         }
+
         for(int i=0; i<n; i++){
             for(int j=0; j<m; j++){
-                if(rows[i] == 1 || cols[j] == 1){
+                if(rows[i] == 1 || cols[j] == 1)
                     matrix[i][j] = 0;
-                }
             }
         }
     }
