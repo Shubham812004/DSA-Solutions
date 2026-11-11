@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-product-of-array-except-self` |
 | Topics | Array, Prefix Sum |
-| Solved | 2026-11-05 |
-| Runtime | 2 ms (beats 92.5184%) |
-| Memory | 71.5 MB (beats 65.05570000000012%) |
+| Solved | 2026-11-11 |
+| Runtime | 2 ms (beats 92.85149999999999%) |
+| Memory | 71.7 MB (beats 49.410200000000046%) |
 
 ## Problem Statement
 
@@ -50,8 +50,9 @@ class Solution {
     public int[] productExceptSelf(int[] nums) {
         int n = nums.length;
         int[] res = new int[n];
+
         int preProd = 1;
-        for(int i=0; i<n; i++){
+        for(int i=0;i <n; i++){
             res[i] = preProd;
             preProd *= nums[i];
         }

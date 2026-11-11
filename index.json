@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T06:10:13.792Z",
+  "updatedAt": "2026-11-11T06:28:31.941Z",
   "layoutVersion": 3,
   "stats": {
     "total": 258,
@@ -10412,7 +10412,7 @@
         "Dynamic Programming"
       ],
       "canonical": null,
-      "readmeContent": "# [53] Maximum Subarray\n**Difficulty:** Medium  |  **Acceptance:** 54.0%  |  **Likes:** 38631 / **Dislikes:** 1647\n**Tags:** `Array`, `Divide and Conquer`, `Dynamic Programming`\n## Problem\nGiven an integer array nums, find the subarray with the largest sum, and return its sum.\n\n&nbsp;\nExample 1:\n\nInput: nums = [-2,1,-3,4,-1,2,1,-5,4]\nOutput: 6\nExplanation: The subarray [4,-1,2,1] has the largest sum 6.\n\nExample 2:\n\nInput: nums = [1]\nOutput: 1\nExplanation: The subarray [1] has the largest sum 1.\n\nExample 3:\n\nInput: nums = [5,4,-1,7,8]\nOutput: 23\nExplanation: The subarray [5,4,-1,7,8] has the largest sum 23.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 105\n\t-104 <= nums[i] <= 104\n\n&nbsp;\nFollow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.\n## My Submission\n\n- Runtime: 1 ms (beats 99.9%)\n- Memory: 76.8 MB (beats 78.6%)\n\n## Similar Problems\n\n- [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) — Easy\n- [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) — Medium\n- [Degree of an Array](https://leetcode.com/problems/degree-of-an-array/) — Easy\n- [Longest Turbulent Subarray](https://leetcode.com/problems/longest-turbulent-subarray/) — Medium\n- [Maximum Score Of Spliced Array](https://leetcode.com/problems/maximum-score-of-spliced-array/) — Hard\n",
+      "readmeContent": "# [53] Maximum Subarray\n**Difficulty:** Medium  |  **Acceptance:** 54.1%  |  **Likes:** 38652 / **Dislikes:** 1647\n**Tags:** `Array`, `Divide and Conquer`, `Dynamic Programming`\n## Problem\nGiven an integer array nums, find the subarray with the largest sum, and return its sum.\n\n&nbsp;\nExample 1:\n\nInput: nums = [-2,1,-3,4,-1,2,1,-5,4]\nOutput: 6\nExplanation: The subarray [4,-1,2,1] has the largest sum 6.\n\nExample 2:\n\nInput: nums = [1]\nOutput: 1\nExplanation: The subarray [1] has the largest sum 1.\n\nExample 3:\n\nInput: nums = [5,4,-1,7,8]\nOutput: 23\nExplanation: The subarray [5,4,-1,7,8] has the largest sum 23.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 105\n\t-104 <= nums[i] <= 104\n\n&nbsp;\nFollow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.\n## My Submission\n\n- Runtime: 1 ms (beats 100.0%)\n- Memory: 76.8 MB (beats 73.6%)\n\n## Similar Problems\n\n- [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) — Easy\n- [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) — Medium\n- [Degree of an Array](https://leetcode.com/problems/degree-of-an-array/) — Easy\n- [Longest Turbulent Subarray](https://leetcode.com/problems/longest-turbulent-subarray/) — Medium\n- [Maximum Score Of Spliced Array](https://leetcode.com/problems/maximum-score-of-spliced-array/) — Hard\n",
       "code": "class Solution {\n    public int maxSubArray(int[] nums) {\n        int sum = 0;\n        int maxSum = Integer.MIN_VALUE;\n        for(int num : nums){\n            sum += num;\n            maxSum = Math.max(sum, maxSum);\n            if(sum < 0){\n                sum = 0;\n            }\n        }\n        return maxSum;\n    }\n}",
       "files": [
         {
@@ -10421,7 +10421,7 @@
         },
         {
           "path": "problems/lc-maximum-subarray/README.md",
-          "content": "# [53] Maximum Subarray\n**Difficulty:** Medium  |  **Acceptance:** 54.0%  |  **Likes:** 38631 / **Dislikes:** 1647\n**Tags:** `Array`, `Divide and Conquer`, `Dynamic Programming`\n## Problem\nGiven an integer array nums, find the subarray with the largest sum, and return its sum.\n\n&nbsp;\nExample 1:\n\nInput: nums = [-2,1,-3,4,-1,2,1,-5,4]\nOutput: 6\nExplanation: The subarray [4,-1,2,1] has the largest sum 6.\n\nExample 2:\n\nInput: nums = [1]\nOutput: 1\nExplanation: The subarray [1] has the largest sum 1.\n\nExample 3:\n\nInput: nums = [5,4,-1,7,8]\nOutput: 23\nExplanation: The subarray [5,4,-1,7,8] has the largest sum 23.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 105\n\t-104 <= nums[i] <= 104\n\n&nbsp;\nFollow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.\n## My Submission\n\n- Runtime: 1 ms (beats 99.9%)\n- Memory: 76.8 MB (beats 78.6%)\n\n## Similar Problems\n\n- [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) — Easy\n- [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) — Medium\n- [Degree of an Array](https://leetcode.com/problems/degree-of-an-array/) — Easy\n- [Longest Turbulent Subarray](https://leetcode.com/problems/longest-turbulent-subarray/) — Medium\n- [Maximum Score Of Spliced Array](https://leetcode.com/problems/maximum-score-of-spliced-array/) — Hard\n"
+          "content": "# [53] Maximum Subarray\n**Difficulty:** Medium  |  **Acceptance:** 54.1%  |  **Likes:** 38652 / **Dislikes:** 1647\n**Tags:** `Array`, `Divide and Conquer`, `Dynamic Programming`\n## Problem\nGiven an integer array nums, find the subarray with the largest sum, and return its sum.\n\n&nbsp;\nExample 1:\n\nInput: nums = [-2,1,-3,4,-1,2,1,-5,4]\nOutput: 6\nExplanation: The subarray [4,-1,2,1] has the largest sum 6.\n\nExample 2:\n\nInput: nums = [1]\nOutput: 1\nExplanation: The subarray [1] has the largest sum 1.\n\nExample 3:\n\nInput: nums = [5,4,-1,7,8]\nOutput: 23\nExplanation: The subarray [5,4,-1,7,8] has the largest sum 23.\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 105\n\t-104 <= nums[i] <= 104\n\n&nbsp;\nFollow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.\n## My Submission\n\n- Runtime: 1 ms (beats 100.0%)\n- Memory: 76.8 MB (beats 73.6%)\n\n## Similar Problems\n\n- [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) — Easy\n- [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) — Medium\n- [Degree of an Array](https://leetcode.com/problems/degree-of-an-array/) — Easy\n- [Longest Turbulent Subarray](https://leetcode.com/problems/longest-turbulent-subarray/) — Medium\n- [Maximum Score Of Spliced Array](https://leetcode.com/problems/maximum-score-of-spliced-array/) — Hard\n"
         }
       ],
       "lang": {
@@ -10431,11 +10431,11 @@
       },
       "runtime": "1 ms",
       "memory": "76.8 MB",
-      "runtimePct": 99.9465,
-      "memoryPct": 78.64950000000007,
+      "runtimePct": 99.9693,
+      "memoryPct": 73.56899999999992,
       "timestamp": 1793898396000,
-      "acRate": 54.041422757522476,
-      "likes": 38631,
+      "acRate": 54.053276709399746,
+      "likes": 38652,
       "dislikes": 1647,
       "similar": [
         {
@@ -13273,16 +13273,16 @@
         "topic": "arrays",
         "voteCount": 96
       },
-      "readmeContent": "# [238] Product of Array Except Self\n**Difficulty:** Medium  |  **Acceptance:** 69.4%  |  **Likes:** 26658 / **Dislikes:** 1736\n**Tags:** `Array`, `Prefix Sum`\n## Problem\nGiven an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].\n\nThe product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.\n\nYou must write an algorithm that runs in&nbsp;O(n)&nbsp;time and without using the division operation.\n\n&nbsp;\nExample 1:\nInput: nums = [1,2,3,4]\nOutput: [24,12,8,6]\nExample 2:\nInput: nums = [-1,1,0,-3,3]\nOutput: [0,0,9,0,0]\n\n&nbsp;\nConstraints:\n\n\t2 <= nums.length <= 105\n\t-30 <= nums[i] <= 30\n\tThe input is generated such that answer[i] is guaranteed to fit in a 32-bit integer.\n\n&nbsp;\nFollow up:&nbsp;Can you solve the problem in O(1)&nbsp;extra&nbsp;space complexity? (The output array does not count as extra space for space complexity analysis.)\n## My Submission\n\n- Runtime: 2 ms (beats 92.5%)\n- Memory: 71.5 MB (beats 65.1%)\n\n## Similar Problems\n\n- [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) — Hard\n- [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) — Medium\n- [Minimum Difference in Sums After Removal of Elements](https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements/) — Hard\n- [Construct Product Matrix](https://leetcode.com/problems/construct-product-matrix/) — Medium\n- [Find Sum of Array Product of Magical Sequences](https://leetcode.com/problems/find-sum-of-array-product-of-magical-sequences/) — Hard\n",
-      "code": "class Solution {\n    public int[] productExceptSelf(int[] nums) {\n        int n = nums.length;\n        int[] res = new int[n];\n        int preProd = 1;\n        for(int i=0; i<n; i++){\n            res[i] = preProd;\n            preProd *= nums[i];\n        }\n        int sufProd = 1;\n        for(int i=n-1; i>=0; i--){\n            res[i] *= sufProd;\n            sufProd *= nums[i];\n        }\n        return res;\n    }\n}",
+      "readmeContent": "# [238] Product of Array Except Self\n**Difficulty:** Medium  |  **Acceptance:** 69.4%  |  **Likes:** 26675 / **Dislikes:** 1736\n**Tags:** `Array`, `Prefix Sum`\n## Problem\nGiven an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].\n\nThe product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.\n\nYou must write an algorithm that runs in&nbsp;O(n)&nbsp;time and without using the division operation.\n\n&nbsp;\nExample 1:\nInput: nums = [1,2,3,4]\nOutput: [24,12,8,6]\nExample 2:\nInput: nums = [-1,1,0,-3,3]\nOutput: [0,0,9,0,0]\n\n&nbsp;\nConstraints:\n\n\t2 <= nums.length <= 105\n\t-30 <= nums[i] <= 30\n\tThe input is generated such that answer[i] is guaranteed to fit in a 32-bit integer.\n\n&nbsp;\nFollow up:&nbsp;Can you solve the problem in O(1)&nbsp;extra&nbsp;space complexity? (The output array does not count as extra space for space complexity analysis.)\n## My Submission\n\n- Runtime: 2 ms (beats 92.9%)\n- Memory: 71.7 MB (beats 49.4%)\n\n## Similar Problems\n\n- [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) — Hard\n- [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) — Medium\n- [Minimum Difference in Sums After Removal of Elements](https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements/) — Hard\n- [Construct Product Matrix](https://leetcode.com/problems/construct-product-matrix/) — Medium\n- [Find Sum of Array Product of Magical Sequences](https://leetcode.com/problems/find-sum-of-array-product-of-magical-sequences/) — Hard\n",
+      "code": "class Solution {\n    public int[] productExceptSelf(int[] nums) {\n        int n = nums.length;\n        int[] res = new int[n];\n\n        int preProd = 1;\n        for(int i=0;i <n; i++){\n            res[i] = preProd;\n            preProd *= nums[i];\n        }\n        int sufProd = 1;\n        for(int i=n-1; i>=0; i--){\n            res[i] *= sufProd;\n            sufProd *= nums[i];\n        }\n        return res;\n    }\n}",
       "files": [
         {
           "path": "problems/product-of-array-except-self/leetcode/lc-product-of-array-except-self.java",
-          "content": "class Solution {\n    public int[] productExceptSelf(int[] nums) {\n        int n = nums.length;\n        int[] res = new int[n];\n        int preProd = 1;\n        for(int i=0; i<n; i++){\n            res[i] = preProd;\n            preProd *= nums[i];\n        }\n        int sufProd = 1;\n        for(int i=n-1; i>=0; i--){\n            res[i] *= sufProd;\n            sufProd *= nums[i];\n        }\n        return res;\n    }\n}"
+          "content": "class Solution {\n    public int[] productExceptSelf(int[] nums) {\n        int n = nums.length;\n        int[] res = new int[n];\n\n        int preProd = 1;\n        for(int i=0;i <n; i++){\n            res[i] = preProd;\n            preProd *= nums[i];\n        }\n        int sufProd = 1;\n        for(int i=n-1; i>=0; i--){\n            res[i] *= sufProd;\n            sufProd *= nums[i];\n        }\n        return res;\n    }\n}"
         },
         {
           "path": "problems/product-of-array-except-self/README.md",
-          "content": "# [238] Product of Array Except Self\n**Difficulty:** Medium  |  **Acceptance:** 69.4%  |  **Likes:** 26658 / **Dislikes:** 1736\n**Tags:** `Array`, `Prefix Sum`\n## Problem\nGiven an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].\n\nThe product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.\n\nYou must write an algorithm that runs in&nbsp;O(n)&nbsp;time and without using the division operation.\n\n&nbsp;\nExample 1:\nInput: nums = [1,2,3,4]\nOutput: [24,12,8,6]\nExample 2:\nInput: nums = [-1,1,0,-3,3]\nOutput: [0,0,9,0,0]\n\n&nbsp;\nConstraints:\n\n\t2 <= nums.length <= 105\n\t-30 <= nums[i] <= 30\n\tThe input is generated such that answer[i] is guaranteed to fit in a 32-bit integer.\n\n&nbsp;\nFollow up:&nbsp;Can you solve the problem in O(1)&nbsp;extra&nbsp;space complexity? (The output array does not count as extra space for space complexity analysis.)\n## My Submission\n\n- Runtime: 2 ms (beats 92.5%)\n- Memory: 71.5 MB (beats 65.1%)\n\n## Similar Problems\n\n- [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) — Hard\n- [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) — Medium\n- [Minimum Difference in Sums After Removal of Elements](https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements/) — Hard\n- [Construct Product Matrix](https://leetcode.com/problems/construct-product-matrix/) — Medium\n- [Find Sum of Array Product of Magical Sequences](https://leetcode.com/problems/find-sum-of-array-product-of-magical-sequences/) — Hard\n"
+          "content": "# [238] Product of Array Except Self\n**Difficulty:** Medium  |  **Acceptance:** 69.4%  |  **Likes:** 26675 / **Dislikes:** 1736\n**Tags:** `Array`, `Prefix Sum`\n## Problem\nGiven an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].\n\nThe product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.\n\nYou must write an algorithm that runs in&nbsp;O(n)&nbsp;time and without using the division operation.\n\n&nbsp;\nExample 1:\nInput: nums = [1,2,3,4]\nOutput: [24,12,8,6]\nExample 2:\nInput: nums = [-1,1,0,-3,3]\nOutput: [0,0,9,0,0]\n\n&nbsp;\nConstraints:\n\n\t2 <= nums.length <= 105\n\t-30 <= nums[i] <= 30\n\tThe input is generated such that answer[i] is guaranteed to fit in a 32-bit integer.\n\n&nbsp;\nFollow up:&nbsp;Can you solve the problem in O(1)&nbsp;extra&nbsp;space complexity? (The output array does not count as extra space for space complexity analysis.)\n## My Submission\n\n- Runtime: 2 ms (beats 92.9%)\n- Memory: 71.7 MB (beats 49.4%)\n\n## Similar Problems\n\n- [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) — Hard\n- [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) — Medium\n- [Minimum Difference in Sums After Removal of Elements](https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements/) — Hard\n- [Construct Product Matrix](https://leetcode.com/problems/construct-product-matrix/) — Medium\n- [Find Sum of Array Product of Magical Sequences](https://leetcode.com/problems/find-sum-of-array-product-of-magical-sequences/) — Hard\n"
         }
       ],
       "lang": {
@@ -13291,12 +13291,12 @@
         "slug": "java"
       },
       "runtime": "2 ms",
-      "memory": "71.5 MB",
-      "runtimePct": 92.5184,
-      "memoryPct": 65.05570000000012,
-      "timestamp": 1793900633000,
-      "acRate": 69.41960442404603,
-      "likes": 26658,
+      "memory": "71.7 MB",
+      "runtimePct": 92.85149999999999,
+      "memoryPct": 49.410200000000046,
+      "timestamp": 1794378504000,
+      "acRate": 69.4307888233994,
+      "likes": 26675,
       "dislikes": 1736,
       "similar": [
         {
@@ -13336,8 +13336,8 @@
       "submissionsUrl": "https://leetcode.com/problems/product-of-array-except-self/submissions/",
       "notes": "",
       "methodTitle": "",
-      "isDuplicate": true,
-      "duplicateOf": "lc-product-of-array-except-self::2144990775",
+      "isDuplicate": false,
+      "duplicateOf": null,
       "_requestAIReview": true,
       "platform": "leetcode",
       "methods": [],
@@ -17224,7 +17224,7 @@
         "Prefix Sum"
       ],
       "canonical": null,
-      "readmeContent": "# [560] Subarray Sum Equals K\n**Difficulty:** Medium  |  **Acceptance:** 48.4%  |  **Likes:** 26060 / **Dislikes:** 881\n**Tags:** `Array`, `Hash Table`, `Prefix Sum`\n## Problem\nGiven an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.\n\nA subarray is a contiguous non-empty sequence of elements within an array.\n\n&nbsp;\nExample 1:\nInput: nums = [1,1,1], k = 2\nOutput: 2\nExample 2:\nInput: nums = [1,2,3], k = 3\nOutput: 2\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 2 * 104\n\t-1000 <= nums[i] <= 1000\n\t-107 <= k <= 107\n## My Submission\n\n- Runtime: 24 ms (beats 79.5%)\n- Memory: 48.5 MB (beats 63.9%)\n\n## Similar Problems\n\n- [Two Sum](https://leetcode.com/problems/two-sum/) — Easy\n- [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/) — Medium\n- [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) — Medium\n- [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) — Easy\n- [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/) — Medium\n",
+      "readmeContent": "# [560] Subarray Sum Equals K\n**Difficulty:** Medium  |  **Acceptance:** 48.4%  |  **Likes:** 26073 / **Dislikes:** 882\n**Tags:** `Array`, `Hash Table`, `Prefix Sum`\n## Problem\nGiven an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.\n\nA subarray is a contiguous non-empty sequence of elements within an array.\n\n&nbsp;\nExample 1:\nInput: nums = [1,1,1], k = 2\nOutput: 2\nExample 2:\nInput: nums = [1,2,3], k = 3\nOutput: 2\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 2 * 104\n\t-1000 <= nums[i] <= 1000\n\t-107 <= k <= 107\n## My Submission\n\n- Runtime: 24 ms (beats 81.1%)\n- Memory: 48.5 MB (beats 58.9%)\n\n## Similar Problems\n\n- [Two Sum](https://leetcode.com/problems/two-sum/) — Easy\n- [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/) — Medium\n- [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) — Medium\n- [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) — Easy\n- [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/) — Medium\n",
       "code": "class Solution {\n    public int subarraySum(int[] nums, int k) {\n        HashMap<Integer, Integer> map = new HashMap<>();\n        map.put(0, 1);\n        int sum = 0;\n        int count = 0;\n        for(int num : nums){\n            sum += num;\n            if(map.containsKey(sum - k)) count += map.get(sum - k);\n            map.put(sum, map.getOrDefault(sum, 0) + 1);\n        }\n        return count;\n    }\n}",
       "files": [
         {
@@ -17233,7 +17233,7 @@
         },
         {
           "path": "problems/lc-subarray-sum-equals-k/README.md",
-          "content": "# [560] Subarray Sum Equals K\n**Difficulty:** Medium  |  **Acceptance:** 48.4%  |  **Likes:** 26060 / **Dislikes:** 881\n**Tags:** `Array`, `Hash Table`, `Prefix Sum`\n## Problem\nGiven an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.\n\nA subarray is a contiguous non-empty sequence of elements within an array.\n\n&nbsp;\nExample 1:\nInput: nums = [1,1,1], k = 2\nOutput: 2\nExample 2:\nInput: nums = [1,2,3], k = 3\nOutput: 2\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 2 * 104\n\t-1000 <= nums[i] <= 1000\n\t-107 <= k <= 107\n## My Submission\n\n- Runtime: 24 ms (beats 79.5%)\n- Memory: 48.5 MB (beats 63.9%)\n\n## Similar Problems\n\n- [Two Sum](https://leetcode.com/problems/two-sum/) — Easy\n- [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/) — Medium\n- [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) — Medium\n- [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) — Easy\n- [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/) — Medium\n"
+          "content": "# [560] Subarray Sum Equals K\n**Difficulty:** Medium  |  **Acceptance:** 48.4%  |  **Likes:** 26073 / **Dislikes:** 882\n**Tags:** `Array`, `Hash Table`, `Prefix Sum`\n## Problem\nGiven an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.\n\nA subarray is a contiguous non-empty sequence of elements within an array.\n\n&nbsp;\nExample 1:\nInput: nums = [1,1,1], k = 2\nOutput: 2\nExample 2:\nInput: nums = [1,2,3], k = 3\nOutput: 2\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 2 * 104\n\t-1000 <= nums[i] <= 1000\n\t-107 <= k <= 107\n## My Submission\n\n- Runtime: 24 ms (beats 81.1%)\n- Memory: 48.5 MB (beats 58.9%)\n\n## Similar Problems\n\n- [Two Sum](https://leetcode.com/problems/two-sum/) — Easy\n- [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/) — Medium\n- [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) — Medium\n- [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) — Easy\n- [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/) — Medium\n"
         }
       ],
       "lang": {
@@ -17243,12 +17243,12 @@
       },
       "runtime": "24 ms",
       "memory": "48.5 MB",
-      "runtimePct": 79.46730000000001,
-      "memoryPct": 63.94520000000004,
+      "runtimePct": 81.09369999999998,
+      "memoryPct": 58.86909999999997,
       "timestamp": 1793898710000,
-      "acRate": 48.408675965573686,
-      "likes": 26060,
-      "dislikes": 881,
+      "acRate": 48.41993154554779,
+      "likes": 26073,
+      "dislikes": 882,
       "similar": [
         {
           "difficulty": "Easy",

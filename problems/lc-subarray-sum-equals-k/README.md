@@ -7,8 +7,8 @@
 | Problem ID | `lc-subarray-sum-equals-k` |
 | Topics | Array, Hash Table, Prefix Sum |
 | Solved | 2026-11-05 |
-| Runtime | 24 ms (beats 79.46730000000001%) |
-| Memory | 48.5 MB (beats 63.94520000000004%) |
+| Runtime | 24 ms (beats 81.09369999999998%) |
+| Memory | 48.5 MB (beats 58.86909999999997%) |
 
 ## Problem Statement
 
