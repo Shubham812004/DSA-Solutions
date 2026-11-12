@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-find-all-anagrams-in-a-string` |
 | Topics | Hash Table, String, Sliding Window |
-| Solved | 2026-11-09 |
-| Runtime | 362 ms (beats 11.105300000000053%) |
-| Memory | 46.6 MB (beats 75.05230000000002%) |
+| Solved | 2026-11-12 |
+| Runtime | 371 ms (beats 10.151099999999996%) |
+| Memory | 46.5 MB (beats 72.56980000000004%) |
 
 ## Problem Statement
 
@@ -49,16 +49,17 @@ class Solution {
         List<Integer> res = new ArrayList<>();
         int n = s.length();
         int k = p.length();
-        int[] kCount = new int[26];
+        int[] pFreq = new int[26];
         for(int i=0; i<k; i++){
-            kCount[p.charAt(i) - 'a']++;
+            pFreq[p.charAt(i) - 'a']++;
         }
+        
         for(int i=0; i<=n-k; i++){
-            int[] sCount = new int[26];
+            int[] sFreq = new int[26];
             for(int j=i; j<i+k; j++){
-                sCount[s.charAt(j) - 'a']++;
+                sFreq[s.charAt(j) - 'a']++;
             }
-            if(Arrays.equals(sCount, kCount)) res.add(i);
+            if(Arrays.equals(sFreq, pFreq)) res.add(i);
         }
         return res;
     }

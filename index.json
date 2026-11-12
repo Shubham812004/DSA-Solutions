@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T13:57:33.727Z",
+  "updatedAt": "2026-11-12T14:09:53.018Z",
   "layoutVersion": 3,
   "stats": {
     "total": 258,
@@ -5067,16 +5067,16 @@
         "Sliding Window"
       ],
       "canonical": null,
-      "readmeContent": "# [438] Find All Anagrams in a String\n**Difficulty:** Medium  |  **Acceptance:** 54.8%  |  **Likes:** 13495 / **Dislikes:** 387\n**Tags:** `Hash Table`, `String`, `Sliding Window`\n## Problem\nGiven two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order.\n\n&nbsp;\nExample 1:\n\nInput: s = \"cbaebabacd\", p = \"abc\"\nOutput: [0,6]\nExplanation:\nThe substring with start index = 0 is \"cba\", which is an anagram of \"abc\".\nThe substring with start index = 6 is \"bac\", which is an anagram of \"abc\".\n\nExample 2:\n\nInput: s = \"abab\", p = \"ab\"\nOutput: [0,1,2]\nExplanation:\nThe substring with start index = 0 is \"ab\", which is an anagram of \"ab\".\nThe substring with start index = 1 is \"ba\", which is an anagram of \"ab\".\nThe substring with start index = 2 is \"ab\", which is an anagram of \"ab\".\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length, p.length <= 3 * 104\n\ts and p consist of lowercase English letters.\n## My Submission\n\n- Runtime: 362 ms (beats 11.1%)\n- Memory: 46.6 MB (beats 75.1%)\n\n## Similar Problems\n\n- [Valid Anagram](https://leetcode.com/problems/valid-anagram/) — Easy\n- [Permutation in String](https://leetcode.com/problems/permutation-in-string/) — Medium\n",
-      "code": "class Solution {\n    public List<Integer> findAnagrams(String s, String p) {\n        List<Integer> res = new ArrayList<>();\n        int n = s.length();\n        int k = p.length();\n        int[] kCount = new int[26];\n        for(int i=0; i<k; i++){\n            kCount[p.charAt(i) - 'a']++;\n        }\n        for(int i=0; i<=n-k; i++){\n            int[] sCount = new int[26];\n            for(int j=i; j<i+k; j++){\n                sCount[s.charAt(j) - 'a']++;\n            }\n            if(Arrays.equals(sCount, kCount)) res.add(i);\n        }\n        return res;\n    }\n}",
+      "readmeContent": "# [438] Find All Anagrams in a String\n**Difficulty:** Medium  |  **Acceptance:** 54.8%  |  **Likes:** 13498 / **Dislikes:** 387\n**Tags:** `Hash Table`, `String`, `Sliding Window`\n## Problem\nGiven two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order.\n\n&nbsp;\nExample 1:\n\nInput: s = \"cbaebabacd\", p = \"abc\"\nOutput: [0,6]\nExplanation:\nThe substring with start index = 0 is \"cba\", which is an anagram of \"abc\".\nThe substring with start index = 6 is \"bac\", which is an anagram of \"abc\".\n\nExample 2:\n\nInput: s = \"abab\", p = \"ab\"\nOutput: [0,1,2]\nExplanation:\nThe substring with start index = 0 is \"ab\", which is an anagram of \"ab\".\nThe substring with start index = 1 is \"ba\", which is an anagram of \"ab\".\nThe substring with start index = 2 is \"ab\", which is an anagram of \"ab\".\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length, p.length <= 3 * 104\n\ts and p consist of lowercase English letters.\n## My Submission\n\n- Runtime: 371 ms (beats 10.2%)\n- Memory: 46.5 MB (beats 72.6%)\n\n## Similar Problems\n\n- [Valid Anagram](https://leetcode.com/problems/valid-anagram/) — Easy\n- [Permutation in String](https://leetcode.com/problems/permutation-in-string/) — Medium\n",
+      "code": "class Solution {\n    public List<Integer> findAnagrams(String s, String p) {\n        List<Integer> res = new ArrayList<>();\n        int n = s.length();\n        int k = p.length();\n        int[] pFreq = new int[26];\n        for(int i=0; i<k; i++){\n            pFreq[p.charAt(i) - 'a']++;\n        }\n        \n        for(int i=0; i<=n-k; i++){\n            int[] sFreq = new int[26];\n            for(int j=i; j<i+k; j++){\n                sFreq[s.charAt(j) - 'a']++;\n            }\n            if(Arrays.equals(sFreq, pFreq)) res.add(i);\n        }\n        return res;\n    }\n}",
       "files": [
         {
           "path": "problems/lc-find-all-anagrams-in-a-string/lc-find-all-anagrams-in-a-string.java",
-          "content": "class Solution {\n    public List<Integer> findAnagrams(String s, String p) {\n        List<Integer> res = new ArrayList<>();\n        int n = s.length();\n        int k = p.length();\n        int[] kCount = new int[26];\n        for(int i=0; i<k; i++){\n            kCount[p.charAt(i) - 'a']++;\n        }\n        for(int i=0; i<=n-k; i++){\n            int[] sCount = new int[26];\n            for(int j=i; j<i+k; j++){\n                sCount[s.charAt(j) - 'a']++;\n            }\n            if(Arrays.equals(sCount, kCount)) res.add(i);\n        }\n        return res;\n    }\n}"
+          "content": "class Solution {\n    public List<Integer> findAnagrams(String s, String p) {\n        List<Integer> res = new ArrayList<>();\n        int n = s.length();\n        int k = p.length();\n        int[] pFreq = new int[26];\n        for(int i=0; i<k; i++){\n            pFreq[p.charAt(i) - 'a']++;\n        }\n        \n        for(int i=0; i<=n-k; i++){\n            int[] sFreq = new int[26];\n            for(int j=i; j<i+k; j++){\n                sFreq[s.charAt(j) - 'a']++;\n            }\n            if(Arrays.equals(sFreq, pFreq)) res.add(i);\n        }\n        return res;\n    }\n}"
         },
         {
           "path": "problems/lc-find-all-anagrams-in-a-string/README.md",
-          "content": "# [438] Find All Anagrams in a String\n**Difficulty:** Medium  |  **Acceptance:** 54.8%  |  **Likes:** 13495 / **Dislikes:** 387\n**Tags:** `Hash Table`, `String`, `Sliding Window`\n## Problem\nGiven two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order.\n\n&nbsp;\nExample 1:\n\nInput: s = \"cbaebabacd\", p = \"abc\"\nOutput: [0,6]\nExplanation:\nThe substring with start index = 0 is \"cba\", which is an anagram of \"abc\".\nThe substring with start index = 6 is \"bac\", which is an anagram of \"abc\".\n\nExample 2:\n\nInput: s = \"abab\", p = \"ab\"\nOutput: [0,1,2]\nExplanation:\nThe substring with start index = 0 is \"ab\", which is an anagram of \"ab\".\nThe substring with start index = 1 is \"ba\", which is an anagram of \"ab\".\nThe substring with start index = 2 is \"ab\", which is an anagram of \"ab\".\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length, p.length <= 3 * 104\n\ts and p consist of lowercase English letters.\n## My Submission\n\n- Runtime: 362 ms (beats 11.1%)\n- Memory: 46.6 MB (beats 75.1%)\n\n## Similar Problems\n\n- [Valid Anagram](https://leetcode.com/problems/valid-anagram/) — Easy\n- [Permutation in String](https://leetcode.com/problems/permutation-in-string/) — Medium\n"
+          "content": "# [438] Find All Anagrams in a String\n**Difficulty:** Medium  |  **Acceptance:** 54.8%  |  **Likes:** 13498 / **Dislikes:** 387\n**Tags:** `Hash Table`, `String`, `Sliding Window`\n## Problem\nGiven two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order.\n\n&nbsp;\nExample 1:\n\nInput: s = \"cbaebabacd\", p = \"abc\"\nOutput: [0,6]\nExplanation:\nThe substring with start index = 0 is \"cba\", which is an anagram of \"abc\".\nThe substring with start index = 6 is \"bac\", which is an anagram of \"abc\".\n\nExample 2:\n\nInput: s = \"abab\", p = \"ab\"\nOutput: [0,1,2]\nExplanation:\nThe substring with start index = 0 is \"ab\", which is an anagram of \"ab\".\nThe substring with start index = 1 is \"ba\", which is an anagram of \"ab\".\nThe substring with start index = 2 is \"ab\", which is an anagram of \"ab\".\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length, p.length <= 3 * 104\n\ts and p consist of lowercase English letters.\n## My Submission\n\n- Runtime: 371 ms (beats 10.2%)\n- Memory: 46.5 MB (beats 72.6%)\n\n## Similar Problems\n\n- [Valid Anagram](https://leetcode.com/problems/valid-anagram/) — Easy\n- [Permutation in String](https://leetcode.com/problems/permutation-in-string/) — Medium\n"
         }
       ],
       "lang": {
@@ -5084,13 +5084,13 @@
         "ext": "java",
         "slug": "java"
       },
-      "runtime": "362 ms",
-      "memory": "46.6 MB",
-      "runtimePct": 11.105300000000053,
-      "memoryPct": 75.05230000000002,
-      "timestamp": 1794204558000,
-      "acRate": 54.778908412047755,
-      "likes": 13495,
+      "runtime": "371 ms",
+      "memory": "46.5 MB",
+      "runtimePct": 10.151099999999996,
+      "memoryPct": 72.56980000000004,
+      "timestamp": 1794492586000,
+      "acRate": 54.78703656551287,
+      "likes": 13498,
       "dislikes": 387,
       "similar": [
         {
