@@ -7,8 +7,8 @@
 | Problem ID | `lc-group-anagrams` |
 | Topics | Array, String, Hash Table, Sorting |
 | Solved | 2025-11-22 |
-| Runtime | 23 ms (beats 48.209399999999995%) |
-| Memory | 16.2 MB (beats 56.3027%) |
+| Runtime | 23 ms (beats 48.155899999999995%) |
+| Memory | 16.2 MB (beats 55.6905%) |
 
 ## Problem Statement
 

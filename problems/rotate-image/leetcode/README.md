@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-rotate-image` |
 | Topics | Array, Math, Matrix |
-| Solved | 2026-04-13 |
+| Solved | 2026-11-06 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 43.7 MB (beats 53.405799999999985%) |
+| Memory | 43.2 MB (beats 83.2305%) |
 
 ## Problem Statement
 
@@ -44,7 +44,6 @@ You have to rotate the image **in-place**, which means you have to modify the in
 class Solution {
     public void rotate(int[][] matrix) {
         int n = matrix.length;
-        int m = matrix[0].length;
         for(int i=0; i<n-1; i++){
             for(int j=i+1; j<n; j++){
                 int temp = matrix[i][j];
@@ -53,14 +52,15 @@ class Solution {
             }
         }
         for(int i=0; i<n; i++){
-            int left = 0;
-            int right = n-1;
-            while(left < right){
-                int temp = matrix[i][left];
-                matrix[i][left] = matrix[i][right];
-                matrix[i][right] = temp;
-                left++;
-                right--;
+            int l = 0;
+            int r = n-1;
+            while(l < r){
+                int temp = matrix[i][l];
+                matrix[i][l] = matrix[i][r];
+                matrix[i][r] = temp;
+                l++;
+                r--;
+
             }
         }
     }

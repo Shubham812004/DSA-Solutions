@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-longest-substring-without-repeating-characters` |
 | Topics | String, Hash Table, Sliding Window |
-| Solved | 2026-11-09 |
-| Runtime | 73 ms (beats 20.77080000000003%) |
-| Memory | 47.6 MB (beats 64.89089999999997%) |
+| Solved | 2026-11-12 |
+| Runtime | 69 ms (beats 28.07519999999999%) |
+| Memory | 47.2 MB (beats 94.92400000000002%) |
 
 ## Problem Statement
 
@@ -49,17 +49,17 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 class Solution {
     public int lengthOfLongestSubstring(String s) {
         Set<Character> set = new HashSet<>();
-        int maxlen = 0;
+        int maxLen = 0;
         int l = 0;
         for(int r=0; r<s.length(); r++){
             while(set.contains(s.charAt(r))){
                 set.remove(s.charAt(l));
                 l++;
             }
+            maxLen = Math.max(maxLen, r-l+1);
             set.add(s.charAt(r));
-            maxlen = Math.max(maxlen, r-l+1);
         }
-        return maxlen;
+        return maxLen;
     }
 }
 ```

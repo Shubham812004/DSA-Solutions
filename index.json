@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T17:31:05.395Z",
+  "updatedAt": "2026-11-12T13:57:33.727Z",
   "layoutVersion": 3,
   "stats": {
     "total": 258,
@@ -6112,7 +6112,7 @@
         "topic": "arrays",
         "voteCount": 94
       },
-      "readmeContent": "# [49] Group Anagrams\n**Difficulty:** Medium  |  **Acceptance:** 73.5%  |  **Likes:** 22776 / **Dislikes:** 790\n**Tags:** `Array`, `Hash Table`, `String`, `Sorting`\n## Problem\nGiven an array of strings strs, group the anagrams together. You can return the answer in any order.\n\n&nbsp;\nExample 1:\n\nInput: strs = [\"eat\",\"tea\",\"tan\",\"ate\",\"nat\",\"bat\"]\n\nOutput: [[\"bat\"],[\"nat\",\"tan\"],[\"ate\",\"eat\",\"tea\"]]\n\nExplanation:\n\n\tThere is no string in strs that can be rearranged to form \"bat\".\n\tThe strings \"nat\" and \"tan\" are anagrams as they can be rearranged to form each other.\n\tThe strings \"ate\", \"eat\", and \"tea\" are anagrams as they can be rearranged to form each other.\n\nExample 2:\n\nInput: strs = [\"\"]\n\nOutput: [[\"\"]]\n\nExample 3:\n\nInput: strs = [\"a\"]\n\nOutput: [[\"a\"]]\n\n&nbsp;\nConstraints:\n\n\t1 <= strs.length <= 104\n\t0 <= strs[i].length <= 100\n\tstrs[i] consists of lowercase English letters.\n## My Submission\n\n- Runtime: 23 ms (beats 48.2%)\n- Memory: 16.2 MB (beats 56.3%)\n\n## Similar Problems\n\n- [Valid Anagram](https://leetcode.com/problems/valid-anagram/) — Easy\n- [Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/) — Easy\n- [Count Anagrams](https://leetcode.com/problems/count-anagrams/) — Hard\n",
+      "readmeContent": "# [49] Group Anagrams\n**Difficulty:** Medium  |  **Acceptance:** 73.5%  |  **Likes:** 22789 / **Dislikes:** 791\n**Tags:** `Array`, `Hash Table`, `String`, `Sorting`\n## Problem\nGiven an array of strings strs, group the anagrams together. You can return the answer in any order.\n\n&nbsp;\nExample 1:\n\nInput: strs = [\"eat\",\"tea\",\"tan\",\"ate\",\"nat\",\"bat\"]\n\nOutput: [[\"bat\"],[\"nat\",\"tan\"],[\"ate\",\"eat\",\"tea\"]]\n\nExplanation:\n\n\tThere is no string in strs that can be rearranged to form \"bat\".\n\tThe strings \"nat\" and \"tan\" are anagrams as they can be rearranged to form each other.\n\tThe strings \"ate\", \"eat\", and \"tea\" are anagrams as they can be rearranged to form each other.\n\nExample 2:\n\nInput: strs = [\"\"]\n\nOutput: [[\"\"]]\n\nExample 3:\n\nInput: strs = [\"a\"]\n\nOutput: [[\"a\"]]\n\n&nbsp;\nConstraints:\n\n\t1 <= strs.length <= 104\n\t0 <= strs[i].length <= 100\n\tstrs[i] consists of lowercase English letters.\n## My Submission\n\n- Runtime: 23 ms (beats 48.2%)\n- Memory: 16.2 MB (beats 55.7%)\n\n## Similar Problems\n\n- [Valid Anagram](https://leetcode.com/problems/valid-anagram/) — Easy\n- [Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/) — Easy\n- [Count Anagrams](https://leetcode.com/problems/count-anagrams/) — Hard\n",
       "code": "class Solution(object):\n    def groupAnagrams(self, strs):\n        freq = {}\n        for word in strs:\n            sorted_word = ''.join(sorted(word))\n            if sorted_word not in freq:\n                freq[sorted_word] = []\n            freq[sorted_word].append(word)\n        return list(freq.values())",
       "files": [
         {
@@ -6121,7 +6121,7 @@
         },
         {
           "path": "problems/group-anagrams/README.md",
-          "content": "# [49] Group Anagrams\n**Difficulty:** Medium  |  **Acceptance:** 73.5%  |  **Likes:** 22776 / **Dislikes:** 790\n**Tags:** `Array`, `Hash Table`, `String`, `Sorting`\n## Problem\nGiven an array of strings strs, group the anagrams together. You can return the answer in any order.\n\n&nbsp;\nExample 1:\n\nInput: strs = [\"eat\",\"tea\",\"tan\",\"ate\",\"nat\",\"bat\"]\n\nOutput: [[\"bat\"],[\"nat\",\"tan\"],[\"ate\",\"eat\",\"tea\"]]\n\nExplanation:\n\n\tThere is no string in strs that can be rearranged to form \"bat\".\n\tThe strings \"nat\" and \"tan\" are anagrams as they can be rearranged to form each other.\n\tThe strings \"ate\", \"eat\", and \"tea\" are anagrams as they can be rearranged to form each other.\n\nExample 2:\n\nInput: strs = [\"\"]\n\nOutput: [[\"\"]]\n\nExample 3:\n\nInput: strs = [\"a\"]\n\nOutput: [[\"a\"]]\n\n&nbsp;\nConstraints:\n\n\t1 <= strs.length <= 104\n\t0 <= strs[i].length <= 100\n\tstrs[i] consists of lowercase English letters.\n## My Submission\n\n- Runtime: 23 ms (beats 48.2%)\n- Memory: 16.2 MB (beats 56.3%)\n\n## Similar Problems\n\n- [Valid Anagram](https://leetcode.com/problems/valid-anagram/) — Easy\n- [Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/) — Easy\n- [Count Anagrams](https://leetcode.com/problems/count-anagrams/) — Hard\n"
+          "content": "# [49] Group Anagrams\n**Difficulty:** Medium  |  **Acceptance:** 73.5%  |  **Likes:** 22789 / **Dislikes:** 791\n**Tags:** `Array`, `Hash Table`, `String`, `Sorting`\n## Problem\nGiven an array of strings strs, group the anagrams together. You can return the answer in any order.\n\n&nbsp;\nExample 1:\n\nInput: strs = [\"eat\",\"tea\",\"tan\",\"ate\",\"nat\",\"bat\"]\n\nOutput: [[\"bat\"],[\"nat\",\"tan\"],[\"ate\",\"eat\",\"tea\"]]\n\nExplanation:\n\n\tThere is no string in strs that can be rearranged to form \"bat\".\n\tThe strings \"nat\" and \"tan\" are anagrams as they can be rearranged to form each other.\n\tThe strings \"ate\", \"eat\", and \"tea\" are anagrams as they can be rearranged to form each other.\n\nExample 2:\n\nInput: strs = [\"\"]\n\nOutput: [[\"\"]]\n\nExample 3:\n\nInput: strs = [\"a\"]\n\nOutput: [[\"a\"]]\n\n&nbsp;\nConstraints:\n\n\t1 <= strs.length <= 104\n\t0 <= strs[i].length <= 100\n\tstrs[i] consists of lowercase English letters.\n## My Submission\n\n- Runtime: 23 ms (beats 48.2%)\n- Memory: 16.2 MB (beats 55.7%)\n\n## Similar Problems\n\n- [Valid Anagram](https://leetcode.com/problems/valid-anagram/) — Easy\n- [Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/) — Easy\n- [Count Anagrams](https://leetcode.com/problems/count-anagrams/) — Hard\n"
         }
       ],
       "lang": {
@@ -6131,12 +6131,12 @@
       },
       "runtime": "23 ms",
       "memory": "16.2 MB",
-      "runtimePct": 48.209399999999995,
-      "memoryPct": 56.3027,
+      "runtimePct": 48.155899999999995,
+      "memoryPct": 55.6905,
       "timestamp": 1763797436000,
-      "acRate": 73.50994463730585,
-      "likes": 22776,
-      "dislikes": 790,
+      "acRate": 73.51784602150538,
+      "likes": 22789,
+      "dislikes": 791,
       "similar": [
         {
           "difficulty": "Easy",
@@ -7704,7 +7704,7 @@
         "topic": "dynamic-programming",
         "voteCount": 97
       },
-      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33378 / **Dislikes:** 2050\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.5%)\n- Memory: 43.4 MB (beats 67.5%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
+      "readmeContent": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 39.0%  |  **Likes:** 33383 / **Dislikes:** 2051\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.5%)\n- Memory: 43.4 MB (beats 66.3%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n",
       "code": "class Solution {\n    public String longestPalindrome(String s) {\n        int start = 0;\n        int end = 0;\n        for(int i=0; i<s.length(); i++){\n            int odd = palindrome(s, i, i);\n            int even = palindrome(s, i, i+1);\n            int max = Math.max(odd, even);\n            if(max > (end - start)){\n                start = i - (max-1)/2;\n                end = i + max/2;\n            }\n        }\n        return s.substring(start, end+1);\n    }\n    public int palindrome(String s, int l, int r){\n        while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){\n            l--;\n            r++;\n        }\n        return r-l-1;\n    }\n}",
       "files": [
         {
@@ -7713,7 +7713,7 @@
         },
         {
           "path": "problems/longest-palindromic-substring/README.md",
-          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 38.9%  |  **Likes:** 33378 / **Dislikes:** 2050\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.5%)\n- Memory: 43.4 MB (beats 67.5%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
+          "content": "# [5] Longest Palindromic Substring\n**Difficulty:** Medium  |  **Acceptance:** 39.0%  |  **Likes:** 33383 / **Dislikes:** 2051\n**Tags:** `Two Pointers`, `String`, `Dynamic Programming`, `Manacher`\n## Problem\nGiven a string s, return the longest palindromic substring in s.\n\n&nbsp;\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n## My Submission\n\n- Runtime: 14 ms (beats 93.5%)\n- Memory: 43.4 MB (beats 66.3%)\n\n## Similar Problems\n\n- [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) — Hard\n- [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) — Hard\n- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) — Medium\n- [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) — Medium\n- [Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) — Hard\n"
         }
       ],
       "lang": {
@@ -7723,12 +7723,12 @@
       },
       "runtime": "14 ms",
       "memory": "43.4 MB",
-      "runtimePct": 93.54270000000002,
-      "memoryPct": 67.4886,
+      "runtimePct": 93.51899999999999,
+      "memoryPct": 66.33149999999998,
       "timestamp": 1790779293000,
-      "acRate": 38.947430931013926,
-      "likes": 33378,
-      "dislikes": 2050,
+      "acRate": 38.95805797193413,
+      "likes": 33383,
+      "dislikes": 2051,
       "similar": [
         {
           "difficulty": "Hard",
@@ -8416,16 +8416,16 @@
         "topic": "sliding-window",
         "voteCount": 97
       },
-      "readmeContent": "# [3] Longest Substring Without Repeating Characters\n**Difficulty:** Medium  |  **Acceptance:** 40.1%  |  **Likes:** 46115 / **Dislikes:** 2259\n**Tags:** `Hash Table`, `String`, `Sliding Window`\n## Problem\nGiven a string s, find the length of the longest substring without duplicate characters.\n\n&nbsp;\nExample 1:\n\nInput: s = \"abcabcbb\"\nOutput: 3\nExplanation: The answer is \"abc\", with the length of 3. Note that \"bca\" and \"cab\" are also correct answers.\n\nExample 2:\n\nInput: s = \"bbbbb\"\nOutput: 1\nExplanation: The answer is \"b\", with the length of 1.\n\nExample 3:\n\nInput: s = \"pwwkew\"\nOutput: 3\nExplanation: The answer is \"wke\", with the length of 3.\nNotice that the answer must be a substring, \"pwke\" is a subsequence and not a substring.\n\n&nbsp;\nConstraints:\n\n\t0 <= s.length <= 105\n\ts consists of English letters, digits, symbols and spaces.\n## My Submission\n\n- Runtime: 73 ms (beats 20.8%)\n- Memory: 47.6 MB (beats 64.9%)\n\n## Similar Problems\n\n- [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/) — Hard\n- [Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value/) — Medium\n- [Minimum Consecutive Cards to Pick Up](https://leetcode.com/problems/minimum-consecutive-cards-to-pick-up/) — Medium\n- [Longest Nice Subarray](https://leetcode.com/problems/longest-nice-subarray/) — Medium\n- [Optimal Partition of String](https://leetcode.com/problems/optimal-partition-of-string/) — Medium\n",
-      "code": "class Solution {\n    public int lengthOfLongestSubstring(String s) {\n        Set<Character> set = new HashSet<>();\n        int maxlen = 0;\n        int l = 0;\n        for(int r=0; r<s.length(); r++){\n            while(set.contains(s.charAt(r))){\n                set.remove(s.charAt(l));\n                l++;\n            }\n            set.add(s.charAt(r));\n            maxlen = Math.max(maxlen, r-l+1);\n        }\n        return maxlen;\n    }\n}",
+      "readmeContent": "# [3] Longest Substring Without Repeating Characters\n**Difficulty:** Medium  |  **Acceptance:** 40.1%  |  **Likes:** 46131 / **Dislikes:** 2260\n**Tags:** `Hash Table`, `String`, `Sliding Window`\n## Problem\nGiven a string s, find the length of the longest substring without duplicate characters.\n\n&nbsp;\nExample 1:\n\nInput: s = \"abcabcbb\"\nOutput: 3\nExplanation: The answer is \"abc\", with the length of 3. Note that \"bca\" and \"cab\" are also correct answers.\n\nExample 2:\n\nInput: s = \"bbbbb\"\nOutput: 1\nExplanation: The answer is \"b\", with the length of 1.\n\nExample 3:\n\nInput: s = \"pwwkew\"\nOutput: 3\nExplanation: The answer is \"wke\", with the length of 3.\nNotice that the answer must be a substring, \"pwke\" is a subsequence and not a substring.\n\n&nbsp;\nConstraints:\n\n\t0 <= s.length <= 105\n\ts consists of English letters, digits, symbols and spaces.\n## My Submission\n\n- Runtime: 69 ms (beats 28.1%)\n- Memory: 47.2 MB (beats 94.9%)\n\n## Similar Problems\n\n- [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/) — Hard\n- [Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value/) — Medium\n- [Minimum Consecutive Cards to Pick Up](https://leetcode.com/problems/minimum-consecutive-cards-to-pick-up/) — Medium\n- [Longest Nice Subarray](https://leetcode.com/problems/longest-nice-subarray/) — Medium\n- [Optimal Partition of String](https://leetcode.com/problems/optimal-partition-of-string/) — Medium\n",
+      "code": "class Solution {\n    public int lengthOfLongestSubstring(String s) {\n        Set<Character> set = new HashSet<>();\n        int maxLen = 0;\n        int l = 0;\n        for(int r=0; r<s.length(); r++){\n            while(set.contains(s.charAt(r))){\n                set.remove(s.charAt(l));\n                l++;\n            }\n            maxLen = Math.max(maxLen, r-l+1);\n            set.add(s.charAt(r));\n        }\n        return maxLen;\n    }\n}",
       "files": [
         {
           "path": "problems/longest-substring-without-repeating-characters/leetcode/lc-longest-substring-without-repeating-characters.java",
-          "content": "class Solution {\n    public int lengthOfLongestSubstring(String s) {\n        Set<Character> set = new HashSet<>();\n        int maxlen = 0;\n        int l = 0;\n        for(int r=0; r<s.length(); r++){\n            while(set.contains(s.charAt(r))){\n                set.remove(s.charAt(l));\n                l++;\n            }\n            set.add(s.charAt(r));\n            maxlen = Math.max(maxlen, r-l+1);\n        }\n        return maxlen;\n    }\n}"
+          "content": "class Solution {\n    public int lengthOfLongestSubstring(String s) {\n        Set<Character> set = new HashSet<>();\n        int maxLen = 0;\n        int l = 0;\n        for(int r=0; r<s.length(); r++){\n            while(set.contains(s.charAt(r))){\n                set.remove(s.charAt(l));\n                l++;\n            }\n            maxLen = Math.max(maxLen, r-l+1);\n            set.add(s.charAt(r));\n        }\n        return maxLen;\n    }\n}"
         },
         {
           "path": "problems/longest-substring-without-repeating-characters/README.md",
-          "content": "# [3] Longest Substring Without Repeating Characters\n**Difficulty:** Medium  |  **Acceptance:** 40.1%  |  **Likes:** 46115 / **Dislikes:** 2259\n**Tags:** `Hash Table`, `String`, `Sliding Window`\n## Problem\nGiven a string s, find the length of the longest substring without duplicate characters.\n\n&nbsp;\nExample 1:\n\nInput: s = \"abcabcbb\"\nOutput: 3\nExplanation: The answer is \"abc\", with the length of 3. Note that \"bca\" and \"cab\" are also correct answers.\n\nExample 2:\n\nInput: s = \"bbbbb\"\nOutput: 1\nExplanation: The answer is \"b\", with the length of 1.\n\nExample 3:\n\nInput: s = \"pwwkew\"\nOutput: 3\nExplanation: The answer is \"wke\", with the length of 3.\nNotice that the answer must be a substring, \"pwke\" is a subsequence and not a substring.\n\n&nbsp;\nConstraints:\n\n\t0 <= s.length <= 105\n\ts consists of English letters, digits, symbols and spaces.\n## My Submission\n\n- Runtime: 73 ms (beats 20.8%)\n- Memory: 47.6 MB (beats 64.9%)\n\n## Similar Problems\n\n- [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/) — Hard\n- [Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value/) — Medium\n- [Minimum Consecutive Cards to Pick Up](https://leetcode.com/problems/minimum-consecutive-cards-to-pick-up/) — Medium\n- [Longest Nice Subarray](https://leetcode.com/problems/longest-nice-subarray/) — Medium\n- [Optimal Partition of String](https://leetcode.com/problems/optimal-partition-of-string/) — Medium\n"
+          "content": "# [3] Longest Substring Without Repeating Characters\n**Difficulty:** Medium  |  **Acceptance:** 40.1%  |  **Likes:** 46131 / **Dislikes:** 2260\n**Tags:** `Hash Table`, `String`, `Sliding Window`\n## Problem\nGiven a string s, find the length of the longest substring without duplicate characters.\n\n&nbsp;\nExample 1:\n\nInput: s = \"abcabcbb\"\nOutput: 3\nExplanation: The answer is \"abc\", with the length of 3. Note that \"bca\" and \"cab\" are also correct answers.\n\nExample 2:\n\nInput: s = \"bbbbb\"\nOutput: 1\nExplanation: The answer is \"b\", with the length of 1.\n\nExample 3:\n\nInput: s = \"pwwkew\"\nOutput: 3\nExplanation: The answer is \"wke\", with the length of 3.\nNotice that the answer must be a substring, \"pwke\" is a subsequence and not a substring.\n\n&nbsp;\nConstraints:\n\n\t0 <= s.length <= 105\n\ts consists of English letters, digits, symbols and spaces.\n## My Submission\n\n- Runtime: 69 ms (beats 28.1%)\n- Memory: 47.2 MB (beats 94.9%)\n\n## Similar Problems\n\n- [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/) — Hard\n- [Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value/) — Medium\n- [Minimum Consecutive Cards to Pick Up](https://leetcode.com/problems/minimum-consecutive-cards-to-pick-up/) — Medium\n- [Longest Nice Subarray](https://leetcode.com/problems/longest-nice-subarray/) — Medium\n- [Optimal Partition of String](https://leetcode.com/problems/optimal-partition-of-string/) — Medium\n"
         }
       ],
       "lang": {
@@ -8433,14 +8433,14 @@
         "ext": "java",
         "slug": "java"
       },
-      "runtime": "73 ms",
-      "memory": "47.6 MB",
-      "runtimePct": 20.77080000000003,
-      "memoryPct": 64.89089999999997,
-      "timestamp": 1794203393000,
-      "acRate": 40.09859576080023,
-      "likes": 46115,
-      "dislikes": 2259,
+      "runtime": "69 ms",
+      "memory": "47.2 MB",
+      "runtimePct": 28.07519999999999,
+      "memoryPct": 94.92400000000002,
+      "timestamp": 1794491846000,
+      "acRate": 40.11016829246965,
+      "likes": 46131,
+      "dislikes": 2260,
       "similar": [
         {
           "difficulty": "Hard",
@@ -15328,16 +15328,16 @@
         "topic": "math",
         "voteCount": 97
       },
-      "readmeContent": "# [48] Rotate Image\n**Difficulty:** Medium  |  **Acceptance:** 80.9%  |  **Likes:** 20516 / **Dislikes:** 1004\n**Tags:** `Array`, `Math`, `Matrix`\n## Problem\nYou are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).\n\nYou have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [[7,4,1],[8,5,2],[9,6,3]]\n\nExample 2:\n\nInput: matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]\nOutput: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]\n\n&nbsp;\nConstraints:\n\n\tn == matrix.length == matrix[i].length\n\t1 <= n <= 20\n\t-1000 <= matrix[i][j] <= 1000\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 43.7 MB (beats 53.4%)\n\n## Similar Problems\n\n- [Determine Whether Matrix Can Be Obtained By Rotation](https://leetcode.com/problems/determine-whether-matrix-can-be-obtained-by-rotation/) — Easy\n",
-      "code": "class Solution {\n    public void rotate(int[][] matrix) {\n        int n = matrix.length;\n        int m = matrix[0].length;\n        for(int i=0; i<n-1; i++){\n            for(int j=i+1; j<n; j++){\n                int temp = matrix[i][j];\n                matrix[i][j] = matrix[j][i];\n                matrix[j][i] = temp;\n            }\n        }\n        for(int i=0; i<n; i++){\n            int left = 0;\n            int right = n-1;\n            while(left < right){\n                int temp = matrix[i][left];\n                matrix[i][left] = matrix[i][right];\n                matrix[i][right] = temp;\n                left++;\n                right--;\n            }\n        }\n    }\n}",
+      "readmeContent": "# [48] Rotate Image\n**Difficulty:** Medium  |  **Acceptance:** 80.9%  |  **Likes:** 20521 / **Dislikes:** 1005\n**Tags:** `Array`, `Math`, `Matrix`\n## Problem\nYou are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).\n\nYou have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [[7,4,1],[8,5,2],[9,6,3]]\n\nExample 2:\n\nInput: matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]\nOutput: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]\n\n&nbsp;\nConstraints:\n\n\tn == matrix.length == matrix[i].length\n\t1 <= n <= 20\n\t-1000 <= matrix[i][j] <= 1000\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 43.2 MB (beats 83.2%)\n\n## Similar Problems\n\n- [Determine Whether Matrix Can Be Obtained By Rotation](https://leetcode.com/problems/determine-whether-matrix-can-be-obtained-by-rotation/) — Easy\n",
+      "code": "class Solution {\n    public void rotate(int[][] matrix) {\n        int n = matrix.length;\n        for(int i=0; i<n-1; i++){\n            for(int j=i+1; j<n; j++){\n                int temp = matrix[i][j];\n                matrix[i][j] = matrix[j][i];\n                matrix[j][i] = temp;\n            }\n        }\n        for(int i=0; i<n; i++){\n            int l = 0;\n            int r = n-1;\n            while(l < r){\n                int temp = matrix[i][l];\n                matrix[i][l] = matrix[i][r];\n                matrix[i][r] = temp;\n                l++;\n                r--;\n\n            }\n        }\n    }\n}",
       "files": [
         {
           "path": "problems/rotate-image/leetcode/lc-rotate-image.java",
-          "content": "class Solution {\n    public void rotate(int[][] matrix) {\n        int n = matrix.length;\n        int m = matrix[0].length;\n        for(int i=0; i<n-1; i++){\n            for(int j=i+1; j<n; j++){\n                int temp = matrix[i][j];\n                matrix[i][j] = matrix[j][i];\n                matrix[j][i] = temp;\n            }\n        }\n        for(int i=0; i<n; i++){\n            int left = 0;\n            int right = n-1;\n            while(left < right){\n                int temp = matrix[i][left];\n                matrix[i][left] = matrix[i][right];\n                matrix[i][right] = temp;\n                left++;\n                right--;\n            }\n        }\n    }\n}"
+          "content": "class Solution {\n    public void rotate(int[][] matrix) {\n        int n = matrix.length;\n        for(int i=0; i<n-1; i++){\n            for(int j=i+1; j<n; j++){\n                int temp = matrix[i][j];\n                matrix[i][j] = matrix[j][i];\n                matrix[j][i] = temp;\n            }\n        }\n        for(int i=0; i<n; i++){\n            int l = 0;\n            int r = n-1;\n            while(l < r){\n                int temp = matrix[i][l];\n                matrix[i][l] = matrix[i][r];\n                matrix[i][r] = temp;\n                l++;\n                r--;\n\n            }\n        }\n    }\n}"
         },
         {
           "path": "problems/rotate-image/README.md",
-          "content": "# [48] Rotate Image\n**Difficulty:** Medium  |  **Acceptance:** 80.9%  |  **Likes:** 20516 / **Dislikes:** 1004\n**Tags:** `Array`, `Math`, `Matrix`\n## Problem\nYou are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).\n\nYou have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [[7,4,1],[8,5,2],[9,6,3]]\n\nExample 2:\n\nInput: matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]\nOutput: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]\n\n&nbsp;\nConstraints:\n\n\tn == matrix.length == matrix[i].length\n\t1 <= n <= 20\n\t-1000 <= matrix[i][j] <= 1000\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 43.7 MB (beats 53.4%)\n\n## Similar Problems\n\n- [Determine Whether Matrix Can Be Obtained By Rotation](https://leetcode.com/problems/determine-whether-matrix-can-be-obtained-by-rotation/) — Easy\n"
+          "content": "# [48] Rotate Image\n**Difficulty:** Medium  |  **Acceptance:** 80.9%  |  **Likes:** 20521 / **Dislikes:** 1005\n**Tags:** `Array`, `Math`, `Matrix`\n## Problem\nYou are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).\n\nYou have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [[7,4,1],[8,5,2],[9,6,3]]\n\nExample 2:\n\nInput: matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]\nOutput: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]\n\n&nbsp;\nConstraints:\n\n\tn == matrix.length == matrix[i].length\n\t1 <= n <= 20\n\t-1000 <= matrix[i][j] <= 1000\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 43.2 MB (beats 83.2%)\n\n## Similar Problems\n\n- [Determine Whether Matrix Can Be Obtained By Rotation](https://leetcode.com/problems/determine-whether-matrix-can-be-obtained-by-rotation/) — Easy\n"
         }
       ],
       "lang": {
@@ -15346,13 +15346,13 @@
         "slug": "java"
       },
       "runtime": "0 ms",
-      "memory": "43.7 MB",
+      "memory": "43.2 MB",
       "runtimePct": 100,
-      "memoryPct": 53.405799999999985,
-      "timestamp": 1776065823000,
-      "acRate": 80.88276215665877,
-      "likes": 20516,
-      "dislikes": 1004,
+      "memoryPct": 83.2305,
+      "timestamp": 1793987216000,
+      "acRate": 80.8925626652187,
+      "likes": 20521,
+      "dislikes": 1005,
       "similar": [
         {
           "difficulty": "Easy",
@@ -18252,7 +18252,7 @@
         "topic": "arrays",
         "voteCount": 92
       },
-      "readmeContent": "# [242] Valid Anagram\n**Difficulty:** Easy  |  **Acceptance:** 68.8%  |  **Likes:** 14916 / **Dislikes:** 495\n**Tags:** `Hash Table`, `String`, `Sorting`\n## Problem\nGiven two strings s and t, return true if t is an anagram of s, and false otherwise.\n\n&nbsp;\nExample 1:\n\nInput: s = \"anagram\", t = \"nagaram\"\n\nOutput: true\n\nExample 2:\n\nInput: s = \"rat\", t = \"car\"\n\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length, t.length <= 5 * 104\n\ts and t consist of lowercase English letters.\n\n&nbsp;\nFollow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?\n## My Submission\n\n- Runtime: 6 ms (beats 49.3%)\n- Memory: 43.9 MB (beats 91.1%)\n\n## Similar Problems\n\n- [Group Anagrams](https://leetcode.com/problems/group-anagrams/) — Medium\n- [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) — Medium\n- [Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/) — Easy\n",
+      "readmeContent": "# [242] Valid Anagram\n**Difficulty:** Easy  |  **Acceptance:** 68.8%  |  **Likes:** 14921 / **Dislikes:** 497\n**Tags:** `Hash Table`, `String`, `Sorting`\n## Problem\nGiven two strings s and t, return true if t is an anagram of s, and false otherwise.\n\n&nbsp;\nExample 1:\n\nInput: s = \"anagram\", t = \"nagaram\"\n\nOutput: true\n\nExample 2:\n\nInput: s = \"rat\", t = \"car\"\n\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length, t.length <= 5 * 104\n\ts and t consist of lowercase English letters.\n\n&nbsp;\nFollow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?\n## My Submission\n\n- Runtime: 6 ms (beats 50.0%)\n- Memory: 43.9 MB (beats 90.1%)\n\n## Similar Problems\n\n- [Group Anagrams](https://leetcode.com/problems/group-anagrams/) — Medium\n- [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) — Medium\n- [Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/) — Easy\n",
       "code": "class Solution {\n    public boolean isAnagram(String s, String t) {\n        if(s.length() != t.length()){\n            return false;\n        }\n        int[] freq = new int[26];\n        for(int i=0; i<s.length(); i++){\n            freq[s.charAt(i) - 'a']++;\n            freq[t.charAt(i) - 'a']--;\n        }\n        for(int num : freq){\n            if(num != 0) return false;\n        }\n        return true;\n    }\n}",
       "files": [
         {
@@ -18261,7 +18261,7 @@
         },
         {
           "path": "problems/valid-anagram/README.md",
-          "content": "# [242] Valid Anagram\n**Difficulty:** Easy  |  **Acceptance:** 68.8%  |  **Likes:** 14916 / **Dislikes:** 495\n**Tags:** `Hash Table`, `String`, `Sorting`\n## Problem\nGiven two strings s and t, return true if t is an anagram of s, and false otherwise.\n\n&nbsp;\nExample 1:\n\nInput: s = \"anagram\", t = \"nagaram\"\n\nOutput: true\n\nExample 2:\n\nInput: s = \"rat\", t = \"car\"\n\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length, t.length <= 5 * 104\n\ts and t consist of lowercase English letters.\n\n&nbsp;\nFollow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?\n## My Submission\n\n- Runtime: 6 ms (beats 49.3%)\n- Memory: 43.9 MB (beats 91.1%)\n\n## Similar Problems\n\n- [Group Anagrams](https://leetcode.com/problems/group-anagrams/) — Medium\n- [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) — Medium\n- [Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/) — Easy\n"
+          "content": "# [242] Valid Anagram\n**Difficulty:** Easy  |  **Acceptance:** 68.8%  |  **Likes:** 14921 / **Dislikes:** 497\n**Tags:** `Hash Table`, `String`, `Sorting`\n## Problem\nGiven two strings s and t, return true if t is an anagram of s, and false otherwise.\n\n&nbsp;\nExample 1:\n\nInput: s = \"anagram\", t = \"nagaram\"\n\nOutput: true\n\nExample 2:\n\nInput: s = \"rat\", t = \"car\"\n\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length, t.length <= 5 * 104\n\ts and t consist of lowercase English letters.\n\n&nbsp;\nFollow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?\n## My Submission\n\n- Runtime: 6 ms (beats 50.0%)\n- Memory: 43.9 MB (beats 90.1%)\n\n## Similar Problems\n\n- [Group Anagrams](https://leetcode.com/problems/group-anagrams/) — Medium\n- [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) — Medium\n- [Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/) — Easy\n"
         }
       ],
       "lang": {
@@ -18271,12 +18271,12 @@
       },
       "runtime": "6 ms",
       "memory": "43.9 MB",
-      "runtimePct": 49.26620000000001,
-      "memoryPct": 91.14599999999999,
+      "runtimePct": 49.97269999999999,
+      "memoryPct": 90.11869999999999,
       "timestamp": 1794201893000,
-      "acRate": 68.80714421635282,
-      "likes": 14916,
-      "dislikes": 495,
+      "acRate": 68.81136820682471,
+      "likes": 14921,
+      "dislikes": 497,
       "similar": [
         {
           "difficulty": "Medium",
