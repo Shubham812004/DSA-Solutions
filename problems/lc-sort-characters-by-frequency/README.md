@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-sort-characters-by-frequency` |
 | Topics | Hash Table, String, Sorting, Heap (Priority Queue), Bucket Sort, Counting |
-| Solved | 2026-08-03 |
-| Runtime | 14 ms (beats 64.7971%) |
-| Memory | 46.6 MB (beats 52.622899999999994%) |
+| Solved | 2026-11-12 |
+| Runtime | 12 ms (beats 85.8971%) |
+| Memory | 45.8 MB (beats 97.50090000000003%) |
 
 ## Problem Statement
 
@@ -52,20 +52,22 @@ Note that 'A' and 'a' are treated as two different characters.
 ```Java
 class Solution {
     public String frequencySort(String s) {
-        HashMap<Character, Integer> map = new HashMap<>();
-        for(int i=0; i<s.length(); i++){
-            char ch = s.charAt(i);
-            map.put(ch, map.getOrDefault(ch, 0)+1);
+        Map<Character, Integer> map = new HashMap<>();
+        for(char ch : s.toCharArray()){
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
         }
+
         PriorityQueue<Map.Entry<Character, Integer>> pq = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
+
         for(Map.Entry<Character, Integer> entry : map.entrySet()){
             pq.add(entry);
         }
+
         StringBuilder str = new StringBuilder();
         while(!pq.isEmpty()){
             Map.Entry<Character, Integer> curr = pq.poll();
-            int freq = curr.getValue();
             char ch = curr.getKey();
+            int freq = curr.getValue();
             while(freq > 0){
                 str.append(ch);
                 freq--;
