@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-two-sum-ii-input-array-is-sorted` |
 | Topics | Array, Two Pointers, Binary Search |
-| Solved | 2026-11-09 |
-| Runtime | 2 ms (beats 97.7441%) |
-| Memory | 47.9 MB (beats 88.34279999999997%) |
+| Solved | 2026-11-13 |
+| Runtime | 2 ms (beats 97.8128%) |
+| Memory | 47.9 MB (beats 86.2578%) |
 
 ## Problem Statement
 
@@ -61,9 +61,9 @@ Your solution must use only constant extra space.
 ```Java
 class Solution {
     public int[] twoSum(int[] numbers, int target) {
-        int l=0;
-        int r=numbers.length-1;
-        while(l < r){
+        int l = 0;
+        int r = numbers.length-1;
+        while(l <= r){
             int sum = numbers[l] + numbers[r];
             if(sum == target){
                 return new int[]{l+1, r+1};
@@ -74,8 +74,8 @@ class Solution {
             else{
                 r--;
             }
-        }
-        return new int[]{};
+       }
+       return new int[]{};
     }
 }
 ```
