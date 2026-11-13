@@ -3,11 +3,11 @@ class Solution {
         int l = 0;
         int r = nums.length-1;
         while(l <= r){
-            int m = l + (r - l) / 2;
+            int m = l + (r - l)/2;
             if(nums[m] == target){
                 return m;
             }
-            if(nums[l] <= nums[m]){
+            else if(nums[l] <= nums[m]){
                 if(nums[l] <= target && target <= nums[m]){
                     r = m-1;
                 }else{
