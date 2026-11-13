@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-minimum-size-subarray-sum` |
 | Topics | Array, Binary Search, Sliding Window, Prefix Sum |
-| Solved | 2026-07-29 |
-| Runtime | 1 ms (beats 99.8421%) |
-| Memory | 69.5 MB (beats 8.342699999999992%) |
+| Solved | 2026-11-13 |
+| Runtime | 2 ms (beats 24.6593%) |
+| Memory | 68.6 MB (beats 92.12890000000012%) |
 
 ## Problem Statement
 
@@ -51,9 +51,9 @@ Given an array of positive integers `nums` and a positive integer `target`, retu
 ```Java
 class Solution {
     public int minSubArrayLen(int target, int[] nums) {
+        int minLen = Integer.MAX_VALUE;
         int l = 0;
         int sum = 0;
-        int minLen = Integer.MAX_VALUE;
         for(int r=0; r<nums.length; r++){
             sum += nums[r];
             while(sum >= target){
@@ -64,8 +64,7 @@ class Solution {
         }
         if(minLen == Integer.MAX_VALUE){
             return 0;
-        }
-        else{
+        }else{
             return minLen;
         }
     }
