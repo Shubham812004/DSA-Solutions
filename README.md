@@ -10,11 +10,11 @@
 
 <!-- codeledger:gamification:start -->
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://shubham812004.github.io/DSA-Solutions/badges/card-light.svg?v=3895-12-208-2026-11-14">
-  <img src="https://shubham812004.github.io/DSA-Solutions/badges/card.svg?v=3895-12-208-2026-11-14" alt="Streak card" width="420">
+  <source media="(prefers-color-scheme: light)" srcset="https://shubham812004.github.io/DSA-Solutions/badges/card-light.svg?v=3895-13-208-2026-11-15">
+  <img src="https://shubham812004.github.io/DSA-Solutions/badges/card.svg?v=3895-13-208-2026-11-15" alt="Streak card" width="420">
 </picture>
 
-![Streak](https://shubham812004.github.io/DSA-Solutions/badges/streak.svg?v=3895-12-208-2026-11-14) ![Points](https://shubham812004.github.io/DSA-Solutions/badges/points.svg?v=3895-12-208-2026-11-14) ![Level](https://shubham812004.github.io/DSA-Solutions/badges/level.svg?v=3895-12-208-2026-11-14) ![Freezes](https://shubham812004.github.io/DSA-Solutions/badges/freezes.svg?v=3895-12-208-2026-11-14)
+![Streak](https://shubham812004.github.io/DSA-Solutions/badges/streak.svg?v=3895-13-208-2026-11-15) ![Points](https://shubham812004.github.io/DSA-Solutions/badges/points.svg?v=3895-13-208-2026-11-15) ![Level](https://shubham812004.github.io/DSA-Solutions/badges/level.svg?v=3895-13-208-2026-11-15) ![Freezes](https://shubham812004.github.io/DSA-Solutions/badges/freezes.svg?v=3895-13-208-2026-11-15)
 
 🩸 First Blood · 🔟 Ten Down · 💯 Century · 🔥 Week On Fire · 🎯 Well Rounded · ⚡ Double Day · 🪃 Comeback · ⭐ Engineer
 <!-- codeledger:gamification:end -->
