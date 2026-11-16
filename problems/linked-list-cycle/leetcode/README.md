@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-linked-list-cycle` |
 | Topics | Linked List, Hash Table, Two Pointers, Floyd's Cycle Finding Algorithm |
-| Solved | 2026-09-02 |
+| Solved | 2026-11-16 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 45.9 MB (beats 98.07900000000002%) |
+| Memory | 46.5 MB (beats 54.02010000000003%) |
 
 ## Problem Statement
 

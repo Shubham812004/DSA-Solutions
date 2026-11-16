@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16T17:42:21.996Z",
+  "updatedAt": "2026-11-16T17:45:05.317Z",
   "layoutVersion": 3,
   "stats": {
     "total": 262,
@@ -7609,7 +7609,7 @@
         "topic": "linked-list",
         "voteCount": 96
       },
-      "readmeContent": "# [141] Linked List Cycle\n**Difficulty:** Easy  |  **Acceptance:** 55.3%  |  **Likes:** 18006 / **Dislikes:** 1622\n**Tags:** `Hash Table`, `Linked List`, `Two Pointers`, `Floyd's Cycle Finding Algorithm`\n## Problem\nGiven head, the head of a linked list, determine if the linked list has a cycle in it.\n\nThere is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the&nbsp;next&nbsp;pointer. Internally, pos&nbsp;is used to denote the index of the node that&nbsp;tail's&nbsp;next&nbsp;pointer is connected to.&nbsp;Note that&nbsp;pos&nbsp;is not passed as a parameter.\n\nReturn&nbsp;true if there is a cycle in the linked list. Otherwise, return false.\n\n&nbsp;\nExample 1:\n\nInput: head = [3,2,0,-4], pos = 1\nOutput: true\nExplanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed).\n\nExample 2:\n\nInput: head = [1,2], pos = 0\nOutput: true\nExplanation: There is a cycle in the linked list, where the tail connects to the 0th node.\n\nExample 3:\n\nInput: head = [1], pos = -1\nOutput: false\nExplanation: There is no cycle in the linked list.\n\n&nbsp;\nConstraints:\n\n\tThe number of the nodes in the list is in the range [0, 104].\n\t-105 <= Node.val <= 105\n\tpos is -1 or a valid index in the linked-list.\n\n&nbsp;\nFollow up: Can you solve it using O(1) (i.e. constant) memory?\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 45.9 MB (beats 98.1%)\n\n## Similar Problems\n\n- [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) — Medium\n- [Happy Number](https://leetcode.com/problems/happy-number/) — Easy\n",
+      "readmeContent": "# [141] Linked List Cycle\n**Difficulty:** Easy  |  **Acceptance:** 55.3%  |  **Likes:** 18006 / **Dislikes:** 1622\n**Tags:** `Hash Table`, `Linked List`, `Two Pointers`, `Floyd's Cycle Finding Algorithm`\n## Problem\nGiven head, the head of a linked list, determine if the linked list has a cycle in it.\n\nThere is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the&nbsp;next&nbsp;pointer. Internally, pos&nbsp;is used to denote the index of the node that&nbsp;tail's&nbsp;next&nbsp;pointer is connected to.&nbsp;Note that&nbsp;pos&nbsp;is not passed as a parameter.\n\nReturn&nbsp;true if there is a cycle in the linked list. Otherwise, return false.\n\n&nbsp;\nExample 1:\n\nInput: head = [3,2,0,-4], pos = 1\nOutput: true\nExplanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed).\n\nExample 2:\n\nInput: head = [1,2], pos = 0\nOutput: true\nExplanation: There is a cycle in the linked list, where the tail connects to the 0th node.\n\nExample 3:\n\nInput: head = [1], pos = -1\nOutput: false\nExplanation: There is no cycle in the linked list.\n\n&nbsp;\nConstraints:\n\n\tThe number of the nodes in the list is in the range [0, 104].\n\t-105 <= Node.val <= 105\n\tpos is -1 or a valid index in the linked-list.\n\n&nbsp;\nFollow up: Can you solve it using O(1) (i.e. constant) memory?\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 46.5 MB (beats 54.0%)\n\n## Similar Problems\n\n- [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) — Medium\n- [Happy Number](https://leetcode.com/problems/happy-number/) — Easy\n",
       "code": "/**\n * Definition for singly-linked list.\n * class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode(int x) {\n *         val = x;\n *         next = null;\n *     }\n * }\n */\npublic class Solution {\n    public boolean hasCycle(ListNode head) {\n        ListNode slow = head;\n        ListNode fast = head;\n        while(fast != null && fast.next != null){\n            slow = slow.next;\n            fast = fast.next.next;\n            if(slow == fast) return true;\n        }\n        return false;\n    }\n}",
       "files": [
         {
@@ -7618,7 +7618,7 @@
         },
         {
           "path": "problems/linked-list-cycle/README.md",
-          "content": "# [141] Linked List Cycle\n**Difficulty:** Easy  |  **Acceptance:** 55.3%  |  **Likes:** 18006 / **Dislikes:** 1622\n**Tags:** `Hash Table`, `Linked List`, `Two Pointers`, `Floyd's Cycle Finding Algorithm`\n## Problem\nGiven head, the head of a linked list, determine if the linked list has a cycle in it.\n\nThere is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the&nbsp;next&nbsp;pointer. Internally, pos&nbsp;is used to denote the index of the node that&nbsp;tail's&nbsp;next&nbsp;pointer is connected to.&nbsp;Note that&nbsp;pos&nbsp;is not passed as a parameter.\n\nReturn&nbsp;true if there is a cycle in the linked list. Otherwise, return false.\n\n&nbsp;\nExample 1:\n\nInput: head = [3,2,0,-4], pos = 1\nOutput: true\nExplanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed).\n\nExample 2:\n\nInput: head = [1,2], pos = 0\nOutput: true\nExplanation: There is a cycle in the linked list, where the tail connects to the 0th node.\n\nExample 3:\n\nInput: head = [1], pos = -1\nOutput: false\nExplanation: There is no cycle in the linked list.\n\n&nbsp;\nConstraints:\n\n\tThe number of the nodes in the list is in the range [0, 104].\n\t-105 <= Node.val <= 105\n\tpos is -1 or a valid index in the linked-list.\n\n&nbsp;\nFollow up: Can you solve it using O(1) (i.e. constant) memory?\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 45.9 MB (beats 98.1%)\n\n## Similar Problems\n\n- [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) — Medium\n- [Happy Number](https://leetcode.com/problems/happy-number/) — Easy\n"
+          "content": "# [141] Linked List Cycle\n**Difficulty:** Easy  |  **Acceptance:** 55.3%  |  **Likes:** 18006 / **Dislikes:** 1622\n**Tags:** `Hash Table`, `Linked List`, `Two Pointers`, `Floyd's Cycle Finding Algorithm`\n## Problem\nGiven head, the head of a linked list, determine if the linked list has a cycle in it.\n\nThere is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the&nbsp;next&nbsp;pointer. Internally, pos&nbsp;is used to denote the index of the node that&nbsp;tail's&nbsp;next&nbsp;pointer is connected to.&nbsp;Note that&nbsp;pos&nbsp;is not passed as a parameter.\n\nReturn&nbsp;true if there is a cycle in the linked list. Otherwise, return false.\n\n&nbsp;\nExample 1:\n\nInput: head = [3,2,0,-4], pos = 1\nOutput: true\nExplanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed).\n\nExample 2:\n\nInput: head = [1,2], pos = 0\nOutput: true\nExplanation: There is a cycle in the linked list, where the tail connects to the 0th node.\n\nExample 3:\n\nInput: head = [1], pos = -1\nOutput: false\nExplanation: There is no cycle in the linked list.\n\n&nbsp;\nConstraints:\n\n\tThe number of the nodes in the list is in the range [0, 104].\n\t-105 <= Node.val <= 105\n\tpos is -1 or a valid index in the linked-list.\n\n&nbsp;\nFollow up: Can you solve it using O(1) (i.e. constant) memory?\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 46.5 MB (beats 54.0%)\n\n## Similar Problems\n\n- [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) — Medium\n- [Happy Number](https://leetcode.com/problems/happy-number/) — Easy\n"
         }
       ],
       "lang": {
@@ -7627,11 +7627,11 @@
         "slug": "java"
       },
       "runtime": "0 ms",
-      "memory": "45.9 MB",
+      "memory": "46.5 MB",
       "runtimePct": 100,
-      "memoryPct": 98.07900000000002,
-      "timestamp": 1788367296000,
-      "acRate": 55.335251568410534,
+      "memoryPct": 54.02010000000003,
+      "timestamp": 1794851100000,
+      "acRate": 55.33528249755133,
       "likes": 18006,
       "dislikes": 1622,
       "similar": [
@@ -7659,7 +7659,11 @@
       "_requestAIReview": true,
       "platform": "leetcode",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/linked-list-cycle/leetcode/lc-linked-list-cycle.java",
+        "problems/linked-list-cycle/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-linked-list-cycle::1818419089",
