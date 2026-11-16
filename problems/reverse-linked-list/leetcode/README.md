@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-reverse-linked-list` |
 | Topics | Linked List, Recursion |
-| Solved | 2026-09-02 |
+| Solved | 2026-11-16 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 44.4 MB (beats 8.589999999999973%) |
+| Memory | 43.8 MB (beats 67.78849999999997%) |
 
 ## Problem Statement
 
@@ -58,15 +58,15 @@ Given the `head` of a singly linked list, reverse the list, and return _the reve
  */
 class Solution {
     public ListNode reverseList(ListNode head) {
-        ListNode previous = null;
-        ListNode current = head;
-        while(current != null){
-            ListNode next = current.next;
-            current.next = previous;
-            previous = current;
-            current = next;
+        ListNode prev = null;
+        ListNode curr = head;
+        while(curr != null){
+            ListNode next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
         }
-        return previous;
+        return prev;
     }
 }
 ```
