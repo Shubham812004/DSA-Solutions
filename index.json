@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16T04:58:44.794Z",
+  "updatedAt": "2026-11-16T06:42:46.718Z",
   "layoutVersion": 3,
   "stats": {
     "total": 260,
@@ -4780,16 +4780,16 @@
         "topic": "stack",
         "voteCount": 96
       },
-      "readmeContent": "# [739] Daily Temperatures\n**Difficulty:** Medium  |  **Acceptance:** 69.3%  |  **Likes:** 15138 / **Dislikes:** 388\n**Tags:** `Array`, `Stack`, `Monotonic Stack`\n## Problem\nGiven an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.\n\n&nbsp;\nExample 1:\nInput: temperatures = [73,74,75,71,69,72,76,73]\nOutput: [1,1,4,2,1,1,0,0]\nExample 2:\nInput: temperatures = [30,40,50,60]\nOutput: [1,1,1,0]\nExample 3:\nInput: temperatures = [30,60,90]\nOutput: [1,1,0]\n\n&nbsp;\nConstraints:\n\n\t1 <=&nbsp;temperatures.length <= 105\n\t30 <=&nbsp;temperatures[i] <= 100\n## My Submission\n\n- Runtime: 92 ms (beats 5.5%)\n- Memory: 105.9 MB (beats 76.8%)\n\n## Similar Problems\n\n- [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) — Easy\n- [Online Stock Span](https://leetcode.com/problems/online-stock-span/) — Medium\n",
-      "code": "class Solution {\n    public int[] dailyTemperatures(int[] temperatures) {\n        int n = temperatures.length;\n        int[] res = new int[n];\n        Arrays.fill(res, 0);\n        HashMap<Integer, Integer> map = new HashMap<>();\n        Stack<Integer> stack = new Stack<>();\n        for(int i=n-1; i>=0; i--){\n            while(!stack.isEmpty() && stack.peek() <= temperatures[i]){\n                stack.pop();\n            }\n            if(!stack.isEmpty()){\n                res[i] = map.get(stack.peek()) - i;\n            }\n            stack.push(temperatures[i]);\n            map.put(temperatures[i], i);\n        }\n        return res;\n    }\n}",
+      "readmeContent": "# [739] Daily Temperatures\n**Difficulty:** Medium  |  **Acceptance:** 69.3%  |  **Likes:** 15157 / **Dislikes:** 388\n**Tags:** `Array`, `Stack`, `Monotonic Stack`\n## Problem\nGiven an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.\n\n&nbsp;\nExample 1:\nInput: temperatures = [73,74,75,71,69,72,76,73]\nOutput: [1,1,4,2,1,1,0,0]\nExample 2:\nInput: temperatures = [30,40,50,60]\nOutput: [1,1,1,0]\nExample 3:\nInput: temperatures = [30,60,90]\nOutput: [1,1,0]\n\n&nbsp;\nConstraints:\n\n\t1 <=&nbsp;temperatures.length <= 105\n\t30 <=&nbsp;temperatures[i] <= 100\n## My Submission\n\n- Runtime: 96 ms (beats 5.8%)\n- Memory: 106.2 MB (beats 71.1%)\n\n## Similar Problems\n\n- [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) — Easy\n- [Online Stock Span](https://leetcode.com/problems/online-stock-span/) — Medium\n",
+      "code": "class Solution {\n    public int[] dailyTemperatures(int[] temperatures) {\n        int n = temperatures.length;\n        int[] res = new int[n];\n        Arrays.fill(res, 0);\n        Stack<Integer> stack = new Stack<>();\n        Map<Integer, Integer> map = new HashMap<>();\n        for(int i=n-1; i>=0; i--){\n            while(!stack.isEmpty() && stack.peek() <= temperatures[i]){\n                stack.pop();\n            }\n            if(!stack.isEmpty()){\n                res[i] = map.get(stack.peek()) - i;\n            }\n            stack.push(temperatures[i]);\n            map.put(temperatures[i], i);\n        }\n        return res;\n    }\n}",
       "files": [
         {
           "path": "problems/daily-temperatures/leetcode/lc-daily-temperatures.java",
-          "content": "class Solution {\n    public int[] dailyTemperatures(int[] temperatures) {\n        int n = temperatures.length;\n        int[] res = new int[n];\n        Arrays.fill(res, 0);\n        HashMap<Integer, Integer> map = new HashMap<>();\n        Stack<Integer> stack = new Stack<>();\n        for(int i=n-1; i>=0; i--){\n            while(!stack.isEmpty() && stack.peek() <= temperatures[i]){\n                stack.pop();\n            }\n            if(!stack.isEmpty()){\n                res[i] = map.get(stack.peek()) - i;\n            }\n            stack.push(temperatures[i]);\n            map.put(temperatures[i], i);\n        }\n        return res;\n    }\n}"
+          "content": "class Solution {\n    public int[] dailyTemperatures(int[] temperatures) {\n        int n = temperatures.length;\n        int[] res = new int[n];\n        Arrays.fill(res, 0);\n        Stack<Integer> stack = new Stack<>();\n        Map<Integer, Integer> map = new HashMap<>();\n        for(int i=n-1; i>=0; i--){\n            while(!stack.isEmpty() && stack.peek() <= temperatures[i]){\n                stack.pop();\n            }\n            if(!stack.isEmpty()){\n                res[i] = map.get(stack.peek()) - i;\n            }\n            stack.push(temperatures[i]);\n            map.put(temperatures[i], i);\n        }\n        return res;\n    }\n}"
         },
         {
           "path": "problems/daily-temperatures/README.md",
-          "content": "# [739] Daily Temperatures\n**Difficulty:** Medium  |  **Acceptance:** 69.3%  |  **Likes:** 15138 / **Dislikes:** 388\n**Tags:** `Array`, `Stack`, `Monotonic Stack`\n## Problem\nGiven an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.\n\n&nbsp;\nExample 1:\nInput: temperatures = [73,74,75,71,69,72,76,73]\nOutput: [1,1,4,2,1,1,0,0]\nExample 2:\nInput: temperatures = [30,40,50,60]\nOutput: [1,1,1,0]\nExample 3:\nInput: temperatures = [30,60,90]\nOutput: [1,1,0]\n\n&nbsp;\nConstraints:\n\n\t1 <=&nbsp;temperatures.length <= 105\n\t30 <=&nbsp;temperatures[i] <= 100\n## My Submission\n\n- Runtime: 92 ms (beats 5.5%)\n- Memory: 105.9 MB (beats 76.8%)\n\n## Similar Problems\n\n- [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) — Easy\n- [Online Stock Span](https://leetcode.com/problems/online-stock-span/) — Medium\n"
+          "content": "# [739] Daily Temperatures\n**Difficulty:** Medium  |  **Acceptance:** 69.3%  |  **Likes:** 15157 / **Dislikes:** 388\n**Tags:** `Array`, `Stack`, `Monotonic Stack`\n## Problem\nGiven an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.\n\n&nbsp;\nExample 1:\nInput: temperatures = [73,74,75,71,69,72,76,73]\nOutput: [1,1,4,2,1,1,0,0]\nExample 2:\nInput: temperatures = [30,40,50,60]\nOutput: [1,1,1,0]\nExample 3:\nInput: temperatures = [30,60,90]\nOutput: [1,1,0]\n\n&nbsp;\nConstraints:\n\n\t1 <=&nbsp;temperatures.length <= 105\n\t30 <=&nbsp;temperatures[i] <= 100\n## My Submission\n\n- Runtime: 96 ms (beats 5.8%)\n- Memory: 106.2 MB (beats 71.1%)\n\n## Similar Problems\n\n- [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) — Easy\n- [Online Stock Span](https://leetcode.com/problems/online-stock-span/) — Medium\n"
         }
       ],
       "lang": {
@@ -4797,13 +4797,13 @@
         "ext": "java",
         "slug": "java"
       },
-      "runtime": "92 ms",
-      "memory": "105.9 MB",
-      "runtimePct": 5.456300000000013,
-      "memoryPct": 76.79609999999992,
-      "timestamp": 1793682960000,
-      "acRate": 69.3040949053346,
-      "likes": 15138,
+      "runtime": "96 ms",
+      "memory": "106.2 MB",
+      "runtimePct": 5.80860000000001,
+      "memoryPct": 71.05689999999994,
+      "timestamp": 1794811362000,
+      "acRate": 69.3250657188383,
+      "likes": 15157,
       "dislikes": 388,
       "similar": [
         {

@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-daily-temperatures` |
 | Topics | Array, Stack, Monotonic Stack |
-| Solved | 2026-11-03 |
-| Runtime | 92 ms (beats 5.456300000000013%) |
-| Memory | 105.9 MB (beats 76.79609999999992%) |
+| Solved | 2026-11-16 |
+| Runtime | 96 ms (beats 5.80860000000001%) |
+| Memory | 106.2 MB (beats 71.05689999999994%) |
 
 ## Problem Statement
 
@@ -45,8 +45,8 @@ class Solution {
         int n = temperatures.length;
         int[] res = new int[n];
         Arrays.fill(res, 0);
-        HashMap<Integer, Integer> map = new HashMap<>();
         Stack<Integer> stack = new Stack<>();
+        Map<Integer, Integer> map = new HashMap<>();
         for(int i=n-1; i>=0; i--){
             while(!stack.isEmpty() && stack.peek() <= temperatures[i]){
                 stack.pop();

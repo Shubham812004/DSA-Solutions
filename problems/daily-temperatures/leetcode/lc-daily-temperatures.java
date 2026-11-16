@@ -3,8 +3,8 @@ class Solution {
         int n = temperatures.length;
         int[] res = new int[n];
         Arrays.fill(res, 0);
-        HashMap<Integer, Integer> map = new HashMap<>();
         Stack<Integer> stack = new Stack<>();
+        Map<Integer, Integer> map = new HashMap<>();
         for(int i=n-1; i>=0; i--){
             while(!stack.isEmpty() && stack.peek() <= temperatures[i]){
                 stack.pop();
