@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-valid-parentheses` |
 | Topics | String, Stack, Bracket Sequences |
-| Solved | 2026-09-02 |
+| Solved | 2026-11-16 |
 | Runtime | 3 ms (beats 85.29480000000001%) |
-| Memory | 43 MB (beats 67.44189999999999%) |
+| Memory | 43.2 MB (beats 56.35349999999999%) |
 
 ## Problem Statement
 
@@ -70,15 +70,15 @@ class Solution {
         Stack<Character> stack = new Stack<>();
         for(int i=0; i<s.length(); i++){
             char ch = s.charAt(i);
-            if(ch == '(' || ch == '{' || ch == '['){
+            if(ch == '(' || ch == '[' || ch == '{'){
                 stack.push(ch);
             }
             else{
                 if(stack.isEmpty()){
                     return false;
                 }
-                char top = stack.peek();
-                if(ch == ')' && top == '(' || ch == ']' && top == '[' || ch == '}' && top == '{'){
+                char top = stack.peek(); 
+                if(top == '(' && ch == ')' || top == '[' && ch == ']' || top == '{' && ch == '}'){
                     stack.pop();
                 }
                 else{

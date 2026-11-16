@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16T04:45:32.038Z",
+  "updatedAt": "2026-11-16T04:58:44.794Z",
   "layoutVersion": 3,
   "stats": {
     "total": 260,
@@ -19090,16 +19090,16 @@
         "topic": "stack",
         "voteCount": 98
       },
-      "readmeContent": "# [20] Valid Parentheses\n**Difficulty:** Easy  |  **Acceptance:** 45.4%  |  **Likes:** 28944 / **Dislikes:** 2059\n**Tags:** `String`, `Stack`, `Bracket Sequences`\n## Problem\nGiven a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\n\nAn input string is valid if:\n\n\tOpen brackets must be closed by the same type of brackets.\n\tOpen brackets must be closed in the correct order.\n\tEvery close bracket has a corresponding open bracket of the same type.\n\n&nbsp;\nExample 1:\n\nInput: s = \"()\"\n\nOutput: true\n\nExample 2:\n\nInput: s = \"()[]{}\"\n\nOutput: true\n\nExample 3:\n\nInput: s = \"(]\"\n\nOutput: false\n\nExample 4:\n\nInput: s = \"([])\"\n\nOutput: true\n\nExample 5:\n\nInput: s = \"([)]\"\n\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 104\n\ts consists of parentheses only '()[]{}'.\n## My Submission\n\n- Runtime: 3 ms (beats 85.3%)\n- Memory: 43 MB (beats 67.4%)\n\n## Similar Problems\n\n- [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) — Medium\n- [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) — Hard\n- [Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/) — Hard\n- [Check If Word Is Valid After Substitutions](https://leetcode.com/problems/check-if-word-is-valid-after-substitutions/) — Medium\n- [Check if a Parentheses String Can Be Valid](https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid/) — Medium\n",
-      "code": "class Solution {\n    public boolean isValid(String s) {\n        Stack<Character> stack = new Stack<>();\n        for(int i=0; i<s.length(); i++){\n            char ch = s.charAt(i);\n            if(ch == '(' || ch == '{' || ch == '['){\n                stack.push(ch);\n            }\n            else{\n                if(stack.isEmpty()){\n                    return false;\n                }\n                char top = stack.peek();\n                if(ch == ')' && top == '(' || ch == ']' && top == '[' || ch == '}' && top == '{'){\n                    stack.pop();\n                }\n                else{\n                    return false;\n                }\n            }\n        }\n        return stack.isEmpty();\n    }\n}",
+      "readmeContent": "# [20] Valid Parentheses\n**Difficulty:** Easy  |  **Acceptance:** 45.4%  |  **Likes:** 28944 / **Dislikes:** 2059\n**Tags:** `String`, `Stack`, `Bracket Sequences`\n## Problem\nGiven a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\n\nAn input string is valid if:\n\n\tOpen brackets must be closed by the same type of brackets.\n\tOpen brackets must be closed in the correct order.\n\tEvery close bracket has a corresponding open bracket of the same type.\n\n&nbsp;\nExample 1:\n\nInput: s = \"()\"\n\nOutput: true\n\nExample 2:\n\nInput: s = \"()[]{}\"\n\nOutput: true\n\nExample 3:\n\nInput: s = \"(]\"\n\nOutput: false\n\nExample 4:\n\nInput: s = \"([])\"\n\nOutput: true\n\nExample 5:\n\nInput: s = \"([)]\"\n\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 104\n\ts consists of parentheses only '()[]{}'.\n## My Submission\n\n- Runtime: 3 ms (beats 85.3%)\n- Memory: 43.2 MB (beats 56.4%)\n\n## Similar Problems\n\n- [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) — Medium\n- [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) — Hard\n- [Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/) — Hard\n- [Check If Word Is Valid After Substitutions](https://leetcode.com/problems/check-if-word-is-valid-after-substitutions/) — Medium\n- [Check if a Parentheses String Can Be Valid](https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid/) — Medium\n",
+      "code": "class Solution {\n    public boolean isValid(String s) {\n        Stack<Character> stack = new Stack<>();\n        for(int i=0; i<s.length(); i++){\n            char ch = s.charAt(i);\n            if(ch == '(' || ch == '[' || ch == '{'){\n                stack.push(ch);\n            }\n            else{\n                if(stack.isEmpty()){\n                    return false;\n                }\n                char top = stack.peek(); \n                if(top == '(' && ch == ')' || top == '[' && ch == ']' || top == '{' && ch == '}'){\n                    stack.pop();\n                }\n                else{\n                    return false;\n                }\n            }\n        }\n        return stack.isEmpty();\n    }\n}",
       "files": [
         {
           "path": "problems/valid-parentheses/leetcode/lc-valid-parentheses.java",
-          "content": "class Solution {\n    public boolean isValid(String s) {\n        Stack<Character> stack = new Stack<>();\n        for(int i=0; i<s.length(); i++){\n            char ch = s.charAt(i);\n            if(ch == '(' || ch == '{' || ch == '['){\n                stack.push(ch);\n            }\n            else{\n                if(stack.isEmpty()){\n                    return false;\n                }\n                char top = stack.peek();\n                if(ch == ')' && top == '(' || ch == ']' && top == '[' || ch == '}' && top == '{'){\n                    stack.pop();\n                }\n                else{\n                    return false;\n                }\n            }\n        }\n        return stack.isEmpty();\n    }\n}"
+          "content": "class Solution {\n    public boolean isValid(String s) {\n        Stack<Character> stack = new Stack<>();\n        for(int i=0; i<s.length(); i++){\n            char ch = s.charAt(i);\n            if(ch == '(' || ch == '[' || ch == '{'){\n                stack.push(ch);\n            }\n            else{\n                if(stack.isEmpty()){\n                    return false;\n                }\n                char top = stack.peek(); \n                if(top == '(' && ch == ')' || top == '[' && ch == ']' || top == '{' && ch == '}'){\n                    stack.pop();\n                }\n                else{\n                    return false;\n                }\n            }\n        }\n        return stack.isEmpty();\n    }\n}"
         },
         {
           "path": "problems/valid-parentheses/README.md",
-          "content": "# [20] Valid Parentheses\n**Difficulty:** Easy  |  **Acceptance:** 45.4%  |  **Likes:** 28944 / **Dislikes:** 2059\n**Tags:** `String`, `Stack`, `Bracket Sequences`\n## Problem\nGiven a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\n\nAn input string is valid if:\n\n\tOpen brackets must be closed by the same type of brackets.\n\tOpen brackets must be closed in the correct order.\n\tEvery close bracket has a corresponding open bracket of the same type.\n\n&nbsp;\nExample 1:\n\nInput: s = \"()\"\n\nOutput: true\n\nExample 2:\n\nInput: s = \"()[]{}\"\n\nOutput: true\n\nExample 3:\n\nInput: s = \"(]\"\n\nOutput: false\n\nExample 4:\n\nInput: s = \"([])\"\n\nOutput: true\n\nExample 5:\n\nInput: s = \"([)]\"\n\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 104\n\ts consists of parentheses only '()[]{}'.\n## My Submission\n\n- Runtime: 3 ms (beats 85.3%)\n- Memory: 43 MB (beats 67.4%)\n\n## Similar Problems\n\n- [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) — Medium\n- [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) — Hard\n- [Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/) — Hard\n- [Check If Word Is Valid After Substitutions](https://leetcode.com/problems/check-if-word-is-valid-after-substitutions/) — Medium\n- [Check if a Parentheses String Can Be Valid](https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid/) — Medium\n"
+          "content": "# [20] Valid Parentheses\n**Difficulty:** Easy  |  **Acceptance:** 45.4%  |  **Likes:** 28944 / **Dislikes:** 2059\n**Tags:** `String`, `Stack`, `Bracket Sequences`\n## Problem\nGiven a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\n\nAn input string is valid if:\n\n\tOpen brackets must be closed by the same type of brackets.\n\tOpen brackets must be closed in the correct order.\n\tEvery close bracket has a corresponding open bracket of the same type.\n\n&nbsp;\nExample 1:\n\nInput: s = \"()\"\n\nOutput: true\n\nExample 2:\n\nInput: s = \"()[]{}\"\n\nOutput: true\n\nExample 3:\n\nInput: s = \"(]\"\n\nOutput: false\n\nExample 4:\n\nInput: s = \"([])\"\n\nOutput: true\n\nExample 5:\n\nInput: s = \"([)]\"\n\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 104\n\ts consists of parentheses only '()[]{}'.\n## My Submission\n\n- Runtime: 3 ms (beats 85.3%)\n- Memory: 43.2 MB (beats 56.4%)\n\n## Similar Problems\n\n- [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) — Medium\n- [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) — Hard\n- [Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/) — Hard\n- [Check If Word Is Valid After Substitutions](https://leetcode.com/problems/check-if-word-is-valid-after-substitutions/) — Medium\n- [Check if a Parentheses String Can Be Valid](https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid/) — Medium\n"
         }
       ],
       "lang": {
@@ -19108,11 +19108,11 @@
         "slug": "java"
       },
       "runtime": "3 ms",
-      "memory": "43 MB",
+      "memory": "43.2 MB",
       "runtimePct": 85.29480000000001,
-      "memoryPct": 67.44189999999999,
-      "timestamp": 1788359736000,
-      "acRate": 45.43114462024804,
+      "memoryPct": 56.35349999999999,
+      "timestamp": 1794805120000,
+      "acRate": 45.43122185461263,
       "likes": 28944,
       "dislikes": 2059,
       "similar": [
@@ -19159,12 +19159,16 @@
       "submissionsUrl": "https://leetcode.com/problems/valid-parentheses/submissions/",
       "notes": "",
       "methodTitle": "",
-      "isDuplicate": true,
-      "duplicateOf": "lc-valid-parentheses::2128547824",
+      "isDuplicate": false,
+      "duplicateOf": null,
       "_requestAIReview": true,
       "platform": "leetcode",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/valid-parentheses/leetcode/lc-valid-parentheses.java",
+        "problems/valid-parentheses/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-valid-parentheses::1815862601",
