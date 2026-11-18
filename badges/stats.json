@@ -3,13 +3,13 @@
   "asOf": "2026-11-18",
   "currentStreak": 15,
   "longestStreak": 15,
-  "freezes": 3,
-  "totalPoints": 3975,
-  "totalSolves": 213,
+  "freezes": 5,
+  "totalPoints": 4000,
+  "totalSolves": 214,
   "totalRecalls": 0,
   "byDifficulty": {
     "Easy": 95,
-    "Medium": 115,
+    "Medium": 116,
     "Hard": 3
   },
   "level": 6,
