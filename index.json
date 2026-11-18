@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T14:55:44.159Z",
+  "updatedAt": "2026-11-18T17:21:15.711Z",
   "layoutVersion": 3,
   "stats": {
     "total": 268,
@@ -15591,7 +15591,11 @@
       "_requestAIReview": true,
       "platform": "leetcode",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-rotate-array/lc-rotate-array.java",
+        "problems/lc-rotate-array/README.md"
+      ]
     },
     {
       "id": "lc-rotate-array::2129851950",
@@ -17669,16 +17673,16 @@
         "topic": "math",
         "voteCount": 96
       },
-      "readmeContent": "# [54] Spiral Matrix\n**Difficulty:** Medium  |  **Acceptance:** 58.3%  |  **Likes:** 18049 / **Dislikes:** 1620\n**Tags:** `Array`, `Matrix`, `Simulation`\n## Problem\nGiven an m x n matrix, return all elements of the matrix in spiral order.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [1,2,3,6,9,8,7,4,5]\n\nExample 2:\n\nInput: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]\nOutput: [1,2,3,4,8,12,11,10,9,5,6,7]\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 10\n\t-100 <= matrix[i][j] <= 100\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 42.8 MB (beats 55.8%)\n\n## Similar Problems\n\n- [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/) — Medium\n- [Spiral Matrix III](https://leetcode.com/problems/spiral-matrix-iii/) — Medium\n- [Spiral Matrix IV](https://leetcode.com/problems/spiral-matrix-iv/) — Medium\n",
-      "code": "class Solution {\n    public List<Integer> spiralOrder(int[][] matrix) {\n        int n = matrix.length;\n        int m = matrix[0].length;\n\n        int top = 0, bottom = n - 1;\n        int left = 0, right = m - 1;\n\n        List<Integer> ans = new ArrayList<>();\n\n        while (top <= bottom && left <= right) {\n            for (int i = left; i <= right; i++) {\n                ans.add(matrix[top][i]);\n            }\n            top++;\n\n            for (int i = top; i <= bottom; i++) {\n                ans.add(matrix[i][right]);\n            }\n            right--;\n\n            if (top <= bottom) {\n                for (int i = right; i >= left; i--) {\n                    ans.add(matrix[bottom][i]);\n                }\n                bottom--;\n            }\n\n            if (left <= right) {\n                for (int i = bottom; i >= top; i--) {\n                    ans.add(matrix[i][left]);\n                }\n                left++;\n            }\n        }\n        return ans;\n    }\n}",
+      "readmeContent": "# [54] Spiral Matrix\n**Difficulty:** Medium  |  **Acceptance:** 58.3%  |  **Likes:** 18050 / **Dislikes:** 1620\n**Tags:** `Array`, `Matrix`, `Simulation`\n## Problem\nGiven an m x n matrix, return all elements of the matrix in spiral order.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [1,2,3,6,9,8,7,4,5]\n\nExample 2:\n\nInput: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]\nOutput: [1,2,3,4,8,12,11,10,9,5,6,7]\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 10\n\t-100 <= matrix[i][j] <= 100\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 42.7 MB (beats 64.2%)\n\n## Similar Problems\n\n- [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/) — Medium\n- [Spiral Matrix III](https://leetcode.com/problems/spiral-matrix-iii/) — Medium\n- [Spiral Matrix IV](https://leetcode.com/problems/spiral-matrix-iv/) — Medium\n",
+      "code": "class Solution {\n    public List<Integer> spiralOrder(int[][] matrix) {\n        int n = matrix.length;\n        int m = matrix[0].length;\n\n        int top = 0, bottom = n-1;\n        int left = 0, right = m-1;\n\n        List<Integer> res = new ArrayList<>();\n        while(left <= right && top <= bottom){\n            for(int i=left; i<=right; i++){\n                res.add(matrix[top][i]);\n            }\n            top++;\n            for(int i=top; i<=bottom; i++){\n                res.add(matrix[i][right]);\n            }\n            right--;\n            if(top <= bottom){\n                for(int i=right; i>=left; i--){\n                res.add(matrix[bottom][i]);\n                }\n                bottom--;\n            }\n            if(left <= right){\n                for(int i=bottom; i>=top; i--){\n                    res.add(matrix[i][left]);\n                }\n                left++;\n            }\n        }\n        return res;\n    }\n}",
       "files": [
         {
           "path": "problems/spiral-matrix/leetcode/lc-spiral-matrix.java",
-          "content": "class Solution {\n    public List<Integer> spiralOrder(int[][] matrix) {\n        int n = matrix.length;\n        int m = matrix[0].length;\n\n        int top = 0, bottom = n - 1;\n        int left = 0, right = m - 1;\n\n        List<Integer> ans = new ArrayList<>();\n\n        while (top <= bottom && left <= right) {\n            for (int i = left; i <= right; i++) {\n                ans.add(matrix[top][i]);\n            }\n            top++;\n\n            for (int i = top; i <= bottom; i++) {\n                ans.add(matrix[i][right]);\n            }\n            right--;\n\n            if (top <= bottom) {\n                for (int i = right; i >= left; i--) {\n                    ans.add(matrix[bottom][i]);\n                }\n                bottom--;\n            }\n\n            if (left <= right) {\n                for (int i = bottom; i >= top; i--) {\n                    ans.add(matrix[i][left]);\n                }\n                left++;\n            }\n        }\n        return ans;\n    }\n}"
+          "content": "class Solution {\n    public List<Integer> spiralOrder(int[][] matrix) {\n        int n = matrix.length;\n        int m = matrix[0].length;\n\n        int top = 0, bottom = n-1;\n        int left = 0, right = m-1;\n\n        List<Integer> res = new ArrayList<>();\n        while(left <= right && top <= bottom){\n            for(int i=left; i<=right; i++){\n                res.add(matrix[top][i]);\n            }\n            top++;\n            for(int i=top; i<=bottom; i++){\n                res.add(matrix[i][right]);\n            }\n            right--;\n            if(top <= bottom){\n                for(int i=right; i>=left; i--){\n                res.add(matrix[bottom][i]);\n                }\n                bottom--;\n            }\n            if(left <= right){\n                for(int i=bottom; i>=top; i--){\n                    res.add(matrix[i][left]);\n                }\n                left++;\n            }\n        }\n        return res;\n    }\n}"
         },
         {
           "path": "problems/spiral-matrix/README.md",
-          "content": "# [54] Spiral Matrix\n**Difficulty:** Medium  |  **Acceptance:** 58.3%  |  **Likes:** 18049 / **Dislikes:** 1620\n**Tags:** `Array`, `Matrix`, `Simulation`\n## Problem\nGiven an m x n matrix, return all elements of the matrix in spiral order.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [1,2,3,6,9,8,7,4,5]\n\nExample 2:\n\nInput: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]\nOutput: [1,2,3,4,8,12,11,10,9,5,6,7]\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 10\n\t-100 <= matrix[i][j] <= 100\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 42.8 MB (beats 55.8%)\n\n## Similar Problems\n\n- [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/) — Medium\n- [Spiral Matrix III](https://leetcode.com/problems/spiral-matrix-iii/) — Medium\n- [Spiral Matrix IV](https://leetcode.com/problems/spiral-matrix-iv/) — Medium\n"
+          "content": "# [54] Spiral Matrix\n**Difficulty:** Medium  |  **Acceptance:** 58.3%  |  **Likes:** 18050 / **Dislikes:** 1620\n**Tags:** `Array`, `Matrix`, `Simulation`\n## Problem\nGiven an m x n matrix, return all elements of the matrix in spiral order.\n\n&nbsp;\nExample 1:\n\nInput: matrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [1,2,3,6,9,8,7,4,5]\n\nExample 2:\n\nInput: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]\nOutput: [1,2,3,4,8,12,11,10,9,5,6,7]\n\n&nbsp;\nConstraints:\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 10\n\t-100 <= matrix[i][j] <= 100\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 42.7 MB (beats 64.2%)\n\n## Similar Problems\n\n- [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/) — Medium\n- [Spiral Matrix III](https://leetcode.com/problems/spiral-matrix-iii/) — Medium\n- [Spiral Matrix IV](https://leetcode.com/problems/spiral-matrix-iv/) — Medium\n"
         }
       ],
       "lang": {
@@ -17687,12 +17691,12 @@
         "slug": "java"
       },
       "runtime": "0 ms",
-      "memory": "42.8 MB",
+      "memory": "42.7 MB",
       "runtimePct": 100,
-      "memoryPct": 55.7898,
-      "timestamp": 1776170011000,
-      "acRate": 58.300430531446445,
-      "likes": 18049,
+      "memoryPct": 64.154,
+      "timestamp": 1795022469000,
+      "acRate": 58.30085690693665,
+      "likes": 18050,
       "dislikes": 1620,
       "similar": [
         {
@@ -17720,12 +17724,16 @@
       "submissionsUrl": "https://leetcode.com/problems/spiral-matrix/submissions/",
       "notes": "",
       "methodTitle": "",
-      "isDuplicate": true,
-      "duplicateOf": "lc-spiral-matrix::1978254878",
+      "isDuplicate": false,
+      "duplicateOf": null,
       "_requestAIReview": true,
       "platform": "leetcode",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/spiral-matrix/leetcode/lc-spiral-matrix.java",
+        "problems/spiral-matrix/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-spiral-matrix::1978254878",
