@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-11-19T08:06:42.427Z",
+  "updatedAt": "2026-11-19T14:36:58.577Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 273,
+    "total": 274,
     "easy": 120,
-    "medium": 139,
+    "medium": 140,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 57,
-      "leetcode": 216
+      "leetcode": 217
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 157,
+      "Java": 158,
       "Python": 30,
       "MySQL": 35
     },
@@ -29,7 +29,7 @@
       "Math": 6,
       "Two Pointers": 7,
       "Stack": 6,
-      "Hash Table": 9,
+      "Hash Table": 10,
       "Linked List": 13,
       "Database": 35,
       "Dynamic Programming": 7,
@@ -6091,7 +6091,7 @@
       "runtimePct": 99.823,
       "memoryPct": 91.1363,
       "timestamp": 1795075597000,
-      "acRate": 60.86399869503028,
+      "acRate": 60.86437553300422,
       "likes": 5595,
       "dislikes": 523,
       "similar": [
@@ -8982,7 +8982,7 @@
         "topic": "sliding-window",
         "voteCount": 95
       },
-      "readmeContent": "# [424] Longest Repeating Character Replacement\n**Difficulty:** Medium  |  **Acceptance:** 61.0%  |  **Likes:** 13739 / **Dislikes:** 822\n**Tags:** `Hash Table`, `String`, `Sliding Window`\n## Problem\nYou are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.\n\nReturn the length of the longest substring containing the same letter you can get after performing the above operations.\n\n&nbsp;\nExample 1:\n\nInput: s = \"ABAB\", k = 2\nOutput: 4\nExplanation: Replace the two 'A's with two 'B's or vice versa.\n\nExample 2:\n\nInput: s = \"AABABBA\", k = 1\nOutput: 4\nExplanation: Replace the one 'A' in the middle with 'B' and form \"AABBBBA\".\nThe substring \"BBBB\" has the longest repeating letters, which is 4.\nThere may exists other ways to achieve this answer too.\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 105\n\ts consists of only uppercase English letters.\n\t0 <= k <= s.length\n## My Submission\n\n- Runtime: 7 ms (beats 91.3%)\n- Memory: 46 MB (beats 63.5%)\n\n## Similar Problems\n\n- [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/) — Medium\n- [Minimum Number of Operations to Make Array Continuous](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/) — Hard\n- [Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam/) — Medium\n- [Longest Substring of One Repeating Character](https://leetcode.com/problems/longest-substring-of-one-repeating-character/) — Hard\n",
+      "readmeContent": "# [424] Longest Repeating Character Replacement\n**Difficulty:** Medium  |  **Acceptance:** 61.0%  |  **Likes:** 13741 / **Dislikes:** 822\n**Tags:** `Hash Table`, `String`, `Sliding Window`\n## Problem\nYou are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.\n\nReturn the length of the longest substring containing the same letter you can get after performing the above operations.\n\n&nbsp;\nExample 1:\n\nInput: s = \"ABAB\", k = 2\nOutput: 4\nExplanation: Replace the two 'A's with two 'B's or vice versa.\n\nExample 2:\n\nInput: s = \"AABABBA\", k = 1\nOutput: 4\nExplanation: Replace the one 'A' in the middle with 'B' and form \"AABBBBA\".\nThe substring \"BBBB\" has the longest repeating letters, which is 4.\nThere may exists other ways to achieve this answer too.\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 105\n\ts consists of only uppercase English letters.\n\t0 <= k <= s.length\n## My Submission\n\n- Runtime: 7 ms (beats 91.3%)\n- Memory: 46 MB (beats 63.5%)\n\n## Similar Problems\n\n- [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/) — Medium\n- [Minimum Number of Operations to Make Array Continuous](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/) — Hard\n- [Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam/) — Medium\n- [Longest Substring of One Repeating Character](https://leetcode.com/problems/longest-substring-of-one-repeating-character/) — Hard\n",
       "code": "class Solution {\n    public int characterReplacement(String s, int k) {\n        int[] freq = new int[26];\n        int l = 0;\n        int maxLen = 0;\n        int maxFreq = 0;\n        for(int r=0; r<s.length(); r++){\n            char ch = s.charAt(r);\n            freq[ch - 'A']++;\n            maxFreq = Math.max(maxFreq, freq[ch - 'A']);\n            while((r-l+1) - maxFreq > k){\n                freq[s.charAt(l) - 'A']--;\n                l++;\n            }\n            maxLen = Math.max(maxLen, r-l+1);\n        }\n        return maxLen;\n    }\n}",
       "files": [
         {
@@ -8991,7 +8991,7 @@
         },
         {
           "path": "problems/longest-repeating-character-replacement/README.md",
-          "content": "# [424] Longest Repeating Character Replacement\n**Difficulty:** Medium  |  **Acceptance:** 61.0%  |  **Likes:** 13739 / **Dislikes:** 822\n**Tags:** `Hash Table`, `String`, `Sliding Window`\n## Problem\nYou are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.\n\nReturn the length of the longest substring containing the same letter you can get after performing the above operations.\n\n&nbsp;\nExample 1:\n\nInput: s = \"ABAB\", k = 2\nOutput: 4\nExplanation: Replace the two 'A's with two 'B's or vice versa.\n\nExample 2:\n\nInput: s = \"AABABBA\", k = 1\nOutput: 4\nExplanation: Replace the one 'A' in the middle with 'B' and form \"AABBBBA\".\nThe substring \"BBBB\" has the longest repeating letters, which is 4.\nThere may exists other ways to achieve this answer too.\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 105\n\ts consists of only uppercase English letters.\n\t0 <= k <= s.length\n## My Submission\n\n- Runtime: 7 ms (beats 91.3%)\n- Memory: 46 MB (beats 63.5%)\n\n## Similar Problems\n\n- [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/) — Medium\n- [Minimum Number of Operations to Make Array Continuous](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/) — Hard\n- [Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam/) — Medium\n- [Longest Substring of One Repeating Character](https://leetcode.com/problems/longest-substring-of-one-repeating-character/) — Hard\n"
+          "content": "# [424] Longest Repeating Character Replacement\n**Difficulty:** Medium  |  **Acceptance:** 61.0%  |  **Likes:** 13741 / **Dislikes:** 822\n**Tags:** `Hash Table`, `String`, `Sliding Window`\n## Problem\nYou are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.\n\nReturn the length of the longest substring containing the same letter you can get after performing the above operations.\n\n&nbsp;\nExample 1:\n\nInput: s = \"ABAB\", k = 2\nOutput: 4\nExplanation: Replace the two 'A's with two 'B's or vice versa.\n\nExample 2:\n\nInput: s = \"AABABBA\", k = 1\nOutput: 4\nExplanation: Replace the one 'A' in the middle with 'B' and form \"AABBBBA\".\nThe substring \"BBBB\" has the longest repeating letters, which is 4.\nThere may exists other ways to achieve this answer too.\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 105\n\ts consists of only uppercase English letters.\n\t0 <= k <= s.length\n## My Submission\n\n- Runtime: 7 ms (beats 91.3%)\n- Memory: 46 MB (beats 63.5%)\n\n## Similar Problems\n\n- [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/) — Medium\n- [Minimum Number of Operations to Make Array Continuous](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/) — Hard\n- [Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam/) — Medium\n- [Longest Substring of One Repeating Character](https://leetcode.com/problems/longest-substring-of-one-repeating-character/) — Hard\n"
         }
       ],
       "lang": {
@@ -9004,8 +9004,8 @@
       "runtimePct": 91.31040000000002,
       "memoryPct": 63.453599999999966,
       "timestamp": 1785346043000,
-      "acRate": 60.992560106559445,
-      "likes": 13739,
+      "acRate": 60.993097834270436,
+      "likes": 13741,
       "dislikes": 822,
       "similar": [
         {
@@ -15274,6 +15274,62 @@
         "problems/lc-remove-zeros-in-decimal-representation/lc-remove-zeros-in-decimal-representation.py",
         "problems/lc-remove-zeros-in-decimal-representation/README.md"
       ]
+    },
+    {
+      "id": "lc-repeated-dna-sequences",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Repeated DNA Sequences",
+      "titleSlug": "repeated-dna-sequences",
+      "difficulty": "Medium",
+      "topic": "Bit Manipulation",
+      "tags": [
+        "Hash Table",
+        "String",
+        "Bit Manipulation",
+        "Sliding Window",
+        "Rolling Hash",
+        "Hash Function",
+        "Z Algorithm",
+        "Boyer–moore String Search Algorithm"
+      ],
+      "canonical": null,
+      "readmeContent": "# [187] Repeated DNA Sequences\n**Difficulty:** Medium  |  **Acceptance:** 54.3%  |  **Likes:** 3707 / **Dislikes:** 581\n**Tags:** `Hash Table`, `String`, `Bit Manipulation`, `Sliding Window`, `Rolling Hash`, `Hash Function`, `Z Algorithm`, `Boyer–Moore String-Search Algorithm`\n## Problem\nThe DNA sequence is composed of a series of nucleotides abbreviated as 'A', 'C', 'G', and 'T'.\n\n\tFor example, \"ACGAATTCCG\" is a DNA sequence.\n\nWhen studying DNA, it is useful to identify repeated sequences within the DNA.\n\nGiven a string s that represents a DNA sequence, return all the 10-letter-long sequences (substrings) that occur more than once in a DNA molecule. You may return the answer in any order.\n\n&nbsp;\nExample 1:\nInput: s = \"AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT\"\nOutput: [\"AAAAACCCCC\",\"CCCCCAAAAA\"]\nExample 2:\nInput: s = \"AAAAAAAAAAAAA\"\nOutput: [\"AAAAAAAAAA\"]\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 105\n\ts[i] is either 'A', 'C', 'G', or 'T'.\n## My Submission\n\n- Runtime: 529 ms (beats 28.0%)\n- Memory: 274.8 MB (beats 12.0%)\n",
+      "code": "class Solution {\n    public List<String> findRepeatedDnaSequences(String s) {\n        HashMap<String, Integer> map = new HashMap<>();\n        int l = 0;\n        int r = 9;\n        while(r < s.length()){\n            String dna = s.substring(l, r+1);\n            map.put(dna, map.getOrDefault(dna, 0)+1);\n            l++;\n            r++;\n        }\n        List<String> res = new ArrayList<>();\n        for(Map.Entry<String, Integer> entry : map.entrySet()){\n            String key = entry.getKey();\n            int val = entry.getValue();\n            if(val > 1){\n                res.add(key);\n            }\n        }\n        return res;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/lc-repeated-dna-sequences/lc-repeated-dna-sequences.java",
+          "content": "class Solution {\n    public List<String> findRepeatedDnaSequences(String s) {\n        HashMap<String, Integer> map = new HashMap<>();\n        int l = 0;\n        int r = 9;\n        while(r < s.length()){\n            String dna = s.substring(l, r+1);\n            map.put(dna, map.getOrDefault(dna, 0)+1);\n            l++;\n            r++;\n        }\n        List<String> res = new ArrayList<>();\n        for(Map.Entry<String, Integer> entry : map.entrySet()){\n            String key = entry.getKey();\n            int val = entry.getValue();\n            if(val > 1){\n                res.add(key);\n            }\n        }\n        return res;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-repeated-dna-sequences/README.md",
+          "content": "# [187] Repeated DNA Sequences\n**Difficulty:** Medium  |  **Acceptance:** 54.3%  |  **Likes:** 3707 / **Dislikes:** 581\n**Tags:** `Hash Table`, `String`, `Bit Manipulation`, `Sliding Window`, `Rolling Hash`, `Hash Function`, `Z Algorithm`, `Boyer–Moore String-Search Algorithm`\n## Problem\nThe DNA sequence is composed of a series of nucleotides abbreviated as 'A', 'C', 'G', and 'T'.\n\n\tFor example, \"ACGAATTCCG\" is a DNA sequence.\n\nWhen studying DNA, it is useful to identify repeated sequences within the DNA.\n\nGiven a string s that represents a DNA sequence, return all the 10-letter-long sequences (substrings) that occur more than once in a DNA molecule. You may return the answer in any order.\n\n&nbsp;\nExample 1:\nInput: s = \"AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT\"\nOutput: [\"AAAAACCCCC\",\"CCCCCAAAAA\"]\nExample 2:\nInput: s = \"AAAAAAAAAAAAA\"\nOutput: [\"AAAAAAAAAA\"]\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 105\n\ts[i] is either 'A', 'C', 'G', or 'T'.\n## My Submission\n\n- Runtime: 529 ms (beats 28.0%)\n- Memory: 274.8 MB (beats 12.0%)\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "529 ms",
+      "memory": "274.8 MB",
+      "runtimePct": 27.999499999999472,
+      "memoryPct": 11.970099999998842,
+      "timestamp": 1795099014000,
+      "acRate": 54.31689244873142,
+      "likes": 3707,
+      "dislikes": 581,
+      "similar": [],
+      "problemStatement": "<p>The <strong>DNA sequence</strong> is composed of a series of nucleotides abbreviated as <code>&#39;A&#39;</code>, <code>&#39;C&#39;</code>, <code>&#39;G&#39;</code>, and <code>&#39;T&#39;</code>.</p>\n\n<ul>\n\t<li>For example, <code>&quot;ACGAATTCCG&quot;</code> is a <strong>DNA sequence</strong>.</li>\n</ul>\n\n<p>When studying <strong>DNA</strong>, it is useful to identify repeated sequences within the DNA.</p>\n\n<p>Given a string <code>s</code> that represents a <strong>DNA sequence</strong>, return all the <strong><code>10</code>-letter-long</strong> sequences (substrings) that occur more than once in a DNA molecule. You may return the answer in <strong>any order</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> s = \"AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT\"\n<strong>Output:</strong> [\"AAAAACCCCC\",\"CCCCCAAAAA\"]\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> s = \"AAAAAAAAAAAAA\"\n<strong>Output:</strong> [\"AAAAAAAAAA\"]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>s[i]</code> is either <code>&#39;A&#39;</code>, <code>&#39;C&#39;</code>, <code>&#39;G&#39;</code>, or <code>&#39;T&#39;</code>.</li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": false,
+      "submissionsUrl": "https://leetcode.com/problems/repeated-dna-sequences/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
     },
     {
       "id": "lc-replace-employee-id-with-the-unique-identifier::1807318172",

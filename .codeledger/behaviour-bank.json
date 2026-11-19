@@ -240,6 +240,11 @@
         "elapsedSeconds": 0,
         "lang": "Java",
         "ts": 1795075602298
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1795095645649
       }
     ],
     "tags": [
@@ -483,6 +488,11 @@
         "elapsedSeconds": 0,
         "lang": "Java",
         "ts": 1795074141243
+      },
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1795095703127
       }
     ],
     "tags": [
@@ -784,6 +794,29 @@
     "tags": [
       "Array",
       "Prefix Sum"
+    ]
+  },
+  "leetcode::repeated-dna-sequences": {
+    "difficulty": "Medium",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "repeated-dna-sequences",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1795099018444
+      }
+    ],
+    "tags": [
+      "Hash Table",
+      "String",
+      "Bit Manipulation",
+      "Sliding Window",
+      "Rolling Hash",
+      "Hash Function",
+      "Z Algorithm",
+      "Boyer–moore String Search Algorithm"
     ]
   },
   "leetcode::reverse-linked-list": {
