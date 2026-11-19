@@ -225,6 +225,25 @@
       "Sliding Window"
     ]
   },
+  "leetcode::find-the-difference": {
+    "difficulty": "Easy",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "find-the-difference",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1795075120974
+      }
+    ],
+    "tags": [
+      "Hash Table",
+      "String",
+      "Bit Manipulation",
+      "Sorting"
+    ]
+  },
   "leetcode::find-the-duplicate-number": {
     "difficulty": "Medium",
     "lang": "Java",
