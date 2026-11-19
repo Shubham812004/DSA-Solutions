@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-isomorphic-strings` |
 | Topics | Hash Table, String |
-| Solved | 2026-07-20 |
-| Runtime | 24 ms (beats 22.332000000000015%) |
-| Memory | 43.7 MB (beats 47.337700000000034%) |
+| Solved | 2026-11-19 |
+| Runtime | 25 ms (beats 15.845100000000015%) |
+| Memory | 43.5 MB (beats 65.96130000000004%) |
 
 ## Problem Statement
 
@@ -65,17 +65,14 @@ The strings `s` and `t` can not be made identical as `'1'` needs to be mapped to
 ```Java
 class Solution {
     public boolean isIsomorphic(String s, String t) {
-        HashMap<Character, Character> mapST = new HashMap<>();
-        HashMap<Character, Character> mapTS = new HashMap<>();;
+        Map<Character, Character> mapST = new HashMap<>();
+        Map<Character, Character> mapTS = new HashMap<>();
+
         for(int i=0; i<s.length(); i++){
             char ch1 = s.charAt(i);
             char ch2 = t.charAt(i);
-            if(mapST.containsKey(ch1) && mapST.get(ch1) != ch2){
-                return false;
-            }
-            if(mapTS.containsKey(ch2) && mapTS.get(ch2) != ch1){
-                return false;
-            }
+            if(mapST.containsKey(ch1) && ch2 != mapST.get(ch1)) return false;
+            if(mapTS.containsKey(ch2) && ch1 != mapTS.get(ch2)) return false;
             mapST.put(ch1, ch2);
             mapTS.put(ch2, ch1);
         }

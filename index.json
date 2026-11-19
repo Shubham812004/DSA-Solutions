@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T04:56:06.581Z",
+  "updatedAt": "2026-11-19T06:25:56.726Z",
   "layoutVersion": 3,
   "stats": {
     "total": 270,
@@ -7591,16 +7591,16 @@
         "String"
       ],
       "canonical": null,
-      "readmeContent": "# [205] Isomorphic Strings\n**Difficulty:** Easy  |  **Acceptance:** 49.3%  |  **Likes:** 10933 / **Dislikes:** 2309\n**Tags:** `Hash Table`, `String`\n## Problem\nGiven two strings s and t, determine if they are isomorphic.\n\nTwo strings s and t are isomorphic if the characters in s can be replaced to get t.\n\nAll occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.\n\n&nbsp;\nExample 1:\n\nInput: s = \"egg\", t = \"add\"\n\nOutput: true\n\nExplanation:\n\nThe strings s and t can be made identical by:\n\n\tMapping 'e' to 'a'.\n\tMapping 'g' to 'd'.\n\nExample 2:\n\nInput: s = \"f11\", t = \"b23\"\n\nOutput: false\n\nExplanation:\n\nThe strings s and t can not be made identical as '1' needs to be mapped to both '2' and '3'.\n\nExample 3:\n\nInput: s = \"paper\", t = \"title\"\n\nOutput: true\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 5 * 104\n\tt.length == s.length\n\ts and t consist of any valid ascii character.\n## My Submission\n\n- Runtime: 24 ms (beats 22.3%)\n- Memory: 43.7 MB (beats 47.3%)\n\n## Similar Problems\n\n- [Word Pattern](https://leetcode.com/problems/word-pattern/) — Easy\n- [Find and Replace Pattern](https://leetcode.com/problems/find-and-replace-pattern/) — Medium\n",
-      "code": "class Solution {\n    public boolean isIsomorphic(String s, String t) {\n        HashMap<Character, Character> mapST = new HashMap<>();\n        HashMap<Character, Character> mapTS = new HashMap<>();;\n        for(int i=0; i<s.length(); i++){\n            char ch1 = s.charAt(i);\n            char ch2 = t.charAt(i);\n            if(mapST.containsKey(ch1) && mapST.get(ch1) != ch2){\n                return false;\n            }\n            if(mapTS.containsKey(ch2) && mapTS.get(ch2) != ch1){\n                return false;\n            }\n            mapST.put(ch1, ch2);\n            mapTS.put(ch2, ch1);\n        }\n        return true;\n    }\n}",
+      "readmeContent": "# [205] Isomorphic Strings\n**Difficulty:** Easy  |  **Acceptance:** 49.3%  |  **Likes:** 10933 / **Dislikes:** 2309\n**Tags:** `Hash Table`, `String`\n## Problem\nGiven two strings s and t, determine if they are isomorphic.\n\nTwo strings s and t are isomorphic if the characters in s can be replaced to get t.\n\nAll occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.\n\n&nbsp;\nExample 1:\n\nInput: s = \"egg\", t = \"add\"\n\nOutput: true\n\nExplanation:\n\nThe strings s and t can be made identical by:\n\n\tMapping 'e' to 'a'.\n\tMapping 'g' to 'd'.\n\nExample 2:\n\nInput: s = \"f11\", t = \"b23\"\n\nOutput: false\n\nExplanation:\n\nThe strings s and t can not be made identical as '1' needs to be mapped to both '2' and '3'.\n\nExample 3:\n\nInput: s = \"paper\", t = \"title\"\n\nOutput: true\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 5 * 104\n\tt.length == s.length\n\ts and t consist of any valid ascii character.\n## My Submission\n\n- Runtime: 25 ms (beats 15.8%)\n- Memory: 43.5 MB (beats 66.0%)\n\n## Similar Problems\n\n- [Word Pattern](https://leetcode.com/problems/word-pattern/) — Easy\n- [Find and Replace Pattern](https://leetcode.com/problems/find-and-replace-pattern/) — Medium\n",
+      "code": "class Solution {\n    public boolean isIsomorphic(String s, String t) {\n        Map<Character, Character> mapST = new HashMap<>();\n        Map<Character, Character> mapTS = new HashMap<>();\n\n        for(int i=0; i<s.length(); i++){\n            char ch1 = s.charAt(i);\n            char ch2 = t.charAt(i);\n            if(mapST.containsKey(ch1) && ch2 != mapST.get(ch1)) return false;\n            if(mapTS.containsKey(ch2) && ch1 != mapTS.get(ch2)) return false;\n            mapST.put(ch1, ch2);\n            mapTS.put(ch2, ch1);\n        }\n        return true;\n    }\n}",
       "files": [
         {
           "path": "problems/lc-isomorphic-strings/lc-isomorphic-strings.java",
-          "content": "class Solution {\n    public boolean isIsomorphic(String s, String t) {\n        HashMap<Character, Character> mapST = new HashMap<>();\n        HashMap<Character, Character> mapTS = new HashMap<>();;\n        for(int i=0; i<s.length(); i++){\n            char ch1 = s.charAt(i);\n            char ch2 = t.charAt(i);\n            if(mapST.containsKey(ch1) && mapST.get(ch1) != ch2){\n                return false;\n            }\n            if(mapTS.containsKey(ch2) && mapTS.get(ch2) != ch1){\n                return false;\n            }\n            mapST.put(ch1, ch2);\n            mapTS.put(ch2, ch1);\n        }\n        return true;\n    }\n}"
+          "content": "class Solution {\n    public boolean isIsomorphic(String s, String t) {\n        Map<Character, Character> mapST = new HashMap<>();\n        Map<Character, Character> mapTS = new HashMap<>();\n\n        for(int i=0; i<s.length(); i++){\n            char ch1 = s.charAt(i);\n            char ch2 = t.charAt(i);\n            if(mapST.containsKey(ch1) && ch2 != mapST.get(ch1)) return false;\n            if(mapTS.containsKey(ch2) && ch1 != mapTS.get(ch2)) return false;\n            mapST.put(ch1, ch2);\n            mapTS.put(ch2, ch1);\n        }\n        return true;\n    }\n}"
         },
         {
           "path": "problems/lc-isomorphic-strings/README.md",
-          "content": "# [205] Isomorphic Strings\n**Difficulty:** Easy  |  **Acceptance:** 49.3%  |  **Likes:** 10933 / **Dislikes:** 2309\n**Tags:** `Hash Table`, `String`\n## Problem\nGiven two strings s and t, determine if they are isomorphic.\n\nTwo strings s and t are isomorphic if the characters in s can be replaced to get t.\n\nAll occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.\n\n&nbsp;\nExample 1:\n\nInput: s = \"egg\", t = \"add\"\n\nOutput: true\n\nExplanation:\n\nThe strings s and t can be made identical by:\n\n\tMapping 'e' to 'a'.\n\tMapping 'g' to 'd'.\n\nExample 2:\n\nInput: s = \"f11\", t = \"b23\"\n\nOutput: false\n\nExplanation:\n\nThe strings s and t can not be made identical as '1' needs to be mapped to both '2' and '3'.\n\nExample 3:\n\nInput: s = \"paper\", t = \"title\"\n\nOutput: true\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 5 * 104\n\tt.length == s.length\n\ts and t consist of any valid ascii character.\n## My Submission\n\n- Runtime: 24 ms (beats 22.3%)\n- Memory: 43.7 MB (beats 47.3%)\n\n## Similar Problems\n\n- [Word Pattern](https://leetcode.com/problems/word-pattern/) — Easy\n- [Find and Replace Pattern](https://leetcode.com/problems/find-and-replace-pattern/) — Medium\n"
+          "content": "# [205] Isomorphic Strings\n**Difficulty:** Easy  |  **Acceptance:** 49.3%  |  **Likes:** 10933 / **Dislikes:** 2309\n**Tags:** `Hash Table`, `String`\n## Problem\nGiven two strings s and t, determine if they are isomorphic.\n\nTwo strings s and t are isomorphic if the characters in s can be replaced to get t.\n\nAll occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.\n\n&nbsp;\nExample 1:\n\nInput: s = \"egg\", t = \"add\"\n\nOutput: true\n\nExplanation:\n\nThe strings s and t can be made identical by:\n\n\tMapping 'e' to 'a'.\n\tMapping 'g' to 'd'.\n\nExample 2:\n\nInput: s = \"f11\", t = \"b23\"\n\nOutput: false\n\nExplanation:\n\nThe strings s and t can not be made identical as '1' needs to be mapped to both '2' and '3'.\n\nExample 3:\n\nInput: s = \"paper\", t = \"title\"\n\nOutput: true\n\n&nbsp;\nConstraints:\n\n\t1 <= s.length <= 5 * 104\n\tt.length == s.length\n\ts and t consist of any valid ascii character.\n## My Submission\n\n- Runtime: 25 ms (beats 15.8%)\n- Memory: 43.5 MB (beats 66.0%)\n\n## Similar Problems\n\n- [Word Pattern](https://leetcode.com/problems/word-pattern/) — Easy\n- [Find and Replace Pattern](https://leetcode.com/problems/find-and-replace-pattern/) — Medium\n"
         }
       ],
       "lang": {
@@ -7608,12 +7608,12 @@
         "ext": "java",
         "slug": "java"
       },
-      "runtime": "24 ms",
-      "memory": "43.7 MB",
-      "runtimePct": 22.332000000000015,
-      "memoryPct": 47.337700000000034,
-      "timestamp": 1784561862000,
-      "acRate": 49.33138464347487,
+      "runtime": "25 ms",
+      "memory": "43.5 MB",
+      "runtimePct": 15.845100000000015,
+      "memoryPct": 65.96130000000004,
+      "timestamp": 1795069552000,
+      "acRate": 49.33153909324244,
       "likes": 10933,
       "dislikes": 2309,
       "similar": [
@@ -7639,7 +7639,13 @@
       "isDuplicate": false,
       "duplicateOf": null,
       "_requestAIReview": true,
-      "platform": "leetcode"
+      "platform": "leetcode",
+      "_committedPaths": [
+        "problems/lc-isomorphic-strings/lc-isomorphic-strings.java",
+        "problems/lc-isomorphic-strings/README.md"
+      ],
+      "methods": [],
+      "manuallyEdited": false
     },
     {
       "id": "lc-koko-eating-bananas",
