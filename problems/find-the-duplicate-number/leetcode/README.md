@@ -8,7 +8,7 @@
 | Topics | Array, Two Pointers, Binary Search, Bit Manipulation, Pigeonhole Principle, Floyd's Cycle Finding Algorithm |
 | Solved | 2026-11-18 |
 | Runtime | 5 ms (beats 66.20370000000001%) |
-| Memory | 82.2 MB (beats 79.69810000000004%) |
+| Memory | 82.5 MB (beats 68.54710000000004%) |
 
 ## Problem Statement
 
@@ -60,13 +60,13 @@ You must solve the problem **without** modifying the array `nums` and using only
 ```Java
 class Solution {
     public int findDuplicate(int[] nums) {
-        int slow = nums[0];
-        int fast = nums[0];
+        int slow = 0;
+        int fast = 0;
         do{
             slow = nums[slow];
             fast = nums[nums[fast]];
         }while(slow != fast);
-        fast = nums[0];
+        fast = 0;
         while(slow != fast){
             slow = nums[slow];
             fast = nums[fast];

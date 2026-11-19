@@ -2,18 +2,20 @@ class Solution {
     public String longestPalindrome(String s) {
         int start = 0;
         int end = 0;
+        int len = 0;
         for(int i=0; i<s.length(); i++){
-            int odd = palindrome(s, i, i);
-            int even = palindrome(s, i, i+1);
-            int max = Math.max(odd, even);
-            if(max > (end - start)){
-                start = i - (max-1)/2;
-                end = i + max/2;
+            int odd = isPalindrome(s, i, i);
+            int even = isPalindrome(s, i, i+1);
+            len = Math.max(odd, even);
+
+            if(len > end-start){
+                start = i - (len-1)/2;
+                end = i + len/2;
             }
         }
         return s.substring(start, end+1);
     }
-    public int palindrome(String s, int l, int r){
+    int isPalindrome(String s, int l, int r){
         while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){
             l--;
             r++;
