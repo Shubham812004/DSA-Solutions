@@ -1292,5 +1292,22 @@
       "Stack",
       "Bracket Sequences"
     ]
+  },
+  "leetcode::word-pattern": {
+    "difficulty": "Easy",
+    "lang": "Java",
+    "platform": "leetcode",
+    "slug": "word-pattern",
+    "solves": [
+      {
+        "elapsedSeconds": 0,
+        "lang": "Java",
+        "ts": 1795070370052
+      }
+    ],
+    "tags": [
+      "Hash Table",
+      "String"
+    ]
   }
 }

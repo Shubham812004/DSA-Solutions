@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-11-19T06:25:56.726Z",
+  "updatedAt": "2026-11-19T06:39:30.180Z",
   "layoutVersion": 3,
   "stats": {
-    "total": 270,
-    "easy": 118,
+    "total": 271,
+    "easy": 119,
     "medium": 138,
     "hard": 4,
     "unknownDifficulty": 10,
     "byPlatform": {
       "geeksforgeeks": 57,
-      "leetcode": 213
+      "leetcode": 214
     },
     "byLang": {
       "Unknown": 51,
-      "Java": 154,
+      "Java": 155,
       "Python": 30,
       "MySQL": 35
     },
@@ -29,7 +29,7 @@
       "Math": 6,
       "Two Pointers": 7,
       "Stack": 6,
-      "Hash Table": 7,
+      "Hash Table": 8,
       "Linked List": 13,
       "Database": 35,
       "Dynamic Programming": 7,
@@ -20487,6 +20487,69 @@
         "problems/valid-parentheses/leetcode/lc-valid-parentheses.java",
         "problems/valid-parentheses/leetcode/README.md"
       ]
+    },
+    {
+      "id": "lc-word-pattern",
+      "forceCommit": false,
+      "submissionId": null,
+      "title": "Word Pattern",
+      "titleSlug": "word-pattern",
+      "difficulty": "Easy",
+      "topic": "Hash Table",
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "canonical": null,
+      "readmeContent": "# [290] Word Pattern\n**Difficulty:** Easy  |  **Acceptance:** 44.9%  |  **Likes:** 8161 / **Dislikes:** 1158\n**Tags:** `Hash Table`, `String`\n## Problem\nGiven a pattern and a string s, find if s&nbsp;follows the same pattern.\n\nHere follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s. Specifically:\n\n\tEach letter in pattern maps to exactly one unique word in s.\n\tEach unique word in s maps to exactly one letter in pattern.\n\tNo two letters map to the same word, and no two words map to the same letter.\n\n&nbsp;\nExample 1:\n\nInput: pattern = \"abba\", s = \"dog cat cat dog\"\n\nOutput: true\n\nExplanation:\n\nThe bijection can be established as:\n\n\t'a' maps to \"dog\".\n\t'b' maps to \"cat\".\n\nExample 2:\n\nInput: pattern = \"abba\", s = \"dog cat cat fish\"\n\nOutput: false\n\nExample 3:\n\nInput: pattern = \"aaaa\", s = \"dog cat cat dog\"\n\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= pattern.length <= 300\n\tpattern contains only lower-case English letters.\n\t1 <= s.length <= 3000\n\ts contains only lowercase English letters and spaces ' '.\n\ts does not contain any leading or trailing spaces.\n\tAll the words in s are separated by a single space.\n## My Submission\n\n- Runtime: 1 ms (beats 89.7%)\n- Memory: 42.5 MB (beats 63.0%)\n\n## Similar Problems\n\n- [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) — Easy\n- [Find and Replace Pattern](https://leetcode.com/problems/find-and-replace-pattern/) — Medium\n",
+      "code": "class Solution {\n    public boolean wordPattern(String pattern, String s) {\n        String[] str = s.split(\" \");\n        if(str.length != pattern.length()) return false;\n        Map<Character, String> mapPS = new HashMap<>();\n        Map<String, Character> mapSP = new HashMap<>();\n        for(int i=0; i<pattern.length(); i++){\n            char ch = pattern.charAt(i);\n            String word = str[i];\n            if(mapPS.containsKey(ch) && !mapPS.get(ch).equals(word)) return false;\n            if(mapSP.containsKey(word) && ch != mapSP.get(word)) return false;\n            mapPS.put(ch, word);\n            mapSP.put(word, ch);\n        }\n        return true;\n    }\n}",
+      "files": [
+        {
+          "path": "problems/lc-word-pattern/lc-word-pattern.java",
+          "content": "class Solution {\n    public boolean wordPattern(String pattern, String s) {\n        String[] str = s.split(\" \");\n        if(str.length != pattern.length()) return false;\n        Map<Character, String> mapPS = new HashMap<>();\n        Map<String, Character> mapSP = new HashMap<>();\n        for(int i=0; i<pattern.length(); i++){\n            char ch = pattern.charAt(i);\n            String word = str[i];\n            if(mapPS.containsKey(ch) && !mapPS.get(ch).equals(word)) return false;\n            if(mapSP.containsKey(word) && ch != mapSP.get(word)) return false;\n            mapPS.put(ch, word);\n            mapSP.put(word, ch);\n        }\n        return true;\n    }\n}"
+        },
+        {
+          "path": "problems/lc-word-pattern/README.md",
+          "content": "# [290] Word Pattern\n**Difficulty:** Easy  |  **Acceptance:** 44.9%  |  **Likes:** 8161 / **Dislikes:** 1158\n**Tags:** `Hash Table`, `String`\n## Problem\nGiven a pattern and a string s, find if s&nbsp;follows the same pattern.\n\nHere follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s. Specifically:\n\n\tEach letter in pattern maps to exactly one unique word in s.\n\tEach unique word in s maps to exactly one letter in pattern.\n\tNo two letters map to the same word, and no two words map to the same letter.\n\n&nbsp;\nExample 1:\n\nInput: pattern = \"abba\", s = \"dog cat cat dog\"\n\nOutput: true\n\nExplanation:\n\nThe bijection can be established as:\n\n\t'a' maps to \"dog\".\n\t'b' maps to \"cat\".\n\nExample 2:\n\nInput: pattern = \"abba\", s = \"dog cat cat fish\"\n\nOutput: false\n\nExample 3:\n\nInput: pattern = \"aaaa\", s = \"dog cat cat dog\"\n\nOutput: false\n\n&nbsp;\nConstraints:\n\n\t1 <= pattern.length <= 300\n\tpattern contains only lower-case English letters.\n\t1 <= s.length <= 3000\n\ts contains only lowercase English letters and spaces ' '.\n\ts does not contain any leading or trailing spaces.\n\tAll the words in s are separated by a single space.\n## My Submission\n\n- Runtime: 1 ms (beats 89.7%)\n- Memory: 42.5 MB (beats 63.0%)\n\n## Similar Problems\n\n- [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) — Easy\n- [Find and Replace Pattern](https://leetcode.com/problems/find-and-replace-pattern/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "runtime": "1 ms",
+      "memory": "42.5 MB",
+      "runtimePct": 89.7453,
+      "memoryPct": 62.99440000000001,
+      "timestamp": 1795070364000,
+      "acRate": 44.88831951614977,
+      "likes": 8161,
+      "dislikes": 1158,
+      "similar": [
+        {
+          "difficulty": "Easy",
+          "titleSlug": "isomorphic-strings",
+          "title": "Isomorphic Strings",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-and-replace-pattern",
+          "title": "Find and Replace Pattern",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given a <code>pattern</code> and a string <code>s</code>, find if <code>s</code>&nbsp;follows the same pattern.</p>\n\n<p>Here <b>follow</b> means a full match, such that there is a bijection between a letter in <code>pattern</code> and a <b>non-empty</b> word in <code>s</code>. Specifically:</p>\n\n<ul>\n\t<li>Each letter in <code>pattern</code> maps to <strong>exactly</strong> one unique word in <code>s</code>.</li>\n\t<li>Each unique word in <code>s</code> maps to <strong>exactly</strong> one letter in <code>pattern</code>.</li>\n\t<li>No two letters map to the same word, and no two words map to the same letter.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">pattern = &quot;abba&quot;, s = &quot;dog cat cat dog&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>The bijection can be established as:</p>\n\n<ul>\n\t<li><code>&#39;a&#39;</code> maps to <code>&quot;dog&quot;</code>.</li>\n\t<li><code>&#39;b&#39;</code> maps to <code>&quot;cat&quot;</code>.</li>\n</ul>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">pattern = &quot;abba&quot;, s = &quot;dog cat cat fish&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">pattern = &quot;aaaa&quot;, s = &quot;dog cat cat dog&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= pattern.length &lt;= 300</code></li>\n\t<li><code>pattern</code> contains only lower-case English letters.</li>\n\t<li><code>1 &lt;= s.length &lt;= 3000</code></li>\n\t<li><code>s</code> contains only lowercase English letters and spaces <code>&#39; &#39;</code>.</li>\n\t<li><code>s</code> <strong>does not contain</strong> any leading or trailing spaces.</li>\n\t<li>All the words in <code>s</code> are separated by a <strong>single space</strong>.</li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/word-pattern/submissions/",
+      "notes": "",
+      "methodTitle": "",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "_requestAIReview": true,
+      "platform": "leetcode"
     },
     {
       "id": "lc-zigzag-conversion::1809255801",
