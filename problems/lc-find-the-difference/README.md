@@ -7,8 +7,8 @@
 | Problem ID | `lc-find-the-difference` |
 | Topics | Hash Table, String, Bit Manipulation, Sorting |
 | Solved | 2026-11-19 |
-| Runtime | 3 ms (beats 50.79119999999999%) |
-| Memory | 42.9 MB (beats 58.35990000000001%) |
+| Runtime | 1 ms (beats 99.823%) |
+| Memory | 42.5 MB (beats 91.1363%) |
 
 ## Problem Statement
 
@@ -46,20 +46,14 @@ Return the letter that was added to `t`.
 ```Java
 class Solution {
     public char findTheDifference(String s, String t) {
-        int[] count = new int[26];
-        for(int i=0; i<t.length(); i++){
-            count[t.charAt(i) - 'a']++;
+        int sum = 0;
+        for(char ch : t.toCharArray()){
+            sum += ch;
         }
-        for(int i=0; i<s.length(); i++){
-            count[s.charAt(i) - 'a']--;
+        for(char ch : s.toCharArray()){
+            sum -= ch;
         }
-        for(int i=0; i<26; i++){
-            if(count[i] == 1){
-                int asciValue = i + 'a';
-                return (char)asciValue;
-            }
-        }
-        return ' ';
+        return (char)sum;
     }
 }
 ```
