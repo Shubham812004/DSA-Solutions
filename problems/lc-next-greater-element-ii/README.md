@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-next-greater-element-ii` |
 | Topics | Array, Stack, Monotonic Stack |
-| Solved | 2026-11-02 |
-| Runtime | 14 ms (beats 60.89859999999998%) |
-| Memory | 48.1 MB (beats 74.66790000000003%) |
+| Solved | 2026-11-23 |
+| Runtime | 16 ms (beats 36.919899999999984%) |
+| Memory | 47.9 MB (beats 69.01199999999997%) |
 
 ## Problem Statement
 

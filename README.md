@@ -10,11 +10,11 @@
 
 <!-- codeledger:gamification:start -->
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://shubham812004.github.io/DSA-Solutions/badges/card-light.svg?v=4365-18-230-2026-11-22">
-  <img src="https://shubham812004.github.io/DSA-Solutions/badges/card.svg?v=4365-18-230-2026-11-22" alt="Streak card" width="420">
+  <source media="(prefers-color-scheme: light)" srcset="https://shubham812004.github.io/DSA-Solutions/badges/card-light.svg?v=4365-20-230-2026-11-23">
+  <img src="https://shubham812004.github.io/DSA-Solutions/badges/card.svg?v=4365-20-230-2026-11-23" alt="Streak card" width="420">
 </picture>
 
-![Streak](https://shubham812004.github.io/DSA-Solutions/badges/streak.svg?v=4365-18-230-2026-11-22) ![Points](https://shubham812004.github.io/DSA-Solutions/badges/points.svg?v=4365-18-230-2026-11-22) ![Level](https://shubham812004.github.io/DSA-Solutions/badges/level.svg?v=4365-18-230-2026-11-22) ![Freezes](https://shubham812004.github.io/DSA-Solutions/badges/freezes.svg?v=4365-18-230-2026-11-22)
+![Streak](https://shubham812004.github.io/DSA-Solutions/badges/streak.svg?v=4365-20-230-2026-11-23) ![Points](https://shubham812004.github.io/DSA-Solutions/badges/points.svg?v=4365-20-230-2026-11-23) ![Level](https://shubham812004.github.io/DSA-Solutions/badges/level.svg?v=4365-20-230-2026-11-23) ![Freezes](https://shubham812004.github.io/DSA-Solutions/badges/freezes.svg?v=4365-20-230-2026-11-23)
 
 🩸 First Blood · 🔟 Ten Down · 💯 Century · 🔥 Week On Fire · 🎯 Well Rounded · ⚡ Double Day · 🪃 Comeback · ⭐ Engineer
 <!-- codeledger:gamification:end -->
@@ -23,7 +23,7 @@
 
 **[View Live Dashboard →](https://shubham812004.github.io/DSA-Solutions/)**
 
-*Last updated: Nov 20, 2026*
+*Last updated: Nov 23, 2026*
 
 [![CodeLedger](https://raw.githubusercontent.com/Life-Experimentalist/Code-Ledger/refs/heads/main/src/assets/images/social%20preview.png)](https://shubham812004.github.io/DSA-Solutions/)
 
@@ -88,6 +88,7 @@ Built with [CodeLedger](https://codeledger.vkrishna04.me) · [⭐ Star the exten
 </div>
 
 <!-- CODELEDGER_AUTO_GENERATED_END -->
+
 
 
 

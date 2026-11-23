@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T08:03:38.787Z",
+  "updatedAt": "2026-11-23T13:20:09.850Z",
   "layoutVersion": 3,
   "stats": {
     "total": 281,
@@ -5954,7 +5954,11 @@
       "_requestAIReview": true,
       "platform": "leetcode",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/lc-find-peak-element/lc-find-peak-element.java",
+        "problems/lc-find-peak-element/README.md"
+      ]
     },
     {
       "id": "lc-find-peak-element::2162319380",
@@ -13811,7 +13815,7 @@
         "Monotonic Stack"
       ],
       "canonical": null,
-      "readmeContent": "# [503] Next Greater Element II\n**Difficulty:** Medium  |  **Acceptance:** 69.4%  |  **Likes:** 9518 / **Dislikes:** 255\n**Tags:** `Array`, `Stack`, `Monotonic Stack`\n## Problem\nGiven a circular integer array nums (i.e., the next element of nums[nums.length - 1] is nums[0]), return the next greater number for every element in nums.\n\nThe next greater number of a number x is the first greater number to its traversing-order next in the array, which means you could search circularly to find its next greater number. If it doesn't exist, return -1 for this number.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,2,1]\nOutput: [2,-1,2]\nExplanation: The first 1's next greater number is 2; \nThe number 2 can't find next greater number. \nThe second 1's next greater number needs to search circularly, which is also 2.\n\nExample 2:\n\nInput: nums = [1,2,3,4,3]\nOutput: [2,3,4,-1,4]\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 104\n\t-109 <= nums[i] <= 109\n## My Submission\n\n- Runtime: 14 ms (beats 60.9%)\n- Memory: 48.1 MB (beats 74.7%)\n\n## Similar Problems\n\n- [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) — Easy\n- [Next Greater Element III](https://leetcode.com/problems/next-greater-element-iii/) — Medium\n- [Maximum and Minimum Sums of at Most Size K Subarrays](https://leetcode.com/problems/maximum-and-minimum-sums-of-at-most-size-k-subarrays/) — Hard\n",
+      "readmeContent": "# [503] Next Greater Element II\n**Difficulty:** Medium  |  **Acceptance:** 69.4%  |  **Likes:** 9541 / **Dislikes:** 255\n**Tags:** `Array`, `Stack`, `Monotonic Stack`\n## Problem\nGiven a circular integer array nums (i.e., the next element of nums[nums.length - 1] is nums[0]), return the next greater number for every element in nums.\n\nThe next greater number of a number x is the first greater number to its traversing-order next in the array, which means you could search circularly to find its next greater number. If it doesn't exist, return -1 for this number.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,2,1]\nOutput: [2,-1,2]\nExplanation: The first 1's next greater number is 2; \nThe number 2 can't find next greater number. \nThe second 1's next greater number needs to search circularly, which is also 2.\n\nExample 2:\n\nInput: nums = [1,2,3,4,3]\nOutput: [2,3,4,-1,4]\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 104\n\t-109 <= nums[i] <= 109\n## My Submission\n\n- Runtime: 16 ms (beats 36.9%)\n- Memory: 47.9 MB (beats 69.0%)\n\n## Similar Problems\n\n- [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) — Easy\n- [Next Greater Element III](https://leetcode.com/problems/next-greater-element-iii/) — Medium\n- [Maximum and Minimum Sums of at Most Size K Subarrays](https://leetcode.com/problems/maximum-and-minimum-sums-of-at-most-size-k-subarrays/) — Hard\n",
       "code": "class Solution {\n    public int[] nextGreaterElements(int[] nums) {\n        int n = nums.length;\n        int[] res = new int[n];\n        Arrays.fill(res, -1);\n        Stack<Integer> stack = new Stack<>();\n        for(int i=2*n-1; i>=0; i--){\n            int num = nums[i%n];\n            while(!stack.isEmpty() && stack.peek() <= num){\n                stack.pop();\n            }\n            if(i < n && !stack.isEmpty()){\n                res[i] = stack.peek();\n            }\n            stack.push(num);\n        }\n        return res;\n    }\n}",
       "files": [
         {
@@ -13820,7 +13824,7 @@
         },
         {
           "path": "problems/lc-next-greater-element-ii/README.md",
-          "content": "# [503] Next Greater Element II\n**Difficulty:** Medium  |  **Acceptance:** 69.4%  |  **Likes:** 9518 / **Dislikes:** 255\n**Tags:** `Array`, `Stack`, `Monotonic Stack`\n## Problem\nGiven a circular integer array nums (i.e., the next element of nums[nums.length - 1] is nums[0]), return the next greater number for every element in nums.\n\nThe next greater number of a number x is the first greater number to its traversing-order next in the array, which means you could search circularly to find its next greater number. If it doesn't exist, return -1 for this number.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,2,1]\nOutput: [2,-1,2]\nExplanation: The first 1's next greater number is 2; \nThe number 2 can't find next greater number. \nThe second 1's next greater number needs to search circularly, which is also 2.\n\nExample 2:\n\nInput: nums = [1,2,3,4,3]\nOutput: [2,3,4,-1,4]\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 104\n\t-109 <= nums[i] <= 109\n## My Submission\n\n- Runtime: 14 ms (beats 60.9%)\n- Memory: 48.1 MB (beats 74.7%)\n\n## Similar Problems\n\n- [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) — Easy\n- [Next Greater Element III](https://leetcode.com/problems/next-greater-element-iii/) — Medium\n- [Maximum and Minimum Sums of at Most Size K Subarrays](https://leetcode.com/problems/maximum-and-minimum-sums-of-at-most-size-k-subarrays/) — Hard\n"
+          "content": "# [503] Next Greater Element II\n**Difficulty:** Medium  |  **Acceptance:** 69.4%  |  **Likes:** 9541 / **Dislikes:** 255\n**Tags:** `Array`, `Stack`, `Monotonic Stack`\n## Problem\nGiven a circular integer array nums (i.e., the next element of nums[nums.length - 1] is nums[0]), return the next greater number for every element in nums.\n\nThe next greater number of a number x is the first greater number to its traversing-order next in the array, which means you could search circularly to find its next greater number. If it doesn't exist, return -1 for this number.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,2,1]\nOutput: [2,-1,2]\nExplanation: The first 1's next greater number is 2; \nThe number 2 can't find next greater number. \nThe second 1's next greater number needs to search circularly, which is also 2.\n\nExample 2:\n\nInput: nums = [1,2,3,4,3]\nOutput: [2,3,4,-1,4]\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 104\n\t-109 <= nums[i] <= 109\n## My Submission\n\n- Runtime: 16 ms (beats 36.9%)\n- Memory: 47.9 MB (beats 69.0%)\n\n## Similar Problems\n\n- [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) — Easy\n- [Next Greater Element III](https://leetcode.com/problems/next-greater-element-iii/) — Medium\n- [Maximum and Minimum Sums of at Most Size K Subarrays](https://leetcode.com/problems/maximum-and-minimum-sums-of-at-most-size-k-subarrays/) — Hard\n"
         }
       ],
       "lang": {
@@ -13828,13 +13832,13 @@
         "ext": "java",
         "slug": "java"
       },
-      "runtime": "14 ms",
-      "memory": "48.1 MB",
-      "runtimePct": 60.89859999999998,
-      "memoryPct": 74.66790000000003,
-      "timestamp": 1793596597000,
-      "acRate": 69.38351667105366,
-      "likes": 9518,
+      "runtime": "16 ms",
+      "memory": "47.9 MB",
+      "runtimePct": 36.919899999999984,
+      "memoryPct": 69.01199999999997,
+      "timestamp": 1795440002000,
+      "acRate": 69.42395759742658,
+      "likes": 9541,
       "dislikes": 255,
       "similar": [
         {
