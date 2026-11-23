@@ -6,9 +6,9 @@
 | Platform | Leetcode |
 | Problem ID | `lc-remove-nth-node-from-end-of-list` |
 | Topics | Linked List, Two Pointers |
-| Solved | 2026-09-08 |
+| Solved | 2026-11-23 |
 | Runtime | 0 ms (beats 100%) |
-| Memory | 43.6 MB (beats 10.195900000000034%) |
+| Memory | 43 MB (beats 64.62550000000003%) |
 
 ## Problem Statement
 
@@ -62,17 +62,14 @@ Given the `head` of a linked list, remove the `nth` node from the end of the lis
  */
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        ListNode dummy = new ListNode(0);
+        ListNode dummy = new ListNode();
         dummy.next = head;
-
         ListNode slow = dummy;
         ListNode fast = dummy;
-
-        for(int i=0; i<n; i++){
+        for(int i=0; i<=n; i++){
             fast = fast.next;
         }
-
-        while(fast.next != null){
+        while(fast != null){
             slow = slow.next;
             fast = fast.next;
         }

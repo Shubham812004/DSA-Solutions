@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T13:24:11.927Z",
+  "updatedAt": "2026-11-23T13:46:58.416Z",
   "layoutVersion": 3,
   "stats": {
     "total": 282,
@@ -15566,16 +15566,16 @@
         "topic": "linked-list",
         "voteCount": 95
       },
-      "readmeContent": "# [19] Remove Nth Node From End of List\n**Difficulty:** Medium  |  **Acceptance:** 53.1%  |  **Likes:** 21810 / **Dislikes:** 934\n**Tags:** `Linked List`, `Two Pointers`\n## Problem\nGiven the head of a linked list, remove the nth node from the end of the list and return its head.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,2,3,4,5], n = 2\nOutput: [1,2,3,5]\n\nExample 2:\n\nInput: head = [1], n = 1\nOutput: []\n\nExample 3:\n\nInput: head = [1,2], n = 1\nOutput: [1]\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is sz.\n\t1 <= sz <= 30\n\t0 <= Node.val <= 100\n\t1 <= n <= sz\n\n&nbsp;\nFollow up: Could you do this in one pass?\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 43.6 MB (beats 10.2%)\n\n## Similar Problems\n\n- [Swapping Nodes in a Linked List](https://leetcode.com/problems/swapping-nodes-in-a-linked-list/) — Medium\n- [Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/) — Medium\n",
-      "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode removeNthFromEnd(ListNode head, int n) {\n        ListNode dummy = new ListNode(0);\n        dummy.next = head;\n\n        ListNode slow = dummy;\n        ListNode fast = dummy;\n\n        for(int i=0; i<n; i++){\n            fast = fast.next;\n        }\n\n        while(fast.next != null){\n            slow = slow.next;\n            fast = fast.next;\n        }\n        slow.next = slow.next.next;\n        return dummy.next;\n    }\n}",
+      "readmeContent": "# [19] Remove Nth Node From End of List\n**Difficulty:** Medium  |  **Acceptance:** 53.1%  |  **Likes:** 21810 / **Dislikes:** 934\n**Tags:** `Linked List`, `Two Pointers`\n## Problem\nGiven the head of a linked list, remove the nth node from the end of the list and return its head.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,2,3,4,5], n = 2\nOutput: [1,2,3,5]\n\nExample 2:\n\nInput: head = [1], n = 1\nOutput: []\n\nExample 3:\n\nInput: head = [1,2], n = 1\nOutput: [1]\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is sz.\n\t1 <= sz <= 30\n\t0 <= Node.val <= 100\n\t1 <= n <= sz\n\n&nbsp;\nFollow up: Could you do this in one pass?\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 43 MB (beats 64.6%)\n\n## Similar Problems\n\n- [Swapping Nodes in a Linked List](https://leetcode.com/problems/swapping-nodes-in-a-linked-list/) — Medium\n- [Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/) — Medium\n",
+      "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode removeNthFromEnd(ListNode head, int n) {\n        ListNode dummy = new ListNode();\n        dummy.next = head;\n        ListNode slow = dummy;\n        ListNode fast = dummy;\n        for(int i=0; i<=n; i++){\n            fast = fast.next;\n        }\n        while(fast != null){\n            slow = slow.next;\n            fast = fast.next;\n        }\n        slow.next = slow.next.next;\n        return dummy.next;\n    }\n}",
       "files": [
         {
           "path": "problems/remove-nth-node-from-end-of-list/leetcode/lc-remove-nth-node-from-end-of-list.java",
-          "content": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode removeNthFromEnd(ListNode head, int n) {\n        ListNode dummy = new ListNode(0);\n        dummy.next = head;\n\n        ListNode slow = dummy;\n        ListNode fast = dummy;\n\n        for(int i=0; i<n; i++){\n            fast = fast.next;\n        }\n\n        while(fast.next != null){\n            slow = slow.next;\n            fast = fast.next;\n        }\n        slow.next = slow.next.next;\n        return dummy.next;\n    }\n}"
+          "content": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode removeNthFromEnd(ListNode head, int n) {\n        ListNode dummy = new ListNode();\n        dummy.next = head;\n        ListNode slow = dummy;\n        ListNode fast = dummy;\n        for(int i=0; i<=n; i++){\n            fast = fast.next;\n        }\n        while(fast != null){\n            slow = slow.next;\n            fast = fast.next;\n        }\n        slow.next = slow.next.next;\n        return dummy.next;\n    }\n}"
         },
         {
           "path": "problems/remove-nth-node-from-end-of-list/README.md",
-          "content": "# [19] Remove Nth Node From End of List\n**Difficulty:** Medium  |  **Acceptance:** 53.1%  |  **Likes:** 21810 / **Dislikes:** 934\n**Tags:** `Linked List`, `Two Pointers`\n## Problem\nGiven the head of a linked list, remove the nth node from the end of the list and return its head.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,2,3,4,5], n = 2\nOutput: [1,2,3,5]\n\nExample 2:\n\nInput: head = [1], n = 1\nOutput: []\n\nExample 3:\n\nInput: head = [1,2], n = 1\nOutput: [1]\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is sz.\n\t1 <= sz <= 30\n\t0 <= Node.val <= 100\n\t1 <= n <= sz\n\n&nbsp;\nFollow up: Could you do this in one pass?\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 43.6 MB (beats 10.2%)\n\n## Similar Problems\n\n- [Swapping Nodes in a Linked List](https://leetcode.com/problems/swapping-nodes-in-a-linked-list/) — Medium\n- [Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/) — Medium\n"
+          "content": "# [19] Remove Nth Node From End of List\n**Difficulty:** Medium  |  **Acceptance:** 53.1%  |  **Likes:** 21810 / **Dislikes:** 934\n**Tags:** `Linked List`, `Two Pointers`\n## Problem\nGiven the head of a linked list, remove the nth node from the end of the list and return its head.\n\n&nbsp;\nExample 1:\n\nInput: head = [1,2,3,4,5], n = 2\nOutput: [1,2,3,5]\n\nExample 2:\n\nInput: head = [1], n = 1\nOutput: []\n\nExample 3:\n\nInput: head = [1,2], n = 1\nOutput: [1]\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the list is sz.\n\t1 <= sz <= 30\n\t0 <= Node.val <= 100\n\t1 <= n <= sz\n\n&nbsp;\nFollow up: Could you do this in one pass?\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 43 MB (beats 64.6%)\n\n## Similar Problems\n\n- [Swapping Nodes in a Linked List](https://leetcode.com/problems/swapping-nodes-in-a-linked-list/) — Medium\n- [Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/) — Medium\n"
         }
       ],
       "lang": {
@@ -15584,11 +15584,11 @@
         "slug": "java"
       },
       "runtime": "0 ms",
-      "memory": "43.6 MB",
+      "memory": "43 MB",
       "runtimePct": 100,
-      "memoryPct": 10.195900000000034,
-      "timestamp": 1788846721000,
-      "acRate": 53.063378500282475,
+      "memoryPct": 64.62550000000003,
+      "timestamp": 1795441609000,
+      "acRate": 53.06347754705267,
       "likes": 21810,
       "dislikes": 934,
       "similar": [
@@ -15611,12 +15611,16 @@
       "submissionsUrl": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/submissions/",
       "notes": "",
       "methodTitle": "",
-      "isDuplicate": true,
-      "duplicateOf": "lc-remove-nth-node-from-end-of-list::2134703262",
+      "isDuplicate": false,
+      "duplicateOf": null,
       "_requestAIReview": true,
       "platform": "leetcode",
       "methods": [],
-      "manuallyEdited": false
+      "manuallyEdited": false,
+      "_committedPaths": [
+        "problems/remove-nth-node-from-end-of-list/leetcode/lc-remove-nth-node-from-end-of-list.java",
+        "problems/remove-nth-node-from-end-of-list/leetcode/README.md"
+      ]
     },
     {
       "id": "lc-remove-nth-node-from-end-of-list::2134703262",
